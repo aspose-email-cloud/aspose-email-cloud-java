@@ -8,7 +8,7 @@ Adds an attachment to iCalendar file
 
 ### **AddCalendarAttachmentRequestData** Parameters
 ```java
-new AddCalendarAttachmentRequestData(
+public AddCalendarAttachmentRequestData(
     String name, 
     String attachment, 
     AddAttachmentRequest request)
@@ -34,7 +34,7 @@ Add attachment to contact document
 
 ### **AddContactAttachmentRequestData** Parameters
 ```java
-new AddContactAttachmentRequestData(
+public AddContactAttachmentRequestData(
     String format, 
     String name, 
     String attachment, 
@@ -62,7 +62,7 @@ Adds an attachment to Email document
 
 ### **AddEmailAttachmentRequestData** Parameters
 ```java
-new AddEmailAttachmentRequestData(
+public AddEmailAttachmentRequestData(
     String attachmentName, 
     String fileName, 
     AddAttachmentRequest request)
@@ -88,7 +88,7 @@ Add attachment to document
 
 ### **AddMapiAttachmentRequestData** Parameters
 ```java
-new AddMapiAttachmentRequestData(
+public AddMapiAttachmentRequestData(
     String name, 
     String attachment, 
     AddAttachmentRequest request)
@@ -114,7 +114,7 @@ Adds an email from *.eml file to specified folder in email account
 
 ### **AppendEmailMessageRequestData** Parameters
 ```java
-new AppendEmailMessageRequestData(
+public AppendEmailMessageRequestData(
     AppendEmailBaseRequest request)
 ```
 
@@ -136,7 +136,7 @@ Adds an email from MIME to specified folder in email account
 
 ### **AppendMimeMessageRequestData** Parameters
 ```java
-new AppendMimeMessageRequestData(
+public AppendMimeMessageRequestData(
     AppendEmailMimeBaseRequest request)
 ```
 
@@ -158,7 +158,7 @@ Copy file
 
 ### **CopyFileRequestData** Parameters
 ```java
-new CopyFileRequestData(
+public CopyFileRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -188,7 +188,7 @@ Copy folder
 
 ### **CopyFolderRequestData** Parameters
 ```java
-new CopyFolderRequestData(
+public CopyFolderRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -216,7 +216,7 @@ Create calendar file
 
 ### **CreateCalendarRequestData** Parameters
 ```java
-new CreateCalendarRequestData(
+public CreateCalendarRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -240,7 +240,7 @@ Create contact document
 
 ### **CreateContactRequestData** Parameters
 ```java
-new CreateContactRequestData(
+public CreateContactRequestData(
     String format, 
     String name, 
     HierarchicalObjectRequest request)
@@ -266,7 +266,7 @@ Create an email document
 
 ### **CreateEmailRequestData** Parameters
 ```java
-new CreateEmailRequestData(
+public CreateEmailRequestData(
     String fileName, 
     CreateEmailRequest request)
 ```
@@ -290,7 +290,7 @@ Create new folder in email account
 
 ### **CreateEmailFolderRequestData** Parameters
 ```java
-new CreateEmailFolderRequestData(
+public CreateEmailFolderRequestData(
     CreateFolderBaseRequest request)
 ```
 
@@ -312,7 +312,7 @@ Create the folder
 
 ### **CreateFolderRequestData** Parameters
 ```java
-new CreateFolderRequestData(
+public CreateFolderRequestData(
     String path, 
     String storageName)
 ```
@@ -336,7 +336,7 @@ Create new document
 
 ### **CreateMapiRequestData** Parameters
 ```java
-new CreateMapiRequestData(
+public CreateMapiRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -360,7 +360,7 @@ Deletes indexed property by index and name. To delete Reminder attachment, use p
 
 ### **DeleteCalendarPropertyRequestData** Parameters
 ```java
-new DeleteCalendarPropertyRequestData(
+public DeleteCalendarPropertyRequestData(
     String name, 
     String memberName, 
     String index, 
@@ -388,7 +388,7 @@ Delete property from indexed property list
 
 ### **DeleteContactPropertyRequestData** Parameters
 ```java
-new DeleteContactPropertyRequestData(
+public DeleteContactPropertyRequestData(
     String format, 
     String name, 
     String memberName, 
@@ -418,7 +418,7 @@ Delete a folder in email account
 
 ### **DeleteEmailFolderRequestData** Parameters
 ```java
-new DeleteEmailFolderRequestData(
+public DeleteEmailFolderRequestData(
     DeleteFolderBaseRequest request)
 ```
 
@@ -440,7 +440,7 @@ Delete message from email account by id
 
 ### **DeleteEmailMessageRequestData** Parameters
 ```java
-new DeleteEmailMessageRequestData(
+public DeleteEmailMessageRequestData(
     DeleteMessageBaseRequest request)
 ```
 
@@ -462,7 +462,7 @@ Delete file
 
 ### **DeleteFileRequestData** Parameters
 ```java
-new DeleteFileRequestData(
+public DeleteFileRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -488,7 +488,7 @@ Delete folder
 
 ### **DeleteFolderRequestData** Parameters
 ```java
-new DeleteFolderRequestData(
+public DeleteFolderRequestData(
     String path, 
     String storageName, 
     Boolean recursive)
@@ -514,7 +514,7 @@ Remove attachment from document
 
 ### **DeleteMapiAttachmentRequestData** Parameters
 ```java
-new DeleteMapiAttachmentRequestData(
+public DeleteMapiAttachmentRequestData(
     String name, 
     String attachment, 
     StorageFolderLocation storage)
@@ -540,7 +540,7 @@ Delete document properties
 
 ### **DeleteMapiPropertiesRequestData** Parameters
 ```java
-new DeleteMapiPropertiesRequestData(
+public DeleteMapiPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -564,7 +564,7 @@ Download file
 
 ### **DownloadFileRequestData** Parameters
 ```java
-new DownloadFileRequestData(
+public DownloadFileRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -590,7 +590,7 @@ Fetch message mime from email account
 
 ### **FetchEmailMessageRequestData** Parameters
 ```java
-new FetchEmailMessageRequestData(
+public FetchEmailMessageRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
@@ -620,7 +620,7 @@ Get calendar file properties
 
 ### **GetCalendarRequestData** Parameters
 ```java
-new GetCalendarRequestData(
+public GetCalendarRequestData(
     String name, 
     String folder, 
     String storage)
@@ -646,7 +646,7 @@ Get iCalendar document attachment by name
 
 ### **GetCalendarAttachmentRequestData** Parameters
 ```java
-new GetCalendarAttachmentRequestData(
+public GetCalendarAttachmentRequestData(
     String name, 
     String attachment, 
     String folder, 
@@ -674,7 +674,7 @@ Get iCalendar files list in folder on storage
 
 ### **GetCalendarListRequestData** Parameters
 ```java
-new GetCalendarListRequestData(
+public GetCalendarListRequestData(
     String folder, 
     Integer itemsPerPage, 
     Integer pageNumber, 
@@ -702,7 +702,7 @@ Get attachment file by name
 
 ### **GetContactAttachmentRequestData** Parameters
 ```java
-new GetContactAttachmentRequestData(
+public GetContactAttachmentRequestData(
     String format, 
     String name, 
     String attachment, 
@@ -732,7 +732,7 @@ Get contact list from storage folder
 
 ### **GetContactListRequestData** Parameters
 ```java
-new GetContactListRequestData(
+public GetContactListRequestData(
     String format, 
     String folder, 
     String storage, 
@@ -762,7 +762,7 @@ Get contact document properties
 
 ### **GetContactPropertiesRequestData** Parameters
 ```java
-new GetContactPropertiesRequestData(
+public GetContactPropertiesRequestData(
     String format, 
     String name, 
     String folder, 
@@ -790,7 +790,7 @@ Get disc usage
 
 ### **GetDiscUsageRequestData** Parameters
 ```java
-new GetDiscUsageRequestData(
+public GetDiscUsageRequestData(
     String storageName)
 ```
 
@@ -812,7 +812,7 @@ Get email document
 
 ### **GetEmailRequestData** Parameters
 ```java
-new GetEmailRequestData(
+public GetEmailRequestData(
     String fileName, 
     String storage, 
     String folder)
@@ -838,7 +838,7 @@ Get email attachment by name
 
 ### **GetEmailAttachmentRequestData** Parameters
 ```java
-new GetEmailAttachmentRequestData(
+public GetEmailAttachmentRequestData(
     String attachment, 
     String fileName, 
     String storage, 
@@ -866,7 +866,7 @@ Get an email document property by its name
 
 ### **GetEmailPropertyRequestData** Parameters
 ```java
-new GetEmailPropertyRequestData(
+public GetEmailPropertyRequestData(
     String propertyName, 
     String fileName, 
     String storage, 
@@ -894,7 +894,7 @@ Get file versions
 
 ### **GetFileVersionsRequestData** Parameters
 ```java
-new GetFileVersionsRequestData(
+public GetFileVersionsRequestData(
     String path, 
     String storageName)
 ```
@@ -918,7 +918,7 @@ Get all files and folders within a folder
 
 ### **GetFilesListRequestData** Parameters
 ```java
-new GetFilesListRequestData(
+public GetFilesListRequestData(
     String path, 
     String storageName)
 ```
@@ -942,7 +942,7 @@ Get document attachment as file stream
 
 ### **GetMapiAttachmentRequestData** Parameters
 ```java
-new GetMapiAttachmentRequestData(
+public GetMapiAttachmentRequestData(
     String name, 
     String attachment, 
     String folder, 
@@ -970,7 +970,7 @@ Get document attachment list
 
 ### **GetMapiAttachmentsRequestData** Parameters
 ```java
-new GetMapiAttachmentsRequestData(
+public GetMapiAttachmentsRequestData(
     String name, 
     String folder, 
     String storage)
@@ -996,7 +996,7 @@ Get document list from storage folder
 
 ### **GetMapiListRequestData** Parameters
 ```java
-new GetMapiListRequestData(
+public GetMapiListRequestData(
     String folder, 
     String storage, 
     Integer itemsPerPage, 
@@ -1024,7 +1024,7 @@ Get document properties
 
 ### **GetMapiPropertiesRequestData** Parameters
 ```java
-new GetMapiPropertiesRequestData(
+public GetMapiPropertiesRequestData(
     String name, 
     String folder, 
     String storage)
@@ -1050,7 +1050,7 @@ Get folders list in email account
 
 ### **ListEmailFoldersRequestData** Parameters
 ```java
-new ListEmailFoldersRequestData(
+public ListEmailFoldersRequestData(
     String firstAccount, 
     String secondAccount, 
     String storage, 
@@ -1082,7 +1082,7 @@ The query string should have the following view.  The example of a simple expres
 
 ### **ListEmailMessagesRequestData** Parameters
 ```java
-new ListEmailMessagesRequestData(
+public ListEmailMessagesRequestData(
     String folder, 
     String queryString, 
     String firstAccount, 
@@ -1116,7 +1116,7 @@ Move file
 
 ### **MoveFileRequestData** Parameters
 ```java
-new MoveFileRequestData(
+public MoveFileRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -1146,7 +1146,7 @@ Move folder
 
 ### **MoveFolderRequestData** Parameters
 ```java
-new MoveFolderRequestData(
+public MoveFolderRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -1174,7 +1174,7 @@ Check if file or folder exists
 
 ### **ObjectExistsRequestData** Parameters
 ```java
-new ObjectExistsRequestData(
+public ObjectExistsRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -1200,7 +1200,7 @@ Create email account file (*.account) with login/password authentication
 
 ### **SaveMailAccountRequestData** Parameters
 ```java
-new SaveMailAccountRequestData(
+public SaveMailAccountRequestData(
     SaveEmailAccountRequest request)
 ```
 
@@ -1222,7 +1222,7 @@ Create email account file (*.account) with OAuth
 
 ### **SaveMailOAuthAccountRequestData** Parameters
 ```java
-new SaveMailOAuthAccountRequestData(
+public SaveMailOAuthAccountRequestData(
     SaveOAuthEmailAccountRequest request)
 ```
 
@@ -1244,7 +1244,7 @@ Send an email from *.eml file located on storage
 
 ### **SendEmailRequestData** Parameters
 ```java
-new SendEmailRequestData(
+public SendEmailRequestData(
     SendEmailBaseRequest request)
 ```
 
@@ -1266,7 +1266,7 @@ Send an email specified by MIME in request
 
 ### **SendEmailMimeRequestData** Parameters
 ```java
-new SendEmailMimeRequestData(
+public SendEmailMimeRequestData(
     SendEmailMimeBaseRequest request)
 ```
 
@@ -1288,7 +1288,7 @@ Set email document property value
 
 ### **SetEmailPropertyRequestData** Parameters
 ```java
-new SetEmailPropertyRequestData(
+public SetEmailPropertyRequestData(
     String propertyName, 
     String fileName, 
     SetEmailPropertyRequest request)
@@ -1314,7 +1314,7 @@ Sets \&quot;Message is read\&quot; flag
 
 ### **SetEmailReadFlagRequestData** Parameters
 ```java
-new SetEmailReadFlagRequestData(
+public SetEmailReadFlagRequestData(
     SetMessageReadFlagAccountBaseRequest request)
 ```
 
@@ -1336,7 +1336,7 @@ Check if storage exists
 
 ### **StorageExistsRequestData** Parameters
 ```java
-new StorageExistsRequestData(
+public StorageExistsRequestData(
     String storageName)
 ```
 
@@ -1358,7 +1358,7 @@ Update calendar file properties
 
 ### **UpdateCalendarPropertiesRequestData** Parameters
 ```java
-new UpdateCalendarPropertiesRequestData(
+public UpdateCalendarPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -1382,7 +1382,7 @@ Update contact document properties
 
 ### **UpdateContactPropertiesRequestData** Parameters
 ```java
-new UpdateContactPropertiesRequestData(
+public UpdateContactPropertiesRequestData(
     String format, 
     String name, 
     HierarchicalObjectRequest request)
@@ -1408,7 +1408,7 @@ Update document properties
 
 ### **UpdateMapiPropertiesRequestData** Parameters
 ```java
-new UpdateMapiPropertiesRequestData(
+public UpdateMapiPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -1432,7 +1432,7 @@ Upload file
 
 ### **UploadFileRequestData** Parameters
 ```java
-new UploadFileRequestData(
+public UploadFileRequestData(
     String path, 
     byte[] file, 
     String storageName)
