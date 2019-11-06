@@ -2,13 +2,13 @@
 
 <a name="addCalendarAttachment"></a>
 ## **addCalendarAttachment**
-> void addCalendarAttachment(Request request)
+> void addCalendarAttachment(AddCalendarAttachmentRequestData request)
 
 Adds an attachment to iCalendar file
 
-### **Request** Parameters
+### **AddCalendarAttachmentRequestData** Parameters
 ```java
-Request(
+new AddCalendarAttachmentRequestData(
     String name, 
     String attachment, 
     AddAttachmentRequest request)
@@ -28,13 +28,13 @@ void (empty response body)
 
 <a name="addContactAttachment"></a>
 ## **addContactAttachment**
-> void addContactAttachment(Request request)
+> void addContactAttachment(AddContactAttachmentRequestData request)
 
 Add attachment to contact document
 
-### **Request** Parameters
+### **AddContactAttachmentRequestData** Parameters
 ```java
-Request(
+new AddContactAttachmentRequestData(
     String format, 
     String name, 
     String attachment, 
@@ -56,13 +56,13 @@ void (empty response body)
 
 <a name="addEmailAttachment"></a>
 ## **addEmailAttachment**
-> [EmailDocumentResponse](EmailDocumentResponse.md) addEmailAttachment(Request request)
+> [EmailDocumentResponse](EmailDocumentResponse.md) addEmailAttachment(AddEmailAttachmentRequestData request)
 
 Adds an attachment to Email document
 
-### **Request** Parameters
+### **AddEmailAttachmentRequestData** Parameters
 ```java
-Request(
+new AddEmailAttachmentRequestData(
     String attachmentName, 
     String fileName, 
     AddAttachmentRequest request)
@@ -82,13 +82,13 @@ Name | Type | Description  | Notes
 
 <a name="addMapiAttachment"></a>
 ## **addMapiAttachment**
-> void addMapiAttachment(Request request)
+> void addMapiAttachment(AddMapiAttachmentRequestData request)
 
 Add attachment to document
 
-### **Request** Parameters
+### **AddMapiAttachmentRequestData** Parameters
 ```java
-Request(
+new AddMapiAttachmentRequestData(
     String name, 
     String attachment, 
     AddAttachmentRequest request)
@@ -108,13 +108,13 @@ void (empty response body)
 
 <a name="appendEmailMessage"></a>
 ## **appendEmailMessage**
-> [EmailPropertyResponse](EmailPropertyResponse.md) appendEmailMessage(Request request)
+> [EmailPropertyResponse](EmailPropertyResponse.md) appendEmailMessage(AppendEmailMessageRequestData request)
 
 Adds an email from *.eml file to specified folder in email account
 
-### **Request** Parameters
+### **AppendEmailMessageRequestData** Parameters
 ```java
-Request(
+new AppendEmailMessageRequestData(
     AppendEmailBaseRequest request)
 ```
 
@@ -130,13 +130,13 @@ Name | Type | Description  | Notes
 
 <a name="appendMimeMessage"></a>
 ## **appendMimeMessage**
-> [ValueResponse](ValueResponse.md) appendMimeMessage(Request request)
+> [ValueResponse](ValueResponse.md) appendMimeMessage(AppendMimeMessageRequestData request)
 
 Adds an email from MIME to specified folder in email account
 
-### **Request** Parameters
+### **AppendMimeMessageRequestData** Parameters
 ```java
-Request(
+new AppendMimeMessageRequestData(
     AppendEmailMimeBaseRequest request)
 ```
 
@@ -152,13 +152,13 @@ Name | Type | Description  | Notes
 
 <a name="copyFile"></a>
 ## **copyFile**
-> void copyFile(Request request)
+> void copyFile(CopyFileRequestData request)
 
 Copy file
 
-### **Request** Parameters
+### **CopyFileRequestData** Parameters
 ```java
-Request(
+new CopyFileRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -182,13 +182,13 @@ void (empty response body)
 
 <a name="copyFolder"></a>
 ## **copyFolder**
-> void copyFolder(Request request)
+> void copyFolder(CopyFolderRequestData request)
 
 Copy folder
 
-### **Request** Parameters
+### **CopyFolderRequestData** Parameters
 ```java
-Request(
+new CopyFolderRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -210,13 +210,13 @@ void (empty response body)
 
 <a name="createCalendar"></a>
 ## **createCalendar**
-> void createCalendar(Request request)
+> void createCalendar(CreateCalendarRequestData request)
 
 Create calendar file
 
-### **Request** Parameters
+### **CreateCalendarRequestData** Parameters
 ```java
-Request(
+new CreateCalendarRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -234,13 +234,13 @@ void (empty response body)
 
 <a name="createContact"></a>
 ## **createContact**
-> void createContact(Request request)
+> void createContact(CreateContactRequestData request)
 
 Create contact document
 
-### **Request** Parameters
+### **CreateContactRequestData** Parameters
 ```java
-Request(
+new CreateContactRequestData(
     String format, 
     String name, 
     HierarchicalObjectRequest request)
@@ -260,13 +260,13 @@ void (empty response body)
 
 <a name="createEmail"></a>
 ## **createEmail**
-> [EmailDocumentResponse](EmailDocumentResponse.md) createEmail(Request request)
+> [EmailDocumentResponse](EmailDocumentResponse.md) createEmail(CreateEmailRequestData request)
 
 Create an email document
 
-### **Request** Parameters
+### **CreateEmailRequestData** Parameters
 ```java
-Request(
+new CreateEmailRequestData(
     String fileName, 
     CreateEmailRequest request)
 ```
@@ -284,13 +284,13 @@ Name | Type | Description  | Notes
 
 <a name="createEmailFolder"></a>
 ## **createEmailFolder**
-> void createEmailFolder(Request request)
+> void createEmailFolder(CreateEmailFolderRequestData request)
 
 Create new folder in email account
 
-### **Request** Parameters
+### **CreateEmailFolderRequestData** Parameters
 ```java
-Request(
+new CreateEmailFolderRequestData(
     CreateFolderBaseRequest request)
 ```
 
@@ -306,13 +306,13 @@ void (empty response body)
 
 <a name="createFolder"></a>
 ## **createFolder**
-> void createFolder(Request request)
+> void createFolder(CreateFolderRequestData request)
 
 Create the folder
 
-### **Request** Parameters
+### **CreateFolderRequestData** Parameters
 ```java
-Request(
+new CreateFolderRequestData(
     String path, 
     String storageName)
 ```
@@ -330,13 +330,13 @@ void (empty response body)
 
 <a name="createMapi"></a>
 ## **createMapi**
-> void createMapi(Request request)
+> void createMapi(CreateMapiRequestData request)
 
 Create new document
 
-### **Request** Parameters
+### **CreateMapiRequestData** Parameters
 ```java
-Request(
+new CreateMapiRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -354,13 +354,13 @@ void (empty response body)
 
 <a name="deleteCalendarProperty"></a>
 ## **deleteCalendarProperty**
-> void deleteCalendarProperty(Request request)
+> void deleteCalendarProperty(DeleteCalendarPropertyRequestData request)
 
 Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
 
-### **Request** Parameters
+### **DeleteCalendarPropertyRequestData** Parameters
 ```java
-Request(
+new DeleteCalendarPropertyRequestData(
     String name, 
     String memberName, 
     String index, 
@@ -382,13 +382,13 @@ void (empty response body)
 
 <a name="deleteContactProperty"></a>
 ## **deleteContactProperty**
-> void deleteContactProperty(Request request)
+> void deleteContactProperty(DeleteContactPropertyRequestData request)
 
 Delete property from indexed property list
 
-### **Request** Parameters
+### **DeleteContactPropertyRequestData** Parameters
 ```java
-Request(
+new DeleteContactPropertyRequestData(
     String format, 
     String name, 
     String memberName, 
@@ -412,13 +412,13 @@ void (empty response body)
 
 <a name="deleteEmailFolder"></a>
 ## **deleteEmailFolder**
-> void deleteEmailFolder(Request request)
+> void deleteEmailFolder(DeleteEmailFolderRequestData request)
 
 Delete a folder in email account
 
-### **Request** Parameters
+### **DeleteEmailFolderRequestData** Parameters
 ```java
-Request(
+new DeleteEmailFolderRequestData(
     DeleteFolderBaseRequest request)
 ```
 
@@ -434,13 +434,13 @@ void (empty response body)
 
 <a name="deleteEmailMessage"></a>
 ## **deleteEmailMessage**
-> void deleteEmailMessage(Request request)
+> void deleteEmailMessage(DeleteEmailMessageRequestData request)
 
 Delete message from email account by id
 
-### **Request** Parameters
+### **DeleteEmailMessageRequestData** Parameters
 ```java
-Request(
+new DeleteEmailMessageRequestData(
     DeleteMessageBaseRequest request)
 ```
 
@@ -456,13 +456,13 @@ void (empty response body)
 
 <a name="deleteFile"></a>
 ## **deleteFile**
-> void deleteFile(Request request)
+> void deleteFile(DeleteFileRequestData request)
 
 Delete file
 
-### **Request** Parameters
+### **DeleteFileRequestData** Parameters
 ```java
-Request(
+new DeleteFileRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -482,13 +482,13 @@ void (empty response body)
 
 <a name="deleteFolder"></a>
 ## **deleteFolder**
-> void deleteFolder(Request request)
+> void deleteFolder(DeleteFolderRequestData request)
 
 Delete folder
 
-### **Request** Parameters
+### **DeleteFolderRequestData** Parameters
 ```java
-Request(
+new DeleteFolderRequestData(
     String path, 
     String storageName, 
     Boolean recursive)
@@ -508,13 +508,13 @@ void (empty response body)
 
 <a name="deleteMapiAttachment"></a>
 ## **deleteMapiAttachment**
-> void deleteMapiAttachment(Request request)
+> void deleteMapiAttachment(DeleteMapiAttachmentRequestData request)
 
 Remove attachment from document
 
-### **Request** Parameters
+### **DeleteMapiAttachmentRequestData** Parameters
 ```java
-Request(
+new DeleteMapiAttachmentRequestData(
     String name, 
     String attachment, 
     StorageFolderLocation storage)
@@ -534,13 +534,13 @@ void (empty response body)
 
 <a name="deleteMapiProperties"></a>
 ## **deleteMapiProperties**
-> void deleteMapiProperties(Request request)
+> void deleteMapiProperties(DeleteMapiPropertiesRequestData request)
 
 Delete document properties
 
-### **Request** Parameters
+### **DeleteMapiPropertiesRequestData** Parameters
 ```java
-Request(
+new DeleteMapiPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -558,13 +558,13 @@ void (empty response body)
 
 <a name="downloadFile"></a>
 ## **downloadFile**
-> byte[] downloadFile(Request request)
+> byte[] downloadFile(DownloadFileRequestData request)
 
 Download file
 
-### **Request** Parameters
+### **DownloadFileRequestData** Parameters
 ```java
-Request(
+new DownloadFileRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -584,13 +584,13 @@ Name | Type | Description  | Notes
 
 <a name="fetchEmailMessage"></a>
 ## **fetchEmailMessage**
-> [MimeResponse](MimeResponse.md) fetchEmailMessage(Request request)
+> [MimeResponse](MimeResponse.md) fetchEmailMessage(FetchEmailMessageRequestData request)
 
 Fetch message mime from email account
 
-### **Request** Parameters
+### **FetchEmailMessageRequestData** Parameters
 ```java
-Request(
+new FetchEmailMessageRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
@@ -614,13 +614,13 @@ Name | Type | Description  | Notes
 
 <a name="getCalendar"></a>
 ## **getCalendar**
-> [HierarchicalObject](HierarchicalObject.md) getCalendar(Request request)
+> [HierarchicalObject](HierarchicalObject.md) getCalendar(GetCalendarRequestData request)
 
 Get calendar file properties
 
-### **Request** Parameters
+### **GetCalendarRequestData** Parameters
 ```java
-Request(
+new GetCalendarRequestData(
     String name, 
     String folder, 
     String storage)
@@ -640,13 +640,13 @@ Name | Type | Description  | Notes
 
 <a name="getCalendarAttachment"></a>
 ## **getCalendarAttachment**
-> [File](File.md) getCalendarAttachment(Request request)
+> [File](File.md) getCalendarAttachment(GetCalendarAttachmentRequestData request)
 
 Get iCalendar document attachment by name
 
-### **Request** Parameters
+### **GetCalendarAttachmentRequestData** Parameters
 ```java
-Request(
+new GetCalendarAttachmentRequestData(
     String name, 
     String attachment, 
     String folder, 
@@ -668,13 +668,13 @@ Name | Type | Description  | Notes
 
 <a name="getCalendarList"></a>
 ## **getCalendarList**
-> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getCalendarList(Request request)
+> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getCalendarList(GetCalendarListRequestData request)
 
 Get iCalendar files list in folder on storage
 
-### **Request** Parameters
+### **GetCalendarListRequestData** Parameters
 ```java
-Request(
+new GetCalendarListRequestData(
     String folder, 
     Integer itemsPerPage, 
     Integer pageNumber, 
@@ -696,13 +696,13 @@ Name | Type | Description  | Notes
 
 <a name="getContactAttachment"></a>
 ## **getContactAttachment**
-> [File](File.md) getContactAttachment(Request request)
+> [File](File.md) getContactAttachment(GetContactAttachmentRequestData request)
 
 Get attachment file by name
 
-### **Request** Parameters
+### **GetContactAttachmentRequestData** Parameters
 ```java
-Request(
+new GetContactAttachmentRequestData(
     String format, 
     String name, 
     String attachment, 
@@ -726,13 +726,13 @@ Name | Type | Description  | Notes
 
 <a name="getContactList"></a>
 ## **getContactList**
-> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getContactList(Request request)
+> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getContactList(GetContactListRequestData request)
 
 Get contact list from storage folder
 
-### **Request** Parameters
+### **GetContactListRequestData** Parameters
 ```java
-Request(
+new GetContactListRequestData(
     String format, 
     String folder, 
     String storage, 
@@ -756,13 +756,13 @@ Name | Type | Description  | Notes
 
 <a name="getContactProperties"></a>
 ## **getContactProperties**
-> [HierarchicalObject](HierarchicalObject.md) getContactProperties(Request request)
+> [HierarchicalObject](HierarchicalObject.md) getContactProperties(GetContactPropertiesRequestData request)
 
 Get contact document properties
 
-### **Request** Parameters
+### **GetContactPropertiesRequestData** Parameters
 ```java
-Request(
+new GetContactPropertiesRequestData(
     String format, 
     String name, 
     String folder, 
@@ -784,13 +784,13 @@ Name | Type | Description  | Notes
 
 <a name="getDiscUsage"></a>
 ## **getDiscUsage**
-> [DiscUsage](DiscUsage.md) getDiscUsage(Request request)
+> [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequestData request)
 
 Get disc usage
 
-### **Request** Parameters
+### **GetDiscUsageRequestData** Parameters
 ```java
-Request(
+new GetDiscUsageRequestData(
     String storageName)
 ```
 
@@ -806,13 +806,13 @@ Name | Type | Description  | Notes
 
 <a name="getEmail"></a>
 ## **getEmail**
-> [EmailDocument](EmailDocument.md) getEmail(Request request)
+> [EmailDocument](EmailDocument.md) getEmail(GetEmailRequestData request)
 
 Get email document
 
-### **Request** Parameters
+### **GetEmailRequestData** Parameters
 ```java
-Request(
+new GetEmailRequestData(
     String fileName, 
     String storage, 
     String folder)
@@ -832,13 +832,13 @@ Name | Type | Description  | Notes
 
 <a name="getEmailAttachment"></a>
 ## **getEmailAttachment**
-> [File](File.md) getEmailAttachment(Request request)
+> [File](File.md) getEmailAttachment(GetEmailAttachmentRequestData request)
 
 Get email attachment by name
 
-### **Request** Parameters
+### **GetEmailAttachmentRequestData** Parameters
 ```java
-Request(
+new GetEmailAttachmentRequestData(
     String attachment, 
     String fileName, 
     String storage, 
@@ -860,13 +860,13 @@ Name | Type | Description  | Notes
 
 <a name="getEmailProperty"></a>
 ## **getEmailProperty**
-> [EmailPropertyResponse](EmailPropertyResponse.md) getEmailProperty(Request request)
+> [EmailPropertyResponse](EmailPropertyResponse.md) getEmailProperty(GetEmailPropertyRequestData request)
 
 Get an email document property by its name
 
-### **Request** Parameters
+### **GetEmailPropertyRequestData** Parameters
 ```java
-Request(
+new GetEmailPropertyRequestData(
     String propertyName, 
     String fileName, 
     String storage, 
@@ -888,13 +888,13 @@ Name | Type | Description  | Notes
 
 <a name="getFileVersions"></a>
 ## **getFileVersions**
-> [FileVersions](FileVersions.md) getFileVersions(Request request)
+> [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
 
 Get file versions
 
-### **Request** Parameters
+### **GetFileVersionsRequestData** Parameters
 ```java
-Request(
+new GetFileVersionsRequestData(
     String path, 
     String storageName)
 ```
@@ -912,13 +912,13 @@ Name | Type | Description  | Notes
 
 <a name="getFilesList"></a>
 ## **getFilesList**
-> [FilesList](FilesList.md) getFilesList(Request request)
+> [FilesList](FilesList.md) getFilesList(GetFilesListRequestData request)
 
 Get all files and folders within a folder
 
-### **Request** Parameters
+### **GetFilesListRequestData** Parameters
 ```java
-Request(
+new GetFilesListRequestData(
     String path, 
     String storageName)
 ```
@@ -936,13 +936,13 @@ Name | Type | Description  | Notes
 
 <a name="getMapiAttachment"></a>
 ## **getMapiAttachment**
-> [File](File.md) getMapiAttachment(Request request)
+> [File](File.md) getMapiAttachment(GetMapiAttachmentRequestData request)
 
 Get document attachment as file stream
 
-### **Request** Parameters
+### **GetMapiAttachmentRequestData** Parameters
 ```java
-Request(
+new GetMapiAttachmentRequestData(
     String name, 
     String attachment, 
     String folder, 
@@ -964,13 +964,13 @@ Name | Type | Description  | Notes
 
 <a name="getMapiAttachments"></a>
 ## **getMapiAttachments**
-> [ListResponseOfString](ListResponseOfString.md) getMapiAttachments(Request request)
+> [ListResponseOfString](ListResponseOfString.md) getMapiAttachments(GetMapiAttachmentsRequestData request)
 
 Get document attachment list
 
-### **Request** Parameters
+### **GetMapiAttachmentsRequestData** Parameters
 ```java
-Request(
+new GetMapiAttachmentsRequestData(
     String name, 
     String folder, 
     String storage)
@@ -990,13 +990,13 @@ Name | Type | Description  | Notes
 
 <a name="getMapiList"></a>
 ## **getMapiList**
-> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getMapiList(Request request)
+> [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getMapiList(GetMapiListRequestData request)
 
 Get document list from storage folder
 
-### **Request** Parameters
+### **GetMapiListRequestData** Parameters
 ```java
-Request(
+new GetMapiListRequestData(
     String folder, 
     String storage, 
     Integer itemsPerPage, 
@@ -1018,13 +1018,13 @@ Name | Type | Description  | Notes
 
 <a name="getMapiProperties"></a>
 ## **getMapiProperties**
-> [HierarchicalObjectResponse](HierarchicalObjectResponse.md) getMapiProperties(Request request)
+> [HierarchicalObjectResponse](HierarchicalObjectResponse.md) getMapiProperties(GetMapiPropertiesRequestData request)
 
 Get document properties
 
-### **Request** Parameters
+### **GetMapiPropertiesRequestData** Parameters
 ```java
-Request(
+new GetMapiPropertiesRequestData(
     String name, 
     String folder, 
     String storage)
@@ -1044,13 +1044,13 @@ Name | Type | Description  | Notes
 
 <a name="listEmailFolders"></a>
 ## **listEmailFolders**
-> [ListFoldersResponse](ListFoldersResponse.md) listEmailFolders(Request request)
+> [ListFoldersResponse](ListFoldersResponse.md) listEmailFolders(ListEmailFoldersRequestData request)
 
 Get folders list in email account
 
-### **Request** Parameters
+### **ListEmailFoldersRequestData** Parameters
 ```java
-Request(
+new ListEmailFoldersRequestData(
     String firstAccount, 
     String secondAccount, 
     String storage, 
@@ -1074,15 +1074,15 @@ Name | Type | Description  | Notes
 
 <a name="listEmailMessages"></a>
 ## **listEmailMessages**
-> [ListMessagesResponse](ListMessagesResponse.md) listEmailMessages(Request request)
+> [ListMessagesResponse](ListMessagesResponse.md) listEmailMessages(ListEmailMessagesRequestData request)
 
 Get messages from folder, filtered by query
 
 The query string should have the following view.  The example of a simple expression:   &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.  The number of simple expressions can make a compound one, ex.: (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator  At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message  Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message  Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item  Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once  The field value (&lt;Field value&gt;) can take the following values: For text fields - any string, For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;, For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;
 
-### **Request** Parameters
+### **ListEmailMessagesRequestData** Parameters
 ```java
-Request(
+new ListEmailMessagesRequestData(
     String folder, 
     String queryString, 
     String firstAccount, 
@@ -1110,13 +1110,13 @@ Name | Type | Description  | Notes
 
 <a name="moveFile"></a>
 ## **moveFile**
-> void moveFile(Request request)
+> void moveFile(MoveFileRequestData request)
 
 Move file
 
-### **Request** Parameters
+### **MoveFileRequestData** Parameters
 ```java
-Request(
+new MoveFileRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -1140,13 +1140,13 @@ void (empty response body)
 
 <a name="moveFolder"></a>
 ## **moveFolder**
-> void moveFolder(Request request)
+> void moveFolder(MoveFolderRequestData request)
 
 Move folder
 
-### **Request** Parameters
+### **MoveFolderRequestData** Parameters
 ```java
-Request(
+new MoveFolderRequestData(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -1168,13 +1168,13 @@ void (empty response body)
 
 <a name="objectExists"></a>
 ## **objectExists**
-> [ObjectExist](ObjectExist.md) objectExists(Request request)
+> [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequestData request)
 
 Check if file or folder exists
 
-### **Request** Parameters
+### **ObjectExistsRequestData** Parameters
 ```java
-Request(
+new ObjectExistsRequestData(
     String path, 
     String storageName, 
     String versionId)
@@ -1194,13 +1194,13 @@ Name | Type | Description  | Notes
 
 <a name="saveMailAccount"></a>
 ## **saveMailAccount**
-> void saveMailAccount(Request request)
+> void saveMailAccount(SaveMailAccountRequestData request)
 
 Create email account file (*.account) with login/password authentication
 
-### **Request** Parameters
+### **SaveMailAccountRequestData** Parameters
 ```java
-Request(
+new SaveMailAccountRequestData(
     SaveEmailAccountRequest request)
 ```
 
@@ -1216,13 +1216,13 @@ void (empty response body)
 
 <a name="saveMailOAuthAccount"></a>
 ## **saveMailOAuthAccount**
-> void saveMailOAuthAccount(Request request)
+> void saveMailOAuthAccount(SaveMailOAuthAccountRequestData request)
 
 Create email account file (*.account) with OAuth
 
-### **Request** Parameters
+### **SaveMailOAuthAccountRequestData** Parameters
 ```java
-Request(
+new SaveMailOAuthAccountRequestData(
     SaveOAuthEmailAccountRequest request)
 ```
 
@@ -1238,13 +1238,13 @@ void (empty response body)
 
 <a name="sendEmail"></a>
 ## **sendEmail**
-> void sendEmail(Request request)
+> void sendEmail(SendEmailRequestData request)
 
 Send an email from *.eml file located on storage
 
-### **Request** Parameters
+### **SendEmailRequestData** Parameters
 ```java
-Request(
+new SendEmailRequestData(
     SendEmailBaseRequest request)
 ```
 
@@ -1260,13 +1260,13 @@ void (empty response body)
 
 <a name="sendEmailMime"></a>
 ## **sendEmailMime**
-> void sendEmailMime(Request request)
+> void sendEmailMime(SendEmailMimeRequestData request)
 
 Send an email specified by MIME in request
 
-### **Request** Parameters
+### **SendEmailMimeRequestData** Parameters
 ```java
-Request(
+new SendEmailMimeRequestData(
     SendEmailMimeBaseRequest request)
 ```
 
@@ -1282,13 +1282,13 @@ void (empty response body)
 
 <a name="setEmailProperty"></a>
 ## **setEmailProperty**
-> [EmailPropertyResponse](EmailPropertyResponse.md) setEmailProperty(Request request)
+> [EmailPropertyResponse](EmailPropertyResponse.md) setEmailProperty(SetEmailPropertyRequestData request)
 
 Set email document property value
 
-### **Request** Parameters
+### **SetEmailPropertyRequestData** Parameters
 ```java
-Request(
+new SetEmailPropertyRequestData(
     String propertyName, 
     String fileName, 
     SetEmailPropertyRequest request)
@@ -1308,13 +1308,13 @@ Name | Type | Description  | Notes
 
 <a name="setEmailReadFlag"></a>
 ## **setEmailReadFlag**
-> void setEmailReadFlag(Request request)
+> void setEmailReadFlag(SetEmailReadFlagRequestData request)
 
 Sets \&quot;Message is read\&quot; flag
 
-### **Request** Parameters
+### **SetEmailReadFlagRequestData** Parameters
 ```java
-Request(
+new SetEmailReadFlagRequestData(
     SetMessageReadFlagAccountBaseRequest request)
 ```
 
@@ -1330,13 +1330,13 @@ void (empty response body)
 
 <a name="storageExists"></a>
 ## **storageExists**
-> [StorageExist](StorageExist.md) storageExists(Request request)
+> [StorageExist](StorageExist.md) storageExists(StorageExistsRequestData request)
 
 Check if storage exists
 
-### **Request** Parameters
+### **StorageExistsRequestData** Parameters
 ```java
-Request(
+new StorageExistsRequestData(
     String storageName)
 ```
 
@@ -1352,13 +1352,13 @@ Name | Type | Description  | Notes
 
 <a name="updateCalendarProperties"></a>
 ## **updateCalendarProperties**
-> void updateCalendarProperties(Request request)
+> void updateCalendarProperties(UpdateCalendarPropertiesRequestData request)
 
 Update calendar file properties
 
-### **Request** Parameters
+### **UpdateCalendarPropertiesRequestData** Parameters
 ```java
-Request(
+new UpdateCalendarPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -1376,13 +1376,13 @@ void (empty response body)
 
 <a name="updateContactProperties"></a>
 ## **updateContactProperties**
-> void updateContactProperties(Request request)
+> void updateContactProperties(UpdateContactPropertiesRequestData request)
 
 Update contact document properties
 
-### **Request** Parameters
+### **UpdateContactPropertiesRequestData** Parameters
 ```java
-Request(
+new UpdateContactPropertiesRequestData(
     String format, 
     String name, 
     HierarchicalObjectRequest request)
@@ -1402,13 +1402,13 @@ void (empty response body)
 
 <a name="updateMapiProperties"></a>
 ## **updateMapiProperties**
-> void updateMapiProperties(Request request)
+> void updateMapiProperties(UpdateMapiPropertiesRequestData request)
 
 Update document properties
 
-### **Request** Parameters
+### **UpdateMapiPropertiesRequestData** Parameters
 ```java
-Request(
+new UpdateMapiPropertiesRequestData(
     String name, 
     HierarchicalObjectRequest request)
 ```
@@ -1426,13 +1426,13 @@ void (empty response body)
 
 <a name="uploadFile"></a>
 ## **uploadFile**
-> [FilesUploadResult](FilesUploadResult.md) uploadFile(Request request)
+> [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequestData request)
 
 Upload file
 
-### **Request** Parameters
+### **UploadFileRequestData** Parameters
 ```java
-Request(
+new UploadFileRequestData(
     String path, 
     byte[] file, 
     String storageName)
