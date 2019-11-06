@@ -8,5 +8,5 @@ Name | Type | Description | Notes
 **documentProperties** | [**EmailProperties**](EmailProperties.md) | List of document properties. | 
 
 
-[[Back to Model list]](API_README.md#documentation-for-models) [[Back to API list]](API_README.md#documentation-for-api-endpoints) [[Back to API_README]](API_README.md)
+[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 
