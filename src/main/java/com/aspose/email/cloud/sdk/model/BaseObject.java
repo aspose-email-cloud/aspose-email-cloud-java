@@ -45,7 +45,7 @@ public class BaseObject {
   private String name = null;
 
   @JsonProperty("type")
-  private String type = "BaseObject";
+  private String type = this.getClass().getName();
 
   public BaseObject name(String name) {
     this.name = name;
