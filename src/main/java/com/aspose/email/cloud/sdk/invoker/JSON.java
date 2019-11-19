@@ -43,8 +43,6 @@ public class JSON {
 
         public JsonElement serialize(BaseObject src, Type typeOfSrc,
                 JsonSerializationContext context) {
-            String className = src.getClass().getSimpleName();
-            src.setType(className);
             return context.serialize(src); 
         }
 
