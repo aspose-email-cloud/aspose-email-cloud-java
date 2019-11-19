@@ -45,7 +45,7 @@ public class BaseObject {
   private String name = null;
 
   @JsonProperty("type")
-  private String type = null;
+  private String type = "BaseObject";
 
   public BaseObject name(String name) {
     this.name = name;
@@ -64,10 +64,7 @@ public class BaseObject {
     this.name = name;
   }
 
-  public BaseObject type(String type) {
-    this.type = type;
-    return this;
-  }
+
 
   /**
    * Property type. Used for deserialization purposes
@@ -77,9 +74,7 @@ public class BaseObject {
     return type;
   }  
 
-  public void setType(String type) {
-    this.type = type;
-  }
+
 
 
   @Override
