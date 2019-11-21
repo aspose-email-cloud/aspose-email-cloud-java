@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ListFoldersResponse.java">
+* <copyright company="Aspose" file="ListResponseOfMailServerFolder.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -38,18 +38,18 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account folders list
+ * ListResponseOfMailServerFolder
  */
-public class ListFoldersResponse extends AsposeResponse {
+public class ListResponseOfMailServerFolder {
   @JsonProperty("value")
   private List<MailServerFolder> value = null;
 
-  public ListFoldersResponse value(List<MailServerFolder> value) {
+  public ListResponseOfMailServerFolder value(List<MailServerFolder> value) {
     this.value = value;
     return this;
   }
 
-  public ListFoldersResponse addValueItem(MailServerFolder valueItem) {
+  public ListResponseOfMailServerFolder addValueItem(MailServerFolder valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<MailServerFolder>();
     }
@@ -78,22 +78,21 @@ public class ListFoldersResponse extends AsposeResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ListFoldersResponse listFoldersResponse = (ListFoldersResponse) o;
-    return ObjectUtils.equals(this.value, listFoldersResponse.value) &&
-    super.equals(o);
+    ListResponseOfMailServerFolder listResponseOfMailServerFolder = (ListResponseOfMailServerFolder) o;
+    return ObjectUtils.equals(this.value, listResponseOfMailServerFolder.value);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value, super.hashCode());
+    return ObjectUtils.hashCodeMulti(value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListFoldersResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("class ListResponseOfMailServerFolder {\n");
+    
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

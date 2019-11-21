@@ -40,7 +40,7 @@ import java.io.*;
 /**
  * Email document property DTO.
  */
-public class MimeResponse extends AsposeResponse {
+public class MimeResponse {
   @JsonProperty("mime")
   private String mime = null;
 
@@ -71,13 +71,12 @@ public class MimeResponse extends AsposeResponse {
     return false;
   }
     MimeResponse mimeResponse = (MimeResponse) o;
-    return ObjectUtils.equals(this.mime, mimeResponse.mime) &&
-    super.equals(o);
+    return ObjectUtils.equals(this.mime, mimeResponse.mime);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(mime, super.hashCode());
+    return ObjectUtils.hashCodeMulti(mime);
   }
 
 
@@ -85,7 +84,7 @@ public class MimeResponse extends AsposeResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MimeResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    mime: ").append(toIndentedString(mime)).append("\n");
     sb.append("}");
     return sb.toString();

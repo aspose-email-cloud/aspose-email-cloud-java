@@ -40,7 +40,7 @@ import java.io.*;
 /**
  * Email property response.
  */
-public class EmailPropertyResponse extends AsposeResponse {
+public class EmailPropertyResponse {
   @JsonProperty("emailProperty")
   private EmailProperty emailProperty = null;
 
@@ -71,13 +71,12 @@ public class EmailPropertyResponse extends AsposeResponse {
     return false;
   }
     EmailPropertyResponse emailPropertyResponse = (EmailPropertyResponse) o;
-    return ObjectUtils.equals(this.emailProperty, emailPropertyResponse.emailProperty) &&
-    super.equals(o);
+    return ObjectUtils.equals(this.emailProperty, emailPropertyResponse.emailProperty);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(emailProperty, super.hashCode());
+    return ObjectUtils.hashCodeMulti(emailProperty);
   }
 
 
@@ -85,7 +84,7 @@ public class EmailPropertyResponse extends AsposeResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailPropertyResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    emailProperty: ").append(toIndentedString(emailProperty)).append("\n");
     sb.append("}");
     return sb.toString();

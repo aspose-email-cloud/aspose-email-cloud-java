@@ -40,7 +40,7 @@ import java.io.*;
 /**
  * An email document response
  */
-public class EmailDocumentResponse extends AsposeResponse {
+public class EmailDocumentResponse {
   @JsonProperty("document")
   private EmailDocument document = null;
 
@@ -71,13 +71,12 @@ public class EmailDocumentResponse extends AsposeResponse {
     return false;
   }
     EmailDocumentResponse emailDocumentResponse = (EmailDocumentResponse) o;
-    return ObjectUtils.equals(this.document, emailDocumentResponse.document) &&
-    super.equals(o);
+    return ObjectUtils.equals(this.document, emailDocumentResponse.document);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(document, super.hashCode());
+    return ObjectUtils.hashCodeMulti(document);
   }
 
 
@@ -85,7 +84,7 @@ public class EmailDocumentResponse extends AsposeResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailDocumentResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
     sb.append("    document: ").append(toIndentedString(document)).append("\n");
     sb.append("}");
     return sb.toString();

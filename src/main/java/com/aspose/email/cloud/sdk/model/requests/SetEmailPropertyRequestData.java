@@ -62,4 +62,3 @@ public class SetEmailPropertyRequestData
     **/
     public SetEmailPropertyRequest request;
 }
-
