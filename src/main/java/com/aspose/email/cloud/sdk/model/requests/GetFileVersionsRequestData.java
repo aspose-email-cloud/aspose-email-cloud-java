@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="GetFileVersionsRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,29 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.getFileVersions request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class GetFileVersionsRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the GetFileVersionsRequestData class.   
+    * @param path File path e.g. &#39;/file.ext&#39;
+    * @param storageName Storage name
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public GetFileVersionsRequestData(String path, String storageName)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.path = path;
+        this.storageName = storageName;
     }
         
     /**
-    * A property name that should be changed
+    * File path e.g. '/file.ext'
     **/
-    public String propertyName;
+    public String path;
 
     /**
-    * Email document file name
+    * Storage name
     **/
-    public String fileName;
-
-    /**
-    * A property that should be changed and optional Storage info to specify             where the file located
-    **/
-    public SetEmailPropertyRequest request;
+    public String storageName;
 }
 

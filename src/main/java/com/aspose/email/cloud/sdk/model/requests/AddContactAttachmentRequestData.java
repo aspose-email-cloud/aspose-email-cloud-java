@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="AddContactAttachmentRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,43 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.addContactAttachment request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class AddContactAttachmentRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the AddContactAttachmentRequestData class.   
+    * @param format Contact document format
+    * @param name Contact document file name
+    * @param attachment Attachment name
+    * @param request Add attachment request
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public AddContactAttachmentRequestData(String format, String name, String attachment, AddAttachmentRequest request)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
+        this.format = format;
+        this.name = name;
+        this.attachment = attachment;
         this.request = request;
     }
         
     /**
-    * A property name that should be changed
+    * Contact document format
     **/
-    public String propertyName;
+    public String format;
 
     /**
-    * Email document file name
+    * Contact document file name
     **/
-    public String fileName;
+    public String name;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Attachment name
     **/
-    public SetEmailPropertyRequest request;
+    public String attachment;
+
+    /**
+    * Add attachment request
+    **/
+    public AddAttachmentRequest request;
 }
 

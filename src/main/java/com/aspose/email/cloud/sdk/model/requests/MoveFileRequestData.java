@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="MoveFileRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,50 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.moveFile request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class MoveFileRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the MoveFileRequestData class.   
+    * @param srcPath Source file path e.g. &#39;/src.ext&#39;
+    * @param destPath Destination file path e.g. &#39;/dest.ext&#39;
+    * @param srcStorageName Source storage name
+    * @param destStorageName Destination storage name
+    * @param versionId File version ID to move
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public MoveFileRequestData(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.srcPath = srcPath;
+        this.destPath = destPath;
+        this.srcStorageName = srcStorageName;
+        this.destStorageName = destStorageName;
+        this.versionId = versionId;
     }
         
     /**
-    * A property name that should be changed
+    * Source file path e.g. '/src.ext'
     **/
-    public String propertyName;
+    public String srcPath;
 
     /**
-    * Email document file name
+    * Destination file path e.g. '/dest.ext'
     **/
-    public String fileName;
+    public String destPath;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Source storage name
     **/
-    public SetEmailPropertyRequest request;
+    public String srcStorageName;
+
+    /**
+    * Destination storage name
+    **/
+    public String destStorageName;
+
+    /**
+    * File version ID to move
+    **/
+    public String versionId;
 }
 

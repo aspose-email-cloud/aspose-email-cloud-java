@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="FetchEmailMessageRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,50 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.fetchEmailMessage request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class FetchEmailMessageRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the FetchEmailMessageRequestData class.   
+    * @param messageId Message identifier
+    * @param firstAccount Email account
+    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)
+    * @param storage Storage name where account file(s) located
+    * @param storageFolder Folder in storage where account file(s) located
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public FetchEmailMessageRequestData(String messageId, String firstAccount, String secondAccount, String storage, String storageFolder)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.messageId = messageId;
+        this.firstAccount = firstAccount;
+        this.secondAccount = secondAccount;
+        this.storage = storage;
+        this.storageFolder = storageFolder;
     }
         
     /**
-    * A property name that should be changed
+    * Message identifier
     **/
-    public String propertyName;
+    public String messageId;
 
     /**
-    * Email document file name
+    * Email account
     **/
-    public String fileName;
+    public String firstAccount;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)
     **/
-    public SetEmailPropertyRequest request;
+    public String secondAccount;
+
+    /**
+    * Storage name where account file(s) located
+    **/
+    public String storage;
+
+    /**
+    * Folder in storage where account file(s) located
+    **/
+    public String storageFolder;
 }
 

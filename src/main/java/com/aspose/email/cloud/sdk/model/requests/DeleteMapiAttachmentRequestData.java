@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="DeleteMapiAttachmentRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,36 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.deleteMapiAttachment request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class DeleteMapiAttachmentRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the DeleteMapiAttachmentRequestData class.   
+    * @param name Document file name
+    * @param attachment Attachment name or index
+    * @param storage Document file storage location info
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public DeleteMapiAttachmentRequestData(String name, String attachment, StorageFolderLocation storage)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.name = name;
+        this.attachment = attachment;
+        this.storage = storage;
     }
         
     /**
-    * A property name that should be changed
+    * Document file name
     **/
-    public String propertyName;
+    public String name;
 
     /**
-    * Email document file name
+    * Attachment name or index
     **/
-    public String fileName;
+    public String attachment;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Document file storage location info
     **/
-    public SetEmailPropertyRequest request;
+    public StorageFolderLocation storage;
 }
 

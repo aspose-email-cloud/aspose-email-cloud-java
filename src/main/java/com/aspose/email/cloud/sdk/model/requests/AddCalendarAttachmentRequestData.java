@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="AddCalendarAttachmentRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,36 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.addCalendarAttachment request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class AddCalendarAttachmentRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the AddCalendarAttachmentRequestData class.   
+    * @param name Calendar file name in storage
+    * @param attachment Attachment file name in storage
+    * @param request Storage name and folder path for calendar and attachment files
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public AddCalendarAttachmentRequestData(String name, String attachment, AddAttachmentRequest request)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
+        this.name = name;
+        this.attachment = attachment;
         this.request = request;
     }
         
     /**
-    * A property name that should be changed
+    * Calendar file name in storage
     **/
-    public String propertyName;
+    public String name;
 
     /**
-    * Email document file name
+    * Attachment file name in storage
     **/
-    public String fileName;
+    public String attachment;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Storage name and folder path for calendar and attachment files
     **/
-    public SetEmailPropertyRequest request;
+    public AddAttachmentRequest request;
 }
 

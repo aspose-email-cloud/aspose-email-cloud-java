@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="CreateEmailFolderRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,22 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.createEmailFolder request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class CreateEmailFolderRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the CreateEmailFolderRequestData class.   
+    * @param request Create folder request
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public CreateEmailFolderRequestData(CreateFolderBaseRequest request)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
         this.request = request;
     }
         
     /**
-    * A property name that should be changed
+    * Create folder request
     **/
-    public String propertyName;
-
-    /**
-    * Email document file name
-    **/
-    public String fileName;
-
-    /**
-    * A property that should be changed and optional Storage info to specify             where the file located
-    **/
-    public SetEmailPropertyRequest request;
+    public CreateFolderBaseRequest request;
 }
 

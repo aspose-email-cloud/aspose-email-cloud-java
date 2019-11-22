@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="GetMapiListRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,43 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.getMapiList request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class GetMapiListRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the GetMapiListRequestData class.   
+    * @param folder Path to folder in storage
+    * @param storage Storage name
+    * @param itemsPerPage Count of items on page
+    * @param pageNumber Page number
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public GetMapiListRequestData(String folder, String storage, Integer itemsPerPage, Integer pageNumber)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.folder = folder;
+        this.storage = storage;
+        this.itemsPerPage = itemsPerPage;
+        this.pageNumber = pageNumber;
     }
         
     /**
-    * A property name that should be changed
+    * Path to folder in storage
     **/
-    public String propertyName;
+    public String folder;
 
     /**
-    * Email document file name
+    * Storage name
     **/
-    public String fileName;
+    public String storage;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Count of items on page
     **/
-    public SetEmailPropertyRequest request;
+    public Integer itemsPerPage;
+
+    /**
+    * Page number
+    **/
+    public Integer pageNumber;
 }
 

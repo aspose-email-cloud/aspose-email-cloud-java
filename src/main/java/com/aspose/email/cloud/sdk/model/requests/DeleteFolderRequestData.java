@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="DeleteFolderRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,36 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.deleteFolder request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class DeleteFolderRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the DeleteFolderRequestData class.   
+    * @param path Folder path e.g. &#39;/folder&#39;
+    * @param storageName Storage name
+    * @param recursive Enable to delete folders, subfolders and files
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public DeleteFolderRequestData(String path, String storageName, Boolean recursive)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.path = path;
+        this.storageName = storageName;
+        this.recursive = recursive;
     }
         
     /**
-    * A property name that should be changed
+    * Folder path e.g. '/folder'
     **/
-    public String propertyName;
+    public String path;
 
     /**
-    * Email document file name
+    * Storage name
     **/
-    public String fileName;
+    public String storageName;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Enable to delete folders, subfolders and files
     **/
-    public SetEmailPropertyRequest request;
+    public Boolean recursive;
 }
 

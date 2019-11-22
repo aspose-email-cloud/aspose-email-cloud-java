@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="DeleteContactPropertyRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,50 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.deleteContactProperty request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class DeleteContactPropertyRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the DeleteContactPropertyRequestData class.   
+    * @param format Contact document format
+    * @param name Contact document file name
+    * @param memberName Indexed property name
+    * @param index Property index
+    * @param folder Calendar document location in storage information
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public DeleteContactPropertyRequestData(String format, String name, String memberName, Integer index, StorageFolderLocation folder)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.format = format;
+        this.name = name;
+        this.memberName = memberName;
+        this.index = index;
+        this.folder = folder;
     }
         
     /**
-    * A property name that should be changed
+    * Contact document format
     **/
-    public String propertyName;
+    public String format;
 
     /**
-    * Email document file name
+    * Contact document file name
     **/
-    public String fileName;
+    public String name;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Indexed property name
     **/
-    public SetEmailPropertyRequest request;
+    public String memberName;
+
+    /**
+    * Property index
+    **/
+    public Integer index;
+
+    /**
+    * Calendar document location in storage information
+    **/
+    public StorageFolderLocation folder;
 }
 

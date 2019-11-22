@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="UpdateCalendarPropertiesRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,29 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.updateCalendarProperties request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class UpdateCalendarPropertiesRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the UpdateCalendarPropertiesRequestData class.   
+    * @param name iCalendar file name in storage
+    * @param request Calendar properties update request
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public UpdateCalendarPropertiesRequestData(String name, HierarchicalObjectRequest request)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
+        this.name = name;
         this.request = request;
     }
         
     /**
-    * A property name that should be changed
+    * iCalendar file name in storage
     **/
-    public String propertyName;
+    public String name;
 
     /**
-    * Email document file name
+    * Calendar properties update request
     **/
-    public String fileName;
-
-    /**
-    * A property that should be changed and optional Storage info to specify             where the file located
-    **/
-    public SetEmailPropertyRequest request;
+    public HierarchicalObjectRequest request;
 }
 

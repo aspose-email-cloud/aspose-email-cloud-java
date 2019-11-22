@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SetEmailPropertyRequestData.java">
+* <copyright company="Aspose" file="UploadFileRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,36 +30,35 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.setEmailProperty request invocation.
+* Class that holds parameters for EmailApi.uploadFile request invocation.
 **/   
-public class SetEmailPropertyRequestData
+public class UploadFileRequestData
 {
     /**
-    * Initializes a new instance of the SetEmailPropertyRequestData class.   
-    * @param propertyName A property name that should be changed
-    * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * Initializes a new instance of the UploadFileRequestData class.   
+    * @param path Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+    * @param file File to upload
+    * @param storageName Storage name
     **/
-    public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
+    public UploadFileRequestData(String path, byte[] file, String storageName)             
     {
-        this.propertyName = propertyName;
-        this.fileName = fileName;
-        this.request = request;
+        this.path = path;
+        this.File = file;
+        this.storageName = storageName;
     }
         
     /**
-    * A property name that should be changed
+    * Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
     **/
-    public String propertyName;
+    public String path;
 
     /**
-    * Email document file name
+    * File to upload
     **/
-    public String fileName;
+    public byte[] File;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * Storage name
     **/
-    public SetEmailPropertyRequest request;
+    public String storageName;
 }
-
