@@ -234,7 +234,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <commons_io_version>2.5</commons_io_version>
     <commons_lang3_version>3.6</commons_lang3_version>
-    <jackson-version>2.7.5</jackson-version>
+    <jackson-version>2.10.1</jackson-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
   </properties>
 </project>
