@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Update email document property request
+ * Update email document property request             
  */
 public class SetEmailPropertyRequest {
   @JsonProperty("emailProperty")
@@ -53,7 +55,7 @@ public class SetEmailPropertyRequest {
   }
 
   /**
-   * An email property that should be updated
+   * An email property that should be updated             
    * @return emailProperty
   **/
   public EmailProperty getEmailProperty() {
@@ -70,7 +72,7 @@ public class SetEmailPropertyRequest {
   }
 
   /**
-   * An email document location in storage
+   * An email document location in storage             
    * @return storageFolder
   **/
   public StorageFolderLocation getStorageFolder() {

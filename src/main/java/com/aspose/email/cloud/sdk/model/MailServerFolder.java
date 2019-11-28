@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account folder
+ * Email account folder             
  */
 public class MailServerFolder {
   @JsonProperty("name")
@@ -53,7 +55,7 @@ public class MailServerFolder {
   }
 
   /**
-   * Gets or sets mail folder name
+   * Gets or sets mail folder name             
    * @return name
   **/
   public String getName() {
@@ -70,7 +72,7 @@ public class MailServerFolder {
   }
 
   /**
-   * Gets or sets mail folder id
+   * Gets or sets mail folder id             
    * @return id
   **/
   public String getId() {

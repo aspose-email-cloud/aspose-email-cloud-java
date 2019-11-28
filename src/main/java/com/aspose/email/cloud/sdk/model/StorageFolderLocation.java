@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * A storage folder location information
+ * A storage folder location information             
  */
 public class StorageFolderLocation {
   @JsonProperty("storage")
@@ -53,7 +55,7 @@ public class StorageFolderLocation {
   }
 
   /**
-   * A storage name
+   * A storage name             
    * @return storage
   **/
   public String getStorage() {
@@ -70,7 +72,7 @@ public class StorageFolderLocation {
   }
 
   /**
-   * A path to a folder in specified storage
+   * A path to a folder in specified storage             
    * @return folderPath
   **/
   public String getFolderPath() {

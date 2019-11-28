@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Represents Email document DTO.
+ * Represents Email document DTO.             
  */
 public class EmailDocument {
   @JsonProperty("links")
@@ -61,7 +63,7 @@ public class EmailDocument {
   }
 
   /**
-   * Links that originate from this document.
+   * Links that originate from this document.             
    * @return links
   **/
   public List<Link> getLinks() {
@@ -78,7 +80,7 @@ public class EmailDocument {
   }
 
   /**
-   * List of document properties.
+   * List of document properties.             
    * @return documentProperties
   **/
   public EmailProperties getDocumentProperties() {

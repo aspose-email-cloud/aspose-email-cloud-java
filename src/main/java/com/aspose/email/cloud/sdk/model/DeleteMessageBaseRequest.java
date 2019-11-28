@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Delete message request
+ * Delete message request             
  */
 public class DeleteMessageBaseRequest extends AccountBaseRequest {
   @JsonProperty("messageId")
@@ -53,7 +55,7 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Message identifier
+   * Message identifier             
    * @return messageId
   **/
   public String getMessageId() {
@@ -70,7 +72,7 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Specifies that message should be deleted permanently
+   * Specifies that message should be deleted permanently             
    * @return deletePermanently
   **/
   public Boolean isDeletePermanently() {

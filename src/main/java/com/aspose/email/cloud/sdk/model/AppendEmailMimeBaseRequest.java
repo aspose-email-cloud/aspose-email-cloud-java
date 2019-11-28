@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Append email from MIME string to account request
+ * Append email from MIME string to account request             
  */
 public class AppendEmailMimeBaseRequest extends AppendEmailAccountBaseRequest {
   @JsonProperty("base64MimeMessage")
@@ -50,7 +52,7 @@ public class AppendEmailMimeBaseRequest extends AppendEmailAccountBaseRequest {
   }
 
   /**
-   * Email document serialized as MIME string
+   * Email document serialized as MIME string             
    * @return base64MimeMessage
   **/
   public String getBase64MimeMessage() {

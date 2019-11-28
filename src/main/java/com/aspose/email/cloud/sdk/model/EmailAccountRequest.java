@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account settings request
+ * Email account settings request             
  */
 public class EmailAccountRequest {
   @JsonProperty("host")
@@ -68,7 +70,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account host
+   * Email account host             
    * @return host
   **/
   public String getHost() {
@@ -85,7 +87,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account port
+   * Email account port             
    * @return port
   **/
   public Integer getPort() {
@@ -102,7 +104,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account login
+   * Email account login             
    * @return login
   **/
   public String getLogin() {
@@ -119,7 +121,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account security options
+   * Email account security options             
    * @return securityOptions
   **/
   public Object getSecurityOptions() {
@@ -136,7 +138,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account protocol type
+   * Email account protocol type             
    * @return protocolType
   **/
   public Object getProtocolType() {
@@ -153,7 +155,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account description
+   * Email account description             
    * @return description
   **/
   public String getDescription() {
@@ -170,7 +172,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * A storage file location info to store email account
+   * A storage file location info to store email account             
    * @return storageFile
   **/
   public StorageFileLocation getStorageFile() {

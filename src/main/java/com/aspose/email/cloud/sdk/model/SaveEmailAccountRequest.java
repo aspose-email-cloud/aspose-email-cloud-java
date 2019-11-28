@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Save email account settings with login/password authentication request
+ * Save email account settings with login/password authentication request             
  */
 public class SaveEmailAccountRequest extends EmailAccountRequest {
   @JsonProperty("password")
@@ -50,7 +52,7 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
   }
 
   /**
-   * Email account password
+   * Email account password             
    * @return password
   **/
   public String getPassword() {

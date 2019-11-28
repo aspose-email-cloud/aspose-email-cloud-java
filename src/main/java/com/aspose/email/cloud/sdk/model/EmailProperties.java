@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email list properties.
+ * Email list properties.             
  */
 public class EmailProperties {
   @JsonProperty("link")
@@ -53,7 +55,7 @@ public class EmailProperties {
   }
 
   /**
-   * Gets or sets link that originate from this document.
+   * Gets or sets link that originate from this document.             
    * @return link
   **/
   public Link getLink() {

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Indexed hierarchical property
+ * Indexed hierarchical property             
  */
 public class IndexedHierarchicalObject extends BaseObject {
   @JsonProperty("index")
@@ -53,7 +55,7 @@ public class IndexedHierarchicalObject extends BaseObject {
   }
 
   /**
-   * Index of property in list
+   * Index of property in list             
    * @return index
   **/
   public Integer getIndex() {
@@ -78,7 +80,7 @@ public class IndexedHierarchicalObject extends BaseObject {
   }
 
   /**
-   * List of internal properties
+   * List of internal properties             
    * @return internalProperties
   **/
   public List<BaseObject> getInternalProperties() {

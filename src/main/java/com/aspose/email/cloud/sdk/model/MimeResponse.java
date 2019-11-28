@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email document property DTO.
+ * Email document property DTO.             
  */
 public class MimeResponse {
   @JsonProperty("mime")
@@ -50,7 +52,7 @@ public class MimeResponse {
   }
 
   /**
-   * Gets or sets base64 encoded mime content.
+   * Gets or sets base64 encoded mime content.             
    * @return mime
   **/
   public String getMime() {

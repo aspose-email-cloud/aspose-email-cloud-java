@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Save email account settings with OAuth request
+ * Save email account settings with OAuth request             
  */
 public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
   @JsonProperty("clientId")
@@ -56,7 +58,7 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
   }
 
   /**
-   * OAuth client identifier
+   * OAuth client identifier             
    * @return clientId
   **/
   public String getClientId() {
@@ -73,7 +75,7 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
   }
 
   /**
-   * OAuth client secret
+   * OAuth client secret             
    * @return clientSecret
   **/
   public String getClientSecret() {
@@ -90,7 +92,7 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
   }
 
   /**
-   * OAuth refresh token
+   * OAuth refresh token             
    * @return refreshToken
   **/
   public String getRefreshToken() {

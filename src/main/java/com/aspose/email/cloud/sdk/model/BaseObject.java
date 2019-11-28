@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Base property object
+ * Base property object             
  */
 public class BaseObject {
   @JsonProperty("name")
@@ -53,7 +55,7 @@ public class BaseObject {
   }
 
   /**
-   * Gets or sets the name of an object.
+   * Gets or sets the name of an object.             
    * @return name
   **/
   public String getName() {
@@ -67,7 +69,7 @@ public class BaseObject {
 
 
   /**
-   * Property type. Used for deserialization purposes
+   * Property type. Used for deserialization purposes             
    * @return type
   **/
   public String getType() {

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Append email from storage file to account request
+ * Append email from storage file to account request             
  */
 public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
   @JsonProperty("emailFile")
@@ -50,7 +52,7 @@ public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
   }
 
   /**
-   * Email document file location in storage
+   * Email document file location in storage             
    * @return emailFile
   **/
   public StorageFileLocation getEmailFile() {

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Set message is read request
+ * Set message is read request             
  */
 public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
   @JsonProperty("messageId")
@@ -53,7 +55,7 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Message identifier
+   * Message identifier             
    * @return messageId
   **/
   public String getMessageId() {
@@ -70,7 +72,7 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Specifies that message should be marked read or unread
+   * Specifies that message should be marked read or unread             
    * @return isRead
   **/
   public Boolean isIsRead() {

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Add attachment request
+ * Add attachment request             
  */
 public class AddAttachmentRequest {
   @JsonProperty("documentFolder")
@@ -53,7 +55,7 @@ public class AddAttachmentRequest {
   }
 
   /**
-   * Storage folder location of document
+   * Storage folder location of document             
    * @return documentFolder
   **/
   public StorageFolderLocation getDocumentFolder() {
@@ -70,7 +72,7 @@ public class AddAttachmentRequest {
   }
 
   /**
-   * Storage folder location of an attachment
+   * Storage folder location of an attachment             
    * @return attachmentFolder
   **/
   public StorageFolderLocation getAttachmentFolder() {

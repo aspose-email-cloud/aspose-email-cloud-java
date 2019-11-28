@@ -38,7 +38,7 @@ public class SetEmailPropertyRequestData
     * Initializes a new instance of the SetEmailPropertyRequestData class.   
     * @param propertyName A property name that should be changed
     * @param fileName Email document file name
-    * @param request A property that should be changed and optional Storage info to specify             where the file located
+    * @param request A property that should be changed and optional Storage info to specify where the file located             
     **/
     public SetEmailPropertyRequestData(String propertyName, String fileName, SetEmailPropertyRequest request)             
     {
@@ -58,7 +58,7 @@ public class SetEmailPropertyRequestData
     public String fileName;
 
     /**
-    * A property that should be changed and optional Storage info to specify             where the file located
+    * A property that should be changed and optional Storage info to specify where the file located             
     **/
     public SetEmailPropertyRequest request;
 }

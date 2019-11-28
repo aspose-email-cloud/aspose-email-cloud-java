@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Object represented as hierarchical properties request 
+ * Object represented as hierarchical properties request             
  */
 public class HierarchicalObjectRequest {
   @JsonProperty("hierarchicalObject")
@@ -53,7 +55,7 @@ public class HierarchicalObjectRequest {
   }
 
   /**
-   * Hierarchical properties of document
+   * Hierarchical properties of document             
    * @return hierarchicalObject
   **/
   public HierarchicalObject getHierarchicalObject() {
@@ -70,7 +72,7 @@ public class HierarchicalObjectRequest {
   }
 
   /**
-   * Document location in storage
+   * Document location in storage             
    * @return storageFolder
   **/
   public StorageFolderLocation getStorageFolder() {
