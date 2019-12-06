@@ -114,6 +114,11 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
     </plugins>
   </build>
   <profiles>
@@ -228,6 +233,12 @@
       <groupId>org.simpleframework</groupId>
       <artifactId>simple-xml</artifactId>
       <version>2.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.14.3</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <properties>
