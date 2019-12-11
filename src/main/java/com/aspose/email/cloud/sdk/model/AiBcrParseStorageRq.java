@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiBcrParseStorageRequest.java">
+* <copyright company="Aspose" file="AiBcrParseStorageRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -42,11 +42,11 @@ import java.io.*;
 /**
  * Parse business card images from Storage request             
  */
-public class AiBcrParseStorageRequest extends AiBcrStorageImageRequest {
+public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
   @JsonProperty("outFolder")
   private StorageFolderLocation outFolder = null;
 
-  public AiBcrParseStorageRequest outFolder(StorageFolderLocation outFolder) {
+  public AiBcrParseStorageRq outFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
     return this;
   }
@@ -72,8 +72,8 @@ public class AiBcrParseStorageRequest extends AiBcrStorageImageRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiBcrParseStorageRequest aiBcrParseStorageRequest = (AiBcrParseStorageRequest) o;
-    return ObjectUtils.equals(this.outFolder, aiBcrParseStorageRequest.outFolder) &&
+    AiBcrParseStorageRq aiBcrParseStorageRq = (AiBcrParseStorageRq) o;
+    return ObjectUtils.equals(this.outFolder, aiBcrParseStorageRq.outFolder) &&
     super.equals(o);
   }
 
@@ -86,7 +86,7 @@ public class AiBcrParseStorageRequest extends AiBcrStorageImageRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiBcrParseStorageRequest {\n");
+    sb.append("class AiBcrParseStorageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    outFolder: ").append(toIndentedString(outFolder)).append("\n");
     sb.append("}");

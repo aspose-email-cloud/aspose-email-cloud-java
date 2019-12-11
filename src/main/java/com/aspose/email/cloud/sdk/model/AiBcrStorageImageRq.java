@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiBcrBase64Request.java">
+* <copyright company="Aspose" file="AiBcrStorageImageRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,34 +40,31 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Parse business card image request             
+ * Business card images from storage for recognition             
  */
-public class AiBcrBase64Request extends AiBcrRequest {
+public class AiBcrStorageImageRq extends AiBcrRq {
   @JsonProperty("images")
-  private List<AiBcrBase64Image> images = null;
+  private List<AiBcrImageStorageFile> images = new ArrayList<AiBcrImageStorageFile>();
 
-  public AiBcrBase64Request images(List<AiBcrBase64Image> images) {
+  public AiBcrStorageImageRq images(List<AiBcrImageStorageFile> images) {
     this.images = images;
     return this;
   }
 
-  public AiBcrBase64Request addImagesItem(AiBcrBase64Image imagesItem) {
-    if (this.images == null) {
-      this.images = new ArrayList<AiBcrBase64Image>();
-    }
+  public AiBcrStorageImageRq addImagesItem(AiBcrImageStorageFile imagesItem) {
     this.images.add(imagesItem);
     return this;
   }
 
   /**
-   * Images to recognize             
+   * List of images with business cards             
    * @return images
   **/
-  public List<AiBcrBase64Image> getImages() {
+  public List<AiBcrImageStorageFile> getImages() {
     return images;
   }  
 
-  public void setImages(List<AiBcrBase64Image> images) {
+  public void setImages(List<AiBcrImageStorageFile> images) {
     this.images = images;
   }
 
@@ -80,8 +77,8 @@ public class AiBcrBase64Request extends AiBcrRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiBcrBase64Request aiBcrBase64Request = (AiBcrBase64Request) o;
-    return ObjectUtils.equals(this.images, aiBcrBase64Request.images) &&
+    AiBcrStorageImageRq aiBcrStorageImageRq = (AiBcrStorageImageRq) o;
+    return ObjectUtils.equals(this.images, aiBcrStorageImageRq.images) &&
     super.equals(o);
   }
 
@@ -94,7 +91,7 @@ public class AiBcrBase64Request extends AiBcrRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiBcrBase64Request {\n");
+    sb.append("class AiBcrStorageImageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    images: ").append(toIndentedString(images)).append("\n");
     sb.append("}");

@@ -36,7 +36,7 @@ public class GetContactListRequestData
 {
     /**
     * Initializes a new instance of the GetContactListRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
     * @param folder Path to folder in storage
     * @param storage Storage name
     * @param itemsPerPage Count of items on page
@@ -52,7 +52,7 @@ public class GetContactListRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format. Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

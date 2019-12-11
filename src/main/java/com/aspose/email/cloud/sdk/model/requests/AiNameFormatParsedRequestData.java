@@ -36,16 +36,16 @@ public class AiNameFormatParsedRequestData
 {
     /**
     * Initializes a new instance of the AiNameFormatParsedRequestData class.   
-    * @param request Parsed name with options
+    * @param rq Parsed name with options
     **/
-    public AiNameFormatParsedRequestData(AiNameParsedRequest request)             
+    public AiNameFormatParsedRequestData(AiNameParsedRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Parsed name with options
     **/
-    public AiNameParsedRequest request;
+    public AiNameParsedRq rq;
 }
 

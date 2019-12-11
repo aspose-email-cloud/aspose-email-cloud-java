@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ContactFormat.java">
+* <copyright company="Aspose" file="AiBcrParseOcrDataRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -39,44 +39,75 @@ import com.google.gson.*;
 import com.google.gson.stream.*;
 import java.io.*;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
- * 
+ * Parse ocr data request             
  */
-public enum ContactFormat {
-  
-  VCARD("VCard"),
-  
-  WEBDAV("WebDav"),
-  
-  MSG("Msg");
+public class AiBcrParseOcrDataRq extends AiBcrRq {
+  @JsonProperty("data")
+  private List<AiBcrOcrData> data = new ArrayList<AiBcrOcrData>();
 
-  private String value;
-
-  ContactFormat(String value) {
-    this.value = value;
+  public AiBcrParseOcrDataRq data(List<AiBcrOcrData> data) {
+    this.data = data;
+    return this;
   }
 
-  @JsonValue
-  public String getValue() {
-    return value;
+  public AiBcrParseOcrDataRq addDataItem(AiBcrOcrData dataItem) {
+    this.data.add(dataItem);
+    return this;
+  }
+
+  /**
+   * OCR data             
+   * @return data
+  **/
+  public List<AiBcrOcrData> getData() {
+    return data;
+  }  
+
+  public void setData(List<AiBcrOcrData> data) {
+    this.data = data;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+  if (this == o) {
+    return true;
+  }
+  if (o == null || getClass() != o.getClass()) {
+    return false;
+  }
+    AiBcrParseOcrDataRq aiBcrParseOcrDataRq = (AiBcrParseOcrDataRq) o;
+    return ObjectUtils.equals(this.data, aiBcrParseOcrDataRq.data) &&
+    super.equals(o);
   }
 
   @Override
-  public String toString() {
-    return String.valueOf(value);
+  public int hashCode() {
+    return ObjectUtils.hashCodeMulti(data, super.hashCode());
   }
 
-  @JsonCreator
-  public static ContactFormat fromValue(String text) {
-    for (ContactFormat b : ContactFormat.values()) {
-      if (String.valueOf(b.value).equals(text)) {
-        return b;
-      }
-    }
-    return null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AiBcrParseOcrDataRq {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("}");
+    return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }
 

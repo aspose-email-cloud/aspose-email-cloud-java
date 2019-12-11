@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiNameParsedRequest.java">
+* <copyright company="Aspose" file="AiNameParsedRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -42,36 +42,56 @@ import java.io.*;
 /**
  * Parsed name request model             
  */
-public class AiNameParsedRequest {
-  @JsonProperty("options")
-  private AiNameOptions options = null;
+public class AiNameParsedRq {
+  @JsonProperty("culturalContext")
+  private AiNameCulturalContext culturalContext = null;
+
+  @JsonProperty("format")
+  private String format = null;
 
   @JsonProperty("parsedName")
   private List<AiNameComponent> parsedName = new ArrayList<AiNameComponent>();
 
-  public AiNameParsedRequest options(AiNameOptions options) {
-    this.options = options;
+  public AiNameParsedRq culturalContext(AiNameCulturalContext culturalContext) {
+    this.culturalContext = culturalContext;
     return this;
   }
 
   /**
-   * AiName parser options             
-   * @return options
+   * AiName parser cultural context             
+   * @return culturalContext
   **/
-  public AiNameOptions getOptions() {
-    return options;
+  public AiNameCulturalContext getCulturalContext() {
+    return culturalContext;
   }  
 
-  public void setOptions(AiNameOptions options) {
-    this.options = options;
+  public void setCulturalContext(AiNameCulturalContext culturalContext) {
+    this.culturalContext = culturalContext;
   }
 
-  public AiNameParsedRequest parsedName(List<AiNameComponent> parsedName) {
+  public AiNameParsedRq format(String format) {
+    this.format = format;
+    return this;
+  }
+
+  /**
+   * Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;             
+   * @return format
+  **/
+  public String getFormat() {
+    return format;
+  }  
+
+  public void setFormat(String format) {
+    this.format = format;
+  }
+
+  public AiNameParsedRq parsedName(List<AiNameComponent> parsedName) {
     this.parsedName = parsedName;
     return this;
   }
 
-  public AiNameParsedRequest addParsedNameItem(AiNameComponent parsedNameItem) {
+  public AiNameParsedRq addParsedNameItem(AiNameComponent parsedNameItem) {
     this.parsedName.add(parsedNameItem);
     return this;
   }
@@ -97,23 +117,25 @@ public class AiNameParsedRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiNameParsedRequest aiNameParsedRequest = (AiNameParsedRequest) o;
-    return ObjectUtils.equals(this.options, aiNameParsedRequest.options) &&
-    ObjectUtils.equals(this.parsedName, aiNameParsedRequest.parsedName);
+    AiNameParsedRq aiNameParsedRq = (AiNameParsedRq) o;
+    return ObjectUtils.equals(this.culturalContext, aiNameParsedRq.culturalContext) &&
+    ObjectUtils.equals(this.format, aiNameParsedRq.format) &&
+    ObjectUtils.equals(this.parsedName, aiNameParsedRq.parsedName);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(options, parsedName);
+    return ObjectUtils.hashCodeMulti(culturalContext, format, parsedName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiNameParsedRequest {\n");
+    sb.append("class AiNameParsedRq {\n");
     
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("    culturalContext: ").append(toIndentedString(culturalContext)).append("\n");
+    sb.append("    format: ").append(toIndentedString(format)).append("\n");
     sb.append("    parsedName: ").append(toIndentedString(parsedName)).append("\n");
     sb.append("}");
     return sb.toString();

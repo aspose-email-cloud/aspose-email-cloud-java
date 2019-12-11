@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiNameParsedMatchRequest.java">
+* <copyright company="Aspose" file="AiBcrRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,32 +40,27 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Two parsed names to match request             
+ * Business card recognition request             
  */
-public class AiNameParsedMatchRequest extends AiNameParsedRequest {
-  @JsonProperty("otherParsedName")
-  private List<AiNameComponent> otherParsedName = new ArrayList<AiNameComponent>();
+public class AiBcrRq {
+  @JsonProperty("options")
+  private AiBcrOptions options = null;
 
-  public AiNameParsedMatchRequest otherParsedName(List<AiNameComponent> otherParsedName) {
-    this.otherParsedName = otherParsedName;
-    return this;
-  }
-
-  public AiNameParsedMatchRequest addOtherParsedNameItem(AiNameComponent otherParsedNameItem) {
-    this.otherParsedName.add(otherParsedNameItem);
+  public AiBcrRq options(AiBcrOptions options) {
+    this.options = options;
     return this;
   }
 
   /**
-   * Other parsed name to match             
-   * @return otherParsedName
+   * Recognition options             
+   * @return options
   **/
-  public List<AiNameComponent> getOtherParsedName() {
-    return otherParsedName;
+  public AiBcrOptions getOptions() {
+    return options;
   }  
 
-  public void setOtherParsedName(List<AiNameComponent> otherParsedName) {
-    this.otherParsedName = otherParsedName;
+  public void setOptions(AiBcrOptions options) {
+    this.options = options;
   }
 
 
@@ -77,23 +72,22 @@ public class AiNameParsedMatchRequest extends AiNameParsedRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiNameParsedMatchRequest aiNameParsedMatchRequest = (AiNameParsedMatchRequest) o;
-    return ObjectUtils.equals(this.otherParsedName, aiNameParsedMatchRequest.otherParsedName) &&
-    super.equals(o);
+    AiBcrRq aiBcrRq = (AiBcrRq) o;
+    return ObjectUtils.equals(this.options, aiBcrRq.options);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(otherParsedName, super.hashCode());
+    return ObjectUtils.hashCodeMulti(options);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiNameParsedMatchRequest {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    otherParsedName: ").append(toIndentedString(otherParsedName)).append("\n");
+    sb.append("class AiBcrRq {\n");
+    
+    sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
   }

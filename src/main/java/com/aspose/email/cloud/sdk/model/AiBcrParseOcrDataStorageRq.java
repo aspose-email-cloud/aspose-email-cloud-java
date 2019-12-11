@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiBcrParseOcrDataStorageRequest.java">
+* <copyright company="Aspose" file="AiBcrParseOcrDataStorageRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -42,11 +42,11 @@ import java.io.*;
 /**
  * Parse ocr data request with storage output location             
  */
-public class AiBcrParseOcrDataStorageRequest extends AiBcrParseOcrDataRequest {
+public class AiBcrParseOcrDataStorageRq extends AiBcrParseOcrDataRq {
   @JsonProperty("outFolder")
   private StorageFolderLocation outFolder = null;
 
-  public AiBcrParseOcrDataStorageRequest outFolder(StorageFolderLocation outFolder) {
+  public AiBcrParseOcrDataStorageRq outFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
     return this;
   }
@@ -72,8 +72,8 @@ public class AiBcrParseOcrDataStorageRequest extends AiBcrParseOcrDataRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiBcrParseOcrDataStorageRequest aiBcrParseOcrDataStorageRequest = (AiBcrParseOcrDataStorageRequest) o;
-    return ObjectUtils.equals(this.outFolder, aiBcrParseOcrDataStorageRequest.outFolder) &&
+    AiBcrParseOcrDataStorageRq aiBcrParseOcrDataStorageRq = (AiBcrParseOcrDataStorageRq) o;
+    return ObjectUtils.equals(this.outFolder, aiBcrParseOcrDataStorageRq.outFolder) &&
     super.equals(o);
   }
 
@@ -86,7 +86,7 @@ public class AiBcrParseOcrDataStorageRequest extends AiBcrParseOcrDataRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiBcrParseOcrDataStorageRequest {\n");
+    sb.append("class AiBcrParseOcrDataStorageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    outFolder: ").append(toIndentedString(outFolder)).append("\n");
     sb.append("}");

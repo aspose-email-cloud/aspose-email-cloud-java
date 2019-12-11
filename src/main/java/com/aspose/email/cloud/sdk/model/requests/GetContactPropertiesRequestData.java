@@ -36,7 +36,7 @@ public class GetContactPropertiesRequestData
 {
     /**
     * Initializes a new instance of the GetContactPropertiesRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name
     * @param folder Path to folder in storage
     * @param storage Storage name
@@ -50,7 +50,7 @@ public class GetContactPropertiesRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format. Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

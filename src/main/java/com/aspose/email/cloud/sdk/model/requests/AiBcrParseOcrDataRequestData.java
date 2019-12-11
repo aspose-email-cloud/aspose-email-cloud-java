@@ -36,16 +36,16 @@ public class AiBcrParseOcrDataRequestData
 {
     /**
     * Initializes a new instance of the AiBcrParseOcrDataRequestData class.   
-    * @param request 
+    * @param rq 
     **/
-    public AiBcrParseOcrDataRequestData(AiBcrParseOcrDataRequest request)             
+    public AiBcrParseOcrDataRequestData(AiBcrParseOcrDataRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
-    * Gets or sets request
+    * Gets or sets rq
     **/
-    public AiBcrParseOcrDataRequest request;
+    public AiBcrParseOcrDataRq rq;
 }
 

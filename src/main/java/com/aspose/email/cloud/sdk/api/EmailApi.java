@@ -354,9 +354,9 @@ public class EmailApi
      */
     public ListResponseOfAiBcrOcrData aiBcrOcr(AiBcrOcrRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrOcr");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrOcr");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/ocr";
@@ -366,7 +366,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -393,9 +393,9 @@ public class EmailApi
      */
     public ListResponseOfAiBcrOcrData aiBcrOcrStorage(AiBcrOcrStorageRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrOcrStorage");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrOcrStorage");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/ocr-storage";
@@ -405,7 +405,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -432,9 +432,9 @@ public class EmailApi
      */
     public ListResponseOfHierarchicalObject aiBcrParse(AiBcrParseRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrParse");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParse");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse";
@@ -444,7 +444,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -471,9 +471,9 @@ public class EmailApi
      */
     public ListResponseOfHierarchicalObject aiBcrParseOcrData(AiBcrParseOcrDataRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrParseOcrData");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParseOcrData");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse-ocr-data";
@@ -483,7 +483,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -510,9 +510,9 @@ public class EmailApi
      */
     public ListResponseOfStorageFileLocation aiBcrParseOcrDataStorage(AiBcrParseOcrDataStorageRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrParseOcrDataStorage");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParseOcrDataStorage");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse-ocr-data-storage";
@@ -522,7 +522,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -549,9 +549,9 @@ public class EmailApi
      */
     public ListResponseOfStorageFileLocation aiBcrParseStorage(AiBcrParseStorageRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiBcrParseStorage");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParseStorage");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse-storage";
@@ -561,7 +561,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -672,9 +672,9 @@ public class EmailApi
      */
     public AiNameWeightedVariants aiNameExpandParsed(AiNameExpandParsedRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiNameExpandParsed");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameExpandParsed");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/expand-parsed";
@@ -684,7 +684,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -725,6 +725,7 @@ public class EmailApi
       resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
       resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
       resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
       resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
       
             
@@ -753,9 +754,9 @@ public class EmailApi
      */
     public AiNameFormatted aiNameFormatParsed(AiNameFormatParsedRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiNameFormatParsed");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameFormatParsed");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/format-parsed";
@@ -765,7 +766,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -834,9 +835,9 @@ public class EmailApi
      */
     public ListResponseOfAiNameGenderHypothesis aiNameGenderizeParsed(AiNameGenderizeParsedRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiNameGenderizeParsed");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameGenderizeParsed");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/genderize-parsed";
@@ -846,7 +847,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -920,9 +921,9 @@ public class EmailApi
      */
     public AiNameMatchResult aiNameMatchParsed(AiNameMatchParsedRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling aiNameMatchParsed");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameMatchParsed");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/match-parsed";
@@ -932,7 +933,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 

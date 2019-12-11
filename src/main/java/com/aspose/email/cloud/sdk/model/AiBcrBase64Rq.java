@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiNameWritingStyle.java">
+* <copyright company="Aspose" file="AiBcrBase64Rq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -39,46 +39,78 @@ import com.google.gson.*;
 import com.google.gson.stream.*;
 import java.io.*;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
- * Name writing style             
+ * Parse business card image request             
  */
-public enum AiNameWritingStyle {
-  
-  FORMAL("Formal"),
-  
-  INFORMAL("Informal"),
-  
-  LEGAL("Legal"),
-  
-  ACADEMIC("Academic");
+public class AiBcrBase64Rq extends AiBcrRq {
+  @JsonProperty("images")
+  private List<AiBcrBase64Image> images = null;
 
-  private String value;
-
-  AiNameWritingStyle(String value) {
-    this.value = value;
+  public AiBcrBase64Rq images(List<AiBcrBase64Image> images) {
+    this.images = images;
+    return this;
   }
 
-  @JsonValue
-  public String getValue() {
-    return value;
+  public AiBcrBase64Rq addImagesItem(AiBcrBase64Image imagesItem) {
+    if (this.images == null) {
+      this.images = new ArrayList<AiBcrBase64Image>();
+    }
+    this.images.add(imagesItem);
+    return this;
+  }
+
+  /**
+   * Images to recognize             
+   * @return images
+  **/
+  public List<AiBcrBase64Image> getImages() {
+    return images;
+  }  
+
+  public void setImages(List<AiBcrBase64Image> images) {
+    this.images = images;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+  if (this == o) {
+    return true;
+  }
+  if (o == null || getClass() != o.getClass()) {
+    return false;
+  }
+    AiBcrBase64Rq aiBcrBase64Rq = (AiBcrBase64Rq) o;
+    return ObjectUtils.equals(this.images, aiBcrBase64Rq.images) &&
+    super.equals(o);
   }
 
   @Override
-  public String toString() {
-    return String.valueOf(value);
+  public int hashCode() {
+    return ObjectUtils.hashCodeMulti(images, super.hashCode());
   }
 
-  @JsonCreator
-  public static AiNameWritingStyle fromValue(String text) {
-    for (AiNameWritingStyle b : AiNameWritingStyle.values()) {
-      if (String.valueOf(b.value).equals(text)) {
-        return b;
-      }
-    }
-    return null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AiBcrBase64Rq {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    images: ").append(toIndentedString(images)).append("\n");
+    sb.append("}");
+    return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }
 

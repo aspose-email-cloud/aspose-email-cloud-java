@@ -36,16 +36,16 @@ public class AiNameGenderizeParsedRequestData
 {
     /**
     * Initializes a new instance of the AiNameGenderizeParsedRequestData class.   
-    * @param request Gender detection request data
+    * @param rq Gender detection request data
     **/
-    public AiNameGenderizeParsedRequestData(AiNameParsedRequest request)             
+    public AiNameGenderizeParsedRequestData(AiNameParsedRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Gender detection request data
     **/
-    public AiNameParsedRequest request;
+    public AiNameParsedRq rq;
 }
 

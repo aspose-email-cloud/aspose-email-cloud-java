@@ -55,7 +55,7 @@ public class AppendEmailAccountBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Get folder
+   * Email account folder to store a message             
    * @return folder
   **/
   public String getFolder() {
@@ -72,7 +72,7 @@ public class AppendEmailAccountBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Get markAsSent
+   * Mark message as sent             
    * @return markAsSent
   **/
   public Boolean isMarkAsSent() {

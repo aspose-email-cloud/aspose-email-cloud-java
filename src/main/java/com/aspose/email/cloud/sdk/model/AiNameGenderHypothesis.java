@@ -44,25 +44,25 @@ import java.io.*;
  */
 public class AiNameGenderHypothesis {
   @JsonProperty("gender")
-  private Object gender = null;
+  private String gender = null;
 
   @JsonProperty("score")
   private Double score = null;
 
-  public AiNameGenderHypothesis gender(Object gender) {
+  public AiNameGenderHypothesis gender(String gender) {
     this.gender = gender;
     return this;
   }
 
   /**
-   * Name&#39;s possible gender             
+   * Recognized name gender. Enum, available values: Male, Female, Unknown
    * @return gender
   **/
-  public Object getGender() {
+  public String getGender() {
     return gender;
   }  
 
-  public void setGender(Object gender) {
+  public void setGender(String gender) {
     this.gender = gender;
   }
 

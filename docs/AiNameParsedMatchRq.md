@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameParsedMatchRequest
+# com.aspose.email.cloud.sdk.model.AiNameParsedMatchRq
 
 ## Properties
 Name | Type | Description | Notes

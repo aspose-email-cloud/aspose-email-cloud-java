@@ -1,10 +1,10 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrBase64Request
+# com.aspose.email.cloud.sdk.model.AiBcrParseOcrDataStorageRq
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**images** | [**List&lt;AiBcrBase64Image&gt;**](AiBcrBase64Image.md) | Images to recognize              |  [optional]
+**outFolder** | [**StorageFolderLocation**](StorageFolderLocation.md) | Output folder location on storage              | 
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

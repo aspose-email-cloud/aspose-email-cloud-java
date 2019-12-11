@@ -36,16 +36,16 @@ public class AiBcrOcrStorageRequestData
 {
     /**
     * Initializes a new instance of the AiBcrOcrStorageRequestData class.   
-    * @param request Request with images located on storage
+    * @param rq Request with images located on storage
     **/
-    public AiBcrOcrStorageRequestData(AiBcrStorageImageRequest request)             
+    public AiBcrOcrStorageRequestData(AiBcrStorageImageRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Request with images located on storage
     **/
-    public AiBcrStorageImageRequest request;
+    public AiBcrStorageImageRq rq;
 }
 

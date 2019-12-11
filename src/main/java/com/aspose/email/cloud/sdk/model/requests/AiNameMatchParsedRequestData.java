@@ -36,16 +36,16 @@ public class AiNameMatchParsedRequestData
 {
     /**
     * Initializes a new instance of the AiNameMatchParsedRequestData class.   
-    * @param request Parsed names to match
+    * @param rq Parsed names to match
     **/
-    public AiNameMatchParsedRequestData(AiNameParsedMatchRequest request)             
+    public AiNameMatchParsedRequestData(AiNameParsedMatchRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Parsed names to match
     **/
-    public AiNameParsedMatchRequest request;
+    public AiNameParsedMatchRq rq;
 }
 

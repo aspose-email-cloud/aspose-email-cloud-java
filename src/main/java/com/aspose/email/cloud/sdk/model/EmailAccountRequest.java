@@ -53,10 +53,10 @@ public class EmailAccountRequest {
   private String login = null;
 
   @JsonProperty("securityOptions")
-  private Object securityOptions = null;
+  private String securityOptions = null;
 
   @JsonProperty("protocolType")
-  private Object protocolType = null;
+  private String protocolType = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -115,37 +115,37 @@ public class EmailAccountRequest {
     this.login = login;
   }
 
-  public EmailAccountRequest securityOptions(Object securityOptions) {
+  public EmailAccountRequest securityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
     return this;
   }
 
   /**
-   * Email account security options             
+   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
-  public Object getSecurityOptions() {
+  public String getSecurityOptions() {
     return securityOptions;
   }  
 
-  public void setSecurityOptions(Object securityOptions) {
+  public void setSecurityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
   }
 
-  public EmailAccountRequest protocolType(Object protocolType) {
+  public EmailAccountRequest protocolType(String protocolType) {
     this.protocolType = protocolType;
     return this;
   }
 
   /**
-   * Email account protocol type             
+   * Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @return protocolType
   **/
-  public Object getProtocolType() {
+  public String getProtocolType() {
     return protocolType;
   }  
 
-  public void setProtocolType(Object protocolType) {
+  public void setProtocolType(String protocolType) {
     this.protocolType = protocolType;
   }
 

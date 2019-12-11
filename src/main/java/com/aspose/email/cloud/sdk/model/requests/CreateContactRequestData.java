@@ -36,7 +36,7 @@ public class CreateContactRequestData
 {
     /**
     * Initializes a new instance of the CreateContactRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name
     * @param request Create contact request
     **/
@@ -48,7 +48,7 @@ public class CreateContactRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

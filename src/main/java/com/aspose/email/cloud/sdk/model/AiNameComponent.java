@@ -47,7 +47,7 @@ public class AiNameComponent {
   private String value = null;
 
   @JsonProperty("category")
-  private Object category = null;
+  private String category = null;
 
   @JsonProperty("score")
   private Double score = null;
@@ -72,20 +72,20 @@ public class AiNameComponent {
     this.value = value;
   }
 
-  public AiNameComponent category(Object category) {
+  public AiNameComponent category(String category) {
     this.category = category;
     return this;
   }
 
   /**
-   * Component category             
+   * Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
    * @return category
   **/
-  public Object getCategory() {
+  public String getCategory() {
     return category;
   }  
 
-  public void setCategory(Object category) {
+  public void setCategory(String category) {
     this.category = category;
   }
 

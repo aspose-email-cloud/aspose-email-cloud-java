@@ -77,7 +77,7 @@ public class EmailProperties {
   }
 
   /**
-   * Get list
+   * List of properties             
    * @return list
   **/
   public List<EmailProperty> getList() {

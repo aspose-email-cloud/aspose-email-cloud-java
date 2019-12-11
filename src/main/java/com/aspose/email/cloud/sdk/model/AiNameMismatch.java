@@ -44,7 +44,7 @@ import java.io.*;
  */
 public class AiNameMismatch {
   @JsonProperty("category")
-  private Object category = null;
+  private String category = null;
 
   @JsonProperty("similarity")
   private Double similarity = null;
@@ -52,20 +52,20 @@ public class AiNameMismatch {
   @JsonProperty("explanation")
   private String explanation = null;
 
-  public AiNameMismatch category(Object category) {
+  public AiNameMismatch category(String category) {
     this.category = category;
     return this;
   }
 
   /**
-   * Mismatch type             
+   * Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
    * @return category
   **/
-  public Object getCategory() {
+  public String getCategory() {
     return category;
   }  
 
-  public void setCategory(Object category) {
+  public void setCategory(String category) {
     this.category = category;
   }
 

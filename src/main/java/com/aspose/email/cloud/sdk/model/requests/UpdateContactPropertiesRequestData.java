@@ -36,7 +36,7 @@ public class UpdateContactPropertiesRequestData
 {
     /**
     * Initializes a new instance of the UpdateContactPropertiesRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name
     * @param request Properties that should be updated/added
     **/
@@ -48,7 +48,7 @@ public class UpdateContactPropertiesRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

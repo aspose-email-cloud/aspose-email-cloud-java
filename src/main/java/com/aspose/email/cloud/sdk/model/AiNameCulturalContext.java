@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiNameOptions.java">
+* <copyright company="Aspose" file="AiNameCulturalContext.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,9 +40,9 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * AiName parser options             
+ * AiName cultural context             
  */
-public class AiNameOptions {
+public class AiNameCulturalContext {
   @JsonProperty("language")
   private String language = null;
 
@@ -58,7 +58,7 @@ public class AiNameOptions {
   @JsonProperty("style")
   private String style = null;
 
-  public AiNameOptions language(String language) {
+  public AiNameCulturalContext language(String language) {
     this.language = language;
     return this;
   }
@@ -75,7 +75,7 @@ public class AiNameOptions {
     this.language = language;
   }
 
-  public AiNameOptions location(String location) {
+  public AiNameCulturalContext location(String location) {
     this.location = location;
     return this;
   }
@@ -92,7 +92,7 @@ public class AiNameOptions {
     this.location = location;
   }
 
-  public AiNameOptions script(String script) {
+  public AiNameCulturalContext script(String script) {
     this.script = script;
     return this;
   }
@@ -109,7 +109,7 @@ public class AiNameOptions {
     this.script = script;
   }
 
-  public AiNameOptions encoding(String encoding) {
+  public AiNameCulturalContext encoding(String encoding) {
     this.encoding = encoding;
     return this;
   }
@@ -126,13 +126,13 @@ public class AiNameOptions {
     this.encoding = encoding;
   }
 
-  public AiNameOptions style(String style) {
+  public AiNameCulturalContext style(String style) {
     this.style = style;
     return this;
   }
 
   /**
-   * Name writing style. Allowed values are: \&quot;Formal\&quot;, \&quot;Informal\&quot;, \&quot;Legal\&quot;, \&quot;Academic\&quot;             
+   * Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    * @return style
   **/
   public String getStyle() {
@@ -152,12 +152,12 @@ public class AiNameOptions {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiNameOptions aiNameOptions = (AiNameOptions) o;
-    return ObjectUtils.equals(this.language, aiNameOptions.language) &&
-    ObjectUtils.equals(this.location, aiNameOptions.location) &&
-    ObjectUtils.equals(this.script, aiNameOptions.script) &&
-    ObjectUtils.equals(this.encoding, aiNameOptions.encoding) &&
-    ObjectUtils.equals(this.style, aiNameOptions.style);
+    AiNameCulturalContext aiNameCulturalContext = (AiNameCulturalContext) o;
+    return ObjectUtils.equals(this.language, aiNameCulturalContext.language) &&
+    ObjectUtils.equals(this.location, aiNameCulturalContext.location) &&
+    ObjectUtils.equals(this.script, aiNameCulturalContext.script) &&
+    ObjectUtils.equals(this.encoding, aiNameCulturalContext.encoding) &&
+    ObjectUtils.equals(this.style, aiNameCulturalContext.style);
   }
 
   @Override
@@ -169,7 +169,7 @@ public class AiNameOptions {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiNameOptions {\n");
+    sb.append("class AiNameCulturalContext {\n");
     
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");

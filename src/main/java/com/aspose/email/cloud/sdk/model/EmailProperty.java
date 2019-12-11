@@ -58,7 +58,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get link
+   * Link to property             
    * @return link
   **/
   public Link getLink() {
@@ -75,7 +75,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get name
+   * Property name             
    * @return name
   **/
   public String getName() {
@@ -92,7 +92,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get value
+   * Property value             
    * @return value
   **/
   public Object getValue() {

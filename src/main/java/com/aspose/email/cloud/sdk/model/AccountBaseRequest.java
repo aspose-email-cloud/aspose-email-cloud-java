@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * AccountBaseRequest
+ * EmailClient accounts request             
  */
 public class AccountBaseRequest {
   @JsonProperty("firstAccount")
@@ -58,7 +58,7 @@ public class AccountBaseRequest {
   }
 
   /**
-   * Get firstAccount
+   * First account storage file name for receiving emails (or universal one)             
    * @return firstAccount
   **/
   public String getFirstAccount() {
@@ -75,7 +75,7 @@ public class AccountBaseRequest {
   }
 
   /**
-   * Get secondAccount
+   * Second account storage file name for sending emails (ignored if first is universal)             
    * @return secondAccount
   **/
   public String getSecondAccount() {
@@ -92,7 +92,7 @@ public class AccountBaseRequest {
   }
 
   /**
-   * Get storageFolder
+   * Storage folder location of account files             
    * @return storageFolder
   **/
   public StorageFolderLocation getStorageFolder() {

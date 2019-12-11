@@ -36,16 +36,16 @@ public class AiBcrParseRequestData
 {
     /**
     * Initializes a new instance of the AiBcrParseRequestData class.   
-    * @param request Request with base64 images data
+    * @param rq Request with base64 images data
     **/
-    public AiBcrParseRequestData(AiBcrBase64Request request)             
+    public AiBcrParseRequestData(AiBcrBase64Rq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Request with base64 images data
     **/
-    public AiBcrBase64Request request;
+    public AiBcrBase64Rq rq;
 }
 

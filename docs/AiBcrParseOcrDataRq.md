@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrParseOcrDataRequest
+# com.aspose.email.cloud.sdk.model.AiBcrParseOcrDataRq
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AiBcrParseOcrDataRequest.java">
+* <copyright company="Aspose" file="AiNameParsedMatchRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,32 +40,32 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Parse ocr data request             
+ * Two parsed names to match request             
  */
-public class AiBcrParseOcrDataRequest extends AiBcrRequest {
-  @JsonProperty("data")
-  private List<AiBcrOcrData> data = new ArrayList<AiBcrOcrData>();
+public class AiNameParsedMatchRq extends AiNameParsedRq {
+  @JsonProperty("otherParsedName")
+  private List<AiNameComponent> otherParsedName = new ArrayList<AiNameComponent>();
 
-  public AiBcrParseOcrDataRequest data(List<AiBcrOcrData> data) {
-    this.data = data;
+  public AiNameParsedMatchRq otherParsedName(List<AiNameComponent> otherParsedName) {
+    this.otherParsedName = otherParsedName;
     return this;
   }
 
-  public AiBcrParseOcrDataRequest addDataItem(AiBcrOcrData dataItem) {
-    this.data.add(dataItem);
+  public AiNameParsedMatchRq addOtherParsedNameItem(AiNameComponent otherParsedNameItem) {
+    this.otherParsedName.add(otherParsedNameItem);
     return this;
   }
 
   /**
-   * OCR data             
-   * @return data
+   * Other parsed name to match             
+   * @return otherParsedName
   **/
-  public List<AiBcrOcrData> getData() {
-    return data;
+  public List<AiNameComponent> getOtherParsedName() {
+    return otherParsedName;
   }  
 
-  public void setData(List<AiBcrOcrData> data) {
-    this.data = data;
+  public void setOtherParsedName(List<AiNameComponent> otherParsedName) {
+    this.otherParsedName = otherParsedName;
   }
 
 
@@ -77,23 +77,23 @@ public class AiBcrParseOcrDataRequest extends AiBcrRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AiBcrParseOcrDataRequest aiBcrParseOcrDataRequest = (AiBcrParseOcrDataRequest) o;
-    return ObjectUtils.equals(this.data, aiBcrParseOcrDataRequest.data) &&
+    AiNameParsedMatchRq aiNameParsedMatchRq = (AiNameParsedMatchRq) o;
+    return ObjectUtils.equals(this.otherParsedName, aiNameParsedMatchRq.otherParsedName) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(data, super.hashCode());
+    return ObjectUtils.hashCodeMulti(otherParsedName, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiBcrParseOcrDataRequest {\n");
+    sb.append("class AiNameParsedMatchRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    otherParsedName: ").append(toIndentedString(otherParsedName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
