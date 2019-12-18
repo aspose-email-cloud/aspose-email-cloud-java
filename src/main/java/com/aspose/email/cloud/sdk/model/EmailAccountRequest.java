@@ -121,7 +121,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
   public String getSecurityOptions() {

@@ -148,6 +148,27 @@ public class EmailApi
         config.setDebugMode(debug);
         this.initEmailApi(config);
     }
+
+    /**
+     * Initializes a new instance of the EmailApi class for Aspose Cloud-hosted service usage.
+     * @param appKey The app key.
+     * @param appSid The app SID.
+     * @param baseUrl The base URL.
+     * @param apiVersion API version.
+     * @param debug If debug mode is enabled.
+     * @param authUrl should not be used.
+     */
+    public EmailApi(String appKey, String appSid, String baseUrl, String apiVersion, Boolean debug, String authUrl) throws Exception
+    {
+        Configuration config = new Configuration();
+        config.AppKey = appKey;
+        config.AppSid = appSid;
+        config.setApiBaseUrl(baseUrl);
+        config.setApiVersion(apiVersion);
+        config.setDebugMode(debug);
+        config.setAuthUrl(authUrl);
+        this.initEmailApi(config);
+    }
     
     /**
      * Initializes a new instance of the EmailApi class.

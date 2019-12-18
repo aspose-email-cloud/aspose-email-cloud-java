@@ -33,7 +33,13 @@ public class EmailApiTests {
 
     @BeforeClass
     public void oneTimeSetUp() throws Exception {
-        api = new EmailApi(System.getenv("appKey"), System.getenv("appSid"), System.getenv("apiBaseUrl"));
+        api = new EmailApi(
+            System.getenv("appKey"),
+            System.getenv("appSid"),
+            System.getenv("apiBaseUrl"),
+            "v3.0",
+            false,
+            System.getenv("authUrl"));
         folder = UUID.randomUUID().toString();
         api.createFolder(new CreateFolderRequestData(folder, storage));
     }
