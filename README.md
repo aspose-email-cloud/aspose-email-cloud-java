@@ -9,6 +9,7 @@ This repository contains Aspose.Email Cloud SDK for Java source code. This SDK a
 
 ## How to use the SDK?
 The complete source code is available in the GIT repository.
+
 Use reference documentation, available [**here**](docs/README.md)
 
 ### Prerequisites
@@ -16,6 +17,7 @@ To use these SDK, you need an App SID and an App Key; they can be looked up at [
 
 ### Installation
 You can either directly use it in your project via jar file or add it as Maven dependency ([see repo](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/)):
+
 First, you should add a repository:
 ```xml
 <repository>
