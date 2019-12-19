@@ -62,18 +62,13 @@ String outFolderPath = "some/other/folder/path/on/storage"; //Business card reco
 api.createFolder(new CreateFolderRequestData(outFolderPath, storage));
 // Call business card recognition action
 ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
-    (AiBcrParseStorageRq) new AiBcrParseStorageRq()
-        .outFolder(new StorageFolderLocation()
-            .folderPath(outFolderPath)
-            .storage(storage))
+    new AiBcrParseStorageRq(
+        null,
         //We can process multiple images in one request
-        .addImagesItem((AiBcrImageStorageFile) new AiBcrImageStorageFile()
-            .file((StorageFileLocation) new StorageFileLocation()
-                .fileName(fileName)
-                .folderPath(folder)
-                .storage(storage))
-            //the image contains only one business card (you can upload image with multiple cards on it)
-            .isSingle(true))));
+        Arrays.asList(new AiBcrImageStorageFile(
+            true, //the image contains only one business card (you can upload image with multiple cards on it)
+            new StorageFileLocation(storage, folder, fileName))),
+        new StorageFolderLocation(storage, outFolderPath))));
 // Get file name from recognition result
 StorageFileLocation contactFile = result.getValue().get(0); //result.getValue() can contain multiple files, if we sent multicard images or multiple images
 //  You can download the VCard file, which produced by the recognition method ...
@@ -115,10 +110,7 @@ byte[] fileBytes = IOUtils.toByteArray(
     new FileInputStream("some/business/card/image/on/disk.png"));
 String fileBase64 = Base64.encodeToString(fileBytes, false);
 ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
-    new AiBcrBase64Rq()
-        .addImagesItem((AiBcrBase64Image) new AiBcrBase64Image()
-            .base64Data(fileBase64)
-            .isSingle(true))));
+    new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
 //Result contains all recognized VCard objects (only the one in our case)
 HierarchicalObject contactProperties = result.getValue().get(0);
 //VCard object is available as a list of properties, without any external calls:
