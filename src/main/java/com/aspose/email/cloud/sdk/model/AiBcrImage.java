@@ -87,7 +87,7 @@ public class AiBcrImage {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrImage {\n");
     
-    sb.append("    isSingle: ").append(toIndentedString(isSingle)).append("\n");
+    sb.append("    isSingle: ").append(toIndentedString(isIsSingle())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class AiBcrImage {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrImage() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrImage
+   * @param isSingle Determines that image contains single VCard or more             
+   */
+  public AiBcrImage(Boolean isSingle) {
+    super();
+    setIsSingle(isSingle);
   }
 
 }

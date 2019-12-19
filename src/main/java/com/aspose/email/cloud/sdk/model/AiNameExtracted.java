@@ -116,8 +116,8 @@ public class AiNameExtracted {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameExtracted {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    score: ").append(toIndentedString(getScore())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,6 +131,21 @@ public class AiNameExtracted {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameExtracted() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameExtracted
+   * @param name Extracted name components             
+   * @param score Extracted name score             
+   */
+  public AiNameExtracted(List<AiNameExtractedComponent> name, Double score) {
+    super();
+    setName(name);
+    setScore(score);
   }
 
 }

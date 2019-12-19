@@ -130,9 +130,16 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SaveOAuthEmailAccountRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
-    sb.append("    clientSecret: ").append(toIndentedString(clientSecret)).append("\n");
-    sb.append("    refreshToken: ").append(toIndentedString(refreshToken)).append("\n");
+    sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
+    sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
+    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
+    sb.append("    clientId: ").append(toIndentedString(getClientId())).append("\n");
+    sb.append("    clientSecret: ").append(toIndentedString(getClientSecret())).append("\n");
+    sb.append("    refreshToken: ").append(toIndentedString(getRefreshToken())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -146,6 +153,37 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SaveOAuthEmailAccountRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SaveOAuthEmailAccountRequest
+   * @param host Email account host             
+   * @param port Email account port             
+   * @param login Email account login             
+   * @param securityOptions Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param description Email account description             
+   * @param storageFile A storage file location info to store email account             
+   * @param clientId OAuth client identifier             
+   * @param clientSecret OAuth client secret             
+   * @param refreshToken OAuth refresh token             
+   */
+  public SaveOAuthEmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile, String clientId, String clientSecret, String refreshToken) {
+    super();
+    setHost(host);
+    setPort(port);
+    setLogin(login);
+    setSecurityOptions(securityOptions);
+    setProtocolType(protocolType);
+    setDescription(description);
+    setStorageFile(storageFile);
+    setClientId(clientId);
+    setClientSecret(clientSecret);
+    setRefreshToken(refreshToken);
   }
 
 }

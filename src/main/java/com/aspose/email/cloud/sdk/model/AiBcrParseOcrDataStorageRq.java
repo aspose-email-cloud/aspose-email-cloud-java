@@ -88,7 +88,9 @@ public class AiBcrParseOcrDataStorageRq extends AiBcrParseOcrDataRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrParseOcrDataStorageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    outFolder: ").append(toIndentedString(outFolder)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    data: ").append(toIndentedString(getData())).append("\n");
+    sb.append("    outFolder: ").append(toIndentedString(getOutFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +104,23 @@ public class AiBcrParseOcrDataStorageRq extends AiBcrParseOcrDataRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrParseOcrDataStorageRq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrParseOcrDataStorageRq
+   * @param options Recognition options             
+   * @param data OCR data             
+   * @param outFolder Output folder location on storage             
+   */
+  public AiBcrParseOcrDataStorageRq(AiBcrOptions options, List<AiBcrOcrData> data, StorageFolderLocation outFolder) {
+    super();
+    setOptions(options);
+    setData(data);
+    setOutFolder(outFolder);
   }
 
 }

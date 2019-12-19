@@ -93,7 +93,8 @@ public class AiBcrStorageImageRq extends AiBcrRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrStorageImageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    images: ").append(toIndentedString(images)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    images: ").append(toIndentedString(getImages())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,6 +108,21 @@ public class AiBcrStorageImageRq extends AiBcrRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrStorageImageRq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrStorageImageRq
+   * @param options Recognition options             
+   * @param images List of images with business cards             
+   */
+  public AiBcrStorageImageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images) {
+    super();
+    setOptions(options);
+    setImages(images);
   }
 
 }

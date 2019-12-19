@@ -95,7 +95,7 @@ public class ListResponseOfAiNameGenderHypothesis {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfAiNameGenderHypothesis {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfAiNameGenderHypothesis {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfAiNameGenderHypothesis() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfAiNameGenderHypothesis
+   * @param value 
+   */
+  public ListResponseOfAiNameGenderHypothesis(List<AiNameGenderHypothesis> value) {
+    super();
+    setValue(value);
   }
 
 }

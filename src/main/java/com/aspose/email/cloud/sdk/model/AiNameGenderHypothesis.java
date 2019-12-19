@@ -108,8 +108,8 @@ public class AiNameGenderHypothesis {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameGenderHypothesis {\n");
     
-    sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    gender: ").append(toIndentedString(getGender())).append("\n");
+    sb.append("    score: ").append(toIndentedString(getScore())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AiNameGenderHypothesis {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameGenderHypothesis() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameGenderHypothesis
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
+   * @param score Hypothesis score             
+   */
+  public AiNameGenderHypothesis(String gender, Double score) {
+    super();
+    setGender(gender);
+    setScore(score);
   }
 
 }

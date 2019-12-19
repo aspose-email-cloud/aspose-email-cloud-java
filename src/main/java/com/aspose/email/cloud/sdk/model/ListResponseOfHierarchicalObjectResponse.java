@@ -95,7 +95,7 @@ public class ListResponseOfHierarchicalObjectResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfHierarchicalObjectResponse {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfHierarchicalObjectResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfHierarchicalObjectResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfHierarchicalObjectResponse
+   * @param value 
+   */
+  public ListResponseOfHierarchicalObjectResponse(List<HierarchicalObjectResponse> value) {
+    super();
+    setValue(value);
   }
 
 }

@@ -108,8 +108,8 @@ public class AiNameExtractedComponent {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameExtractedComponent {\n");
     
-    sb.append("    category: ").append(toIndentedString(category)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AiNameExtractedComponent {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameExtractedComponent() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameExtractedComponent
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * @param value Extracted value             
+   */
+  public AiNameExtractedComponent(String category, String value) {
+    super();
+    setCategory(category);
+    setValue(value);
   }
 
 }

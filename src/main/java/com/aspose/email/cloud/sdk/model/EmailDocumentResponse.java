@@ -87,7 +87,7 @@ public class EmailDocumentResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailDocumentResponse {\n");
     
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
+    sb.append("    document: ").append(toIndentedString(getDocument())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class EmailDocumentResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailDocumentResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailDocumentResponse
+   * @param document An email document requested             
+   */
+  public EmailDocumentResponse(EmailDocument document) {
+    super();
+    setDocument(document);
   }
 
 }

@@ -95,7 +95,7 @@ public class ListResponseOfStorageFileLocation {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfStorageFileLocation {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfStorageFileLocation {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfStorageFileLocation() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfStorageFileLocation
+   * @param value 
+   */
+  public ListResponseOfStorageFileLocation(List<StorageFileLocation> value) {
+    super();
+    setValue(value);
   }
 
 }

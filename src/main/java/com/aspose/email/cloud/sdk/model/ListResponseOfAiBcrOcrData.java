@@ -95,7 +95,7 @@ public class ListResponseOfAiBcrOcrData {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfAiBcrOcrData {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfAiBcrOcrData {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfAiBcrOcrData() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfAiBcrOcrData
+   * @param value 
+   */
+  public ListResponseOfAiBcrOcrData(List<AiBcrOcrData> value) {
+    super();
+    setValue(value);
   }
 
 }

@@ -124,8 +124,8 @@ public class FilesUploadResult {
     StringBuilder sb = new StringBuilder();
     sb.append("class FilesUploadResult {\n");
     
-    sb.append("    uploaded: ").append(toIndentedString(uploaded)).append("\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    uploaded: ").append(toIndentedString(getUploaded())).append("\n");
+    sb.append("    errors: ").append(toIndentedString(getErrors())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -139,6 +139,21 @@ public class FilesUploadResult {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public FilesUploadResult() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the FilesUploadResult
+   * @param uploaded List of uploaded file names
+   * @param errors List of errors.
+   */
+  public FilesUploadResult(List<String> uploaded, List<Error> errors) {
+    super();
+    setUploaded(uploaded);
+    setErrors(errors);
   }
 
 }

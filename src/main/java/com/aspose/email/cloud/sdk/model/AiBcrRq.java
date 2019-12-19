@@ -87,7 +87,7 @@ public class AiBcrRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrRq {\n");
     
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class AiBcrRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrRq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrRq
+   * @param options Recognition options             
+   */
+  public AiBcrRq(AiBcrOptions options) {
+    super();
+    setOptions(options);
   }
 
 }

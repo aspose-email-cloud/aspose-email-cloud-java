@@ -171,11 +171,11 @@ public class AiNameCulturalContext {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameCulturalContext {\n");
     
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
-    sb.append("    location: ").append(toIndentedString(location)).append("\n");
-    sb.append("    script: ").append(toIndentedString(script)).append("\n");
-    sb.append("    encoding: ").append(toIndentedString(encoding)).append("\n");
-    sb.append("    style: ").append(toIndentedString(style)).append("\n");
+    sb.append("    language: ").append(toIndentedString(getLanguage())).append("\n");
+    sb.append("    location: ").append(toIndentedString(getLocation())).append("\n");
+    sb.append("    script: ").append(toIndentedString(getScript())).append("\n");
+    sb.append("    encoding: ").append(toIndentedString(getEncoding())).append("\n");
+    sb.append("    style: ").append(toIndentedString(getStyle())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -189,6 +189,27 @@ public class AiNameCulturalContext {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameCulturalContext() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameCulturalContext
+   * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
+   * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
+   * @param script A writing system code; starts with the ISO-15924 script name             
+   * @param encoding A character encoding name             
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+   */
+  public AiNameCulturalContext(String language, String location, String script, String encoding, String style) {
+    super();
+    setLanguage(language);
+    setLocation(location);
+    setScript(script);
+    setEncoding(encoding);
+    setStyle(style);
   }
 
 }

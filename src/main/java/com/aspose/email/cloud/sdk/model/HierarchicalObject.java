@@ -96,7 +96,9 @@ public class HierarchicalObject extends BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class HierarchicalObject {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    internalProperties: ").append(toIndentedString(internalProperties)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
+    sb.append("    internalProperties: ").append(toIndentedString(getInternalProperties())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -110,6 +112,23 @@ public class HierarchicalObject extends BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public HierarchicalObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the HierarchicalObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   * @param internalProperties List of internal properties             
+   */
+  public HierarchicalObject(String name, String type, List<BaseObject> internalProperties) {
+    super();
+    setName(name);
+    setType(type);
+    setInternalProperties(internalProperties);
   }
 
 }

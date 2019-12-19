@@ -87,7 +87,7 @@ public class EmailPropertyResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailPropertyResponse {\n");
     
-    sb.append("    emailProperty: ").append(toIndentedString(emailProperty)).append("\n");
+    sb.append("    emailProperty: ").append(toIndentedString(getEmailProperty())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class EmailPropertyResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailPropertyResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailPropertyResponse
+   * @param emailProperty Gets or sets email property.             
+   */
+  public EmailPropertyResponse(EmailProperty emailProperty) {
+    super();
+    setEmailProperty(emailProperty);
   }
 
 }

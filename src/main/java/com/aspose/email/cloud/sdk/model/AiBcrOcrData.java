@@ -166,10 +166,10 @@ public class AiBcrOcrData {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrOcrData {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    image: ").append(toIndentedString(image)).append("\n");
-    sb.append("    details: ").append(toIndentedString(details)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    id: ").append(toIndentedString(getId())).append("\n");
+    sb.append("    image: ").append(toIndentedString(getImage())).append("\n");
+    sb.append("    details: ").append(toIndentedString(getDetails())).append("\n");
+    sb.append("    data: ").append(toIndentedString(getData())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -183,6 +183,25 @@ public class AiBcrOcrData {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrOcrData() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrOcrData
+   * @param id Image identifier             
+   * @param image Image with possible pre-processing in Base64             
+   * @param details Additional details from OCR engine             
+   * @param data OCR results             
+   */
+  public AiBcrOcrData(String id, String image, Map<String, String> details, List<AiBcrOcrDataPart> data) {
+    super();
+    setId(id);
+    setImage(image);
+    setDetails(details);
+    setData(data);
   }
 
 }

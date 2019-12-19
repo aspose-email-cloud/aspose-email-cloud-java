@@ -200,12 +200,12 @@ public class AiBcrOcrDataPart {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrOcrDataPart {\n");
     
-    sb.append("    x: ").append(toIndentedString(x)).append("\n");
-    sb.append("    y: ").append(toIndentedString(y)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    details: ").append(toIndentedString(details)).append("\n");
+    sb.append("    x: ").append(toIndentedString(getX())).append("\n");
+    sb.append("    y: ").append(toIndentedString(getY())).append("\n");
+    sb.append("    width: ").append(toIndentedString(getWidth())).append("\n");
+    sb.append("    height: ").append(toIndentedString(getHeight())).append("\n");
+    sb.append("    text: ").append(toIndentedString(getText())).append("\n");
+    sb.append("    details: ").append(toIndentedString(getDetails())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -219,6 +219,29 @@ public class AiBcrOcrDataPart {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrOcrDataPart() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrOcrDataPart
+   * @param x X position of text block             
+   * @param y Y position of text block             
+   * @param width Width of text block             
+   * @param height Height of text block             
+   * @param text Recognized text             
+   * @param details Additional recognition result details             
+   */
+  public AiBcrOcrDataPart(Double x, Double y, Double width, Double height, String text, Map<String, String> details) {
+    super();
+    setX(x);
+    setY(y);
+    setWidth(width);
+    setHeight(height);
+    setText(text);
+    setDetails(details);
   }
 
 }

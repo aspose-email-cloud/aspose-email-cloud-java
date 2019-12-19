@@ -108,8 +108,8 @@ public class SetEmailPropertyRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetEmailPropertyRequest {\n");
     
-    sb.append("    emailProperty: ").append(toIndentedString(emailProperty)).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(storageFolder)).append("\n");
+    sb.append("    emailProperty: ").append(toIndentedString(getEmailProperty())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class SetEmailPropertyRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SetEmailPropertyRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SetEmailPropertyRequest
+   * @param emailProperty An email property that should be updated             
+   * @param storageFolder An email document location in storage             
+   */
+  public SetEmailPropertyRequest(EmailProperty emailProperty, StorageFolderLocation storageFolder) {
+    super();
+    setEmailProperty(emailProperty);
+    setStorageFolder(storageFolder);
   }
 
 }

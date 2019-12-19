@@ -95,7 +95,7 @@ public class FileVersions {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileVersions {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class FileVersions {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public FileVersions() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the FileVersions
+   * @param value File versions FileVersion.
+   */
+  public FileVersions(List<FileVersion> value) {
+    super();
+    setValue(value);
   }
 
 }

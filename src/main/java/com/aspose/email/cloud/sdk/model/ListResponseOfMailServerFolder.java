@@ -95,7 +95,7 @@ public class ListResponseOfMailServerFolder {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfMailServerFolder {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfMailServerFolder {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfMailServerFolder() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfMailServerFolder
+   * @param value 
+   */
+  public ListResponseOfMailServerFolder(List<MailServerFolder> value) {
+    super();
+    setValue(value);
   }
 
 }

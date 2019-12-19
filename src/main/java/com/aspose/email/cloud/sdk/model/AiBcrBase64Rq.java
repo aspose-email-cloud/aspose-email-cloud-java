@@ -96,7 +96,8 @@ public class AiBcrBase64Rq extends AiBcrRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrBase64Rq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    images: ").append(toIndentedString(images)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    images: ").append(toIndentedString(getImages())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -110,6 +111,21 @@ public class AiBcrBase64Rq extends AiBcrRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrBase64Rq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrBase64Rq
+   * @param options Recognition options             
+   * @param images Images to recognize             
+   */
+  public AiBcrBase64Rq(AiBcrOptions options, List<AiBcrBase64Image> images) {
+    super();
+    setOptions(options);
+    setImages(images);
   }
 
 }

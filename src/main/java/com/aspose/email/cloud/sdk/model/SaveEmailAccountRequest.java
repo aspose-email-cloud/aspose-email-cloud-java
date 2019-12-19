@@ -88,7 +88,14 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SaveEmailAccountRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
+    sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
+    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
+    sb.append("    password: ").append(toIndentedString(getPassword())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +109,33 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SaveEmailAccountRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SaveEmailAccountRequest
+   * @param host Email account host             
+   * @param port Email account port             
+   * @param login Email account login             
+   * @param securityOptions Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param description Email account description             
+   * @param storageFile A storage file location info to store email account             
+   * @param password Email account password             
+   */
+  public SaveEmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile, String password) {
+    super();
+    setHost(host);
+    setPort(port);
+    setLogin(login);
+    setSecurityOptions(securityOptions);
+    setProtocolType(protocolType);
+    setDescription(description);
+    setStorageFile(storageFile);
+    setPassword(password);
   }
 
 }

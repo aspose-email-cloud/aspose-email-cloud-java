@@ -129,9 +129,9 @@ public class AccountBaseRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountBaseRequest {\n");
     
-    sb.append("    firstAccount: ").append(toIndentedString(firstAccount)).append("\n");
-    sb.append("    secondAccount: ").append(toIndentedString(secondAccount)).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(storageFolder)).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +145,23 @@ public class AccountBaseRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AccountBaseRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AccountBaseRequest
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   */
+  public AccountBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder) {
+    super();
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
   }
 
 }

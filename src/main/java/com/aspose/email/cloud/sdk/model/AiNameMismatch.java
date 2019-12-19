@@ -129,9 +129,9 @@ public class AiNameMismatch {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameMismatch {\n");
     
-    sb.append("    category: ").append(toIndentedString(category)).append("\n");
-    sb.append("    similarity: ").append(toIndentedString(similarity)).append("\n");
-    sb.append("    explanation: ").append(toIndentedString(explanation)).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    similarity: ").append(toIndentedString(getSimilarity())).append("\n");
+    sb.append("    explanation: ").append(toIndentedString(getExplanation())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +145,23 @@ public class AiNameMismatch {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameMismatch() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameMismatch
+   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * @param similarity Similarity score             
+   * @param explanation Explanation or mismatch subtype             
+   */
+  public AiNameMismatch(String category, Double similarity, String explanation) {
+    super();
+    setCategory(category);
+    setSimilarity(similarity);
+    setExplanation(explanation);
   }
 
 }

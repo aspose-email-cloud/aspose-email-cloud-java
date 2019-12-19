@@ -116,8 +116,8 @@ public class AiNameMatchResult {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameMatchResult {\n");
     
-    sb.append("    similarity: ").append(toIndentedString(similarity)).append("\n");
-    sb.append("    mismatches: ").append(toIndentedString(mismatches)).append("\n");
+    sb.append("    similarity: ").append(toIndentedString(getSimilarity())).append("\n");
+    sb.append("    mismatches: ").append(toIndentedString(getMismatches())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,6 +131,21 @@ public class AiNameMatchResult {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameMatchResult() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameMatchResult
+   * @param similarity Similarity score             
+   * @param mismatches Detailed description of mismatches             
+   */
+  public AiNameMatchResult(Double similarity, List<AiNameMismatch> mismatches) {
+    super();
+    setSimilarity(similarity);
+    setMismatches(mismatches);
   }
 
 }

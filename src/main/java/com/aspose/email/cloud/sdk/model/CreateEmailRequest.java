@@ -108,8 +108,8 @@ public class CreateEmailRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateEmailRequest {\n");
     
-    sb.append("    emailDocument: ").append(toIndentedString(emailDocument)).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(storageFolder)).append("\n");
+    sb.append("    emailDocument: ").append(toIndentedString(getEmailDocument())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class CreateEmailRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public CreateEmailRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the CreateEmailRequest
+   * @param emailDocument An email document that should be created             
+   * @param storageFolder Email document location in storage             
+   */
+  public CreateEmailRequest(EmailDocument emailDocument, StorageFolderLocation storageFolder) {
+    super();
+    setEmailDocument(emailDocument);
+    setStorageFolder(storageFolder);
   }
 
 }

@@ -76,7 +76,7 @@ public class BaseObject {
     return type;
   }  
 
-
+  public void setType(String type) {/* do nothing */}
 
 
   @Override
@@ -103,8 +103,8 @@ public class BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class BaseObject {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -118,6 +118,21 @@ public class BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public BaseObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the BaseObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   */
+  public BaseObject(String name, String type) {
+    super();
+    setName(name);
+    setType(type);
   }
 
 }

@@ -95,7 +95,7 @@ public class ListResponseOfAiNameExtracted {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfAiNameExtracted {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfAiNameExtracted {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfAiNameExtracted() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfAiNameExtracted
+   * @param value 
+   */
+  public ListResponseOfAiNameExtracted(List<AiNameExtracted> value) {
+    super();
+    setValue(value);
   }
 
 }

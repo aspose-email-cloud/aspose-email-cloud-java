@@ -108,8 +108,8 @@ public class ErrorDetails {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorDetails {\n");
     
-    sb.append("    requestId: ").append(toIndentedString(requestId)).append("\n");
-    sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    sb.append("    requestId: ").append(toIndentedString(getRequestId())).append("\n");
+    sb.append("    date: ").append(toIndentedString(getDate())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class ErrorDetails {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ErrorDetails() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ErrorDetails
+   * @param requestId The request id
+   * @param date Date
+   */
+  public ErrorDetails(String requestId, Date date) {
+    super();
+    setRequestId(requestId);
+    setDate(date);
   }
 
 }

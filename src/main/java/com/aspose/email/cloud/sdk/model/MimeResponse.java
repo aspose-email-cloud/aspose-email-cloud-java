@@ -87,7 +87,7 @@ public class MimeResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class MimeResponse {\n");
     
-    sb.append("    mime: ").append(toIndentedString(mime)).append("\n");
+    sb.append("    mime: ").append(toIndentedString(getMime())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class MimeResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public MimeResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the MimeResponse
+   * @param mime Gets or sets base64 encoded mime content.             
+   */
+  public MimeResponse(String mime) {
+    super();
+    setMime(mime);
   }
 
 }

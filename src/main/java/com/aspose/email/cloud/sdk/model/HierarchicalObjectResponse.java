@@ -108,8 +108,8 @@ public class HierarchicalObjectResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class HierarchicalObjectResponse {\n");
     
-    sb.append("    hierarchicalObject: ").append(toIndentedString(hierarchicalObject)).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(storageFile)).append("\n");
+    sb.append("    hierarchicalObject: ").append(toIndentedString(getHierarchicalObject())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class HierarchicalObjectResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public HierarchicalObjectResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the HierarchicalObjectResponse
+   * @param hierarchicalObject Document properties             
+   * @param storageFile Document location in storage             
+   */
+  public HierarchicalObjectResponse(HierarchicalObject hierarchicalObject, StorageFileLocation storageFile) {
+    super();
+    setHierarchicalObject(hierarchicalObject);
+    setStorageFile(storageFile);
   }
 
 }

@@ -88,7 +88,9 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrParseStorageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    outFolder: ").append(toIndentedString(outFolder)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    images: ").append(toIndentedString(getImages())).append("\n");
+    sb.append("    outFolder: ").append(toIndentedString(getOutFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +104,23 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrParseStorageRq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrParseStorageRq
+   * @param options Recognition options             
+   * @param images List of images with business cards             
+   * @param outFolder Parse output folder location on storage             
+   */
+  public AiBcrParseStorageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images, StorageFolderLocation outFolder) {
+    super();
+    setOptions(options);
+    setImages(images);
+    setOutFolder(outFolder);
   }
 
 }

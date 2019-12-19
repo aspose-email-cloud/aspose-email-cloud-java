@@ -108,8 +108,8 @@ public class AiNameFormatted {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameFormatted {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    comments: ").append(toIndentedString(getComments())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AiNameFormatted {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameFormatted() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameFormatted
+   * @param name Formatted name value             
+   * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
+   */
+  public AiNameFormatted(String name, String comments) {
+    super();
+    setName(name);
+    setComments(comments);
   }
 
 }

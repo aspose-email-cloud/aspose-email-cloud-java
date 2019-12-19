@@ -108,8 +108,8 @@ public class ObjectExist {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObjectExist {\n");
     
-    sb.append("    exists: ").append(toIndentedString(exists)).append("\n");
-    sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
+    sb.append("    exists: ").append(toIndentedString(isExists())).append("\n");
+    sb.append("    isFolder: ").append(toIndentedString(isIsFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class ObjectExist {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ObjectExist() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ObjectExist
+   * @param exists Indicates that the file or folder exists.
+   * @param isFolder True if it is a folder, false if it is a file.
+   */
+  public ObjectExist(Boolean exists, Boolean isFolder) {
+    super();
+    setExists(exists);
+    setIsFolder(isFolder);
   }
 
 }

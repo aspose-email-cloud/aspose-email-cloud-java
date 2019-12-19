@@ -95,7 +95,7 @@ public class ListResponseOfAiNameComponent {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfAiNameComponent {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfAiNameComponent {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfAiNameComponent() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfAiNameComponent
+   * @param value 
+   */
+  public ListResponseOfAiNameComponent(List<AiNameComponent> value) {
+    super();
+    setValue(value);
   }
 
 }

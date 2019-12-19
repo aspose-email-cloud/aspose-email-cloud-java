@@ -3,9 +3,7 @@ package com.aspose.email.cloud.sdk.api;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.UUID;
+import java.util.*;
 
 import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.model.requests.*;
@@ -14,6 +12,8 @@ import com.migcomponents.migbase64.Base64;
 import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.*;
+
+import bsh.Primitive;
 
 public class EmailApiTests {
     private EmailApi api;
@@ -86,11 +86,9 @@ public class EmailApiTests {
         for (String format : formats) {
             String extension = format.equals("vcard") ? ".vcf" : ".msg";
             String fileName = UUID.randomUUID().toString() + extension;
-            api.createContact(new CreateContactRequestData(format, fileName,
-                    new HierarchicalObjectRequest()
-                            .storageFolder(new StorageFolderLocation().folderPath(folder).storage(storage))
-                            .hierarchicalObject((HierarchicalObject) new HierarchicalObject()
-                                    .internalProperties(new ArrayList<BaseObject>()).name("CONTACT"))));
+            api.createContact(new CreateContactRequestData(format, fileName, new HierarchicalObjectRequest(
+                    new HierarchicalObject("CONTACT", null, new ArrayList<BaseObject>()),
+                    new StorageFolderLocation(storage, folder))));
             String path = folder + "/" + fileName;
             ObjectExist exist = api.objectExists(new ObjectExistsRequestData(path, storage, null));
             assert exist.isExists();
@@ -176,25 +174,16 @@ public class EmailApiTests {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
         // 1) Upload business card image to storage
-        api.uploadFile(new UploadFileRequestData(
-            filePath,
-            fileBytes,
-            storage));
+        api.uploadFile(new UploadFileRequestData(filePath, fileBytes, storage));
         String outFolder = UUID.randomUUID().toString();
         String outFolderPath = folder + "/" + outFolder;
         api.createFolder(new CreateFolderRequestData(outFolderPath, storage));
         // 2) Call business card recognition action
         ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
-            (AiBcrParseStorageRq) new AiBcrParseStorageRq()
-                .outFolder(new StorageFolderLocation()
-                    .folderPath(outFolderPath)
-                    .storage(storage))
-                .addImagesItem((AiBcrImageStorageFile) new AiBcrImageStorageFile()
-                    .file((StorageFileLocation) new StorageFileLocation()
-                        .fileName(fileName)
-                        .folderPath(folder)
-                        .storage(storage))
-                    .isSingle(true))));
+            new AiBcrParseStorageRq(
+                null,
+                Arrays.asList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
+                new StorageFolderLocation(storage, outFolderPath))));
         // Check that only one file produced
         assert result.getValue().size() == 1;
         // 3) Get file name from recognition result
@@ -224,10 +213,7 @@ public class EmailApiTests {
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
         ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
-            new AiBcrBase64Rq()
-                .addImagesItem((AiBcrBase64Image) new AiBcrBase64Image()
-                    .base64Data(fileBase64)
-                    .isSingle(true))));
+            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
         assert result.getValue().size() == 1;
         PrimitiveObject displayName = null;
         for(BaseObject property: result.getValue().get(0).getInternalProperties()) {
@@ -249,52 +235,26 @@ public class EmailApiTests {
         String fileName = UUID.randomUUID().toString() + ".ics";
         Calendar endDate =(Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY + 1));
-        api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest()
-            .storageFolder(
-                new StorageFolderLocation()
-                    .folderPath(folder)
-                    .storage(storage))
-            .hierarchicalObject(
-                (HierarchicalObject) new HierarchicalObject()
-                    .addInternalPropertiesItem(
-                        new PrimitiveObject()
-                            .value("location")
-                            .name("LOCATION"))
-                    .addInternalPropertiesItem(
-                        new PrimitiveObject()
-                            .value(dateFormat.format(startDate.getTime()))
-                            .name("STARTDATE"))
-                    .addInternalPropertiesItem(
-                        new PrimitiveObject()
-                            .value(dateFormat.format(endDate.getTime()))
-                            .name("ENDDATE"))
-                    .addInternalPropertiesItem(
-                        new HierarchicalObject()
-                            .addInternalPropertiesItem(
-                                new PrimitiveObject()
-                                    .value("organizer@am.ru")
-                                    .name("ADDRESS"))
-                            .addInternalPropertiesItem(
-                                new PrimitiveObject()
-                                    .value("Organizer Name")
-                                    .name("DISPLAYNAME"))
-                            .name("ORGANIZER"))
-                    .addInternalPropertiesItem(
-                        new HierarchicalObject()
-                            .addInternalPropertiesItem(
-                                new IndexedHierarchicalObject()
-                                    .index(0)
-                                    .addInternalPropertiesItem(
-                                        new PrimitiveObject()
-                                            .value("attendee@am.ru")
-                                            .name("ADDRESS"))
-                                    .addInternalPropertiesItem(
-                                        new PrimitiveObject()
-                                            .value("Attendee Name")
-                                            .name("DISPLAYNAME"))
-                                    .name("ATTENDEE"))
-                            .name("ATTENDEES"))
-                    .name("CALENDAR"))));
+        api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest(
+            new HierarchicalObject("CALENDAR", null, Arrays.<BaseObject>asList(
+                new PrimitiveObject("LOCATION", null, "location"),
+                new PrimitiveObject("STARTDATE", null, dateFormat.format(startDate.getTime())),
+                new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
+                new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
+                    new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
+                    new PrimitiveObject("DISPLAYNAME", null, "Organizer Name")
+                )),
+                new HierarchicalObject("ATTENDEES", null, Arrays.<BaseObject>asList(
+                    new IndexedHierarchicalObject(
+                        "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
+                            new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
+                            new PrimitiveObject("DISPLAYNAME", null, "Attendee Name")
+                        )
+                    )
+                ))
+            )),
+            new StorageFolderLocation(storage, folder))));
+
         return fileName;
     }
 }

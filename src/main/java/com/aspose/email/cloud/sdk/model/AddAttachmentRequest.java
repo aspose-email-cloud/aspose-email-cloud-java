@@ -108,8 +108,8 @@ public class AddAttachmentRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddAttachmentRequest {\n");
     
-    sb.append("    documentFolder: ").append(toIndentedString(documentFolder)).append("\n");
-    sb.append("    attachmentFolder: ").append(toIndentedString(attachmentFolder)).append("\n");
+    sb.append("    documentFolder: ").append(toIndentedString(getDocumentFolder())).append("\n");
+    sb.append("    attachmentFolder: ").append(toIndentedString(getAttachmentFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AddAttachmentRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AddAttachmentRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AddAttachmentRequest
+   * @param documentFolder Storage folder location of document             
+   * @param attachmentFolder Storage folder location of an attachment             
+   */
+  public AddAttachmentRequest(StorageFolderLocation documentFolder, StorageFolderLocation attachmentFolder) {
+    super();
+    setDocumentFolder(documentFolder);
+    setAttachmentFolder(attachmentFolder);
   }
 
 }

@@ -150,10 +150,10 @@ public class AiNameComponent {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameComponent {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    category: ").append(toIndentedString(category)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
-    sb.append("    position: ").append(toIndentedString(position)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    score: ").append(toIndentedString(getScore())).append("\n");
+    sb.append("    position: ").append(toIndentedString(getPosition())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -167,6 +167,25 @@ public class AiNameComponent {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameComponent() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameComponent
+   * @param value Component value             
+   * @param category Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+   * @param score Score from 0.0 to 1.0             
+   * @param position Component position from 0             
+   */
+  public AiNameComponent(String value, String category, Double score, Integer position) {
+    super();
+    setValue(value);
+    setCategory(category);
+    setScore(score);
+    setPosition(position);
   }
 
 }

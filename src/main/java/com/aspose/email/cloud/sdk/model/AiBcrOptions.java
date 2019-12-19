@@ -108,8 +108,8 @@ public class AiBcrOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrOptions {\n");
     
-    sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
-    sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
+    sb.append("    languages: ").append(toIndentedString(getLanguages())).append("\n");
+    sb.append("    countries: ").append(toIndentedString(getCountries())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AiBcrOptions {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrOptions() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrOptions
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+   * @param countries Comma-separated codes of countries             
+   */
+  public AiBcrOptions(String languages, String countries) {
+    super();
+    setLanguages(languages);
+    setCountries(countries);
   }
 
 }

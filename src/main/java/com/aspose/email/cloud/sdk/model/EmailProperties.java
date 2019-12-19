@@ -113,8 +113,8 @@ public class EmailProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailProperties {\n");
     
-    sb.append("    link: ").append(toIndentedString(link)).append("\n");
-    sb.append("    list: ").append(toIndentedString(list)).append("\n");
+    sb.append("    link: ").append(toIndentedString(getLink())).append("\n");
+    sb.append("    list: ").append(toIndentedString(getList())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,6 +128,21 @@ public class EmailProperties {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailProperties() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailProperties
+   * @param link Gets or sets link that originate from this document.             
+   * @param list List of properties             
+   */
+  public EmailProperties(Link link, List<EmailProperty> list) {
+    super();
+    setLink(link);
+    setList(list);
   }
 
 }

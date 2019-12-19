@@ -88,7 +88,9 @@ public class StorageFileLocation extends StorageFolderLocation {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageFileLocation {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
+    sb.append("    storage: ").append(toIndentedString(getStorage())).append("\n");
+    sb.append("    folderPath: ").append(toIndentedString(getFolderPath())).append("\n");
+    sb.append("    fileName: ").append(toIndentedString(getFileName())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +104,23 @@ public class StorageFileLocation extends StorageFolderLocation {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageFileLocation() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageFileLocation
+   * @param storage A storage name             
+   * @param folderPath A path to a folder in specified storage             
+   * @param fileName A file name in storage             
+   */
+  public StorageFileLocation(String storage, String folderPath, String fileName) {
+    super();
+    setStorage(storage);
+    setFolderPath(folderPath);
+    setFileName(fileName);
   }
 
 }

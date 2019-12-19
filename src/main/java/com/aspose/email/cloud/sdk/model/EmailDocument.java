@@ -116,8 +116,8 @@ public class EmailDocument {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailDocument {\n");
     
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    documentProperties: ").append(toIndentedString(documentProperties)).append("\n");
+    sb.append("    links: ").append(toIndentedString(getLinks())).append("\n");
+    sb.append("    documentProperties: ").append(toIndentedString(getDocumentProperties())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,6 +131,21 @@ public class EmailDocument {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailDocument() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailDocument
+   * @param links Links that originate from this document.             
+   * @param documentProperties List of document properties.             
+   */
+  public EmailDocument(List<Link> links, EmailProperties documentProperties) {
+    super();
+    setLinks(links);
+    setDocumentProperties(documentProperties);
   }
 
 }

@@ -93,7 +93,8 @@ public class AiBcrParseOcrDataRq extends AiBcrRq {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrParseOcrDataRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    data: ").append(toIndentedString(getData())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,6 +108,21 @@ public class AiBcrParseOcrDataRq extends AiBcrRq {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrParseOcrDataRq() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrParseOcrDataRq
+   * @param options Recognition options             
+   * @param data OCR data             
+   */
+  public AiBcrParseOcrDataRq(AiBcrOptions options, List<AiBcrOcrData> data) {
+    super();
+    setOptions(options);
+    setData(data);
   }
 
 }

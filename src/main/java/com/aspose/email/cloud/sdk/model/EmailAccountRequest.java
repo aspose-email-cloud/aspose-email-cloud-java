@@ -213,13 +213,13 @@ public class EmailAccountRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailAccountRequest {\n");
     
-    sb.append("    host: ").append(toIndentedString(host)).append("\n");
-    sb.append("    port: ").append(toIndentedString(port)).append("\n");
-    sb.append("    login: ").append(toIndentedString(login)).append("\n");
-    sb.append("    securityOptions: ").append(toIndentedString(securityOptions)).append("\n");
-    sb.append("    protocolType: ").append(toIndentedString(protocolType)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(storageFile)).append("\n");
+    sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
+    sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
+    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -233,6 +233,31 @@ public class EmailAccountRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailAccountRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailAccountRequest
+   * @param host Email account host             
+   * @param port Email account port             
+   * @param login Email account login             
+   * @param securityOptions Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param description Email account description             
+   * @param storageFile A storage file location info to store email account             
+   */
+  public EmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile) {
+    super();
+    setHost(host);
+    setPort(port);
+    setLogin(login);
+    setSecurityOptions(securityOptions);
+    setProtocolType(protocolType);
+    setDescription(description);
+    setStorageFile(storageFile);
   }
 
 }

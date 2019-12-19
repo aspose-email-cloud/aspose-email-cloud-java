@@ -95,7 +95,7 @@ public class ListResponseOfString {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfString {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -109,6 +109,19 @@ public class ListResponseOfString {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfString() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfString
+   * @param value 
+   */
+  public ListResponseOfString(List<String> value) {
+    super();
+    setValue(value);
   }
 
 }

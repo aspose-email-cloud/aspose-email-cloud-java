@@ -88,7 +88,10 @@ public class SendEmailMimeBaseRequest extends AccountBaseRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SendEmailMimeBaseRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    base64MimeMessage: ").append(toIndentedString(base64MimeMessage)).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    base64MimeMessage: ").append(toIndentedString(getBase64MimeMessage())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +105,25 @@ public class SendEmailMimeBaseRequest extends AccountBaseRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SendEmailMimeBaseRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SendEmailMimeBaseRequest
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   * @param base64MimeMessage Email document serialized as MIME             
+   */
+  public SendEmailMimeBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String base64MimeMessage) {
+    super();
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
+    setBase64MimeMessage(base64MimeMessage);
   }
 
 }

@@ -88,7 +88,12 @@ public class AppendEmailMimeBaseRequest extends AppendEmailAccountBaseRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppendEmailMimeBaseRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    base64MimeMessage: ").append(toIndentedString(base64MimeMessage)).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
+    sb.append("    markAsSent: ").append(toIndentedString(isMarkAsSent())).append("\n");
+    sb.append("    base64MimeMessage: ").append(toIndentedString(getBase64MimeMessage())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +107,29 @@ public class AppendEmailMimeBaseRequest extends AppendEmailAccountBaseRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AppendEmailMimeBaseRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AppendEmailMimeBaseRequest
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   * @param folder Email account folder to store a message             
+   * @param markAsSent Mark message as sent             
+   * @param base64MimeMessage Email document serialized as MIME string             
+   */
+  public AppendEmailMimeBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, String base64MimeMessage) {
+    super();
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
+    setFolder(folder);
+    setMarkAsSent(markAsSent);
+    setBase64MimeMessage(base64MimeMessage);
   }
 
 }

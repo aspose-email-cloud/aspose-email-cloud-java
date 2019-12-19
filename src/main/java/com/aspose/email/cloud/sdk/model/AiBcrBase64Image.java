@@ -88,7 +88,8 @@ public class AiBcrBase64Image extends AiBcrImage {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrBase64Image {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    base64Data: ").append(toIndentedString(base64Data)).append("\n");
+    sb.append("    isSingle: ").append(toIndentedString(isIsSingle())).append("\n");
+    sb.append("    base64Data: ").append(toIndentedString(getBase64Data())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +103,21 @@ public class AiBcrBase64Image extends AiBcrImage {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrBase64Image() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrBase64Image
+   * @param isSingle Determines that image contains single VCard or more             
+   * @param base64Data Image data in base64             
+   */
+  public AiBcrBase64Image(Boolean isSingle, String base64Data) {
+    super();
+    setIsSingle(isSingle);
+    setBase64Data(base64Data);
   }
 
 }

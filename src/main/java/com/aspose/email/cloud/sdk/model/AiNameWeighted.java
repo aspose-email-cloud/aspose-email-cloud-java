@@ -108,8 +108,8 @@ public class AiNameWeighted {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameWeighted {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    score: ").append(toIndentedString(getScore())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class AiNameWeighted {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameWeighted() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameWeighted
+   * @param name Name             
+   * @param score Score of name             
+   */
+  public AiNameWeighted(String name, Double score) {
+    super();
+    setName(name);
+    setScore(score);
   }
 
 }

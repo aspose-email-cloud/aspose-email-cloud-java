@@ -87,7 +87,7 @@ public class StorageExist {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageExist {\n");
     
-    sb.append("    exists: ").append(toIndentedString(exists)).append("\n");
+    sb.append("    exists: ").append(toIndentedString(isExists())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -101,6 +101,19 @@ public class StorageExist {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageExist() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageExist
+   * @param exists Shows that the storage exists.             
+   */
+  public StorageExist(Boolean exists) {
+    super();
+    setExists(exists);
   }
 
 }

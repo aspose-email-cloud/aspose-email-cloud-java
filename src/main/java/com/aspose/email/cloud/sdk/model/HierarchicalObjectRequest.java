@@ -108,8 +108,8 @@ public class HierarchicalObjectRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class HierarchicalObjectRequest {\n");
     
-    sb.append("    hierarchicalObject: ").append(toIndentedString(hierarchicalObject)).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(storageFolder)).append("\n");
+    sb.append("    hierarchicalObject: ").append(toIndentedString(getHierarchicalObject())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,6 +123,21 @@ public class HierarchicalObjectRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public HierarchicalObjectRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the HierarchicalObjectRequest
+   * @param hierarchicalObject Hierarchical properties of document             
+   * @param storageFolder Document location in storage             
+   */
+  public HierarchicalObjectRequest(HierarchicalObject hierarchicalObject, StorageFolderLocation storageFolder) {
+    super();
+    setHierarchicalObject(hierarchicalObject);
+    setStorageFolder(storageFolder);
   }
 
 }

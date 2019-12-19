@@ -88,7 +88,8 @@ public class AiBcrImageStorageFile extends AiBcrImage {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiBcrImageStorageFile {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    file: ").append(toIndentedString(file)).append("\n");
+    sb.append("    isSingle: ").append(toIndentedString(isIsSingle())).append("\n");
+    sb.append("    file: ").append(toIndentedString(getFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +103,21 @@ public class AiBcrImageStorageFile extends AiBcrImage {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiBcrImageStorageFile() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiBcrImageStorageFile
+   * @param isSingle Determines that image contains single VCard or more             
+   * @param file Image location             
+   */
+  public AiBcrImageStorageFile(Boolean isSingle, StorageFileLocation file) {
+    super();
+    setIsSingle(isSingle);
+    setFile(file);
   }
 
 }

@@ -116,8 +116,8 @@ public class AiNameWeightedVariants {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiNameWeightedVariants {\n");
     
-    sb.append("    names: ").append(toIndentedString(names)).append("\n");
-    sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
+    sb.append("    names: ").append(toIndentedString(getNames())).append("\n");
+    sb.append("    comments: ").append(toIndentedString(getComments())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,6 +131,21 @@ public class AiNameWeightedVariants {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AiNameWeightedVariants() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AiNameWeightedVariants
+   * @param names List of name variations             
+   * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
+   */
+  public AiNameWeightedVariants(List<AiNameWeighted> names, String comments) {
+    super();
+    setNames(names);
+    setComments(comments);
   }
 
 }

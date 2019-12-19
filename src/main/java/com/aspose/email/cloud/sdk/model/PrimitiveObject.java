@@ -88,7 +88,9 @@ public class PrimitiveObject extends BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrimitiveObject {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -102,6 +104,23 @@ public class PrimitiveObject extends BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public PrimitiveObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the PrimitiveObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   * @param value Property value             
+   */
+  public PrimitiveObject(String name, String type, String value) {
+    super();
+    setName(name);
+    setType(type);
+    setValue(value);
   }
 
 }
