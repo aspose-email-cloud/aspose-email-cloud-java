@@ -21,7 +21,7 @@ public class EmailApiTests {
     private static final String storage = "First Storage";
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss'Z'");
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void oneTimeSetUp() throws Exception {
         api = new EmailApi(
             System.getenv("appKey"),
@@ -32,6 +32,11 @@ public class EmailApiTests {
             System.getenv("authUrl"));
         folder = UUID.randomUUID().toString();
         api.createFolder(new CreateFolderRequestData(folder, storage));
+    }
+
+    @AfterClass(alwaysRun = true)
+    public void oneTimeTearDown() throws Exception {
+        api.deleteFolder(new DeleteFolderRequestData(folder, storage, true));
     }
 
     @Test(groups = { "pipeline" })
