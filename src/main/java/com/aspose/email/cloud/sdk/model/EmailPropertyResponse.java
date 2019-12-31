@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email property response.
+ * Email property response.             
  */
 public class EmailPropertyResponse {
   @JsonProperty("emailProperty")
@@ -50,7 +52,7 @@ public class EmailPropertyResponse {
   }
 
   /**
-   * Gets or sets email property.
+   * Gets or sets email property.             
    * @return emailProperty
   **/
   public EmailProperty getEmailProperty() {
@@ -85,7 +87,7 @@ public class EmailPropertyResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailPropertyResponse {\n");
     
-    sb.append("    emailProperty: ").append(toIndentedString(emailProperty)).append("\n");
+    sb.append("    emailProperty: ").append(toIndentedString(getEmailProperty())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -99,6 +101,19 @@ public class EmailPropertyResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailPropertyResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailPropertyResponse
+   * @param emailProperty Gets or sets email property.             
+   */
+  public EmailPropertyResponse(EmailProperty emailProperty) {
+    super();
+    setEmailProperty(emailProperty);
   }
 
 }

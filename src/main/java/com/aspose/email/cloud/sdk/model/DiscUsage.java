@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -106,8 +108,8 @@ public class DiscUsage {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscUsage {\n");
     
-    sb.append("    usedSize: ").append(toIndentedString(usedSize)).append("\n");
-    sb.append("    totalSize: ").append(toIndentedString(totalSize)).append("\n");
+    sb.append("    usedSize: ").append(toIndentedString(getUsedSize())).append("\n");
+    sb.append("    totalSize: ").append(toIndentedString(getTotalSize())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,6 +123,21 @@ public class DiscUsage {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public DiscUsage() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the DiscUsage
+   * @param usedSize Application used disc space.
+   * @param totalSize Total disc space.
+   */
+  public DiscUsage(Long usedSize, Long totalSize) {
+    super();
+    setUsedSize(usedSize);
+    setTotalSize(totalSize);
   }
 
 }

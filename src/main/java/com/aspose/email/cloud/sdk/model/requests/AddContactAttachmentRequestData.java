@@ -36,7 +36,7 @@ public class AddContactAttachmentRequestData
 {
     /**
     * Initializes a new instance of the AddContactAttachmentRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name
     * @param attachment Attachment name
     * @param request Add attachment request
@@ -50,7 +50,7 @@ public class AddContactAttachmentRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

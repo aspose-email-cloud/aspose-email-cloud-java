@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Represents Email document DTO.
+ * Represents Email document DTO.             
  */
 public class EmailDocument {
   @JsonProperty("links")
@@ -61,7 +63,7 @@ public class EmailDocument {
   }
 
   /**
-   * Links that originate from this document.
+   * Links that originate from this document.             
    * @return links
   **/
   public List<Link> getLinks() {
@@ -78,7 +80,7 @@ public class EmailDocument {
   }
 
   /**
-   * List of document properties.
+   * List of document properties.             
    * @return documentProperties
   **/
   public EmailProperties getDocumentProperties() {
@@ -114,8 +116,8 @@ public class EmailDocument {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailDocument {\n");
     
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    documentProperties: ").append(toIndentedString(documentProperties)).append("\n");
+    sb.append("    links: ").append(toIndentedString(getLinks())).append("\n");
+    sb.append("    documentProperties: ").append(toIndentedString(getDocumentProperties())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,6 +131,21 @@ public class EmailDocument {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailDocument() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailDocument
+   * @param links Links that originate from this document.             
+   * @param documentProperties List of document properties.             
+   */
+  public EmailDocument(List<Link> links, EmailProperties documentProperties) {
+    super();
+    setLinks(links);
+    setDocumentProperties(documentProperties);
   }
 
 }

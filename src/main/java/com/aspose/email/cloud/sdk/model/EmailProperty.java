@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email property.
+ * Email property.             
  */
 public class EmailProperty {
   @JsonProperty("link")
@@ -56,7 +58,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get link
+   * Link to property             
    * @return link
   **/
   public Link getLink() {
@@ -73,7 +75,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get name
+   * Property name             
    * @return name
   **/
   public String getName() {
@@ -90,7 +92,7 @@ public class EmailProperty {
   }
 
   /**
-   * Get value
+   * Property value             
    * @return value
   **/
   public Object getValue() {
@@ -127,9 +129,9 @@ public class EmailProperty {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailProperty {\n");
     
-    sb.append("    link: ").append(toIndentedString(link)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    link: ").append(toIndentedString(getLink())).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,6 +145,23 @@ public class EmailProperty {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailProperty() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailProperty
+   * @param link Link to property             
+   * @param name Property name             
+   * @param value Property value             
+   */
+  public EmailProperty(Link link, String name, Object value) {
+    super();
+    setLink(link);
+    setName(name);
+    setValue(value);
   }
 
 }

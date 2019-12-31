@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email document property DTO.
+ * Email document property DTO.             
  */
 public class MimeResponse {
   @JsonProperty("mime")
@@ -50,7 +52,7 @@ public class MimeResponse {
   }
 
   /**
-   * Gets or sets base64 encoded mime content.
+   * Gets or sets base64 encoded mime content.             
    * @return mime
   **/
   public String getMime() {
@@ -85,7 +87,7 @@ public class MimeResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class MimeResponse {\n");
     
-    sb.append("    mime: ").append(toIndentedString(mime)).append("\n");
+    sb.append("    mime: ").append(toIndentedString(getMime())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -99,6 +101,19 @@ public class MimeResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public MimeResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the MimeResponse
+   * @param mime Gets or sets base64 encoded mime content.             
+   */
+  public MimeResponse(String mime) {
+    super();
+    setMime(mime);
   }
 
 }

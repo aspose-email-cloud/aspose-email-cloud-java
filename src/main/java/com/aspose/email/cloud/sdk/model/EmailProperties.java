@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email list properties.
+ * Email list properties.             
  */
 public class EmailProperties {
   @JsonProperty("link")
@@ -53,7 +55,7 @@ public class EmailProperties {
   }
 
   /**
-   * Gets or sets link that originate from this document.
+   * Gets or sets link that originate from this document.             
    * @return link
   **/
   public Link getLink() {
@@ -75,7 +77,7 @@ public class EmailProperties {
   }
 
   /**
-   * Get list
+   * List of properties             
    * @return list
   **/
   public List<EmailProperty> getList() {
@@ -111,8 +113,8 @@ public class EmailProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailProperties {\n");
     
-    sb.append("    link: ").append(toIndentedString(link)).append("\n");
-    sb.append("    list: ").append(toIndentedString(list)).append("\n");
+    sb.append("    link: ").append(toIndentedString(getLink())).append("\n");
+    sb.append("    list: ").append(toIndentedString(getList())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,6 +128,21 @@ public class EmailProperties {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailProperties() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailProperties
+   * @param link Gets or sets link that originate from this document.             
+   * @param list List of properties             
+   */
+  public EmailProperties(Link link, List<EmailProperty> list) {
+    super();
+    setLink(link);
+    setList(list);
   }
 
 }

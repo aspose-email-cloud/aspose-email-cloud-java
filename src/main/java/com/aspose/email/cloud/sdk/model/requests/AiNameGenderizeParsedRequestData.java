@@ -1,6 +1,7 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ContactFormat.java">
+* <copyright company="Aspose" file="AiNameGenderizeParsedRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -25,56 +26,26 @@
 * --------------------------------------------------------------------------------------------------------------------
 */
 
-package com.aspose.email.cloud.sdk.model;
-
-import org.apache.commons.lang3.ObjectUtils;
-import java.util.Date;
-import java.util.ArrayList;
-import java.util.List;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.gson.annotations.*;
-import com.google.gson.*;
-import com.google.gson.stream.*;
-import java.io.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
+package com.aspose.email.cloud.sdk.model.requests;
+import com.aspose.email.cloud.sdk.model.*;
 
 /**
- * 
- */
-public enum ContactFormat {
-  
-  VCARD("VCard"),
-  
-  WEBDAV("WebDav"),
-  
-  MSG("Msg");
-
-  private String value;
-
-  ContactFormat(String value) {
-    this.value = value;
-  }
-
-  @JsonValue
-  public String getValue() {
-    return value;
-  }
-
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  @JsonCreator
-  public static ContactFormat fromValue(String text) {
-    for (ContactFormat b : ContactFormat.values()) {
-      if (String.valueOf(b.value).equals(text)) {
-        return b;
-      }
+* Class that holds parameters for EmailApi.aiNameGenderizeParsed request invocation.
+**/   
+public class AiNameGenderizeParsedRequestData
+{
+    /**
+    * Initializes a new instance of the AiNameGenderizeParsedRequestData class.   
+    * @param rq Gender detection request data
+    **/
+    public AiNameGenderizeParsedRequestData(AiNameParsedRq rq)             
+    {
+        this.rq = rq;
     }
-    return null;
-  }
+        
+    /**
+    * Gender detection request data
+    **/
+    public AiNameParsedRq rq;
 }
 

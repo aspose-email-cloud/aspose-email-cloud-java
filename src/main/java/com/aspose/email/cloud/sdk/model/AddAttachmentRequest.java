@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Add attachment request
+ * Add attachment request             
  */
 public class AddAttachmentRequest {
   @JsonProperty("documentFolder")
@@ -53,7 +55,7 @@ public class AddAttachmentRequest {
   }
 
   /**
-   * Storage folder location of document
+   * Storage folder location of document             
    * @return documentFolder
   **/
   public StorageFolderLocation getDocumentFolder() {
@@ -70,7 +72,7 @@ public class AddAttachmentRequest {
   }
 
   /**
-   * Storage folder location of an attachment
+   * Storage folder location of an attachment             
    * @return attachmentFolder
   **/
   public StorageFolderLocation getAttachmentFolder() {
@@ -106,8 +108,8 @@ public class AddAttachmentRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddAttachmentRequest {\n");
     
-    sb.append("    documentFolder: ").append(toIndentedString(documentFolder)).append("\n");
-    sb.append("    attachmentFolder: ").append(toIndentedString(attachmentFolder)).append("\n");
+    sb.append("    documentFolder: ").append(toIndentedString(getDocumentFolder())).append("\n");
+    sb.append("    attachmentFolder: ").append(toIndentedString(getAttachmentFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,6 +123,21 @@ public class AddAttachmentRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public AddAttachmentRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the AddAttachmentRequest
+   * @param documentFolder Storage folder location of document             
+   * @param attachmentFolder Storage folder location of an attachment             
+   */
+  public AddAttachmentRequest(StorageFolderLocation documentFolder, StorageFolderLocation attachmentFolder) {
+    super();
+    setDocumentFolder(documentFolder);
+    setAttachmentFolder(attachmentFolder);
   }
 
 }

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -85,7 +87,7 @@ public class StorageExist {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageExist {\n");
     
-    sb.append("    exists: ").append(toIndentedString(exists)).append("\n");
+    sb.append("    exists: ").append(toIndentedString(isExists())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -99,6 +101,19 @@ public class StorageExist {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageExist() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageExist
+   * @param exists Shows that the storage exists.             
+   */
+  public StorageExist(Boolean exists) {
+    super();
+    setExists(exists);
   }
 
 }

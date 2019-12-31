@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -93,7 +95,7 @@ public class ListResponseOfHierarchicalObjectResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListResponseOfHierarchicalObjectResponse {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,6 +109,19 @@ public class ListResponseOfHierarchicalObjectResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ListResponseOfHierarchicalObjectResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ListResponseOfHierarchicalObjectResponse
+   * @param value 
+   */
+  public ListResponseOfHierarchicalObjectResponse(List<HierarchicalObjectResponse> value) {
+    super();
+    setValue(value);
   }
 
 }

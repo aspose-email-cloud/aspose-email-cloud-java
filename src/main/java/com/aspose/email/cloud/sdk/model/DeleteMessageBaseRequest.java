@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Delete message request
+ * Delete message request             
  */
 public class DeleteMessageBaseRequest extends AccountBaseRequest {
   @JsonProperty("messageId")
@@ -53,7 +55,7 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Message identifier
+   * Message identifier             
    * @return messageId
   **/
   public String getMessageId() {
@@ -70,7 +72,7 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Specifies that message should be deleted permanently
+   * Specifies that message should be deleted permanently             
    * @return deletePermanently
   **/
   public Boolean isDeletePermanently() {
@@ -107,8 +109,11 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class DeleteMessageBaseRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    messageId: ").append(toIndentedString(messageId)).append("\n");
-    sb.append("    deletePermanently: ").append(toIndentedString(deletePermanently)).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    messageId: ").append(toIndentedString(getMessageId())).append("\n");
+    sb.append("    deletePermanently: ").append(toIndentedString(isDeletePermanently())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -122,6 +127,27 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public DeleteMessageBaseRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the DeleteMessageBaseRequest
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   * @param messageId Message identifier             
+   * @param deletePermanently Specifies that message should be deleted permanently             
+   */
+  public DeleteMessageBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String messageId, Boolean deletePermanently) {
+    super();
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
+    setMessageId(messageId);
+    setDeletePermanently(deletePermanently);
   }
 
 }

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email document property DTO.
+ * Email document property DTO.             
  */
 public class ValueResponse {
   @JsonProperty("value")
@@ -50,7 +52,7 @@ public class ValueResponse {
   }
 
   /**
-   * Gets or sets string content.
+   * Gets or sets string content.             
    * @return value
   **/
   public String getValue() {
@@ -85,7 +87,7 @@ public class ValueResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class ValueResponse {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -99,6 +101,19 @@ public class ValueResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public ValueResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the ValueResponse
+   * @param value Gets or sets string content.             
+   */
+  public ValueResponse(String value) {
+    super();
+    setValue(value);
   }
 
 }

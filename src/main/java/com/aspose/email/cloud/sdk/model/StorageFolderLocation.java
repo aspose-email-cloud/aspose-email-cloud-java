@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * A storage folder location information
+ * A storage folder location information             
  */
 public class StorageFolderLocation {
   @JsonProperty("storage")
@@ -53,7 +55,7 @@ public class StorageFolderLocation {
   }
 
   /**
-   * A storage name
+   * A storage name             
    * @return storage
   **/
   public String getStorage() {
@@ -70,7 +72,7 @@ public class StorageFolderLocation {
   }
 
   /**
-   * A path to a folder in specified storage
+   * A path to a folder in specified storage             
    * @return folderPath
   **/
   public String getFolderPath() {
@@ -106,8 +108,8 @@ public class StorageFolderLocation {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageFolderLocation {\n");
     
-    sb.append("    storage: ").append(toIndentedString(storage)).append("\n");
-    sb.append("    folderPath: ").append(toIndentedString(folderPath)).append("\n");
+    sb.append("    storage: ").append(toIndentedString(getStorage())).append("\n");
+    sb.append("    folderPath: ").append(toIndentedString(getFolderPath())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,6 +123,21 @@ public class StorageFolderLocation {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageFolderLocation() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageFolderLocation
+   * @param storage A storage name             
+   * @param folderPath A path to a folder in specified storage             
+   */
+  public StorageFolderLocation(String storage, String folderPath) {
+    super();
+    setStorage(storage);
+    setFolderPath(folderPath);
   }
 
 }

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,14 +40,14 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Base property object
+ * Base property object             
  */
 public class BaseObject {
   @JsonProperty("name")
   private String name = null;
 
   @JsonProperty("type")
-  private String type = this.getClass().getName();
+  private String type = this.getClass().getSimpleName();
 
   public BaseObject name(String name) {
     this.name = name;
@@ -53,7 +55,7 @@ public class BaseObject {
   }
 
   /**
-   * Gets or sets the name of an object.
+   * Gets or sets the name of an object.             
    * @return name
   **/
   public String getName() {
@@ -67,14 +69,14 @@ public class BaseObject {
 
 
   /**
-   * Property type. Used for deserialization purposes
+   * Property type. Used for deserialization purposes             
    * @return type
   **/
   public String getType() {
     return type;
   }  
 
-
+  public void setType(String type) {/* do nothing */}
 
 
   @Override
@@ -101,8 +103,8 @@ public class BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class BaseObject {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -116,6 +118,21 @@ public class BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public BaseObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the BaseObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   */
+  public BaseObject(String name, String type) {
+    super();
+    setName(name);
+    setType(type);
   }
 
 }

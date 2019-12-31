@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * A storage file location information
+ * A storage file location information             
  */
 public class StorageFileLocation extends StorageFolderLocation {
   @JsonProperty("fileName")
@@ -50,7 +52,7 @@ public class StorageFileLocation extends StorageFolderLocation {
   }
 
   /**
-   * A file name in storage
+   * A file name in storage             
    * @return fileName
   **/
   public String getFileName() {
@@ -86,7 +88,9 @@ public class StorageFileLocation extends StorageFolderLocation {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageFileLocation {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
+    sb.append("    storage: ").append(toIndentedString(getStorage())).append("\n");
+    sb.append("    folderPath: ").append(toIndentedString(getFolderPath())).append("\n");
+    sb.append("    fileName: ").append(toIndentedString(getFileName())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -100,6 +104,23 @@ public class StorageFileLocation extends StorageFolderLocation {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageFileLocation() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageFileLocation
+   * @param storage A storage name             
+   * @param folderPath A path to a folder in specified storage             
+   * @param fileName A file name in storage             
+   */
+  public StorageFileLocation(String storage, String folderPath, String fileName) {
+    super();
+    setStorage(storage);
+    setFolderPath(folderPath);
+    setFileName(fileName);
   }
 
 }

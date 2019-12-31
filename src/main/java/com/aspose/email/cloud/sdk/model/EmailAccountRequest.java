@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account settings request
+ * Email account settings request             
  */
 public class EmailAccountRequest {
   @JsonProperty("host")
@@ -51,10 +53,10 @@ public class EmailAccountRequest {
   private String login = null;
 
   @JsonProperty("securityOptions")
-  private Object securityOptions = null;
+  private String securityOptions = null;
 
   @JsonProperty("protocolType")
-  private Object protocolType = null;
+  private String protocolType = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -68,7 +70,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account host
+   * Email account host             
    * @return host
   **/
   public String getHost() {
@@ -85,7 +87,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account port
+   * Email account port             
    * @return port
   **/
   public Integer getPort() {
@@ -102,7 +104,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account login
+   * Email account login             
    * @return login
   **/
   public String getLogin() {
@@ -113,37 +115,37 @@ public class EmailAccountRequest {
     this.login = login;
   }
 
-  public EmailAccountRequest securityOptions(Object securityOptions) {
+  public EmailAccountRequest securityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
     return this;
   }
 
   /**
-   * Email account security options
+   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
-  public Object getSecurityOptions() {
+  public String getSecurityOptions() {
     return securityOptions;
   }  
 
-  public void setSecurityOptions(Object securityOptions) {
+  public void setSecurityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
   }
 
-  public EmailAccountRequest protocolType(Object protocolType) {
+  public EmailAccountRequest protocolType(String protocolType) {
     this.protocolType = protocolType;
     return this;
   }
 
   /**
-   * Email account protocol type
+   * Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @return protocolType
   **/
-  public Object getProtocolType() {
+  public String getProtocolType() {
     return protocolType;
   }  
 
-  public void setProtocolType(Object protocolType) {
+  public void setProtocolType(String protocolType) {
     this.protocolType = protocolType;
   }
 
@@ -153,7 +155,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Email account description
+   * Email account description             
    * @return description
   **/
   public String getDescription() {
@@ -170,7 +172,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * A storage file location info to store email account
+   * A storage file location info to store email account             
    * @return storageFile
   **/
   public StorageFileLocation getStorageFile() {
@@ -211,13 +213,13 @@ public class EmailAccountRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailAccountRequest {\n");
     
-    sb.append("    host: ").append(toIndentedString(host)).append("\n");
-    sb.append("    port: ").append(toIndentedString(port)).append("\n");
-    sb.append("    login: ").append(toIndentedString(login)).append("\n");
-    sb.append("    securityOptions: ").append(toIndentedString(securityOptions)).append("\n");
-    sb.append("    protocolType: ").append(toIndentedString(protocolType)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(storageFile)).append("\n");
+    sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
+    sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
+    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -231,6 +233,31 @@ public class EmailAccountRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailAccountRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailAccountRequest
+   * @param host Email account host             
+   * @param port Email account port             
+   * @param login Email account login             
+   * @param securityOptions Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param description Email account description             
+   * @param storageFile A storage file location info to store email account             
+   */
+  public EmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile) {
+    super();
+    setHost(host);
+    setPort(port);
+    setLogin(login);
+    setSecurityOptions(securityOptions);
+    setProtocolType(protocolType);
+    setDescription(description);
+    setStorageFile(storageFile);
   }
 
 }

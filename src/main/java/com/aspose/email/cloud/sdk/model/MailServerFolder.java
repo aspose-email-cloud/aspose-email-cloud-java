@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account folder
+ * Email account folder             
  */
 public class MailServerFolder {
   @JsonProperty("name")
@@ -53,7 +55,7 @@ public class MailServerFolder {
   }
 
   /**
-   * Gets or sets mail folder name
+   * Gets or sets mail folder name             
    * @return name
   **/
   public String getName() {
@@ -70,7 +72,7 @@ public class MailServerFolder {
   }
 
   /**
-   * Gets or sets mail folder id
+   * Gets or sets mail folder id             
    * @return id
   **/
   public String getId() {
@@ -106,8 +108,8 @@ public class MailServerFolder {
     StringBuilder sb = new StringBuilder();
     sb.append("class MailServerFolder {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    id: ").append(toIndentedString(getId())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,6 +123,21 @@ public class MailServerFolder {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public MailServerFolder() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the MailServerFolder
+   * @param name Gets or sets mail folder name             
+   * @param id Gets or sets mail folder id             
+   */
+  public MailServerFolder(String name, String id) {
+    super();
+    setName(name);
+    setId(id);
   }
 
 }

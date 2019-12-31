@@ -36,7 +36,7 @@ public class DeleteContactPropertyRequestData
 {
     /**
     * Initializes a new instance of the DeleteContactPropertyRequestData class.   
-    * @param format Contact document format
+    * @param format Contact document format Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name
     * @param memberName Indexed property name
     * @param index Property index
@@ -52,7 +52,7 @@ public class DeleteContactPropertyRequestData
     }
         
     /**
-    * Contact document format
+    * Contact document format Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 

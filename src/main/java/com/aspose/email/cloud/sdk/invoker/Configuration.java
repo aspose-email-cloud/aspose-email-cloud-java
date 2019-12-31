@@ -58,6 +58,11 @@ public class Configuration
         private Boolean debugMode = false;
 
         /**
+         * External url for auth
+         */
+        private String authUrl = null;
+
+        /**
          * Gets or sets the app key.
          */
         public String AppKey;
@@ -91,6 +96,28 @@ public class Configuration
             if (!this.apiBaseUrl.endsWith("/"))
             {
                 this.apiBaseUrl += "/";
+            }
+        }
+
+        /**
+         * Should not be used
+         */
+        public void setAuthUrl(String value) {
+            authUrl = value;
+            if (authUrl != null && !authUrl.endsWith("/"))
+            {
+                authUrl += "/";
+            }
+        }
+
+        /**
+         * Should not be used
+         */
+        public String getAuthUrl() {
+            if (authUrl == null) {
+                return apiBaseUrl;
+            } else {
+                return authUrl;
             }
         }
         

@@ -4,7 +4,7 @@
 ## **addCalendarAttachment**
 > void addCalendarAttachment(AddCalendarAttachmentRequestData request)
 
-Adds an attachment to iCalendar file
+Adds an attachment to iCalendar file             
 
 ### **AddCalendarAttachmentRequestData** Parameters
 ```java
@@ -30,7 +30,7 @@ void (empty response body)
 ## **addContactAttachment**
 > void addContactAttachment(AddContactAttachmentRequestData request)
 
-Add attachment to contact document
+Add attachment to contact document             
 
 ### **AddContactAttachmentRequestData** Parameters
 ```java
@@ -43,7 +43,7 @@ public AddContactAttachmentRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **attachment** | **String**| Attachment name |
  **request** | [**AddAttachmentRequest**](AddAttachmentRequest.md)| Add attachment request |
@@ -58,7 +58,7 @@ void (empty response body)
 ## **addEmailAttachment**
 > [EmailDocumentResponse](EmailDocumentResponse.md) addEmailAttachment(AddEmailAttachmentRequestData request)
 
-Adds an attachment to Email document
+Adds an attachment to Email document             
 
 ### **AddEmailAttachmentRequestData** Parameters
 ```java
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 ## **addMapiAttachment**
 > void addMapiAttachment(AddMapiAttachmentRequestData request)
 
-Add attachment to document
+Add attachment to document             
 
 ### **AddMapiAttachmentRequestData** Parameters
 ```java
@@ -106,11 +106,415 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="aiBcrOcr"></a>
+## **aiBcrOcr**
+> [ListResponseOfAiBcrOcrData](ListResponseOfAiBcrOcrData.md) aiBcrOcr(AiBcrOcrRequestData request)
+
+Ocr images             
+
+### **AiBcrOcrRequestData** Parameters
+```java
+public AiBcrOcrRequestData(
+    AiBcrBase64Rq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data |
+
+### Return type
+
+[**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiBcrOcrStorage"></a>
+## **aiBcrOcrStorage**
+> [ListResponseOfAiBcrOcrData](ListResponseOfAiBcrOcrData.md) aiBcrOcrStorage(AiBcrOcrStorageRequestData request)
+
+Ocr images from storage             
+
+### **AiBcrOcrStorageRequestData** Parameters
+```java
+public AiBcrOcrStorageRequestData(
+    AiBcrStorageImageRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrStorageImageRq**](AiBcrStorageImageRq.md)| Request with images located on storage |
+
+### Return type
+
+[**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiBcrParse"></a>
+## **aiBcrParse**
+> [ListResponseOfHierarchicalObject](ListResponseOfHierarchicalObject.md) aiBcrParse(AiBcrParseRequestData request)
+
+Parse images to vCard properties             
+
+### **AiBcrParseRequestData** Parameters
+```java
+public AiBcrParseRequestData(
+    AiBcrBase64Rq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data |
+
+### Return type
+
+[**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiBcrParseStorage"></a>
+## **aiBcrParseStorage**
+> [ListResponseOfStorageFileLocation](ListResponseOfStorageFileLocation.md) aiBcrParseStorage(AiBcrParseStorageRequestData request)
+
+Parse images from storage to vCard files             
+
+### **AiBcrParseStorageRequestData** Parameters
+```java
+public AiBcrParseStorageRequestData(
+    AiBcrParseStorageRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrParseStorageRq**](AiBcrParseStorageRq.md)| Request with images located on storage |
+
+### Return type
+
+[**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameComplete"></a>
+## **aiNameComplete**
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameComplete(AiNameCompleteRequestData request)
+
+The call proposes k most probable names for given starting characters             
+
+### **AiNameCompleteRequestData** Parameters
+```java
+public AiNameCompleteRequestData(
+    String name, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to complete (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameExpand"></a>
+## **aiNameExpand**
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameExpand(AiNameExpandRequestData request)
+
+Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
+
+### **AiNameExpandRequestData** Parameters
+```java
+public AiNameExpandRequestData(
+    String name, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to format (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameExpandParsed"></a>
+## **aiNameExpandParsed**
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameExpandParsed(AiNameExpandParsedRequestData request)
+
+Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
+
+### **AiNameExpandParsedRequestData** Parameters
+```java
+public AiNameExpandParsedRequestData(
+    AiNameParsedRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options |
+
+### Return type
+
+[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameFormat"></a>
+## **aiNameFormat**
+> [AiNameFormatted](AiNameFormatted.md) aiNameFormat(AiNameFormatRequestData request)
+
+Formats a person&#39;s name in correct case and name order using options for formatting instructions             
+
+### **AiNameFormatRequestData** Parameters
+```java
+public AiNameFormatRequestData(
+    String name, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String format, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to format (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **format** | **String**| Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;              | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**AiNameFormatted**](AiNameFormatted.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameFormatParsed"></a>
+## **aiNameFormatParsed**
+> [AiNameFormatted](AiNameFormatted.md) aiNameFormatParsed(AiNameFormatParsedRequestData request)
+
+Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
+
+### **AiNameFormatParsedRequestData** Parameters
+```java
+public AiNameFormatParsedRequestData(
+    AiNameParsedRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options |
+
+### Return type
+
+[**AiNameFormatted**](AiNameFormatted.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameGenderize"></a>
+## **aiNameGenderize**
+> [ListResponseOfAiNameGenderHypothesis](ListResponseOfAiNameGenderHypothesis.md) aiNameGenderize(AiNameGenderizeRequestData request)
+
+Detect person&#39;s gender from name string             
+
+### **AiNameGenderizeRequestData** Parameters
+```java
+public AiNameGenderizeRequestData(
+    String name, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to parse (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameGenderizeParsed"></a>
+## **aiNameGenderizeParsed**
+> [ListResponseOfAiNameGenderHypothesis](ListResponseOfAiNameGenderHypothesis.md) aiNameGenderizeParsed(AiNameGenderizeParsedRequestData request)
+
+Detect person&#39;s gender from parsed name             
+
+### **AiNameGenderizeParsedRequestData** Parameters
+```java
+public AiNameGenderizeParsedRequestData(
+    AiNameParsedRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Gender detection request data |
+
+### Return type
+
+[**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameMatch"></a>
+## **aiNameMatch**
+> [AiNameMatchResult](AiNameMatchResult.md) aiNameMatch(AiNameMatchRequestData request)
+
+Compare people&#39;s names. Uses options for comparing instructions             
+
+### **AiNameMatchRequestData** Parameters
+```java
+public AiNameMatchRequestData(
+    String name, 
+    String otherName, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to match (required) |
+ **otherName** | **String**| Another name to match (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**AiNameMatchResult**](AiNameMatchResult.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameMatchParsed"></a>
+## **aiNameMatchParsed**
+> [AiNameMatchResult](AiNameMatchResult.md) aiNameMatchParsed(AiNameMatchParsedRequestData request)
+
+Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
+
+### **AiNameMatchParsedRequestData** Parameters
+```java
+public AiNameMatchParsedRequestData(
+    AiNameParsedMatchRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiNameParsedMatchRq**](AiNameParsedMatchRq.md)| Parsed names to match |
+
+### Return type
+
+[**AiNameMatchResult**](AiNameMatchResult.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameParse"></a>
+## **aiNameParse**
+> [ListResponseOfAiNameComponent](ListResponseOfAiNameComponent.md) aiNameParse(AiNameParseRequestData request)
+
+Parse name to components             
+
+### **AiNameParseRequestData** Parameters
+```java
+public AiNameParseRequestData(
+    String name, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| A name to parse (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**ListResponseOfAiNameComponent**](ListResponseOfAiNameComponent.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiNameParseEmailAddress"></a>
+## **aiNameParseEmailAddress**
+> [ListResponseOfAiNameExtracted](ListResponseOfAiNameExtracted.md) aiNameParseEmailAddress(AiNameParseEmailAddressRequestData request)
+
+Parse person&#39;s name out of an email address             
+
+### **AiNameParseEmailAddressRequestData** Parameters
+```java
+public AiNameParseEmailAddressRequestData(
+    String emailAddress, 
+    String language, 
+    String location, 
+    String encoding, 
+    String script, 
+    String style)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emailAddress** | **String**| Email address to parse (required) |
+ **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
+ **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **encoding** | **String**| A character encoding name | [optional] [default to ]
+ **script** | **String**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
+ **style** | **String**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
+
+### Return type
+
+[**ListResponseOfAiNameExtracted**](ListResponseOfAiNameExtracted.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="appendEmailMessage"></a>
 ## **appendEmailMessage**
 > [EmailPropertyResponse](EmailPropertyResponse.md) appendEmailMessage(AppendEmailMessageRequestData request)
 
-Adds an email from *.eml file to specified folder in email account
+Adds an email from *.eml file to specified folder in email account             
 
 ### **AppendEmailMessageRequestData** Parameters
 ```java
@@ -132,7 +536,7 @@ Name | Type | Description  | Notes
 ## **appendMimeMessage**
 > [ValueResponse](ValueResponse.md) appendMimeMessage(AppendMimeMessageRequestData request)
 
-Adds an email from MIME to specified folder in email account
+Adds an email from MIME to specified folder in email account             
 
 ### **AppendMimeMessageRequestData** Parameters
 ```java
@@ -212,7 +616,7 @@ void (empty response body)
 ## **createCalendar**
 > void createCalendar(CreateCalendarRequestData request)
 
-Create calendar file
+Create calendar file             
 
 ### **CreateCalendarRequestData** Parameters
 ```java
@@ -236,7 +640,7 @@ void (empty response body)
 ## **createContact**
 > void createContact(CreateContactRequestData request)
 
-Create contact document
+Create contact document             
 
 ### **CreateContactRequestData** Parameters
 ```java
@@ -248,7 +652,7 @@ public CreateContactRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Create contact request |
 
@@ -262,7 +666,7 @@ void (empty response body)
 ## **createEmail**
 > [EmailDocumentResponse](EmailDocumentResponse.md) createEmail(CreateEmailRequestData request)
 
-Create an email document
+Create an email document             
 
 ### **CreateEmailRequestData** Parameters
 ```java
@@ -286,7 +690,7 @@ Name | Type | Description  | Notes
 ## **createEmailFolder**
 > void createEmailFolder(CreateEmailFolderRequestData request)
 
-Create new folder in email account
+Create new folder in email account             
 
 ### **CreateEmailFolderRequestData** Parameters
 ```java
@@ -332,7 +736,7 @@ void (empty response body)
 ## **createMapi**
 > void createMapi(CreateMapiRequestData request)
 
-Create new document
+Create new document             
 
 ### **CreateMapiRequestData** Parameters
 ```java
@@ -356,7 +760,7 @@ void (empty response body)
 ## **deleteCalendarProperty**
 > void deleteCalendarProperty(DeleteCalendarPropertyRequestData request)
 
-Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
+Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
 
 ### **DeleteCalendarPropertyRequestData** Parameters
 ```java
@@ -384,7 +788,7 @@ void (empty response body)
 ## **deleteContactProperty**
 > void deleteContactProperty(DeleteContactPropertyRequestData request)
 
-Delete property from indexed property list
+Delete property from indexed property list             
 
 ### **DeleteContactPropertyRequestData** Parameters
 ```java
@@ -398,7 +802,7 @@ public DeleteContactPropertyRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **memberName** | **String**| Indexed property name |
  **index** | **Integer**| Property index |
@@ -414,7 +818,7 @@ void (empty response body)
 ## **deleteEmailFolder**
 > void deleteEmailFolder(DeleteEmailFolderRequestData request)
 
-Delete a folder in email account
+Delete a folder in email account             
 
 ### **DeleteEmailFolderRequestData** Parameters
 ```java
@@ -436,7 +840,7 @@ void (empty response body)
 ## **deleteEmailMessage**
 > void deleteEmailMessage(DeleteEmailMessageRequestData request)
 
-Delete message from email account by id
+Delete message from email account by id             
 
 ### **DeleteEmailMessageRequestData** Parameters
 ```java
@@ -510,7 +914,7 @@ void (empty response body)
 ## **deleteMapiAttachment**
 > void deleteMapiAttachment(DeleteMapiAttachmentRequestData request)
 
-Remove attachment from document
+Remove attachment from document             
 
 ### **DeleteMapiAttachmentRequestData** Parameters
 ```java
@@ -536,7 +940,7 @@ void (empty response body)
 ## **deleteMapiProperties**
 > void deleteMapiProperties(DeleteMapiPropertiesRequestData request)
 
-Delete document properties
+Delete document properties             
 
 ### **DeleteMapiPropertiesRequestData** Parameters
 ```java
@@ -586,7 +990,7 @@ Name | Type | Description  | Notes
 ## **fetchEmailMessage**
 > [MimeResponse](MimeResponse.md) fetchEmailMessage(FetchEmailMessageRequestData request)
 
-Fetch message mime from email account
+Fetch message mime from email account             
 
 ### **FetchEmailMessageRequestData** Parameters
 ```java
@@ -602,7 +1006,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account) | [optional]
+ **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -616,7 +1020,7 @@ Name | Type | Description  | Notes
 ## **getCalendar**
 > [HierarchicalObject](HierarchicalObject.md) getCalendar(GetCalendarRequestData request)
 
-Get calendar file properties
+Get calendar file properties             
 
 ### **GetCalendarRequestData** Parameters
 ```java
@@ -642,7 +1046,7 @@ Name | Type | Description  | Notes
 ## **getCalendarAttachment**
 > [File](File.md) getCalendarAttachment(GetCalendarAttachmentRequestData request)
 
-Get iCalendar document attachment by name
+Get iCalendar document attachment by name             
 
 ### **GetCalendarAttachmentRequestData** Parameters
 ```java
@@ -670,7 +1074,7 @@ Name | Type | Description  | Notes
 ## **getCalendarList**
 > [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getCalendarList(GetCalendarListRequestData request)
 
-Get iCalendar files list in folder on storage
+Get iCalendar files list in folder on storage             
 
 ### **GetCalendarListRequestData** Parameters
 ```java
@@ -698,7 +1102,7 @@ Name | Type | Description  | Notes
 ## **getContactAttachment**
 > [File](File.md) getContactAttachment(GetContactAttachmentRequestData request)
 
-Get attachment file by name
+Get attachment file by name             
 
 ### **GetContactAttachmentRequestData** Parameters
 ```java
@@ -712,7 +1116,7 @@ public GetContactAttachmentRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **attachment** | **String**| Attachment name or index |
  **folder** | **String**| Path to folder in storage | [optional]
@@ -728,7 +1132,7 @@ Name | Type | Description  | Notes
 ## **getContactList**
 > [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getContactList(GetContactListRequestData request)
 
-Get contact list from storage folder
+Get contact list from storage folder             
 
 ### **GetContactListRequestData** Parameters
 ```java
@@ -742,7 +1146,7 @@ public GetContactListRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **folder** | **String**| Path to folder in storage | [optional]
  **storage** | **String**| Storage name | [optional]
  **itemsPerPage** | **Integer**| Count of items on page | [optional] [default to 10]
@@ -758,7 +1162,7 @@ Name | Type | Description  | Notes
 ## **getContactProperties**
 > [HierarchicalObject](HierarchicalObject.md) getContactProperties(GetContactPropertiesRequestData request)
 
-Get contact document properties
+Get contact document properties             
 
 ### **GetContactPropertiesRequestData** Parameters
 ```java
@@ -771,7 +1175,7 @@ public GetContactPropertiesRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **folder** | **String**| Path to folder in storage | [optional]
  **storage** | **String**| Storage name | [optional]
@@ -808,7 +1212,7 @@ Name | Type | Description  | Notes
 ## **getEmail**
 > [EmailDocument](EmailDocument.md) getEmail(GetEmailRequestData request)
 
-Get email document
+Get email document             
 
 ### **GetEmailRequestData** Parameters
 ```java
@@ -834,7 +1238,7 @@ Name | Type | Description  | Notes
 ## **getEmailAttachment**
 > [File](File.md) getEmailAttachment(GetEmailAttachmentRequestData request)
 
-Get email attachment by name
+Get email attachment by name             
 
 ### **GetEmailAttachmentRequestData** Parameters
 ```java
@@ -862,7 +1266,7 @@ Name | Type | Description  | Notes
 ## **getEmailProperty**
 > [EmailPropertyResponse](EmailPropertyResponse.md) getEmailProperty(GetEmailPropertyRequestData request)
 
-Get an email document property by its name
+Get an email document property by its name             
 
 ### **GetEmailPropertyRequestData** Parameters
 ```java
@@ -938,7 +1342,7 @@ Name | Type | Description  | Notes
 ## **getMapiAttachment**
 > [File](File.md) getMapiAttachment(GetMapiAttachmentRequestData request)
 
-Get document attachment as file stream
+Get document attachment as file stream             
 
 ### **GetMapiAttachmentRequestData** Parameters
 ```java
@@ -966,7 +1370,7 @@ Name | Type | Description  | Notes
 ## **getMapiAttachments**
 > [ListResponseOfString](ListResponseOfString.md) getMapiAttachments(GetMapiAttachmentsRequestData request)
 
-Get document attachment list
+Get document attachment list             
 
 ### **GetMapiAttachmentsRequestData** Parameters
 ```java
@@ -992,7 +1396,7 @@ Name | Type | Description  | Notes
 ## **getMapiList**
 > [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getMapiList(GetMapiListRequestData request)
 
-Get document list from storage folder
+Get document list from storage folder             
 
 ### **GetMapiListRequestData** Parameters
 ```java
@@ -1020,7 +1424,7 @@ Name | Type | Description  | Notes
 ## **getMapiProperties**
 > [HierarchicalObjectResponse](HierarchicalObjectResponse.md) getMapiProperties(GetMapiPropertiesRequestData request)
 
-Get document properties
+Get document properties             
 
 ### **GetMapiPropertiesRequestData** Parameters
 ```java
@@ -1046,7 +1450,7 @@ Name | Type | Description  | Notes
 ## **listEmailFolders**
 > [ListResponseOfMailServerFolder](ListResponseOfMailServerFolder.md) listEmailFolders(ListEmailFoldersRequestData request)
 
-Get folders list in email account
+Get folders list in email account             
 
 ### **ListEmailFoldersRequestData** Parameters
 ```java
@@ -1061,7 +1465,7 @@ public ListEmailFoldersRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account) | [optional]
+ **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **parentFolder** | **String**| Folder in which subfolders should be listed | [optional]
@@ -1076,9 +1480,9 @@ Name | Type | Description  | Notes
 ## **listEmailMessages**
 > [ListResponseOfString](ListResponseOfString.md) listEmailMessages(ListEmailMessagesRequestData request)
 
-Get messages from folder, filtered by query
+Get messages from folder, filtered by query             
 
-The query string should have the following view.  The example of a simple expression:   &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.  The number of simple expressions can make a compound one, ex.: (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator  At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message  Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message  Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item  Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once  The field value (&lt;Field value&gt;) can take the following values: For text fields - any string, For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;, For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;
+The query string should have the following view.      The example of a simple expression:       &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator      At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once      The field value (&lt;Field value&gt;) can take the following values:     For text fields - any string,     For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;,     For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;              
 
 ### **ListEmailMessagesRequestData** Parameters
 ```java
@@ -1097,7 +1501,7 @@ Name | Type | Description  | Notes
  **folder** | **String**| A folder in email account |
  **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account) | [optional]
+ **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -1196,7 +1600,7 @@ Name | Type | Description  | Notes
 ## **saveMailAccount**
 > void saveMailAccount(SaveMailAccountRequestData request)
 
-Create email account file (*.account) with login/password authentication
+Create email account file (*.account) with login/password authentication             
 
 ### **SaveMailAccountRequestData** Parameters
 ```java
@@ -1218,7 +1622,7 @@ void (empty response body)
 ## **saveMailOAuthAccount**
 > void saveMailOAuthAccount(SaveMailOAuthAccountRequestData request)
 
-Create email account file (*.account) with OAuth
+Create email account file (*.account) with OAuth             
 
 ### **SaveMailOAuthAccountRequestData** Parameters
 ```java
@@ -1240,7 +1644,7 @@ void (empty response body)
 ## **sendEmail**
 > void sendEmail(SendEmailRequestData request)
 
-Send an email from *.eml file located on storage
+Send an email from *.eml file located on storage             
 
 ### **SendEmailRequestData** Parameters
 ```java
@@ -1262,7 +1666,7 @@ void (empty response body)
 ## **sendEmailMime**
 > void sendEmailMime(SendEmailMimeRequestData request)
 
-Send an email specified by MIME in request
+Send an email specified by MIME in request             
 
 ### **SendEmailMimeRequestData** Parameters
 ```java
@@ -1284,7 +1688,7 @@ void (empty response body)
 ## **setEmailProperty**
 > [EmailPropertyResponse](EmailPropertyResponse.md) setEmailProperty(SetEmailPropertyRequestData request)
 
-Set email document property value
+Set email document property value             
 
 ### **SetEmailPropertyRequestData** Parameters
 ```java
@@ -1298,7 +1702,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **propertyName** | **String**| A property name that should be changed |
  **fileName** | **String**| Email document file name |
- **request** | [**SetEmailPropertyRequest**](SetEmailPropertyRequest.md)| A property that should be changed and optional Storage info to specify             where the file located |
+ **request** | [**SetEmailPropertyRequest**](SetEmailPropertyRequest.md)| A property that should be changed and optional Storage info to specify where the file located              |
 
 ### Return type
 
@@ -1310,7 +1714,7 @@ Name | Type | Description  | Notes
 ## **setEmailReadFlag**
 > void setEmailReadFlag(SetEmailReadFlagRequestData request)
 
-Sets \&quot;Message is read\&quot; flag
+Sets \&quot;Message is read\&quot; flag             
 
 ### **SetEmailReadFlagRequestData** Parameters
 ```java
@@ -1354,7 +1758,7 @@ Name | Type | Description  | Notes
 ## **updateCalendarProperties**
 > void updateCalendarProperties(UpdateCalendarPropertiesRequestData request)
 
-Update calendar file properties
+Update calendar file properties             
 
 ### **UpdateCalendarPropertiesRequestData** Parameters
 ```java
@@ -1378,7 +1782,7 @@ void (empty response body)
 ## **updateContactProperties**
 > void updateContactProperties(UpdateContactPropertiesRequestData request)
 
-Update contact document properties
+Update contact document properties             
 
 ### **UpdateContactPropertiesRequestData** Parameters
 ```java
@@ -1390,7 +1794,7 @@ public UpdateContactPropertiesRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| Contact document format | [enum: VCard, WebDav, Msg]
+ **format** | **String**| Contact document format Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name |
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Properties that should be updated/added |
 
@@ -1404,7 +1808,7 @@ void (empty response body)
 ## **updateMapiProperties**
 > void updateMapiProperties(UpdateMapiPropertiesRequestData request)
 
-Update document properties
+Update document properties             
 
 ### **UpdateMapiPropertiesRequestData** Parameters
 ```java

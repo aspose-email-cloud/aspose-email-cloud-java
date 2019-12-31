@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Update email document property request
+ * Update email document property request             
  */
 public class SetEmailPropertyRequest {
   @JsonProperty("emailProperty")
@@ -53,7 +55,7 @@ public class SetEmailPropertyRequest {
   }
 
   /**
-   * An email property that should be updated
+   * An email property that should be updated             
    * @return emailProperty
   **/
   public EmailProperty getEmailProperty() {
@@ -70,7 +72,7 @@ public class SetEmailPropertyRequest {
   }
 
   /**
-   * An email document location in storage
+   * An email document location in storage             
    * @return storageFolder
   **/
   public StorageFolderLocation getStorageFolder() {
@@ -106,8 +108,8 @@ public class SetEmailPropertyRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetEmailPropertyRequest {\n");
     
-    sb.append("    emailProperty: ").append(toIndentedString(emailProperty)).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(storageFolder)).append("\n");
+    sb.append("    emailProperty: ").append(toIndentedString(getEmailProperty())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,6 +123,21 @@ public class SetEmailPropertyRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SetEmailPropertyRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SetEmailPropertyRequest
+   * @param emailProperty An email property that should be updated             
+   * @param storageFolder An email document location in storage             
+   */
+  public SetEmailPropertyRequest(EmailProperty emailProperty, StorageFolderLocation storageFolder) {
+    super();
+    setEmailProperty(emailProperty);
+    setStorageFolder(storageFolder);
   }
 
 }

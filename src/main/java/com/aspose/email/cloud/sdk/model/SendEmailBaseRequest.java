@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Send email file request
+ * Send email file request             
  */
 public class SendEmailBaseRequest extends AccountBaseRequest {
   @JsonProperty("emailFile")
@@ -50,7 +52,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Email document (*.eml) file location in storage
+   * Email document (*.eml) file location in storage             
    * @return emailFile
   **/
   public StorageFileLocation getEmailFile() {
@@ -86,7 +88,10 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SendEmailBaseRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    emailFile: ").append(toIndentedString(emailFile)).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    emailFile: ").append(toIndentedString(getEmailFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -100,6 +105,25 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public SendEmailBaseRequest() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the SendEmailBaseRequest
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   * @param emailFile Email document (*.eml) file location in storage             
+   */
+  public SendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, StorageFileLocation emailFile) {
+    super();
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
+    setEmailFile(emailFile);
   }
 
 }

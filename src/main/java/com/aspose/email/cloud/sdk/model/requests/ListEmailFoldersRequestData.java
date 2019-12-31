@@ -37,7 +37,7 @@ public class ListEmailFoldersRequestData
     /**
     * Initializes a new instance of the ListEmailFoldersRequestData class.   
     * @param firstAccount Email account
-    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)
+    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     * @param parentFolder Folder in which subfolders should be listed
@@ -57,7 +57,7 @@ public class ListEmailFoldersRequestData
     public String firstAccount;
 
     /**
-    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)
+    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
     **/
     public String secondAccount;
 

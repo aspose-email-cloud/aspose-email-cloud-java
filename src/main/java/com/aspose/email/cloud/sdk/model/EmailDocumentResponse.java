@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * An email document response
+ * An email document response             
  */
 public class EmailDocumentResponse {
   @JsonProperty("document")
@@ -50,7 +52,7 @@ public class EmailDocumentResponse {
   }
 
   /**
-   * An email document requested
+   * An email document requested             
    * @return document
   **/
   public EmailDocument getDocument() {
@@ -85,7 +87,7 @@ public class EmailDocumentResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailDocumentResponse {\n");
     
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
+    sb.append("    document: ").append(toIndentedString(getDocument())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -99,6 +101,19 @@ public class EmailDocumentResponse {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public EmailDocumentResponse() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the EmailDocumentResponse
+   * @param document An email document requested             
+   */
+  public EmailDocumentResponse(EmailDocument document) {
+    super();
+    setDocument(document);
   }
 
 }

@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Indexed hierarchical property
+ * Indexed hierarchical property             
  */
 public class IndexedHierarchicalObject extends BaseObject {
   @JsonProperty("index")
@@ -53,7 +55,7 @@ public class IndexedHierarchicalObject extends BaseObject {
   }
 
   /**
-   * Index of property in list
+   * Index of property in list             
    * @return index
   **/
   public Integer getIndex() {
@@ -78,7 +80,7 @@ public class IndexedHierarchicalObject extends BaseObject {
   }
 
   /**
-   * List of internal properties
+   * List of internal properties             
    * @return internalProperties
   **/
   public List<BaseObject> getInternalProperties() {
@@ -115,8 +117,10 @@ public class IndexedHierarchicalObject extends BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class IndexedHierarchicalObject {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    index: ").append(toIndentedString(index)).append("\n");
-    sb.append("    internalProperties: ").append(toIndentedString(internalProperties)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
+    sb.append("    index: ").append(toIndentedString(getIndex())).append("\n");
+    sb.append("    internalProperties: ").append(toIndentedString(getInternalProperties())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -130,6 +134,25 @@ public class IndexedHierarchicalObject extends BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public IndexedHierarchicalObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the IndexedHierarchicalObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   * @param index Index of property in list             
+   * @param internalProperties List of internal properties             
+   */
+  public IndexedHierarchicalObject(String name, String type, Integer index, List<BaseObject> internalProperties) {
+    super();
+    setName(name);
+    setType(type);
+    setIndex(index);
+    setInternalProperties(internalProperties);
   }
 
 }

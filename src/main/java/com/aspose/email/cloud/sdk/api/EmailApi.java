@@ -148,6 +148,27 @@ public class EmailApi
         config.setDebugMode(debug);
         this.initEmailApi(config);
     }
+
+    /**
+     * Initializes a new instance of the EmailApi class for Aspose Cloud-hosted service usage.
+     * @param appKey The app key.
+     * @param appSid The app SID.
+     * @param baseUrl The base URL.
+     * @param apiVersion API version.
+     * @param debug If debug mode is enabled.
+     * @param authUrl should not be used.
+     */
+    public EmailApi(String appKey, String appSid, String baseUrl, String apiVersion, Boolean debug, String authUrl) throws Exception
+    {
+        Configuration config = new Configuration();
+        config.AppKey = appKey;
+        config.AppSid = appSid;
+        config.setApiBaseUrl(baseUrl);
+        config.setApiVersion(apiVersion);
+        config.setDebugMode(debug);
+        config.setAuthUrl(authUrl);
+        this.initEmailApi(config);
+    }
     
     /**
      * Initializes a new instance of the EmailApi class.
@@ -169,7 +190,7 @@ public class EmailApi
     }
     
     /**
-     * Adds an attachment to iCalendar file
+     * Adds an attachment to iCalendar file             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -210,7 +231,7 @@ public class EmailApi
     }
   
     /**
-     * Add attachment to contact document
+     * Add attachment to contact document             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -256,7 +277,7 @@ public class EmailApi
     }
   
     /**
-     * Adds an attachment to Email document
+     * Adds an attachment to Email document             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailDocumentResponse
@@ -305,7 +326,7 @@ public class EmailApi
     }
   
     /**
-     * Add attachment to document
+     * Add attachment to document             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -346,7 +367,619 @@ public class EmailApi
     }
   
     /**
-     * Adds an email from *.eml file to specified folder in email account
+     * Ocr images             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiBcrOcrData
+     * @throws Exception 
+     */
+    public ListResponseOfAiBcrOcrData aiBcrOcr(AiBcrOcrRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrOcr");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/ocr";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiBcrOcrData.class);
+    }
+  
+    /**
+     * Ocr images from storage             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiBcrOcrData
+     * @throws Exception 
+     */
+    public ListResponseOfAiBcrOcrData aiBcrOcrStorage(AiBcrOcrStorageRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrOcrStorage");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/ocr-storage";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiBcrOcrData.class);
+    }
+  
+    /**
+     * Parse images to vCard properties             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfHierarchicalObject
+     * @throws Exception 
+     */
+    public ListResponseOfHierarchicalObject aiBcrParse(AiBcrParseRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParse");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfHierarchicalObject.class);
+    }
+  
+    /**
+     * Parse images from storage to vCard files             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfStorageFileLocation
+     * @throws Exception 
+     */
+    public ListResponseOfStorageFileLocation aiBcrParseStorage(AiBcrParseStorageRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiBcrParseStorage");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse-storage";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfStorageFileLocation.class);
+    }
+  
+    /**
+     * The call proposes k most probable names for given starting characters             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameWeightedVariants
+     * @throws Exception 
+     */
+    public AiNameWeightedVariants aiNameComplete(AiNameCompleteRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameComplete");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/complete";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameWeightedVariants.class);
+    }
+  
+    /**
+     * Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameWeightedVariants
+     * @throws Exception 
+     */
+    public AiNameWeightedVariants aiNameExpand(AiNameExpandRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameExpand");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/expand";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameWeightedVariants.class);
+    }
+  
+    /**
+     * Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameWeightedVariants
+     * @throws Exception 
+     */
+    public AiNameWeightedVariants aiNameExpandParsed(AiNameExpandParsedRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameExpandParsed");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/expand-parsed";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameWeightedVariants.class);
+    }
+  
+    /**
+     * Formats a person&#39;s name in correct case and name order using options for formatting instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameFormatted
+     * @throws Exception 
+     */
+    public AiNameFormatted aiNameFormat(AiNameFormatRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameFormat");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/format";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameFormatted.class);
+    }
+  
+    /**
+     * Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameFormatted
+     * @throws Exception 
+     */
+    public AiNameFormatted aiNameFormatParsed(AiNameFormatParsedRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameFormatParsed");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/format-parsed";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameFormatted.class);
+    }
+  
+    /**
+     * Detect person&#39;s gender from name string             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiNameGenderHypothesis
+     * @throws Exception 
+     */
+    public ListResponseOfAiNameGenderHypothesis aiNameGenderize(AiNameGenderizeRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameGenderize");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/genderize";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiNameGenderHypothesis.class);
+    }
+  
+    /**
+     * Detect person&#39;s gender from parsed name             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiNameGenderHypothesis
+     * @throws Exception 
+     */
+    public ListResponseOfAiNameGenderHypothesis aiNameGenderizeParsed(AiNameGenderizeParsedRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameGenderizeParsed");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/genderize-parsed";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiNameGenderHypothesis.class);
+    }
+  
+    /**
+     * Compare people&#39;s names. Uses options for comparing instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameMatchResult
+     * @throws Exception 
+     */
+    public AiNameMatchResult aiNameMatch(AiNameMatchRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameMatch");
+      }
+       // verify the required parameter 'request.otherName' is set
+      if (request.otherName== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.otherName' when calling aiNameMatch");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/match";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "otherName", request.otherName);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameMatchResult.class);
+    }
+  
+    /**
+     * Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AiNameMatchResult
+     * @throws Exception 
+     */
+    public AiNameMatchResult aiNameMatchParsed(AiNameMatchParsedRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling aiNameMatchParsed");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/match-parsed";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      
+      String postBody = null;
+      
+      postBody = SerializationHelper.serialize(request.rq);
+      
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "POST", 
+          postBody, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), AiNameMatchResult.class);
+    }
+  
+    /**
+     * Parse name to components             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiNameComponent
+     * @throws Exception 
+     */
+    public ListResponseOfAiNameComponent aiNameParse(AiNameParseRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.name' is set
+      if (request.name== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.name' when calling aiNameParse");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/parse";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiNameComponent.class);
+    }
+  
+    /**
+     * Parse person&#39;s name out of an email address             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfAiNameExtracted
+     * @throws Exception 
+     */
+    public ListResponseOfAiNameExtracted aiNameParseEmailAddress(AiNameParseEmailAddressRequestData request) throws Exception 
+    {
+       // verify the required parameter 'request.emailAddress' is set
+      if (request.emailAddress== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.emailAddress' when calling aiNameParseEmailAddress");
+      }
+      // create path and map variables
+      String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/parse-email-address";
+      
+      HashMap<String, Object> formParams = new HashMap<String, Object>();
+      
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "emailAddress", request.emailAddress);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
+      resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+      
+            
+      byte[] response = this.apiInvoker.invokeApi(
+          resourcePath, 
+          "GET", 
+          null, 
+          null, 
+          formParams);
+          
+      
+      if (response == null)
+      {
+          return null;
+      }
+      
+      return SerializationHelper.deserialize(new String(response), ListResponseOfAiNameExtracted.class);
+    }
+  
+    /**
+     * Adds an email from *.eml file to specified folder in email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailPropertyResponse
@@ -385,7 +1018,7 @@ public class EmailApi
     }
   
     /**
-     * Adds an email from MIME to specified folder in email account
+     * Adds an email from MIME to specified folder in email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ValueResponse
@@ -497,7 +1130,7 @@ public class EmailApi
     }
   
     /**
-     * Create calendar file
+     * Create calendar file             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -533,7 +1166,7 @@ public class EmailApi
     }
   
     /**
-     * Create contact document
+     * Create contact document             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -574,7 +1207,7 @@ public class EmailApi
     }
   
     /**
-     * Create an email document
+     * Create an email document             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailDocumentResponse
@@ -618,7 +1251,7 @@ public class EmailApi
     }
   
     /**
-     * Create new folder in email account
+     * Create new folder in email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -679,7 +1312,7 @@ public class EmailApi
     }
   
     /**
-     * Create new document
+     * Create new document             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -715,7 +1348,7 @@ public class EmailApi
     }
   
     /**
-     * Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
+     * Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -761,7 +1394,7 @@ public class EmailApi
     }
   
     /**
-     * Delete property from indexed property list
+     * Delete property from indexed property list             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -812,7 +1445,7 @@ public class EmailApi
     }
   
     /**
-     * Delete a folder in email account
+     * Delete a folder in email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -843,7 +1476,7 @@ public class EmailApi
     }
   
     /**
-     * Delete message from email account by id
+     * Delete message from email account by id             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -936,7 +1569,7 @@ public class EmailApi
     }
   
     /**
-     * Remove attachment from document
+     * Remove attachment from document             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -977,7 +1610,7 @@ public class EmailApi
     }
   
     /**
-     * Delete document properties
+     * Delete document properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -1047,7 +1680,7 @@ public class EmailApi
     }
   
     /**
-     * Fetch message mime from email account
+     * Fetch message mime from email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MimeResponse
@@ -1092,7 +1725,7 @@ public class EmailApi
     }
   
     /**
-     * Get calendar file properties
+     * Get calendar file properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @return HierarchicalObject
@@ -1131,7 +1764,7 @@ public class EmailApi
     }
   
     /**
-     * Get iCalendar document attachment by name
+     * Get iCalendar document attachment by name             
      * 
      * @param request Holds parameters for this request invocation.
      * @return File
@@ -1175,7 +1808,7 @@ public class EmailApi
     }
   
     /**
-     * Get iCalendar files list in folder on storage
+     * Get iCalendar files list in folder on storage             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfHierarchicalObjectResponse
@@ -1223,7 +1856,7 @@ public class EmailApi
     }
   
     /**
-     * Get attachment file by name
+     * Get attachment file by name             
      * 
      * @param request Holds parameters for this request invocation.
      * @return File
@@ -1272,7 +1905,7 @@ public class EmailApi
     }
   
     /**
-     * Get contact list from storage folder
+     * Get contact list from storage folder             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfHierarchicalObjectResponse
@@ -1313,7 +1946,7 @@ public class EmailApi
     }
   
     /**
-     * Get contact document properties
+     * Get contact document properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @return HierarchicalObject
@@ -1390,7 +2023,7 @@ public class EmailApi
     }
   
     /**
-     * Get email document
+     * Get email document             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailDocument
@@ -1429,7 +2062,7 @@ public class EmailApi
     }
   
     /**
-     * Get email attachment by name
+     * Get email attachment by name             
      * 
      * @param request Holds parameters for this request invocation.
      * @return File
@@ -1473,7 +2106,7 @@ public class EmailApi
     }
   
     /**
-     * Get an email document property by its name
+     * Get an email document property by its name             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailPropertyResponse
@@ -1593,7 +2226,7 @@ public class EmailApi
     }
   
     /**
-     * Get document attachment as file stream
+     * Get document attachment as file stream             
      * 
      * @param request Holds parameters for this request invocation.
      * @return File
@@ -1637,7 +2270,7 @@ public class EmailApi
     }
   
     /**
-     * Get document attachment list
+     * Get document attachment list             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfString
@@ -1676,7 +2309,7 @@ public class EmailApi
     }
   
     /**
-     * Get document list from storage folder
+     * Get document list from storage folder             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfHierarchicalObjectResponse
@@ -1712,7 +2345,7 @@ public class EmailApi
     }
   
     /**
-     * Get document properties
+     * Get document properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @return HierarchicalObjectResponse
@@ -1751,7 +2384,7 @@ public class EmailApi
     }
   
     /**
-     * Get folders list in email account
+     * Get folders list in email account             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfMailServerFolder
@@ -1792,8 +2425,8 @@ public class EmailApi
     }
   
     /**
-     * Get messages from folder, filtered by query
-     * The query string should have the following view.  The example of a simple expression:   &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.  The number of simple expressions can make a compound one, ex.: (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator  At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message  Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message  Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item  Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once  The field value (&lt;Field value&gt;) can take the following values: For text fields - any string, For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;, For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;
+     * Get messages from folder, filtered by query             
+     * The query string should have the following view.      The example of a simple expression:       &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator      At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once      The field value (&lt;Field value&gt;) can take the following values:     For text fields - any string,     For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;,     For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;              
      * @param request Holds parameters for this request invocation.
      * @return ListResponseOfString
      * @throws Exception 
@@ -1955,7 +2588,7 @@ public class EmailApi
     }
   
     /**
-     * Create email account file (*.account) with login/password authentication
+     * Create email account file (*.account) with login/password authentication             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -1986,7 +2619,7 @@ public class EmailApi
     }
   
     /**
-     * Create email account file (*.account) with OAuth
+     * Create email account file (*.account) with OAuth             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2017,7 +2650,7 @@ public class EmailApi
     }
   
     /**
-     * Send an email from *.eml file located on storage
+     * Send an email from *.eml file located on storage             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2048,7 +2681,7 @@ public class EmailApi
     }
   
     /**
-     * Send an email specified by MIME in request
+     * Send an email specified by MIME in request             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2079,7 +2712,7 @@ public class EmailApi
     }
   
     /**
-     * Set email document property value
+     * Set email document property value             
      * 
      * @param request Holds parameters for this request invocation.
      * @return EmailPropertyResponse
@@ -2128,7 +2761,7 @@ public class EmailApi
     }
   
     /**
-     * Sets \&quot;Message is read\&quot; flag
+     * Sets \&quot;Message is read\&quot; flag             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2196,7 +2829,7 @@ public class EmailApi
     }
   
     /**
-     * Update calendar file properties
+     * Update calendar file properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2232,7 +2865,7 @@ public class EmailApi
     }
   
     /**
-     * Update contact document properties
+     * Update contact document properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 
@@ -2273,7 +2906,7 @@ public class EmailApi
     }
   
     /**
-     * Update document properties
+     * Update document properties             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws Exception 

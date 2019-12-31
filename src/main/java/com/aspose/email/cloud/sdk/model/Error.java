@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -148,10 +150,10 @@ public class Error {
     StringBuilder sb = new StringBuilder();
     sb.append("class Error {\n");
     
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    innerError: ").append(toIndentedString(innerError)).append("\n");
+    sb.append("    code: ").append(toIndentedString(getCode())).append("\n");
+    sb.append("    message: ").append(toIndentedString(getMessage())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
+    sb.append("    innerError: ").append(toIndentedString(getInnerError())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -165,6 +167,25 @@ public class Error {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public Error() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the Error
+   * @param code Code             
+   * @param message Message             
+   * @param description Description             
+   * @param innerError Inner Error             
+   */
+  public Error(String code, String message, String description, ErrorDetails innerError) {
+    super();
+    setCode(code);
+    setMessage(message);
+    setDescription(description);
+    setInnerError(innerError);
   }
 
 }

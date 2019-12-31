@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -38,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Simple property object
+ * Simple property object             
  */
 public class PrimitiveObject extends BaseObject {
   @JsonProperty("value")
@@ -50,7 +52,7 @@ public class PrimitiveObject extends BaseObject {
   }
 
   /**
-   * Property value
+   * Property value             
    * @return value
   **/
   public String getValue() {
@@ -86,7 +88,9 @@ public class PrimitiveObject extends BaseObject {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrimitiveObject {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -100,6 +104,23 @@ public class PrimitiveObject extends BaseObject {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public PrimitiveObject() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the PrimitiveObject
+   * @param name Gets or sets the name of an object.             
+   * @param type Property type. Used for deserialization purposes             
+   * @param value Property value             
+   */
+  public PrimitiveObject(String name, String type, String value) {
+    super();
+    setName(name);
+    setType(type);
+    setValue(value);
   }
 
 }

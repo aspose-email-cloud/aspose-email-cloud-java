@@ -31,6 +31,8 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.*;
 import com.google.gson.*;
@@ -169,11 +171,11 @@ public class StorageFile {
     StringBuilder sb = new StringBuilder();
     sb.append("class StorageFile {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
-    sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    isFolder: ").append(toIndentedString(isIsFolder())).append("\n");
+    sb.append("    modifiedDate: ").append(toIndentedString(getModifiedDate())).append("\n");
+    sb.append("    size: ").append(toIndentedString(getSize())).append("\n");
+    sb.append("    path: ").append(toIndentedString(getPath())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -187,6 +189,27 @@ public class StorageFile {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public StorageFile() {
+    super();
+  }
+
+  /**
+   * Initializes a new instance of the StorageFile
+   * @param name File or folder name.
+   * @param isFolder True if it is a folder.
+   * @param modifiedDate File or folder last modified DateTime.
+   * @param size File or folder size.
+   * @param path File or folder path.
+   */
+  public StorageFile(String name, Boolean isFolder, Date modifiedDate, Long size, String path) {
+    super();
+    setName(name);
+    setIsFolder(isFolder);
+    setModifiedDate(modifiedDate);
+    setSize(size);
+    setPath(path);
   }
 
 }
