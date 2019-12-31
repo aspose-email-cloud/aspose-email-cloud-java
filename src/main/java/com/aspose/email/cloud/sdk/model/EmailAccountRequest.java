@@ -121,7 +121,7 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
   public String getSecurityOptions() {
@@ -244,7 +244,7 @@ public class EmailAccountRequest {
    * @param host Email account host             
    * @param port Email account port             
    * @param login Email account login             
-   * @param securityOptions Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param securityOptions Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param description Email account description             
    * @param storageFile A storage file location info to store email account             

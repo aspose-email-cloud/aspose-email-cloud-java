@@ -172,50 +172,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
-<a name="aiBcrParseOcrData"></a>
-## **aiBcrParseOcrData**
-> [ListResponseOfHierarchicalObject](ListResponseOfHierarchicalObject.md) aiBcrParseOcrData(AiBcrParseOcrDataRequestData request)
-
-Parse OCR data to vCard properties             
-
-### **AiBcrParseOcrDataRequestData** Parameters
-```java
-public AiBcrParseOcrDataRequestData(
-    AiBcrParseOcrDataRq rq)
-```
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  |
-
-### Return type
-
-[**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="aiBcrParseOcrDataStorage"></a>
-## **aiBcrParseOcrDataStorage**
-> [ListResponseOfStorageFileLocation](ListResponseOfStorageFileLocation.md) aiBcrParseOcrDataStorage(AiBcrParseOcrDataStorageRequestData request)
-
-Parse vCards from OCR data and save them to Storage             
-
-### **AiBcrParseOcrDataStorageRequestData** Parameters
-```java
-public AiBcrParseOcrDataStorageRequestData(
-    AiBcrParseOcrDataStorageRq rq)
-```
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **rq** | [**AiBcrParseOcrDataStorageRq**](AiBcrParseOcrDataStorageRq.md)|  |
-
-### Return type
-
-[**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
 <a name="aiBcrParseStorage"></a>
 ## **aiBcrParseStorage**
 > [ListResponseOfStorageFileLocation](ListResponseOfStorageFileLocation.md) aiBcrParseStorage(AiBcrParseStorageRequestData request)

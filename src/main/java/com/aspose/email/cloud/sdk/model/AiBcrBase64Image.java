@@ -111,7 +111,7 @@ public class AiBcrBase64Image extends AiBcrImage {
 
   /**
    * Initializes a new instance of the AiBcrBase64Image
-   * @param isSingle Determines that image contains single VCard or more             
+   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
    * @param base64Data Image data in base64             
    */
   public AiBcrBase64Image(Boolean isSingle, String base64Data) {
