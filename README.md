@@ -66,7 +66,8 @@ ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseS
         null,
         //We can process multiple images in one request
         Arrays.asList(new AiBcrImageStorageFile(
-            true, //the image contains only one business card (you can upload image with multiple cards on it)
+            true, //Flag isSingle determines that image contains single VCard or more.
+                  //Only single VCard on image variant is supported in current version.
             new StorageFileLocation(storage, folder, fileName))),
         new StorageFolderLocation(storage, outFolderPath))));
 // Get file name from recognition result
