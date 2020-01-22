@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="EnumWithCustomOfEmailAddressCategory.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,19 +40,22 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * EnumWithCustomOfEmailAddressCategory
  */
-public class ValueResponse {
+public class EnumWithCustomOfEmailAddressCategory {
   @JsonProperty("value")
   private String value = null;
 
-  public ValueResponse value(String value) {
+  @JsonProperty("description")
+  private String description = null;
+
+  public EnumWithCustomOfEmailAddressCategory value(String value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
+   * Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @return value
   **/
   public String getValue() {
@@ -61,6 +64,23 @@ public class ValueResponse {
 
   public void setValue(String value) {
     this.value = value;
+  }
+
+  public EnumWithCustomOfEmailAddressCategory description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   * @return description
+  **/
+  public String getDescription() {
+    return description;
+  }  
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -72,22 +92,24 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    EnumWithCustomOfEmailAddressCategory enumWithCustomOfEmailAddressCategory = (EnumWithCustomOfEmailAddressCategory) o;
+    return ObjectUtils.equals(this.value, enumWithCustomOfEmailAddressCategory.value) &&
+    ObjectUtils.equals(this.description, enumWithCustomOfEmailAddressCategory.description);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(value, description);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class EnumWithCustomOfEmailAddressCategory {\n");
     
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +125,19 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public EnumWithCustomOfEmailAddressCategory() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the EnumWithCustomOfEmailAddressCategory
+   * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+   * @param description 
    */
-  public ValueResponse(String value) {
+  public EnumWithCustomOfEmailAddressCategory(String value, String description) {
     super();
     setValue(value);
+    setDescription(description);
   }
 
 }

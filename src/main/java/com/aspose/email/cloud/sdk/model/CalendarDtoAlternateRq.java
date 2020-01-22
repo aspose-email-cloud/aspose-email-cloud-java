@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="CalendarDtoAlternateRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,67 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * iCalendar document as AlternateView request             
  */
-public class ValueResponse {
+public class CalendarDtoAlternateRq {
   @JsonProperty("value")
-  private String value = null;
+  private CalendarDto value = null;
 
-  public ValueResponse value(String value) {
+  @JsonProperty("action")
+  private String action = null;
+
+  @JsonProperty("sequenceId")
+  private String sequenceId = null;
+
+  public CalendarDtoAlternateRq value(CalendarDto value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
+   * iCalendar document model             
    * @return value
   **/
-  public String getValue() {
+  public CalendarDto getValue() {
     return value;
   }  
 
-  public void setValue(String value) {
+  public void setValue(CalendarDto value) {
     this.value = value;
+  }
+
+  public CalendarDtoAlternateRq action(String action) {
+    this.action = action;
+    return this;
+  }
+
+  /**
+   * iCalendar actions. Enum, available values: Create, Update, Cancel
+   * @return action
+  **/
+  public String getAction() {
+    return action;
+  }  
+
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+  public CalendarDtoAlternateRq sequenceId(String sequenceId) {
+    this.sequenceId = sequenceId;
+    return this;
+  }
+
+  /**
+   * iCalendar sequence id             
+   * @return sequenceId
+  **/
+  public String getSequenceId() {
+    return sequenceId;
+  }  
+
+  public void setSequenceId(String sequenceId) {
+    this.sequenceId = sequenceId;
   }
 
 
@@ -72,22 +112,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    CalendarDtoAlternateRq calendarDtoAlternateRq = (CalendarDtoAlternateRq) o;
+    return ObjectUtils.equals(this.value, calendarDtoAlternateRq.value) &&
+    ObjectUtils.equals(this.action, calendarDtoAlternateRq.action) &&
+    ObjectUtils.equals(this.sequenceId, calendarDtoAlternateRq.sequenceId);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(value, action, sequenceId);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class CalendarDtoAlternateRq {\n");
     
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    action: ").append(toIndentedString(getAction())).append("\n");
+    sb.append("    sequenceId: ").append(toIndentedString(getSequenceId())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +147,21 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public CalendarDtoAlternateRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the CalendarDtoAlternateRq
+   * @param value iCalendar document model             
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
+   * @param sequenceId iCalendar sequence id             
    */
-  public ValueResponse(String value) {
+  public CalendarDtoAlternateRq(CalendarDto value, String action, String sequenceId) {
     super();
     setValue(value);
+    setAction(action);
+    setSequenceId(sequenceId);
   }
 
 }

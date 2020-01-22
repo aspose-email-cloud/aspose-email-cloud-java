@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="EnumWithCustomOfInstantMessengerCategory.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,19 +40,22 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * EnumWithCustomOfInstantMessengerCategory
  */
-public class ValueResponse {
+public class EnumWithCustomOfInstantMessengerCategory {
   @JsonProperty("value")
   private String value = null;
 
-  public ValueResponse value(String value) {
+  @JsonProperty("description")
+  private String description = null;
+
+  public EnumWithCustomOfInstantMessengerCategory value(String value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
+   * Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @return value
   **/
   public String getValue() {
@@ -61,6 +64,23 @@ public class ValueResponse {
 
   public void setValue(String value) {
     this.value = value;
+  }
+
+  public EnumWithCustomOfInstantMessengerCategory description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   * @return description
+  **/
+  public String getDescription() {
+    return description;
+  }  
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -72,22 +92,24 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    EnumWithCustomOfInstantMessengerCategory enumWithCustomOfInstantMessengerCategory = (EnumWithCustomOfInstantMessengerCategory) o;
+    return ObjectUtils.equals(this.value, enumWithCustomOfInstantMessengerCategory.value) &&
+    ObjectUtils.equals(this.description, enumWithCustomOfInstantMessengerCategory.description);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(value, description);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class EnumWithCustomOfInstantMessengerCategory {\n");
     
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +125,19 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public EnumWithCustomOfInstantMessengerCategory() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the EnumWithCustomOfInstantMessengerCategory
+   * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+   * @param description 
    */
-  public ValueResponse(String value) {
+  public EnumWithCustomOfInstantMessengerCategory(String value, String description) {
     super();
     setValue(value);
+    setDescription(description);
   }
 
 }

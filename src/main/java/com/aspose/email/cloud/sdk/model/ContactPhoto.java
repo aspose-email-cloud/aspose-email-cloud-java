@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="ContactPhoto.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,47 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Person&#39;s photo.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class ContactPhoto {
+  @JsonProperty("photoImageFormat")
+  private String photoImageFormat = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("base64Data")
+  private String base64Data = null;
+
+  public ContactPhoto photoImageFormat(String photoImageFormat) {
+    this.photoImageFormat = photoImageFormat;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @return photoImageFormat
   **/
-  public String getValue() {
-    return value;
+  public String getPhotoImageFormat() {
+    return photoImageFormat;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setPhotoImageFormat(String photoImageFormat) {
+    this.photoImageFormat = photoImageFormat;
+  }
+
+  public ContactPhoto base64Data(String base64Data) {
+    this.base64Data = base64Data;
+    return this;
+  }
+
+  /**
+   * Photo serialized as base64 string.             
+   * @return base64Data
+  **/
+  public String getBase64Data() {
+    return base64Data;
+  }  
+
+  public void setBase64Data(String base64Data) {
+    this.base64Data = base64Data;
   }
 
 
@@ -72,22 +92,24 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    ContactPhoto contactPhoto = (ContactPhoto) o;
+    return ObjectUtils.equals(this.photoImageFormat, contactPhoto.photoImageFormat) &&
+    ObjectUtils.equals(this.base64Data, contactPhoto.base64Data);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(photoImageFormat, base64Data);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class ContactPhoto {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    photoImageFormat: ").append(toIndentedString(getPhotoImageFormat())).append("\n");
+    sb.append("    base64Data: ").append(toIndentedString(getBase64Data())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +125,19 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public ContactPhoto() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the ContactPhoto
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @param base64Data Photo serialized as base64 string.             
    */
-  public ValueResponse(String value) {
+  public ContactPhoto(String photoImageFormat, String base64Data) {
     super();
-    setValue(value);
+    setPhotoImageFormat(photoImageFormat);
+    setBase64Data(base64Data);
   }
 
 }

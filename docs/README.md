@@ -12,6 +12,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**aiBcrOcr**](EmailApi.md#aibcrocr) | **POST** /email/AiBcr/ocr | Ocr images             
 *EmailApi* | [**aiBcrOcrStorage**](EmailApi.md#aibcrocrstorage) | **POST** /email/AiBcr/ocr-storage | Ocr images from storage             
 *EmailApi* | [**aiBcrParse**](EmailApi.md#aibcrparse) | **POST** /email/AiBcr/parse | Parse images to vCard properties             
+*EmailApi* | [**aiBcrParseModel**](EmailApi.md#aibcrparsemodel) | **POST** /email/AiBcr/parse-model | Parse images to vCard document models             
+*EmailApi* | [**aiBcrParseOcrDataModel**](EmailApi.md#aibcrparseocrdatamodel) | **POST** /email/AiBcr/parse-ocr-data-model | Parse OCR data to vCard document models             
 *EmailApi* | [**aiBcrParseStorage**](EmailApi.md#aibcrparsestorage) | **POST** /email/AiBcr/parse-storage | Parse images from storage to vCard files             
 *EmailApi* | [**aiNameComplete**](EmailApi.md#ainamecomplete) | **GET** /email/AiName/complete | The call proposes k most probable names for given starting characters             
 *EmailApi* | [**aiNameExpand**](EmailApi.md#ainameexpand) | **GET** /email/AiName/expand | Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
@@ -25,7 +27,10 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**aiNameParse**](EmailApi.md#ainameparse) | **GET** /email/AiName/parse | Parse name to components             
 *EmailApi* | [**aiNameParseEmailAddress**](EmailApi.md#ainameparseemailaddress) | **GET** /email/AiName/parse-email-address | Parse person&#39;s name out of an email address             
 *EmailApi* | [**appendEmailMessage**](EmailApi.md#appendemailmessage) | **PUT** /email/client/Append | Adds an email from *.eml file to specified folder in email account             
+*EmailApi* | [**appendEmailModelMessage**](EmailApi.md#appendemailmodelmessage) | **PUT** /email/client/AppendModel | Adds an email from model to specified folder in email account             
 *EmailApi* | [**appendMimeMessage**](EmailApi.md#appendmimemessage) | **PUT** /email/client/AppendMime | Adds an email from MIME to specified folder in email account             
+*EmailApi* | [**convertCalendarModelToAlternate**](EmailApi.md#convertcalendarmodeltoalternate) | **PUT** /email/CalendarModel/as-alternate | Convert iCalendar to AlternateView             
+*EmailApi* | [**convertEmail**](EmailApi.md#convertemail) | **PUT** /email/convert/{format} | Converts email document to specified format and returns as file             
 *EmailApi* | [**copyFile**](EmailApi.md#copyfile) | **PUT** /email/storage/file/copy/{srcPath} | Copy file
 *EmailApi* | [**copyFolder**](EmailApi.md#copyfolder) | **PUT** /email/storage/folder/copy/{srcPath} | Copy folder
 *EmailApi* | [**createCalendar**](EmailApi.md#createcalendar) | **PUT** /email/Calendar/{name} | Create calendar file             
@@ -44,15 +49,24 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**deleteMapiProperties**](EmailApi.md#deletemapiproperties) | **DELETE** /email/Mapi/{name}/properties | Delete document properties             
 *EmailApi* | [**downloadFile**](EmailApi.md#downloadfile) | **GET** /email/storage/file/{path} | Download file
 *EmailApi* | [**fetchEmailMessage**](EmailApi.md#fetchemailmessage) | **GET** /email/client/Fetch | Fetch message mime from email account             
+*EmailApi* | [**fetchEmailModel**](EmailApi.md#fetchemailmodel) | **GET** /email/client/FetchModel | Fetch message model from email account             
 *EmailApi* | [**getCalendar**](EmailApi.md#getcalendar) | **GET** /email/Calendar/{name}/properties | Get calendar file properties             
 *EmailApi* | [**getCalendarAttachment**](EmailApi.md#getcalendarattachment) | **GET** /email/Calendar/{name}/attachments/{attachment} | Get iCalendar document attachment by name             
 *EmailApi* | [**getCalendarList**](EmailApi.md#getcalendarlist) | **GET** /email/Calendar | Get iCalendar files list in folder on storage             
+*EmailApi* | [**getCalendarModel**](EmailApi.md#getcalendarmodel) | **GET** /email/CalendarModel/{name} | Get calendar file             
+*EmailApi* | [**getCalendarModelAsAlternate**](EmailApi.md#getcalendarmodelasalternate) | **GET** /email/CalendarModel/{name}/as-alternate/{calendarAction} | Get iCalendar from storage as AlternateView             
+*EmailApi* | [**getCalendarModelList**](EmailApi.md#getcalendarmodellist) | **GET** /email/CalendarModel | Get iCalendar list from storage folder             
 *EmailApi* | [**getContactAttachment**](EmailApi.md#getcontactattachment) | **GET** /email/Contact/{format}/{name}/attachments/{attachment} | Get attachment file by name             
 *EmailApi* | [**getContactList**](EmailApi.md#getcontactlist) | **GET** /email/Contact/{format} | Get contact list from storage folder             
+*EmailApi* | [**getContactModel**](EmailApi.md#getcontactmodel) | **GET** /email/ContactModel/{format}/{name} | Get contact document.             
+*EmailApi* | [**getContactModelList**](EmailApi.md#getcontactmodellist) | **GET** /email/ContactModel/{format} | Get contact list from storage folder.             
 *EmailApi* | [**getContactProperties**](EmailApi.md#getcontactproperties) | **GET** /email/Contact/{format}/{name}/properties | Get contact document properties             
 *EmailApi* | [**getDiscUsage**](EmailApi.md#getdiscusage) | **GET** /email/storage/disc | Get disc usage
 *EmailApi* | [**getEmail**](EmailApi.md#getemail) | **GET** /email/{fileName} | Get email document             
+*EmailApi* | [**getEmailAsFile**](EmailApi.md#getemailasfile) | **GET** /email/{fileName}/as-file/{format} | Converts email document from storage to specified format and returns as file             
 *EmailApi* | [**getEmailAttachment**](EmailApi.md#getemailattachment) | **GET** /email/{fileName}/attachments/{attachment} | Get email attachment by name             
+*EmailApi* | [**getEmailModel**](EmailApi.md#getemailmodel) | **GET** /email/model/{format}/{name} | Get email document.             
+*EmailApi* | [**getEmailModelList**](EmailApi.md#getemailmodellist) | **GET** /email/model/{format} | Get email list from storage folder.             
 *EmailApi* | [**getEmailProperty**](EmailApi.md#getemailproperty) | **GET** /email/{fileName}/properties/{propertyName} | Get an email document property by its name             
 *EmailApi* | [**getFileVersions**](EmailApi.md#getfileversions) | **GET** /email/storage/version/{path} | Get file versions
 *EmailApi* | [**getFilesList**](EmailApi.md#getfileslist) | **GET** /email/storage/folder/{path} | Get all files and folders within a folder
@@ -62,13 +76,18 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getMapiProperties**](EmailApi.md#getmapiproperties) | **GET** /email/Mapi/{name}/properties | Get document properties             
 *EmailApi* | [**listEmailFolders**](EmailApi.md#listemailfolders) | **GET** /email/client/ListFolders | Get folders list in email account             
 *EmailApi* | [**listEmailMessages**](EmailApi.md#listemailmessages) | **GET** /email/client/ListMessages | Get messages from folder, filtered by query             
+*EmailApi* | [**listEmailModels**](EmailApi.md#listemailmodels) | **GET** /email/client/ListMessagesModel | Get messages from folder, filtered by query             
 *EmailApi* | [**moveFile**](EmailApi.md#movefile) | **PUT** /email/storage/file/move/{srcPath} | Move file
 *EmailApi* | [**moveFolder**](EmailApi.md#movefolder) | **PUT** /email/storage/folder/move/{srcPath} | Move folder
 *EmailApi* | [**objectExists**](EmailApi.md#objectexists) | **GET** /email/storage/exist/{path} | Check if file or folder exists
+*EmailApi* | [**saveCalendarModel**](EmailApi.md#savecalendarmodel) | **PUT** /email/CalendarModel/{name} | Save iCalendar             
+*EmailApi* | [**saveContactModel**](EmailApi.md#savecontactmodel) | **PUT** /email/ContactModel/{format}/{name} | Save contact.             
+*EmailApi* | [**saveEmailModel**](EmailApi.md#saveemailmodel) | **PUT** /email/model/{format}/{name} | Save email document.             
 *EmailApi* | [**saveMailAccount**](EmailApi.md#savemailaccount) | **POST** /email/client/SaveMailAccount | Create email account file (*.account) with login/password authentication             
 *EmailApi* | [**saveMailOAuthAccount**](EmailApi.md#savemailoauthaccount) | **POST** /email/client/SaveMailOAuthAccount | Create email account file (*.account) with OAuth             
 *EmailApi* | [**sendEmail**](EmailApi.md#sendemail) | **POST** /email/client/Send | Send an email from *.eml file located on storage             
 *EmailApi* | [**sendEmailMime**](EmailApi.md#sendemailmime) | **POST** /email/client/SendMime | Send an email specified by MIME in request             
+*EmailApi* | [**sendEmailModel**](EmailApi.md#sendemailmodel) | **POST** /email/client/SendModel | Send an email specified by model in request             
 *EmailApi* | [**setEmailProperty**](EmailApi.md#setemailproperty) | **PUT** /email/{fileName}/properties/{propertyName} | Set email document property value             
 *EmailApi* | [**setEmailReadFlag**](EmailApi.md#setemailreadflag) | **POST** /email/client/SetReadFlag | Sets \&quot;Message is read\&quot; flag             
 *EmailApi* | [**storageExists**](EmailApi.md#storageexists) | **GET** /email/storage/{storageName}/exist | Check if storage exists
@@ -99,15 +118,34 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.AiNameParsedRq](AiNameParsedRq.md)
  - [com.aspose.email.cloud.sdk.model.AiNameWeighted](AiNameWeighted.md)
  - [com.aspose.email.cloud.sdk.model.AiNameWeightedVariants](AiNameWeightedVariants.md)
+ - [com.aspose.email.cloud.sdk.model.AssociatedPerson](AssociatedPerson.md)
+ - [com.aspose.email.cloud.sdk.model.AttachmentBase](AttachmentBase.md)
  - [com.aspose.email.cloud.sdk.model.BaseObject](BaseObject.md)
+ - [com.aspose.email.cloud.sdk.model.CalendarDto](CalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.CalendarDtoAlternateRq](CalendarDtoAlternateRq.md)
+ - [com.aspose.email.cloud.sdk.model.CalendarReminder](CalendarReminder.md)
+ - [com.aspose.email.cloud.sdk.model.ContactDto](ContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.ContactPhoto](ContactPhoto.md)
+ - [com.aspose.email.cloud.sdk.model.ContentType](ContentType.md)
+ - [com.aspose.email.cloud.sdk.model.ContentTypeParameter](ContentTypeParameter.md)
  - [com.aspose.email.cloud.sdk.model.CreateEmailRequest](CreateEmailRequest.md)
+ - [com.aspose.email.cloud.sdk.model.CustomerEvent](CustomerEvent.md)
  - [com.aspose.email.cloud.sdk.model.DiscUsage](DiscUsage.md)
  - [com.aspose.email.cloud.sdk.model.EmailAccountRequest](EmailAccountRequest.md)
+ - [com.aspose.email.cloud.sdk.model.EmailAddress](EmailAddress.md)
  - [com.aspose.email.cloud.sdk.model.EmailDocument](EmailDocument.md)
  - [com.aspose.email.cloud.sdk.model.EmailDocumentResponse](EmailDocumentResponse.md)
+ - [com.aspose.email.cloud.sdk.model.EmailDto](EmailDto.md)
  - [com.aspose.email.cloud.sdk.model.EmailProperties](EmailProperties.md)
  - [com.aspose.email.cloud.sdk.model.EmailProperty](EmailProperty.md)
  - [com.aspose.email.cloud.sdk.model.EmailPropertyResponse](EmailPropertyResponse.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfAssociatedPersonCategory](EnumWithCustomOfAssociatedPersonCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfEmailAddressCategory](EnumWithCustomOfEmailAddressCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfEventCategory](EnumWithCustomOfEventCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfInstantMessengerCategory](EnumWithCustomOfInstantMessengerCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfPhoneNumberCategory](EnumWithCustomOfPhoneNumberCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfPostalAddressCategory](EnumWithCustomOfPostalAddressCategory.md)
+ - [com.aspose.email.cloud.sdk.model.EnumWithCustomOfUrlCategory](EnumWithCustomOfUrlCategory.md)
  - [com.aspose.email.cloud.sdk.model.Error](Error.md)
  - [com.aspose.email.cloud.sdk.model.ErrorDetails](ErrorDetails.md)
  - [com.aspose.email.cloud.sdk.model.FileVersions](FileVersions.md)
@@ -115,45 +153,72 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.FilesUploadResult](FilesUploadResult.md)
  - [com.aspose.email.cloud.sdk.model.HierarchicalObjectRequest](HierarchicalObjectRequest.md)
  - [com.aspose.email.cloud.sdk.model.HierarchicalObjectResponse](HierarchicalObjectResponse.md)
+ - [com.aspose.email.cloud.sdk.model.InstantMessengerAddress](InstantMessengerAddress.md)
  - [com.aspose.email.cloud.sdk.model.Link](Link.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfAiBcrOcrData](ListResponseOfAiBcrOcrData.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfAiNameComponent](ListResponseOfAiNameComponent.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfAiNameExtracted](ListResponseOfAiNameExtracted.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfAiNameGenderHypothesis](ListResponseOfAiNameGenderHypothesis.md)
+ - [com.aspose.email.cloud.sdk.model.ListResponseOfContactDto](ListResponseOfContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.ListResponseOfEmailDto](ListResponseOfEmailDto.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfHierarchicalObject](ListResponseOfHierarchicalObject.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfMailServerFolder](ListResponseOfMailServerFolder.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfStorageFileLocation](ListResponseOfStorageFileLocation.md)
+ - [com.aspose.email.cloud.sdk.model.ListResponseOfStorageModelOfCalendarDto](ListResponseOfStorageModelOfCalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.ListResponseOfStorageModelOfContactDto](ListResponseOfStorageModelOfContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.ListResponseOfStorageModelOfEmailDto](ListResponseOfStorageModelOfEmailDto.md)
  - [com.aspose.email.cloud.sdk.model.ListResponseOfString](ListResponseOfString.md)
+ - [com.aspose.email.cloud.sdk.model.MailAddress](MailAddress.md)
  - [com.aspose.email.cloud.sdk.model.MailServerFolder](MailServerFolder.md)
  - [com.aspose.email.cloud.sdk.model.MimeResponse](MimeResponse.md)
  - [com.aspose.email.cloud.sdk.model.ObjectExist](ObjectExist.md)
+ - [com.aspose.email.cloud.sdk.model.PhoneNumber](PhoneNumber.md)
+ - [com.aspose.email.cloud.sdk.model.PostalAddress](PostalAddress.md)
+ - [com.aspose.email.cloud.sdk.model.ReminderAttendee](ReminderAttendee.md)
+ - [com.aspose.email.cloud.sdk.model.ReminderTrigger](ReminderTrigger.md)
  - [com.aspose.email.cloud.sdk.model.SetEmailPropertyRequest](SetEmailPropertyRequest.md)
  - [com.aspose.email.cloud.sdk.model.StorageExist](StorageExist.md)
  - [com.aspose.email.cloud.sdk.model.StorageFile](StorageFile.md)
  - [com.aspose.email.cloud.sdk.model.StorageFolderLocation](StorageFolderLocation.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelOfCalendarDto](StorageModelOfCalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelOfContactDto](StorageModelOfContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelOfEmailDto](StorageModelOfEmailDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfCalendarDto](StorageModelRqOfCalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfContactDto](StorageModelRqOfContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfEmailDto](StorageModelRqOfEmailDto.md)
+ - [com.aspose.email.cloud.sdk.model.Url](Url.md)
  - [com.aspose.email.cloud.sdk.model.ValueResponse](ValueResponse.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrBase64Image](AiBcrBase64Image.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrBase64Rq](AiBcrBase64Rq.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrImageStorageFile](AiBcrImageStorageFile.md)
+ - [com.aspose.email.cloud.sdk.model.AiBcrParseOcrDataRq](AiBcrParseOcrDataRq.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrStorageImageRq](AiBcrStorageImageRq.md)
  - [com.aspose.email.cloud.sdk.model.AiNameParsedMatchRq](AiNameParsedMatchRq.md)
+ - [com.aspose.email.cloud.sdk.model.AlternateView](AlternateView.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailAccountBaseRequest](AppendEmailAccountBaseRequest.md)
+ - [com.aspose.email.cloud.sdk.model.Attachment](Attachment.md)
+ - [com.aspose.email.cloud.sdk.model.CalendarDtoList](CalendarDtoList.md)
+ - [com.aspose.email.cloud.sdk.model.ContactDtoList](ContactDtoList.md)
  - [com.aspose.email.cloud.sdk.model.CreateFolderBaseRequest](CreateFolderBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.DeleteFolderBaseRequest](DeleteFolderBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.DeleteMessageBaseRequest](DeleteMessageBaseRequest.md)
+ - [com.aspose.email.cloud.sdk.model.EmailDtoList](EmailDtoList.md)
  - [com.aspose.email.cloud.sdk.model.FileVersion](FileVersion.md)
  - [com.aspose.email.cloud.sdk.model.HierarchicalObject](HierarchicalObject.md)
  - [com.aspose.email.cloud.sdk.model.IndexedHierarchicalObject](IndexedHierarchicalObject.md)
  - [com.aspose.email.cloud.sdk.model.IndexedPrimitiveObject](IndexedPrimitiveObject.md)
+ - [com.aspose.email.cloud.sdk.model.LinkedResource](LinkedResource.md)
  - [com.aspose.email.cloud.sdk.model.PrimitiveObject](PrimitiveObject.md)
  - [com.aspose.email.cloud.sdk.model.SaveEmailAccountRequest](SaveEmailAccountRequest.md)
  - [com.aspose.email.cloud.sdk.model.SaveOAuthEmailAccountRequest](SaveOAuthEmailAccountRequest.md)
  - [com.aspose.email.cloud.sdk.model.SendEmailBaseRequest](SendEmailBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.SendEmailMimeBaseRequest](SendEmailMimeBaseRequest.md)
+ - [com.aspose.email.cloud.sdk.model.SendEmailModelRequest](SendEmailModelRequest.md)
  - [com.aspose.email.cloud.sdk.model.SetMessageReadFlagAccountBaseRequest](SetMessageReadFlagAccountBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.StorageFileLocation](StorageFileLocation.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrParseStorageRq](AiBcrParseStorageRq.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailBaseRequest](AppendEmailBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailMimeBaseRequest](AppendEmailMimeBaseRequest.md)
+ - [com.aspose.email.cloud.sdk.model.AppendEmailModelRequest](AppendEmailModelRequest.md)
 

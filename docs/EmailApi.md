@@ -172,6 +172,50 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="aiBcrParseModel"></a>
+## **aiBcrParseModel**
+> [ListResponseOfContactDto](ListResponseOfContactDto.md) aiBcrParseModel(AiBcrParseModelRequestData request)
+
+Parse images to vCard document models             
+
+### **AiBcrParseModelRequestData** Parameters
+```java
+public AiBcrParseModelRequestData(
+    AiBcrBase64Rq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data |
+
+### Return type
+
+[**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="aiBcrParseOcrDataModel"></a>
+## **aiBcrParseOcrDataModel**
+> [ListResponseOfContactDto](ListResponseOfContactDto.md) aiBcrParseOcrDataModel(AiBcrParseOcrDataModelRequestData request)
+
+Parse OCR data to vCard document models             
+
+### **AiBcrParseOcrDataModelRequestData** Parameters
+```java
+public AiBcrParseOcrDataModelRequestData(
+    AiBcrParseOcrDataRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  |
+
+### Return type
+
+[**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="aiBcrParseStorage"></a>
 ## **aiBcrParseStorage**
 > [ListResponseOfStorageFileLocation](ListResponseOfStorageFileLocation.md) aiBcrParseStorage(AiBcrParseStorageRequestData request)
@@ -532,6 +576,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="appendEmailModelMessage"></a>
+## **appendEmailModelMessage**
+> [ValueResponse](ValueResponse.md) appendEmailModelMessage(AppendEmailModelMessageRequestData request)
+
+Adds an email from model to specified folder in email account             
+
+### **AppendEmailModelMessageRequestData** Parameters
+```java
+public AppendEmailModelMessageRequestData(
+    AppendEmailModelRequest request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**AppendEmailModelRequest**](AppendEmailModelRequest.md)| Append email request |
+
+### Return type
+
+[**ValueResponse**](ValueResponse.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="appendMimeMessage"></a>
 ## **appendMimeMessage**
 > [ValueResponse](ValueResponse.md) appendMimeMessage(AppendMimeMessageRequestData request)
@@ -551,6 +617,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValueResponse**](ValueResponse.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertCalendarModelToAlternate"></a>
+## **convertCalendarModelToAlternate**
+> [AlternateView](AlternateView.md) convertCalendarModelToAlternate(ConvertCalendarModelToAlternateRequestData request)
+
+Convert iCalendar to AlternateView             
+
+### **ConvertCalendarModelToAlternateRequestData** Parameters
+```java
+public ConvertCalendarModelToAlternateRequestData(
+    CalendarDtoAlternateRq rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**CalendarDtoAlternateRq**](CalendarDtoAlternateRq.md)| iCalendar to AlternateView request |
+
+### Return type
+
+[**AlternateView**](AlternateView.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertEmail"></a>
+## **convertEmail**
+> [File](File.md) convertEmail(ConvertEmailRequestData request)
+
+Converts email document to specified format and returns as file             
+
+### **ConvertEmailRequestData** Parameters
+```java
+public ConvertEmailRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **file** | **byte[]**| File to upload |
+
+### Return type
+
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1016,6 +1128,36 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="fetchEmailModel"></a>
+## **fetchEmailModel**
+> [EmailDto](EmailDto.md) fetchEmailModel(FetchEmailModelRequestData request)
+
+Fetch message model from email account             
+
+### **FetchEmailModelRequestData** Parameters
+```java
+public FetchEmailModelRequestData(
+    String messageId, 
+    String firstAccount, 
+    String secondAccount, 
+    String storage, 
+    String storageFolder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageId** | **String**| Message identifier |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendar"></a>
 ## **getCalendar**
 > [HierarchicalObject](HierarchicalObject.md) getCalendar(GetCalendarRequestData request)
@@ -1098,6 +1240,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getCalendarModel"></a>
+## **getCalendarModel**
+> [CalendarDto](CalendarDto.md) getCalendarModel(GetCalendarModelRequestData request)
+
+Get calendar file             
+
+### **GetCalendarModelRequestData** Parameters
+```java
+public GetCalendarModelRequestData(
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| iCalendar file name in storage |
+ **folder** | **String**| Path to folder in storage | [optional]
+ **storage** | **String**| Storage name | [optional]
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getCalendarModelAsAlternate"></a>
+## **getCalendarModelAsAlternate**
+> [AlternateView](AlternateView.md) getCalendarModelAsAlternate(GetCalendarModelAsAlternateRequestData request)
+
+Get iCalendar from storage as AlternateView             
+
+### **GetCalendarModelAsAlternateRequestData** Parameters
+```java
+public GetCalendarModelAsAlternateRequestData(
+    String name, 
+    String calendarAction, 
+    String sequenceId, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| iCalendar file name in storage |
+ **calendarAction** | **String**| iCalendar method type Enum, available values: Create, Update, Cancel |
+ **sequenceId** | **String**| The sequence id | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+ **storage** | **String**| Storage name | [optional]
+
+### Return type
+
+[**AlternateView**](AlternateView.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getCalendarModelList"></a>
+## **getCalendarModelList**
+> [CalendarDtoList](CalendarDtoList.md) getCalendarModelList(GetCalendarModelListRequestData request)
+
+Get iCalendar list from storage folder             
+
+### **GetCalendarModelListRequestData** Parameters
+```java
+public GetCalendarModelListRequestData(
+    String folder, 
+    Integer itemsPerPage, 
+    Integer pageNumber, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **String**| Path to folder in storage |
+ **itemsPerPage** | **Integer**| Count of items on page | [optional] [default to 10]
+ **pageNumber** | **Integer**| Page number | [optional] [default to 0]
+ **storage** | **String**| Storage name | [optional]
+
+### Return type
+
+[**CalendarDtoList**](CalendarDtoList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getContactAttachment"></a>
 ## **getContactAttachment**
 > [File](File.md) getContactAttachment(GetContactAttachmentRequestData request)
@@ -1155,6 +1381,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactModel"></a>
+## **getContactModel**
+> [ContactDto](ContactDto.md) getContactModel(GetContactModelRequestData request)
+
+Get contact document.             
+
+### **GetContactModelRequestData** Parameters
+```java
+public GetContactModelRequestData(
+    String format, 
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
+ **name** | **String**| Contact document file name. |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactModelList"></a>
+## **getContactModelList**
+> [ContactDtoList](ContactDtoList.md) getContactModelList(GetContactModelListRequestData request)
+
+Get contact list from storage folder.             
+
+### **GetContactModelListRequestData** Parameters
+```java
+public GetContactModelListRequestData(
+    String format, 
+    String folder, 
+    String storage, 
+    Integer itemsPerPage, 
+    Integer pageNumber)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+ **itemsPerPage** | **Integer**| Count of items on page. | [optional] [default to 10]
+ **pageNumber** | **Integer**| Page number. | [optional] [default to 0]
+
+### Return type
+
+[**ContactDtoList**](ContactDtoList.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1234,6 +1518,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getEmailAsFile"></a>
+## **getEmailAsFile**
+> [File](File.md) getEmailAsFile(GetEmailAsFileRequestData request)
+
+Converts email document from storage to specified format and returns as file             
+
+### **GetEmailAsFileRequestData** Parameters
+```java
+public GetEmailAsFileRequestData(
+    String fileName, 
+    String format, 
+    String storage, 
+    String folder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileName** | **String**| Email document file name |
+ **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **storage** | **String**| Storage name | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+
+### Return type
+
+[**File**](File.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getEmailAttachment"></a>
 ## **getEmailAttachment**
 > [File](File.md) getEmailAttachment(GetEmailAttachmentRequestData request)
@@ -1259,6 +1571,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**File**](File.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getEmailModel"></a>
+## **getEmailModel**
+> [EmailDto](EmailDto.md) getEmailModel(GetEmailModelRequestData request)
+
+Get email document.             
+
+### **GetEmailModelRequestData** Parameters
+```java
+public GetEmailModelRequestData(
+    String format, 
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **name** | **String**| Email document file name. |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getEmailModelList"></a>
+## **getEmailModelList**
+> [EmailDtoList](EmailDtoList.md) getEmailModelList(GetEmailModelListRequestData request)
+
+Get email list from storage folder.             
+
+### **GetEmailModelListRequestData** Parameters
+```java
+public GetEmailModelListRequestData(
+    String format, 
+    String folder, 
+    String storage, 
+    Integer itemsPerPage, 
+    Integer pageNumber)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+ **itemsPerPage** | **Integer**| Count of items on page. | [optional] [default to 10]
+ **pageNumber** | **Integer**| Page number. | [optional] [default to 0]
+
+### Return type
+
+[**EmailDtoList**](EmailDtoList.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1482,7 +1852,7 @@ Name | Type | Description  | Notes
 
 Get messages from folder, filtered by query             
 
-The query string should have the following view.      The example of a simple expression:       &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3&gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator      At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once      The field value (&lt;Field value&gt;) can take the following values:     For text fields - any string,     For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;,     For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;              
+The query string should have the following view.      The example of a simple expression:       &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3     &gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator      At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once      The field value (&lt;Field value&gt;) can take the following values:     For text fields - any string,     For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;,     For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;              
 
 ### **ListEmailMessagesRequestData** Parameters
 ```java
@@ -1509,6 +1879,42 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListResponseOfString**](ListResponseOfString.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="listEmailModels"></a>
+## **listEmailModels**
+> [ListResponseOfEmailDto](ListResponseOfEmailDto.md) listEmailModels(ListEmailModelsRequestData request)
+
+Get messages from folder, filtered by query             
+
+The query string should have the following view.      The example of a simple expression:       &#39;&lt;Field name&gt;&#39; &lt;Comparison operator&gt; &#39;&lt;Field value&gt;&#39;,  where &amp;lt;Field Name&amp;gt; - the name of a message field through which filtering is made, &amp;lt;Comparison operator&amp;gt; - comparison operators, as their name implies, allow to compare message field and specified value, &amp;lt;Field value&amp;gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (&lt;Simple expression 1&gt; &amp; &lt;Simple expression 2&gt;) | &lt;Simple expression 3     &gt;,  where \&quot;&amp;amp;\&quot; - logical-AND operator, \&quot;|\&quot; - logical-OR operator      At present the following values are allowed as a field name (&lt;Field name&gt;):  \&quot;To\&quot; - represents a TO field of message, \&quot;Text\&quot; - represents string in the header or body of the message, \&quot;Bcc\&quot; - represents a BCC field of message, \&quot;Body\&quot; - represents a string in the body of message, \&quot;Cc\&quot; - represents a CC field of message, \&quot;From\&quot; - represents a From field of message, \&quot;Subject\&quot; - represents a string in the subject of message, \&quot;InternalDate\&quot; - represents an internal date of message, \&quot;SentDate\&quot; - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \&quot;Answered\&quot; - represents an /Answered flag of message \&quot;Seen\&quot; - represents a /Seen flag of message \&quot;Flagged\&quot; - represents a /Flagged flag of message \&quot;Draft\&quot; - represents a /Draft flag of message \&quot;Deleted\&quot; - represents a Deleted/ flag of message \&quot;Recent\&quot; - represents a Deleted/ flag of message \&quot;MessageSize\&quot; - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \&quot;IsRead\&quot; - Indicates whether the message has been read \&quot;HasAttachment\&quot; - Indicates whether or not the message has attachments \&quot;IsSubmitted\&quot; - Indicates whether the message has been submitted to the Outbox \&quot;ContentClass\&quot; - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \&quot;MessageClass\&quot; - Represents a message class \&quot;ContainerClass\&quot; - Represents a folder container class \&quot;Importance\&quot; - Represents a message importance \&quot;MessageSize\&quot; - represents a size (in bytes) of message \&quot;FolderName\&quot; - represents a folder name \&quot;ContentsCount\&quot; - represents a total number of items in the folder \&quot;UnreadContentsCount\&quot; - represents the number of unread items in the folder. \&quot;Subfolders\&quot; - Indicates whether or not the folder has subfolders \&quot;Read\&quot; - the message is marked as having been read \&quot;HasAttachment\&quot; - the message has at least one attachment \&quot;Unsent\&quot; - the message is still being composed \&quot;Unmodified\&quot; - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \&quot;FromMe\&quot; - the user receiving the message was also the user who sent the message \&quot;Resend\&quot; - the message includes a request for a resend operation with a non-delivery report \&quot;NotifyRead\&quot; - the user who sent the message has requested notification when a recipient first reads it \&quot;NotifyUnread\&quot; - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \&quot;EverRead\&quot; - the message has been read at least once      The field value (&lt;Field value&gt;) can take the following values:     For text fields - any string,     For date type fields - the string of \&quot;d-MMM-yyy\&quot; format, ex. \&quot;10-Feb-2009\&quot;,     For flags (fields of boolean type) - either \&quot;True\&quot;, or \&quot;False\&quot;              
+
+### **ListEmailModelsRequestData** Parameters
+```java
+public ListEmailModelsRequestData(
+    String folder, 
+    String queryString, 
+    String firstAccount, 
+    String secondAccount, 
+    String storage, 
+    String storageFolder, 
+    Boolean recursive)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **String**| A folder in email account |
+ **queryString** | **String**| A MailQuery search string |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+ **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1596,6 +2002,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="saveCalendarModel"></a>
+## **saveCalendarModel**
+> void saveCalendarModel(SaveCalendarModelRequestData request)
+
+Save iCalendar             
+
+### **SaveCalendarModelRequestData** Parameters
+```java
+public SaveCalendarModelRequestData(
+    String name, 
+    StorageModelRqOfCalendarDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| iCalendar file name in storage |
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveContactModel"></a>
+## **saveContactModel**
+> void saveContactModel(SaveContactModelRequestData request)
+
+Save contact.             
+
+### **SaveContactModelRequestData** Parameters
+```java
+public SaveContactModelRequestData(
+    String format, 
+    String name, 
+    StorageModelRqOfContactDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
+ **name** | **String**| Contact document file name. |
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveEmailModel"></a>
+## **saveEmailModel**
+> void saveEmailModel(SaveEmailModelRequestData request)
+
+Save email document.             
+
+### **SaveEmailModelRequestData** Parameters
+```java
+public SaveEmailModelRequestData(
+    String format, 
+    String name, 
+    StorageModelRqOfEmailDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **name** | **String**| iCalendar file name in storage. |
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="saveMailAccount"></a>
 ## **saveMailAccount**
 > void saveMailAccount(SaveMailAccountRequestData request)
@@ -1677,6 +2159,28 @@ public SendEmailMimeRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SendEmailMimeBaseRequest**](SendEmailMimeBaseRequest.md)| Send email request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="sendEmailModel"></a>
+## **sendEmailModel**
+> void sendEmailModel(SendEmailModelRequestData request)
+
+Send an email specified by model in request             
+
+### **SendEmailModelRequestData** Parameters
+```java
+public SendEmailModelRequestData(
+    SendEmailModelRequest request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**SendEmailModelRequest**](SendEmailModelRequest.md)| Send email request |
 
 ### Return type
 

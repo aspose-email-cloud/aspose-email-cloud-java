@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="EmailDtoList.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,29 +40,9 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * List of email documents             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
-
-  public ValueResponse value(String value) {
-    this.value = value;
-    return this;
-  }
-
-  /**
-   * Gets or sets string content.             
-   * @return value
-  **/
-  public String getValue() {
-    return value;
-  }  
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
+public class EmailDtoList extends ListResponseOfStorageModelOfEmailDto {
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -72,21 +52,20 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
-    
+    sb.append("class EmailDtoList {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -103,15 +82,15 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public EmailDtoList() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the EmailDtoList
+   * @param value 
    */
-  public ValueResponse(String value) {
+  public EmailDtoList(List<StorageModelOfEmailDto> value) {
     super();
     setValue(value);
   }

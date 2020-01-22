@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="ReminderTrigger.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,67 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Specifies when an alarm will trigger.
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class ReminderTrigger {
+  @JsonProperty("dateTime")
+  private Date dateTime = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("duration")
+  private Long duration = null;
+
+  @JsonProperty("related")
+  private String related = null;
+
+  public ReminderTrigger dateTime(Date dateTime) {
+    this.dateTime = dateTime;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * A trigger set to an absolute date/time.
+   * @return dateTime
   **/
-  public String getValue() {
-    return value;
+  public Date getDateTime() {
+    return dateTime;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setDateTime(Date dateTime) {
+    this.dateTime = dateTime;
+  }
+
+  public ReminderTrigger duration(Long duration) {
+    this.duration = duration;
+    return this;
+  }
+
+  /**
+   * Specifies a relative time in ticks for the trigger of the alarm.             
+   * @return duration
+  **/
+  public Long getDuration() {
+    return duration;
+  }  
+
+  public void setDuration(Long duration) {
+    this.duration = duration;
+  }
+
+  public ReminderTrigger related(String related) {
+    this.related = related;
+    return this;
+  }
+
+  /**
+   * Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * @return related
+  **/
+  public String getRelated() {
+    return related;
+  }  
+
+  public void setRelated(String related) {
+    this.related = related;
   }
 
 
@@ -72,22 +112,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    ReminderTrigger reminderTrigger = (ReminderTrigger) o;
+    return ObjectUtils.equals(this.dateTime, reminderTrigger.dateTime) &&
+    ObjectUtils.equals(this.duration, reminderTrigger.duration) &&
+    ObjectUtils.equals(this.related, reminderTrigger.related);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(dateTime, duration, related);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class ReminderTrigger {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    dateTime: ").append(toIndentedString(getDateTime())).append("\n");
+    sb.append("    duration: ").append(toIndentedString(getDuration())).append("\n");
+    sb.append("    related: ").append(toIndentedString(getRelated())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +147,21 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public ReminderTrigger() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the ReminderTrigger
+   * @param dateTime A trigger set to an absolute date/time.
+   * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
    */
-  public ValueResponse(String value) {
+  public ReminderTrigger(Date dateTime, Long duration, String related) {
     super();
-    setValue(value);
+    setDateTime(dateTime);
+    setDuration(duration);
+    setRelated(related);
   }
 
 }

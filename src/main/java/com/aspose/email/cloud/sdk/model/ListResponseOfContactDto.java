@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="ListResponseOfContactDto.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,26 +40,34 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * ListResponseOfContactDto
  */
-public class ValueResponse {
+public class ListResponseOfContactDto {
   @JsonProperty("value")
-  private String value = null;
+  private List<ContactDto> value = null;
 
-  public ValueResponse value(String value) {
+  public ListResponseOfContactDto value(List<ContactDto> value) {
     this.value = value;
     return this;
   }
 
+  public ListResponseOfContactDto addValueItem(ContactDto valueItem) {
+    if (this.value == null) {
+      this.value = new ArrayList<ContactDto>();
+    }
+    this.value.add(valueItem);
+    return this;
+  }
+
   /**
-   * Gets or sets string content.             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public List<ContactDto> getValue() {
     return value;
   }  
 
-  public void setValue(String value) {
+  public void setValue(List<ContactDto> value) {
     this.value = value;
   }
 
@@ -72,8 +80,8 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    ListResponseOfContactDto listResponseOfContactDto = (ListResponseOfContactDto) o;
+    return ObjectUtils.equals(this.value, listResponseOfContactDto.value);
   }
 
   @Override
@@ -85,7 +93,7 @@ public class ValueResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class ListResponseOfContactDto {\n");
     
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
@@ -103,15 +111,15 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public ListResponseOfContactDto() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the ListResponseOfContactDto
+   * @param value 
    */
-  public ValueResponse(String value) {
+  public ListResponseOfContactDto(List<ContactDto> value) {
     super();
     setValue(value);
   }

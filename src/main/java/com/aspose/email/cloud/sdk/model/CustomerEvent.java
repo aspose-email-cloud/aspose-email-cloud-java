@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="CustomerEvent.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,47 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Event.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class CustomerEvent {
+  @JsonProperty("category")
+  private EnumWithCustomOfEventCategory category = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("date")
+  private Date date = null;
+
+  public CustomerEvent category(EnumWithCustomOfEventCategory category) {
+    this.category = category;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Event category.             
+   * @return category
   **/
-  public String getValue() {
-    return value;
+  public EnumWithCustomOfEventCategory getCategory() {
+    return category;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setCategory(EnumWithCustomOfEventCategory category) {
+    this.category = category;
+  }
+
+  public CustomerEvent date(Date date) {
+    this.date = date;
+    return this;
+  }
+
+  /**
+   * Event date.             
+   * @return date
+  **/
+  public Date getDate() {
+    return date;
+  }  
+
+  public void setDate(Date date) {
+    this.date = date;
   }
 
 
@@ -72,22 +92,24 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    CustomerEvent customerEvent = (CustomerEvent) o;
+    return ObjectUtils.equals(this.category, customerEvent.category) &&
+    ObjectUtils.equals(this.date, customerEvent.date);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(category, date);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class CustomerEvent {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    date: ").append(toIndentedString(getDate())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +125,19 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public CustomerEvent() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the CustomerEvent
+   * @param category Event category.             
+   * @param date Event date.             
    */
-  public ValueResponse(String value) {
+  public CustomerEvent(EnumWithCustomOfEventCategory category, Date date) {
     super();
-    setValue(value);
+    setCategory(category);
+    setDate(date);
   }
 
 }

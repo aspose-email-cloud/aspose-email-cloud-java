@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="StorageModelOfContactDto.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,26 +40,46 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * StorageModelOfContactDto
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class StorageModelOfContactDto {
+  @JsonProperty("storageFile")
+  private StorageFileLocation storageFile = null;
 
-  public ValueResponse value(String value) {
+  @JsonProperty("value")
+  private ContactDto value = null;
+
+  public StorageModelOfContactDto storageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
+    return this;
+  }
+
+  /**
+   * Get storageFile
+   * @return storageFile
+  **/
+  public StorageFileLocation getStorageFile() {
+    return storageFile;
+  }  
+
+  public void setStorageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
+  }
+
+  public StorageModelOfContactDto value(ContactDto value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public ContactDto getValue() {
     return value;
   }  
 
-  public void setValue(String value) {
+  public void setValue(ContactDto value) {
     this.value = value;
   }
 
@@ -72,21 +92,23 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    StorageModelOfContactDto storageModelOfContactDto = (StorageModelOfContactDto) o;
+    return ObjectUtils.equals(this.storageFile, storageModelOfContactDto.storageFile) &&
+    ObjectUtils.equals(this.value, storageModelOfContactDto.value);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(storageFile, value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class StorageModelOfContactDto {\n");
     
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -103,16 +125,18 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public StorageModelOfContactDto() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the StorageModelOfContactDto
+   * @param storageFile 
+   * @param value 
    */
-  public ValueResponse(String value) {
+  public StorageModelOfContactDto(StorageFileLocation storageFile, ContactDto value) {
     super();
+    setStorageFile(storageFile);
     setValue(value);
   }
 
