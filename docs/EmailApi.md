@@ -585,12 +585,12 @@ Adds an email from model to specified folder in email account
 ### **AppendEmailModelMessageRequestData** Parameters
 ```java
 public AppendEmailModelMessageRequestData(
-    AppendEmailModelRequest request)
+    AppendEmailModelRq rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AppendEmailModelRequest**](AppendEmailModelRequest.md)| Append email request |
+ **rq** | [**AppendEmailModelRq**](AppendEmailModelRq.md)| Append email request |
 
 ### Return type
 
@@ -2175,12 +2175,12 @@ Send an email specified by model in request
 ### **SendEmailModelRequestData** Parameters
 ```java
 public SendEmailModelRequestData(
-    SendEmailModelRequest request)
+    SendEmailModelRq rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**SendEmailModelRequest**](SendEmailModelRequest.md)| Send email request |
+ **rq** | [**SendEmailModelRq**](SendEmailModelRq.md)| Send email request |
 
 ### Return type
 

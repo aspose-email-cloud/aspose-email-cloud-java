@@ -1104,9 +1104,9 @@ public class EmailApi
      */
     public ValueResponse appendEmailModelMessage(AppendEmailModelMessageRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling appendEmailModelMessage");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling appendEmailModelMessage");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/AppendModel";
@@ -1116,7 +1116,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       byte[] response = this.apiInvoker.invokeApi(
           resourcePath, 
@@ -3471,9 +3471,9 @@ public class EmailApi
      */
     public void sendEmailModel(SendEmailModelRequestData request) throws Exception 
     {
-       // verify the required parameter 'request.request' is set
-      if (request.request== null) {
-        throw new ApiException(400, "Missing the required parameter 'request.request' when calling sendEmailModel");
+       // verify the required parameter 'request.rq' is set
+      if (request.rq== null) {
+        throw new ApiException(400, "Missing the required parameter 'request.rq' when calling sendEmailModel");
       }
       // create path and map variables
       String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/SendModel";
@@ -3483,7 +3483,7 @@ public class EmailApi
       
       String postBody = null;
       
-      postBody = SerializationHelper.serialize(request.request);
+      postBody = SerializationHelper.serialize(request.rq);
       
       this.apiInvoker.invokeApi(
           resourcePath, 

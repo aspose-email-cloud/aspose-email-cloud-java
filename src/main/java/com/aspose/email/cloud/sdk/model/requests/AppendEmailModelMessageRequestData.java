@@ -36,16 +36,16 @@ public class AppendEmailModelMessageRequestData
 {
     /**
     * Initializes a new instance of the AppendEmailModelMessageRequestData class.   
-    * @param request Append email request
+    * @param rq Append email request
     **/
-    public AppendEmailModelMessageRequestData(AppendEmailModelRequest request)             
+    public AppendEmailModelMessageRequestData(AppendEmailModelRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Append email request
     **/
-    public AppendEmailModelRequest request;
+    public AppendEmailModelRq rq;
 }
 

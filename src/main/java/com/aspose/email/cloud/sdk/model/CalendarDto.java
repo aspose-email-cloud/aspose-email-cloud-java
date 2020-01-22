@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * iCalendar document representation             
+ * iCalendar document representation.             
  */
 public class CalendarDto {
   @JsonProperty("attachments")
@@ -120,7 +120,7 @@ public class CalendarDto {
   }
 
   /**
-   * Document attachments
+   * Document attachments.
    * @return attachments
   **/
   public List<Attachment> getAttachments() {
@@ -142,7 +142,7 @@ public class CalendarDto {
   }
 
   /**
-   * Event attendees
+   * Event attendees.
    * @return attendees
   **/
   public List<MailAddress> getAttendees() {
@@ -159,7 +159,7 @@ public class CalendarDto {
   }
 
   /**
-   * Description
+   * Description.
    * @return description
   **/
   public String getDescription() {
@@ -176,7 +176,7 @@ public class CalendarDto {
   }
 
   /**
-   * End date
+   * End date.
    * @return endDate
   **/
   public Date getEndDate() {
@@ -193,7 +193,7 @@ public class CalendarDto {
   }
 
   /**
-   * End time zone
+   * End time zone.
    * @return endTimeZone
   **/
   public String getEndTimeZone() {
@@ -218,7 +218,7 @@ public class CalendarDto {
   }
 
   /**
-   * Appointment flags
+   * Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
    * @return flags
   **/
   public List<String> getFlags() {
@@ -235,7 +235,7 @@ public class CalendarDto {
   }
 
   /**
-   * Indicates if description is in HTML format
+   * Indicates if description is in HTML format.
    * @return isDescriptionHtml
   **/
   public Boolean isIsDescriptionHtml() {
@@ -252,7 +252,7 @@ public class CalendarDto {
   }
 
   /**
-   * Location
+   * Location.
    * @return location
   **/
   public String getLocation() {
@@ -328,7 +328,7 @@ public class CalendarDto {
   }
 
   /**
-   * Optional attendees             
+   * Optional attendees.             
    * @return optionalAttendees
   **/
   public List<MailAddress> getOptionalAttendees() {
@@ -345,7 +345,7 @@ public class CalendarDto {
   }
 
   /**
-   * Event organizer             
+   * Event organizer.             
    * @return organizer
   **/
   public MailAddress getOrganizer() {
@@ -387,7 +387,7 @@ public class CalendarDto {
   }
 
   /**
-   * Reminders
+   * Reminders.
    * @return reminders
   **/
   public List<CalendarReminder> getReminders() {
@@ -421,7 +421,7 @@ public class CalendarDto {
   }
 
   /**
-   * Start date
+   * Start date.
    * @return startDate
   **/
   public Date getStartDate() {
@@ -438,7 +438,7 @@ public class CalendarDto {
   }
 
   /**
-   * Start time zone
+   * Start time zone.
    * @return startTimeZone
   **/
   public String getStartTimeZone() {
@@ -472,7 +472,7 @@ public class CalendarDto {
   }
 
   /**
-   * Summary
+   * Summary.
    * @return summary
   **/
   public String getSummary() {
@@ -586,26 +586,26 @@ public class CalendarDto {
 
   /**
    * Initializes a new instance of the CalendarDto
-   * @param attachments Document attachments
-   * @param attendees Event attendees
-   * @param description Description
-   * @param endDate End date
-   * @param endTimeZone End time zone
-   * @param flags Appointment flags
-   * @param isDescriptionHtml Indicates if description is in HTML format
-   * @param location Location
+   * @param attachments Document attachments.
+   * @param attendees Event attendees.
+   * @param description Description.
+   * @param endDate End date.
+   * @param endTimeZone End time zone.
+   * @param flags Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+   * @param isDescriptionHtml Indicates if description is in HTML format.
+   * @param location Location.
    * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
    * @param microsoftBusyStatus Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
-   * @param optionalAttendees Optional attendees             
-   * @param organizer Event organizer             
+   * @param optionalAttendees Optional attendees.             
+   * @param organizer Event organizer.             
    * @param recurrenceString String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
-   * @param reminders Reminders
+   * @param reminders Reminders.
    * @param sequenceId The sequence id. Read only.
-   * @param startDate Start date
-   * @param startTimeZone Start time zone
+   * @param startDate Start date.
+   * @param startTimeZone Start time zone.
    * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
-   * @param summary Summary
+   * @param summary Summary.
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
    */
   public CalendarDto(List<Attachment> attachments, List<MailAddress> attendees, String description, Date endDate, String endTimeZone, List<String> flags, Boolean isDescriptionHtml, String location, String method, String microsoftBusyStatus, String microsoftIntendedStatus, List<MailAddress> optionalAttendees, MailAddress organizer, String recurrenceString, List<CalendarReminder> reminders, String sequenceId, Date startDate, String startTimeZone, String status, String summary, String transparency) {

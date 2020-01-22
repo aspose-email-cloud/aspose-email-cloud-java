@@ -36,16 +36,16 @@ public class SendEmailModelRequestData
 {
     /**
     * Initializes a new instance of the SendEmailModelRequestData class.   
-    * @param request Send email request
+    * @param rq Send email request
     **/
-    public SendEmailModelRequestData(SendEmailModelRequest request)             
+    public SendEmailModelRequestData(SendEmailModelRq rq)             
     {
-        this.request = request;
+        this.rq = rq;
     }
         
     /**
     * Send email request
     **/
-    public SendEmailModelRequest request;
+    public SendEmailModelRq rq;
 }
 

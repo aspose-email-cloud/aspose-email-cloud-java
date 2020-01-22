@@ -214,11 +214,11 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.SaveOAuthEmailAccountRequest](SaveOAuthEmailAccountRequest.md)
  - [com.aspose.email.cloud.sdk.model.SendEmailBaseRequest](SendEmailBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.SendEmailMimeBaseRequest](SendEmailMimeBaseRequest.md)
- - [com.aspose.email.cloud.sdk.model.SendEmailModelRequest](SendEmailModelRequest.md)
+ - [com.aspose.email.cloud.sdk.model.SendEmailModelRq](SendEmailModelRq.md)
  - [com.aspose.email.cloud.sdk.model.SetMessageReadFlagAccountBaseRequest](SetMessageReadFlagAccountBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.StorageFileLocation](StorageFileLocation.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrParseStorageRq](AiBcrParseStorageRq.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailBaseRequest](AppendEmailBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailMimeBaseRequest](AppendEmailMimeBaseRequest.md)
- - [com.aspose.email.cloud.sdk.model.AppendEmailModelRequest](AppendEmailModelRequest.md)
+ - [com.aspose.email.cloud.sdk.model.AppendEmailModelRq](AppendEmailModelRq.md)
 

@@ -321,7 +321,7 @@ public class EmailDto {
   }
 
   /**
-   * Delivery notifications.             
+   * Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @return deliveryNotificationOptions
   **/
   public List<String> getDeliveryNotificationOptions() {
@@ -879,7 +879,7 @@ public class EmailDto {
    * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
    * @param cc CC recipients.             
    * @param date Message date.             
-   * @param deliveryNotificationOptions Delivery notifications.             
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @param from From address.             
    * @param headers Document headers.             
    * @param htmlBody HTML body.             

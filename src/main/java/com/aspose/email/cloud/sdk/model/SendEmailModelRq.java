@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AppendEmailModelRequest.java">
+* <copyright company="Aspose" file="SendEmailModelRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,19 +40,19 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Append email request             
+ * Send email model request             
  */
-public class AppendEmailModelRequest extends AppendEmailAccountBaseRequest {
+public class SendEmailModelRq extends AccountBaseRequest {
   @JsonProperty("message")
   private EmailDto message = null;
 
-  public AppendEmailModelRequest message(EmailDto message) {
+  public SendEmailModelRq message(EmailDto message) {
     this.message = message;
     return this;
   }
 
   /**
-   * Email document             
+   * Message to send             
    * @return message
   **/
   public EmailDto getMessage() {
@@ -72,8 +72,8 @@ public class AppendEmailModelRequest extends AppendEmailAccountBaseRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AppendEmailModelRequest appendEmailModelRequest = (AppendEmailModelRequest) o;
-    return ObjectUtils.equals(this.message, appendEmailModelRequest.message) &&
+    SendEmailModelRq sendEmailModelRq = (SendEmailModelRq) o;
+    return ObjectUtils.equals(this.message, sendEmailModelRq.message) &&
     super.equals(o);
   }
 
@@ -86,13 +86,11 @@ public class AppendEmailModelRequest extends AppendEmailAccountBaseRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppendEmailModelRequest {\n");
+    sb.append("class SendEmailModelRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
-    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
-    sb.append("    markAsSent: ").append(toIndentedString(isMarkAsSent())).append("\n");
     sb.append("    message: ").append(toIndentedString(getMessage())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,26 +107,22 @@ public class AppendEmailModelRequest extends AppendEmailAccountBaseRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public AppendEmailModelRequest() {
+  public SendEmailModelRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the AppendEmailModelRequest
+   * Initializes a new instance of the SendEmailModelRq
    * @param firstAccount First account storage file name for receiving emails (or universal one)             
    * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
    * @param storageFolder Storage folder location of account files             
-   * @param folder Email account folder to store a message             
-   * @param markAsSent Mark message as sent             
-   * @param message Email document             
+   * @param message Message to send             
    */
-  public AppendEmailModelRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, EmailDto message) {
+  public SendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, EmailDto message) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
-    setFolder(folder);
-    setMarkAsSent(markAsSent);
     setMessage(message);
   }
 
