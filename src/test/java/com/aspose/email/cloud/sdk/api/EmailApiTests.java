@@ -13,8 +13,6 @@ import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.*;
 
-import bsh.Primitive;
-
 public class EmailApiTests {
     private EmailApi api;
     private String folder;
@@ -231,6 +229,84 @@ public class EmailApiTests {
         assert displayName.getValue().contains("Thomas");
     }
 
+    @Test(groups = { "pipeline" })
+    public void createCalendarEmailTest() throws Exception {
+        Calendar startDate = Calendar.getInstance();
+        Calendar endDate = (Calendar) startDate.clone();
+        endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
+        CalendarDto calendar = new CalendarDto()
+            .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted"))
+            .description("Some description")
+            .summary("Some summary")
+            .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted"))
+            .startDate(startDate.getTime())
+            .endDate(endDate.getTime())
+            .location("Some location");
+
+        StorageFolderLocation folderLocation = new StorageFolderLocation(storage, folder);
+        String calendarFile = UUID.randomUUID().toString() + ".ics";
+        api.saveCalendarModel(new SaveCalendarModelRequestData(
+            calendarFile,
+            new StorageModelRqOfCalendarDto(calendar, folderLocation)));
+
+        ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
+            folder + "/" + calendarFile, storage, null));
+        assert objectExist.isExists();
+
+        AlternateView alternate = api.convertCalendarModelToAlternate(
+            new ConvertCalendarModelToAlternateRequestData(
+                new CalendarDtoAlternateRq(calendar, "Create", null)));
+
+        EmailDto email = new EmailDto()
+            .addAlternateViewsItem(alternate)
+            .from(new MailAddress("From Name", "organizer@aspose.com", null))
+            .addToItem(new MailAddress("To Name", "attendee@aspose.com", null))
+            .subject("Some subject")
+            .body("Some body");
+        String emailFile = UUID.randomUUID().toString() + ".eml";
+        api.saveEmailModel(new SaveEmailModelRequestData(
+            "Eml", emailFile, new StorageModelRqOfEmailDto(email, folderLocation)));
+
+        byte[] downloaded = api.downloadFile(
+            new DownloadFileRequestData(folder + "/" + emailFile, storage, null));
+        String calendarContent = new String(downloaded, StandardCharsets.UTF_8);
+        assert calendarContent.contains("Some subject");
+    }
+
+    @Test(groups = { "pipeline" })
+    public void contactModelTest() throws Exception {
+        ContactDto contact = new ContactDto()
+            .gender("Male")
+            .surname("Thomas")
+            .givenName("Alex")
+            .addEmailAddressesItem(new EmailAddress(
+                new EnumWithCustomOfEmailAddressCategory("Work", null),
+                "Alex Thomas", true, null, "alex.thomas@work.com"))
+            .addPhoneNumbersItem(new PhoneNumber(
+                new EnumWithCustomOfPhoneNumberCategory("Work", null),
+                "+49211424721", true));
+        String contactFile = UUID.randomUUID().toString() + ".vcf";
+        api.saveContactModel(new SaveContactModelRequestData(
+            "VCard", contactFile, new StorageModelRqOfContactDto(
+                contact, new StorageFolderLocation(storage, folder))));
+
+        ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
+            folder + "/" + contactFile, storage, null));
+        assert objectExist.isExists();
+    }
+
+    @Test(groups = { "ai" })
+    public void aiBcrParseModelTest() throws Exception {
+        byte[] fileBytes = IOUtils.toByteArray(
+            this.getClass().getResourceAsStream("test_single_0001.png"));
+        String fileBase64 = Base64.encodeToString(fileBytes, false);
+        ListResponseOfContactDto result = api.aiBcrParseModel(new AiBcrParseModelRequestData(
+            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
+        assert result.getValue().size() == 1;
+        ContactDto firstVCard = result.getValue().get(0);
+        assert firstVCard.getDisplayName().contains("Thomas");
+    }
+
     private String createCalendar() throws Exception {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
@@ -239,7 +315,7 @@ public class EmailApiTests {
     private String createCalendar(Calendar startDate) throws Exception {
         String fileName = UUID.randomUUID().toString() + ".ics";
         Calendar endDate =(Calendar) startDate.clone();
-        endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY + 1));
+        endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
         api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest(
             new HierarchicalObject("CALENDAR", null, Arrays.<BaseObject>asList(
                 new PrimitiveObject("LOCATION", null, "location"),
