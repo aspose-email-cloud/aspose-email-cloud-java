@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="ListResponseOfEmailDto.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,26 +40,34 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * ListResponseOfEmailDto
  */
-public class ValueResponse {
+public class ListResponseOfEmailDto {
   @JsonProperty("value")
-  private String value = null;
+  private List<EmailDto> value = null;
 
-  public ValueResponse value(String value) {
+  public ListResponseOfEmailDto value(List<EmailDto> value) {
     this.value = value;
     return this;
   }
 
+  public ListResponseOfEmailDto addValueItem(EmailDto valueItem) {
+    if (this.value == null) {
+      this.value = new ArrayList<EmailDto>();
+    }
+    this.value.add(valueItem);
+    return this;
+  }
+
   /**
-   * Gets or sets string content.             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public List<EmailDto> getValue() {
     return value;
   }  
 
-  public void setValue(String value) {
+  public void setValue(List<EmailDto> value) {
     this.value = value;
   }
 
@@ -72,8 +80,8 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    ListResponseOfEmailDto listResponseOfEmailDto = (ListResponseOfEmailDto) o;
+    return ObjectUtils.equals(this.value, listResponseOfEmailDto.value);
   }
 
   @Override
@@ -85,7 +93,7 @@ public class ValueResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class ListResponseOfEmailDto {\n");
     
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
@@ -103,15 +111,15 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public ListResponseOfEmailDto() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the ListResponseOfEmailDto
+   * @param value 
    */
-  public ValueResponse(String value) {
+  public ListResponseOfEmailDto(List<EmailDto> value) {
     super();
     setValue(value);
   }

@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="ReminderAttendee.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,27 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Defines an \&quot;Attendee\&quot; within a alarm.
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class ReminderAttendee {
+  @JsonProperty("address")
+  private String address = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  public ReminderAttendee address(String address) {
+    this.address = address;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Contains the email address.
+   * @return address
   **/
-  public String getValue() {
-    return value;
+  public String getAddress() {
+    return address;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setAddress(String address) {
+    this.address = address;
   }
 
 
@@ -72,22 +72,22 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    ReminderAttendee reminderAttendee = (ReminderAttendee) o;
+    return ObjectUtils.equals(this.address, reminderAttendee.address);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(address);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class ReminderAttendee {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +103,17 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public ReminderAttendee() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the ReminderAttendee
+   * @param address Contains the email address.
    */
-  public ValueResponse(String value) {
+  public ReminderAttendee(String address) {
     super();
-    setValue(value);
+    setAddress(address);
   }
 
 }

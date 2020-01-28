@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="AiBcrParseOcrDataRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,32 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Parse ocr data request             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class AiBcrParseOcrDataRq extends AiBcrRq {
+  @JsonProperty("data")
+  private List<AiBcrOcrData> data = new ArrayList<AiBcrOcrData>();
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  public AiBcrParseOcrDataRq data(List<AiBcrOcrData> data) {
+    this.data = data;
+    return this;
+  }
+
+  public AiBcrParseOcrDataRq addDataItem(AiBcrOcrData dataItem) {
+    this.data.add(dataItem);
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * OCR data             
+   * @return data
   **/
-  public String getValue() {
-    return value;
+  public List<AiBcrOcrData> getData() {
+    return data;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setData(List<AiBcrOcrData> data) {
+    this.data = data;
   }
 
 
@@ -72,22 +77,24 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    AiBcrParseOcrDataRq aiBcrParseOcrDataRq = (AiBcrParseOcrDataRq) o;
+    return ObjectUtils.equals(this.data, aiBcrParseOcrDataRq.data) &&
+    super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(data, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
-    
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("class AiBcrParseOcrDataRq {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    options: ").append(toIndentedString(getOptions())).append("\n");
+    sb.append("    data: ").append(toIndentedString(getData())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +110,19 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public AiBcrParseOcrDataRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the AiBcrParseOcrDataRq
+   * @param options Recognition options             
+   * @param data OCR data             
    */
-  public ValueResponse(String value) {
+  public AiBcrParseOcrDataRq(AiBcrOptions options, List<AiBcrOcrData> data) {
     super();
-    setValue(value);
+    setOptions(options);
+    setData(data);
   }
 
 }

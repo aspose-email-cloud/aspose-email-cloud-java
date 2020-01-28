@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="AssociatedPerson.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,67 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Describes associated person.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class AssociatedPerson {
+  @JsonProperty("name")
+  private String name = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("category")
+  private EnumWithCustomOfAssociatedPersonCategory category = null;
+
+  @JsonProperty("preferred")
+  private Boolean preferred = null;
+
+  public AssociatedPerson name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Associated person&#39;s name.             
+   * @return name
   **/
-  public String getValue() {
-    return value;
+  public String getName() {
+    return name;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public AssociatedPerson category(EnumWithCustomOfAssociatedPersonCategory category) {
+    this.category = category;
+    return this;
+  }
+
+  /**
+   * Associated person&#39;s category.             
+   * @return category
+  **/
+  public EnumWithCustomOfAssociatedPersonCategory getCategory() {
+    return category;
+  }  
+
+  public void setCategory(EnumWithCustomOfAssociatedPersonCategory category) {
+    this.category = category;
+  }
+
+  public AssociatedPerson preferred(Boolean preferred) {
+    this.preferred = preferred;
+    return this;
+  }
+
+  /**
+   * Defines whether associated person is preferred.             
+   * @return preferred
+  **/
+  public Boolean isPreferred() {
+    return preferred;
+  }  
+
+  public void setPreferred(Boolean preferred) {
+    this.preferred = preferred;
   }
 
 
@@ -72,22 +112,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    AssociatedPerson associatedPerson = (AssociatedPerson) o;
+    return ObjectUtils.equals(this.name, associatedPerson.name) &&
+    ObjectUtils.equals(this.category, associatedPerson.category) &&
+    ObjectUtils.equals(this.preferred, associatedPerson.preferred);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(name, category, preferred);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class AssociatedPerson {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    preferred: ").append(toIndentedString(isPreferred())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +147,21 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public AssociatedPerson() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the AssociatedPerson
+   * @param name Associated person&#39;s name.             
+   * @param category Associated person&#39;s category.             
+   * @param preferred Defines whether associated person is preferred.             
    */
-  public ValueResponse(String value) {
+  public AssociatedPerson(String name, EnumWithCustomOfAssociatedPersonCategory category, Boolean preferred) {
     super();
-    setValue(value);
+    setName(name);
+    setCategory(category);
+    setPreferred(preferred);
   }
 
 }

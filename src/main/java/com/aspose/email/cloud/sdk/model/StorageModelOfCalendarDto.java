@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="StorageModelOfCalendarDto.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,26 +40,46 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * StorageModelOfCalendarDto
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class StorageModelOfCalendarDto {
+  @JsonProperty("storageFile")
+  private StorageFileLocation storageFile = null;
 
-  public ValueResponse value(String value) {
+  @JsonProperty("value")
+  private CalendarDto value = null;
+
+  public StorageModelOfCalendarDto storageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
+    return this;
+  }
+
+  /**
+   * Get storageFile
+   * @return storageFile
+  **/
+  public StorageFileLocation getStorageFile() {
+    return storageFile;
+  }  
+
+  public void setStorageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
+  }
+
+  public StorageModelOfCalendarDto value(CalendarDto value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public CalendarDto getValue() {
     return value;
   }  
 
-  public void setValue(String value) {
+  public void setValue(CalendarDto value) {
     this.value = value;
   }
 
@@ -72,21 +92,23 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    StorageModelOfCalendarDto storageModelOfCalendarDto = (StorageModelOfCalendarDto) o;
+    return ObjectUtils.equals(this.storageFile, storageModelOfCalendarDto.storageFile) &&
+    ObjectUtils.equals(this.value, storageModelOfCalendarDto.value);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(storageFile, value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class StorageModelOfCalendarDto {\n");
     
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -103,16 +125,18 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public StorageModelOfCalendarDto() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the StorageModelOfCalendarDto
+   * @param storageFile 
+   * @param value 
    */
-  public ValueResponse(String value) {
+  public StorageModelOfCalendarDto(StorageFileLocation storageFile, CalendarDto value) {
     super();
+    setStorageFile(storageFile);
     setValue(value);
   }
 

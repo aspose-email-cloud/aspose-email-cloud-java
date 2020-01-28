@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="PhoneNumber.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,67 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * A phone number.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class PhoneNumber {
+  @JsonProperty("category")
+  private EnumWithCustomOfPhoneNumberCategory category = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("number")
+  private String number = null;
+
+  @JsonProperty("preferred")
+  private Boolean preferred = null;
+
+  public PhoneNumber category(EnumWithCustomOfPhoneNumberCategory category) {
+    this.category = category;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Phone number category.             
+   * @return category
   **/
-  public String getValue() {
-    return value;
+  public EnumWithCustomOfPhoneNumberCategory getCategory() {
+    return category;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setCategory(EnumWithCustomOfPhoneNumberCategory category) {
+    this.category = category;
+  }
+
+  public PhoneNumber number(String number) {
+    this.number = number;
+    return this;
+  }
+
+  /**
+   * Phone number.             
+   * @return number
+  **/
+  public String getNumber() {
+    return number;
+  }  
+
+  public void setNumber(String number) {
+    this.number = number;
+  }
+
+  public PhoneNumber preferred(Boolean preferred) {
+    this.preferred = preferred;
+    return this;
+  }
+
+  /**
+   * Defines whether phone number is preferred.             
+   * @return preferred
+  **/
+  public Boolean isPreferred() {
+    return preferred;
+  }  
+
+  public void setPreferred(Boolean preferred) {
+    this.preferred = preferred;
   }
 
 
@@ -72,22 +112,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    PhoneNumber phoneNumber = (PhoneNumber) o;
+    return ObjectUtils.equals(this.category, phoneNumber.category) &&
+    ObjectUtils.equals(this.number, phoneNumber.number) &&
+    ObjectUtils.equals(this.preferred, phoneNumber.preferred);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(category, number, preferred);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class PhoneNumber {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    number: ").append(toIndentedString(getNumber())).append("\n");
+    sb.append("    preferred: ").append(toIndentedString(isPreferred())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +147,21 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public PhoneNumber() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the PhoneNumber
+   * @param category Phone number category.             
+   * @param number Phone number.             
+   * @param preferred Defines whether phone number is preferred.             
    */
-  public ValueResponse(String value) {
+  public PhoneNumber(EnumWithCustomOfPhoneNumberCategory category, String number, Boolean preferred) {
     super();
-    setValue(value);
+    setCategory(category);
+    setNumber(number);
+    setPreferred(preferred);
   }
 
 }

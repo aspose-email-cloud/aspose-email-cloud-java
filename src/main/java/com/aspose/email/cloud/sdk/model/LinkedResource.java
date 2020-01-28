@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="LinkedResource.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,27 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Represents an embedded resource in a message.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class LinkedResource extends AttachmentBase {
+  @JsonProperty("contentLink")
+  private String contentLink = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  public LinkedResource contentLink(String contentLink) {
+    this.contentLink = contentLink;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * URI that the resource must match.             
+   * @return contentLink
   **/
-  public String getValue() {
-    return value;
+  public String getContentLink() {
+    return contentLink;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setContentLink(String contentLink) {
+    this.contentLink = contentLink;
   }
 
 
@@ -72,22 +72,27 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    LinkedResource linkedResource = (LinkedResource) o;
+    return ObjectUtils.equals(this.contentLink, linkedResource.contentLink) &&
+    super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(contentLink, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
-    
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("class LinkedResource {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    base64Data: ").append(toIndentedString(getBase64Data())).append("\n");
+    sb.append("    contentId: ").append(toIndentedString(getContentId())).append("\n");
+    sb.append("    contentType: ").append(toIndentedString(getContentType())).append("\n");
+    sb.append("    headers: ").append(toIndentedString(getHeaders())).append("\n");
+    sb.append("    contentLink: ").append(toIndentedString(getContentLink())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +108,25 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public LinkedResource() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the LinkedResource
+   * @param base64Data Attachment file content as Base64 string.             
+   * @param contentId Attachment content id             
+   * @param contentType Content type             
+   * @param headers Attachment headers.             
+   * @param contentLink URI that the resource must match.             
    */
-  public ValueResponse(String value) {
+  public LinkedResource(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String contentLink) {
     super();
-    setValue(value);
+    setBase64Data(base64Data);
+    setContentId(contentId);
+    setContentType(contentType);
+    setHeaders(headers);
+    setContentLink(contentLink);
   }
 
 }

@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="Url.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,67 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Url and its category.             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class Url {
+  @JsonProperty("category")
+  private EnumWithCustomOfUrlCategory category = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  @JsonProperty("preferred")
+  private Boolean preferred = null;
+
+  @JsonProperty("href")
+  private String href = null;
+
+  public Url category(EnumWithCustomOfUrlCategory category) {
+    this.category = category;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Url category.             
+   * @return category
   **/
-  public String getValue() {
-    return value;
+  public EnumWithCustomOfUrlCategory getCategory() {
+    return category;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setCategory(EnumWithCustomOfUrlCategory category) {
+    this.category = category;
+  }
+
+  public Url preferred(Boolean preferred) {
+    this.preferred = preferred;
+    return this;
+  }
+
+  /**
+   * Defines whether url is preferred.             
+   * @return preferred
+  **/
+  public Boolean isPreferred() {
+    return preferred;
+  }  
+
+  public void setPreferred(Boolean preferred) {
+    this.preferred = preferred;
+  }
+
+  public Url href(String href) {
+    this.href = href;
+    return this;
+  }
+
+  /**
+   * URL.             
+   * @return href
+  **/
+  public String getHref() {
+    return href;
+  }  
+
+  public void setHref(String href) {
+    this.href = href;
   }
 
 
@@ -72,22 +112,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    Url url = (Url) o;
+    return ObjectUtils.equals(this.category, url.category) &&
+    ObjectUtils.equals(this.preferred, url.preferred) &&
+    ObjectUtils.equals(this.href, url.href);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(category, preferred, href);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
+    sb.append("class Url {\n");
     
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    category: ").append(toIndentedString(getCategory())).append("\n");
+    sb.append("    preferred: ").append(toIndentedString(isPreferred())).append("\n");
+    sb.append("    href: ").append(toIndentedString(getHref())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +147,21 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public Url() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the Url
+   * @param category Url category.             
+   * @param preferred Defines whether url is preferred.             
+   * @param href URL.             
    */
-  public ValueResponse(String value) {
+  public Url(EnumWithCustomOfUrlCategory category, Boolean preferred, String href) {
     super();
-    setValue(value);
+    setCategory(category);
+    setPreferred(preferred);
+    setHref(href);
   }
 
 }

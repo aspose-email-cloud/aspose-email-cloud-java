@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ValueResponse.java">
+* <copyright company="Aspose" file="SendEmailModelRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,27 +40,27 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * String value object             
+ * Send email model request             
  */
-public class ValueResponse {
-  @JsonProperty("value")
-  private String value = null;
+public class SendEmailModelRq extends AccountBaseRequest {
+  @JsonProperty("message")
+  private EmailDto message = null;
 
-  public ValueResponse value(String value) {
-    this.value = value;
+  public SendEmailModelRq message(EmailDto message) {
+    this.message = message;
     return this;
   }
 
   /**
-   * Gets or sets string content.             
-   * @return value
+   * Message to send             
+   * @return message
   **/
-  public String getValue() {
-    return value;
+  public EmailDto getMessage() {
+    return message;
   }  
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setMessage(EmailDto message) {
+    this.message = message;
   }
 
 
@@ -72,22 +72,26 @@ public class ValueResponse {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    ValueResponse valueResponse = (ValueResponse) o;
-    return ObjectUtils.equals(this.value, valueResponse.value);
+    SendEmailModelRq sendEmailModelRq = (SendEmailModelRq) o;
+    return ObjectUtils.equals(this.message, sendEmailModelRq.message) &&
+    super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(value);
+    return ObjectUtils.hashCodeMulti(message, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ValueResponse {\n");
-    
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("class SendEmailModelRq {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
+    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
+    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    message: ").append(toIndentedString(getMessage())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -103,17 +107,23 @@ public class ValueResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public ValueResponse() {
+  public SendEmailModelRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the ValueResponse
-   * @param value Gets or sets string content.             
+   * Initializes a new instance of the SendEmailModelRq
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param storageFolder Storage folder location of account files             
+   * @param message Message to send             
    */
-  public ValueResponse(String value) {
+  public SendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, EmailDto message) {
     super();
-    setValue(value);
+    setFirstAccount(firstAccount);
+    setSecondAccount(secondAccount);
+    setStorageFolder(storageFolder);
+    setMessage(message);
   }
 
 }
