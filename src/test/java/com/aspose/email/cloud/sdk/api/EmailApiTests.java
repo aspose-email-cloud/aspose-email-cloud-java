@@ -98,7 +98,7 @@ public class EmailApiTests {
         }
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameGenderizeTest() throws Exception {
         ListResponseOfAiNameGenderHypothesis result = api
                 .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
@@ -106,14 +106,14 @@ public class EmailApiTests {
         assert result.getValue().get(0).getGender().equals("Male");
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameFormatTest() throws Exception {
         AiNameFormatted result = api.aiNameFormat(
                 new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
         assert result.getName().equals("Mr. Cane J. M.");
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameMatchTest() throws Exception {
         final String first = "John Michael Cane";
         final String second = "Cane J.";
@@ -122,7 +122,7 @@ public class EmailApiTests {
         assert result.getSimilarity() >= 0.5;
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameExpandTest() throws Exception {
         String name = "Smith Bobby";
         AiNameWeightedVariants result = api
@@ -135,7 +135,7 @@ public class EmailApiTests {
         assert expandedNames.contains("B. Smith");
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameCompleteTest() throws Exception {
         String prefix = "Dav";
         AiNameWeightedVariants result = api
@@ -149,7 +149,7 @@ public class EmailApiTests {
         assert names.contains("Davis");
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiNameParseEmailAddressTest() throws Exception {
         String address = "john-cane@gmail.com";
         ListResponseOfAiNameExtracted result = api
@@ -170,7 +170,7 @@ public class EmailApiTests {
         assert "Cane".equals(surname);
     }
 
-    @Test(groups = {"ai"})
+    @Test(groups = { "ai", "pipeline" })
     public void aiBcrParseStorageTest() throws Exception {
         String fileName = UUID.randomUUID().toString() + ".png";
         String filePath = folder + "/" + fileName;
@@ -210,7 +210,7 @@ public class EmailApiTests {
         assert primitives.size() >= 3;
     }
 
-    @Test(groups = {"ai"})
+    @Test(groups = { "ai", "pipeline" })
     public void aiBcrParseTest() throws Exception {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
@@ -295,7 +295,7 @@ public class EmailApiTests {
         assert objectExist.isExists();
     }
 
-    @Test(groups = { "ai" })
+    @Test(groups = { "ai", "pipeline" })
     public void aiBcrParseModelTest() throws Exception {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
