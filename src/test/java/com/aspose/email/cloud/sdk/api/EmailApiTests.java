@@ -1,10 +1,13 @@
 package com.aspose.email.cloud.sdk.api;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.model.requests.*;
 import com.migcomponents.migbase64.Base64;
@@ -20,7 +23,7 @@ public class EmailApiTests {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss'Z'");
 
     @BeforeClass(alwaysRun = true)
-    public void oneTimeSetUp() throws Exception {
+    public void oneTimeSetUp() throws ApiException {
         api = new EmailApi(
             System.getenv("appKey"),
             System.getenv("appSid"),
@@ -33,12 +36,12 @@ public class EmailApiTests {
     }
 
     @AfterClass(alwaysRun = true)
-    public void oneTimeTearDown() throws Exception {
+    public void oneTimeTearDown() throws ApiException {
         api.deleteFolder(new DeleteFolderRequestData(folder, storage, true));
     }
 
     @Test(groups = { "pipeline" })
-    public void hierarchicalTest() throws Exception {
+    public void hierarchicalTest() throws ApiException {
         String fileName = createCalendar();
         HierarchicalObject calendar = api.getCalendar(new GetCalendarRequestData(fileName, folder, storage));
         ArrayList<PrimitiveObject> primitives = new ArrayList<PrimitiveObject>();
@@ -53,7 +56,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void dateTest() throws Exception {
+    public void dateTest() throws ApiException, ParseException {
         Calendar startDate = Calendar.getInstance();
         startDate.set(Calendar.MILLISECOND, 0);
         String calendarFile = createCalendar(startDate);
@@ -71,7 +74,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void fileTest() throws Exception {
+    public void fileTest() throws ApiException {
         String file = createCalendar();
         byte[] fileBytes = api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
         String calendarContent = new String(fileBytes, StandardCharsets.UTF_8);
@@ -84,7 +87,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void contactFormatTest() throws Exception {
+    public void contactFormatTest() throws ApiException {
         String[] formats = { "vcard", "msg" };
         for (String format : formats) {
             String extension = format.equals("vcard") ? ".vcf" : ".msg";
@@ -99,7 +102,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameGenderizeTest() throws Exception {
+    public void aiNameGenderizeTest() throws ApiException {
         ListResponseOfAiNameGenderHypothesis result = api
                 .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
         assert result.getValue().size() >= 1;
@@ -107,14 +110,14 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameFormatTest() throws Exception {
+    public void aiNameFormatTest() throws ApiException {
         AiNameFormatted result = api.aiNameFormat(
                 new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
         assert result.getName().equals("Mr. Cane J. M.");
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameMatchTest() throws Exception {
+    public void aiNameMatchTest() throws ApiException {
         final String first = "John Michael Cane";
         final String second = "Cane J.";
         AiNameMatchResult result = api
@@ -123,7 +126,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameExpandTest() throws Exception {
+    public void aiNameExpandTest() throws ApiException {
         String name = "Smith Bobby";
         AiNameWeightedVariants result = api
                 .aiNameExpand(new AiNameExpandRequestData(name, null, null, null, null, null));
@@ -136,7 +139,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameCompleteTest() throws Exception {
+    public void aiNameCompleteTest() throws ApiException {
         String prefix = "Dav";
         AiNameWeightedVariants result = api
                 .aiNameComplete(new AiNameCompleteRequestData(prefix, null, null, null, null, null));
@@ -150,7 +153,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiNameParseEmailAddressTest() throws Exception {
+    public void aiNameParseEmailAddressTest() throws ApiException {
         String address = "john-cane@gmail.com";
         ListResponseOfAiNameExtracted result = api
                 .aiNameParseEmailAddress(new AiNameParseEmailAddressRequestData(address, null, null, null, null, null));
@@ -171,7 +174,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiBcrParseStorageTest() throws Exception {
+    public void aiBcrParseStorageTest() throws ApiException, IOException {
         String fileName = UUID.randomUUID().toString() + ".png";
         String filePath = folder + "/" + fileName;
         byte[] fileBytes = IOUtils.toByteArray(
@@ -211,7 +214,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiBcrParseTest() throws Exception {
+    public void aiBcrParseTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
@@ -230,7 +233,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void createCalendarEmailTest() throws Exception {
+    public void createCalendarEmailTest() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
@@ -274,7 +277,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void contactModelTest() throws Exception {
+    public void contactModelTest() throws ApiException {
         ContactDto contact = new ContactDto()
             .gender("Male")
             .surname("Thomas")
@@ -296,7 +299,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "ai", "pipeline" })
-    public void aiBcrParseModelTest() throws Exception {
+    public void aiBcrParseModelTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
@@ -307,12 +310,12 @@ public class EmailApiTests {
         assert firstVCard.getDisplayName().contains("Thomas");
     }
 
-    private String createCalendar() throws Exception {
+    private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
     }
 
-    private String createCalendar(Calendar startDate) throws Exception {
+    private String createCalendar(Calendar startDate) throws ApiException {
         String fileName = UUID.randomUUID().toString() + ".ics";
         Calendar endDate =(Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
