@@ -310,6 +310,17 @@ public class EmailApiTests {
         assert firstVCard.getDisplayName().contains("Thomas");
     }
 
+    @Test(groups = { "pipeline" })
+    public void discoverEmailConfigTest() throws ApiException {
+        EmailAccountConfigList configList = api.discoverEmailConfig(
+            new DiscoverEmailConfigRequestData("example@gmail.com", false));
+        assert configList.getValue().size() >= 2;
+        for (EmailAccountConfig config : configList.getValue()) {
+            if (config.getType().equals("SMTP"))
+                assert "smtp.gmail.com".equals(config.getHost());
+        }
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
