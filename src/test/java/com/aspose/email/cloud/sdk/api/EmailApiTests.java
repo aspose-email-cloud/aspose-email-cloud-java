@@ -313,10 +313,10 @@ public class EmailApiTests {
     @Test(groups = { "pipeline" })
     public void discoverEmailConfigTest() throws ApiException {
         EmailAccountConfigList configList = api.discoverEmailConfig(
-            new DiscoverEmailConfigRequestData("example@gmail.com", false));
+            new DiscoverEmailConfigRequestData("example@gmail.com", true));
         assert configList.getValue().size() >= 2;
         for (EmailAccountConfig config : configList.getValue()) {
-            if (config.getType().equals("SMTP"))
+            if (config.getProtocolType().equals("SMTP"))
                 assert "smtp.gmail.com".equals(config.getHost());
         }
     }

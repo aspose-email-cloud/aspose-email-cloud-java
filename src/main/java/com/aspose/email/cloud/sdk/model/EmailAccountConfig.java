@@ -46,8 +46,8 @@ public class EmailAccountConfig {
   @JsonProperty("displayName")
   private String displayName = null;
 
-  @JsonProperty("type")
-  private String type = null;
+  @JsonProperty("protocolType")
+  private String protocolType = null;
 
   @JsonProperty("host")
   private String host = null;
@@ -84,21 +84,21 @@ public class EmailAccountConfig {
     this.displayName = displayName;
   }
 
-  public EmailAccountConfig type(String type) {
-    this.type = type;
+  public EmailAccountConfig protocolType(String protocolType) {
+    this.protocolType = protocolType;
     return this;
   }
 
   /**
    * Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-   * @return type
+   * @return protocolType
   **/
-  public String getType() {
-    return type;
+  public String getProtocolType() {
+    return protocolType;
   }  
 
-  public void setType(String type) {
-    this.type = type;
+  public void setProtocolType(String protocolType) {
+    this.protocolType = protocolType;
   }
 
   public EmailAccountConfig host(String host) {
@@ -141,7 +141,7 @@ public class EmailAccountConfig {
   }
 
   /**
-   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return socketType
   **/
   public String getSocketType() {
@@ -230,7 +230,7 @@ public class EmailAccountConfig {
   }
     EmailAccountConfig emailAccountConfig = (EmailAccountConfig) o;
     return ObjectUtils.equals(this.displayName, emailAccountConfig.displayName) &&
-    ObjectUtils.equals(this.type, emailAccountConfig.type) &&
+    ObjectUtils.equals(this.protocolType, emailAccountConfig.protocolType) &&
     ObjectUtils.equals(this.host, emailAccountConfig.host) &&
     ObjectUtils.equals(this.port, emailAccountConfig.port) &&
     ObjectUtils.equals(this.socketType, emailAccountConfig.socketType) &&
@@ -241,7 +241,7 @@ public class EmailAccountConfig {
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(displayName, type, host, port, socketType, authenticationTypes, extraInfo, isValidated);
+    return ObjectUtils.hashCodeMulti(displayName, protocolType, host, port, socketType, authenticationTypes, extraInfo, isValidated);
   }
 
 
@@ -251,7 +251,7 @@ public class EmailAccountConfig {
     sb.append("class EmailAccountConfig {\n");
     
     sb.append("    displayName: ").append(toIndentedString(getDisplayName())).append("\n");
-    sb.append("    type: ").append(toIndentedString(getType())).append("\n");
+    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
     sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
     sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
     sb.append("    socketType: ").append(toIndentedString(getSocketType())).append("\n");
@@ -280,18 +280,18 @@ public class EmailAccountConfig {
   /**
    * Initializes a new instance of the EmailAccountConfig
    * @param displayName Email account display name             
-   * @param type Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param host Email account host.             
    * @param port Port.             
-   * @param socketType Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
    * @param extraInfo Extra account information.             
    * @param isValidated Determines that configuration validated. Set to false if validation skipped.             
    */
-  public EmailAccountConfig(String displayName, String type, String host, Integer port, String socketType, List<String> authenticationTypes, List<NameValuePair> extraInfo, Boolean isValidated) {
+  public EmailAccountConfig(String displayName, String protocolType, String host, Integer port, String socketType, List<String> authenticationTypes, List<NameValuePair> extraInfo, Boolean isValidated) {
     super();
     setDisplayName(displayName);
-    setType(type);
+    setProtocolType(protocolType);
     setHost(host);
     setPort(port);
     setSocketType(socketType);
