@@ -134,7 +134,7 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.CreateEmailRequest](CreateEmailRequest.md)
  - [com.aspose.email.cloud.sdk.model.CustomerEvent](CustomerEvent.md)
  - [com.aspose.email.cloud.sdk.model.DiscUsage](DiscUsage.md)
- - [com.aspose.email.cloud.sdk.model.DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+ - [com.aspose.email.cloud.sdk.model.DiscoverEmailConfigRq](DiscoverEmailConfigRq.md)
  - [com.aspose.email.cloud.sdk.model.EmailAccountConfig](EmailAccountConfig.md)
  - [com.aspose.email.cloud.sdk.model.EmailAccountRequest](EmailAccountRequest.md)
  - [com.aspose.email.cloud.sdk.model.EmailAddress](EmailAddress.md)

@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="DiscoverEmailConfigRequest.java">
+* <copyright company="Aspose" file="DiscoverEmailConfigRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -42,7 +42,7 @@ import java.io.*;
 /**
  * Discover email configuration request.             
  */
-public class DiscoverEmailConfigRequest {
+public class DiscoverEmailConfigRq {
   @JsonProperty("address")
   private String address = null;
 
@@ -52,7 +52,7 @@ public class DiscoverEmailConfigRequest {
   @JsonProperty("login")
   private String login = null;
 
-  public DiscoverEmailConfigRequest address(String address) {
+  public DiscoverEmailConfigRq address(String address) {
     this.address = address;
     return this;
   }
@@ -69,7 +69,7 @@ public class DiscoverEmailConfigRequest {
     this.address = address;
   }
 
-  public DiscoverEmailConfigRequest fastProcessing(Boolean fastProcessing) {
+  public DiscoverEmailConfigRq fastProcessing(Boolean fastProcessing) {
     this.fastProcessing = fastProcessing;
     return this;
   }
@@ -86,7 +86,7 @@ public class DiscoverEmailConfigRequest {
     this.fastProcessing = fastProcessing;
   }
 
-  public DiscoverEmailConfigRequest login(String login) {
+  public DiscoverEmailConfigRq login(String login) {
     this.login = login;
     return this;
   }
@@ -112,10 +112,10 @@ public class DiscoverEmailConfigRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    DiscoverEmailConfigRequest discoverEmailConfigRequest = (DiscoverEmailConfigRequest) o;
-    return ObjectUtils.equals(this.address, discoverEmailConfigRequest.address) &&
-    ObjectUtils.equals(this.fastProcessing, discoverEmailConfigRequest.fastProcessing) &&
-    ObjectUtils.equals(this.login, discoverEmailConfigRequest.login);
+    DiscoverEmailConfigRq discoverEmailConfigRq = (DiscoverEmailConfigRq) o;
+    return ObjectUtils.equals(this.address, discoverEmailConfigRq.address) &&
+    ObjectUtils.equals(this.fastProcessing, discoverEmailConfigRq.fastProcessing) &&
+    ObjectUtils.equals(this.login, discoverEmailConfigRq.login);
   }
 
   @Override
@@ -127,7 +127,7 @@ public class DiscoverEmailConfigRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DiscoverEmailConfigRequest {\n");
+    sb.append("class DiscoverEmailConfigRq {\n");
     
     sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
     sb.append("    fastProcessing: ").append(toIndentedString(isFastProcessing())).append("\n");
@@ -147,17 +147,17 @@ public class DiscoverEmailConfigRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public DiscoverEmailConfigRequest() {
+  public DiscoverEmailConfigRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the DiscoverEmailConfigRequest
+   * Initializes a new instance of the DiscoverEmailConfigRq
    * @param address Email address to discover.             
    * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
    * @param login Email account login. If not specified, address used as a login.             
    */
-  public DiscoverEmailConfigRequest(String address, Boolean fastProcessing, String login) {
+  public DiscoverEmailConfigRq(String address, Boolean fastProcessing, String login) {
     super();
     setAddress(address);
     setFastProcessing(fastProcessing);

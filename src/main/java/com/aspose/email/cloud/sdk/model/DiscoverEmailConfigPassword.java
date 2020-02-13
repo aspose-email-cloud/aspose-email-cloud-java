@@ -42,7 +42,7 @@ import java.io.*;
 /**
  * DiscoverEmailConfigPassword
  */
-public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRequest {
+public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRq {
   @JsonProperty("password")
   private String password = null;
 

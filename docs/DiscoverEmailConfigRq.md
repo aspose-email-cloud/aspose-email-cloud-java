@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.DiscoverEmailConfigRequest
+# com.aspose.email.cloud.sdk.model.DiscoverEmailConfigRq
 
 ## Properties
 Name | Type | Description | Notes
