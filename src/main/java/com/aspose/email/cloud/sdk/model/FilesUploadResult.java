@@ -49,11 +49,20 @@ public class FilesUploadResult {
   @JsonProperty("errors")
   private List<Error> errors = null;
 
+  /**
+   * Set uploaded and return this.
+   * @param uploaded List of uploaded file names
+   * @return this
+  **/
   public FilesUploadResult uploaded(List<String> uploaded) {
     this.uploaded = uploaded;
     return this;
   }
-
+  /**
+   * Add an item to uploaded and return this.
+   * @param uploadedItem An item of: List of uploaded file names
+   * @return this
+  **/
   public FilesUploadResult addUploadedItem(String uploadedItem) {
     if (this.uploaded == null) {
       this.uploaded = new ArrayList<String>();
@@ -70,15 +79,28 @@ public class FilesUploadResult {
     return uploaded;
   }  
 
+  /**
+   * Set uploaded.
+   * @param uploaded List of uploaded file names
+  **/
   public void setUploaded(List<String> uploaded) {
     this.uploaded = uploaded;
   }
 
+  /**
+   * Set errors and return this.
+   * @param errors List of errors.
+   * @return this
+  **/
   public FilesUploadResult errors(List<Error> errors) {
     this.errors = errors;
     return this;
   }
-
+  /**
+   * Add an item to errors and return this.
+   * @param errorsItem An item of: List of errors.
+   * @return this
+  **/
   public FilesUploadResult addErrorsItem(Error errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<Error>();
@@ -95,6 +117,10 @@ public class FilesUploadResult {
     return errors;
   }  
 
+  /**
+   * Set errors.
+   * @param errors List of errors.
+  **/
   public void setErrors(List<Error> errors) {
     this.errors = errors;
   }

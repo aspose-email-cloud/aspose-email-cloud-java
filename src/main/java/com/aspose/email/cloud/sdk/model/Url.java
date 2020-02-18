@@ -52,6 +52,11 @@ public class Url {
   @JsonProperty("href")
   private String href = null;
 
+  /**
+   * Set category and return this.
+   * @param category Url category.             
+   * @return this
+  **/
   public Url category(EnumWithCustomOfUrlCategory category) {
     this.category = category;
     return this;
@@ -65,10 +70,19 @@ public class Url {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Url category.             
+  **/
   public void setCategory(EnumWithCustomOfUrlCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Defines whether url is preferred.             
+   * @return this
+  **/
   public Url preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -82,10 +96,19 @@ public class Url {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Defines whether url is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }
 
+  /**
+   * Set href and return this.
+   * @param href URL.             
+   * @return this
+  **/
   public Url href(String href) {
     this.href = href;
     return this;
@@ -99,6 +122,10 @@ public class Url {
     return href;
   }  
 
+  /**
+   * Set href.
+   * @param href URL.             
+  **/
   public void setHref(String href) {
     this.href = href;
   }

@@ -76,6 +76,11 @@ public class PostalAddress {
   @JsonProperty("street")
   private String street = null;
 
+  /**
+   * Set address and return this.
+   * @param address Address.             
+   * @return this
+  **/
   public PostalAddress address(String address) {
     this.address = address;
     return this;
@@ -89,10 +94,19 @@ public class PostalAddress {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Address.             
+  **/
   public void setAddress(String address) {
     this.address = address;
   }
 
+  /**
+   * Set category and return this.
+   * @param category Address category.             
+   * @return this
+  **/
   public PostalAddress category(EnumWithCustomOfPostalAddressCategory category) {
     this.category = category;
     return this;
@@ -106,10 +120,19 @@ public class PostalAddress {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Address category.             
+  **/
   public void setCategory(EnumWithCustomOfPostalAddressCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set city and return this.
+   * @param city Address&#39;s city.             
+   * @return this
+  **/
   public PostalAddress city(String city) {
     this.city = city;
     return this;
@@ -123,10 +146,19 @@ public class PostalAddress {
     return city;
   }  
 
+  /**
+   * Set city.
+   * @param city Address&#39;s city.             
+  **/
   public void setCity(String city) {
     this.city = city;
   }
 
+  /**
+   * Set country and return this.
+   * @param country Address&#39;s country.             
+   * @return this
+  **/
   public PostalAddress country(String country) {
     this.country = country;
     return this;
@@ -140,10 +172,19 @@ public class PostalAddress {
     return country;
   }  
 
+  /**
+   * Set country.
+   * @param country Address&#39;s country.             
+  **/
   public void setCountry(String country) {
     this.country = country;
   }
 
+  /**
+   * Set countryCode and return this.
+   * @param countryCode Country code.             
+   * @return this
+  **/
   public PostalAddress countryCode(String countryCode) {
     this.countryCode = countryCode;
     return this;
@@ -157,10 +198,19 @@ public class PostalAddress {
     return countryCode;
   }  
 
+  /**
+   * Set countryCode.
+   * @param countryCode Country code.             
+  **/
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
 
+  /**
+   * Set isMailingAddress and return this.
+   * @param isMailingAddress Defines whether address may be used for mailing.             
+   * @return this
+  **/
   public PostalAddress isMailingAddress(Boolean isMailingAddress) {
     this.isMailingAddress = isMailingAddress;
     return this;
@@ -174,10 +224,19 @@ public class PostalAddress {
     return isMailingAddress;
   }  
 
+  /**
+   * Set isMailingAddress.
+   * @param isMailingAddress Defines whether address may be used for mailing.             
+  **/
   public void setIsMailingAddress(Boolean isMailingAddress) {
     this.isMailingAddress = isMailingAddress;
   }
 
+  /**
+   * Set postalCode and return this.
+   * @param postalCode Postal code.             
+   * @return this
+  **/
   public PostalAddress postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
@@ -191,10 +250,19 @@ public class PostalAddress {
     return postalCode;
   }  
 
+  /**
+   * Set postalCode.
+   * @param postalCode Postal code.             
+  **/
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+  /**
+   * Set postOfficeBox and return this.
+   * @param postOfficeBox Post Office box.             
+   * @return this
+  **/
   public PostalAddress postOfficeBox(String postOfficeBox) {
     this.postOfficeBox = postOfficeBox;
     return this;
@@ -208,10 +276,19 @@ public class PostalAddress {
     return postOfficeBox;
   }  
 
+  /**
+   * Set postOfficeBox.
+   * @param postOfficeBox Post Office box.             
+  **/
   public void setPostOfficeBox(String postOfficeBox) {
     this.postOfficeBox = postOfficeBox;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Defines whether postal address is preferred.             
+   * @return this
+  **/
   public PostalAddress preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -225,10 +302,19 @@ public class PostalAddress {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Defines whether postal address is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }
 
+  /**
+   * Set stateOrProvince and return this.
+   * @param stateOrProvince Address&#39;s region.             
+   * @return this
+  **/
   public PostalAddress stateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
     return this;
@@ -242,10 +328,19 @@ public class PostalAddress {
     return stateOrProvince;
   }  
 
+  /**
+   * Set stateOrProvince.
+   * @param stateOrProvince Address&#39;s region.             
+  **/
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
 
+  /**
+   * Set street and return this.
+   * @param street Address&#39;s street.             
+   * @return this
+  **/
   public PostalAddress street(String street) {
     this.street = street;
     return this;
@@ -259,6 +354,10 @@ public class PostalAddress {
     return street;
   }  
 
+  /**
+   * Set street.
+   * @param street Address&#39;s street.             
+  **/
   public void setStreet(String street) {
     this.street = street;
   }

@@ -46,6 +46,11 @@ public class ReminderAttendee {
   @JsonProperty("address")
   private String address = null;
 
+  /**
+   * Set address and return this.
+   * @param address Contains the email address.
+   * @return this
+  **/
   public ReminderAttendee address(String address) {
     this.address = address;
     return this;
@@ -59,6 +64,10 @@ public class ReminderAttendee {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Contains the email address.
+  **/
   public void setAddress(String address) {
     this.address = address;
   }

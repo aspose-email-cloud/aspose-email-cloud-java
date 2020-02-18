@@ -49,6 +49,11 @@ public class EmailProperties {
   @JsonProperty("list")
   private List<EmailProperty> list = new ArrayList<EmailProperty>();
 
+  /**
+   * Set link and return this.
+   * @param link Gets or sets link that originate from this document.             
+   * @return this
+  **/
   public EmailProperties link(Link link) {
     this.link = link;
     return this;
@@ -62,15 +67,28 @@ public class EmailProperties {
     return link;
   }  
 
+  /**
+   * Set link.
+   * @param link Gets or sets link that originate from this document.             
+  **/
   public void setLink(Link link) {
     this.link = link;
   }
 
+  /**
+   * Set list and return this.
+   * @param list List of properties             
+   * @return this
+  **/
   public EmailProperties list(List<EmailProperty> list) {
     this.list = list;
     return this;
   }
-
+  /**
+   * Add an item to list and return this.
+   * @param listItem An item of: List of properties             
+   * @return this
+  **/
   public EmailProperties addListItem(EmailProperty listItem) {
     this.list.add(listItem);
     return this;
@@ -84,6 +102,10 @@ public class EmailProperties {
     return list;
   }  
 
+  /**
+   * Set list.
+   * @param list List of properties             
+  **/
   public void setList(List<EmailProperty> list) {
     this.list = list;
   }

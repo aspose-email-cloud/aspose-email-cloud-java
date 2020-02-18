@@ -46,11 +46,20 @@ public class ListResponseOfHierarchicalObject {
   @JsonProperty("value")
   private List<HierarchicalObject> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfHierarchicalObject value(List<HierarchicalObject> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfHierarchicalObject addValueItem(HierarchicalObject valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<HierarchicalObject>();
@@ -67,6 +76,10 @@ public class ListResponseOfHierarchicalObject {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<HierarchicalObject> value) {
     this.value = value;
   }

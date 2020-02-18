@@ -49,6 +49,11 @@ public class AiBcrOptions {
   @JsonProperty("countries")
   private String countries = null;
 
+  /**
+   * Set languages and return this.
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+   * @return this
+  **/
   public AiBcrOptions languages(String languages) {
     this.languages = languages;
     return this;
@@ -62,10 +67,19 @@ public class AiBcrOptions {
     return languages;
   }  
 
+  /**
+   * Set languages.
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+  **/
   public void setLanguages(String languages) {
     this.languages = languages;
   }
 
+  /**
+   * Set countries and return this.
+   * @param countries Comma-separated codes of countries             
+   * @return this
+  **/
   public AiBcrOptions countries(String countries) {
     this.countries = countries;
     return this;
@@ -79,6 +93,10 @@ public class AiBcrOptions {
     return countries;
   }  
 
+  /**
+   * Set countries.
+   * @param countries Comma-separated codes of countries             
+  **/
   public void setCountries(String countries) {
     this.countries = countries;
   }

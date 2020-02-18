@@ -49,6 +49,11 @@ public class AddAttachmentRequest {
   @JsonProperty("attachmentFolder")
   private StorageFolderLocation attachmentFolder = null;
 
+  /**
+   * Set documentFolder and return this.
+   * @param documentFolder Storage folder location of document             
+   * @return this
+  **/
   public AddAttachmentRequest documentFolder(StorageFolderLocation documentFolder) {
     this.documentFolder = documentFolder;
     return this;
@@ -62,10 +67,19 @@ public class AddAttachmentRequest {
     return documentFolder;
   }  
 
+  /**
+   * Set documentFolder.
+   * @param documentFolder Storage folder location of document             
+  **/
   public void setDocumentFolder(StorageFolderLocation documentFolder) {
     this.documentFolder = documentFolder;
   }
 
+  /**
+   * Set attachmentFolder and return this.
+   * @param attachmentFolder Storage folder location of an attachment             
+   * @return this
+  **/
   public AddAttachmentRequest attachmentFolder(StorageFolderLocation attachmentFolder) {
     this.attachmentFolder = attachmentFolder;
     return this;
@@ -79,6 +93,10 @@ public class AddAttachmentRequest {
     return attachmentFolder;
   }  
 
+  /**
+   * Set attachmentFolder.
+   * @param attachmentFolder Storage folder location of an attachment             
+  **/
   public void setAttachmentFolder(StorageFolderLocation attachmentFolder) {
     this.attachmentFolder = attachmentFolder;
   }

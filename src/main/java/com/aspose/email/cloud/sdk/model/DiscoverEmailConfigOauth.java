@@ -55,6 +55,11 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
   @JsonProperty("requestUrl")
   private String requestUrl = null;
 
+  /**
+   * Set clientId and return this.
+   * @param clientId OAuth client id.             
+   * @return this
+  **/
   public DiscoverEmailConfigOauth clientId(String clientId) {
     this.clientId = clientId;
     return this;
@@ -68,10 +73,19 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     return clientId;
   }  
 
+  /**
+   * Set clientId.
+   * @param clientId OAuth client id.             
+  **/
   public void setClientId(String clientId) {
     this.clientId = clientId;
   }
 
+  /**
+   * Set clientSecret and return this.
+   * @param clientSecret OAuth client secret.             
+   * @return this
+  **/
   public DiscoverEmailConfigOauth clientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
     return this;
@@ -85,10 +99,19 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     return clientSecret;
   }  
 
+  /**
+   * Set clientSecret.
+   * @param clientSecret OAuth client secret.             
+  **/
   public void setClientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
   }
 
+  /**
+   * Set refreshToken and return this.
+   * @param refreshToken OAuth refresh token.             
+   * @return this
+  **/
   public DiscoverEmailConfigOauth refreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
     return this;
@@ -102,10 +125,19 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     return refreshToken;
   }  
 
+  /**
+   * Set refreshToken.
+   * @param refreshToken OAuth refresh token.             
+  **/
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
 
+  /**
+   * Set requestUrl and return this.
+   * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
+   * @return this
+  **/
   public DiscoverEmailConfigOauth requestUrl(String requestUrl) {
     this.requestUrl = requestUrl;
     return this;
@@ -119,6 +151,10 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     return requestUrl;
   }  
 
+  /**
+   * Set requestUrl.
+   * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
+  **/
   public void setRequestUrl(String requestUrl) {
     this.requestUrl = requestUrl;
   }

@@ -46,6 +46,11 @@ public class EmailDocumentResponse {
   @JsonProperty("document")
   private EmailDocument document = null;
 
+  /**
+   * Set document and return this.
+   * @param document An email document requested             
+   * @return this
+  **/
   public EmailDocumentResponse document(EmailDocument document) {
     this.document = document;
     return this;
@@ -59,6 +64,10 @@ public class EmailDocumentResponse {
     return document;
   }  
 
+  /**
+   * Set document.
+   * @param document An email document requested             
+  **/
   public void setDocument(EmailDocument document) {
     this.document = document;
   }

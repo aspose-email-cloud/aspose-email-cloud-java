@@ -46,6 +46,11 @@ public class MimeResponse {
   @JsonProperty("mime")
   private String mime = null;
 
+  /**
+   * Set mime and return this.
+   * @param mime Gets or sets base64 encoded mime content.             
+   * @return this
+  **/
   public MimeResponse mime(String mime) {
     this.mime = mime;
     return this;
@@ -59,6 +64,10 @@ public class MimeResponse {
     return mime;
   }  
 
+  /**
+   * Set mime.
+   * @param mime Gets or sets base64 encoded mime content.             
+  **/
   public void setMime(String mime) {
     this.mime = mime;
   }

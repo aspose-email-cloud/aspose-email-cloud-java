@@ -46,11 +46,20 @@ public class ListResponseOfStorageModelOfCalendarDto {
   @JsonProperty("value")
   private List<StorageModelOfCalendarDto> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfStorageModelOfCalendarDto value(List<StorageModelOfCalendarDto> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfStorageModelOfCalendarDto addValueItem(StorageModelOfCalendarDto valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<StorageModelOfCalendarDto>();
@@ -67,6 +76,10 @@ public class ListResponseOfStorageModelOfCalendarDto {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<StorageModelOfCalendarDto> value) {
     this.value = value;
   }

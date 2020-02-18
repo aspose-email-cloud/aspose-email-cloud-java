@@ -49,6 +49,11 @@ public class AiNameFormatted {
   @JsonProperty("comments")
   private String comments = null;
 
+  /**
+   * Set name and return this.
+   * @param name Formatted name value             
+   * @return this
+  **/
   public AiNameFormatted name(String name) {
     this.name = name;
     return this;
@@ -62,10 +67,19 @@ public class AiNameFormatted {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Formatted name value             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set comments and return this.
+   * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
+   * @return this
+  **/
   public AiNameFormatted comments(String comments) {
     this.comments = comments;
     return this;
@@ -79,6 +93,10 @@ public class AiNameFormatted {
     return comments;
   }  
 
+  /**
+   * Set comments.
+   * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
+  **/
   public void setComments(String comments) {
     this.comments = comments;
   }

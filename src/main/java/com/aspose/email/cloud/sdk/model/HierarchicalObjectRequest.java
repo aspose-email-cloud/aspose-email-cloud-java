@@ -49,6 +49,11 @@ public class HierarchicalObjectRequest {
   @JsonProperty("storageFolder")
   private StorageFolderLocation storageFolder = null;
 
+  /**
+   * Set hierarchicalObject and return this.
+   * @param hierarchicalObject Hierarchical properties of document             
+   * @return this
+  **/
   public HierarchicalObjectRequest hierarchicalObject(HierarchicalObject hierarchicalObject) {
     this.hierarchicalObject = hierarchicalObject;
     return this;
@@ -62,10 +67,19 @@ public class HierarchicalObjectRequest {
     return hierarchicalObject;
   }  
 
+  /**
+   * Set hierarchicalObject.
+   * @param hierarchicalObject Hierarchical properties of document             
+  **/
   public void setHierarchicalObject(HierarchicalObject hierarchicalObject) {
     this.hierarchicalObject = hierarchicalObject;
   }
 
+  /**
+   * Set storageFolder and return this.
+   * @param storageFolder Document location in storage             
+   * @return this
+  **/
   public HierarchicalObjectRequest storageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
     return this;
@@ -79,6 +93,10 @@ public class HierarchicalObjectRequest {
     return storageFolder;
   }  
 
+  /**
+   * Set storageFolder.
+   * @param storageFolder Document location in storage             
+  **/
   public void setStorageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
   }

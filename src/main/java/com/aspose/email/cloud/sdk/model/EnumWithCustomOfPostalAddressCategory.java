@@ -49,6 +49,11 @@ public class EnumWithCustomOfPostalAddressCategory {
   @JsonProperty("description")
   private String description = null;
 
+  /**
+   * Set value and return this.
+   * @param value Address category. Enum, available values: Home, Work, Custom
+   * @return this
+  **/
   public EnumWithCustomOfPostalAddressCategory value(String value) {
     this.value = value;
     return this;
@@ -62,10 +67,19 @@ public class EnumWithCustomOfPostalAddressCategory {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Address category. Enum, available values: Home, Work, Custom
+  **/
   public void setValue(String value) {
     this.value = value;
   }
 
+  /**
+   * Set description and return this.
+   * @param description 
+   * @return this
+  **/
   public EnumWithCustomOfPostalAddressCategory description(String description) {
     this.description = description;
     return this;
@@ -79,6 +93,10 @@ public class EnumWithCustomOfPostalAddressCategory {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description 
+  **/
   public void setDescription(String description) {
     this.description = description;
   }

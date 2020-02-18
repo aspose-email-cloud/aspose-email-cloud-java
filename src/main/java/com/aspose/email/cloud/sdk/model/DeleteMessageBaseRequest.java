@@ -49,6 +49,11 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   @JsonProperty("deletePermanently")
   private Boolean deletePermanently = null;
 
+  /**
+   * Set messageId and return this.
+   * @param messageId Message identifier             
+   * @return this
+  **/
   public DeleteMessageBaseRequest messageId(String messageId) {
     this.messageId = messageId;
     return this;
@@ -62,10 +67,19 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
     return messageId;
   }  
 
+  /**
+   * Set messageId.
+   * @param messageId Message identifier             
+  **/
   public void setMessageId(String messageId) {
     this.messageId = messageId;
   }
 
+  /**
+   * Set deletePermanently and return this.
+   * @param deletePermanently Specifies that message should be deleted permanently             
+   * @return this
+  **/
   public DeleteMessageBaseRequest deletePermanently(Boolean deletePermanently) {
     this.deletePermanently = deletePermanently;
     return this;
@@ -79,6 +93,10 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
     return deletePermanently;
   }  
 
+  /**
+   * Set deletePermanently.
+   * @param deletePermanently Specifies that message should be deleted permanently             
+  **/
   public void setDeletePermanently(Boolean deletePermanently) {
     this.deletePermanently = deletePermanently;
   }

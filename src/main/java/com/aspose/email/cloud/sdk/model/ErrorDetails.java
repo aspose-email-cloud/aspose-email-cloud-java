@@ -49,6 +49,11 @@ public class ErrorDetails {
   @JsonProperty("date")
   private Date date = null;
 
+  /**
+   * Set requestId and return this.
+   * @param requestId The request id
+   * @return this
+  **/
   public ErrorDetails requestId(String requestId) {
     this.requestId = requestId;
     return this;
@@ -62,10 +67,19 @@ public class ErrorDetails {
     return requestId;
   }  
 
+  /**
+   * Set requestId.
+   * @param requestId The request id
+  **/
   public void setRequestId(String requestId) {
     this.requestId = requestId;
   }
 
+  /**
+   * Set date and return this.
+   * @param date Date
+   * @return this
+  **/
   public ErrorDetails date(Date date) {
     this.date = date;
     return this;
@@ -79,6 +93,10 @@ public class ErrorDetails {
     return date;
   }  
 
+  /**
+   * Set date.
+   * @param date Date
+  **/
   public void setDate(Date date) {
     this.date = date;
   }

@@ -49,6 +49,11 @@ public class FileVersion extends StorageFile {
   @JsonProperty("isLatest")
   private Boolean isLatest = null;
 
+  /**
+   * Set versionId and return this.
+   * @param versionId File Version ID.
+   * @return this
+  **/
   public FileVersion versionId(String versionId) {
     this.versionId = versionId;
     return this;
@@ -62,10 +67,19 @@ public class FileVersion extends StorageFile {
     return versionId;
   }  
 
+  /**
+   * Set versionId.
+   * @param versionId File Version ID.
+  **/
   public void setVersionId(String versionId) {
     this.versionId = versionId;
   }
 
+  /**
+   * Set isLatest and return this.
+   * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+   * @return this
+  **/
   public FileVersion isLatest(Boolean isLatest) {
     this.isLatest = isLatest;
     return this;
@@ -79,6 +93,10 @@ public class FileVersion extends StorageFile {
     return isLatest;
   }  
 
+  /**
+   * Set isLatest.
+   * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+  **/
   public void setIsLatest(Boolean isLatest) {
     this.isLatest = isLatest;
   }

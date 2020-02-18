@@ -55,6 +55,11 @@ public class AiBcrOcrData {
   @JsonProperty("data")
   private List<AiBcrOcrDataPart> data = null;
 
+  /**
+   * Set id and return this.
+   * @param id Image identifier             
+   * @return this
+  **/
   public AiBcrOcrData id(String id) {
     this.id = id;
     return this;
@@ -68,10 +73,19 @@ public class AiBcrOcrData {
     return id;
   }  
 
+  /**
+   * Set id.
+   * @param id Image identifier             
+  **/
   public void setId(String id) {
     this.id = id;
   }
 
+  /**
+   * Set image and return this.
+   * @param image Image with possible pre-processing in Base64             
+   * @return this
+  **/
   public AiBcrOcrData image(String image) {
     this.image = image;
     return this;
@@ -85,15 +99,31 @@ public class AiBcrOcrData {
     return image;
   }  
 
+  /**
+   * Set image.
+   * @param image Image with possible pre-processing in Base64             
+  **/
   public void setImage(String image) {
     this.image = image;
   }
 
+  /**
+   * Set details and return this.
+   * @param details Additional details from OCR engine             
+   * @return this
+  **/
   public AiBcrOcrData details(Map<String, String> details) {
     this.details = details;
     return this;
   }
 
+  /**
+   * Add an item to details and return this.
+   * details is: Additional details from OCR engine             
+   * @param key An item key
+   * @param detailsItem An item value
+   * @return this
+  **/
   public AiBcrOcrData putDetailsItem(String key, String detailsItem) {
     if (this.details == null) {
       this.details = new HashMap<String, String>();
@@ -110,15 +140,28 @@ public class AiBcrOcrData {
     return details;
   }  
 
+  /**
+   * Set details.
+   * @param details Additional details from OCR engine             
+  **/
   public void setDetails(Map<String, String> details) {
     this.details = details;
   }
 
+  /**
+   * Set data and return this.
+   * @param data OCR results             
+   * @return this
+  **/
   public AiBcrOcrData data(List<AiBcrOcrDataPart> data) {
     this.data = data;
     return this;
   }
-
+  /**
+   * Add an item to data and return this.
+   * @param dataItem An item of: OCR results             
+   * @return this
+  **/
   public AiBcrOcrData addDataItem(AiBcrOcrDataPart dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<AiBcrOcrDataPart>();
@@ -135,6 +178,10 @@ public class AiBcrOcrData {
     return data;
   }  
 
+  /**
+   * Set data.
+   * @param data OCR results             
+  **/
   public void setData(List<AiBcrOcrDataPart> data) {
     this.data = data;
   }

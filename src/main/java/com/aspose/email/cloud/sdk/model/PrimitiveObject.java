@@ -46,6 +46,11 @@ public class PrimitiveObject extends BaseObject {
   @JsonProperty("value")
   private String value = null;
 
+  /**
+   * Set value and return this.
+   * @param value Property value             
+   * @return this
+  **/
   public PrimitiveObject value(String value) {
     this.value = value;
     return this;
@@ -59,6 +64,10 @@ public class PrimitiveObject extends BaseObject {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Property value             
+  **/
   public void setValue(String value) {
     this.value = value;
   }

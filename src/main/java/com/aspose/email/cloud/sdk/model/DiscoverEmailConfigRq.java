@@ -52,6 +52,11 @@ public class DiscoverEmailConfigRq {
   @JsonProperty("login")
   private String login = null;
 
+  /**
+   * Set address and return this.
+   * @param address Email address to discover.             
+   * @return this
+  **/
   public DiscoverEmailConfigRq address(String address) {
     this.address = address;
     return this;
@@ -65,10 +70,19 @@ public class DiscoverEmailConfigRq {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Email address to discover.             
+  **/
   public void setAddress(String address) {
     this.address = address;
   }
 
+  /**
+   * Set fastProcessing and return this.
+   * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+   * @return this
+  **/
   public DiscoverEmailConfigRq fastProcessing(Boolean fastProcessing) {
     this.fastProcessing = fastProcessing;
     return this;
@@ -82,10 +96,19 @@ public class DiscoverEmailConfigRq {
     return fastProcessing;
   }  
 
+  /**
+   * Set fastProcessing.
+   * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+  **/
   public void setFastProcessing(Boolean fastProcessing) {
     this.fastProcessing = fastProcessing;
   }
 
+  /**
+   * Set login and return this.
+   * @param login Email account login. If not specified, address used as a login.             
+   * @return this
+  **/
   public DiscoverEmailConfigRq login(String login) {
     this.login = login;
     return this;
@@ -99,6 +122,10 @@ public class DiscoverEmailConfigRq {
     return login;
   }  
 
+  /**
+   * Set login.
+   * @param login Email account login. If not specified, address used as a login.             
+  **/
   public void setLogin(String login) {
     this.login = login;
   }

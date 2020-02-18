@@ -55,6 +55,11 @@ public class AiNameComponent {
   @JsonProperty("position")
   private Integer position = null;
 
+  /**
+   * Set value and return this.
+   * @param value Component value             
+   * @return this
+  **/
   public AiNameComponent value(String value) {
     this.value = value;
     return this;
@@ -68,10 +73,19 @@ public class AiNameComponent {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Component value             
+  **/
   public void setValue(String value) {
     this.value = value;
   }
 
+  /**
+   * Set category and return this.
+   * @param category Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+   * @return this
+  **/
   public AiNameComponent category(String category) {
     this.category = category;
     return this;
@@ -85,10 +99,19 @@ public class AiNameComponent {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+  **/
   public void setCategory(String category) {
     this.category = category;
   }
 
+  /**
+   * Set score and return this.
+   * @param score Score from 0.0 to 1.0             
+   * @return this
+  **/
   public AiNameComponent score(Double score) {
     this.score = score;
     return this;
@@ -102,10 +125,19 @@ public class AiNameComponent {
     return score;
   }  
 
+  /**
+   * Set score.
+   * @param score Score from 0.0 to 1.0             
+  **/
   public void setScore(Double score) {
     this.score = score;
   }
 
+  /**
+   * Set position and return this.
+   * @param position Component position from 0             
+   * @return this
+  **/
   public AiNameComponent position(Integer position) {
     this.position = position;
     return this;
@@ -119,6 +151,10 @@ public class AiNameComponent {
     return position;
   }  
 
+  /**
+   * Set position.
+   * @param position Component position from 0             
+  **/
   public void setPosition(Integer position) {
     this.position = position;
   }

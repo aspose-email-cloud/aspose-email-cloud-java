@@ -49,6 +49,11 @@ public class SetEmailPropertyRequest {
   @JsonProperty("storageFolder")
   private StorageFolderLocation storageFolder = null;
 
+  /**
+   * Set emailProperty and return this.
+   * @param emailProperty An email property that should be updated             
+   * @return this
+  **/
   public SetEmailPropertyRequest emailProperty(EmailProperty emailProperty) {
     this.emailProperty = emailProperty;
     return this;
@@ -62,10 +67,19 @@ public class SetEmailPropertyRequest {
     return emailProperty;
   }  
 
+  /**
+   * Set emailProperty.
+   * @param emailProperty An email property that should be updated             
+  **/
   public void setEmailProperty(EmailProperty emailProperty) {
     this.emailProperty = emailProperty;
   }
 
+  /**
+   * Set storageFolder and return this.
+   * @param storageFolder An email document location in storage             
+   * @return this
+  **/
   public SetEmailPropertyRequest storageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
     return this;
@@ -79,6 +93,10 @@ public class SetEmailPropertyRequest {
     return storageFolder;
   }  
 
+  /**
+   * Set storageFolder.
+   * @param storageFolder An email document location in storage             
+  **/
   public void setStorageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
   }

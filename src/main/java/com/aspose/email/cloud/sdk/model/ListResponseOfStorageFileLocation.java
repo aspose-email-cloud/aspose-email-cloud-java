@@ -46,11 +46,20 @@ public class ListResponseOfStorageFileLocation {
   @JsonProperty("value")
   private List<StorageFileLocation> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfStorageFileLocation value(List<StorageFileLocation> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfStorageFileLocation addValueItem(StorageFileLocation valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<StorageFileLocation>();
@@ -67,6 +76,10 @@ public class ListResponseOfStorageFileLocation {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<StorageFileLocation> value) {
     this.value = value;
   }

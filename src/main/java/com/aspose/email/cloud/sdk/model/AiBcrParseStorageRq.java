@@ -46,6 +46,11 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
   @JsonProperty("outFolder")
   private StorageFolderLocation outFolder = null;
 
+  /**
+   * Set outFolder and return this.
+   * @param outFolder Parse output folder location on storage             
+   * @return this
+  **/
   public AiBcrParseStorageRq outFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
     return this;
@@ -59,6 +64,10 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
     return outFolder;
   }  
 
+  /**
+   * Set outFolder.
+   * @param outFolder Parse output folder location on storage             
+  **/
   public void setOutFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
   }

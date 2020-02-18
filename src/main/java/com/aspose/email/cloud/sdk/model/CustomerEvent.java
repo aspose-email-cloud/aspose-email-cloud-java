@@ -49,6 +49,11 @@ public class CustomerEvent {
   @JsonProperty("date")
   private Date date = null;
 
+  /**
+   * Set category and return this.
+   * @param category Event category.             
+   * @return this
+  **/
   public CustomerEvent category(EnumWithCustomOfEventCategory category) {
     this.category = category;
     return this;
@@ -62,10 +67,19 @@ public class CustomerEvent {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Event category.             
+  **/
   public void setCategory(EnumWithCustomOfEventCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set date and return this.
+   * @param date Event date.             
+   * @return this
+  **/
   public CustomerEvent date(Date date) {
     this.date = date;
     return this;
@@ -79,6 +93,10 @@ public class CustomerEvent {
     return date;
   }  
 
+  /**
+   * Set date.
+   * @param date Event date.             
+  **/
   public void setDate(Date date) {
     this.date = date;
   }

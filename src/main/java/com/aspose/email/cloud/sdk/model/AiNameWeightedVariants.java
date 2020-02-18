@@ -49,11 +49,20 @@ public class AiNameWeightedVariants {
   @JsonProperty("comments")
   private String comments = null;
 
+  /**
+   * Set names and return this.
+   * @param names List of name variations             
+   * @return this
+  **/
   public AiNameWeightedVariants names(List<AiNameWeighted> names) {
     this.names = names;
     return this;
   }
-
+  /**
+   * Add an item to names and return this.
+   * @param namesItem An item of: List of name variations             
+   * @return this
+  **/
   public AiNameWeightedVariants addNamesItem(AiNameWeighted namesItem) {
     if (this.names == null) {
       this.names = new ArrayList<AiNameWeighted>();
@@ -70,10 +79,19 @@ public class AiNameWeightedVariants {
     return names;
   }  
 
+  /**
+   * Set names.
+   * @param names List of name variations             
+  **/
   public void setNames(List<AiNameWeighted> names) {
     this.names = names;
   }
 
+  /**
+   * Set comments and return this.
+   * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
+   * @return this
+  **/
   public AiNameWeightedVariants comments(String comments) {
     this.comments = comments;
     return this;
@@ -87,6 +105,10 @@ public class AiNameWeightedVariants {
     return comments;
   }  
 
+  /**
+   * Set comments.
+   * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
+  **/
   public void setComments(String comments) {
     this.comments = comments;
   }

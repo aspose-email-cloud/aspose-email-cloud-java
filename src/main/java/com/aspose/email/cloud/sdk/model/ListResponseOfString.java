@@ -46,11 +46,20 @@ public class ListResponseOfString {
   @JsonProperty("value")
   private List<String> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfString value(List<String> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfString addValueItem(String valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<String>();
@@ -67,6 +76,10 @@ public class ListResponseOfString {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<String> value) {
     this.value = value;
   }

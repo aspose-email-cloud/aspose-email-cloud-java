@@ -46,6 +46,11 @@ public class SendEmailModelRq extends AccountBaseRequest {
   @JsonProperty("message")
   private EmailDto message = null;
 
+  /**
+   * Set message and return this.
+   * @param message Message to send             
+   * @return this
+  **/
   public SendEmailModelRq message(EmailDto message) {
     this.message = message;
     return this;
@@ -59,6 +64,10 @@ public class SendEmailModelRq extends AccountBaseRequest {
     return message;
   }  
 
+  /**
+   * Set message.
+   * @param message Message to send             
+  **/
   public void setMessage(EmailDto message) {
     this.message = message;
   }

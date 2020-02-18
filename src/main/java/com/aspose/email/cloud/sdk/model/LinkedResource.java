@@ -46,6 +46,11 @@ public class LinkedResource extends AttachmentBase {
   @JsonProperty("contentLink")
   private String contentLink = null;
 
+  /**
+   * Set contentLink and return this.
+   * @param contentLink URI that the resource must match.             
+   * @return this
+  **/
   public LinkedResource contentLink(String contentLink) {
     this.contentLink = contentLink;
     return this;
@@ -59,6 +64,10 @@ public class LinkedResource extends AttachmentBase {
     return contentLink;
   }  
 
+  /**
+   * Set contentLink.
+   * @param contentLink URI that the resource must match.             
+  **/
   public void setContentLink(String contentLink) {
     this.contentLink = contentLink;
   }

@@ -49,6 +49,11 @@ public class DiscUsage {
   @JsonProperty("totalSize")
   private Long totalSize = null;
 
+  /**
+   * Set usedSize and return this.
+   * @param usedSize Application used disc space.
+   * @return this
+  **/
   public DiscUsage usedSize(Long usedSize) {
     this.usedSize = usedSize;
     return this;
@@ -62,10 +67,19 @@ public class DiscUsage {
     return usedSize;
   }  
 
+  /**
+   * Set usedSize.
+   * @param usedSize Application used disc space.
+  **/
   public void setUsedSize(Long usedSize) {
     this.usedSize = usedSize;
   }
 
+  /**
+   * Set totalSize and return this.
+   * @param totalSize Total disc space.
+   * @return this
+  **/
   public DiscUsage totalSize(Long totalSize) {
     this.totalSize = totalSize;
     return this;
@@ -79,6 +93,10 @@ public class DiscUsage {
     return totalSize;
   }  
 
+  /**
+   * Set totalSize.
+   * @param totalSize Total disc space.
+  **/
   public void setTotalSize(Long totalSize) {
     this.totalSize = totalSize;
   }

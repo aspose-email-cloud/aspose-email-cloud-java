@@ -46,6 +46,11 @@ public class AiBcrImageStorageFile extends AiBcrImage {
   @JsonProperty("file")
   private StorageFileLocation file = null;
 
+  /**
+   * Set file and return this.
+   * @param file Image location             
+   * @return this
+  **/
   public AiBcrImageStorageFile file(StorageFileLocation file) {
     this.file = file;
     return this;
@@ -59,6 +64,10 @@ public class AiBcrImageStorageFile extends AiBcrImage {
     return file;
   }  
 
+  /**
+   * Set file.
+   * @param file Image location             
+  **/
   public void setFile(StorageFileLocation file) {
     this.file = file;
   }

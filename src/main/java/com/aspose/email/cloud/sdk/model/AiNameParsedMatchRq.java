@@ -46,11 +46,20 @@ public class AiNameParsedMatchRq extends AiNameParsedRq {
   @JsonProperty("otherParsedName")
   private List<AiNameComponent> otherParsedName = new ArrayList<AiNameComponent>();
 
+  /**
+   * Set otherParsedName and return this.
+   * @param otherParsedName Other parsed name to match             
+   * @return this
+  **/
   public AiNameParsedMatchRq otherParsedName(List<AiNameComponent> otherParsedName) {
     this.otherParsedName = otherParsedName;
     return this;
   }
-
+  /**
+   * Add an item to otherParsedName and return this.
+   * @param otherParsedNameItem An item of: Other parsed name to match             
+   * @return this
+  **/
   public AiNameParsedMatchRq addOtherParsedNameItem(AiNameComponent otherParsedNameItem) {
     this.otherParsedName.add(otherParsedNameItem);
     return this;
@@ -64,6 +73,10 @@ public class AiNameParsedMatchRq extends AiNameParsedRq {
     return otherParsedName;
   }  
 
+  /**
+   * Set otherParsedName.
+   * @param otherParsedName Other parsed name to match             
+  **/
   public void setOtherParsedName(List<AiNameComponent> otherParsedName) {
     this.otherParsedName = otherParsedName;
   }

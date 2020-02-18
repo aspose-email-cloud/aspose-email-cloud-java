@@ -64,6 +64,11 @@ public class EmailAccountRequest {
   @JsonProperty("storageFile")
   private StorageFileLocation storageFile = null;
 
+  /**
+   * Set host and return this.
+   * @param host Email account host             
+   * @return this
+  **/
   public EmailAccountRequest host(String host) {
     this.host = host;
     return this;
@@ -77,10 +82,19 @@ public class EmailAccountRequest {
     return host;
   }  
 
+  /**
+   * Set host.
+   * @param host Email account host             
+  **/
   public void setHost(String host) {
     this.host = host;
   }
 
+  /**
+   * Set port and return this.
+   * @param port Email account port             
+   * @return this
+  **/
   public EmailAccountRequest port(Integer port) {
     this.port = port;
     return this;
@@ -94,10 +108,19 @@ public class EmailAccountRequest {
     return port;
   }  
 
+  /**
+   * Set port.
+   * @param port Email account port             
+  **/
   public void setPort(Integer port) {
     this.port = port;
   }
 
+  /**
+   * Set login and return this.
+   * @param login Email account login             
+   * @return this
+  **/
   public EmailAccountRequest login(String login) {
     this.login = login;
     return this;
@@ -111,27 +134,45 @@ public class EmailAccountRequest {
     return login;
   }  
 
+  /**
+   * Set login.
+   * @param login Email account login             
+  **/
   public void setLogin(String login) {
     this.login = login;
   }
 
+  /**
+   * Set securityOptions and return this.
+   * @param securityOptions Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @return this
+  **/
   public EmailAccountRequest securityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
     return this;
   }
 
   /**
-   * Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
   public String getSecurityOptions() {
     return securityOptions;
   }  
 
+  /**
+   * Set securityOptions.
+   * @param securityOptions Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+  **/
   public void setSecurityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
   }
 
+  /**
+   * Set protocolType and return this.
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @return this
+  **/
   public EmailAccountRequest protocolType(String protocolType) {
     this.protocolType = protocolType;
     return this;
@@ -145,10 +186,19 @@ public class EmailAccountRequest {
     return protocolType;
   }  
 
+  /**
+   * Set protocolType.
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+  **/
   public void setProtocolType(String protocolType) {
     this.protocolType = protocolType;
   }
 
+  /**
+   * Set description and return this.
+   * @param description Email account description             
+   * @return this
+  **/
   public EmailAccountRequest description(String description) {
     this.description = description;
     return this;
@@ -162,10 +212,19 @@ public class EmailAccountRequest {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description Email account description             
+  **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+  /**
+   * Set storageFile and return this.
+   * @param storageFile A storage file location info to store email account             
+   * @return this
+  **/
   public EmailAccountRequest storageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
     return this;
@@ -179,6 +238,10 @@ public class EmailAccountRequest {
     return storageFile;
   }  
 
+  /**
+   * Set storageFile.
+   * @param storageFile A storage file location info to store email account             
+  **/
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
@@ -244,7 +307,7 @@ public class EmailAccountRequest {
    * @param host Email account host             
    * @param port Email account port             
    * @param login Email account login             
-   * @param securityOptions Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param securityOptions Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param description Email account description             
    * @param storageFile A storage file location info to store email account             

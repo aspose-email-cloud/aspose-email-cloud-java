@@ -46,11 +46,20 @@ public class FileVersions {
   @JsonProperty("value")
   private List<FileVersion> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value File versions FileVersion.
+   * @return this
+  **/
   public FileVersions value(List<FileVersion> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: File versions FileVersion.
+   * @return this
+  **/
   public FileVersions addValueItem(FileVersion valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<FileVersion>();
@@ -67,6 +76,10 @@ public class FileVersions {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value File versions FileVersion.
+  **/
   public void setValue(List<FileVersion> value) {
     this.value = value;
   }

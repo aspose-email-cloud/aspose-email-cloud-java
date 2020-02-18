@@ -46,11 +46,20 @@ public class ListResponseOfContactDto {
   @JsonProperty("value")
   private List<ContactDto> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfContactDto value(List<ContactDto> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfContactDto addValueItem(ContactDto valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<ContactDto>();
@@ -67,6 +76,10 @@ public class ListResponseOfContactDto {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<ContactDto> value) {
     this.value = value;
   }

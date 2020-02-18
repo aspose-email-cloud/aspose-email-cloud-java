@@ -49,6 +49,11 @@ public class AiNameGenderHypothesis {
   @JsonProperty("score")
   private Double score = null;
 
+  /**
+   * Set gender and return this.
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
+   * @return this
+  **/
   public AiNameGenderHypothesis gender(String gender) {
     this.gender = gender;
     return this;
@@ -62,10 +67,19 @@ public class AiNameGenderHypothesis {
     return gender;
   }  
 
+  /**
+   * Set gender.
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
+  **/
   public void setGender(String gender) {
     this.gender = gender;
   }
 
+  /**
+   * Set score and return this.
+   * @param score Hypothesis score             
+   * @return this
+  **/
   public AiNameGenderHypothesis score(Double score) {
     this.score = score;
     return this;
@@ -79,6 +93,10 @@ public class AiNameGenderHypothesis {
     return score;
   }  
 
+  /**
+   * Set score.
+   * @param score Hypothesis score             
+  **/
   public void setScore(Double score) {
     this.score = score;
   }

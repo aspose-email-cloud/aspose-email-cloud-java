@@ -46,11 +46,20 @@ public class ListResponseOfEmailAccountConfig {
   @JsonProperty("value")
   private List<EmailAccountConfig> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfEmailAccountConfig value(List<EmailAccountConfig> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfEmailAccountConfig addValueItem(EmailAccountConfig valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<EmailAccountConfig>();
@@ -67,6 +76,10 @@ public class ListResponseOfEmailAccountConfig {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<EmailAccountConfig> value) {
     this.value = value;
   }

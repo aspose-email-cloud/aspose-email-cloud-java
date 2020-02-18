@@ -49,6 +49,11 @@ public class AiNameWeighted {
   @JsonProperty("score")
   private Double score = null;
 
+  /**
+   * Set name and return this.
+   * @param name Name             
+   * @return this
+  **/
   public AiNameWeighted name(String name) {
     this.name = name;
     return this;
@@ -62,10 +67,19 @@ public class AiNameWeighted {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Name             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set score and return this.
+   * @param score Score of name             
+   * @return this
+  **/
   public AiNameWeighted score(Double score) {
     this.score = score;
     return this;
@@ -79,6 +93,10 @@ public class AiNameWeighted {
     return score;
   }  
 
+  /**
+   * Set score.
+   * @param score Score of name             
+  **/
   public void setScore(Double score) {
     this.score = score;
   }

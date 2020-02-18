@@ -46,6 +46,11 @@ public class StorageFileLocation extends StorageFolderLocation {
   @JsonProperty("fileName")
   private String fileName = null;
 
+  /**
+   * Set fileName and return this.
+   * @param fileName A file name in storage             
+   * @return this
+  **/
   public StorageFileLocation fileName(String fileName) {
     this.fileName = fileName;
     return this;
@@ -59,6 +64,10 @@ public class StorageFileLocation extends StorageFolderLocation {
     return fileName;
   }  
 
+  /**
+   * Set fileName.
+   * @param fileName A file name in storage             
+  **/
   public void setFileName(String fileName) {
     this.fileName = fileName;
   }

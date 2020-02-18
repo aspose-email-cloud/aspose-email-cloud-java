@@ -58,6 +58,11 @@ public class ContentType {
   @JsonProperty("parameters")
   private List<ContentTypeParameter> parameters = null;
 
+  /**
+   * Set boundary and return this.
+   * @param boundary The boundary parameter included in the Content-Type header.             
+   * @return this
+  **/
   public ContentType boundary(String boundary) {
     this.boundary = boundary;
     return this;
@@ -71,10 +76,19 @@ public class ContentType {
     return boundary;
   }  
 
+  /**
+   * Set boundary.
+   * @param boundary The boundary parameter included in the Content-Type header.             
+  **/
   public void setBoundary(String boundary) {
     this.boundary = boundary;
   }
 
+  /**
+   * Set charSet and return this.
+   * @param charSet CharSet parameter.             
+   * @return this
+  **/
   public ContentType charSet(String charSet) {
     this.charSet = charSet;
     return this;
@@ -88,10 +102,19 @@ public class ContentType {
     return charSet;
   }  
 
+  /**
+   * Set charSet.
+   * @param charSet CharSet parameter.             
+  **/
   public void setCharSet(String charSet) {
     this.charSet = charSet;
   }
 
+  /**
+   * Set mediaType and return this.
+   * @param mediaType The internet media type.             
+   * @return this
+  **/
   public ContentType mediaType(String mediaType) {
     this.mediaType = mediaType;
     return this;
@@ -105,10 +128,19 @@ public class ContentType {
     return mediaType;
   }  
 
+  /**
+   * Set mediaType.
+   * @param mediaType The internet media type.             
+  **/
   public void setMediaType(String mediaType) {
     this.mediaType = mediaType;
   }
 
+  /**
+   * Set name and return this.
+   * @param name Name parameter.             
+   * @return this
+  **/
   public ContentType name(String name) {
     this.name = name;
     return this;
@@ -122,15 +154,28 @@ public class ContentType {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Name parameter.             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set parameters and return this.
+   * @param parameters Full list of parameters             
+   * @return this
+  **/
   public ContentType parameters(List<ContentTypeParameter> parameters) {
     this.parameters = parameters;
     return this;
   }
-
+  /**
+   * Add an item to parameters and return this.
+   * @param parametersItem An item of: Full list of parameters             
+   * @return this
+  **/
   public ContentType addParametersItem(ContentTypeParameter parametersItem) {
     if (this.parameters == null) {
       this.parameters = new ArrayList<ContentTypeParameter>();
@@ -147,6 +192,10 @@ public class ContentType {
     return parameters;
   }  
 
+  /**
+   * Set parameters.
+   * @param parameters Full list of parameters             
+  **/
   public void setParameters(List<ContentTypeParameter> parameters) {
     this.parameters = parameters;
   }

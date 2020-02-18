@@ -52,6 +52,11 @@ public class ReminderTrigger {
   @JsonProperty("related")
   private String related = null;
 
+  /**
+   * Set dateTime and return this.
+   * @param dateTime A trigger set to an absolute date/time.
+   * @return this
+  **/
   public ReminderTrigger dateTime(Date dateTime) {
     this.dateTime = dateTime;
     return this;
@@ -65,10 +70,19 @@ public class ReminderTrigger {
     return dateTime;
   }  
 
+  /**
+   * Set dateTime.
+   * @param dateTime A trigger set to an absolute date/time.
+  **/
   public void setDateTime(Date dateTime) {
     this.dateTime = dateTime;
   }
 
+  /**
+   * Set duration and return this.
+   * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
+   * @return this
+  **/
   public ReminderTrigger duration(Long duration) {
     this.duration = duration;
     return this;
@@ -82,10 +96,19 @@ public class ReminderTrigger {
     return duration;
   }  
 
+  /**
+   * Set duration.
+   * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
+  **/
   public void setDuration(Long duration) {
     this.duration = duration;
   }
 
+  /**
+   * Set related and return this.
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * @return this
+  **/
   public ReminderTrigger related(String related) {
     this.related = related;
     return this;
@@ -99,6 +122,10 @@ public class ReminderTrigger {
     return related;
   }  
 
+  /**
+   * Set related.
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+  **/
   public void setRelated(String related) {
     this.related = related;
   }

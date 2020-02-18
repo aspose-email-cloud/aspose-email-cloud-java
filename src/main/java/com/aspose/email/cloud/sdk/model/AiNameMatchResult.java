@@ -49,6 +49,11 @@ public class AiNameMatchResult {
   @JsonProperty("mismatches")
   private List<AiNameMismatch> mismatches = null;
 
+  /**
+   * Set similarity and return this.
+   * @param similarity Similarity score             
+   * @return this
+  **/
   public AiNameMatchResult similarity(Double similarity) {
     this.similarity = similarity;
     return this;
@@ -62,15 +67,28 @@ public class AiNameMatchResult {
     return similarity;
   }  
 
+  /**
+   * Set similarity.
+   * @param similarity Similarity score             
+  **/
   public void setSimilarity(Double similarity) {
     this.similarity = similarity;
   }
 
+  /**
+   * Set mismatches and return this.
+   * @param mismatches Detailed description of mismatches             
+   * @return this
+  **/
   public AiNameMatchResult mismatches(List<AiNameMismatch> mismatches) {
     this.mismatches = mismatches;
     return this;
   }
-
+  /**
+   * Add an item to mismatches and return this.
+   * @param mismatchesItem An item of: Detailed description of mismatches             
+   * @return this
+  **/
   public AiNameMatchResult addMismatchesItem(AiNameMismatch mismatchesItem) {
     if (this.mismatches == null) {
       this.mismatches = new ArrayList<AiNameMismatch>();
@@ -87,6 +105,10 @@ public class AiNameMatchResult {
     return mismatches;
   }  
 
+  /**
+   * Set mismatches.
+   * @param mismatches Detailed description of mismatches             
+  **/
   public void setMismatches(List<AiNameMismatch> mismatches) {
     this.mismatches = mismatches;
   }

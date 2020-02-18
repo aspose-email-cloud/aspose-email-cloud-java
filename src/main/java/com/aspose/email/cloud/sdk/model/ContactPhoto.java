@@ -49,6 +49,11 @@ public class ContactPhoto {
   @JsonProperty("base64Data")
   private String base64Data = null;
 
+  /**
+   * Set photoImageFormat and return this.
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @return this
+  **/
   public ContactPhoto photoImageFormat(String photoImageFormat) {
     this.photoImageFormat = photoImageFormat;
     return this;
@@ -62,10 +67,19 @@ public class ContactPhoto {
     return photoImageFormat;
   }  
 
+  /**
+   * Set photoImageFormat.
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+  **/
   public void setPhotoImageFormat(String photoImageFormat) {
     this.photoImageFormat = photoImageFormat;
   }
 
+  /**
+   * Set base64Data and return this.
+   * @param base64Data Photo serialized as base64 string.             
+   * @return this
+  **/
   public ContactPhoto base64Data(String base64Data) {
     this.base64Data = base64Data;
     return this;
@@ -79,6 +93,10 @@ public class ContactPhoto {
     return base64Data;
   }  
 
+  /**
+   * Set base64Data.
+   * @param base64Data Photo serialized as base64 string.             
+  **/
   public void setBase64Data(String base64Data) {
     this.base64Data = base64Data;
   }

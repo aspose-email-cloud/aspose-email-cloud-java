@@ -58,6 +58,11 @@ public class Attachment extends AttachmentBase {
   @JsonProperty("preferredTextEncoding")
   private String preferredTextEncoding = null;
 
+  /**
+   * Set contentDisposition and return this.
+   * @param contentDisposition Content-Disposition header. Read only.             
+   * @return this
+  **/
   public Attachment contentDisposition(String contentDisposition) {
     this.contentDisposition = contentDisposition;
     return this;
@@ -71,10 +76,19 @@ public class Attachment extends AttachmentBase {
     return contentDisposition;
   }  
 
+  /**
+   * Set contentDisposition.
+   * @param contentDisposition Content-Disposition header. Read only.             
+  **/
   public void setContentDisposition(String contentDisposition) {
     this.contentDisposition = contentDisposition;
   }
 
+  /**
+   * Set isEmbeddedMessage and return this.
+   * @param isEmbeddedMessage Determines if attachment is an embedded message. Read only.             
+   * @return this
+  **/
   public Attachment isEmbeddedMessage(Boolean isEmbeddedMessage) {
     this.isEmbeddedMessage = isEmbeddedMessage;
     return this;
@@ -88,10 +102,19 @@ public class Attachment extends AttachmentBase {
     return isEmbeddedMessage;
   }  
 
+  /**
+   * Set isEmbeddedMessage.
+   * @param isEmbeddedMessage Determines if attachment is an embedded message. Read only.             
+  **/
   public void setIsEmbeddedMessage(Boolean isEmbeddedMessage) {
     this.isEmbeddedMessage = isEmbeddedMessage;
   }
 
+  /**
+   * Set name and return this.
+   * @param name Attachment name.             
+   * @return this
+  **/
   public Attachment name(String name) {
     this.name = name;
     return this;
@@ -105,10 +128,19 @@ public class Attachment extends AttachmentBase {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Attachment name.             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set nameEncoding and return this.
+   * @param nameEncoding Encoding of attachment name.             
+   * @return this
+  **/
   public Attachment nameEncoding(String nameEncoding) {
     this.nameEncoding = nameEncoding;
     return this;
@@ -122,10 +154,19 @@ public class Attachment extends AttachmentBase {
     return nameEncoding;
   }  
 
+  /**
+   * Set nameEncoding.
+   * @param nameEncoding Encoding of attachment name.             
+  **/
   public void setNameEncoding(String nameEncoding) {
     this.nameEncoding = nameEncoding;
   }
 
+  /**
+   * Set preferredTextEncoding and return this.
+   * @param preferredTextEncoding Preferred text encoding.             
+   * @return this
+  **/
   public Attachment preferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
     return this;
@@ -139,6 +180,10 @@ public class Attachment extends AttachmentBase {
     return preferredTextEncoding;
   }  
 
+  /**
+   * Set preferredTextEncoding.
+   * @param preferredTextEncoding Preferred text encoding.             
+  **/
   public void setPreferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
   }

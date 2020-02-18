@@ -46,6 +46,11 @@ public class ValueResponse {
   @JsonProperty("value")
   private String value = null;
 
+  /**
+   * Set value and return this.
+   * @param value Gets or sets string content.             
+   * @return this
+  **/
   public ValueResponse value(String value) {
     this.value = value;
     return this;
@@ -59,6 +64,10 @@ public class ValueResponse {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Gets or sets string content.             
+  **/
   public void setValue(String value) {
     this.value = value;
   }

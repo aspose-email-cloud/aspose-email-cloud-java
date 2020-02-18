@@ -46,11 +46,20 @@ public class AiBcrBase64Rq extends AiBcrRq {
   @JsonProperty("images")
   private List<AiBcrBase64Image> images = null;
 
+  /**
+   * Set images and return this.
+   * @param images Images to recognize             
+   * @return this
+  **/
   public AiBcrBase64Rq images(List<AiBcrBase64Image> images) {
     this.images = images;
     return this;
   }
-
+  /**
+   * Add an item to images and return this.
+   * @param imagesItem An item of: Images to recognize             
+   * @return this
+  **/
   public AiBcrBase64Rq addImagesItem(AiBcrBase64Image imagesItem) {
     if (this.images == null) {
       this.images = new ArrayList<AiBcrBase64Image>();
@@ -67,6 +76,10 @@ public class AiBcrBase64Rq extends AiBcrRq {
     return images;
   }  
 
+  /**
+   * Set images.
+   * @param images Images to recognize             
+  **/
   public void setImages(List<AiBcrBase64Image> images) {
     this.images = images;
   }

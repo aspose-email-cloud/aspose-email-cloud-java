@@ -46,11 +46,20 @@ public class ListResponseOfMailServerFolder {
   @JsonProperty("value")
   private List<MailServerFolder> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfMailServerFolder value(List<MailServerFolder> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfMailServerFolder addValueItem(MailServerFolder valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<MailServerFolder>();
@@ -67,6 +76,10 @@ public class ListResponseOfMailServerFolder {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<MailServerFolder> value) {
     this.value = value;
   }

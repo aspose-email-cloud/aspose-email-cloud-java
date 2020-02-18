@@ -46,6 +46,11 @@ public class AiBcrImage {
   @JsonProperty("isSingle")
   private Boolean isSingle = null;
 
+  /**
+   * Set isSingle and return this.
+   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * @return this
+  **/
   public AiBcrImage isSingle(Boolean isSingle) {
     this.isSingle = isSingle;
     return this;
@@ -59,6 +64,10 @@ public class AiBcrImage {
     return isSingle;
   }  
 
+  /**
+   * Set isSingle.
+   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+  **/
   public void setIsSingle(Boolean isSingle) {
     this.isSingle = isSingle;
   }

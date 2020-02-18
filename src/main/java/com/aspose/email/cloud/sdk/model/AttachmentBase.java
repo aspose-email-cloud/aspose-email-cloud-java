@@ -55,6 +55,11 @@ public class AttachmentBase {
   @JsonProperty("headers")
   private Map<String, String> headers = null;
 
+  /**
+   * Set base64Data and return this.
+   * @param base64Data Attachment file content as Base64 string.             
+   * @return this
+  **/
   public AttachmentBase base64Data(String base64Data) {
     this.base64Data = base64Data;
     return this;
@@ -68,10 +73,19 @@ public class AttachmentBase {
     return base64Data;
   }  
 
+  /**
+   * Set base64Data.
+   * @param base64Data Attachment file content as Base64 string.             
+  **/
   public void setBase64Data(String base64Data) {
     this.base64Data = base64Data;
   }
 
+  /**
+   * Set contentId and return this.
+   * @param contentId Attachment content id             
+   * @return this
+  **/
   public AttachmentBase contentId(String contentId) {
     this.contentId = contentId;
     return this;
@@ -85,10 +99,19 @@ public class AttachmentBase {
     return contentId;
   }  
 
+  /**
+   * Set contentId.
+   * @param contentId Attachment content id             
+  **/
   public void setContentId(String contentId) {
     this.contentId = contentId;
   }
 
+  /**
+   * Set contentType and return this.
+   * @param contentType Content type             
+   * @return this
+  **/
   public AttachmentBase contentType(ContentType contentType) {
     this.contentType = contentType;
     return this;
@@ -102,15 +125,31 @@ public class AttachmentBase {
     return contentType;
   }  
 
+  /**
+   * Set contentType.
+   * @param contentType Content type             
+  **/
   public void setContentType(ContentType contentType) {
     this.contentType = contentType;
   }
 
+  /**
+   * Set headers and return this.
+   * @param headers Attachment headers.             
+   * @return this
+  **/
   public AttachmentBase headers(Map<String, String> headers) {
     this.headers = headers;
     return this;
   }
 
+  /**
+   * Add an item to headers and return this.
+   * headers is: Attachment headers.             
+   * @param key An item key
+   * @param headersItem An item value
+   * @return this
+  **/
   public AttachmentBase putHeadersItem(String key, String headersItem) {
     if (this.headers == null) {
       this.headers = new HashMap<String, String>();
@@ -127,6 +166,10 @@ public class AttachmentBase {
     return headers;
   }  
 
+  /**
+   * Set headers.
+   * @param headers Attachment headers.             
+  **/
   public void setHeaders(Map<String, String> headers) {
     this.headers = headers;
   }
