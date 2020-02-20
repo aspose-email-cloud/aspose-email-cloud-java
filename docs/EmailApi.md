@@ -1254,7 +1254,7 @@ Name | Type | Description  | Notes
 
 <a name="getCalendarAttachment"></a>
 ## **getCalendarAttachment**
-> byte[] getCalendarAttachment(GetCalendarAttachmentRequestData request)
+> [File](File.md) getCalendarAttachment(GetCalendarAttachmentRequestData request)
 
 Get iCalendar document attachment by name             
 
@@ -1276,7 +1276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**byte[]**
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1394,7 +1394,7 @@ Name | Type | Description  | Notes
 
 <a name="getContactAttachment"></a>
 ## **getContactAttachment**
-> byte[] getContactAttachment(GetContactAttachmentRequestData request)
+> [File](File.md) getContactAttachment(GetContactAttachmentRequestData request)
 
 Get attachment file by name             
 
@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**byte[]**
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1588,7 +1588,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailAsFile"></a>
 ## **getEmailAsFile**
-> byte[] getEmailAsFile(GetEmailAsFileRequestData request)
+> [File](File.md) getEmailAsFile(GetEmailAsFileRequestData request)
 
 Converts email document from storage to specified format and returns as file             
 
@@ -1610,13 +1610,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**byte[]**
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
 <a name="getEmailAttachment"></a>
 ## **getEmailAttachment**
-> byte[] getEmailAttachment(GetEmailAttachmentRequestData request)
+> [File](File.md) getEmailAttachment(GetEmailAttachmentRequestData request)
 
 Get email attachment by name             
 
@@ -1638,7 +1638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**byte[]**
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1778,7 +1778,7 @@ Name | Type | Description  | Notes
 
 <a name="getMapiAttachment"></a>
 ## **getMapiAttachment**
-> byte[] getMapiAttachment(GetMapiAttachmentRequestData request)
+> [File](File.md) getMapiAttachment(GetMapiAttachmentRequestData request)
 
 Get document attachment as file stream             
 
@@ -1800,7 +1800,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**byte[]**
+[**File**](File.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
