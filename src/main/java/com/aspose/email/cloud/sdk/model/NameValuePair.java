@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * NameValuePair
+ * An extended property.
  */
 public class NameValuePair {
   @JsonProperty("value")
@@ -51,7 +51,7 @@ public class NameValuePair {
 
   /**
    * Set value and return this.
-   * @param value 
+   * @param value Name of the property 
    * @return this
   **/
   public NameValuePair value(String value) {
@@ -60,7 +60,7 @@ public class NameValuePair {
   }
 
   /**
-   * Get value
+   * Name of the property 
    * @return value
   **/
   public String getValue() {
@@ -69,7 +69,7 @@ public class NameValuePair {
 
   /**
    * Set value.
-   * @param value 
+   * @param value Name of the property 
   **/
   public void setValue(String value) {
     this.value = value;
@@ -77,7 +77,7 @@ public class NameValuePair {
 
   /**
    * Set name and return this.
-   * @param name 
+   * @param name Value of the property
    * @return this
   **/
   public NameValuePair name(String name) {
@@ -86,7 +86,7 @@ public class NameValuePair {
   }
 
   /**
-   * Get name
+   * Value of the property
    * @return name
   **/
   public String getName() {
@@ -95,7 +95,7 @@ public class NameValuePair {
 
   /**
    * Set name.
-   * @param name 
+   * @param name Value of the property
   **/
   public void setName(String name) {
     this.name = name;
@@ -149,8 +149,8 @@ public class NameValuePair {
 
   /**
    * Initializes a new instance of the NameValuePair
-   * @param value 
-   * @param name 
+   * @param value Name of the property 
+   * @param name Value of the property
    */
   public NameValuePair(String value, String name) {
     super();
