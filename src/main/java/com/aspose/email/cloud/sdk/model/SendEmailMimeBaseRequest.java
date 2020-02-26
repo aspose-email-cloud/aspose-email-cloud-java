@@ -46,6 +46,11 @@ public class SendEmailMimeBaseRequest extends AccountBaseRequest {
   @JsonProperty("base64MimeMessage")
   private String base64MimeMessage = null;
 
+  /**
+   * Set base64MimeMessage and return this.
+   * @param base64MimeMessage Email document serialized as MIME             
+   * @return this
+  **/
   public SendEmailMimeBaseRequest base64MimeMessage(String base64MimeMessage) {
     this.base64MimeMessage = base64MimeMessage;
     return this;
@@ -59,6 +64,10 @@ public class SendEmailMimeBaseRequest extends AccountBaseRequest {
     return base64MimeMessage;
   }  
 
+  /**
+   * Set base64MimeMessage.
+   * @param base64MimeMessage Email document serialized as MIME             
+  **/
   public void setBase64MimeMessage(String base64MimeMessage) {
     this.base64MimeMessage = base64MimeMessage;
   }

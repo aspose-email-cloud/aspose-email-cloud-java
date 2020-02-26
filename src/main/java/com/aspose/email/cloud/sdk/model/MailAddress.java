@@ -52,6 +52,11 @@ public class MailAddress {
   @JsonProperty("participationStatus")
   private String participationStatus = null;
 
+  /**
+   * Set displayName and return this.
+   * @param displayName Display name             
+   * @return this
+  **/
   public MailAddress displayName(String displayName) {
     this.displayName = displayName;
     return this;
@@ -65,10 +70,19 @@ public class MailAddress {
     return displayName;
   }  
 
+  /**
+   * Set displayName.
+   * @param displayName Display name             
+  **/
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
+  /**
+   * Set address and return this.
+   * @param address Address             
+   * @return this
+  **/
   public MailAddress address(String address) {
     this.address = address;
     return this;
@@ -82,10 +96,19 @@ public class MailAddress {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Address             
+  **/
   public void setAddress(String address) {
     this.address = address;
   }
 
+  /**
+   * Set participationStatus and return this.
+   * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * @return this
+  **/
   public MailAddress participationStatus(String participationStatus) {
     this.participationStatus = participationStatus;
     return this;
@@ -99,6 +122,10 @@ public class MailAddress {
     return participationStatus;
   }  
 
+  /**
+   * Set participationStatus.
+   * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+  **/
   public void setParticipationStatus(String participationStatus) {
     this.participationStatus = participationStatus;
   }

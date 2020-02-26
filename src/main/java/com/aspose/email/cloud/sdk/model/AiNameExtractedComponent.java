@@ -49,6 +49,11 @@ public class AiNameExtractedComponent {
   @JsonProperty("value")
   private String value = null;
 
+  /**
+   * Set category and return this.
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * @return this
+  **/
   public AiNameExtractedComponent category(String category) {
     this.category = category;
     return this;
@@ -62,10 +67,19 @@ public class AiNameExtractedComponent {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+  **/
   public void setCategory(String category) {
     this.category = category;
   }
 
+  /**
+   * Set value and return this.
+   * @param value Extracted value             
+   * @return this
+  **/
   public AiNameExtractedComponent value(String value) {
     this.value = value;
     return this;
@@ -79,6 +93,10 @@ public class AiNameExtractedComponent {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Extracted value             
+  **/
   public void setValue(String value) {
     this.value = value;
   }

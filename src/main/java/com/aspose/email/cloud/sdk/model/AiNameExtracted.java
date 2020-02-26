@@ -49,11 +49,20 @@ public class AiNameExtracted {
   @JsonProperty("score")
   private Double score = null;
 
+  /**
+   * Set name and return this.
+   * @param name Extracted name components             
+   * @return this
+  **/
   public AiNameExtracted name(List<AiNameExtractedComponent> name) {
     this.name = name;
     return this;
   }
-
+  /**
+   * Add an item to name and return this.
+   * @param nameItem An item of: Extracted name components             
+   * @return this
+  **/
   public AiNameExtracted addNameItem(AiNameExtractedComponent nameItem) {
     if (this.name == null) {
       this.name = new ArrayList<AiNameExtractedComponent>();
@@ -70,10 +79,19 @@ public class AiNameExtracted {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Extracted name components             
+  **/
   public void setName(List<AiNameExtractedComponent> name) {
     this.name = name;
   }
 
+  /**
+   * Set score and return this.
+   * @param score Extracted name score             
+   * @return this
+  **/
   public AiNameExtracted score(Double score) {
     this.score = score;
     return this;
@@ -87,6 +105,10 @@ public class AiNameExtracted {
     return score;
   }  
 
+  /**
+   * Set score.
+   * @param score Extracted name score             
+  **/
   public void setScore(Double score) {
     this.score = score;
   }

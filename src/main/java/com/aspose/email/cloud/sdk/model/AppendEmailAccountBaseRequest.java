@@ -49,6 +49,11 @@ public class AppendEmailAccountBaseRequest extends AccountBaseRequest {
   @JsonProperty("markAsSent")
   private Boolean markAsSent = null;
 
+  /**
+   * Set folder and return this.
+   * @param folder Email account folder to store a message             
+   * @return this
+  **/
   public AppendEmailAccountBaseRequest folder(String folder) {
     this.folder = folder;
     return this;
@@ -62,10 +67,19 @@ public class AppendEmailAccountBaseRequest extends AccountBaseRequest {
     return folder;
   }  
 
+  /**
+   * Set folder.
+   * @param folder Email account folder to store a message             
+  **/
   public void setFolder(String folder) {
     this.folder = folder;
   }
 
+  /**
+   * Set markAsSent and return this.
+   * @param markAsSent Mark message as sent             
+   * @return this
+  **/
   public AppendEmailAccountBaseRequest markAsSent(Boolean markAsSent) {
     this.markAsSent = markAsSent;
     return this;
@@ -79,6 +93,10 @@ public class AppendEmailAccountBaseRequest extends AccountBaseRequest {
     return markAsSent;
   }  
 
+  /**
+   * Set markAsSent.
+   * @param markAsSent Mark message as sent             
+  **/
   public void setMarkAsSent(Boolean markAsSent) {
     this.markAsSent = markAsSent;
   }

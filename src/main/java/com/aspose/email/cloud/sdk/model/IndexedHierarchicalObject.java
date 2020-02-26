@@ -49,6 +49,11 @@ public class IndexedHierarchicalObject extends BaseObject {
   @JsonProperty("internalProperties")
   private List<BaseObject> internalProperties = null;
 
+  /**
+   * Set index and return this.
+   * @param index Index of property in list             
+   * @return this
+  **/
   public IndexedHierarchicalObject index(Integer index) {
     this.index = index;
     return this;
@@ -62,15 +67,28 @@ public class IndexedHierarchicalObject extends BaseObject {
     return index;
   }  
 
+  /**
+   * Set index.
+   * @param index Index of property in list             
+  **/
   public void setIndex(Integer index) {
     this.index = index;
   }
 
+  /**
+   * Set internalProperties and return this.
+   * @param internalProperties List of internal properties             
+   * @return this
+  **/
   public IndexedHierarchicalObject internalProperties(List<BaseObject> internalProperties) {
     this.internalProperties = internalProperties;
     return this;
   }
-
+  /**
+   * Add an item to internalProperties and return this.
+   * @param internalPropertiesItem An item of: List of internal properties             
+   * @return this
+  **/
   public IndexedHierarchicalObject addInternalPropertiesItem(BaseObject internalPropertiesItem) {
     if (this.internalProperties == null) {
       this.internalProperties = new ArrayList<BaseObject>();
@@ -87,6 +105,10 @@ public class IndexedHierarchicalObject extends BaseObject {
     return internalProperties;
   }  
 
+  /**
+   * Set internalProperties.
+   * @param internalProperties List of internal properties             
+  **/
   public void setInternalProperties(List<BaseObject> internalProperties) {
     this.internalProperties = internalProperties;
   }

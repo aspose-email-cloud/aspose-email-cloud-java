@@ -52,6 +52,11 @@ public class AiNameMismatch {
   @JsonProperty("explanation")
   private String explanation = null;
 
+  /**
+   * Set category and return this.
+   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * @return this
+  **/
   public AiNameMismatch category(String category) {
     this.category = category;
     return this;
@@ -65,10 +70,19 @@ public class AiNameMismatch {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+  **/
   public void setCategory(String category) {
     this.category = category;
   }
 
+  /**
+   * Set similarity and return this.
+   * @param similarity Similarity score             
+   * @return this
+  **/
   public AiNameMismatch similarity(Double similarity) {
     this.similarity = similarity;
     return this;
@@ -82,10 +96,19 @@ public class AiNameMismatch {
     return similarity;
   }  
 
+  /**
+   * Set similarity.
+   * @param similarity Similarity score             
+  **/
   public void setSimilarity(Double similarity) {
     this.similarity = similarity;
   }
 
+  /**
+   * Set explanation and return this.
+   * @param explanation Explanation or mismatch subtype             
+   * @return this
+  **/
   public AiNameMismatch explanation(String explanation) {
     this.explanation = explanation;
     return this;
@@ -99,6 +122,10 @@ public class AiNameMismatch {
     return explanation;
   }  
 
+  /**
+   * Set explanation.
+   * @param explanation Explanation or mismatch subtype             
+  **/
   public void setExplanation(String explanation) {
     this.explanation = explanation;
   }

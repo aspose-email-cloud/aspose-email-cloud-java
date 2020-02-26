@@ -46,6 +46,11 @@ public class StorageExist {
   @JsonProperty("exists")
   private Boolean exists = null;
 
+  /**
+   * Set exists and return this.
+   * @param exists Shows that the storage exists.             
+   * @return this
+  **/
   public StorageExist exists(Boolean exists) {
     this.exists = exists;
     return this;
@@ -59,6 +64,10 @@ public class StorageExist {
     return exists;
   }  
 
+  /**
+   * Set exists.
+   * @param exists Shows that the storage exists.             
+  **/
   public void setExists(Boolean exists) {
     this.exists = exists;
   }

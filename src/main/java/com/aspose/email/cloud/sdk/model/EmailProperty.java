@@ -52,6 +52,11 @@ public class EmailProperty {
   @JsonProperty("value")
   private Object value = null;
 
+  /**
+   * Set link and return this.
+   * @param link Link to property             
+   * @return this
+  **/
   public EmailProperty link(Link link) {
     this.link = link;
     return this;
@@ -65,10 +70,19 @@ public class EmailProperty {
     return link;
   }  
 
+  /**
+   * Set link.
+   * @param link Link to property             
+  **/
   public void setLink(Link link) {
     this.link = link;
   }
 
+  /**
+   * Set name and return this.
+   * @param name Property name             
+   * @return this
+  **/
   public EmailProperty name(String name) {
     this.name = name;
     return this;
@@ -82,10 +96,19 @@ public class EmailProperty {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Property name             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set value and return this.
+   * @param value Property value             
+   * @return this
+  **/
   public EmailProperty value(Object value) {
     this.value = value;
     return this;
@@ -99,6 +122,10 @@ public class EmailProperty {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Property value             
+  **/
   public void setValue(Object value) {
     this.value = value;
   }

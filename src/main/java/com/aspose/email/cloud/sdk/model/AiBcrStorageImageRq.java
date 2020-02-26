@@ -46,11 +46,20 @@ public class AiBcrStorageImageRq extends AiBcrRq {
   @JsonProperty("images")
   private List<AiBcrImageStorageFile> images = new ArrayList<AiBcrImageStorageFile>();
 
+  /**
+   * Set images and return this.
+   * @param images List of images with business cards             
+   * @return this
+  **/
   public AiBcrStorageImageRq images(List<AiBcrImageStorageFile> images) {
     this.images = images;
     return this;
   }
-
+  /**
+   * Add an item to images and return this.
+   * @param imagesItem An item of: List of images with business cards             
+   * @return this
+  **/
   public AiBcrStorageImageRq addImagesItem(AiBcrImageStorageFile imagesItem) {
     this.images.add(imagesItem);
     return this;
@@ -64,6 +73,10 @@ public class AiBcrStorageImageRq extends AiBcrRq {
     return images;
   }  
 
+  /**
+   * Set images.
+   * @param images List of images with business cards             
+  **/
   public void setImages(List<AiBcrImageStorageFile> images) {
     this.images = images;
   }

@@ -52,6 +52,11 @@ public class InstantMessengerAddress {
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
+  /**
+   * Set category and return this.
+   * @param category Address category.             
+   * @return this
+  **/
   public InstantMessengerAddress category(EnumWithCustomOfInstantMessengerCategory category) {
     this.category = category;
     return this;
@@ -65,10 +70,19 @@ public class InstantMessengerAddress {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Address category.             
+  **/
   public void setCategory(EnumWithCustomOfInstantMessengerCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set address and return this.
+   * @param address Address.             
+   * @return this
+  **/
   public InstantMessengerAddress address(String address) {
     this.address = address;
     return this;
@@ -82,10 +96,19 @@ public class InstantMessengerAddress {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Address.             
+  **/
   public void setAddress(String address) {
     this.address = address;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Determines whether this address is preferred.             
+   * @return this
+  **/
   public InstantMessengerAddress preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -99,6 +122,10 @@ public class InstantMessengerAddress {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Determines whether this address is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }

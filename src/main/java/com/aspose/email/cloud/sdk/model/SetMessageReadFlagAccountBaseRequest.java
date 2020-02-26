@@ -49,6 +49,11 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
   @JsonProperty("isRead")
   private Boolean isRead = null;
 
+  /**
+   * Set messageId and return this.
+   * @param messageId Message identifier             
+   * @return this
+  **/
   public SetMessageReadFlagAccountBaseRequest messageId(String messageId) {
     this.messageId = messageId;
     return this;
@@ -62,10 +67,19 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
     return messageId;
   }  
 
+  /**
+   * Set messageId.
+   * @param messageId Message identifier             
+  **/
   public void setMessageId(String messageId) {
     this.messageId = messageId;
   }
 
+  /**
+   * Set isRead and return this.
+   * @param isRead Specifies that message should be marked read or unread             
+   * @return this
+  **/
   public SetMessageReadFlagAccountBaseRequest isRead(Boolean isRead) {
     this.isRead = isRead;
     return this;
@@ -79,6 +93,10 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
     return isRead;
   }  
 
+  /**
+   * Set isRead.
+   * @param isRead Specifies that message should be marked read or unread             
+  **/
   public void setIsRead(Boolean isRead) {
     this.isRead = isRead;
   }

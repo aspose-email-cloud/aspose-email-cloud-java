@@ -46,11 +46,20 @@ public class FilesList {
   @JsonProperty("value")
   private List<StorageFile> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value Files and folders contained by folder StorageFile.
+   * @return this
+  **/
   public FilesList value(List<StorageFile> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: Files and folders contained by folder StorageFile.
+   * @return this
+  **/
   public FilesList addValueItem(StorageFile valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<StorageFile>();
@@ -67,6 +76,10 @@ public class FilesList {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Files and folders contained by folder StorageFile.
+  **/
   public void setValue(List<StorageFile> value) {
     this.value = value;
   }

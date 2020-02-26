@@ -58,6 +58,11 @@ public class EmailAddress {
   @JsonProperty("address")
   private String address = null;
 
+  /**
+   * Set category and return this.
+   * @param category Address category.             
+   * @return this
+  **/
   public EmailAddress category(EnumWithCustomOfEmailAddressCategory category) {
     this.category = category;
     return this;
@@ -71,10 +76,19 @@ public class EmailAddress {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Address category.             
+  **/
   public void setCategory(EnumWithCustomOfEmailAddressCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set displayName and return this.
+   * @param displayName Display name.             
+   * @return this
+  **/
   public EmailAddress displayName(String displayName) {
     this.displayName = displayName;
     return this;
@@ -88,10 +102,19 @@ public class EmailAddress {
     return displayName;
   }  
 
+  /**
+   * Set displayName.
+   * @param displayName Display name.             
+  **/
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Defines whether email address is preferred.             
+   * @return this
+  **/
   public EmailAddress preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -105,10 +128,19 @@ public class EmailAddress {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Defines whether email address is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }
 
+  /**
+   * Set routingType and return this.
+   * @param routingType A routing type for an email.             
+   * @return this
+  **/
   public EmailAddress routingType(String routingType) {
     this.routingType = routingType;
     return this;
@@ -122,10 +154,19 @@ public class EmailAddress {
     return routingType;
   }  
 
+  /**
+   * Set routingType.
+   * @param routingType A routing type for an email.             
+  **/
   public void setRoutingType(String routingType) {
     this.routingType = routingType;
   }
 
+  /**
+   * Set address and return this.
+   * @param address Email address.             
+   * @return this
+  **/
   public EmailAddress address(String address) {
     this.address = address;
     return this;
@@ -139,6 +180,10 @@ public class EmailAddress {
     return address;
   }  
 
+  /**
+   * Set address.
+   * @param address Email address.             
+  **/
   public void setAddress(String address) {
     this.address = address;
   }

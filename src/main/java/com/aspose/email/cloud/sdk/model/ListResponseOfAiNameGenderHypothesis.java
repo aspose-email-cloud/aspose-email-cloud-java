@@ -46,11 +46,20 @@ public class ListResponseOfAiNameGenderHypothesis {
   @JsonProperty("value")
   private List<AiNameGenderHypothesis> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfAiNameGenderHypothesis value(List<AiNameGenderHypothesis> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfAiNameGenderHypothesis addValueItem(AiNameGenderHypothesis valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<AiNameGenderHypothesis>();
@@ -67,6 +76,10 @@ public class ListResponseOfAiNameGenderHypothesis {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<AiNameGenderHypothesis> value) {
     this.value = value;
   }

@@ -49,6 +49,11 @@ public class CreateEmailRequest {
   @JsonProperty("storageFolder")
   private StorageFolderLocation storageFolder = null;
 
+  /**
+   * Set emailDocument and return this.
+   * @param emailDocument An email document that should be created             
+   * @return this
+  **/
   public CreateEmailRequest emailDocument(EmailDocument emailDocument) {
     this.emailDocument = emailDocument;
     return this;
@@ -62,10 +67,19 @@ public class CreateEmailRequest {
     return emailDocument;
   }  
 
+  /**
+   * Set emailDocument.
+   * @param emailDocument An email document that should be created             
+  **/
   public void setEmailDocument(EmailDocument emailDocument) {
     this.emailDocument = emailDocument;
   }
 
+  /**
+   * Set storageFolder and return this.
+   * @param storageFolder Email document location in storage             
+   * @return this
+  **/
   public CreateEmailRequest storageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
     return this;
@@ -79,6 +93,10 @@ public class CreateEmailRequest {
     return storageFolder;
   }  
 
+  /**
+   * Set storageFolder.
+   * @param storageFolder Email document location in storage             
+  **/
   public void setStorageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
   }

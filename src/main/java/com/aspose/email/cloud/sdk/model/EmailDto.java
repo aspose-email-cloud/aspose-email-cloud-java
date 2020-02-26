@@ -139,11 +139,20 @@ public class EmailDto {
   @JsonProperty("xMailer")
   private String xMailer = null;
 
+  /**
+   * Set alternateViews and return this.
+   * @param alternateViews Collection of alternate views of message.             
+   * @return this
+  **/
   public EmailDto alternateViews(List<AlternateView> alternateViews) {
     this.alternateViews = alternateViews;
     return this;
   }
-
+  /**
+   * Add an item to alternateViews and return this.
+   * @param alternateViewsItem An item of: Collection of alternate views of message.             
+   * @return this
+  **/
   public EmailDto addAlternateViewsItem(AlternateView alternateViewsItem) {
     if (this.alternateViews == null) {
       this.alternateViews = new ArrayList<AlternateView>();
@@ -160,15 +169,28 @@ public class EmailDto {
     return alternateViews;
   }  
 
+  /**
+   * Set alternateViews.
+   * @param alternateViews Collection of alternate views of message.             
+  **/
   public void setAlternateViews(List<AlternateView> alternateViews) {
     this.alternateViews = alternateViews;
   }
 
+  /**
+   * Set attachments and return this.
+   * @param attachments Email message attachments.             
+   * @return this
+  **/
   public EmailDto attachments(List<Attachment> attachments) {
     this.attachments = attachments;
     return this;
   }
-
+  /**
+   * Add an item to attachments and return this.
+   * @param attachmentsItem An item of: Email message attachments.             
+   * @return this
+  **/
   public EmailDto addAttachmentsItem(Attachment attachmentsItem) {
     if (this.attachments == null) {
       this.attachments = new ArrayList<Attachment>();
@@ -185,15 +207,28 @@ public class EmailDto {
     return attachments;
   }  
 
+  /**
+   * Set attachments.
+   * @param attachments Email message attachments.             
+  **/
   public void setAttachments(List<Attachment> attachments) {
     this.attachments = attachments;
   }
 
+  /**
+   * Set bcc and return this.
+   * @param bcc BCC recipients.             
+   * @return this
+  **/
   public EmailDto bcc(List<MailAddress> bcc) {
     this.bcc = bcc;
     return this;
   }
-
+  /**
+   * Add an item to bcc and return this.
+   * @param bccItem An item of: BCC recipients.             
+   * @return this
+  **/
   public EmailDto addBccItem(MailAddress bccItem) {
     if (this.bcc == null) {
       this.bcc = new ArrayList<MailAddress>();
@@ -210,10 +245,19 @@ public class EmailDto {
     return bcc;
   }  
 
+  /**
+   * Set bcc.
+   * @param bcc BCC recipients.             
+  **/
   public void setBcc(List<MailAddress> bcc) {
     this.bcc = bcc;
   }
 
+  /**
+   * Set body and return this.
+   * @param body Email message body as plain text.             
+   * @return this
+  **/
   public EmailDto body(String body) {
     this.body = body;
     return this;
@@ -227,10 +271,19 @@ public class EmailDto {
     return body;
   }  
 
+  /**
+   * Set body.
+   * @param body Email message body as plain text.             
+  **/
   public void setBody(String body) {
     this.body = body;
   }
 
+  /**
+   * Set bodyEncoding and return this.
+   * @param bodyEncoding Body encoding.             
+   * @return this
+  **/
   public EmailDto bodyEncoding(String bodyEncoding) {
     this.bodyEncoding = bodyEncoding;
     return this;
@@ -244,10 +297,19 @@ public class EmailDto {
     return bodyEncoding;
   }  
 
+  /**
+   * Set bodyEncoding.
+   * @param bodyEncoding Body encoding.             
+  **/
   public void setBodyEncoding(String bodyEncoding) {
     this.bodyEncoding = bodyEncoding;
   }
 
+  /**
+   * Set bodyType and return this.
+   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @return this
+  **/
   public EmailDto bodyType(String bodyType) {
     this.bodyType = bodyType;
     return this;
@@ -261,15 +323,28 @@ public class EmailDto {
     return bodyType;
   }  
 
+  /**
+   * Set bodyType.
+   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+  **/
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
   }
 
+  /**
+   * Set cc and return this.
+   * @param cc CC recipients.             
+   * @return this
+  **/
   public EmailDto cc(List<MailAddress> cc) {
     this.cc = cc;
     return this;
   }
-
+  /**
+   * Add an item to cc and return this.
+   * @param ccItem An item of: CC recipients.             
+   * @return this
+  **/
   public EmailDto addCcItem(MailAddress ccItem) {
     if (this.cc == null) {
       this.cc = new ArrayList<MailAddress>();
@@ -286,10 +361,19 @@ public class EmailDto {
     return cc;
   }  
 
+  /**
+   * Set cc.
+   * @param cc CC recipients.             
+  **/
   public void setCc(List<MailAddress> cc) {
     this.cc = cc;
   }
 
+  /**
+   * Set date and return this.
+   * @param date Message date.             
+   * @return this
+  **/
   public EmailDto date(Date date) {
     this.date = date;
     return this;
@@ -303,15 +387,28 @@ public class EmailDto {
     return date;
   }  
 
+  /**
+   * Set date.
+   * @param date Message date.             
+  **/
   public void setDate(Date date) {
     this.date = date;
   }
 
+  /**
+   * Set deliveryNotificationOptions and return this.
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @return this
+  **/
   public EmailDto deliveryNotificationOptions(List<String> deliveryNotificationOptions) {
     this.deliveryNotificationOptions = deliveryNotificationOptions;
     return this;
   }
-
+  /**
+   * Add an item to deliveryNotificationOptions and return this.
+   * @param deliveryNotificationOptionsItem An item of: Delivery notifications.
+   * @return this
+  **/
   public EmailDto addDeliveryNotificationOptionsItem(String deliveryNotificationOptionsItem) {
     if (this.deliveryNotificationOptions == null) {
       this.deliveryNotificationOptions = new ArrayList<String>();
@@ -328,10 +425,19 @@ public class EmailDto {
     return deliveryNotificationOptions;
   }  
 
+  /**
+   * Set deliveryNotificationOptions.
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+  **/
   public void setDeliveryNotificationOptions(List<String> deliveryNotificationOptions) {
     this.deliveryNotificationOptions = deliveryNotificationOptions;
   }
 
+  /**
+   * Set from and return this.
+   * @param from From address.             
+   * @return this
+  **/
   public EmailDto from(MailAddress from) {
     this.from = from;
     return this;
@@ -345,15 +451,31 @@ public class EmailDto {
     return from;
   }  
 
+  /**
+   * Set from.
+   * @param from From address.             
+  **/
   public void setFrom(MailAddress from) {
     this.from = from;
   }
 
+  /**
+   * Set headers and return this.
+   * @param headers Document headers.             
+   * @return this
+  **/
   public EmailDto headers(Map<String, String> headers) {
     this.headers = headers;
     return this;
   }
 
+  /**
+   * Add an item to headers and return this.
+   * headers is: Document headers.             
+   * @param key An item key
+   * @param headersItem An item value
+   * @return this
+  **/
   public EmailDto putHeadersItem(String key, String headersItem) {
     if (this.headers == null) {
       this.headers = new HashMap<String, String>();
@@ -370,10 +492,19 @@ public class EmailDto {
     return headers;
   }  
 
+  /**
+   * Set headers.
+   * @param headers Document headers.             
+  **/
   public void setHeaders(Map<String, String> headers) {
     this.headers = headers;
   }
 
+  /**
+   * Set htmlBody and return this.
+   * @param htmlBody HTML body.             
+   * @return this
+  **/
   public EmailDto htmlBody(String htmlBody) {
     this.htmlBody = htmlBody;
     return this;
@@ -387,10 +518,19 @@ public class EmailDto {
     return htmlBody;
   }  
 
+  /**
+   * Set htmlBody.
+   * @param htmlBody HTML body.             
+  **/
   public void setHtmlBody(String htmlBody) {
     this.htmlBody = htmlBody;
   }
 
+  /**
+   * Set htmlBodyText and return this.
+   * @param htmlBodyText Html body as plain text. Read only.             
+   * @return this
+  **/
   public EmailDto htmlBodyText(String htmlBodyText) {
     this.htmlBodyText = htmlBodyText;
     return this;
@@ -404,10 +544,19 @@ public class EmailDto {
     return htmlBodyText;
   }  
 
+  /**
+   * Set htmlBodyText.
+   * @param htmlBodyText Html body as plain text. Read only.             
+  **/
   public void setHtmlBodyText(String htmlBodyText) {
     this.htmlBodyText = htmlBodyText;
   }
 
+  /**
+   * Set isBodyHtml and return this.
+   * @param isBodyHtml Indicates whether the message body is in Html.             
+   * @return this
+  **/
   public EmailDto isBodyHtml(Boolean isBodyHtml) {
     this.isBodyHtml = isBodyHtml;
     return this;
@@ -421,10 +570,19 @@ public class EmailDto {
     return isBodyHtml;
   }  
 
+  /**
+   * Set isBodyHtml.
+   * @param isBodyHtml Indicates whether the message body is in Html.             
+  **/
   public void setIsBodyHtml(Boolean isBodyHtml) {
     this.isBodyHtml = isBodyHtml;
   }
 
+  /**
+   * Set isDraft and return this.
+   * @param isDraft Indicates whether or not a message has been sent.             
+   * @return this
+  **/
   public EmailDto isDraft(Boolean isDraft) {
     this.isDraft = isDraft;
     return this;
@@ -438,10 +596,19 @@ public class EmailDto {
     return isDraft;
   }  
 
+  /**
+   * Set isDraft.
+   * @param isDraft Indicates whether or not a message has been sent.             
+  **/
   public void setIsDraft(Boolean isDraft) {
     this.isDraft = isDraft;
   }
 
+  /**
+   * Set isEncrypted and return this.
+   * @param isEncrypted Indicates whether the message is encrypted. Read only.             
+   * @return this
+  **/
   public EmailDto isEncrypted(Boolean isEncrypted) {
     this.isEncrypted = isEncrypted;
     return this;
@@ -455,10 +622,19 @@ public class EmailDto {
     return isEncrypted;
   }  
 
+  /**
+   * Set isEncrypted.
+   * @param isEncrypted Indicates whether the message is encrypted. Read only.             
+  **/
   public void setIsEncrypted(Boolean isEncrypted) {
     this.isEncrypted = isEncrypted;
   }
 
+  /**
+   * Set isSigned and return this.
+   * @param isSigned Indicates whether the message is signed. Read only.             
+   * @return this
+  **/
   public EmailDto isSigned(Boolean isSigned) {
     this.isSigned = isSigned;
     return this;
@@ -472,15 +648,28 @@ public class EmailDto {
     return isSigned;
   }  
 
+  /**
+   * Set isSigned.
+   * @param isSigned Indicates whether the message is signed. Read only.             
+  **/
   public void setIsSigned(Boolean isSigned) {
     this.isSigned = isSigned;
   }
 
+  /**
+   * Set linkedResources and return this.
+   * @param linkedResources Linked resources of message.             
+   * @return this
+  **/
   public EmailDto linkedResources(List<LinkedResource> linkedResources) {
     this.linkedResources = linkedResources;
     return this;
   }
-
+  /**
+   * Add an item to linkedResources and return this.
+   * @param linkedResourcesItem An item of: Linked resources of message.             
+   * @return this
+  **/
   public EmailDto addLinkedResourcesItem(LinkedResource linkedResourcesItem) {
     if (this.linkedResources == null) {
       this.linkedResources = new ArrayList<LinkedResource>();
@@ -497,10 +686,19 @@ public class EmailDto {
     return linkedResources;
   }  
 
+  /**
+   * Set linkedResources.
+   * @param linkedResources Linked resources of message.             
+  **/
   public void setLinkedResources(List<LinkedResource> linkedResources) {
     this.linkedResources = linkedResources;
   }
 
+  /**
+   * Set messageId and return this.
+   * @param messageId Message id.             
+   * @return this
+  **/
   public EmailDto messageId(String messageId) {
     this.messageId = messageId;
     return this;
@@ -514,10 +712,19 @@ public class EmailDto {
     return messageId;
   }  
 
+  /**
+   * Set messageId.
+   * @param messageId Message id.             
+  **/
   public void setMessageId(String messageId) {
     this.messageId = messageId;
   }
 
+  /**
+   * Set originalIsTnef and return this.
+   * @param originalIsTnef Indicates whether original EML message is in TNEF format. Read only.             
+   * @return this
+  **/
   public EmailDto originalIsTnef(Boolean originalIsTnef) {
     this.originalIsTnef = originalIsTnef;
     return this;
@@ -531,10 +738,19 @@ public class EmailDto {
     return originalIsTnef;
   }  
 
+  /**
+   * Set originalIsTnef.
+   * @param originalIsTnef Indicates whether original EML message is in TNEF format. Read only.             
+  **/
   public void setOriginalIsTnef(Boolean originalIsTnef) {
     this.originalIsTnef = originalIsTnef;
   }
 
+  /**
+   * Set preferredTextEncoding and return this.
+   * @param preferredTextEncoding Preferred encoding.             
+   * @return this
+  **/
   public EmailDto preferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
     return this;
@@ -548,10 +764,19 @@ public class EmailDto {
     return preferredTextEncoding;
   }  
 
+  /**
+   * Set preferredTextEncoding.
+   * @param preferredTextEncoding Preferred encoding.             
+  **/
   public void setPreferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
   }
 
+  /**
+   * Set priority and return this.
+   * @param priority Email priority status. Enum, available values: High, Low, Normal
+   * @return this
+  **/
   public EmailDto priority(String priority) {
     this.priority = priority;
     return this;
@@ -565,15 +790,28 @@ public class EmailDto {
     return priority;
   }  
 
+  /**
+   * Set priority.
+   * @param priority Email priority status. Enum, available values: High, Low, Normal
+  **/
   public void setPriority(String priority) {
     this.priority = priority;
   }
 
+  /**
+   * Set readReceiptTo and return this.
+   * @param readReceiptTo Read receipt addresses.             
+   * @return this
+  **/
   public EmailDto readReceiptTo(List<MailAddress> readReceiptTo) {
     this.readReceiptTo = readReceiptTo;
     return this;
   }
-
+  /**
+   * Add an item to readReceiptTo and return this.
+   * @param readReceiptToItem An item of: Read receipt addresses.             
+   * @return this
+  **/
   public EmailDto addReadReceiptToItem(MailAddress readReceiptToItem) {
     if (this.readReceiptTo == null) {
       this.readReceiptTo = new ArrayList<MailAddress>();
@@ -590,15 +828,28 @@ public class EmailDto {
     return readReceiptTo;
   }  
 
+  /**
+   * Set readReceiptTo.
+   * @param readReceiptTo Read receipt addresses.             
+  **/
   public void setReadReceiptTo(List<MailAddress> readReceiptTo) {
     this.readReceiptTo = readReceiptTo;
   }
 
+  /**
+   * Set replyToList and return this.
+   * @param replyToList The list of addresses to reply to for the mail message.             
+   * @return this
+  **/
   public EmailDto replyToList(List<MailAddress> replyToList) {
     this.replyToList = replyToList;
     return this;
   }
-
+  /**
+   * Add an item to replyToList and return this.
+   * @param replyToListItem An item of: The list of addresses to reply to for the mail message.             
+   * @return this
+  **/
   public EmailDto addReplyToListItem(MailAddress replyToListItem) {
     if (this.replyToList == null) {
       this.replyToList = new ArrayList<MailAddress>();
@@ -615,10 +866,19 @@ public class EmailDto {
     return replyToList;
   }  
 
+  /**
+   * Set replyToList.
+   * @param replyToList The list of addresses to reply to for the mail message.             
+  **/
   public void setReplyToList(List<MailAddress> replyToList) {
     this.replyToList = replyToList;
   }
 
+  /**
+   * Set reversePath and return this.
+   * @param reversePath ReversePath address.             
+   * @return this
+  **/
   public EmailDto reversePath(MailAddress reversePath) {
     this.reversePath = reversePath;
     return this;
@@ -632,10 +892,19 @@ public class EmailDto {
     return reversePath;
   }  
 
+  /**
+   * Set reversePath.
+   * @param reversePath ReversePath address.             
+  **/
   public void setReversePath(MailAddress reversePath) {
     this.reversePath = reversePath;
   }
 
+  /**
+   * Set sender and return this.
+   * @param sender Sender address.             
+   * @return this
+  **/
   public EmailDto sender(MailAddress sender) {
     this.sender = sender;
     return this;
@@ -649,10 +918,19 @@ public class EmailDto {
     return sender;
   }  
 
+  /**
+   * Set sender.
+   * @param sender Sender address.             
+  **/
   public void setSender(MailAddress sender) {
     this.sender = sender;
   }
 
+  /**
+   * Set sensitivity and return this.
+   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @return this
+  **/
   public EmailDto sensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
     return this;
@@ -666,10 +944,19 @@ public class EmailDto {
     return sensitivity;
   }  
 
+  /**
+   * Set sensitivity.
+   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+  **/
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
   }
 
+  /**
+   * Set subject and return this.
+   * @param subject Message subject.             
+   * @return this
+  **/
   public EmailDto subject(String subject) {
     this.subject = subject;
     return this;
@@ -683,10 +970,19 @@ public class EmailDto {
     return subject;
   }  
 
+  /**
+   * Set subject.
+   * @param subject Message subject.             
+  **/
   public void setSubject(String subject) {
     this.subject = subject;
   }
 
+  /**
+   * Set subjectEncoding and return this.
+   * @param subjectEncoding Subject encoding.             
+   * @return this
+  **/
   public EmailDto subjectEncoding(String subjectEncoding) {
     this.subjectEncoding = subjectEncoding;
     return this;
@@ -700,10 +996,19 @@ public class EmailDto {
     return subjectEncoding;
   }  
 
+  /**
+   * Set subjectEncoding.
+   * @param subjectEncoding Subject encoding.             
+  **/
   public void setSubjectEncoding(String subjectEncoding) {
     this.subjectEncoding = subjectEncoding;
   }
 
+  /**
+   * Set timeZoneOffset and return this.
+   * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
+   * @return this
+  **/
   public EmailDto timeZoneOffset(Long timeZoneOffset) {
     this.timeZoneOffset = timeZoneOffset;
     return this;
@@ -717,15 +1022,28 @@ public class EmailDto {
     return timeZoneOffset;
   }  
 
+  /**
+   * Set timeZoneOffset.
+   * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
+  **/
   public void setTimeZoneOffset(Long timeZoneOffset) {
     this.timeZoneOffset = timeZoneOffset;
   }
 
+  /**
+   * Set to and return this.
+   * @param to The address collection that contains the recipients of message.             
+   * @return this
+  **/
   public EmailDto to(List<MailAddress> to) {
     this.to = to;
     return this;
   }
-
+  /**
+   * Add an item to to and return this.
+   * @param toItem An item of: The address collection that contains the recipients of message.             
+   * @return this
+  **/
   public EmailDto addToItem(MailAddress toItem) {
     if (this.to == null) {
       this.to = new ArrayList<MailAddress>();
@@ -742,10 +1060,19 @@ public class EmailDto {
     return to;
   }  
 
+  /**
+   * Set to.
+   * @param to The address collection that contains the recipients of message.             
+  **/
   public void setTo(List<MailAddress> to) {
     this.to = to;
   }
 
+  /**
+   * Set xMailer and return this.
+   * @param xMailer The X-Mailer the software that created the e-mail message.             
+   * @return this
+  **/
   public EmailDto xMailer(String xMailer) {
     this.xMailer = xMailer;
     return this;
@@ -759,6 +1086,10 @@ public class EmailDto {
     return xMailer;
   }  
 
+  /**
+   * Set xMailer.
+   * @param xMailer The X-Mailer the software that created the e-mail message.             
+  **/
   public void setXMailer(String xMailer) {
     this.xMailer = xMailer;
   }

@@ -58,6 +58,11 @@ public class AiNameCulturalContext {
   @JsonProperty("style")
   private String style = null;
 
+  /**
+   * Set language and return this.
+   * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
+   * @return this
+  **/
   public AiNameCulturalContext language(String language) {
     this.language = language;
     return this;
@@ -71,10 +76,19 @@ public class AiNameCulturalContext {
     return language;
   }  
 
+  /**
+   * Set language.
+   * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
+  **/
   public void setLanguage(String language) {
     this.language = language;
   }
 
+  /**
+   * Set location and return this.
+   * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
+   * @return this
+  **/
   public AiNameCulturalContext location(String location) {
     this.location = location;
     return this;
@@ -88,10 +102,19 @@ public class AiNameCulturalContext {
     return location;
   }  
 
+  /**
+   * Set location.
+   * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
+  **/
   public void setLocation(String location) {
     this.location = location;
   }
 
+  /**
+   * Set script and return this.
+   * @param script A writing system code; starts with the ISO-15924 script name             
+   * @return this
+  **/
   public AiNameCulturalContext script(String script) {
     this.script = script;
     return this;
@@ -105,10 +128,19 @@ public class AiNameCulturalContext {
     return script;
   }  
 
+  /**
+   * Set script.
+   * @param script A writing system code; starts with the ISO-15924 script name             
+  **/
   public void setScript(String script) {
     this.script = script;
   }
 
+  /**
+   * Set encoding and return this.
+   * @param encoding A character encoding name             
+   * @return this
+  **/
   public AiNameCulturalContext encoding(String encoding) {
     this.encoding = encoding;
     return this;
@@ -122,10 +154,19 @@ public class AiNameCulturalContext {
     return encoding;
   }  
 
+  /**
+   * Set encoding.
+   * @param encoding A character encoding name             
+  **/
   public void setEncoding(String encoding) {
     this.encoding = encoding;
   }
 
+  /**
+   * Set style and return this.
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+   * @return this
+  **/
   public AiNameCulturalContext style(String style) {
     this.style = style;
     return this;
@@ -139,6 +180,10 @@ public class AiNameCulturalContext {
     return style;
   }  
 
+  /**
+   * Set style.
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+  **/
   public void setStyle(String style) {
     this.style = style;
   }

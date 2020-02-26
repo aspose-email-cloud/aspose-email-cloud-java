@@ -46,11 +46,20 @@ public class ListResponseOfAiBcrOcrData {
   @JsonProperty("value")
   private List<AiBcrOcrData> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfAiBcrOcrData value(List<AiBcrOcrData> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfAiBcrOcrData addValueItem(AiBcrOcrData valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<AiBcrOcrData>();
@@ -67,6 +76,10 @@ public class ListResponseOfAiBcrOcrData {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<AiBcrOcrData> value) {
     this.value = value;
   }

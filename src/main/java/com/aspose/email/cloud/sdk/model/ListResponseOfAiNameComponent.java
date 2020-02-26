@@ -46,11 +46,20 @@ public class ListResponseOfAiNameComponent {
   @JsonProperty("value")
   private List<AiNameComponent> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfAiNameComponent value(List<AiNameComponent> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfAiNameComponent addValueItem(AiNameComponent valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<AiNameComponent>();
@@ -67,6 +76,10 @@ public class ListResponseOfAiNameComponent {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<AiNameComponent> value) {
     this.value = value;
   }

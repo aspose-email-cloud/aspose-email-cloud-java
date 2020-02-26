@@ -49,6 +49,11 @@ public class ObjectExist {
   @JsonProperty("isFolder")
   private Boolean isFolder = null;
 
+  /**
+   * Set exists and return this.
+   * @param exists Indicates that the file or folder exists.
+   * @return this
+  **/
   public ObjectExist exists(Boolean exists) {
     this.exists = exists;
     return this;
@@ -62,10 +67,19 @@ public class ObjectExist {
     return exists;
   }  
 
+  /**
+   * Set exists.
+   * @param exists Indicates that the file or folder exists.
+  **/
   public void setExists(Boolean exists) {
     this.exists = exists;
   }
 
+  /**
+   * Set isFolder and return this.
+   * @param isFolder True if it is a folder, false if it is a file.
+   * @return this
+  **/
   public ObjectExist isFolder(Boolean isFolder) {
     this.isFolder = isFolder;
     return this;
@@ -79,6 +93,10 @@ public class ObjectExist {
     return isFolder;
   }  
 
+  /**
+   * Set isFolder.
+   * @param isFolder True if it is a folder, false if it is a file.
+  **/
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
   }

@@ -49,6 +49,11 @@ public class MailServerFolder {
   @JsonProperty("id")
   private String id = null;
 
+  /**
+   * Set name and return this.
+   * @param name Gets or sets mail folder name             
+   * @return this
+  **/
   public MailServerFolder name(String name) {
     this.name = name;
     return this;
@@ -62,10 +67,19 @@ public class MailServerFolder {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Gets or sets mail folder name             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set id and return this.
+   * @param id Gets or sets mail folder id             
+   * @return this
+  **/
   public MailServerFolder id(String id) {
     this.id = id;
     return this;
@@ -79,6 +93,10 @@ public class MailServerFolder {
     return id;
   }  
 
+  /**
+   * Set id.
+   * @param id Gets or sets mail folder id             
+  **/
   public void setId(String id) {
     this.id = id;
   }

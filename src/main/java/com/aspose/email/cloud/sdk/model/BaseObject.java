@@ -49,6 +49,11 @@ public class BaseObject {
   @JsonProperty("type")
   private String type = this.getClass().getSimpleName();
 
+  /**
+   * Set name and return this.
+   * @param name Gets or sets the name of an object.             
+   * @return this
+  **/
   public BaseObject name(String name) {
     this.name = name;
     return this;
@@ -62,10 +67,19 @@ public class BaseObject {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Gets or sets the name of an object.             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set type and return this.
+   * @param type Property type. Used for deserialization purposes             
+   * @return this
+  **/
 
 
   /**
@@ -76,6 +90,10 @@ public class BaseObject {
     return type;
   }  
 
+  /**
+   * Set type.
+   * @param type Property type. Used for deserialization purposes             
+  **/
   public void setType(String type) {/* do nothing */}
 
 

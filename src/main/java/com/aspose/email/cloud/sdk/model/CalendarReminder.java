@@ -67,6 +67,11 @@ public class CalendarReminder {
   @JsonProperty("trigger")
   private ReminderTrigger trigger = null;
 
+  /**
+   * Set action and return this.
+   * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+   * @return this
+  **/
   public CalendarReminder action(String action) {
     this.action = action;
     return this;
@@ -80,15 +85,28 @@ public class CalendarReminder {
     return action;
   }  
 
+  /**
+   * Set action.
+   * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+  **/
   public void setAction(String action) {
     this.action = action;
   }
 
+  /**
+   * Set attachments and return this.
+   * @param attachments Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
+   * @return this
+  **/
   public CalendarReminder attachments(List<String> attachments) {
     this.attachments = attachments;
     return this;
   }
-
+  /**
+   * Add an item to attachments and return this.
+   * @param attachmentsItem An item of: Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
+   * @return this
+  **/
   public CalendarReminder addAttachmentsItem(String attachmentsItem) {
     if (this.attachments == null) {
       this.attachments = new ArrayList<String>();
@@ -105,15 +123,28 @@ public class CalendarReminder {
     return attachments;
   }  
 
+  /**
+   * Set attachments.
+   * @param attachments Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
+  **/
   public void setAttachments(List<String> attachments) {
     this.attachments = attachments;
   }
 
+  /**
+   * Set attendees and return this.
+   * @param attendees Contains collection of ReminderAttendee objects.             
+   * @return this
+  **/
   public CalendarReminder attendees(List<ReminderAttendee> attendees) {
     this.attendees = attendees;
     return this;
   }
-
+  /**
+   * Add an item to attendees and return this.
+   * @param attendeesItem An item of: Contains collection of ReminderAttendee objects.             
+   * @return this
+  **/
   public CalendarReminder addAttendeesItem(ReminderAttendee attendeesItem) {
     if (this.attendees == null) {
       this.attendees = new ArrayList<ReminderAttendee>();
@@ -130,10 +161,19 @@ public class CalendarReminder {
     return attendees;
   }  
 
+  /**
+   * Set attendees.
+   * @param attendees Contains collection of ReminderAttendee objects.             
+  **/
   public void setAttendees(List<ReminderAttendee> attendees) {
     this.attendees = attendees;
   }
 
+  /**
+   * Set description and return this.
+   * @param description Provides a more complete description of the alarm.
+   * @return this
+  **/
   public CalendarReminder description(String description) {
     this.description = description;
     return this;
@@ -147,10 +187,19 @@ public class CalendarReminder {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description Provides a more complete description of the alarm.
+  **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+  /**
+   * Set duration and return this.
+   * @param duration Specifies the delay period in ticks, after which the alarm will repeat.             
+   * @return this
+  **/
   public CalendarReminder duration(Long duration) {
     this.duration = duration;
     return this;
@@ -164,10 +213,19 @@ public class CalendarReminder {
     return duration;
   }  
 
+  /**
+   * Set duration.
+   * @param duration Specifies the delay period in ticks, after which the alarm will repeat.             
+  **/
   public void setDuration(Long duration) {
     this.duration = duration;
   }
 
+  /**
+   * Set repeat and return this.
+   * @param repeat Defines the number of time the alarm should be repeated, after the initial trigger.             
+   * @return this
+  **/
   public CalendarReminder repeat(Integer repeat) {
     this.repeat = repeat;
     return this;
@@ -181,10 +239,19 @@ public class CalendarReminder {
     return repeat;
   }  
 
+  /**
+   * Set repeat.
+   * @param repeat Defines the number of time the alarm should be repeated, after the initial trigger.             
+  **/
   public void setRepeat(Integer repeat) {
     this.repeat = repeat;
   }
 
+  /**
+   * Set summary and return this.
+   * @param summary Defines a short summary or subject for the alarm.
+   * @return this
+  **/
   public CalendarReminder summary(String summary) {
     this.summary = summary;
     return this;
@@ -198,10 +265,19 @@ public class CalendarReminder {
     return summary;
   }  
 
+  /**
+   * Set summary.
+   * @param summary Defines a short summary or subject for the alarm.
+  **/
   public void setSummary(String summary) {
     this.summary = summary;
   }
 
+  /**
+   * Set trigger and return this.
+   * @param trigger Specifies when an alarm will trigger.
+   * @return this
+  **/
   public CalendarReminder trigger(ReminderTrigger trigger) {
     this.trigger = trigger;
     return this;
@@ -215,6 +291,10 @@ public class CalendarReminder {
     return trigger;
   }  
 
+  /**
+   * Set trigger.
+   * @param trigger Specifies when an alarm will trigger.
+  **/
   public void setTrigger(ReminderTrigger trigger) {
     this.trigger = trigger;
   }

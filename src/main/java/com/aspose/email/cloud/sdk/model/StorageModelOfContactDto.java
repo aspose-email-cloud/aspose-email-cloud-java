@@ -49,6 +49,11 @@ public class StorageModelOfContactDto {
   @JsonProperty("value")
   private ContactDto value = null;
 
+  /**
+   * Set storageFile and return this.
+   * @param storageFile 
+   * @return this
+  **/
   public StorageModelOfContactDto storageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
     return this;
@@ -62,10 +67,19 @@ public class StorageModelOfContactDto {
     return storageFile;
   }  
 
+  /**
+   * Set storageFile.
+   * @param storageFile 
+  **/
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public StorageModelOfContactDto value(ContactDto value) {
     this.value = value;
     return this;
@@ -79,6 +93,10 @@ public class StorageModelOfContactDto {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(ContactDto value) {
     this.value = value;
   }

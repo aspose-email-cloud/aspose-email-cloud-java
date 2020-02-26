@@ -46,6 +46,11 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
   @JsonProperty("message")
   private EmailDto message = null;
 
+  /**
+   * Set message and return this.
+   * @param message Email document             
+   * @return this
+  **/
   public AppendEmailModelRq message(EmailDto message) {
     this.message = message;
     return this;
@@ -59,6 +64,10 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
     return message;
   }  
 
+  /**
+   * Set message.
+   * @param message Email document             
+  **/
   public void setMessage(EmailDto message) {
     this.message = message;
   }

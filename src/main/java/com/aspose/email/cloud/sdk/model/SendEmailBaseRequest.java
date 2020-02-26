@@ -46,6 +46,11 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
   @JsonProperty("emailFile")
   private StorageFileLocation emailFile = null;
 
+  /**
+   * Set emailFile and return this.
+   * @param emailFile Email document (*.eml) file location in storage             
+   * @return this
+  **/
   public SendEmailBaseRequest emailFile(StorageFileLocation emailFile) {
     this.emailFile = emailFile;
     return this;
@@ -59,6 +64,10 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
     return emailFile;
   }  
 
+  /**
+   * Set emailFile.
+   * @param emailFile Email document (*.eml) file location in storage             
+  **/
   public void setEmailFile(StorageFileLocation emailFile) {
     this.emailFile = emailFile;
   }

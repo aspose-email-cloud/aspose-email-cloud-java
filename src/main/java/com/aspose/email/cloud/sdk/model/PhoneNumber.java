@@ -52,6 +52,11 @@ public class PhoneNumber {
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
+  /**
+   * Set category and return this.
+   * @param category Phone number category.             
+   * @return this
+  **/
   public PhoneNumber category(EnumWithCustomOfPhoneNumberCategory category) {
     this.category = category;
     return this;
@@ -65,10 +70,19 @@ public class PhoneNumber {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Phone number category.             
+  **/
   public void setCategory(EnumWithCustomOfPhoneNumberCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set number and return this.
+   * @param number Phone number.             
+   * @return this
+  **/
   public PhoneNumber number(String number) {
     this.number = number;
     return this;
@@ -82,10 +96,19 @@ public class PhoneNumber {
     return number;
   }  
 
+  /**
+   * Set number.
+   * @param number Phone number.             
+  **/
   public void setNumber(String number) {
     this.number = number;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Defines whether phone number is preferred.             
+   * @return this
+  **/
   public PhoneNumber preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -99,6 +122,10 @@ public class PhoneNumber {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Defines whether phone number is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }

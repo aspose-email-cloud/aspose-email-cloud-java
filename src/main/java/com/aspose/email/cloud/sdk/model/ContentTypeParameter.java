@@ -49,6 +49,11 @@ public class ContentTypeParameter {
   @JsonProperty("value")
   private String value = null;
 
+  /**
+   * Set name and return this.
+   * @param name Parameter name             
+   * @return this
+  **/
   public ContentTypeParameter name(String name) {
     this.name = name;
     return this;
@@ -62,10 +67,19 @@ public class ContentTypeParameter {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Parameter name             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set value and return this.
+   * @param value Parameter value             
+   * @return this
+  **/
   public ContentTypeParameter value(String value) {
     this.value = value;
     return this;
@@ -79,6 +93,10 @@ public class ContentTypeParameter {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Parameter value             
+  **/
   public void setValue(String value) {
     this.value = value;
   }

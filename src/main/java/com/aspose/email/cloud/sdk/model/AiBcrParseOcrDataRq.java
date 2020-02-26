@@ -46,11 +46,20 @@ public class AiBcrParseOcrDataRq extends AiBcrRq {
   @JsonProperty("data")
   private List<AiBcrOcrData> data = new ArrayList<AiBcrOcrData>();
 
+  /**
+   * Set data and return this.
+   * @param data OCR data             
+   * @return this
+  **/
   public AiBcrParseOcrDataRq data(List<AiBcrOcrData> data) {
     this.data = data;
     return this;
   }
-
+  /**
+   * Add an item to data and return this.
+   * @param dataItem An item of: OCR data             
+   * @return this
+  **/
   public AiBcrParseOcrDataRq addDataItem(AiBcrOcrData dataItem) {
     this.data.add(dataItem);
     return this;
@@ -64,6 +73,10 @@ public class AiBcrParseOcrDataRq extends AiBcrRq {
     return data;
   }  
 
+  /**
+   * Set data.
+   * @param data OCR data             
+  **/
   public void setData(List<AiBcrOcrData> data) {
     this.data = data;
   }

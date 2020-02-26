@@ -49,11 +49,20 @@ public class EmailDocument {
   @JsonProperty("documentProperties")
   private EmailProperties documentProperties = null;
 
+  /**
+   * Set links and return this.
+   * @param links Links that originate from this document.             
+   * @return this
+  **/
   public EmailDocument links(List<Link> links) {
     this.links = links;
     return this;
   }
-
+  /**
+   * Add an item to links and return this.
+   * @param linksItem An item of: Links that originate from this document.             
+   * @return this
+  **/
   public EmailDocument addLinksItem(Link linksItem) {
     if (this.links == null) {
       this.links = new ArrayList<Link>();
@@ -70,10 +79,19 @@ public class EmailDocument {
     return links;
   }  
 
+  /**
+   * Set links.
+   * @param links Links that originate from this document.             
+  **/
   public void setLinks(List<Link> links) {
     this.links = links;
   }
 
+  /**
+   * Set documentProperties and return this.
+   * @param documentProperties List of document properties.             
+   * @return this
+  **/
   public EmailDocument documentProperties(EmailProperties documentProperties) {
     this.documentProperties = documentProperties;
     return this;
@@ -87,6 +105,10 @@ public class EmailDocument {
     return documentProperties;
   }  
 
+  /**
+   * Set documentProperties.
+   * @param documentProperties List of document properties.             
+  **/
   public void setDocumentProperties(EmailProperties documentProperties) {
     this.documentProperties = documentProperties;
   }

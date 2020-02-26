@@ -46,6 +46,11 @@ public class AiBcrBase64Image extends AiBcrImage {
   @JsonProperty("base64Data")
   private String base64Data = null;
 
+  /**
+   * Set base64Data and return this.
+   * @param base64Data Image data in base64             
+   * @return this
+  **/
   public AiBcrBase64Image base64Data(String base64Data) {
     this.base64Data = base64Data;
     return this;
@@ -59,6 +64,10 @@ public class AiBcrBase64Image extends AiBcrImage {
     return base64Data;
   }  
 
+  /**
+   * Set base64Data.
+   * @param base64Data Image data in base64             
+  **/
   public void setBase64Data(String base64Data) {
     this.base64Data = base64Data;
   }

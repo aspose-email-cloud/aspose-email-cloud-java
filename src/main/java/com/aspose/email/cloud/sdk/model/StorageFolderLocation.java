@@ -49,6 +49,11 @@ public class StorageFolderLocation {
   @JsonProperty("folderPath")
   private String folderPath = null;
 
+  /**
+   * Set storage and return this.
+   * @param storage A storage name             
+   * @return this
+  **/
   public StorageFolderLocation storage(String storage) {
     this.storage = storage;
     return this;
@@ -62,10 +67,19 @@ public class StorageFolderLocation {
     return storage;
   }  
 
+  /**
+   * Set storage.
+   * @param storage A storage name             
+  **/
   public void setStorage(String storage) {
     this.storage = storage;
   }
 
+  /**
+   * Set folderPath and return this.
+   * @param folderPath A path to a folder in specified storage             
+   * @return this
+  **/
   public StorageFolderLocation folderPath(String folderPath) {
     this.folderPath = folderPath;
     return this;
@@ -79,6 +93,10 @@ public class StorageFolderLocation {
     return folderPath;
   }  
 
+  /**
+   * Set folderPath.
+   * @param folderPath A path to a folder in specified storage             
+  **/
   public void setFolderPath(String folderPath) {
     this.folderPath = folderPath;
   }

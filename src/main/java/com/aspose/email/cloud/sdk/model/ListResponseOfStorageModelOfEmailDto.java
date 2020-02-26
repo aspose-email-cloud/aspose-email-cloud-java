@@ -46,11 +46,20 @@ public class ListResponseOfStorageModelOfEmailDto {
   @JsonProperty("value")
   private List<StorageModelOfEmailDto> value = null;
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public ListResponseOfStorageModelOfEmailDto value(List<StorageModelOfEmailDto> value) {
     this.value = value;
     return this;
   }
-
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
   public ListResponseOfStorageModelOfEmailDto addValueItem(StorageModelOfEmailDto valueItem) {
     if (this.value == null) {
       this.value = new ArrayList<StorageModelOfEmailDto>();
@@ -67,6 +76,10 @@ public class ListResponseOfStorageModelOfEmailDto {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(List<StorageModelOfEmailDto> value) {
     this.value = value;
   }

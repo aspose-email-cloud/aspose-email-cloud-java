@@ -151,11 +151,20 @@ public class ContactDto {
   @JsonProperty("urls")
   private List<Url> urls = null;
 
+  /**
+   * Set associatedPersons and return this.
+   * @param associatedPersons Associated persons.             
+   * @return this
+  **/
   public ContactDto associatedPersons(List<AssociatedPerson> associatedPersons) {
     this.associatedPersons = associatedPersons;
     return this;
   }
-
+  /**
+   * Add an item to associatedPersons and return this.
+   * @param associatedPersonsItem An item of: Associated persons.             
+   * @return this
+  **/
   public ContactDto addAssociatedPersonsItem(AssociatedPerson associatedPersonsItem) {
     if (this.associatedPersons == null) {
       this.associatedPersons = new ArrayList<AssociatedPerson>();
@@ -172,15 +181,28 @@ public class ContactDto {
     return associatedPersons;
   }  
 
+  /**
+   * Set associatedPersons.
+   * @param associatedPersons Associated persons.             
+  **/
   public void setAssociatedPersons(List<AssociatedPerson> associatedPersons) {
     this.associatedPersons = associatedPersons;
   }
 
+  /**
+   * Set attachments and return this.
+   * @param attachments Document attachments.             
+   * @return this
+  **/
   public ContactDto attachments(List<Attachment> attachments) {
     this.attachments = attachments;
     return this;
   }
-
+  /**
+   * Add an item to attachments and return this.
+   * @param attachmentsItem An item of: Document attachments.             
+   * @return this
+  **/
   public ContactDto addAttachmentsItem(Attachment attachmentsItem) {
     if (this.attachments == null) {
       this.attachments = new ArrayList<Attachment>();
@@ -197,10 +219,19 @@ public class ContactDto {
     return attachments;
   }  
 
+  /**
+   * Set attachments.
+   * @param attachments Document attachments.             
+  **/
   public void setAttachments(List<Attachment> attachments) {
     this.attachments = attachments;
   }
 
+  /**
+   * Set companyName and return this.
+   * @param companyName Company name.             
+   * @return this
+  **/
   public ContactDto companyName(String companyName) {
     this.companyName = companyName;
     return this;
@@ -214,10 +245,19 @@ public class ContactDto {
     return companyName;
   }  
 
+  /**
+   * Set companyName.
+   * @param companyName Company name.             
+  **/
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
 
+  /**
+   * Set computerNetworkName and return this.
+   * @param computerNetworkName Computer network.             
+   * @return this
+  **/
   public ContactDto computerNetworkName(String computerNetworkName) {
     this.computerNetworkName = computerNetworkName;
     return this;
@@ -231,10 +271,19 @@ public class ContactDto {
     return computerNetworkName;
   }  
 
+  /**
+   * Set computerNetworkName.
+   * @param computerNetworkName Computer network.             
+  **/
   public void setComputerNetworkName(String computerNetworkName) {
     this.computerNetworkName = computerNetworkName;
   }
 
+  /**
+   * Set customerId and return this.
+   * @param customerId Customer id.             
+   * @return this
+  **/
   public ContactDto customerId(String customerId) {
     this.customerId = customerId;
     return this;
@@ -248,10 +297,19 @@ public class ContactDto {
     return customerId;
   }  
 
+  /**
+   * Set customerId.
+   * @param customerId Customer id.             
+  **/
   public void setCustomerId(String customerId) {
     this.customerId = customerId;
   }
 
+  /**
+   * Set departmentName and return this.
+   * @param departmentName Department name.             
+   * @return this
+  **/
   public ContactDto departmentName(String departmentName) {
     this.departmentName = departmentName;
     return this;
@@ -265,10 +323,19 @@ public class ContactDto {
     return departmentName;
   }  
 
+  /**
+   * Set departmentName.
+   * @param departmentName Department name.             
+  **/
   public void setDepartmentName(String departmentName) {
     this.departmentName = departmentName;
   }
 
+  /**
+   * Set displayName and return this.
+   * @param displayName Display name.             
+   * @return this
+  **/
   public ContactDto displayName(String displayName) {
     this.displayName = displayName;
     return this;
@@ -282,15 +349,28 @@ public class ContactDto {
     return displayName;
   }  
 
+  /**
+   * Set displayName.
+   * @param displayName Display name.             
+  **/
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
+  /**
+   * Set emailAddresses and return this.
+   * @param emailAddresses Person&#39;s email addresses.             
+   * @return this
+  **/
   public ContactDto emailAddresses(List<EmailAddress> emailAddresses) {
     this.emailAddresses = emailAddresses;
     return this;
   }
-
+  /**
+   * Add an item to emailAddresses and return this.
+   * @param emailAddressesItem An item of: Person&#39;s email addresses.             
+   * @return this
+  **/
   public ContactDto addEmailAddressesItem(EmailAddress emailAddressesItem) {
     if (this.emailAddresses == null) {
       this.emailAddresses = new ArrayList<EmailAddress>();
@@ -307,15 +387,28 @@ public class ContactDto {
     return emailAddresses;
   }  
 
+  /**
+   * Set emailAddresses.
+   * @param emailAddresses Person&#39;s email addresses.             
+  **/
   public void setEmailAddresses(List<EmailAddress> emailAddresses) {
     this.emailAddresses = emailAddresses;
   }
 
+  /**
+   * Set events and return this.
+   * @param events Person&#39;s events.             
+   * @return this
+  **/
   public ContactDto events(List<CustomerEvent> events) {
     this.events = events;
     return this;
   }
-
+  /**
+   * Add an item to events and return this.
+   * @param eventsItem An item of: Person&#39;s events.             
+   * @return this
+  **/
   public ContactDto addEventsItem(CustomerEvent eventsItem) {
     if (this.events == null) {
       this.events = new ArrayList<CustomerEvent>();
@@ -332,10 +425,19 @@ public class ContactDto {
     return events;
   }  
 
+  /**
+   * Set events.
+   * @param events Person&#39;s events.             
+  **/
   public void setEvents(List<CustomerEvent> events) {
     this.events = events;
   }
 
+  /**
+   * Set fileAs and return this.
+   * @param fileAs A name used for sorting.             
+   * @return this
+  **/
   public ContactDto fileAs(String fileAs) {
     this.fileAs = fileAs;
     return this;
@@ -349,10 +451,19 @@ public class ContactDto {
     return fileAs;
   }  
 
+  /**
+   * Set fileAs.
+   * @param fileAs A name used for sorting.             
+  **/
   public void setFileAs(String fileAs) {
     this.fileAs = fileAs;
   }
 
+  /**
+   * Set fileAsMapping and return this.
+   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+   * @return this
+  **/
   public ContactDto fileAsMapping(String fileAsMapping) {
     this.fileAsMapping = fileAsMapping;
     return this;
@@ -366,10 +477,19 @@ public class ContactDto {
     return fileAsMapping;
   }  
 
+  /**
+   * Set fileAsMapping.
+   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+  **/
   public void setFileAsMapping(String fileAsMapping) {
     this.fileAsMapping = fileAsMapping;
   }
 
+  /**
+   * Set freeBusyLocation and return this.
+   * @param freeBusyLocation URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
+   * @return this
+  **/
   public ContactDto freeBusyLocation(String freeBusyLocation) {
     this.freeBusyLocation = freeBusyLocation;
     return this;
@@ -383,10 +503,19 @@ public class ContactDto {
     return freeBusyLocation;
   }  
 
+  /**
+   * Set freeBusyLocation.
+   * @param freeBusyLocation URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
+  **/
   public void setFreeBusyLocation(String freeBusyLocation) {
     this.freeBusyLocation = freeBusyLocation;
   }
 
+  /**
+   * Set gender and return this.
+   * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+   * @return this
+  **/
   public ContactDto gender(String gender) {
     this.gender = gender;
     return this;
@@ -400,10 +529,19 @@ public class ContactDto {
     return gender;
   }  
 
+  /**
+   * Set gender.
+   * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+  **/
   public void setGender(String gender) {
     this.gender = gender;
   }
 
+  /**
+   * Set givenName and return this.
+   * @param givenName Person&#39;s given name.             
+   * @return this
+  **/
   public ContactDto givenName(String givenName) {
     this.givenName = givenName;
     return this;
@@ -417,10 +555,19 @@ public class ContactDto {
     return givenName;
   }  
 
+  /**
+   * Set givenName.
+   * @param givenName Person&#39;s given name.             
+  **/
   public void setGivenName(String givenName) {
     this.givenName = givenName;
   }
 
+  /**
+   * Set governmentIdNumber and return this.
+   * @param governmentIdNumber Government id number.             
+   * @return this
+  **/
   public ContactDto governmentIdNumber(String governmentIdNumber) {
     this.governmentIdNumber = governmentIdNumber;
     return this;
@@ -434,10 +581,19 @@ public class ContactDto {
     return governmentIdNumber;
   }  
 
+  /**
+   * Set governmentIdNumber.
+   * @param governmentIdNumber Government id number.             
+  **/
   public void setGovernmentIdNumber(String governmentIdNumber) {
     this.governmentIdNumber = governmentIdNumber;
   }
 
+  /**
+   * Set hobbies and return this.
+   * @param hobbies Person&#39;s hobbies.             
+   * @return this
+  **/
   public ContactDto hobbies(String hobbies) {
     this.hobbies = hobbies;
     return this;
@@ -451,10 +607,19 @@ public class ContactDto {
     return hobbies;
   }  
 
+  /**
+   * Set hobbies.
+   * @param hobbies Person&#39;s hobbies.             
+  **/
   public void setHobbies(String hobbies) {
     this.hobbies = hobbies;
   }
 
+  /**
+   * Set initials and return this.
+   * @param initials Person&#39;s initials.             
+   * @return this
+  **/
   public ContactDto initials(String initials) {
     this.initials = initials;
     return this;
@@ -468,15 +633,28 @@ public class ContactDto {
     return initials;
   }  
 
+  /**
+   * Set initials.
+   * @param initials Person&#39;s initials.             
+  **/
   public void setInitials(String initials) {
     this.initials = initials;
   }
 
+  /**
+   * Set instantMessengers and return this.
+   * @param instantMessengers Person&#39;s instant messenger addresses.             
+   * @return this
+  **/
   public ContactDto instantMessengers(List<InstantMessengerAddress> instantMessengers) {
     this.instantMessengers = instantMessengers;
     return this;
   }
-
+  /**
+   * Add an item to instantMessengers and return this.
+   * @param instantMessengersItem An item of: Person&#39;s instant messenger addresses.             
+   * @return this
+  **/
   public ContactDto addInstantMessengersItem(InstantMessengerAddress instantMessengersItem) {
     if (this.instantMessengers == null) {
       this.instantMessengers = new ArrayList<InstantMessengerAddress>();
@@ -493,10 +671,19 @@ public class ContactDto {
     return instantMessengers;
   }  
 
+  /**
+   * Set instantMessengers.
+   * @param instantMessengers Person&#39;s instant messenger addresses.             
+  **/
   public void setInstantMessengers(List<InstantMessengerAddress> instantMessengers) {
     this.instantMessengers = instantMessengers;
   }
 
+  /**
+   * Set jobTitle and return this.
+   * @param jobTitle Person&#39;s job title.             
+   * @return this
+  **/
   public ContactDto jobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
     return this;
@@ -510,10 +697,19 @@ public class ContactDto {
     return jobTitle;
   }  
 
+  /**
+   * Set jobTitle.
+   * @param jobTitle Person&#39;s job title.             
+  **/
   public void setJobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
   }
 
+  /**
+   * Set language and return this.
+   * @param language Language.             
+   * @return this
+  **/
   public ContactDto language(String language) {
     this.language = language;
     return this;
@@ -527,10 +723,19 @@ public class ContactDto {
     return language;
   }  
 
+  /**
+   * Set language.
+   * @param language Language.             
+  **/
   public void setLanguage(String language) {
     this.language = language;
   }
 
+  /**
+   * Set location and return this.
+   * @param location Person&#39;s location.             
+   * @return this
+  **/
   public ContactDto location(String location) {
     this.location = location;
     return this;
@@ -544,10 +749,19 @@ public class ContactDto {
     return location;
   }  
 
+  /**
+   * Set location.
+   * @param location Person&#39;s location.             
+  **/
   public void setLocation(String location) {
     this.location = location;
   }
 
+  /**
+   * Set middleName and return this.
+   * @param middleName Person&#39;s middle name.             
+   * @return this
+  **/
   public ContactDto middleName(String middleName) {
     this.middleName = middleName;
     return this;
@@ -561,10 +775,19 @@ public class ContactDto {
     return middleName;
   }  
 
+  /**
+   * Set middleName.
+   * @param middleName Person&#39;s middle name.             
+  **/
   public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
 
+  /**
+   * Set nickname and return this.
+   * @param nickname Person&#39;s nickname.             
+   * @return this
+  **/
   public ContactDto nickname(String nickname) {
     this.nickname = nickname;
     return this;
@@ -578,10 +801,19 @@ public class ContactDto {
     return nickname;
   }  
 
+  /**
+   * Set nickname.
+   * @param nickname Person&#39;s nickname.             
+  **/
   public void setNickname(String nickname) {
     this.nickname = nickname;
   }
 
+  /**
+   * Set notes and return this.
+   * @param notes Notes.             
+   * @return this
+  **/
   public ContactDto notes(String notes) {
     this.notes = notes;
     return this;
@@ -595,10 +827,19 @@ public class ContactDto {
     return notes;
   }  
 
+  /**
+   * Set notes.
+   * @param notes Notes.             
+  **/
   public void setNotes(String notes) {
     this.notes = notes;
   }
 
+  /**
+   * Set notesFormat and return this.
+   * @param notesFormat Defines format of a text. Enum, available values: Text, Html
+   * @return this
+  **/
   public ContactDto notesFormat(String notesFormat) {
     this.notesFormat = notesFormat;
     return this;
@@ -612,10 +853,19 @@ public class ContactDto {
     return notesFormat;
   }  
 
+  /**
+   * Set notesFormat.
+   * @param notesFormat Defines format of a text. Enum, available values: Text, Html
+  **/
   public void setNotesFormat(String notesFormat) {
     this.notesFormat = notesFormat;
   }
 
+  /**
+   * Set officeLocation and return this.
+   * @param officeLocation Office location.             
+   * @return this
+  **/
   public ContactDto officeLocation(String officeLocation) {
     this.officeLocation = officeLocation;
     return this;
@@ -629,10 +879,19 @@ public class ContactDto {
     return officeLocation;
   }  
 
+  /**
+   * Set officeLocation.
+   * @param officeLocation Office location.             
+  **/
   public void setOfficeLocation(String officeLocation) {
     this.officeLocation = officeLocation;
   }
 
+  /**
+   * Set organizationalIdNumber and return this.
+   * @param organizationalIdNumber Contains an identifier for the mail user used within the mail user&#39;s organization.             
+   * @return this
+  **/
   public ContactDto organizationalIdNumber(String organizationalIdNumber) {
     this.organizationalIdNumber = organizationalIdNumber;
     return this;
@@ -646,15 +905,28 @@ public class ContactDto {
     return organizationalIdNumber;
   }  
 
+  /**
+   * Set organizationalIdNumber.
+   * @param organizationalIdNumber Contains an identifier for the mail user used within the mail user&#39;s organization.             
+  **/
   public void setOrganizationalIdNumber(String organizationalIdNumber) {
     this.organizationalIdNumber = organizationalIdNumber;
   }
 
+  /**
+   * Set phoneNumbers and return this.
+   * @param phoneNumbers Person&#39;s phone numbers.             
+   * @return this
+  **/
   public ContactDto phoneNumbers(List<PhoneNumber> phoneNumbers) {
     this.phoneNumbers = phoneNumbers;
     return this;
   }
-
+  /**
+   * Add an item to phoneNumbers and return this.
+   * @param phoneNumbersItem An item of: Person&#39;s phone numbers.             
+   * @return this
+  **/
   public ContactDto addPhoneNumbersItem(PhoneNumber phoneNumbersItem) {
     if (this.phoneNumbers == null) {
       this.phoneNumbers = new ArrayList<PhoneNumber>();
@@ -671,10 +943,19 @@ public class ContactDto {
     return phoneNumbers;
   }  
 
+  /**
+   * Set phoneNumbers.
+   * @param phoneNumbers Person&#39;s phone numbers.             
+  **/
   public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
     this.phoneNumbers = phoneNumbers;
   }
 
+  /**
+   * Set photo and return this.
+   * @param photo Person&#39;s photo.             
+   * @return this
+  **/
   public ContactDto photo(ContactPhoto photo) {
     this.photo = photo;
     return this;
@@ -688,15 +969,28 @@ public class ContactDto {
     return photo;
   }  
 
+  /**
+   * Set photo.
+   * @param photo Person&#39;s photo.             
+  **/
   public void setPhoto(ContactPhoto photo) {
     this.photo = photo;
   }
 
+  /**
+   * Set physicalAddresses and return this.
+   * @param physicalAddresses Person&#39;s physical addresses.             
+   * @return this
+  **/
   public ContactDto physicalAddresses(List<PostalAddress> physicalAddresses) {
     this.physicalAddresses = physicalAddresses;
     return this;
   }
-
+  /**
+   * Add an item to physicalAddresses and return this.
+   * @param physicalAddressesItem An item of: Person&#39;s physical addresses.             
+   * @return this
+  **/
   public ContactDto addPhysicalAddressesItem(PostalAddress physicalAddressesItem) {
     if (this.physicalAddresses == null) {
       this.physicalAddresses = new ArrayList<PostalAddress>();
@@ -713,10 +1007,19 @@ public class ContactDto {
     return physicalAddresses;
   }  
 
+  /**
+   * Set physicalAddresses.
+   * @param physicalAddresses Person&#39;s physical addresses.             
+  **/
   public void setPhysicalAddresses(List<PostalAddress> physicalAddresses) {
     this.physicalAddresses = physicalAddresses;
   }
 
+  /**
+   * Set preferredTextEncoding and return this.
+   * @param preferredTextEncoding Encoding for all text properties.             
+   * @return this
+  **/
   public ContactDto preferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
     return this;
@@ -730,10 +1033,19 @@ public class ContactDto {
     return preferredTextEncoding;
   }  
 
+  /**
+   * Set preferredTextEncoding.
+   * @param preferredTextEncoding Encoding for all text properties.             
+  **/
   public void setPreferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
   }
 
+  /**
+   * Set prefix and return this.
+   * @param prefix A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
+   * @return this
+  **/
   public ContactDto prefix(String prefix) {
     this.prefix = prefix;
     return this;
@@ -747,10 +1059,19 @@ public class ContactDto {
     return prefix;
   }  
 
+  /**
+   * Set prefix.
+   * @param prefix A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
+  **/
   public void setPrefix(String prefix) {
     this.prefix = prefix;
   }
 
+  /**
+   * Set profession and return this.
+   * @param profession A job position of a person in a company.             
+   * @return this
+  **/
   public ContactDto profession(String profession) {
     this.profession = profession;
     return this;
@@ -764,10 +1085,19 @@ public class ContactDto {
     return profession;
   }  
 
+  /**
+   * Set profession.
+   * @param profession A job position of a person in a company.             
+  **/
   public void setProfession(String profession) {
     this.profession = profession;
   }
 
+  /**
+   * Set suffix and return this.
+   * @param suffix A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
+   * @return this
+  **/
   public ContactDto suffix(String suffix) {
     this.suffix = suffix;
     return this;
@@ -781,10 +1111,19 @@ public class ContactDto {
     return suffix;
   }  
 
+  /**
+   * Set suffix.
+   * @param suffix A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
+  **/
   public void setSuffix(String suffix) {
     this.suffix = suffix;
   }
 
+  /**
+   * Set surname and return this.
+   * @param surname Person&#39;s surname.             
+   * @return this
+  **/
   public ContactDto surname(String surname) {
     this.surname = surname;
     return this;
@@ -798,15 +1137,28 @@ public class ContactDto {
     return surname;
   }  
 
+  /**
+   * Set surname.
+   * @param surname Person&#39;s surname.             
+  **/
   public void setSurname(String surname) {
     this.surname = surname;
   }
 
+  /**
+   * Set urls and return this.
+   * @param urls Person&#39;s urls.             
+   * @return this
+  **/
   public ContactDto urls(List<Url> urls) {
     this.urls = urls;
     return this;
   }
-
+  /**
+   * Add an item to urls and return this.
+   * @param urlsItem An item of: Person&#39;s urls.             
+   * @return this
+  **/
   public ContactDto addUrlsItem(Url urlsItem) {
     if (this.urls == null) {
       this.urls = new ArrayList<Url>();
@@ -823,6 +1175,10 @@ public class ContactDto {
     return urls;
   }  
 
+  /**
+   * Set urls.
+   * @param urls Person&#39;s urls.             
+  **/
   public void setUrls(List<Url> urls) {
     this.urls = urls;
   }

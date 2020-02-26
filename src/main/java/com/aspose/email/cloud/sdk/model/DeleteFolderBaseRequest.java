@@ -49,6 +49,11 @@ public class DeleteFolderBaseRequest extends AccountBaseRequest {
   @JsonProperty("deletePermanently")
   private Boolean deletePermanently = null;
 
+  /**
+   * Set folder and return this.
+   * @param folder Folder name             
+   * @return this
+  **/
   public DeleteFolderBaseRequest folder(String folder) {
     this.folder = folder;
     return this;
@@ -62,10 +67,19 @@ public class DeleteFolderBaseRequest extends AccountBaseRequest {
     return folder;
   }  
 
+  /**
+   * Set folder.
+   * @param folder Folder name             
+  **/
   public void setFolder(String folder) {
     this.folder = folder;
   }
 
+  /**
+   * Set deletePermanently and return this.
+   * @param deletePermanently Specifies that folder should be deleted permanently             
+   * @return this
+  **/
   public DeleteFolderBaseRequest deletePermanently(Boolean deletePermanently) {
     this.deletePermanently = deletePermanently;
     return this;
@@ -79,6 +93,10 @@ public class DeleteFolderBaseRequest extends AccountBaseRequest {
     return deletePermanently;
   }  
 
+  /**
+   * Set deletePermanently.
+   * @param deletePermanently Specifies that folder should be deleted permanently             
+  **/
   public void setDeletePermanently(Boolean deletePermanently) {
     this.deletePermanently = deletePermanently;
   }

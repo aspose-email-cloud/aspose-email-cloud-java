@@ -52,6 +52,11 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
   @JsonProperty("refreshToken")
   private String refreshToken = null;
 
+  /**
+   * Set clientId and return this.
+   * @param clientId OAuth client identifier             
+   * @return this
+  **/
   public SaveOAuthEmailAccountRequest clientId(String clientId) {
     this.clientId = clientId;
     return this;
@@ -65,10 +70,19 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
     return clientId;
   }  
 
+  /**
+   * Set clientId.
+   * @param clientId OAuth client identifier             
+  **/
   public void setClientId(String clientId) {
     this.clientId = clientId;
   }
 
+  /**
+   * Set clientSecret and return this.
+   * @param clientSecret OAuth client secret             
+   * @return this
+  **/
   public SaveOAuthEmailAccountRequest clientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
     return this;
@@ -82,10 +96,19 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
     return clientSecret;
   }  
 
+  /**
+   * Set clientSecret.
+   * @param clientSecret OAuth client secret             
+  **/
   public void setClientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
   }
 
+  /**
+   * Set refreshToken and return this.
+   * @param refreshToken OAuth refresh token             
+   * @return this
+  **/
   public SaveOAuthEmailAccountRequest refreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
     return this;
@@ -99,6 +122,10 @@ public class SaveOAuthEmailAccountRequest extends EmailAccountRequest {
     return refreshToken;
   }  
 
+  /**
+   * Set refreshToken.
+   * @param refreshToken OAuth refresh token             
+  **/
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }

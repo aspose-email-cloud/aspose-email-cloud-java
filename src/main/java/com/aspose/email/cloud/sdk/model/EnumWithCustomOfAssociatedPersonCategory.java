@@ -49,6 +49,11 @@ public class EnumWithCustomOfAssociatedPersonCategory {
   @JsonProperty("description")
   private String description = null;
 
+  /**
+   * Set value and return this.
+   * @param value Associated person&#39;s category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+   * @return this
+  **/
   public EnumWithCustomOfAssociatedPersonCategory value(String value) {
     this.value = value;
     return this;
@@ -62,10 +67,19 @@ public class EnumWithCustomOfAssociatedPersonCategory {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Associated person&#39;s category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+  **/
   public void setValue(String value) {
     this.value = value;
   }
 
+  /**
+   * Set description and return this.
+   * @param description 
+   * @return this
+  **/
   public EnumWithCustomOfAssociatedPersonCategory description(String description) {
     this.description = description;
     return this;
@@ -79,6 +93,10 @@ public class EnumWithCustomOfAssociatedPersonCategory {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description 
+  **/
   public void setDescription(String description) {
     this.description = description;
   }

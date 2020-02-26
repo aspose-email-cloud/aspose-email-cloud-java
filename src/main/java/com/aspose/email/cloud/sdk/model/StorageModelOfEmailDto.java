@@ -49,6 +49,11 @@ public class StorageModelOfEmailDto {
   @JsonProperty("value")
   private EmailDto value = null;
 
+  /**
+   * Set storageFile and return this.
+   * @param storageFile 
+   * @return this
+  **/
   public StorageModelOfEmailDto storageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
     return this;
@@ -62,10 +67,19 @@ public class StorageModelOfEmailDto {
     return storageFile;
   }  
 
+  /**
+   * Set storageFile.
+   * @param storageFile 
+  **/
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
 
+  /**
+   * Set value and return this.
+   * @param value 
+   * @return this
+  **/
   public StorageModelOfEmailDto value(EmailDto value) {
     this.value = value;
     return this;
@@ -79,6 +93,10 @@ public class StorageModelOfEmailDto {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value 
+  **/
   public void setValue(EmailDto value) {
     this.value = value;
   }

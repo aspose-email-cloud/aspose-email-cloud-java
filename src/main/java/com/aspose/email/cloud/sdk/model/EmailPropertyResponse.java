@@ -46,6 +46,11 @@ public class EmailPropertyResponse {
   @JsonProperty("emailProperty")
   private EmailProperty emailProperty = null;
 
+  /**
+   * Set emailProperty and return this.
+   * @param emailProperty Gets or sets email property.             
+   * @return this
+  **/
   public EmailPropertyResponse emailProperty(EmailProperty emailProperty) {
     this.emailProperty = emailProperty;
     return this;
@@ -59,6 +64,10 @@ public class EmailPropertyResponse {
     return emailProperty;
   }  
 
+  /**
+   * Set emailProperty.
+   * @param emailProperty Gets or sets email property.             
+  **/
   public void setEmailProperty(EmailProperty emailProperty) {
     this.emailProperty = emailProperty;
   }

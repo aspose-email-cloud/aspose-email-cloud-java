@@ -1,10 +1,13 @@
 package com.aspose.email.cloud.sdk.api;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.model.requests.*;
 import com.migcomponents.migbase64.Base64;
@@ -20,7 +23,7 @@ public class EmailApiTests {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss'Z'");
 
     @BeforeClass(alwaysRun = true)
-    public void oneTimeSetUp() throws Exception {
+    public void oneTimeSetUp() throws ApiException {
         api = new EmailApi(
             System.getenv("appKey"),
             System.getenv("appSid"),
@@ -33,12 +36,12 @@ public class EmailApiTests {
     }
 
     @AfterClass(alwaysRun = true)
-    public void oneTimeTearDown() throws Exception {
+    public void oneTimeTearDown() throws ApiException {
         api.deleteFolder(new DeleteFolderRequestData(folder, storage, true));
     }
 
     @Test(groups = { "pipeline" })
-    public void hierarchicalTest() throws Exception {
+    public void hierarchicalTest() throws ApiException {
         String fileName = createCalendar();
         HierarchicalObject calendar = api.getCalendar(new GetCalendarRequestData(fileName, folder, storage));
         ArrayList<PrimitiveObject> primitives = new ArrayList<PrimitiveObject>();
@@ -53,7 +56,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void dateTest() throws Exception {
+    public void dateTest() throws ApiException, ParseException {
         Calendar startDate = Calendar.getInstance();
         startDate.set(Calendar.MILLISECOND, 0);
         String calendarFile = createCalendar(startDate);
@@ -71,7 +74,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void fileTest() throws Exception {
+    public void fileTest() throws ApiException {
         String file = createCalendar();
         byte[] fileBytes = api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
         String calendarContent = new String(fileBytes, StandardCharsets.UTF_8);
@@ -84,7 +87,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void contactFormatTest() throws Exception {
+    public void contactFormatTest() throws ApiException {
         String[] formats = { "vcard", "msg" };
         for (String format : formats) {
             String extension = format.equals("vcard") ? ".vcf" : ".msg";
@@ -98,23 +101,23 @@ public class EmailApiTests {
         }
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameGenderizeTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameGenderizeTest() throws ApiException {
         ListResponseOfAiNameGenderHypothesis result = api
                 .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
         assert result.getValue().size() >= 1;
         assert result.getValue().get(0).getGender().equals("Male");
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameFormatTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameFormatTest() throws ApiException {
         AiNameFormatted result = api.aiNameFormat(
                 new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
         assert result.getName().equals("Mr. Cane J. M.");
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameMatchTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameMatchTest() throws ApiException {
         final String first = "John Michael Cane";
         final String second = "Cane J.";
         AiNameMatchResult result = api
@@ -122,8 +125,8 @@ public class EmailApiTests {
         assert result.getSimilarity() >= 0.5;
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameExpandTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameExpandTest() throws ApiException {
         String name = "Smith Bobby";
         AiNameWeightedVariants result = api
                 .aiNameExpand(new AiNameExpandRequestData(name, null, null, null, null, null));
@@ -135,8 +138,8 @@ public class EmailApiTests {
         assert expandedNames.contains("B. Smith");
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameCompleteTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameCompleteTest() throws ApiException {
         String prefix = "Dav";
         AiNameWeightedVariants result = api
                 .aiNameComplete(new AiNameCompleteRequestData(prefix, null, null, null, null, null));
@@ -149,8 +152,8 @@ public class EmailApiTests {
         assert names.contains("Davis");
     }
 
-    @Test(groups = { "ai" })
-    public void aiNameParseEmailAddressTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiNameParseEmailAddressTest() throws ApiException {
         String address = "john-cane@gmail.com";
         ListResponseOfAiNameExtracted result = api
                 .aiNameParseEmailAddress(new AiNameParseEmailAddressRequestData(address, null, null, null, null, null));
@@ -170,8 +173,8 @@ public class EmailApiTests {
         assert "Cane".equals(surname);
     }
 
-    @Test(groups = {"ai"})
-    public void aiBcrParseStorageTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiBcrParseStorageTest() throws ApiException, IOException {
         String fileName = UUID.randomUUID().toString() + ".png";
         String filePath = folder + "/" + fileName;
         byte[] fileBytes = IOUtils.toByteArray(
@@ -210,8 +213,8 @@ public class EmailApiTests {
         assert primitives.size() >= 3;
     }
 
-    @Test(groups = {"ai"})
-    public void aiBcrParseTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiBcrParseTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
@@ -230,7 +233,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void createCalendarEmailTest() throws Exception {
+    public void createCalendarEmailTest() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
@@ -274,7 +277,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void contactModelTest() throws Exception {
+    public void contactModelTest() throws ApiException {
         ContactDto contact = new ContactDto()
             .gender("Male")
             .surname("Thomas")
@@ -295,8 +298,8 @@ public class EmailApiTests {
         assert objectExist.isExists();
     }
 
-    @Test(groups = { "ai" })
-    public void aiBcrParseModelTest() throws Exception {
+    @Test(groups = { "ai", "pipeline" })
+    public void aiBcrParseModelTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
@@ -307,12 +310,63 @@ public class EmailApiTests {
         assert firstVCard.getDisplayName().contains("Thomas");
     }
 
-    private String createCalendar() throws Exception {
+    @Test(groups = { "pipeline" })
+    public void discoverEmailConfigTest() throws ApiException {
+        EmailAccountConfigList configList = api.discoverEmailConfig(
+            new DiscoverEmailConfigRequestData("example@gmail.com", true));
+        assert configList.getValue().size() >= 2;
+        for (EmailAccountConfig config : configList.getValue()) {
+            if (config.getProtocolType().equals("SMTP"))
+                assert "smtp.gmail.com".equals(config.getHost());
+        }
+    }
+
+    @Test(groups = { "pipeline" })
+    public void createMapiTest() throws ApiException {
+        String fileName = UUID.randomUUID().toString() + ".msg";
+        api.createMapi(new CreateMapiRequestData(
+            fileName,
+            new HierarchicalObjectRequest(
+                new HierarchicalObject("IPM.Contact", null, Arrays.<BaseObject>asList(
+                    new PrimitiveObject("Tag:'PidTagMessageClass':0x1A:String", null, "IPM.Contact"),
+                    new PrimitiveObject("Tag:'PidTagSubject':0x37:String", null, "null"),
+                    new PrimitiveObject("Tag:'PidTagSubjectPrefix':0x3D:String", null, null),
+                    new PrimitiveObject("Tag:'PidTagMessageFlags':0xE07:Integer32", null, "8"),
+                    new PrimitiveObject("Tag:'PidTagNormalizedSubject':0xE1D:String", null, null),
+                    new PrimitiveObject("Tag:'PidTagBody':0x1000:String", null, null),
+                    new PrimitiveObject("Tag:'PidTagStoreSupportMask':0x340D:Integer32", null, "265849"),
+                    new PrimitiveObject("Tag:'PidTagSurname':0x3A11:String", null, "Surname"),
+                    new PrimitiveObject("Tag:'PidTagOtherTelephoneNumber':0x3A1F:String", null, "+79123456789"),
+                    new PrimitiveObject("Tag:'':0x6662:Integer32", null, "0"),
+                    new PrimitiveObject("Lid:'PidLidAddressBookProviderArrayType':0x8029:Integer32:00062004-0000-0000-c000-000000000046", null, "1"))),
+                new StorageFolderLocation(storage, folder))));
+        assert api.objectExists(new ObjectExistsRequestData(folder + "/" + fileName, storage, null))
+            .isExists();
+    }
+
+    @Test(groups = { "pipeline" })
+    public void addMapiAttachment() throws ApiException {
+        String calendar = createCalendar();
+        String calendarAttachment = createCalendar();
+        api.addMapiAttachment(new AddMapiAttachmentRequestData(calendar, calendarAttachment,
+            new AddAttachmentRequest(
+                new StorageFolderLocation(storage, folder),
+                new StorageFolderLocation(storage, folder))));
+    }
+
+    @Test(groups = { "pipeline" })
+    public void getMapiPropertiesTest() throws ApiException {
+        String fileName = createCalendar();
+        HierarchicalObjectResponse properties = api.getMapiProperties(new GetMapiPropertiesRequestData(fileName, folder, storage));
+        assert properties.getHierarchicalObject().getName().contains("IPM.Schedule");
+    }
+
+    private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
     }
 
-    private String createCalendar(Calendar startDate) throws Exception {
+    private String createCalendar(Calendar startDate) throws ApiException {
         String fileName = UUID.randomUUID().toString() + ".ics";
         Calendar endDate =(Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
@@ -323,19 +377,13 @@ public class EmailApiTests {
                 new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
                 new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
                     new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
-                    new PrimitiveObject("DISPLAYNAME", null, "Organizer Name")
-                )),
+                    new PrimitiveObject("DISPLAYNAME", null, "Organizer Name"))),
                 new HierarchicalObject("ATTENDEES", null, Arrays.<BaseObject>asList(
                     new IndexedHierarchicalObject(
                         "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
                             new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
-                            new PrimitiveObject("DISPLAYNAME", null, "Attendee Name")
-                        )
-                    )
-                ))
-            )),
+                            new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
             new StorageFolderLocation(storage, folder))));
-
         return fileName;
     }
 }

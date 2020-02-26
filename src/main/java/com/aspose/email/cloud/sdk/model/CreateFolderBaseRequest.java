@@ -49,6 +49,11 @@ public class CreateFolderBaseRequest extends AccountBaseRequest {
   @JsonProperty("parentFolder")
   private String parentFolder = null;
 
+  /**
+   * Set folder and return this.
+   * @param folder Folder name             
+   * @return this
+  **/
   public CreateFolderBaseRequest folder(String folder) {
     this.folder = folder;
     return this;
@@ -62,10 +67,19 @@ public class CreateFolderBaseRequest extends AccountBaseRequest {
     return folder;
   }  
 
+  /**
+   * Set folder.
+   * @param folder Folder name             
+  **/
   public void setFolder(String folder) {
     this.folder = folder;
   }
 
+  /**
+   * Set parentFolder and return this.
+   * @param parentFolder Parent folder path             
+   * @return this
+  **/
   public CreateFolderBaseRequest parentFolder(String parentFolder) {
     this.parentFolder = parentFolder;
     return this;
@@ -79,6 +93,10 @@ public class CreateFolderBaseRequest extends AccountBaseRequest {
     return parentFolder;
   }  
 
+  /**
+   * Set parentFolder.
+   * @param parentFolder Parent folder path             
+  **/
   public void setParentFolder(String parentFolder) {
     this.parentFolder = parentFolder;
   }

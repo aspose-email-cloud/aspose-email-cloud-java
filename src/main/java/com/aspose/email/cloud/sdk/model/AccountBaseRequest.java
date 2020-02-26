@@ -52,6 +52,11 @@ public class AccountBaseRequest {
   @JsonProperty("storageFolder")
   private StorageFolderLocation storageFolder = null;
 
+  /**
+   * Set firstAccount and return this.
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @return this
+  **/
   public AccountBaseRequest firstAccount(String firstAccount) {
     this.firstAccount = firstAccount;
     return this;
@@ -65,10 +70,19 @@ public class AccountBaseRequest {
     return firstAccount;
   }  
 
+  /**
+   * Set firstAccount.
+   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+  **/
   public void setFirstAccount(String firstAccount) {
     this.firstAccount = firstAccount;
   }
 
+  /**
+   * Set secondAccount and return this.
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @return this
+  **/
   public AccountBaseRequest secondAccount(String secondAccount) {
     this.secondAccount = secondAccount;
     return this;
@@ -82,10 +96,19 @@ public class AccountBaseRequest {
     return secondAccount;
   }  
 
+  /**
+   * Set secondAccount.
+   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+  **/
   public void setSecondAccount(String secondAccount) {
     this.secondAccount = secondAccount;
   }
 
+  /**
+   * Set storageFolder and return this.
+   * @param storageFolder Storage folder location of account files             
+   * @return this
+  **/
   public AccountBaseRequest storageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
     return this;
@@ -99,6 +122,10 @@ public class AccountBaseRequest {
     return storageFolder;
   }  
 
+  /**
+   * Set storageFolder.
+   * @param storageFolder Storage folder location of account files             
+  **/
   public void setStorageFolder(StorageFolderLocation storageFolder) {
     this.storageFolder = storageFolder;
   }

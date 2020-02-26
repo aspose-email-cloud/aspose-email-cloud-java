@@ -49,6 +49,11 @@ public class EnumWithCustomOfUrlCategory {
   @JsonProperty("description")
   private String description = null;
 
+  /**
+   * Set value and return this.
+   * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+   * @return this
+  **/
   public EnumWithCustomOfUrlCategory value(String value) {
     this.value = value;
     return this;
@@ -62,10 +67,19 @@ public class EnumWithCustomOfUrlCategory {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+  **/
   public void setValue(String value) {
     this.value = value;
   }
 
+  /**
+   * Set description and return this.
+   * @param description 
+   * @return this
+  **/
   public EnumWithCustomOfUrlCategory description(String description) {
     this.description = description;
     return this;
@@ -79,6 +93,10 @@ public class EnumWithCustomOfUrlCategory {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description 
+  **/
   public void setDescription(String description) {
     this.description = description;
   }

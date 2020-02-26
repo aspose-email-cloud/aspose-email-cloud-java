@@ -46,6 +46,11 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
   @JsonProperty("password")
   private String password = null;
 
+  /**
+   * Set password and return this.
+   * @param password Email account password             
+   * @return this
+  **/
   public SaveEmailAccountRequest password(String password) {
     this.password = password;
     return this;
@@ -59,6 +64,10 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
     return password;
   }  
 
+  /**
+   * Set password.
+   * @param password Email account password             
+  **/
   public void setPassword(String password) {
     this.password = password;
   }

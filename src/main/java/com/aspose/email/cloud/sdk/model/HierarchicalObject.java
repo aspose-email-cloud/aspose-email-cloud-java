@@ -46,11 +46,20 @@ public class HierarchicalObject extends BaseObject {
   @JsonProperty("internalProperties")
   private List<BaseObject> internalProperties = null;
 
+  /**
+   * Set internalProperties and return this.
+   * @param internalProperties List of internal properties             
+   * @return this
+  **/
   public HierarchicalObject internalProperties(List<BaseObject> internalProperties) {
     this.internalProperties = internalProperties;
     return this;
   }
-
+  /**
+   * Add an item to internalProperties and return this.
+   * @param internalPropertiesItem An item of: List of internal properties             
+   * @return this
+  **/
   public HierarchicalObject addInternalPropertiesItem(BaseObject internalPropertiesItem) {
     if (this.internalProperties == null) {
       this.internalProperties = new ArrayList<BaseObject>();
@@ -67,6 +76,10 @@ public class HierarchicalObject extends BaseObject {
     return internalProperties;
   }  
 
+  /**
+   * Set internalProperties.
+   * @param internalProperties List of internal properties             
+  **/
   public void setInternalProperties(List<BaseObject> internalProperties) {
     this.internalProperties = internalProperties;
   }

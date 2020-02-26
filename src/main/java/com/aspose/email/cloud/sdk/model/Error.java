@@ -55,6 +55,11 @@ public class Error {
   @JsonProperty("innerError")
   private ErrorDetails innerError = null;
 
+  /**
+   * Set code and return this.
+   * @param code Code             
+   * @return this
+  **/
   public Error code(String code) {
     this.code = code;
     return this;
@@ -68,10 +73,19 @@ public class Error {
     return code;
   }  
 
+  /**
+   * Set code.
+   * @param code Code             
+  **/
   public void setCode(String code) {
     this.code = code;
   }
 
+  /**
+   * Set message and return this.
+   * @param message Message             
+   * @return this
+  **/
   public Error message(String message) {
     this.message = message;
     return this;
@@ -85,10 +99,19 @@ public class Error {
     return message;
   }  
 
+  /**
+   * Set message.
+   * @param message Message             
+  **/
   public void setMessage(String message) {
     this.message = message;
   }
 
+  /**
+   * Set description and return this.
+   * @param description Description             
+   * @return this
+  **/
   public Error description(String description) {
     this.description = description;
     return this;
@@ -102,10 +125,19 @@ public class Error {
     return description;
   }  
 
+  /**
+   * Set description.
+   * @param description Description             
+  **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+  /**
+   * Set innerError and return this.
+   * @param innerError Inner Error             
+   * @return this
+  **/
   public Error innerError(ErrorDetails innerError) {
     this.innerError = innerError;
     return this;
@@ -119,6 +151,10 @@ public class Error {
     return innerError;
   }  
 
+  /**
+   * Set innerError.
+   * @param innerError Inner Error             
+  **/
   public void setInnerError(ErrorDetails innerError) {
     this.innerError = innerError;
   }

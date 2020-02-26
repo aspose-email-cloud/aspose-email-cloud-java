@@ -61,6 +61,11 @@ public class AiBcrOcrDataPart {
   @JsonProperty("details")
   private Map<String, String> details = null;
 
+  /**
+   * Set x and return this.
+   * @param x X position of text block             
+   * @return this
+  **/
   public AiBcrOcrDataPart x(Double x) {
     this.x = x;
     return this;
@@ -74,10 +79,19 @@ public class AiBcrOcrDataPart {
     return x;
   }  
 
+  /**
+   * Set x.
+   * @param x X position of text block             
+  **/
   public void setX(Double x) {
     this.x = x;
   }
 
+  /**
+   * Set y and return this.
+   * @param y Y position of text block             
+   * @return this
+  **/
   public AiBcrOcrDataPart y(Double y) {
     this.y = y;
     return this;
@@ -91,10 +105,19 @@ public class AiBcrOcrDataPart {
     return y;
   }  
 
+  /**
+   * Set y.
+   * @param y Y position of text block             
+  **/
   public void setY(Double y) {
     this.y = y;
   }
 
+  /**
+   * Set width and return this.
+   * @param width Width of text block             
+   * @return this
+  **/
   public AiBcrOcrDataPart width(Double width) {
     this.width = width;
     return this;
@@ -108,10 +131,19 @@ public class AiBcrOcrDataPart {
     return width;
   }  
 
+  /**
+   * Set width.
+   * @param width Width of text block             
+  **/
   public void setWidth(Double width) {
     this.width = width;
   }
 
+  /**
+   * Set height and return this.
+   * @param height Height of text block             
+   * @return this
+  **/
   public AiBcrOcrDataPart height(Double height) {
     this.height = height;
     return this;
@@ -125,10 +157,19 @@ public class AiBcrOcrDataPart {
     return height;
   }  
 
+  /**
+   * Set height.
+   * @param height Height of text block             
+  **/
   public void setHeight(Double height) {
     this.height = height;
   }
 
+  /**
+   * Set text and return this.
+   * @param text Recognized text             
+   * @return this
+  **/
   public AiBcrOcrDataPart text(String text) {
     this.text = text;
     return this;
@@ -142,15 +183,31 @@ public class AiBcrOcrDataPart {
     return text;
   }  
 
+  /**
+   * Set text.
+   * @param text Recognized text             
+  **/
   public void setText(String text) {
     this.text = text;
   }
 
+  /**
+   * Set details and return this.
+   * @param details Additional recognition result details             
+   * @return this
+  **/
   public AiBcrOcrDataPart details(Map<String, String> details) {
     this.details = details;
     return this;
   }
 
+  /**
+   * Add an item to details and return this.
+   * details is: Additional recognition result details             
+   * @param key An item key
+   * @param detailsItem An item value
+   * @return this
+  **/
   public AiBcrOcrDataPart putDetailsItem(String key, String detailsItem) {
     if (this.details == null) {
       this.details = new HashMap<String, String>();
@@ -167,6 +224,10 @@ public class AiBcrOcrDataPart {
     return details;
   }  
 
+  /**
+   * Set details.
+   * @param details Additional recognition result details             
+  **/
   public void setDetails(Map<String, String> details) {
     this.details = details;
   }

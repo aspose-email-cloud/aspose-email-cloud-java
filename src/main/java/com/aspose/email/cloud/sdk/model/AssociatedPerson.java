@@ -52,6 +52,11 @@ public class AssociatedPerson {
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
+  /**
+   * Set name and return this.
+   * @param name Associated person&#39;s name.             
+   * @return this
+  **/
   public AssociatedPerson name(String name) {
     this.name = name;
     return this;
@@ -65,10 +70,19 @@ public class AssociatedPerson {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name Associated person&#39;s name.             
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set category and return this.
+   * @param category Associated person&#39;s category.             
+   * @return this
+  **/
   public AssociatedPerson category(EnumWithCustomOfAssociatedPersonCategory category) {
     this.category = category;
     return this;
@@ -82,10 +96,19 @@ public class AssociatedPerson {
     return category;
   }  
 
+  /**
+   * Set category.
+   * @param category Associated person&#39;s category.             
+  **/
   public void setCategory(EnumWithCustomOfAssociatedPersonCategory category) {
     this.category = category;
   }
 
+  /**
+   * Set preferred and return this.
+   * @param preferred Defines whether associated person is preferred.             
+   * @return this
+  **/
   public AssociatedPerson preferred(Boolean preferred) {
     this.preferred = preferred;
     return this;
@@ -99,6 +122,10 @@ public class AssociatedPerson {
     return preferred;
   }  
 
+  /**
+   * Set preferred.
+   * @param preferred Defines whether associated person is preferred.             
+  **/
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }

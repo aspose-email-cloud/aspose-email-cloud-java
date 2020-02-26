@@ -46,6 +46,11 @@ public class AiBcrRq {
   @JsonProperty("options")
   private AiBcrOptions options = null;
 
+  /**
+   * Set options and return this.
+   * @param options Recognition options             
+   * @return this
+  **/
   public AiBcrRq options(AiBcrOptions options) {
     this.options = options;
     return this;
@@ -59,6 +64,10 @@ public class AiBcrRq {
     return options;
   }  
 
+  /**
+   * Set options.
+   * @param options Recognition options             
+  **/
   public void setOptions(AiBcrOptions options) {
     this.options = options;
   }

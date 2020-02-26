@@ -49,6 +49,11 @@ public class IndexedPrimitiveObject extends BaseObject {
   @JsonProperty("value")
   private String value = null;
 
+  /**
+   * Set index and return this.
+   * @param index Index of property in list             
+   * @return this
+  **/
   public IndexedPrimitiveObject index(Integer index) {
     this.index = index;
     return this;
@@ -62,10 +67,19 @@ public class IndexedPrimitiveObject extends BaseObject {
     return index;
   }  
 
+  /**
+   * Set index.
+   * @param index Index of property in list             
+  **/
   public void setIndex(Integer index) {
     this.index = index;
   }
 
+  /**
+   * Set value and return this.
+   * @param value Gets or sets the name of a property.             
+   * @return this
+  **/
   public IndexedPrimitiveObject value(String value) {
     this.value = value;
     return this;
@@ -79,6 +93,10 @@ public class IndexedPrimitiveObject extends BaseObject {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value Gets or sets the name of a property.             
+  **/
   public void setValue(String value) {
     this.value = value;
   }

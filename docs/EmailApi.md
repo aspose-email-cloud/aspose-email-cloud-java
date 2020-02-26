@@ -1072,6 +1072,74 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="discoverEmailConfig"></a>
+## **discoverEmailConfig**
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverEmailConfig(DiscoverEmailConfigRequestData request)
+
+Discover email accounts by email address. Does not validate discovered accounts.             
+
+### **DiscoverEmailConfigRequestData** Parameters
+```java
+public DiscoverEmailConfigRequestData(
+    String address, 
+    Boolean fastProcessing)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **String**| Email address |
+ **fastProcessing** | **Boolean**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned              | [optional] [default to false]
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="discoverEmailConfigOauth"></a>
+## **discoverEmailConfigOauth**
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverEmailConfigOauth(DiscoverEmailConfigOauthRequestData request)
+
+Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+
+### **DiscoverEmailConfigOauthRequestData** Parameters
+```java
+public DiscoverEmailConfigOauthRequestData(
+    DiscoverEmailConfigOauth rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. |
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="discoverEmailConfigPassword"></a>
+## **discoverEmailConfigPassword**
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverEmailConfigPassword(DiscoverEmailConfigPasswordRequestData request)
+
+Discover email accounts by email address. Validates discovered accounts using login and password.             
+
+### **DiscoverEmailConfigPasswordRequestData** Parameters
+```java
+public DiscoverEmailConfigPasswordRequestData(
+    DiscoverEmailConfigPassword rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. |
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="downloadFile"></a>
 ## **downloadFile**
 > byte[] downloadFile(DownloadFileRequestData request)

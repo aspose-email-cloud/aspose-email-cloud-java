@@ -52,6 +52,11 @@ public class CalendarDtoAlternateRq {
   @JsonProperty("sequenceId")
   private String sequenceId = null;
 
+  /**
+   * Set value and return this.
+   * @param value iCalendar document model             
+   * @return this
+  **/
   public CalendarDtoAlternateRq value(CalendarDto value) {
     this.value = value;
     return this;
@@ -65,10 +70,19 @@ public class CalendarDtoAlternateRq {
     return value;
   }  
 
+  /**
+   * Set value.
+   * @param value iCalendar document model             
+  **/
   public void setValue(CalendarDto value) {
     this.value = value;
   }
 
+  /**
+   * Set action and return this.
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
+   * @return this
+  **/
   public CalendarDtoAlternateRq action(String action) {
     this.action = action;
     return this;
@@ -82,10 +96,19 @@ public class CalendarDtoAlternateRq {
     return action;
   }  
 
+  /**
+   * Set action.
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
+  **/
   public void setAction(String action) {
     this.action = action;
   }
 
+  /**
+   * Set sequenceId and return this.
+   * @param sequenceId iCalendar sequence id             
+   * @return this
+  **/
   public CalendarDtoAlternateRq sequenceId(String sequenceId) {
     this.sequenceId = sequenceId;
     return this;
@@ -99,6 +122,10 @@ public class CalendarDtoAlternateRq {
     return sequenceId;
   }  
 
+  /**
+   * Set sequenceId.
+   * @param sequenceId iCalendar sequence id             
+  **/
   public void setSequenceId(String sequenceId) {
     this.sequenceId = sequenceId;
   }

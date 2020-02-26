@@ -49,6 +49,11 @@ public class AlternateView extends AttachmentBase {
   @JsonProperty("linkedResources")
   private List<LinkedResource> linkedResources = null;
 
+  /**
+   * Set baseUri and return this.
+   * @param baseUri Base URI.             
+   * @return this
+  **/
   public AlternateView baseUri(String baseUri) {
     this.baseUri = baseUri;
     return this;
@@ -62,15 +67,28 @@ public class AlternateView extends AttachmentBase {
     return baseUri;
   }  
 
+  /**
+   * Set baseUri.
+   * @param baseUri Base URI.             
+  **/
   public void setBaseUri(String baseUri) {
     this.baseUri = baseUri;
   }
 
+  /**
+   * Set linkedResources and return this.
+   * @param linkedResources Embedded resources referred to by this alternate view.             
+   * @return this
+  **/
   public AlternateView linkedResources(List<LinkedResource> linkedResources) {
     this.linkedResources = linkedResources;
     return this;
   }
-
+  /**
+   * Add an item to linkedResources and return this.
+   * @param linkedResourcesItem An item of: Embedded resources referred to by this alternate view.             
+   * @return this
+  **/
   public AlternateView addLinkedResourcesItem(LinkedResource linkedResourcesItem) {
     if (this.linkedResources == null) {
       this.linkedResources = new ArrayList<LinkedResource>();
@@ -87,6 +105,10 @@ public class AlternateView extends AttachmentBase {
     return linkedResources;
   }  
 
+  /**
+   * Set linkedResources.
+   * @param linkedResources Embedded resources referred to by this alternate view.             
+  **/
   public void setLinkedResources(List<LinkedResource> linkedResources) {
     this.linkedResources = linkedResources;
   }

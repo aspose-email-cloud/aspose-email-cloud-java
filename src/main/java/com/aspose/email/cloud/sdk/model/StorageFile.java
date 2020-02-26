@@ -58,6 +58,11 @@ public class StorageFile {
   @JsonProperty("path")
   private String path = null;
 
+  /**
+   * Set name and return this.
+   * @param name File or folder name.
+   * @return this
+  **/
   public StorageFile name(String name) {
     this.name = name;
     return this;
@@ -71,10 +76,19 @@ public class StorageFile {
     return name;
   }  
 
+  /**
+   * Set name.
+   * @param name File or folder name.
+  **/
   public void setName(String name) {
     this.name = name;
   }
 
+  /**
+   * Set isFolder and return this.
+   * @param isFolder True if it is a folder.
+   * @return this
+  **/
   public StorageFile isFolder(Boolean isFolder) {
     this.isFolder = isFolder;
     return this;
@@ -88,10 +102,19 @@ public class StorageFile {
     return isFolder;
   }  
 
+  /**
+   * Set isFolder.
+   * @param isFolder True if it is a folder.
+  **/
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
   }
 
+  /**
+   * Set modifiedDate and return this.
+   * @param modifiedDate File or folder last modified DateTime.
+   * @return this
+  **/
   public StorageFile modifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
     return this;
@@ -105,10 +128,19 @@ public class StorageFile {
     return modifiedDate;
   }  
 
+  /**
+   * Set modifiedDate.
+   * @param modifiedDate File or folder last modified DateTime.
+  **/
   public void setModifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
 
+  /**
+   * Set size and return this.
+   * @param size File or folder size.
+   * @return this
+  **/
   public StorageFile size(Long size) {
     this.size = size;
     return this;
@@ -122,10 +154,19 @@ public class StorageFile {
     return size;
   }  
 
+  /**
+   * Set size.
+   * @param size File or folder size.
+  **/
   public void setSize(Long size) {
     this.size = size;
   }
 
+  /**
+   * Set path and return this.
+   * @param path File or folder path.
+   * @return this
+  **/
   public StorageFile path(String path) {
     this.path = path;
     return this;
@@ -139,6 +180,10 @@ public class StorageFile {
     return path;
   }  
 
+  /**
+   * Set path.
+   * @param path File or folder path.
+  **/
   public void setPath(String path) {
     this.path = path;
   }
