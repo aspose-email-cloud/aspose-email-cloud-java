@@ -361,6 +361,16 @@ public class EmailApiTests {
         assert properties.getHierarchicalObject().getName().contains("IPM.Schedule");
     }
 
+    @Test(groups = { "pipeline" })
+    public void isDisposableEmailTest() throws ApiException {
+        ValueTOfBoolean disposable = api.isEmailAddressDisposable(
+            new IsEmailAddressDisposableRequestData("example@mailcatch.com"));
+        assert disposable.isValue();
+        ValueTOfBoolean regular = api.isEmailAddressDisposable(
+            new IsEmailAddressDisposableRequestData("example@gmail.com"));
+        assert !regular.isValue();
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
