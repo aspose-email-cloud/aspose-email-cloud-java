@@ -37,7 +37,7 @@ public class CreateEmailRequestData
     /**
     * Initializes a new instance of the CreateEmailRequestData class.   
     * @param fileName Email document file name in storage
-    * @param request An email document and optional Storage info to specify where the file should be located
+    * @param request An email document and optional Storage info to specify where the file should be located             
     **/
     public CreateEmailRequestData(String fileName, CreateEmailRequest request)             
     {
@@ -51,7 +51,7 @@ public class CreateEmailRequestData
     public String fileName;
 
     /**
-    * An email document and optional Storage info to specify where the file should be located
+    * An email document and optional Storage info to specify where the file should be located             
     **/
     public CreateEmailRequest request;
 }
