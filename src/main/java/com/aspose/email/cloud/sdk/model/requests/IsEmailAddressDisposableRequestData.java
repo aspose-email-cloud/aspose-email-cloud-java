@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="CreateEmailRequestData.java">
+* <copyright company="Aspose" file="IsEmailAddressDisposableRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,29 +30,22 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.createEmail request invocation.
+* Class that holds parameters for EmailApi.isEmailAddressDisposable request invocation.
 **/   
-public class CreateEmailRequestData
+public class IsEmailAddressDisposableRequestData
 {
     /**
-    * Initializes a new instance of the CreateEmailRequestData class.   
-    * @param fileName Email document file name in storage
-    * @param request An email document and optional Storage info to specify where the file should be located             
+    * Initializes a new instance of the IsEmailAddressDisposableRequestData class.   
+    * @param address An email address to check
     **/
-    public CreateEmailRequestData(String fileName, CreateEmailRequest request)             
+    public IsEmailAddressDisposableRequestData(String address)             
     {
-        this.fileName = fileName;
-        this.request = request;
+        this.address = address;
     }
         
     /**
-    * Email document file name in storage
+    * An email address to check
     **/
-    public String fileName;
-
-    /**
-    * An email document and optional Storage info to specify where the file should be located             
-    **/
-    public CreateEmailRequest request;
+    public String address;
 }
 

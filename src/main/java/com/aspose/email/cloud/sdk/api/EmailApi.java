@@ -2446,10 +2446,10 @@ public class EmailApi
      * Get iCalendar document attachment by name             
      * 
      * @param request Holds parameters for this request invocation.
-     * @return File
+     * @return byte[]
      * @throws ApiException 
      */
-    public File getCalendarAttachment(GetCalendarAttachmentRequestData request) throws ApiException 
+    public byte[] getCalendarAttachment(GetCalendarAttachmentRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
@@ -2478,13 +2478,8 @@ public class EmailApi
             null, 
             formParams);
             
+        return response;
         
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), File.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -2692,10 +2687,10 @@ public class EmailApi
      * Get attachment file by name             
      * 
      * @param request Holds parameters for this request invocation.
-     * @return File
+     * @return byte[]
      * @throws ApiException 
      */
-    public File getContactAttachment(GetContactAttachmentRequestData request) throws ApiException 
+    public byte[] getContactAttachment(GetContactAttachmentRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
@@ -2729,13 +2724,8 @@ public class EmailApi
             null, 
             formParams);
             
+        return response;
         
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), File.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -3025,10 +3015,10 @@ public class EmailApi
      * Converts email document from storage to specified format and returns as file             
      * 
      * @param request Holds parameters for this request invocation.
-     * @return File
+     * @return byte[]
      * @throws ApiException 
      */
-    public File getEmailAsFile(GetEmailAsFileRequestData request) throws ApiException 
+    public byte[] getEmailAsFile(GetEmailAsFileRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.fileName' is set
@@ -3057,13 +3047,8 @@ public class EmailApi
             null, 
             formParams);
             
+        return response;
         
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), File.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -3075,10 +3060,10 @@ public class EmailApi
      * Get email attachment by name             
      * 
      * @param request Holds parameters for this request invocation.
-     * @return File
+     * @return byte[]
      * @throws ApiException 
      */
-    public File getEmailAttachment(GetEmailAttachmentRequestData request) throws ApiException 
+    public byte[] getEmailAttachment(GetEmailAttachmentRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.attachment' is set
@@ -3107,13 +3092,8 @@ public class EmailApi
             null, 
             formParams);
             
+        return response;
         
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), File.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -3360,10 +3340,10 @@ public class EmailApi
      * Get document attachment as file stream             
      * 
      * @param request Holds parameters for this request invocation.
-     * @return File
+     * @return byte[]
      * @throws ApiException 
      */
-    public File getMapiAttachment(GetMapiAttachmentRequestData request) throws ApiException 
+    public byte[] getMapiAttachment(GetMapiAttachmentRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
@@ -3392,13 +3372,8 @@ public class EmailApi
             null, 
             formParams);
             
+        return response;
         
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), File.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -3531,6 +3506,49 @@ public class EmailApi
         }
         
         return SerializationHelper.deserialize(new String(response), HierarchicalObjectResponse.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Check email address is disposable             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ValueTOfBoolean
+     * @throws ApiException 
+     */
+    public ValueTOfBoolean isEmailAddressDisposable(IsEmailAddressDisposableRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.address' is set
+        if (request.address== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.address' when calling isEmailAddressDisposable");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/disposable/isDisposable/{address}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "address", request.address);
+        
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), ValueTOfBoolean.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {

@@ -77,6 +77,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getMapiAttachments**](EmailApi.md#getmapiattachments) | **GET** /email/Mapi/{name}/attachments | Get document attachment list             
 *EmailApi* | [**getMapiList**](EmailApi.md#getmapilist) | **GET** /email/Mapi | Get document list from storage folder             
 *EmailApi* | [**getMapiProperties**](EmailApi.md#getmapiproperties) | **GET** /email/Mapi/{name}/properties | Get document properties             
+*EmailApi* | [**isEmailAddressDisposable**](EmailApi.md#isemailaddressdisposable) | **GET** /email/disposable/isDisposable/{address} | Check email address is disposable             
 *EmailApi* | [**listEmailFolders**](EmailApi.md#listemailfolders) | **GET** /email/client/ListFolders | Get folders list in email account             
 *EmailApi* | [**listEmailMessages**](EmailApi.md#listemailmessages) | **GET** /email/client/ListMessages | Get messages from folder, filtered by query             
 *EmailApi* | [**listEmailModels**](EmailApi.md#listemailmodels) | **GET** /email/client/ListMessagesModel | Get messages from folder, filtered by query             
@@ -196,6 +197,7 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.StorageModelRqOfEmailDto](StorageModelRqOfEmailDto.md)
  - [com.aspose.email.cloud.sdk.model.Url](Url.md)
  - [com.aspose.email.cloud.sdk.model.ValueResponse](ValueResponse.md)
+ - [com.aspose.email.cloud.sdk.model.ValueTOfBoolean](ValueTOfBoolean.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrBase64Image](AiBcrBase64Image.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrBase64Rq](AiBcrBase64Rq.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrImageStorageFile](AiBcrImageStorageFile.md)
