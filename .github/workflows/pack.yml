@@ -22,13 +22,11 @@ jobs:
     - name: Pack
       run: |
         mvn package -DskipTests --batch-mode
-        cp pom.xml aspose-email-cloud-0.0.1.pom
-    - name: Zip
-      uses: montudor/action-zip@v0.1.0
-      with:
-        args: zip -qq -r ./package.zip ./target/*.jar aspose-email-cloud-0.0.1.pom
+        mkdir result
+        cp pom.xml result/aspose-email-cloud-0.0.1.pom
+        cp target/*.jar result
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
         name: package
-        path: package.zip
+        path: result
