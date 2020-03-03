@@ -1,0 +1,37 @@
+name: Pack
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Run tests
+      run: mvn test -Dgroups=pipeline --batch-mode
+      env:
+        appSid: ${{secrets.appSidProd}}
+        appKey: ${{secrets.appKeyProd}}
+        apiBaseUrl: "https://api.aspose.cloud"
+    - name: Pack
+      run: |
+        mvn package -DskipTests --batch-mode
+        mkdir result
+        cp target/*.jar result
+        file=$(basename -- ./result/aspose-email-cloud-*-sources.jar)
+        file=${file%-sources.jar}
+        version=${file##*-}
+        cp pom.xml result/aspose-email-cloud-$version.pom
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: package
+        path: result
