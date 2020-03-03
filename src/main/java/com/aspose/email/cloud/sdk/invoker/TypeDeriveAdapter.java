@@ -19,6 +19,7 @@ public class TypeDeriveAdapter<T> implements JsonSerializer<T>, JsonDeserializer
 
     public TypeDeriveAdapter(String typeProperty) {
         classNameProperty = typeProperty;
+        gson = new Gson();
     }
 
     public JsonElement serialize(T src, Type typeOfSrc,
