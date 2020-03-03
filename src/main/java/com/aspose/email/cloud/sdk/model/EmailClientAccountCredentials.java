@@ -47,7 +47,7 @@ public class EmailClientAccountCredentials {
   private String login = null;
 
   @JsonProperty("discriminator")
-  private String discriminator = null;
+  private String discriminator = this.getClass().getSimpleName();
 
   /**
    * Set login and return this.
@@ -80,10 +80,7 @@ public class EmailClientAccountCredentials {
    * @param discriminator 
    * @return this
   **/
-  public EmailClientAccountCredentials discriminator(String discriminator) {
-    this.discriminator = discriminator;
-    return this;
-  }
+
 
   /**
    * Get discriminator
@@ -97,9 +94,7 @@ public class EmailClientAccountCredentials {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String discriminator) {
-    this.discriminator = discriminator;
-  }
+  public void setDiscriminator(String type) {/* do nothing */}
 
 
   @Override

@@ -28,7 +28,7 @@
 package com.aspose.email.cloud.sdk.invoker;
 
 import com.aspose.email.cloud.sdk.model.BaseObject;
-
+import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
@@ -42,7 +42,7 @@ public class JSON {
         private String classNameProperty;
 
         public TypeDeriveAdapter() {
-            classNameProperty = "DerivedType";
+            classNameProperty = "discriminator";
         }
 
         public TypeDeriveAdapter(String typeProperty) {
@@ -75,6 +75,7 @@ public class JSON {
     static {
         GsonBuilder builder = new GsonBuilder();
         builder.registerTypeAdapter(BaseObject.class, new JSON.TypeDeriveAdapter<BaseObject>("type"));
+        builder.registerTypeAdapter(EmailClientAccountCredentials.class, new JSON.TypeDeriveAdapter<EmailClientAccountCredentials>());
         gsonExt = builder.create();
     }
     public static String serialize(Object object)

@@ -371,6 +371,26 @@ public class EmailApiTests {
         assert !regular.isValue();
     }
 
+    @Test(groups = { "pipeline" })
+    public void emailClientAccountTest() throws ApiException {
+        EmailClientAccount account = new EmailClientAccount(
+            "smtp.gmail.com",
+            551,
+            "SSLAuto",
+            "SMTP",
+            new EmailClientAccountPasswordCredentials("login", null, "password"));
+        String fileName = UUID.randomUUID().toString() + ".account";
+        api.saveEmailClientAccount(new SaveEmailClientAccountRequestData(
+            new StorageFileRqOfEmailClientAccount(
+                account,
+                new StorageFileLocation(storage, folder, fileName))));
+        EmailClientAccount response = api.getEmailClientAccount(
+            new GetEmailClientAccountRequestData(fileName, folder, storage));
+        assert response.getCredentials().getClass().getSimpleName()
+            .equals("EmailClientAccountPasswordCredentials");
+        assert account.getHost().equals(response.getHost());
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
