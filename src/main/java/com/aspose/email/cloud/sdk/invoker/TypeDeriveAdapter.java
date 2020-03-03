@@ -10,9 +10,11 @@ import com.google.gson.*;
 public class TypeDeriveAdapter<T> implements JsonSerializer<T>, JsonDeserializer<T>{
 
     private String classNameProperty;
+    private Gson gson;
 
     public TypeDeriveAdapter() {
         classNameProperty = "discriminator";
+        gson = new Gson();
     }
 
     public TypeDeriveAdapter(String typeProperty) {
@@ -21,7 +23,7 @@ public class TypeDeriveAdapter<T> implements JsonSerializer<T>, JsonDeserializer
 
     public JsonElement serialize(T src, Type typeOfSrc,
             JsonSerializationContext context) {
-        return context.serialize(src); 
+        return gson.toJsonTree(src);
     }
 
     public T deserialize(JsonElement json, Type typeOfT,
