@@ -173,7 +173,7 @@ public class EmailAccountConfig {
 
   /**
    * Set socketType and return this.
-   * @param socketType Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return this
   **/
   public EmailAccountConfig socketType(String socketType) {
@@ -182,7 +182,7 @@ public class EmailAccountConfig {
   }
 
   /**
-   * Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return socketType
   **/
   public String getSocketType() {
@@ -191,7 +191,7 @@ public class EmailAccountConfig {
 
   /**
    * Set socketType.
-   * @param socketType Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
   **/
   public void setSocketType(String socketType) {
     this.socketType = socketType;
@@ -363,7 +363,7 @@ public class EmailAccountConfig {
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param host Email account host.             
    * @param port Port.             
-   * @param socketType Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
    * @param extraInfo Extra account information.             
    * @param isValidated Determines that configuration validated. Set to false if validation skipped.             

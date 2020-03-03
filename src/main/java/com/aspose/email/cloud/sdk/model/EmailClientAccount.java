@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailAccountRequest.java">
+* <copyright company="Aspose" file="EmailClientAccount.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,17 +40,14 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email account settings request             
+ * A universal email client account             
  */
-public class EmailAccountRequest {
+public class EmailClientAccount {
   @JsonProperty("host")
   private String host = null;
 
   @JsonProperty("port")
   private Integer port = null;
-
-  @JsonProperty("login")
-  private String login = null;
 
   @JsonProperty("securityOptions")
   private String securityOptions = null;
@@ -58,24 +55,21 @@ public class EmailAccountRequest {
   @JsonProperty("protocolType")
   private String protocolType = null;
 
-  @JsonProperty("description")
-  private String description = null;
-
-  @JsonProperty("storageFile")
-  private StorageFileLocation storageFile = null;
+  @JsonProperty("credentials")
+  private EmailClientAccountCredentials credentials = null;
 
   /**
    * Set host and return this.
-   * @param host Email account host             
+   * @param host Mail server host name or IP address             
    * @return this
   **/
-  public EmailAccountRequest host(String host) {
+  public EmailClientAccount host(String host) {
     this.host = host;
     return this;
   }
 
   /**
-   * Email account host             
+   * Mail server host name or IP address             
    * @return host
   **/
   public String getHost() {
@@ -84,7 +78,7 @@ public class EmailAccountRequest {
 
   /**
    * Set host.
-   * @param host Email account host             
+   * @param host Mail server host name or IP address             
   **/
   public void setHost(String host) {
     this.host = host;
@@ -92,16 +86,18 @@ public class EmailAccountRequest {
 
   /**
    * Set port and return this.
-   * @param port Email account port             
+   * @param port Mail server port             
    * @return this
   **/
-  public EmailAccountRequest port(Integer port) {
+  public EmailClientAccount port(Integer port) {
     this.port = port;
     return this;
   }
 
   /**
-   * Email account port             
+   * Mail server port             
+   * minimum: 1
+   * maximum: 2147483647
    * @return port
   **/
   public Integer getPort() {
@@ -110,36 +106,10 @@ public class EmailAccountRequest {
 
   /**
    * Set port.
-   * @param port Email account port             
+   * @param port Mail server port             
   **/
   public void setPort(Integer port) {
     this.port = port;
-  }
-
-  /**
-   * Set login and return this.
-   * @param login Email account login             
-   * @return this
-  **/
-  public EmailAccountRequest login(String login) {
-    this.login = login;
-    return this;
-  }
-
-  /**
-   * Email account login             
-   * @return login
-  **/
-  public String getLogin() {
-    return login;
-  }  
-
-  /**
-   * Set login.
-   * @param login Email account login             
-  **/
-  public void setLogin(String login) {
-    this.login = login;
   }
 
   /**
@@ -147,7 +117,7 @@ public class EmailAccountRequest {
    * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return this
   **/
-  public EmailAccountRequest securityOptions(String securityOptions) {
+  public EmailClientAccount securityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
     return this;
   }
@@ -173,7 +143,7 @@ public class EmailAccountRequest {
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @return this
   **/
-  public EmailAccountRequest protocolType(String protocolType) {
+  public EmailClientAccount protocolType(String protocolType) {
     this.protocolType = protocolType;
     return this;
   }
@@ -195,55 +165,29 @@ public class EmailAccountRequest {
   }
 
   /**
-   * Set description and return this.
-   * @param description Email account description             
+   * Set credentials and return this.
+   * @param credentials Email client account credentials             
    * @return this
   **/
-  public EmailAccountRequest description(String description) {
-    this.description = description;
+  public EmailClientAccount credentials(EmailClientAccountCredentials credentials) {
+    this.credentials = credentials;
     return this;
   }
 
   /**
-   * Email account description             
-   * @return description
+   * Email client account credentials             
+   * @return credentials
   **/
-  public String getDescription() {
-    return description;
+  public EmailClientAccountCredentials getCredentials() {
+    return credentials;
   }  
 
   /**
-   * Set description.
-   * @param description Email account description             
+   * Set credentials.
+   * @param credentials Email client account credentials             
   **/
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  /**
-   * Set storageFile and return this.
-   * @param storageFile A storage file location info to store email account             
-   * @return this
-  **/
-  public EmailAccountRequest storageFile(StorageFileLocation storageFile) {
-    this.storageFile = storageFile;
-    return this;
-  }
-
-  /**
-   * A storage file location info to store email account             
-   * @return storageFile
-  **/
-  public StorageFileLocation getStorageFile() {
-    return storageFile;
-  }  
-
-  /**
-   * Set storageFile.
-   * @param storageFile A storage file location info to store email account             
-  **/
-  public void setStorageFile(StorageFileLocation storageFile) {
-    this.storageFile = storageFile;
+  public void setCredentials(EmailClientAccountCredentials credentials) {
+    this.credentials = credentials;
   }
 
 
@@ -255,34 +199,30 @@ public class EmailAccountRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    EmailAccountRequest emailAccountRequest = (EmailAccountRequest) o;
-    return ObjectUtils.equals(this.host, emailAccountRequest.host) &&
-    ObjectUtils.equals(this.port, emailAccountRequest.port) &&
-    ObjectUtils.equals(this.login, emailAccountRequest.login) &&
-    ObjectUtils.equals(this.securityOptions, emailAccountRequest.securityOptions) &&
-    ObjectUtils.equals(this.protocolType, emailAccountRequest.protocolType) &&
-    ObjectUtils.equals(this.description, emailAccountRequest.description) &&
-    ObjectUtils.equals(this.storageFile, emailAccountRequest.storageFile);
+    EmailClientAccount emailClientAccount = (EmailClientAccount) o;
+    return ObjectUtils.equals(this.host, emailClientAccount.host) &&
+    ObjectUtils.equals(this.port, emailClientAccount.port) &&
+    ObjectUtils.equals(this.securityOptions, emailClientAccount.securityOptions) &&
+    ObjectUtils.equals(this.protocolType, emailClientAccount.protocolType) &&
+    ObjectUtils.equals(this.credentials, emailClientAccount.credentials);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(host, port, login, securityOptions, protocolType, description, storageFile);
+    return ObjectUtils.hashCodeMulti(host, port, securityOptions, protocolType, credentials);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmailAccountRequest {\n");
+    sb.append("class EmailClientAccount {\n");
     
     sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
     sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
-    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
     sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
     sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
-    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
+    sb.append("    credentials: ").append(toIndentedString(getCredentials())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -298,29 +238,25 @@ public class EmailAccountRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public EmailAccountRequest() {
+  public EmailClientAccount() {
     super();
   }
 
   /**
-   * Initializes a new instance of the EmailAccountRequest
-   * @param host Email account host             
-   * @param port Email account port             
-   * @param login Email account login             
+   * Initializes a new instance of the EmailClientAccount
+   * @param host Mail server host name or IP address             
+   * @param port Mail server port             
    * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-   * @param description Email account description             
-   * @param storageFile A storage file location info to store email account             
+   * @param credentials Email client account credentials             
    */
-  public EmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile) {
+  public EmailClientAccount(String host, Integer port, String securityOptions, String protocolType, EmailClientAccountCredentials credentials) {
     super();
     setHost(host);
     setPort(port);
-    setLogin(login);
     setSecurityOptions(securityOptions);
     setProtocolType(protocolType);
-    setDescription(description);
-    setStorageFile(storageFile);
+    setCredentials(credentials);
   }
 
 }

@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="SaveEmailAccountRequest.java">
+* <copyright company="Aspose" file="EmailClientAccountPasswordCredentials.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,24 +40,24 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Save email account settings with login/password authentication request             
+ * Represents email client account password credentials             
  */
-public class SaveEmailAccountRequest extends EmailAccountRequest {
+public class EmailClientAccountPasswordCredentials extends EmailClientAccountCredentials {
   @JsonProperty("password")
   private String password = null;
 
   /**
    * Set password and return this.
-   * @param password Email account password             
+   * @param password Email client account password             
    * @return this
   **/
-  public SaveEmailAccountRequest password(String password) {
+  public EmailClientAccountPasswordCredentials password(String password) {
     this.password = password;
     return this;
   }
 
   /**
-   * Email account password             
+   * Email client account password             
    * @return password
   **/
   public String getPassword() {
@@ -66,7 +66,7 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
 
   /**
    * Set password.
-   * @param password Email account password             
+   * @param password Email client account password             
   **/
   public void setPassword(String password) {
     this.password = password;
@@ -81,8 +81,8 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    SaveEmailAccountRequest saveEmailAccountRequest = (SaveEmailAccountRequest) o;
-    return ObjectUtils.equals(this.password, saveEmailAccountRequest.password) &&
+    EmailClientAccountPasswordCredentials emailClientAccountPasswordCredentials = (EmailClientAccountPasswordCredentials) o;
+    return ObjectUtils.equals(this.password, emailClientAccountPasswordCredentials.password) &&
     super.equals(o);
   }
 
@@ -95,15 +95,10 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SaveEmailAccountRequest {\n");
+    sb.append("class EmailClientAccountPasswordCredentials {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    host: ").append(toIndentedString(getHost())).append("\n");
-    sb.append("    port: ").append(toIndentedString(getPort())).append("\n");
     sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
-    sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
-    sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
-    sb.append("    description: ").append(toIndentedString(getDescription())).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
+    sb.append("    discriminator: ").append(toIndentedString(getDiscriminator())).append("\n");
     sb.append("    password: ").append(toIndentedString(getPassword())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -120,30 +115,20 @@ public class SaveEmailAccountRequest extends EmailAccountRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public SaveEmailAccountRequest() {
+  public EmailClientAccountPasswordCredentials() {
     super();
   }
 
   /**
-   * Initializes a new instance of the SaveEmailAccountRequest
-   * @param host Email account host             
-   * @param port Email account port             
-   * @param login Email account login             
-   * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
-   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-   * @param description Email account description             
-   * @param storageFile A storage file location info to store email account             
-   * @param password Email account password             
+   * Initializes a new instance of the EmailClientAccountPasswordCredentials
+   * @param login Email client account login             
+   * @param discriminator 
+   * @param password Email client account password             
    */
-  public SaveEmailAccountRequest(String host, Integer port, String login, String securityOptions, String protocolType, String description, StorageFileLocation storageFile, String password) {
+  public EmailClientAccountPasswordCredentials(String login, String discriminator, String password) {
     super();
-    setHost(host);
-    setPort(port);
     setLogin(login);
-    setSecurityOptions(securityOptions);
-    setProtocolType(protocolType);
-    setDescription(description);
-    setStorageFile(storageFile);
+    setDiscriminator(discriminator);
     setPassword(password);
   }
 

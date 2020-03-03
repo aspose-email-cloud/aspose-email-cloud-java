@@ -37,8 +37,8 @@ public class AiNameGenderizeRequestData
     /**
     * Initializes a new instance of the AiNameGenderizeRequestData class.   
     * @param name A name to parse (required)
-    * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)
-    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France
+    * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
+    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
     * @param encoding A character encoding name
     * @param script A writing system code; starts with the ISO-15924 script name
     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
@@ -59,12 +59,12 @@ public class AiNameGenderizeRequestData
     public String name;
 
     /**
-    * An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)
+    * An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
     **/
     public String language;
 
     /**
-    * A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
+    * A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
     **/
     public String location;
 
