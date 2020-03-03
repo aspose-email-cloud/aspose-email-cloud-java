@@ -23,8 +23,11 @@ jobs:
       run: |
         mvn package -DskipTests --batch-mode
         mkdir result
-        cp pom.xml result/aspose-email-cloud-0.0.1.pom
         cp target/*.jar result
+        file=$(basename -- ./result/aspose-email-cloud-*-sources.jar)
+        file=${file%-sources.jar}
+        version=${file##*-}
+        cp pom.xml result/aspose-email-cloud-$version.pom
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
