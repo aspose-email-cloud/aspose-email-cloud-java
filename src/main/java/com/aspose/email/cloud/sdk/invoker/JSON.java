@@ -37,45 +37,13 @@ import java.lang.reflect.Type;
  * JSON helper class.
  */
 public class JSON {
-    private static class TypeDeriveAdapter<T> implements JsonSerializer<T>, JsonDeserializer<T>{
-
-        private String classNameProperty;
-
-        public TypeDeriveAdapter() {
-            classNameProperty = "discriminator";
-        }
-
-        public TypeDeriveAdapter(String typeProperty) {
-            classNameProperty = typeProperty;
-        }
-
-        public JsonElement serialize(T src, Type typeOfSrc,
-                JsonSerializationContext context) {
-            return context.serialize(src); 
-        }
-
-        public T deserialize(JsonElement json, Type typeOfT,
-                JsonDeserializationContext context) throws JsonParseException  {
-            JsonObject jsonObject = json.getAsJsonObject();
-            JsonPrimitive prim = (JsonPrimitive) jsonObject.get(classNameProperty);
-            String className = "com.aspose.email.cloud.sdk.model." + prim.getAsString();
-
-            Class<?> klass = null;
-            try {
-                klass = Class.forName(className);
-            } catch (ClassNotFoundException e) {
-                throw new JsonParseException(e.getMessage());
-            }
-            return context.deserialize(jsonObject, klass);
-        }
-    }
 
     private static Gson gsonExt;
 
     static {
         GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(BaseObject.class, new JSON.TypeDeriveAdapter<BaseObject>("type"));
-        builder.registerTypeAdapter(EmailClientAccountCredentials.class, new JSON.TypeDeriveAdapter<EmailClientAccountCredentials>());
+        builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
+        Derive.registerAdapters(builder);
         gsonExt = builder.create();
     }
     public static String serialize(Object object)
