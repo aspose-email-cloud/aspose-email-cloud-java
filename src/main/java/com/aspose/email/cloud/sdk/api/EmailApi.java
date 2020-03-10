@@ -3158,9 +3158,10 @@ public class EmailApi
      * Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
      * 
      * @param request Holds parameters for this request invocation.
+     * @return EmailClientMultiAccount
      * @throws ApiException 
      */
-    public void getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request) throws ApiException 
+    public EmailClientMultiAccount getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
@@ -3185,13 +3186,20 @@ public class EmailApi
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         
                 
-        this.apiInvoker.invokeApi(
+        byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
             "GET", 
             null, 
             null, 
             formParams);
             
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), EmailClientMultiAccount.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {

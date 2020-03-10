@@ -1670,7 +1670,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailClientMultiAccount"></a>
 ## **getEmailClientMultiAccount**
-> void getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request)
+> [EmailClientMultiAccount](EmailClientMultiAccount.md) getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request)
 
 Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
@@ -1690,7 +1690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
