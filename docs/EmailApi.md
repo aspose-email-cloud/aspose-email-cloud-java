@@ -1668,6 +1668,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getEmailClientMultiAccount"></a>
+## **getEmailClientMultiAccount**
+> void getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request)
+
+Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+
+### **GetEmailClientMultiAccountRequestData** Parameters
+```java
+public GetEmailClientMultiAccountRequestData(
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| File name on storage |
+ **folder** | **String**| Folder on storage |
+ **storage** | **String**| Storage name |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getEmailModel"></a>
 ## **getEmailModel**
 > [EmailDto](EmailDto.md) getEmailModel(GetEmailModelRequestData request)
@@ -2183,6 +2209,28 @@ public SaveEmailClientAccountRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**StorageFileRqOfEmailClientAccount**](StorageFileRqOfEmailClientAccount.md)| Email account information |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveEmailClientMultiAccount"></a>
+## **saveEmailClientMultiAccount**
+> void saveEmailClientMultiAccount(SaveEmailClientMultiAccountRequestData request)
+
+Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+
+### **SaveEmailClientMultiAccountRequestData** Parameters
+```java
+public SaveEmailClientMultiAccountRequestData(
+    StorageFileRqOfEmailClientMultiAccount request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**StorageFileRqOfEmailClientMultiAccount**](StorageFileRqOfEmailClientMultiAccount.md)| Email accounts information |
 
 ### Return type
 
