@@ -391,6 +391,29 @@ public class EmailApiTests {
         assert account.getHost().equals(response.getHost());
     }
 
+    @Test(groups = { "pipeline" })
+    public void emailClientMultiAccountTest() throws ApiException {
+        EmailClientMultiAccount multiAccount = new EmailClientMultiAccount(
+            Arrays.<EmailClientAccount>asList(
+                new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP", 
+                    new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")),
+                new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS", 
+                    new EmailClientAccountOauthCredentials(
+                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken", null))),
+            new EmailClientAccount("smtp.gmail.com", 465, "SSLAuto", "SMTP", 
+                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")));
+        String fileName = UUID.randomUUID().toString() + ".multi.account";
+        api.saveEmailClientMultiAccount(new SaveEmailClientMultiAccountRequestData(
+            new StorageFileRqOfEmailClientMultiAccount(
+                multiAccount,
+                new StorageFileLocation(storage, folder, fileName))));
+        EmailClientMultiAccount multiAccountFromStorage = api.getEmailClientMultiAccount(
+            new GetEmailClientMultiAccountRequestData(fileName, folder, storage));
+        assert multiAccountFromStorage.getReceiveAccounts().size() == 2;
+        assert multiAccountFromStorage.getSendAccount().getCredentials().getDiscriminator().equals(
+            multiAccount.getSendAccount().getCredentials().getDiscriminator());
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
