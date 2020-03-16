@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="NameValuePair.java">
+* <copyright company="Aspose" file="EmailClientAccountCredentials.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,66 +40,61 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Name-Value property             
+ * Represents email client account credentials             
  */
-public class NameValuePair {
-  @JsonProperty("name")
-  private String name = null;
+public class EmailClientAccountCredentials {
+  @JsonProperty("login")
+  private String login = null;
 
-  @JsonProperty("value")
-  private String value = null;
+  @JsonProperty("discriminator")
+  private String discriminator = this.getClass().getSimpleName();
 
   /**
-   * Set name and return this.
-   * @param name Property name             
+   * Set login and return this.
+   * @param login Email client account login             
    * @return this
   **/
-  public NameValuePair name(String name) {
-    this.name = name;
+  public EmailClientAccountCredentials login(String login) {
+    this.login = login;
     return this;
   }
 
   /**
-   * Property name             
-   * @return name
+   * Email client account login             
+   * @return login
   **/
-  public String getName() {
-    return name;
+  public String getLogin() {
+    return login;
   }  
 
   /**
-   * Set name.
-   * @param name Property name             
+   * Set login.
+   * @param login Email client account login             
   **/
-  public void setName(String name) {
-    this.name = name;
+  public void setLogin(String login) {
+    this.login = login;
   }
 
   /**
-   * Set value and return this.
-   * @param value Property value             
+   * Set discriminator and return this.
+   * @param discriminator 
    * @return this
   **/
-  public NameValuePair value(String value) {
-    this.value = value;
-    return this;
-  }
+
 
   /**
-   * Property value             
-   * @return value
+   * Get discriminator
+   * @return discriminator
   **/
-  public String getValue() {
-    return value;
+  public String getDiscriminator() {
+    return discriminator;
   }  
 
   /**
-   * Set value.
-   * @param value Property value             
+   * Set discriminator.
+   * @param discriminator 
   **/
-  public void setValue(String value) {
-    this.value = value;
-  }
+  public void setDiscriminator(String type) {/* do nothing */}
 
 
   @Override
@@ -110,24 +105,24 @@ public class NameValuePair {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    NameValuePair nameValuePair = (NameValuePair) o;
-    return ObjectUtils.equals(this.name, nameValuePair.name) &&
-    ObjectUtils.equals(this.value, nameValuePair.value);
+    EmailClientAccountCredentials emailClientAccountCredentials = (EmailClientAccountCredentials) o;
+    return ObjectUtils.equals(this.login, emailClientAccountCredentials.login) &&
+    ObjectUtils.equals(this.discriminator, emailClientAccountCredentials.discriminator);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(name, value);
+    return ObjectUtils.hashCodeMulti(login, discriminator);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NameValuePair {\n");
+    sb.append("class EmailClientAccountCredentials {\n");
     
-    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    discriminator: ").append(toIndentedString(getDiscriminator())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,19 +138,19 @@ public class NameValuePair {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public NameValuePair() {
+  public EmailClientAccountCredentials() {
     super();
   }
 
   /**
-   * Initializes a new instance of the NameValuePair
-   * @param name Property name             
-   * @param value Property value             
+   * Initializes a new instance of the EmailClientAccountCredentials
+   * @param login Email client account login             
+   * @param discriminator 
    */
-  public NameValuePair(String name, String value) {
+  public EmailClientAccountCredentials(String login, String discriminator) {
     super();
-    setName(name);
-    setValue(value);
+    setLogin(login);
+    setDiscriminator(discriminator);
   }
 
 }

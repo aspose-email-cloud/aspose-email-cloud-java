@@ -1,7 +1,8 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="JSON.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd.
+* <copyright company="Aspose" file="SaveEmailClientMultiAccountRequestData.java">
+*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,34 +26,26 @@
 * --------------------------------------------------------------------------------------------------------------------
 */
 
-package com.aspose.email.cloud.sdk.invoker;
-
-import com.aspose.email.cloud.sdk.model.BaseObject;
-import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
-import com.google.gson.*;
-
-import java.lang.reflect.Type;
+package com.aspose.email.cloud.sdk.model.requests;
+import com.aspose.email.cloud.sdk.model.*;
 
 /**
- * JSON helper class.
- */
-public class JSON {
-
-    private static Gson gsonExt;
-
-    static {
-        GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
-        Derive.registerAdapters(builder);
-        gsonExt = builder.create();
-    }
-    public static String serialize(Object object)
+* Class that holds parameters for EmailApi.saveEmailClientMultiAccount request invocation.
+**/   
+public class SaveEmailClientMultiAccountRequestData
+{
+    /**
+    * Initializes a new instance of the SaveEmailClientMultiAccountRequestData class.   
+    * @param request Email accounts information
+    **/
+    public SaveEmailClientMultiAccountRequestData(StorageFileRqOfEmailClientMultiAccount request)             
     {
-        return gsonExt.toJson(object);
+        this.request = request;
     }
-
-    public static <T> T deserialize(String json, Class<T> type)
-    {
-        return gsonExt.fromJson(json, type);
-    }
+        
+    /**
+    * Email accounts information
+    **/
+    public StorageFileRqOfEmailClientMultiAccount request;
 }
+

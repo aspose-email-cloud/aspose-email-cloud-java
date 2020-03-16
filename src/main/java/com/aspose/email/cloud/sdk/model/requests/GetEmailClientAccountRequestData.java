@@ -1,7 +1,8 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="JSON.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd.
+* <copyright company="Aspose" file="GetEmailClientAccountRequestData.java">
+*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,34 +26,40 @@
 * --------------------------------------------------------------------------------------------------------------------
 */
 
-package com.aspose.email.cloud.sdk.invoker;
-
-import com.aspose.email.cloud.sdk.model.BaseObject;
-import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
-import com.google.gson.*;
-
-import java.lang.reflect.Type;
+package com.aspose.email.cloud.sdk.model.requests;
+import com.aspose.email.cloud.sdk.model.*;
 
 /**
- * JSON helper class.
- */
-public class JSON {
-
-    private static Gson gsonExt;
-
-    static {
-        GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
-        Derive.registerAdapters(builder);
-        gsonExt = builder.create();
-    }
-    public static String serialize(Object object)
+* Class that holds parameters for EmailApi.getEmailClientAccount request invocation.
+**/   
+public class GetEmailClientAccountRequestData
+{
+    /**
+    * Initializes a new instance of the GetEmailClientAccountRequestData class.   
+    * @param name File name on storage
+    * @param folder Folder on storage
+    * @param storage Storage name
+    **/
+    public GetEmailClientAccountRequestData(String name, String folder, String storage)             
     {
-        return gsonExt.toJson(object);
+        this.name = name;
+        this.folder = folder;
+        this.storage = storage;
     }
+        
+    /**
+    * File name on storage
+    **/
+    public String name;
 
-    public static <T> T deserialize(String json, Class<T> type)
-    {
-        return gsonExt.fromJson(json, type);
-    }
+    /**
+    * Folder on storage
+    **/
+    public String folder;
+
+    /**
+    * Storage name
+    **/
+    public String storage;
 }
+

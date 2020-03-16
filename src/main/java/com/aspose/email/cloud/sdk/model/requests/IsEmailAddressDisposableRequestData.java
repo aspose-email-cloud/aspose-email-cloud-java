@@ -1,7 +1,8 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="JSON.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd.
+* <copyright company="Aspose" file="IsEmailAddressDisposableRequestData.java">
+*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,34 +26,26 @@
 * --------------------------------------------------------------------------------------------------------------------
 */
 
-package com.aspose.email.cloud.sdk.invoker;
-
-import com.aspose.email.cloud.sdk.model.BaseObject;
-import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
-import com.google.gson.*;
-
-import java.lang.reflect.Type;
+package com.aspose.email.cloud.sdk.model.requests;
+import com.aspose.email.cloud.sdk.model.*;
 
 /**
- * JSON helper class.
- */
-public class JSON {
-
-    private static Gson gsonExt;
-
-    static {
-        GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
-        Derive.registerAdapters(builder);
-        gsonExt = builder.create();
-    }
-    public static String serialize(Object object)
+* Class that holds parameters for EmailApi.isEmailAddressDisposable request invocation.
+**/   
+public class IsEmailAddressDisposableRequestData
+{
+    /**
+    * Initializes a new instance of the IsEmailAddressDisposableRequestData class.   
+    * @param address An email address to check
+    **/
+    public IsEmailAddressDisposableRequestData(String address)             
     {
-        return gsonExt.toJson(object);
+        this.address = address;
     }
-
-    public static <T> T deserialize(String json, Class<T> type)
-    {
-        return gsonExt.fromJson(json, type);
-    }
+        
+    /**
+    * An email address to check
+    **/
+    public String address;
 }
+

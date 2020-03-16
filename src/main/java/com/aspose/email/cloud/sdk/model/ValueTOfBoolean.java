@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="NameValuePair.java">
+* <copyright company="Aspose" file="ValueTOfBoolean.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,64 +40,35 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Name-Value property             
+ * ValueTOfBoolean
  */
-public class NameValuePair {
-  @JsonProperty("name")
-  private String name = null;
-
+public class ValueTOfBoolean {
   @JsonProperty("value")
-  private String value = null;
-
-  /**
-   * Set name and return this.
-   * @param name Property name             
-   * @return this
-  **/
-  public NameValuePair name(String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Property name             
-   * @return name
-  **/
-  public String getName() {
-    return name;
-  }  
-
-  /**
-   * Set name.
-   * @param name Property name             
-  **/
-  public void setName(String name) {
-    this.name = name;
-  }
+  private Boolean value = null;
 
   /**
    * Set value and return this.
-   * @param value Property value             
+   * @param value 
    * @return this
   **/
-  public NameValuePair value(String value) {
+  public ValueTOfBoolean value(Boolean value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Property value             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public Boolean isValue() {
     return value;
   }  
 
   /**
    * Set value.
-   * @param value Property value             
+   * @param value 
   **/
-  public void setValue(String value) {
+  public void setValue(Boolean value) {
     this.value = value;
   }
 
@@ -110,24 +81,22 @@ public class NameValuePair {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    NameValuePair nameValuePair = (NameValuePair) o;
-    return ObjectUtils.equals(this.name, nameValuePair.name) &&
-    ObjectUtils.equals(this.value, nameValuePair.value);
+    ValueTOfBoolean valueTOfBoolean = (ValueTOfBoolean) o;
+    return ObjectUtils.equals(this.value, valueTOfBoolean.value);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(name, value);
+    return ObjectUtils.hashCodeMulti(value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NameValuePair {\n");
+    sb.append("class ValueTOfBoolean {\n");
     
-    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    value: ").append(toIndentedString(isValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,18 +112,16 @@ public class NameValuePair {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public NameValuePair() {
+  public ValueTOfBoolean() {
     super();
   }
 
   /**
-   * Initializes a new instance of the NameValuePair
-   * @param name Property name             
-   * @param value Property value             
+   * Initializes a new instance of the ValueTOfBoolean
+   * @param value 
    */
-  public NameValuePair(String name, String value) {
+  public ValueTOfBoolean(Boolean value) {
     super();
-    setName(name);
     setValue(value);
   }
 

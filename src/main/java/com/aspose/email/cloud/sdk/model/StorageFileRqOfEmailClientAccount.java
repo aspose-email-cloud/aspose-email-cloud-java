@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="NameValuePair.java">
+* <copyright company="Aspose" file="StorageFileRqOfEmailClientAccount.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,65 +40,65 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Name-Value property             
+ * StorageFileRqOfEmailClientAccount
  */
-public class NameValuePair {
-  @JsonProperty("name")
-  private String name = null;
-
+public class StorageFileRqOfEmailClientAccount {
   @JsonProperty("value")
-  private String value = null;
+  private EmailClientAccount value = null;
 
-  /**
-   * Set name and return this.
-   * @param name Property name             
-   * @return this
-  **/
-  public NameValuePair name(String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Property name             
-   * @return name
-  **/
-  public String getName() {
-    return name;
-  }  
-
-  /**
-   * Set name.
-   * @param name Property name             
-  **/
-  public void setName(String name) {
-    this.name = name;
-  }
+  @JsonProperty("storageFile")
+  private StorageFileLocation storageFile = null;
 
   /**
    * Set value and return this.
-   * @param value Property value             
+   * @param value 
    * @return this
   **/
-  public NameValuePair value(String value) {
+  public StorageFileRqOfEmailClientAccount value(EmailClientAccount value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Property value             
+   * Get value
    * @return value
   **/
-  public String getValue() {
+  public EmailClientAccount getValue() {
     return value;
   }  
 
   /**
    * Set value.
-   * @param value Property value             
+   * @param value 
   **/
-  public void setValue(String value) {
+  public void setValue(EmailClientAccount value) {
     this.value = value;
+  }
+
+  /**
+   * Set storageFile and return this.
+   * @param storageFile 
+   * @return this
+  **/
+  public StorageFileRqOfEmailClientAccount storageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
+    return this;
+  }
+
+  /**
+   * Get storageFile
+   * @return storageFile
+  **/
+  public StorageFileLocation getStorageFile() {
+    return storageFile;
+  }  
+
+  /**
+   * Set storageFile.
+   * @param storageFile 
+  **/
+  public void setStorageFile(StorageFileLocation storageFile) {
+    this.storageFile = storageFile;
   }
 
 
@@ -110,24 +110,24 @@ public class NameValuePair {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    NameValuePair nameValuePair = (NameValuePair) o;
-    return ObjectUtils.equals(this.name, nameValuePair.name) &&
-    ObjectUtils.equals(this.value, nameValuePair.value);
+    StorageFileRqOfEmailClientAccount storageFileRqOfEmailClientAccount = (StorageFileRqOfEmailClientAccount) o;
+    return ObjectUtils.equals(this.value, storageFileRqOfEmailClientAccount.value) &&
+    ObjectUtils.equals(this.storageFile, storageFileRqOfEmailClientAccount.storageFile);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(name, value);
+    return ObjectUtils.hashCodeMulti(value, storageFile);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NameValuePair {\n");
+    sb.append("class StorageFileRqOfEmailClientAccount {\n");
     
-    sb.append("    name: ").append(toIndentedString(getName())).append("\n");
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,19 +143,19 @@ public class NameValuePair {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public NameValuePair() {
+  public StorageFileRqOfEmailClientAccount() {
     super();
   }
 
   /**
-   * Initializes a new instance of the NameValuePair
-   * @param name Property name             
-   * @param value Property value             
+   * Initializes a new instance of the StorageFileRqOfEmailClientAccount
+   * @param value 
+   * @param storageFile 
    */
-  public NameValuePair(String name, String value) {
+  public StorageFileRqOfEmailClientAccount(EmailClientAccount value, StorageFileLocation storageFile) {
     super();
-    setName(name);
     setValue(value);
+    setStorageFile(storageFile);
   }
 
 }

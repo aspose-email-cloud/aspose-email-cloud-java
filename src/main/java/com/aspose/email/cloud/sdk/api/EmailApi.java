@@ -3102,6 +3102,112 @@ public class EmailApi
     }
   
     /**
+     * Get email client account from storage             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return EmailClientAccount
+     * @throws ApiException 
+     */
+    public EmailClientAccount getEmailClientAccount(GetEmailClientAccountRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getEmailClientAccount");
+        }
+         // verify the required parameter 'request.folder' is set
+        if (request.folder== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling getEmailClientAccount");
+        }
+         // verify the required parameter 'request.storage' is set
+        if (request.storage== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.storage' when calling getEmailClientAccount");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/email-client-account";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), EmailClientAccount.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return EmailClientMultiAccount
+     * @throws ApiException 
+     */
+    public EmailClientMultiAccount getEmailClientMultiAccount(GetEmailClientMultiAccountRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getEmailClientMultiAccount");
+        }
+         // verify the required parameter 'request.folder' is set
+        if (request.folder== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling getEmailClientMultiAccount");
+        }
+         // verify the required parameter 'request.storage' is set
+        if (request.storage== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.storage' when calling getEmailClientMultiAccount");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/multi-account";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), EmailClientMultiAccount.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Get email document.             
      * 
      * @param request Holds parameters for this request invocation.
@@ -3514,6 +3620,49 @@ public class EmailApi
     }
   
     /**
+     * Check email address is disposable             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ValueTOfBoolean
+     * @throws ApiException 
+     */
+    public ValueTOfBoolean isEmailAddressDisposable(IsEmailAddressDisposableRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.address' is set
+        if (request.address== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.address' when calling isEmailAddressDisposable");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/disposable/isDisposable/{address}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "address", request.address);
+        
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), ValueTOfBoolean.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Get folders list in email account             
      * 
      * @param request Holds parameters for this request invocation.
@@ -3878,6 +4027,80 @@ public class EmailApi
         String postBody = null;
         
         postBody = SerializationHelper.serialize(request.rq);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Create email client account file (*.account) with any of supported credentials             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void saveEmailClientAccount(SaveEmailClientAccountRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling saveEmailClientAccount");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/email-client-account";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void saveEmailClientMultiAccount(SaveEmailClientMultiAccountRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling saveEmailClientMultiAccount");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/multi-account";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
         
         this.apiInvoker.invokeApi(
             resourcePath, 
