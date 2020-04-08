@@ -1186,7 +1186,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -1216,7 +1216,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -1780,6 +1780,36 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getEmailThread"></a>
+## **getEmailThread**
+> [EmailThread](EmailThread.md) getEmailThread(GetEmailThreadRequestData request)
+
+Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### **GetEmailThreadRequestData** Parameters
+```java
+public GetEmailThreadRequestData(
+    String threadId, 
+    String firstAccount, 
+    String secondAccount, 
+    String storage, 
+    String storageFolder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread identifier |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+
+### Return type
+
+[**EmailThread**](EmailThread.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getFileVersions"></a>
 ## **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
@@ -1977,7 +2007,7 @@ public ListEmailFoldersRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **parentFolder** | **String**| Folder in which subfolders should be listed | [optional]
@@ -2013,7 +2043,7 @@ Name | Type | Description  | Notes
  **folder** | **String**| A folder in email account |
  **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -2049,7 +2079,7 @@ Name | Type | Description  | Notes
  **folder** | **String**| A folder in email account |
  **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -2057,6 +2087,38 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="listEmailThreads"></a>
+## **listEmailThreads**
+> [EmailThreadList](EmailThreadList.md) listEmailThreads(ListEmailThreadsRequestData request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+### **ListEmailThreadsRequestData** Parameters
+```java
+public ListEmailThreadsRequestData(
+    String folder, 
+    String firstAccount, 
+    String secondAccount, 
+    String storage, 
+    String storageFolder, 
+    Boolean updateFolderCache)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **String**| A folder in email account |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+ **updateFolderCache** | **Boolean**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+
+### Return type
+
+[**EmailThreadList**](EmailThreadList.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 

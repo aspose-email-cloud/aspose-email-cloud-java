@@ -13,6 +13,7 @@ public class Derive {
         builder.registerTypeAdapter(EmailAccountRequest.class, new TypeDeriveAdapter<EmailAccountRequest>());
         builder.registerTypeAdapter(EmailClientAccountCredentials.class, new TypeDeriveAdapter<EmailClientAccountCredentials>());
         builder.registerTypeAdapter(ListResponseOfEmailAccountConfig.class, new TypeDeriveAdapter<ListResponseOfEmailAccountConfig>());
+        builder.registerTypeAdapter(ListResponseOfEmailThread.class, new TypeDeriveAdapter<ListResponseOfEmailThread>());
         builder.registerTypeAdapter(ListResponseOfStorageModelOfCalendarDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfCalendarDto>());
         builder.registerTypeAdapter(ListResponseOfStorageModelOfContactDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfContactDto>());
         builder.registerTypeAdapter(ListResponseOfStorageModelOfEmailDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfEmailDto>());

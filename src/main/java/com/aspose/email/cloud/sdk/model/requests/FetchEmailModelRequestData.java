@@ -38,7 +38,7 @@ public class FetchEmailModelRequestData
     * Initializes a new instance of the FetchEmailModelRequestData class.   
     * @param messageId Message identifier
     * @param firstAccount Email account
-    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     **/
@@ -62,7 +62,7 @@ public class FetchEmailModelRequestData
     public String firstAccount;
 
     /**
-    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     **/
     public String secondAccount;
 

@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * List of email documents             
+ * List of email documents from storage             
  */
 public class EmailDtoList extends ListResponseOfStorageModelOfEmailDto {
 

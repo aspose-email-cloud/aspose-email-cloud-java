@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ListEmailMessagesRequestData.java">
+* <copyright company="Aspose" file="GetEmailThreadRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,40 +30,31 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.listEmailMessages request invocation.
+* Class that holds parameters for EmailApi.getEmailThread request invocation.
 **/   
-public class ListEmailMessagesRequestData
+public class GetEmailThreadRequestData
 {
     /**
-    * Initializes a new instance of the ListEmailMessagesRequestData class.   
-    * @param folder A folder in email account
-    * @param queryString A MailQuery search string
+    * Initializes a new instance of the GetEmailThreadRequestData class.   
+    * @param threadId Thread identifier
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
-    * @param recursive Specifies that should message be searched in subfolders recursively
     **/
-    public ListEmailMessagesRequestData(String folder, String queryString, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean recursive)             
+    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String storage, String storageFolder)             
     {
-        this.folder = folder;
-        this.queryString = queryString;
+        this.threadId = threadId;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
         this.storage = storage;
         this.storageFolder = storageFolder;
-        this.recursive = recursive;
     }
         
     /**
-    * A folder in email account
+    * Thread identifier
     **/
-    public String folder;
-
-    /**
-    * A MailQuery search string
-    **/
-    public String queryString;
+    public String threadId;
 
     /**
     * Email account
@@ -84,10 +75,5 @@ public class ListEmailMessagesRequestData
     * Folder in storage where account file(s) located
     **/
     public String storageFolder;
-
-    /**
-    * Specifies that should message be searched in subfolders recursively
-    **/
-    public Boolean recursive;
 }
 

@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ListEmailMessagesRequestData.java">
+* <copyright company="Aspose" file="ListEmailThreadsRequestData.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,40 +30,33 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.listEmailMessages request invocation.
+* Class that holds parameters for EmailApi.listEmailThreads request invocation.
 **/   
-public class ListEmailMessagesRequestData
+public class ListEmailThreadsRequestData
 {
     /**
-    * Initializes a new instance of the ListEmailMessagesRequestData class.   
+    * Initializes a new instance of the ListEmailThreadsRequestData class.   
     * @param folder A folder in email account
-    * @param queryString A MailQuery search string
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
-    * @param recursive Specifies that should message be searched in subfolders recursively
+    * @param updateFolderCache This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
     **/
-    public ListEmailMessagesRequestData(String folder, String queryString, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean recursive)             
+    public ListEmailThreadsRequestData(String folder, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean updateFolderCache)             
     {
         this.folder = folder;
-        this.queryString = queryString;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
         this.storage = storage;
         this.storageFolder = storageFolder;
-        this.recursive = recursive;
+        this.updateFolderCache = updateFolderCache;
     }
         
     /**
     * A folder in email account
     **/
     public String folder;
-
-    /**
-    * A MailQuery search string
-    **/
-    public String queryString;
 
     /**
     * Email account
@@ -86,8 +79,8 @@ public class ListEmailMessagesRequestData
     public String storageFolder;
 
     /**
-    * Specifies that should message be searched in subfolders recursively
+    * This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
     **/
-    public Boolean recursive;
+    public Boolean updateFolderCache;
 }
 

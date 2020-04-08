@@ -122,8 +122,8 @@ public class SendEmailMimeBaseRequest extends AccountBaseRequest {
 
   /**
    * Initializes a new instance of the SendEmailMimeBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param base64MimeMessage Email document serialized as MIME             
    */

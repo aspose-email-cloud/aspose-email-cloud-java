@@ -124,8 +124,8 @@ public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
 
   /**
    * Initializes a new instance of the AppendEmailBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param folder Email account folder to store a message             
    * @param markAsSent Mark message as sent             

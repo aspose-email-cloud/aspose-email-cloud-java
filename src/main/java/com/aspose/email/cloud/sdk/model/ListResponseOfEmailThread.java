@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="AppendEmailModelRq.java">
+* <copyright company="Aspose" file="ListResponseOfEmailThread.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,36 +40,48 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Append email request             
+ * ListResponseOfEmailThread
  */
-public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
-  @JsonProperty("message")
-  private EmailDto message = null;
+public class ListResponseOfEmailThread {
+  @JsonProperty("value")
+  private List<EmailThread> value = null;
 
   /**
-   * Set message and return this.
-   * @param message Email document             
+   * Set value and return this.
+   * @param value 
    * @return this
   **/
-  public AppendEmailModelRq message(EmailDto message) {
-    this.message = message;
+  public ListResponseOfEmailThread value(List<EmailThread> value) {
+    this.value = value;
+    return this;
+  }
+  /**
+   * Add an item to value and return this.
+   * @param valueItem An item of: 
+   * @return this
+  **/
+  public ListResponseOfEmailThread addValueItem(EmailThread valueItem) {
+    if (this.value == null) {
+      this.value = new ArrayList<EmailThread>();
+    }
+    this.value.add(valueItem);
     return this;
   }
 
   /**
-   * Email document             
-   * @return message
+   * Get value
+   * @return value
   **/
-  public EmailDto getMessage() {
-    return message;
+  public List<EmailThread> getValue() {
+    return value;
   }  
 
   /**
-   * Set message.
-   * @param message Email document             
+   * Set value.
+   * @param value 
   **/
-  public void setMessage(EmailDto message) {
-    this.message = message;
+  public void setValue(List<EmailThread> value) {
+    this.value = value;
   }
 
 
@@ -81,28 +93,22 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    AppendEmailModelRq appendEmailModelRq = (AppendEmailModelRq) o;
-    return ObjectUtils.equals(this.message, appendEmailModelRq.message) &&
-    super.equals(o);
+    ListResponseOfEmailThread listResponseOfEmailThread = (ListResponseOfEmailThread) o;
+    return ObjectUtils.equals(this.value, listResponseOfEmailThread.value);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(message, super.hashCode());
+    return ObjectUtils.hashCodeMulti(value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppendEmailModelRq {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
-    sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
-    sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
-    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
-    sb.append("    markAsSent: ").append(toIndentedString(isMarkAsSent())).append("\n");
-    sb.append("    message: ").append(toIndentedString(getMessage())).append("\n");
+    sb.append("class ListResponseOfEmailThread {\n");
+    
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -118,27 +124,17 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public AppendEmailModelRq() {
+  public ListResponseOfEmailThread() {
     super();
   }
 
   /**
-   * Initializes a new instance of the AppendEmailModelRq
-   * @param firstAccount First account storage file name             
-   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
-   * @param storageFolder Storage folder location of account files             
-   * @param folder Email account folder to store a message             
-   * @param markAsSent Mark message as sent             
-   * @param message Email document             
+   * Initializes a new instance of the ListResponseOfEmailThread
+   * @param value 
    */
-  public AppendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, EmailDto message) {
+  public ListResponseOfEmailThread(List<EmailThread> value) {
     super();
-    setFirstAccount(firstAccount);
-    setSecondAccount(secondAccount);
-    setStorageFolder(storageFolder);
-    setFolder(folder);
-    setMarkAsSent(markAsSent);
-    setMessage(message);
+    setValue(value);
   }
 
 }
