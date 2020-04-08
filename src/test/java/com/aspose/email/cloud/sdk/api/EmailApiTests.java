@@ -378,7 +378,8 @@ public class EmailApiTests {
             551,
             "SSLAuto",
             "SMTP",
-            new EmailClientAccountPasswordCredentials("login", null, "password"));
+            new EmailClientAccountPasswordCredentials("login", null, "password"),
+            null);
         String fileName = UUID.randomUUID().toString() + ".account";
         api.saveEmailClientAccount(new SaveEmailClientAccountRequestData(
             new StorageFileRqOfEmailClientAccount(
@@ -396,12 +397,12 @@ public class EmailApiTests {
         EmailClientMultiAccount multiAccount = new EmailClientMultiAccount(
             Arrays.<EmailClientAccount>asList(
                 new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP", 
-                    new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")),
+                    new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"), null),
                 new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS", 
                     new EmailClientAccountOauthCredentials(
-                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken", null))),
+                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken", null), null)),
             new EmailClientAccount("smtp.gmail.com", 465, "SSLAuto", "SMTP", 
-                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")));
+                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"), null));
         String fileName = UUID.randomUUID().toString() + ".multi.account";
         api.saveEmailClientMultiAccount(new SaveEmailClientMultiAccountRequestData(
             new StorageFileRqOfEmailClientMultiAccount(
