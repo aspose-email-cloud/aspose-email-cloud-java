@@ -42,8 +42,9 @@ public class ListEmailThreadsRequestData
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     * @param updateFolderCache This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
+    * @param messagesCacheLimit Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
     **/
-    public ListEmailThreadsRequestData(String folder, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean updateFolderCache)             
+    public ListEmailThreadsRequestData(String folder, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean updateFolderCache, Integer messagesCacheLimit)             
     {
         this.folder = folder;
         this.firstAccount = firstAccount;
@@ -51,6 +52,7 @@ public class ListEmailThreadsRequestData
         this.storage = storage;
         this.storageFolder = storageFolder;
         this.updateFolderCache = updateFolderCache;
+        this.messagesCacheLimit = messagesCacheLimit;
     }
         
     /**
@@ -82,5 +84,10 @@ public class ListEmailThreadsRequestData
     * This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
     **/
     public Boolean updateFolderCache;
+
+    /**
+    * Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
+    **/
+    public Integer messagesCacheLimit;
 }
 

@@ -1959,6 +1959,48 @@ public class EmailApi
     }
   
     /**
+     * Delete thread by id. All messages from thread will also be deleted             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void deleteEmailThread(DeleteEmailThreadRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.threadId' is set
+        if (request.threadId== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling deleteEmailThread");
+        }
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling deleteEmailThread");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/threads/{threadId}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "threadId", request.threadId);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "DELETE", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Delete file
      * 
      * @param request Holds parameters for this request invocation.
@@ -3831,10 +3873,6 @@ public class EmailApi
         if (request.folder== null) {
             throw new ApiException(400, "Missing the required parameter 'request.folder' when calling listEmailModels");
         }
-         // verify the required parameter 'request.queryString' is set
-        if (request.queryString== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.queryString' when calling listEmailModels");
-        }
          // verify the required parameter 'request.firstAccount' is set
         if (request.firstAccount== null) {
             throw new ApiException(400, "Missing the required parameter 'request.firstAccount' when calling listEmailModels");
@@ -3845,8 +3883,8 @@ public class EmailApi
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "queryString", request.queryString);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "queryString", request.queryString);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
@@ -3903,6 +3941,7 @@ public class EmailApi
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "updateFolderCache", request.updateFolderCache);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messagesCacheLimit", request.messagesCacheLimit);
         
                 
         byte[] response = this.apiInvoker.invokeApi(
@@ -4532,6 +4571,48 @@ public class EmailApi
         this.apiInvoker.invokeApi(
             resourcePath, 
             "POST", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Mar all messages in thread as read or unread             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void setEmailThreadReadFlag(SetEmailThreadReadFlagRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.threadId' is set
+        if (request.threadId== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling setEmailThreadReadFlag");
+        }
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling setEmailThreadReadFlag");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/threads/{threadId}/read-flag";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "threadId", request.threadId);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
             postBody, 
             null, 
             formParams);

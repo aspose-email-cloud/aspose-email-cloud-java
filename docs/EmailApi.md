@@ -970,6 +970,30 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="deleteEmailThread"></a>
+## **deleteEmailThread**
+> void deleteEmailThread(DeleteEmailThreadRequestData request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+### **DeleteEmailThreadRequestData** Parameters
+```java
+public DeleteEmailThreadRequestData(
+    String threadId, 
+    DeleteEmailThreadAccountRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread id |
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="deleteFile"></a>
 ## **deleteFile**
 > void deleteFile(DeleteFileRequestData request)
@@ -2066,8 +2090,8 @@ The query string should have the following view.      The example of a simple ex
 ```java
 public ListEmailModelsRequestData(
     String folder, 
-    String queryString, 
     String firstAccount, 
+    String queryString, 
     String secondAccount, 
     String storage, 
     String storageFolder, 
@@ -2077,8 +2101,8 @@ public ListEmailModelsRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **String**| A folder in email account |
- **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
+ **queryString** | **String**| A MailQuery search string | [optional]
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
@@ -2104,7 +2128,8 @@ public ListEmailThreadsRequestData(
     String secondAccount, 
     String storage, 
     String storageFolder, 
-    Boolean updateFolderCache)
+    Boolean updateFolderCache, 
+    Integer messagesCacheLimit)
 ```
 
 Name | Type | Description  | Notes
@@ -2115,6 +2140,7 @@ Name | Type | Description  | Notes
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **updateFolderCache** | **Boolean**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messagesCacheLimit** | **Integer**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
 
 ### Return type
 
@@ -2477,6 +2503,30 @@ public SetEmailReadFlagRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SetMessageReadFlagAccountBaseRequest**](SetMessageReadFlagAccountBaseRequest.md)| Message is read request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="setEmailThreadReadFlag"></a>
+## **setEmailThreadReadFlag**
+> void setEmailThreadReadFlag(SetEmailThreadReadFlagRequestData request)
+
+Mar all messages in thread as read or unread             
+
+### **SetEmailThreadReadFlagRequestData** Parameters
+```java
+public SetEmailThreadReadFlagRequestData(
+    String threadId, 
+    EmailThreadReadFlagRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread id |
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag |
 
 ### Return type
 
