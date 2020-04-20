@@ -52,6 +52,9 @@ public class EmailThread {
   @JsonProperty("messages")
   private List<EmailDto> messages = null;
 
+  @JsonProperty("folder")
+  private String folder = null;
+
   /**
    * Set id and return this.
    * @param id Thread identifier             
@@ -142,6 +145,32 @@ public class EmailThread {
     this.messages = messages;
   }
 
+  /**
+   * Set folder and return this.
+   * @param folder Thread folder location             
+   * @return this
+  **/
+  public EmailThread folder(String folder) {
+    this.folder = folder;
+    return this;
+  }
+
+  /**
+   * Thread folder location             
+   * @return folder
+  **/
+  public String getFolder() {
+    return folder;
+  }  
+
+  /**
+   * Set folder.
+   * @param folder Thread folder location             
+  **/
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -154,12 +183,13 @@ public class EmailThread {
     EmailThread emailThread = (EmailThread) o;
     return ObjectUtils.equals(this.id, emailThread.id) &&
     ObjectUtils.equals(this.subject, emailThread.subject) &&
-    ObjectUtils.equals(this.messages, emailThread.messages);
+    ObjectUtils.equals(this.messages, emailThread.messages) &&
+    ObjectUtils.equals(this.folder, emailThread.folder);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(id, subject, messages);
+    return ObjectUtils.hashCodeMulti(id, subject, messages, folder);
   }
 
 
@@ -171,6 +201,7 @@ public class EmailThread {
     sb.append("    id: ").append(toIndentedString(getId())).append("\n");
     sb.append("    subject: ").append(toIndentedString(getSubject())).append("\n");
     sb.append("    messages: ").append(toIndentedString(getMessages())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -195,12 +226,14 @@ public class EmailThread {
    * @param id Thread identifier             
    * @param subject Thread subject             
    * @param messages List of messages in thread             
+   * @param folder Thread folder location             
    */
-  public EmailThread(String id, String subject, List<EmailDto> messages) {
+  public EmailThread(String id, String subject, List<EmailDto> messages, String folder) {
     super();
     setId(id);
     setSubject(subject);
     setMessages(messages);
+    setFolder(folder);
   }
 
 }

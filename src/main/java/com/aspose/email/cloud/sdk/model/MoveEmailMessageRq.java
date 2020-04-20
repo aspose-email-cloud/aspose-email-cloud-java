@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="DeleteMessageBaseRequest.java">
+* <copyright company="Aspose" file="MoveEmailMessageRq.java">
 *   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,24 +40,24 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Delete message request             
+ * Move email message request             
  */
-public class DeleteMessageBaseRequest extends AccountBaseRequest {
+public class MoveEmailMessageRq extends AccountBaseRequest {
   @JsonProperty("messageId")
   private String messageId = null;
 
-  @JsonProperty("folder")
-  private String folder = null;
+  @JsonProperty("sourceFolder")
+  private String sourceFolder = null;
 
-  @JsonProperty("deletePermanently")
-  private Boolean deletePermanently = null;
+  @JsonProperty("destinationFolder")
+  private String destinationFolder = null;
 
   /**
    * Set messageId and return this.
    * @param messageId Message identifier             
    * @return this
   **/
-  public DeleteMessageBaseRequest messageId(String messageId) {
+  public MoveEmailMessageRq messageId(String messageId) {
     this.messageId = messageId;
     return this;
   }
@@ -79,55 +79,55 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
 
   /**
-   * Set folder and return this.
-   * @param folder Account folder where message located. Should be specified for some accounts             
+   * Set sourceFolder and return this.
+   * @param sourceFolder Message source folder. Account root folder by default             
    * @return this
   **/
-  public DeleteMessageBaseRequest folder(String folder) {
-    this.folder = folder;
+  public MoveEmailMessageRq sourceFolder(String sourceFolder) {
+    this.sourceFolder = sourceFolder;
     return this;
   }
 
   /**
-   * Account folder where message located. Should be specified for some accounts             
-   * @return folder
+   * Message source folder. Account root folder by default             
+   * @return sourceFolder
   **/
-  public String getFolder() {
-    return folder;
+  public String getSourceFolder() {
+    return sourceFolder;
   }  
 
   /**
-   * Set folder.
-   * @param folder Account folder where message located. Should be specified for some accounts             
+   * Set sourceFolder.
+   * @param sourceFolder Message source folder. Account root folder by default             
   **/
-  public void setFolder(String folder) {
-    this.folder = folder;
+  public void setSourceFolder(String sourceFolder) {
+    this.sourceFolder = sourceFolder;
   }
 
   /**
-   * Set deletePermanently and return this.
-   * @param deletePermanently Specifies that message should be deleted permanently             
+   * Set destinationFolder and return this.
+   * @param destinationFolder Folder in email account to move message to             
    * @return this
   **/
-  public DeleteMessageBaseRequest deletePermanently(Boolean deletePermanently) {
-    this.deletePermanently = deletePermanently;
+  public MoveEmailMessageRq destinationFolder(String destinationFolder) {
+    this.destinationFolder = destinationFolder;
     return this;
   }
 
   /**
-   * Specifies that message should be deleted permanently             
-   * @return deletePermanently
+   * Folder in email account to move message to             
+   * @return destinationFolder
   **/
-  public Boolean isDeletePermanently() {
-    return deletePermanently;
+  public String getDestinationFolder() {
+    return destinationFolder;
   }  
 
   /**
-   * Set deletePermanently.
-   * @param deletePermanently Specifies that message should be deleted permanently             
+   * Set destinationFolder.
+   * @param destinationFolder Folder in email account to move message to             
   **/
-  public void setDeletePermanently(Boolean deletePermanently) {
-    this.deletePermanently = deletePermanently;
+  public void setDestinationFolder(String destinationFolder) {
+    this.destinationFolder = destinationFolder;
   }
 
 
@@ -139,30 +139,30 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    DeleteMessageBaseRequest deleteMessageBaseRequest = (DeleteMessageBaseRequest) o;
-    return ObjectUtils.equals(this.messageId, deleteMessageBaseRequest.messageId) &&
-    ObjectUtils.equals(this.folder, deleteMessageBaseRequest.folder) &&
-    ObjectUtils.equals(this.deletePermanently, deleteMessageBaseRequest.deletePermanently) &&
+    MoveEmailMessageRq moveEmailMessageRq = (MoveEmailMessageRq) o;
+    return ObjectUtils.equals(this.messageId, moveEmailMessageRq.messageId) &&
+    ObjectUtils.equals(this.sourceFolder, moveEmailMessageRq.sourceFolder) &&
+    ObjectUtils.equals(this.destinationFolder, moveEmailMessageRq.destinationFolder) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(messageId, folder, deletePermanently, super.hashCode());
+    return ObjectUtils.hashCodeMulti(messageId, sourceFolder, destinationFolder, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DeleteMessageBaseRequest {\n");
+    sb.append("class MoveEmailMessageRq {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("    messageId: ").append(toIndentedString(getMessageId())).append("\n");
-    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
-    sb.append("    deletePermanently: ").append(toIndentedString(isDeletePermanently())).append("\n");
+    sb.append("    sourceFolder: ").append(toIndentedString(getSourceFolder())).append("\n");
+    sb.append("    destinationFolder: ").append(toIndentedString(getDestinationFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -178,27 +178,27 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public DeleteMessageBaseRequest() {
+  public MoveEmailMessageRq() {
     super();
   }
 
   /**
-   * Initializes a new instance of the DeleteMessageBaseRequest
+   * Initializes a new instance of the MoveEmailMessageRq
    * @param firstAccount First account storage file name             
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param messageId Message identifier             
-   * @param folder Account folder where message located. Should be specified for some accounts             
-   * @param deletePermanently Specifies that message should be deleted permanently             
+   * @param sourceFolder Message source folder. Account root folder by default             
+   * @param destinationFolder Folder in email account to move message to             
    */
-  public DeleteMessageBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String messageId, String folder, Boolean deletePermanently) {
+  public MoveEmailMessageRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String messageId, String sourceFolder, String destinationFolder) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
     setMessageId(messageId);
-    setFolder(folder);
-    setDeletePermanently(deletePermanently);
+    setSourceFolder(sourceFolder);
+    setDestinationFolder(destinationFolder);
   }
 
 }

@@ -2363,6 +2363,7 @@ public class EmailApi
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.messageId);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
         
@@ -2414,6 +2415,7 @@ public class EmailApi
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.messageId);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
         
@@ -3966,6 +3968,85 @@ public class EmailApi
     }
   
     /**
+     * Move message to another folder             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void moveEmailMessage(MoveEmailMessageRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling moveEmailMessage");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/move";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Move thread to another folder             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void moveEmailThread(MoveEmailThreadRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.threadId' is set
+        if (request.threadId== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling moveEmailThread");
+        }
+         // verify the required parameter 'request.request' is set
+        if (request.request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.request' when calling moveEmailThread");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/threads/{threadId}/move";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "threadId", request.threadId);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.request);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Move file
      * 
      * @param request Holds parameters for this request invocation.
@@ -4583,7 +4664,7 @@ public class EmailApi
     }
   
     /**
-     * Mar all messages in thread as read or unread             
+     * Mark all messages in thread as read or unread             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 

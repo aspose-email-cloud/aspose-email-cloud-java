@@ -1202,6 +1202,7 @@ public FetchEmailMessageRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
+    String folder, 
     String storage, 
     String storageFolder)
 ```
@@ -1211,6 +1212,7 @@ Name | Type | Description  | Notes
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -1232,6 +1234,7 @@ public FetchEmailModelRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
+    String folder, 
     String storage, 
     String storageFolder)
 ```
@@ -1241,6 +1244,7 @@ Name | Type | Description  | Notes
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -2148,6 +2152,52 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="moveEmailMessage"></a>
+## **moveEmailMessage**
+> void moveEmailMessage(MoveEmailMessageRequestData request)
+
+Move message to another folder             
+
+### **MoveEmailMessageRequestData** Parameters
+```java
+public MoveEmailMessageRequestData(
+    MoveEmailMessageRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="moveEmailThread"></a>
+## **moveEmailThread**
+> void moveEmailThread(MoveEmailThreadRequestData request)
+
+Move thread to another folder             
+
+### **MoveEmailThreadRequestData** Parameters
+```java
+public MoveEmailThreadRequestData(
+    String threadId, 
+    MoveEmailThreadRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread identifier |
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="moveFile"></a>
 ## **moveFile**
 > void moveFile(MoveFileRequestData request)
@@ -2514,7 +2564,7 @@ void (empty response body)
 ## **setEmailThreadReadFlag**
 > void setEmailThreadReadFlag(SetEmailThreadReadFlagRequestData request)
 
-Mar all messages in thread as read or unread             
+Mark all messages in thread as read or unread             
 
 ### **SetEmailThreadReadFlagRequestData** Parameters
 ```java

@@ -39,14 +39,16 @@ public class FetchEmailModelRequestData
     * @param messageId Message identifier
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+    * @param folder Account folder to fetch from (should be specified for some protocols such as IMAP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     **/
-    public FetchEmailModelRequestData(String messageId, String firstAccount, String secondAccount, String storage, String storageFolder)             
+    public FetchEmailModelRequestData(String messageId, String firstAccount, String secondAccount, String folder, String storage, String storageFolder)             
     {
         this.messageId = messageId;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
+        this.folder = folder;
         this.storage = storage;
         this.storageFolder = storageFolder;
     }
@@ -65,6 +67,11 @@ public class FetchEmailModelRequestData
     * Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     **/
     public String secondAccount;
+
+    /**
+    * Account folder to fetch from (should be specified for some protocols such as IMAP)             
+    **/
+    public String folder;
 
     /**
     * Storage name where account file(s) located
