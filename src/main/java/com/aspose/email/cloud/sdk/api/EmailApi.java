@@ -3424,6 +3424,7 @@ public class EmailApi
         
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
         

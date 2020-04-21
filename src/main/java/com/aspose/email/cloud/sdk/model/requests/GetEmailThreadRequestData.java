@@ -39,14 +39,16 @@ public class GetEmailThreadRequestData
     * @param threadId Thread identifier
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+    * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     **/
-    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String storage, String storageFolder)             
+    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String folder, String storage, String storageFolder)             
     {
         this.threadId = threadId;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
+        this.folder = folder;
         this.storage = storage;
         this.storageFolder = storageFolder;
     }
@@ -65,6 +67,11 @@ public class GetEmailThreadRequestData
     * Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     **/
     public String secondAccount;
+
+    /**
+    * Specifies account folder to get thread from (required for some account types, such as EWS)             
+    **/
+    public String folder;
 
     /**
     * Storage name where account file(s) located

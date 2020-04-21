@@ -1820,6 +1820,7 @@ public GetEmailThreadRequestData(
     String threadId, 
     String firstAccount, 
     String secondAccount, 
+    String folder, 
     String storage, 
     String storageFolder)
 ```
@@ -1829,6 +1830,7 @@ Name | Type | Description  | Notes
  **threadId** | **String**| Thread identifier |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 

@@ -43,6 +43,35 @@ import java.io.*;
  * Delete thread request             
  */
 public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
+  @JsonProperty("folder")
+  private String folder = null;
+
+  /**
+   * Set folder and return this.
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @return this
+  **/
+  public DeleteEmailThreadAccountRq folder(String folder) {
+    this.folder = folder;
+    return this;
+  }
+
+  /**
+   * Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @return folder
+  **/
+  public String getFolder() {
+    return folder;
+  }  
+
+  /**
+   * Set folder.
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+  **/
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -52,12 +81,14 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    return true;
+    DeleteEmailThreadAccountRq deleteEmailThreadAccountRq = (DeleteEmailThreadAccountRq) o;
+    return ObjectUtils.equals(this.folder, deleteEmailThreadAccountRq.folder) &&
+    super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(super.hashCode());
+    return ObjectUtils.hashCodeMulti(folder, super.hashCode());
   }
 
 
@@ -69,6 +100,7 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
     sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -93,12 +125,14 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
    * @param firstAccount First account storage file name             
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
    */
-  public DeleteEmailThreadAccountRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder) {
+  public DeleteEmailThreadAccountRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
+    setFolder(folder);
   }
 
 }

@@ -46,6 +46,9 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   @JsonProperty("isRead")
   private Boolean isRead = null;
 
+  @JsonProperty("folder")
+  private String folder = null;
+
   /**
    * Set isRead and return this.
    * @param isRead Read flag to set. \&quot;true\&quot; by default             
@@ -72,6 +75,32 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
     this.isRead = isRead;
   }
 
+  /**
+   * Set folder and return this.
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @return this
+  **/
+  public EmailThreadReadFlagRq folder(String folder) {
+    this.folder = folder;
+    return this;
+  }
+
+  /**
+   * Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @return folder
+  **/
+  public String getFolder() {
+    return folder;
+  }  
+
+  /**
+   * Set folder.
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+  **/
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +112,13 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   }
     EmailThreadReadFlagRq emailThreadReadFlagRq = (EmailThreadReadFlagRq) o;
     return ObjectUtils.equals(this.isRead, emailThreadReadFlagRq.isRead) &&
+    ObjectUtils.equals(this.folder, emailThreadReadFlagRq.folder) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(isRead, super.hashCode());
+    return ObjectUtils.hashCodeMulti(isRead, folder, super.hashCode());
   }
 
 
@@ -101,6 +131,7 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("    isRead: ").append(toIndentedString(isIsRead())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,13 +157,15 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param isRead Read flag to set. \&quot;true\&quot; by default             
+   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
    */
-  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead) {
+  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead, String folder) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
     setIsRead(isRead);
+    setFolder(folder);
   }
 
 }
