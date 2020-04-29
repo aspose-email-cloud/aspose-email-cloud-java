@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="DeleteEmailThreadAccountRq.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,33 +43,33 @@ import java.io.*;
  * Delete thread request             
  */
 public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
-  @JsonProperty("folder")
-  private String folder = null;
+  @JsonProperty("folderId")
+  private String folderId = null;
 
   /**
-   * Set folder and return this.
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * Set folderId and return this.
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    * @return this
   **/
-  public DeleteEmailThreadAccountRq folder(String folder) {
-    this.folder = folder;
+  public DeleteEmailThreadAccountRq folderId(String folderId) {
+    this.folderId = folderId;
     return this;
   }
 
   /**
-   * Specifies account folder to get thread from (required for some account types, such as EWS)             
-   * @return folder
+   * Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * @return folderId
   **/
-  public String getFolder() {
-    return folder;
+  public String getFolderId() {
+    return folderId;
   }  
 
   /**
-   * Set folder.
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * Set folderId.
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
   **/
-  public void setFolder(String folder) {
-    this.folder = folder;
+  public void setFolderId(String folderId) {
+    this.folderId = folderId;
   }
 
 
@@ -82,13 +82,13 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
     return false;
   }
     DeleteEmailThreadAccountRq deleteEmailThreadAccountRq = (DeleteEmailThreadAccountRq) o;
-    return ObjectUtils.equals(this.folder, deleteEmailThreadAccountRq.folder) &&
+    return ObjectUtils.equals(this.folderId, deleteEmailThreadAccountRq.folderId) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(folder, super.hashCode());
+    return ObjectUtils.hashCodeMulti(folderId, super.hashCode());
   }
 
 
@@ -100,7 +100,7 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
     sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
-    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
+    sb.append("    folderId: ").append(toIndentedString(getFolderId())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,14 +125,14 @@ public class DeleteEmailThreadAccountRq extends AccountBaseRequest {
    * @param firstAccount First account storage file name             
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    */
-  public DeleteEmailThreadAccountRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder) {
+  public DeleteEmailThreadAccountRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folderId) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
-    setFolder(folder);
+    setFolderId(folderId);
   }
 
 }

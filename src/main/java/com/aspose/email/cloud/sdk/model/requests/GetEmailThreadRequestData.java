@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="GetEmailThreadRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,16 +39,16 @@ public class GetEmailThreadRequestData
     * @param threadId Thread identifier
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
-    * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+    * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     **/
-    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String folder, String storage, String storageFolder)             
+    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String folderId, String storage, String storageFolder)             
     {
         this.threadId = threadId;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
-        this.folder = folder;
+        this.folderId = folderId;
         this.storage = storage;
         this.storageFolder = storageFolder;
     }
@@ -69,9 +69,9 @@ public class GetEmailThreadRequestData
     public String secondAccount;
 
     /**
-    * Specifies account folder to get thread from (required for some account types, such as EWS)             
+    * Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
     **/
-    public String folder;
+    public String folderId;
 
     /**
     * Storage name where account file(s) located

@@ -1820,7 +1820,7 @@ public GetEmailThreadRequestData(
     String threadId, 
     String firstAccount, 
     String secondAccount, 
-    String folder, 
+    String folderId, 
     String storage, 
     String storageFolder)
 ```
@@ -1830,7 +1830,7 @@ Name | Type | Description  | Notes
  **threadId** | **String**| Thread identifier |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
- **folder** | **String**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional]
+ **folderId** | **String**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -2129,7 +2129,7 @@ Get message threads from folder. All messages are partly fetched (without email 
 ### **ListEmailThreadsRequestData** Parameters
 ```java
 public ListEmailThreadsRequestData(
-    String folder, 
+    String folderId, 
     String firstAccount, 
     String secondAccount, 
     String storage, 
@@ -2140,7 +2140,7 @@ public ListEmailThreadsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder** | **String**| A folder in email account |
+ **folderId** | **String**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
@@ -2395,7 +2395,7 @@ public SaveEmailModelRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
- **name** | **String**| iCalendar file name in storage. |
+ **name** | **String**| Email document file name in storage. |
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. |
 
 ### Return type

@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="MoveEmailThreadRq.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,33 +43,33 @@ import java.io.*;
  * Email thread move request             
  */
 public class MoveEmailThreadRq extends AccountBaseRequest {
-  @JsonProperty("destinationFolder")
-  private String destinationFolder = null;
+  @JsonProperty("destinationFolderId")
+  private String destinationFolderId = null;
 
   /**
-   * Set destinationFolder and return this.
-   * @param destinationFolder Email account folder to move thread to             
+   * Set destinationFolderId and return this.
+   * @param destinationFolderId Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    * @return this
   **/
-  public MoveEmailThreadRq destinationFolder(String destinationFolder) {
-    this.destinationFolder = destinationFolder;
+  public MoveEmailThreadRq destinationFolderId(String destinationFolderId) {
+    this.destinationFolderId = destinationFolderId;
     return this;
   }
 
   /**
-   * Email account folder to move thread to             
-   * @return destinationFolder
+   * Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * @return destinationFolderId
   **/
-  public String getDestinationFolder() {
-    return destinationFolder;
+  public String getDestinationFolderId() {
+    return destinationFolderId;
   }  
 
   /**
-   * Set destinationFolder.
-   * @param destinationFolder Email account folder to move thread to             
+   * Set destinationFolderId.
+   * @param destinationFolderId Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
   **/
-  public void setDestinationFolder(String destinationFolder) {
-    this.destinationFolder = destinationFolder;
+  public void setDestinationFolderId(String destinationFolderId) {
+    this.destinationFolderId = destinationFolderId;
   }
 
 
@@ -82,13 +82,13 @@ public class MoveEmailThreadRq extends AccountBaseRequest {
     return false;
   }
     MoveEmailThreadRq moveEmailThreadRq = (MoveEmailThreadRq) o;
-    return ObjectUtils.equals(this.destinationFolder, moveEmailThreadRq.destinationFolder) &&
+    return ObjectUtils.equals(this.destinationFolderId, moveEmailThreadRq.destinationFolderId) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(destinationFolder, super.hashCode());
+    return ObjectUtils.hashCodeMulti(destinationFolderId, super.hashCode());
   }
 
 
@@ -100,7 +100,7 @@ public class MoveEmailThreadRq extends AccountBaseRequest {
     sb.append("    firstAccount: ").append(toIndentedString(getFirstAccount())).append("\n");
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
-    sb.append("    destinationFolder: ").append(toIndentedString(getDestinationFolder())).append("\n");
+    sb.append("    destinationFolderId: ").append(toIndentedString(getDestinationFolderId())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,14 +125,14 @@ public class MoveEmailThreadRq extends AccountBaseRequest {
    * @param firstAccount First account storage file name             
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
-   * @param destinationFolder Email account folder to move thread to             
+   * @param destinationFolderId Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    */
-  public MoveEmailThreadRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String destinationFolder) {
+  public MoveEmailThreadRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String destinationFolderId) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
-    setDestinationFolder(destinationFolder);
+    setDestinationFolderId(destinationFolderId);
   }
 
 }

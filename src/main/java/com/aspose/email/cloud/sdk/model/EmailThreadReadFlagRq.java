@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailThreadReadFlagRq.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,8 +46,8 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   @JsonProperty("isRead")
   private Boolean isRead = null;
 
-  @JsonProperty("folder")
-  private String folder = null;
+  @JsonProperty("folderId")
+  private String folderId = null;
 
   /**
    * Set isRead and return this.
@@ -76,29 +76,29 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   }
 
   /**
-   * Set folder and return this.
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * Set folderId and return this.
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    * @return this
   **/
-  public EmailThreadReadFlagRq folder(String folder) {
-    this.folder = folder;
+  public EmailThreadReadFlagRq folderId(String folderId) {
+    this.folderId = folderId;
     return this;
   }
 
   /**
-   * Specifies account folder to get thread from (required for some account types, such as EWS)             
-   * @return folder
+   * Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * @return folderId
   **/
-  public String getFolder() {
-    return folder;
+  public String getFolderId() {
+    return folderId;
   }  
 
   /**
-   * Set folder.
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * Set folderId.
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
   **/
-  public void setFolder(String folder) {
-    this.folder = folder;
+  public void setFolderId(String folderId) {
+    this.folderId = folderId;
   }
 
 
@@ -112,13 +112,13 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   }
     EmailThreadReadFlagRq emailThreadReadFlagRq = (EmailThreadReadFlagRq) o;
     return ObjectUtils.equals(this.isRead, emailThreadReadFlagRq.isRead) &&
-    ObjectUtils.equals(this.folder, emailThreadReadFlagRq.folder) &&
+    ObjectUtils.equals(this.folderId, emailThreadReadFlagRq.folderId) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(isRead, folder, super.hashCode());
+    return ObjectUtils.hashCodeMulti(isRead, folderId, super.hashCode());
   }
 
 
@@ -131,7 +131,7 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("    isRead: ").append(toIndentedString(isIsRead())).append("\n");
-    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
+    sb.append("    folderId: ").append(toIndentedString(getFolderId())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -157,15 +157,15 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param isRead Read flag to set. \&quot;true\&quot; by default             
-   * @param folder Specifies account folder to get thread from (required for some account types, such as EWS)             
+   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
    */
-  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead, String folder) {
+  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead, String folderId) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
     setIsRead(isRead);
-    setFolder(folder);
+    setFolderId(folderId);
   }
 
 }

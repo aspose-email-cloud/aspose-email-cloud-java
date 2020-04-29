@@ -238,10 +238,10 @@ public class EmailApiTests {
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
         CalendarDto calendar = new CalendarDto()
-            .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted"))
+            .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted", null))
             .description("Some description")
             .summary("Some summary")
-            .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted"))
+            .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted", null))
             .startDate(startDate.getTime())
             .endDate(endDate.getTime())
             .location("Some location");
@@ -262,8 +262,8 @@ public class EmailApiTests {
 
         EmailDto email = new EmailDto()
             .addAlternateViewsItem(alternate)
-            .from(new MailAddress("From Name", "organizer@aspose.com", null))
-            .addToItem(new MailAddress("To Name", "attendee@aspose.com", null))
+            .from(new MailAddress("From Name", "organizer@aspose.com", null, null))
+            .addToItem(new MailAddress("To Name", "attendee@aspose.com", null, null))
             .subject("Some subject")
             .body("Some body");
         String emailFile = UUID.randomUUID().toString() + ".eml";
@@ -284,7 +284,7 @@ public class EmailApiTests {
             .givenName("Alex")
             .addEmailAddressesItem(new EmailAddress(
                 new EnumWithCustomOfEmailAddressCategory("Work", null),
-                "Alex Thomas", true, null, "alex.thomas@work.com"))
+                "Alex Thomas", true, null, "alex.thomas@work.com", null))
             .addPhoneNumbersItem(new PhoneNumber(
                 new EnumWithCustomOfPhoneNumberCategory("Work", null),
                 "+49211424721", true));

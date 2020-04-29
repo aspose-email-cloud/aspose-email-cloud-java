@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailAddress.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +57,9 @@ public class EmailAddress {
 
   @JsonProperty("address")
   private String address = null;
+
+  @JsonProperty("originalAddressString")
+  private String originalAddressString = null;
 
   /**
    * Set category and return this.
@@ -188,6 +191,32 @@ public class EmailAddress {
     this.address = address;
   }
 
+  /**
+   * Set originalAddressString and return this.
+   * @param originalAddressString The original e-mail address string             
+   * @return this
+  **/
+  public EmailAddress originalAddressString(String originalAddressString) {
+    this.originalAddressString = originalAddressString;
+    return this;
+  }
+
+  /**
+   * The original e-mail address string             
+   * @return originalAddressString
+  **/
+  public String getOriginalAddressString() {
+    return originalAddressString;
+  }  
+
+  /**
+   * Set originalAddressString.
+   * @param originalAddressString The original e-mail address string             
+  **/
+  public void setOriginalAddressString(String originalAddressString) {
+    this.originalAddressString = originalAddressString;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -202,12 +231,13 @@ public class EmailAddress {
     ObjectUtils.equals(this.displayName, emailAddress.displayName) &&
     ObjectUtils.equals(this.preferred, emailAddress.preferred) &&
     ObjectUtils.equals(this.routingType, emailAddress.routingType) &&
-    ObjectUtils.equals(this.address, emailAddress.address);
+    ObjectUtils.equals(this.address, emailAddress.address) &&
+    ObjectUtils.equals(this.originalAddressString, emailAddress.originalAddressString);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(category, displayName, preferred, routingType, address);
+    return ObjectUtils.hashCodeMulti(category, displayName, preferred, routingType, address, originalAddressString);
   }
 
 
@@ -221,6 +251,7 @@ public class EmailAddress {
     sb.append("    preferred: ").append(toIndentedString(isPreferred())).append("\n");
     sb.append("    routingType: ").append(toIndentedString(getRoutingType())).append("\n");
     sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
+    sb.append("    originalAddressString: ").append(toIndentedString(getOriginalAddressString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -247,14 +278,16 @@ public class EmailAddress {
    * @param preferred Defines whether email address is preferred.             
    * @param routingType A routing type for an email.             
    * @param address Email address.             
+   * @param originalAddressString The original e-mail address string             
    */
-  public EmailAddress(EnumWithCustomOfEmailAddressCategory category, String displayName, Boolean preferred, String routingType, String address) {
+  public EmailAddress(EnumWithCustomOfEmailAddressCategory category, String displayName, Boolean preferred, String routingType, String address, String originalAddressString) {
     super();
     setCategory(category);
     setDisplayName(displayName);
     setPreferred(preferred);
     setRoutingType(routingType);
     setAddress(address);
+    setOriginalAddressString(originalAddressString);
   }
 
 }

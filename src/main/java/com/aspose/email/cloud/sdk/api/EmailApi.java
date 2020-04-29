@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailApi.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -3424,7 +3424,7 @@ public class EmailApi
         
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folderId", request.folderId);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
         
@@ -3925,9 +3925,9 @@ public class EmailApi
     public EmailThreadList listEmailThreads(ListEmailThreadsRequestData request) throws ApiException 
     {
       try {
-         // verify the required parameter 'request.folder' is set
-        if (request.folder== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling listEmailThreads");
+         // verify the required parameter 'request.folderId' is set
+        if (request.folderId== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.folderId' when calling listEmailThreads");
         }
          // verify the required parameter 'request.firstAccount' is set
         if (request.firstAccount== null) {
@@ -3938,7 +3938,7 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folderId", request.folderId);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);

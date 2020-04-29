@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="MailAddress.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,6 +51,9 @@ public class MailAddress {
 
   @JsonProperty("participationStatus")
   private String participationStatus = null;
+
+  @JsonProperty("originalAddressString")
+  private String originalAddressString = null;
 
   /**
    * Set displayName and return this.
@@ -130,6 +133,32 @@ public class MailAddress {
     this.participationStatus = participationStatus;
   }
 
+  /**
+   * Set originalAddressString and return this.
+   * @param originalAddressString The original e-mail address string             
+   * @return this
+  **/
+  public MailAddress originalAddressString(String originalAddressString) {
+    this.originalAddressString = originalAddressString;
+    return this;
+  }
+
+  /**
+   * The original e-mail address string             
+   * @return originalAddressString
+  **/
+  public String getOriginalAddressString() {
+    return originalAddressString;
+  }  
+
+  /**
+   * Set originalAddressString.
+   * @param originalAddressString The original e-mail address string             
+  **/
+  public void setOriginalAddressString(String originalAddressString) {
+    this.originalAddressString = originalAddressString;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -142,12 +171,13 @@ public class MailAddress {
     MailAddress mailAddress = (MailAddress) o;
     return ObjectUtils.equals(this.displayName, mailAddress.displayName) &&
     ObjectUtils.equals(this.address, mailAddress.address) &&
-    ObjectUtils.equals(this.participationStatus, mailAddress.participationStatus);
+    ObjectUtils.equals(this.participationStatus, mailAddress.participationStatus) &&
+    ObjectUtils.equals(this.originalAddressString, mailAddress.originalAddressString);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(displayName, address, participationStatus);
+    return ObjectUtils.hashCodeMulti(displayName, address, participationStatus, originalAddressString);
   }
 
 
@@ -159,6 +189,7 @@ public class MailAddress {
     sb.append("    displayName: ").append(toIndentedString(getDisplayName())).append("\n");
     sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
     sb.append("    participationStatus: ").append(toIndentedString(getParticipationStatus())).append("\n");
+    sb.append("    originalAddressString: ").append(toIndentedString(getOriginalAddressString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -183,12 +214,14 @@ public class MailAddress {
    * @param displayName Display name             
    * @param address Address             
    * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * @param originalAddressString The original e-mail address string             
    */
-  public MailAddress(String displayName, String address, String participationStatus) {
+  public MailAddress(String displayName, String address, String participationStatus, String originalAddressString) {
     super();
     setDisplayName(displayName);
     setAddress(address);
     setParticipationStatus(participationStatus);
+    setOriginalAddressString(originalAddressString);
   }
 
 }
