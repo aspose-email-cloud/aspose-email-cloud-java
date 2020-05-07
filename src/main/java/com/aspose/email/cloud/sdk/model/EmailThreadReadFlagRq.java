@@ -46,8 +46,8 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   @JsonProperty("isRead")
   private Boolean isRead = null;
 
-  @JsonProperty("folderId")
-  private String folderId = null;
+  @JsonProperty("folder")
+  private String folder = null;
 
   /**
    * Set isRead and return this.
@@ -76,29 +76,29 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   }
 
   /**
-   * Set folderId and return this.
-   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * Set folder and return this.
+   * @param folder Specifies account folder to get thread from             
    * @return this
   **/
-  public EmailThreadReadFlagRq folderId(String folderId) {
-    this.folderId = folderId;
+  public EmailThreadReadFlagRq folder(String folder) {
+    this.folder = folder;
     return this;
   }
 
   /**
-   * Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
-   * @return folderId
+   * Specifies account folder to get thread from             
+   * @return folder
   **/
-  public String getFolderId() {
-    return folderId;
+  public String getFolder() {
+    return folder;
   }  
 
   /**
-   * Set folderId.
-   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * Set folder.
+   * @param folder Specifies account folder to get thread from             
   **/
-  public void setFolderId(String folderId) {
-    this.folderId = folderId;
+  public void setFolder(String folder) {
+    this.folder = folder;
   }
 
 
@@ -112,13 +112,13 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
   }
     EmailThreadReadFlagRq emailThreadReadFlagRq = (EmailThreadReadFlagRq) o;
     return ObjectUtils.equals(this.isRead, emailThreadReadFlagRq.isRead) &&
-    ObjectUtils.equals(this.folderId, emailThreadReadFlagRq.folderId) &&
+    ObjectUtils.equals(this.folder, emailThreadReadFlagRq.folder) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(isRead, folderId, super.hashCode());
+    return ObjectUtils.hashCodeMulti(isRead, folder, super.hashCode());
   }
 
 
@@ -131,7 +131,7 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("    isRead: ").append(toIndentedString(isIsRead())).append("\n");
-    sb.append("    folderId: ").append(toIndentedString(getFolderId())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -157,15 +157,15 @@ public class EmailThreadReadFlagRq extends AccountBaseRequest {
    * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param isRead Read flag to set. \&quot;true\&quot; by default             
-   * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+   * @param folder Specifies account folder to get thread from             
    */
-  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead, String folderId) {
+  public EmailThreadReadFlagRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Boolean isRead, String folder) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
     setIsRead(isRead);
-    setFolderId(folderId);
+    setFolder(folder);
   }
 
 }

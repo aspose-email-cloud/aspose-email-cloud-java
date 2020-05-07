@@ -1254,6 +1254,38 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="fetchEmailThreadMessages"></a>
+## **fetchEmailThreadMessages**
+> [ListResponseOfEmailDto](ListResponseOfEmailDto.md) fetchEmailThreadMessages(FetchEmailThreadMessagesRequestData request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### **FetchEmailThreadMessagesRequestData** Parameters
+```java
+public FetchEmailThreadMessagesRequestData(
+    String threadId, 
+    String firstAccount, 
+    String secondAccount, 
+    String folder, 
+    String storage, 
+    String storageFolder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread identifier |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Specifies account folder to get thread from              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendar"></a>
 ## **getCalendar**
 > [HierarchicalObject](HierarchicalObject.md) getCalendar(GetCalendarRequestData request)
@@ -1808,38 +1840,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
-<a name="getEmailThread"></a>
-## **getEmailThread**
-> [EmailThread](EmailThread.md) getEmailThread(GetEmailThreadRequestData request)
-
-Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-
-### **GetEmailThreadRequestData** Parameters
-```java
-public GetEmailThreadRequestData(
-    String threadId, 
-    String firstAccount, 
-    String secondAccount, 
-    String folderId, 
-    String storage, 
-    String storageFolder)
-```
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **threadId** | **String**| Thread identifier |
- **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
- **folderId** | **String**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional]
- **storage** | **String**| Storage name where account file(s) located | [optional]
- **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
-
-### Return type
-
-[**EmailThread**](EmailThread.md)
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
 <a name="getFileVersions"></a>
 ## **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
@@ -2129,7 +2129,7 @@ Get message threads from folder. All messages are partly fetched (without email 
 ### **ListEmailThreadsRequestData** Parameters
 ```java
 public ListEmailThreadsRequestData(
-    String folderId, 
+    String folder, 
     String firstAccount, 
     String secondAccount, 
     String storage, 
@@ -2140,7 +2140,7 @@ public ListEmailThreadsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folderId** | **String**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              |
+ **folder** | **String**| A folder in email account.              |
  **firstAccount** | **String**| Email account |
  **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]

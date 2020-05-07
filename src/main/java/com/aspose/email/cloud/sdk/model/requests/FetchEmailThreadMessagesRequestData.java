@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="GetEmailThreadRequestData.java">
+* <copyright company="Aspose" file="FetchEmailThreadMessagesRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,25 +30,25 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.getEmailThread request invocation.
+* Class that holds parameters for EmailApi.fetchEmailThreadMessages request invocation.
 **/   
-public class GetEmailThreadRequestData
+public class FetchEmailThreadMessagesRequestData
 {
     /**
-    * Initializes a new instance of the GetEmailThreadRequestData class.   
+    * Initializes a new instance of the FetchEmailThreadMessagesRequestData class.   
     * @param threadId Thread identifier
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
-    * @param folderId Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+    * @param folder Specifies account folder to get thread from             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     **/
-    public GetEmailThreadRequestData(String threadId, String firstAccount, String secondAccount, String folderId, String storage, String storageFolder)             
+    public FetchEmailThreadMessagesRequestData(String threadId, String firstAccount, String secondAccount, String folder, String storage, String storageFolder)             
     {
         this.threadId = threadId;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
-        this.folderId = folderId;
+        this.folder = folder;
         this.storage = storage;
         this.storageFolder = storageFolder;
     }
@@ -69,9 +69,9 @@ public class GetEmailThreadRequestData
     public String secondAccount;
 
     /**
-    * Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+    * Specifies account folder to get thread from             
     **/
-    public String folderId;
+    public String folder;
 
     /**
     * Storage name where account file(s) located

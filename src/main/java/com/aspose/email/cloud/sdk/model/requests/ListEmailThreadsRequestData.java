@@ -36,7 +36,7 @@ public class ListEmailThreadsRequestData
 {
     /**
     * Initializes a new instance of the ListEmailThreadsRequestData class.   
-    * @param folderId A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+    * @param folder A folder in email account.             
     * @param firstAccount Email account
     * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
@@ -44,9 +44,9 @@ public class ListEmailThreadsRequestData
     * @param updateFolderCache This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
     * @param messagesCacheLimit Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
     **/
-    public ListEmailThreadsRequestData(String folderId, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean updateFolderCache, Integer messagesCacheLimit)             
+    public ListEmailThreadsRequestData(String folder, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean updateFolderCache, Integer messagesCacheLimit)             
     {
-        this.folderId = folderId;
+        this.folder = folder;
         this.firstAccount = firstAccount;
         this.secondAccount = secondAccount;
         this.storage = storage;
@@ -56,9 +56,9 @@ public class ListEmailThreadsRequestData
     }
         
     /**
-    * A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
+    * A folder in email account.             
     **/
-    public String folderId;
+    public String folder;
 
     /**
     * Email account

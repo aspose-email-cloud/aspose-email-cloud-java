@@ -2442,6 +2442,58 @@ public class EmailApi
     }
   
     /**
+     * Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ListResponseOfEmailDto
+     * @throws ApiException 
+     */
+    public ListResponseOfEmailDto fetchEmailThreadMessages(FetchEmailThreadMessagesRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.threadId' is set
+        if (request.threadId== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling fetchEmailThreadMessages");
+        }
+         // verify the required parameter 'request.firstAccount' is set
+        if (request.firstAccount== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.firstAccount' when calling fetchEmailThreadMessages");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/threads/{threadId}/messages";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "threadId", request.threadId);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), ListResponseOfEmailDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Get calendar file properties             
      * 
      * @param request Holds parameters for this request invocation.
@@ -3399,58 +3451,6 @@ public class EmailApi
     }
   
     /**
-     * Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-     * 
-     * @param request Holds parameters for this request invocation.
-     * @return EmailThread
-     * @throws ApiException 
-     */
-    public EmailThread getEmailThread(GetEmailThreadRequestData request) throws ApiException 
-    {
-      try {
-         // verify the required parameter 'request.threadId' is set
-        if (request.threadId== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling getEmailThread");
-        }
-         // verify the required parameter 'request.firstAccount' is set
-        if (request.firstAccount== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.firstAccount' when calling getEmailThread");
-        }
-        // create path and map variables
-        String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/threads/{threadId}";
-        
-        HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "threadId", request.threadId);
-        
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folderId", request.folderId);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageFolder", request.storageFolder);
-        
-                
-        byte[] response = this.apiInvoker.invokeApi(
-            resourcePath, 
-            "GET", 
-            null, 
-            null, 
-            formParams);
-            
-        
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), EmailThread.class);
-      } catch(ApiException exception) {
-        throw exception;
-      } catch(Exception exception) {
-        throw new ApiException(400, exception.getMessage());
-      }
-    }
-  
-    /**
      * Get file versions
      * 
      * @param request Holds parameters for this request invocation.
@@ -3925,9 +3925,9 @@ public class EmailApi
     public EmailThreadList listEmailThreads(ListEmailThreadsRequestData request) throws ApiException 
     {
       try {
-         // verify the required parameter 'request.folderId' is set
-        if (request.folderId== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.folderId' when calling listEmailThreads");
+         // verify the required parameter 'request.folder' is set
+        if (request.folder== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling listEmailThreads");
         }
          // verify the required parameter 'request.firstAccount' is set
         if (request.firstAccount== null) {
@@ -3938,7 +3938,7 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folderId", request.folderId);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "firstAccount", request.firstAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "secondAccount", request.secondAccount);
         resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
