@@ -1,7 +1,7 @@
 package com.aspose.email.cloud.sdk.api;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -74,10 +74,10 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void fileTest() throws ApiException {
+    public void fileTest() throws ApiException, UnsupportedEncodingException {
         String file = createCalendar();
         byte[] fileBytes = api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
-        String calendarContent = new String(fileBytes, StandardCharsets.UTF_8);
+        String calendarContent = new String(fileBytes, "UTF-8");
         assert calendarContent.contains("organizer@am.ru");
         String uploadedName = UUID.randomUUID().toString() + ".ics";
         String path = folder + "/" + uploadedName;
@@ -188,7 +188,7 @@ public class EmailApiTests {
         ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
             new AiBcrParseStorageRq(
                 null,
-                Arrays.asList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
+                    Collections.singletonList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
                 new StorageFolderLocation(storage, outFolderPath))));
         // Check that only one file produced
         assert result.getValue().size() == 1;
@@ -199,7 +199,7 @@ public class EmailApiTests {
             contactFile.getFolderPath() + "/" + contactFile.getFileName(),
             contactFile.getStorage(),
             null));
-        String contactFileContent = new String(contactBytes, StandardCharsets.UTF_8);
+        String contactFileContent = new String(contactBytes, "UTF-8");
         assert contactFileContent.contains("Thomas");
         // 5) Get VCard object properties list, check that there are 3 properties or more
         HierarchicalObject contactProperties = api.getContactProperties(new GetContactPropertiesRequestData(
@@ -219,7 +219,7 @@ public class EmailApiTests {
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
         ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
-            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
+            new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
         assert result.getValue().size() == 1;
         PrimitiveObject displayName = null;
         for(BaseObject property: result.getValue().get(0).getInternalProperties()) {
@@ -233,7 +233,7 @@ public class EmailApiTests {
     }
 
     @Test(groups = { "pipeline" })
-    public void createCalendarEmailTest() throws ApiException {
+    public void createCalendarEmailTest() throws ApiException, UnsupportedEncodingException {
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
@@ -272,7 +272,7 @@ public class EmailApiTests {
 
         byte[] downloaded = api.downloadFile(
             new DownloadFileRequestData(folder + "/" + emailFile, storage, null));
-        String calendarContent = new String(downloaded, StandardCharsets.UTF_8);
+        String calendarContent = new String(downloaded, "UTF-8");
         assert calendarContent.contains("Some subject");
     }
 
@@ -304,7 +304,7 @@ public class EmailApiTests {
             this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
         ListResponseOfContactDto result = api.aiBcrParseModel(new AiBcrParseModelRequestData(
-            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
+            new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
         assert result.getValue().size() == 1;
         ContactDto firstVCard = result.getValue().get(0);
         assert firstVCard.getDisplayName().contains("Thomas");
@@ -316,8 +316,7 @@ public class EmailApiTests {
             new DiscoverEmailConfigRequestData("example@gmail.com", true));
         assert configList.getValue().size() >= 2;
         for (EmailAccountConfig config : configList.getValue()) {
-            if (config.getProtocolType().equals("SMTP"))
-                assert "smtp.gmail.com".equals(config.getHost());
+            assert !config.getProtocolType().equals("SMTP") || "smtp.gmail.com".equals(config.getHost());
         }
     }
 
@@ -395,7 +394,7 @@ public class EmailApiTests {
     @Test(groups = { "pipeline" })
     public void emailClientMultiAccountTest() throws ApiException {
         EmailClientMultiAccount multiAccount = new EmailClientMultiAccount(
-            Arrays.<EmailClientAccount>asList(
+            Arrays.asList(
                 new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP", 
                     new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"), null),
                 new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS", 
@@ -425,18 +424,18 @@ public class EmailApiTests {
         Calendar endDate =(Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
         api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest(
-            new HierarchicalObject("CALENDAR", null, Arrays.<BaseObject>asList(
+            new HierarchicalObject("CALENDAR", null, Arrays.asList(
                 new PrimitiveObject("LOCATION", null, "location"),
                 new PrimitiveObject("STARTDATE", null, dateFormat.format(startDate.getTime())),
                 new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
                 new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
                     new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
                     new PrimitiveObject("DISPLAYNAME", null, "Organizer Name"))),
-                new HierarchicalObject("ATTENDEES", null, Arrays.<BaseObject>asList(
-                    new IndexedHierarchicalObject(
-                        "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
-                            new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
-                            new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
+                new HierarchicalObject("ATTENDEES", null, Collections.<BaseObject>singletonList(
+                        new IndexedHierarchicalObject(
+                                "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
+                                new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
+                                new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
             new StorageFolderLocation(storage, folder))));
         return fileName;
     }
