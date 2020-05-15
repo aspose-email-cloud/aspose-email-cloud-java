@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertEmailRequestData.java">
+* <copyright company="Aspose" file="GetContactAsFileRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,29 +30,50 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertEmail request invocation.
+* Class that holds parameters for EmailApi.getContactAsFile request invocation.
 **/   
-public class ConvertEmailRequestData
+public class GetContactAsFileRequestData
 {
     /**
-    * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    * @param file File to convert
+    * Initializes a new instance of the GetContactAsFileRequestData class.   
+    * @param fileName Calendar document file name
+    * @param destinationFormat File format Enum, available values: VCard, WebDav, Msg
+    * @param format File format to convert from Enum, available values: VCard, WebDav, Msg
+    * @param storage Storage name
+    * @param folder Path to folder in storage
     **/
-    public ConvertEmailRequestData(String format, byte[] file)             
+    public GetContactAsFileRequestData(String fileName, String destinationFormat, String format, String storage, String folder)             
     {
+        this.fileName = fileName;
+        this.destinationFormat = destinationFormat;
         this.format = format;
-        this.File = file;
+        this.storage = storage;
+        this.folder = folder;
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * Calendar document file name
+    **/
+    public String fileName;
+
+    /**
+    * File format Enum, available values: VCard, WebDav, Msg
+    **/
+    public String destinationFormat;
+
+    /**
+    * File format to convert from Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 
     /**
-    * File to convert
+    * Storage name
     **/
-    public byte[] File;
+    public String storage;
+
+    /**
+    * Path to folder in storage
+    **/
+    public String folder;
 }
 

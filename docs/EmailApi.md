@@ -620,6 +620,30 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertCalendar"></a>
+## **convertCalendar**
+> [File](File.md) convertCalendar(ConvertCalendarRequestData request)
+
+Converts calendar document to specified format and returns as file             
+
+### **ConvertCalendarRequestData** Parameters
+```java
+public ConvertCalendarRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**File**](File.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertCalendarModelToAlternate"></a>
 ## **convertCalendarModelToAlternate**
 > [AlternateView](AlternateView.md) convertCalendarModelToAlternate(ConvertCalendarModelToAlternateRequestData request)
@@ -642,6 +666,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertCalendarModelToFile"></a>
+## **convertCalendarModelToFile**
+> byte[] convertCalendarModelToFile(ConvertCalendarModelToFileRequestData request)
+
+Converts calendar model to specified format and returns as file             
+
+### **ConvertCalendarModelToFileRequestData** Parameters
+```java
+public ConvertCalendarModelToFileRequestData(
+    String format, 
+    CalendarDto calendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **calendarDto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertContact"></a>
+## **convertContact**
+> [File](File.md) convertContact(ConvertContactRequestData request)
+
+Converts contact document to specified format and returns as file             
+
+### **ConvertContactRequestData** Parameters
+```java
+public ConvertContactRequestData(
+    String destinationFormat, 
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format to convert to Enum, available values: VCard, WebDav, Msg |
+ **format** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**File**](File.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertContactModelToFile"></a>
+## **convertContactModelToFile**
+> byte[] convertContactModelToFile(ConvertContactModelToFileRequestData request)
+
+Converts contact model to specified format and returns as file             
+
+### **ConvertContactModelToFileRequestData** Parameters
+```java
+public ConvertContactModelToFileRequestData(
+    String destinationFormat, 
+    ContactDto contactDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **contactDto** | [**ContactDto**](ContactDto.md)| Contact model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertEmail"></a>
 ## **convertEmail**
 > [File](File.md) convertEmail(ConvertEmailRequestData request)
@@ -658,7 +756,7 @@ public ConvertEmailRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
- **file** | **byte[]**| File to upload |
+ **file** | **byte[]**| File to convert |
 
 ### Return type
 
@@ -1312,6 +1410,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getCalendarAsFile"></a>
+## **getCalendarAsFile**
+> byte[] getCalendarAsFile(GetCalendarAsFileRequestData request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### **GetCalendarAsFileRequestData** Parameters
+```java
+public GetCalendarAsFileRequestData(
+    String fileName, 
+    String format, 
+    String storage, 
+    String folder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileName** | **String**| Calendar document file name |
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **storage** | **String**| Storage name | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendarAttachment"></a>
 ## **getCalendarAttachment**
 > byte[] getCalendarAttachment(GetCalendarAttachmentRequestData request)
@@ -1449,6 +1575,36 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CalendarDtoList**](CalendarDtoList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactAsFile"></a>
+## **getContactAsFile**
+> byte[] getContactAsFile(GetContactAsFileRequestData request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### **GetContactAsFileRequestData** Parameters
+```java
+public GetContactAsFileRequestData(
+    String fileName, 
+    String destinationFormat, 
+    String format, 
+    String storage, 
+    String folder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileName** | **String**| Calendar document file name |
+ **destinationFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **format** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
+ **storage** | **String**| Storage name | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+
+### Return type
+
+**byte[]**
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 

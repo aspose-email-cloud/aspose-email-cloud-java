@@ -1342,6 +1342,56 @@ public class EmailApi
     }
   
     /**
+     * Converts calendar document to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return File
+     * @throws ApiException 
+     */
+    public File convertCalendar(ConvertCalendarRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling convertCalendar");
+        }
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling convertCalendar");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/convert/{format}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        
+                if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), File.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Convert iCalendar to AlternateView             
      * 
      * @param request Holds parameters for this request invocation.
@@ -1379,6 +1429,151 @@ public class EmailApi
         }
         
         return SerializationHelper.deserialize(new String(response), AlternateView.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts calendar model to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] convertCalendarModelToFile(ConvertCalendarModelToFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling convertCalendarModelToFile");
+        }
+         // verify the required parameter 'request.calendarDto' is set
+        if (request.calendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.calendarDto' when calling convertCalendarModelToFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/model-as-file/{format}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.calendarDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts contact document to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return File
+     * @throws ApiException 
+     */
+    public File convertContact(ConvertContactRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling convertContact");
+        }
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling convertContact");
+        }
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling convertContact");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/ContactModel/{format}/convert/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        
+                if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), File.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts contact model to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] convertContactModelToFile(ConvertContactModelToFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling convertContactModelToFile");
+        }
+         // verify the required parameter 'request.contactDto' is set
+        if (request.contactDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.contactDto' when calling convertContactModelToFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/ContactModel/model-as-file/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.contactDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        return response;
+        
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -2539,6 +2734,51 @@ public class EmailApi
     }
   
     /**
+     * Converts calendar document from storage to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] getCalendarAsFile(GetCalendarAsFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.fileName' is set
+        if (request.fileName== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling getCalendarAsFile");
+        }
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getCalendarAsFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/{fileName}/as-file/{format}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "fileName", request.fileName);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Get iCalendar document attachment by name             
      * 
      * @param request Holds parameters for this request invocation.
@@ -2772,6 +3012,56 @@ public class EmailApi
         }
         
         return SerializationHelper.deserialize(new String(response), CalendarDtoList.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts calendar document from storage to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] getContactAsFile(GetContactAsFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.fileName' is set
+        if (request.fileName== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling getContactAsFile");
+        }
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling getContactAsFile");
+        }
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getContactAsFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/ContactModel/{format}/{fileName}/as-file/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "fileName", request.fileName);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        return response;
+        
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {

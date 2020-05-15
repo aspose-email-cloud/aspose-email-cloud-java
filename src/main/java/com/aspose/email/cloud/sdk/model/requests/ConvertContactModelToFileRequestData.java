@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertEmailRequestData.java">
+* <copyright company="Aspose" file="ConvertContactModelToFileRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,29 +30,29 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertEmail request invocation.
+* Class that holds parameters for EmailApi.convertContactModelToFile request invocation.
 **/   
-public class ConvertEmailRequestData
+public class ConvertContactModelToFileRequestData
 {
     /**
-    * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    * @param file File to convert
+    * Initializes a new instance of the ConvertContactModelToFileRequestData class.   
+    * @param destinationFormat File format Enum, available values: VCard, WebDav, Msg
+    * @param contactDto Contact model to convert
     **/
-    public ConvertEmailRequestData(String format, byte[] file)             
+    public ConvertContactModelToFileRequestData(String destinationFormat, ContactDto contactDto)             
     {
-        this.format = format;
-        this.File = file;
+        this.destinationFormat = destinationFormat;
+        this.contactDto = contactDto;
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: VCard, WebDav, Msg
     **/
-    public String format;
+    public String destinationFormat;
 
     /**
-    * File to convert
+    * Contact model to convert
     **/
-    public byte[] File;
+    public ContactDto contactDto;
 }
 

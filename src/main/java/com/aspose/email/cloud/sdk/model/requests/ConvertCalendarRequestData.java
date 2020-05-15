@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertEmailRequestData.java">
+* <copyright company="Aspose" file="ConvertCalendarRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,23 +30,23 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertEmail request invocation.
+* Class that holds parameters for EmailApi.convertCalendar request invocation.
 **/   
-public class ConvertEmailRequestData
+public class ConvertCalendarRequestData
 {
     /**
-    * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * Initializes a new instance of the ConvertCalendarRequestData class.   
+    * @param format File format Enum, available values: Ics, Msg
     * @param file File to convert
     **/
-    public ConvertEmailRequestData(String format, byte[] file)             
+    public ConvertCalendarRequestData(String format, byte[] file)             
     {
         this.format = format;
         this.File = file;
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Ics, Msg
     **/
     public String format;
 

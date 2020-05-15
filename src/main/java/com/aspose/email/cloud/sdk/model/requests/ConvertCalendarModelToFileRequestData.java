@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertEmailRequestData.java">
+* <copyright company="Aspose" file="ConvertCalendarModelToFileRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,29 +30,29 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertEmail request invocation.
+* Class that holds parameters for EmailApi.convertCalendarModelToFile request invocation.
 **/   
-public class ConvertEmailRequestData
+public class ConvertCalendarModelToFileRequestData
 {
     /**
-    * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    * @param file File to convert
+    * Initializes a new instance of the ConvertCalendarModelToFileRequestData class.   
+    * @param format File format Enum, available values: Ics, Msg
+    * @param calendarDto Calendar model to convert
     **/
-    public ConvertEmailRequestData(String format, byte[] file)             
+    public ConvertCalendarModelToFileRequestData(String format, CalendarDto calendarDto)             
     {
         this.format = format;
-        this.File = file;
+        this.calendarDto = calendarDto;
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Ics, Msg
     **/
     public String format;
 
     /**
-    * File to convert
+    * Calendar model to convert
     **/
-    public byte[] File;
+    public CalendarDto calendarDto;
 }
 

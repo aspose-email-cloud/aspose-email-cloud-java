@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertEmailRequestData.java">
+* <copyright company="Aspose" file="ConvertContactRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,23 +30,30 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertEmail request invocation.
+* Class that holds parameters for EmailApi.convertContact request invocation.
 **/   
-public class ConvertEmailRequestData
+public class ConvertContactRequestData
 {
     /**
-    * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * Initializes a new instance of the ConvertContactRequestData class.   
+    * @param destinationFormat File format to convert to Enum, available values: VCard, WebDav, Msg
+    * @param format File format to convert from Enum, available values: VCard, WebDav, Msg
     * @param file File to convert
     **/
-    public ConvertEmailRequestData(String format, byte[] file)             
+    public ConvertContactRequestData(String destinationFormat, String format, byte[] file)             
     {
+        this.destinationFormat = destinationFormat;
         this.format = format;
         this.File = file;
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format to convert to Enum, available values: VCard, WebDav, Msg
+    **/
+    public String destinationFormat;
+
+    /**
+    * File format to convert from Enum, available values: VCard, WebDav, Msg
     **/
     public String format;
 
