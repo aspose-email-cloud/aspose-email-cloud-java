@@ -414,6 +414,47 @@ public class EmailApiTests {
                 multiAccount.getSendAccount().getCredentials().getDiscriminator());
     }
 
+    @Test(groups = {"pipeline"})
+    public void ConvertCalendarTest() throws ApiException, UnsupportedEncodingException {
+        final String location = "Some location";
+        //Create DTO with specified location:
+        CalendarDto calendarDto = new CalendarDto()
+            .location(location)
+            .summary("Some summary")
+            .description("Some description")
+            .startDate(Calendar.getInstance().getTime())
+            .endDate(Calendar.getInstance().getTime())
+            .organizer(new MailAddress().address("organizer@aspose.com"))
+            .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")));
+        //We can convert this DTO to a MAPI or ICS file:
+        byte[] mapiBytes = api.convertCalendarModelToFile(
+            new ConvertCalendarModelToFileRequestData(
+                "Msg", calendarDto));
+        /*
+        // mapiBytes can be saved as a calendar.msg file:
+        try (FileOutputStream stream = new FileOutputStream("calendar.msg")){
+            stream.write(mapiBytes);
+        }
+         */
+
+        //Let's convert this bytes to an ICS file:
+        byte[] icsBytes = api.convertCalendar(new ConvertCalendarRequestData("Ics", mapiBytes));
+        /*
+        //icsBytes can be saved as a calendar.ics file:
+        try (FileOutputStream stream = new FileOutputStream("calendar.ics")){
+            stream.write(icsBytes);
+        }
+        */
+        //ICS is a text format. We can convert icsBytes to a string and check that it
+        //contains specified location as a substring:
+        String calendarContent = new String(icsBytes, "UTF-8");
+        assert calendarContent.contains(location);
+        //We can also convert file bytes back to a CalendarDto
+        CalendarDto dto = api.getCalendarFileAsModel(
+            new GetCalendarFileAsModelRequestData(icsBytes));
+        assert location.equals(dto.getLocation());
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
