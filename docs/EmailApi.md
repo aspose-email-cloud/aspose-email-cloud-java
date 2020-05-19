@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 <a name="convertCalendar"></a>
 ## **convertCalendar**
-> [File](File.md) convertCalendar(ConvertCalendarRequestData request)
+> byte[] convertCalendar(ConvertCalendarRequestData request)
 
 Converts calendar document to specified format and returns as file             
 
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**byte[]**
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 
 <a name="convertContact"></a>
 ## **convertContact**
-> [File](File.md) convertContact(ConvertContactRequestData request)
+> byte[] convertContact(ConvertContactRequestData request)
 
 Converts contact document to specified format and returns as file             
 
@@ -712,7 +712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**byte[]**
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -742,7 +742,7 @@ Name | Type | Description  | Notes
 
 <a name="convertEmail"></a>
 ## **convertEmail**
-> [File](File.md) convertEmail(ConvertEmailRequestData request)
+> byte[] convertEmail(ConvertEmailRequestData request)
 
 Converts email document to specified format and returns as file             
 
@@ -760,7 +760,31 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertEmailModelToFile"></a>
+## **convertEmailModelToFile**
+> byte[] convertEmailModelToFile(ConvertEmailModelToFileRequestData request)
+
+Converts Email model to specified format and returns as file             
+
+### **ConvertEmailModelToFileRequestData** Parameters
+```java
+public ConvertEmailModelToFileRequestData(
+    String destinationFormat, 
+    EmailDto emailDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **emailDto** | [**EmailDto**](EmailDto.md)| Email model to convert |
+
+### Return type
+
+**byte[]**
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1466,6 +1490,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getCalendarFileAsModel"></a>
+## **getCalendarFileAsModel**
+> [CalendarDto](CalendarDto.md) getCalendarFileAsModel(GetCalendarFileAsModelRequestData request)
+
+Converts calendar document to a model representation             
+
+### **GetCalendarFileAsModelRequestData** Parameters
+```java
+public GetCalendarFileAsModelRequestData(
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendarList"></a>
 ## **getCalendarList**
 > [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getCalendarList(GetCalendarListRequestData request)
@@ -1635,6 +1681,30 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactFileAsModel"></a>
+## **getContactFileAsModel**
+> [ContactDto](ContactDto.md) getContactFileAsModel(GetContactFileAsModelRequestData request)
+
+Converts contact document to a model representation             
+
+### **GetContactFileAsModelRequestData** Parameters
+```java
+public GetContactFileAsModelRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1907,6 +1977,30 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getEmailFileAsModel"></a>
+## **getEmailFileAsModel**
+> [EmailDto](EmailDto.md) getEmailFileAsModel(GetEmailFileAsModelRequestData request)
+
+Converts email document to a model representation             
+
+### **GetEmailFileAsModelRequestData** Parameters
+```java
+public GetEmailFileAsModelRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
