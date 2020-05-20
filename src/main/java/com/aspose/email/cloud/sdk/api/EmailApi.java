@@ -3728,19 +3728,14 @@ public class EmailApi
     public EmailDto getEmailFileAsModel(GetEmailFileAsModelRequestData request) throws ApiException 
     {
       try {
-         // verify the required parameter 'request.format' is set
-        if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getEmailFileAsModel");
-        }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling getEmailFileAsModel");
         }
         // create path and map variables
-        String resourcePath = this.Configuration.getApiRootUrl() + "/email/model/{format}/file-as-model";
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/model/file-as-model";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
         
         
                 if (request.File != null) 

@@ -36,20 +36,13 @@ public class GetEmailFileAsModelRequestData
 {
     /**
     * Initializes a new instance of the GetEmailFileAsModelRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
     * @param file File to convert
     **/
-    public GetEmailFileAsModelRequestData(String format, byte[] file)             
+    public GetEmailFileAsModelRequestData(byte[] file)             
     {
-        this.format = format;
         this.File = file;
     }
         
-    /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    **/
-    public String format;
-
     /**
     * File to convert
     **/

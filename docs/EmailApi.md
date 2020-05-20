@@ -1989,13 +1989,11 @@ Converts email document to a model representation
 ### **GetEmailFileAsModelRequestData** Parameters
 ```java
 public GetEmailFileAsModelRequestData(
-    String format, 
     byte[] file)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
  **file** | **byte[]**| File to convert |
 
 ### Return type
