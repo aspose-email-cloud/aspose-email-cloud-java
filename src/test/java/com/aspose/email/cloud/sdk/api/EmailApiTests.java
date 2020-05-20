@@ -455,6 +455,46 @@ public class EmailApiTests {
         assert location.equals(dto.getLocation());
     }
 
+    @Test(groups = {"pipeline"})
+    public void ConvertContactTest() throws ApiException, UnsupportedEncodingException {
+        final String surname = "Cane";
+        ContactDto contactDto = new ContactDto()
+            .surname(surname)
+            .givenName("John")
+            .gender("Male")
+            .emailAddresses(Collections.singletonList(new EmailAddress().address("address@aspose.com")))
+            .phoneNumbers(Collections.singletonList(new PhoneNumber().number("+472343234542342")));
+        byte[] mapiBytes = api.convertContactModelToFile(
+            new ConvertContactModelToFileRequestData(
+                "Msg", contactDto));
+        byte[] vcardBytes = api.convertContact(new ConvertContactRequestData("VCard", "Msg", mapiBytes));
+        String contactContent = new String(vcardBytes, "UTF-8");
+        assert contactContent.contains(surname);
+        ContactDto dto = api.getContactFileAsModel(
+            new GetContactFileAsModelRequestData("VCard", vcardBytes));
+        assert surname.equals(dto.getSurname());
+    }
+
+    @Test(groups = {"pipeline"})
+    public void ConvertEmailTest() throws ApiException, UnsupportedEncodingException {
+        final String from = "from@aspose.com";
+        EmailDto emailDto = new EmailDto()
+            .from(new MailAddress().address(from))
+            .to(Collections.singletonList(new MailAddress().address("to@aspose.com")))
+            .subject("Some subject")
+            .body("Some body")
+            .date(new Date());
+        byte[] mapiBytes = api.convertEmailModelToFile(
+            new ConvertEmailModelToFileRequestData(
+                "Msg", emailDto));
+        byte[] emlBytes = api.convertEmail(new ConvertEmailRequestData("Eml", mapiBytes));
+        String emlContent = new String(emlBytes, "UTF-8");
+        assert emlContent.contains(from);
+        EmailDto dto = api.getEmailFileAsModel(
+            new GetEmailFileAsModelRequestData(emlBytes));
+        assert from.equals(dto.getFrom().getAddress());
+    }
+
     private String createCalendar() throws ApiException {
         Calendar startDate = Calendar.getInstance();
         return createCalendar(startDate);
