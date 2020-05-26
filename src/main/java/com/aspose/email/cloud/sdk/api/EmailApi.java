@@ -1662,7 +1662,7 @@ public class EmailApi
     }
   
     /**
-     * Copy file
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -1705,7 +1705,7 @@ public class EmailApi
     }
   
     /**
-     * Copy folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -1923,7 +1923,7 @@ public class EmailApi
     }
   
     /**
-     * Create the folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -2226,7 +2226,7 @@ public class EmailApi
     }
   
     /**
-     * Delete file
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -2263,7 +2263,7 @@ public class EmailApi
     }
   
     /**
-     * Delete folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -2523,7 +2523,7 @@ public class EmailApi
     }
   
     /**
-     * Download file
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return byte[]
@@ -3439,7 +3439,7 @@ public class EmailApi
     }
   
     /**
-     * Get disc usage
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return DiscUsage
@@ -3911,7 +3911,7 @@ public class EmailApi
     }
   
     /**
-     * Get file versions
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return FileVersions
@@ -3955,7 +3955,7 @@ public class EmailApi
     }
   
     /**
-     * Get all files and folders within a folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return FilesList
@@ -4508,7 +4508,7 @@ public class EmailApi
     }
   
     /**
-     * Move file
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -4551,7 +4551,7 @@ public class EmailApi
     }
   
     /**
-     * Move folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -4593,7 +4593,7 @@ public class EmailApi
     }
   
     /**
-     * Check if file or folder exists
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return ObjectExist
@@ -5167,7 +5167,7 @@ public class EmailApi
     }
   
     /**
-     * Check if storage exists
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return StorageExist
@@ -5341,7 +5341,7 @@ public class EmailApi
     }
   
     /**
-     * Upload file
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return FilesUploadResult

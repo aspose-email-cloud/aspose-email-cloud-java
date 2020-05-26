@@ -36,7 +36,7 @@ public class StorageExistsRequestData
 {
     /**
     * Initializes a new instance of the StorageExistsRequestData class.   
-    * @param storageName Storage name
+    * @param storageName 
     **/
     public StorageExistsRequestData(String storageName)             
     {
@@ -44,7 +44,7 @@ public class StorageExistsRequestData
     }
         
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 }

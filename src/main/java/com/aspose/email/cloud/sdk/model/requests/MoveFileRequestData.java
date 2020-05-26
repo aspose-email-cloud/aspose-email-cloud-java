@@ -36,11 +36,11 @@ public class MoveFileRequestData
 {
     /**
     * Initializes a new instance of the MoveFileRequestData class.   
-    * @param srcPath Source file path e.g. &#39;/src.ext&#39;
-    * @param destPath Destination file path e.g. &#39;/dest.ext&#39;
-    * @param srcStorageName Source storage name
-    * @param destStorageName Destination storage name
-    * @param versionId File version ID to move
+    * @param srcPath 
+    * @param destPath 
+    * @param srcStorageName 
+    * @param destStorageName 
+    * @param versionId 
     **/
     public MoveFileRequestData(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
@@ -52,27 +52,27 @@ public class MoveFileRequestData
     }
         
     /**
-    * Source file path e.g. '/src.ext'
+    * Gets or sets srcPath
     **/
     public String srcPath;
 
     /**
-    * Destination file path e.g. '/dest.ext'
+    * Gets or sets destPath
     **/
     public String destPath;
 
     /**
-    * Source storage name
+    * Gets or sets srcStorageName
     **/
     public String srcStorageName;
 
     /**
-    * Destination storage name
+    * Gets or sets destStorageName
     **/
     public String destStorageName;
 
     /**
-    * File version ID to move
+    * Gets or sets versionId
     **/
     public String versionId;
 }

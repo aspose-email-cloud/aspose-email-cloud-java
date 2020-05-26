@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 ## **copyFile**
 > void copyFile(CopyFileRequestData request)
 
-Copy file
+
 
 ### **CopyFileRequestData** Parameters
 ```java
@@ -806,11 +806,11 @@ public CopyFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source file path e.g. &#39;/folder/file.ext&#39; |
- **destPath** | **String**| Destination file path |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to copy | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -822,7 +822,7 @@ void (empty response body)
 ## **copyFolder**
 > void copyFolder(CopyFolderRequestData request)
 
-Copy folder
+
 
 ### **CopyFolderRequestData** Parameters
 ```java
@@ -835,10 +835,10 @@ public CopyFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source folder path e.g. &#39;/src&#39; |
- **destPath** | **String**| Destination folder path e.g. &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -946,7 +946,7 @@ void (empty response body)
 ## **createFolder**
 > void createFolder(CreateFolderRequestData request)
 
-Create the folder
+
 
 ### **CreateFolderRequestData** Parameters
 ```java
@@ -957,8 +957,8 @@ public CreateFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -1120,7 +1120,7 @@ void (empty response body)
 ## **deleteFile**
 > void deleteFile(DeleteFileRequestData request)
 
-Delete file
+
 
 ### **DeleteFileRequestData** Parameters
 ```java
@@ -1132,9 +1132,9 @@ public DeleteFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to delete | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -1146,7 +1146,7 @@ void (empty response body)
 ## **deleteFolder**
 > void deleteFolder(DeleteFolderRequestData request)
 
-Delete folder
+
 
 ### **DeleteFolderRequestData** Parameters
 ```java
@@ -1158,9 +1158,9 @@ public DeleteFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **recursive** | **Boolean**| Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **recursive** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1290,7 +1290,7 @@ Name | Type | Description  | Notes
 ## **downloadFile**
 > byte[] downloadFile(DownloadFileRequestData request)
 
-Download file
+
 
 ### **DownloadFileRequestData** Parameters
 ```java
@@ -1302,9 +1302,9 @@ public DownloadFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to download | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -1828,7 +1828,7 @@ Name | Type | Description  | Notes
 ## **getDiscUsage**
 > [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequestData request)
 
-Get disc usage
+
 
 ### **GetDiscUsageRequestData** Parameters
 ```java
@@ -1838,7 +1838,7 @@ public GetDiscUsageRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storageName** | **String**| Storage name | [optional]
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -2092,7 +2092,7 @@ Name | Type | Description  | Notes
 ## **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
 
-Get file versions
+
 
 ### **GetFileVersionsRequestData** Parameters
 ```java
@@ -2103,8 +2103,8 @@ public GetFileVersionsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -2116,7 +2116,7 @@ Name | Type | Description  | Notes
 ## **getFilesList**
 > [FilesList](FilesList.md) getFilesList(GetFilesListRequestData request)
 
-Get all files and folders within a folder
+
 
 ### **GetFilesListRequestData** Parameters
 ```java
@@ -2127,8 +2127,8 @@ public GetFilesListRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -2452,7 +2452,7 @@ void (empty response body)
 ## **moveFile**
 > void moveFile(MoveFileRequestData request)
 
-Move file
+
 
 ### **MoveFileRequestData** Parameters
 ```java
@@ -2466,11 +2466,11 @@ public MoveFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source file path e.g. &#39;/src.ext&#39; |
- **destPath** | **String**| Destination file path e.g. &#39;/dest.ext&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to move | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -2482,7 +2482,7 @@ void (empty response body)
 ## **moveFolder**
 > void moveFolder(MoveFolderRequestData request)
 
-Move folder
+
 
 ### **MoveFolderRequestData** Parameters
 ```java
@@ -2495,10 +2495,10 @@ public MoveFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Folder path to move e.g. &#39;/folder&#39; |
- **destPath** | **String**| Destination folder path to move to e.g &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -2510,7 +2510,7 @@ void (empty response body)
 ## **objectExists**
 > [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequestData request)
 
-Check if file or folder exists
+
 
 ### **ObjectExistsRequestData** Parameters
 ```java
@@ -2522,9 +2522,9 @@ public ObjectExistsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -2838,7 +2838,7 @@ void (empty response body)
 ## **storageExists**
 > [StorageExist](StorageExist.md) storageExists(StorageExistsRequestData request)
 
-Check if storage exists
+
 
 ### **StorageExistsRequestData** Parameters
 ```java
@@ -2848,7 +2848,7 @@ public StorageExistsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storageName** | **String**| Storage name |
+ **storageName** | **String**|  |
 
 ### Return type
 
@@ -2934,7 +2934,7 @@ void (empty response body)
 ## **uploadFile**
 > [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequestData request)
 
-Upload file
+
 
 ### **UploadFileRequestData** Parameters
 ```java
@@ -2946,9 +2946,9 @@ public UploadFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              |
+ **path** | **String**|  |
  **file** | **byte[]**| File to upload |
- **storageName** | **String**| Storage name | [optional]
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 

@@ -36,10 +36,10 @@ public class CopyFolderRequestData
 {
     /**
     * Initializes a new instance of the CopyFolderRequestData class.   
-    * @param srcPath Source folder path e.g. &#39;/src&#39;
-    * @param destPath Destination folder path e.g. &#39;/dst&#39;
-    * @param srcStorageName Source storage name
-    * @param destStorageName Destination storage name
+    * @param srcPath 
+    * @param destPath 
+    * @param srcStorageName 
+    * @param destStorageName 
     **/
     public CopyFolderRequestData(String srcPath, String destPath, String srcStorageName, String destStorageName)             
     {
@@ -50,22 +50,22 @@ public class CopyFolderRequestData
     }
         
     /**
-    * Source folder path e.g. '/src'
+    * Gets or sets srcPath
     **/
     public String srcPath;
 
     /**
-    * Destination folder path e.g. '/dst'
+    * Gets or sets destPath
     **/
     public String destPath;
 
     /**
-    * Source storage name
+    * Gets or sets srcStorageName
     **/
     public String srcStorageName;
 
     /**
-    * Destination storage name
+    * Gets or sets destStorageName
     **/
     public String destStorageName;
 }

@@ -36,8 +36,8 @@ public class GetFileVersionsRequestData
 {
     /**
     * Initializes a new instance of the GetFileVersionsRequestData class.   
-    * @param path File path e.g. &#39;/file.ext&#39;
-    * @param storageName Storage name
+    * @param path 
+    * @param storageName 
     **/
     public GetFileVersionsRequestData(String path, String storageName)             
     {
@@ -46,12 +46,12 @@ public class GetFileVersionsRequestData
     }
         
     /**
-    * File path e.g. '/file.ext'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 }

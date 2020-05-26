@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class SendEmailBaseRequest extends AccountBaseRequest {
   @JsonProperty("emailFile")
-  private StorageFileLocation emailFile = null;
+  private Object emailFile = null;
 
   /**
    * Set emailFile and return this.
    * @param emailFile Email document (*.eml) file location in storage             
    * @return this
   **/
-  public SendEmailBaseRequest emailFile(StorageFileLocation emailFile) {
+  public SendEmailBaseRequest emailFile(Object emailFile) {
     this.emailFile = emailFile;
     return this;
   }
@@ -60,7 +60,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
    * Email document (*.eml) file location in storage             
    * @return emailFile
   **/
-  public StorageFileLocation getEmailFile() {
+  public Object getEmailFile() {
     return emailFile;
   }  
 
@@ -68,7 +68,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
    * Set emailFile.
    * @param emailFile Email document (*.eml) file location in storage             
   **/
-  public void setEmailFile(StorageFileLocation emailFile) {
+  public void setEmailFile(Object emailFile) {
     this.emailFile = emailFile;
   }
 
@@ -127,7 +127,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
    * @param storageFolder Storage folder location of account files             
    * @param emailFile Email document (*.eml) file location in storage             
    */
-  public SendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, StorageFileLocation emailFile) {
+  public SendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Object emailFile) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

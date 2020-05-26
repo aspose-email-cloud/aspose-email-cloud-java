@@ -36,8 +36,8 @@ public class GetFilesListRequestData
 {
     /**
     * Initializes a new instance of the GetFilesListRequestData class.   
-    * @param path Folder path e.g. &#39;/folder&#39;
-    * @param storageName Storage name
+    * @param path 
+    * @param storageName 
     **/
     public GetFilesListRequestData(String path, String storageName)             
     {
@@ -46,12 +46,12 @@ public class GetFilesListRequestData
     }
         
     /**
-    * Folder path e.g. '/folder'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 }

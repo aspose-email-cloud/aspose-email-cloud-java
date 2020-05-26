@@ -36,7 +36,7 @@ public class GetDiscUsageRequestData
 {
     /**
     * Initializes a new instance of the GetDiscUsageRequestData class.   
-    * @param storageName Storage name
+    * @param storageName 
     **/
     public GetDiscUsageRequestData(String storageName)             
     {
@@ -44,7 +44,7 @@ public class GetDiscUsageRequestData
     }
         
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 }

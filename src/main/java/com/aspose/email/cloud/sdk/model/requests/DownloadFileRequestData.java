@@ -36,9 +36,9 @@ public class DownloadFileRequestData
 {
     /**
     * Initializes a new instance of the DownloadFileRequestData class.   
-    * @param path File path e.g. &#39;/folder/file.ext&#39;
-    * @param storageName Storage name
-    * @param versionId File version ID to download
+    * @param path 
+    * @param storageName 
+    * @param versionId 
     **/
     public DownloadFileRequestData(String path, String storageName, String versionId)             
     {
@@ -48,17 +48,17 @@ public class DownloadFileRequestData
     }
         
     /**
-    * File path e.g. '/folder/file.ext'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 
     /**
-    * File version ID to download
+    * Gets or sets versionId
     **/
     public String versionId;
 }

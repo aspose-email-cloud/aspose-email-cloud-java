@@ -36,9 +36,9 @@ public class DeleteFolderRequestData
 {
     /**
     * Initializes a new instance of the DeleteFolderRequestData class.   
-    * @param path Folder path e.g. &#39;/folder&#39;
-    * @param storageName Storage name
-    * @param recursive Enable to delete folders, subfolders and files
+    * @param path 
+    * @param storageName 
+    * @param recursive 
     **/
     public DeleteFolderRequestData(String path, String storageName, Boolean recursive)             
     {
@@ -48,17 +48,17 @@ public class DeleteFolderRequestData
     }
         
     /**
-    * Folder path e.g. '/folder'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 
     /**
-    * Enable to delete folders, subfolders and files
+    * Gets or sets recursive
     **/
     public Boolean recursive;
 }

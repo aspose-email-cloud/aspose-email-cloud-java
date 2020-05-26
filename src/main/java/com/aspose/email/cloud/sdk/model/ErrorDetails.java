@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * The error details
+ * ErrorDetails
  */
 public class ErrorDetails {
   @JsonProperty("requestId")
@@ -51,7 +51,7 @@ public class ErrorDetails {
 
   /**
    * Set requestId and return this.
-   * @param requestId The request id
+   * @param requestId 
    * @return this
   **/
   public ErrorDetails requestId(String requestId) {
@@ -60,7 +60,7 @@ public class ErrorDetails {
   }
 
   /**
-   * The request id
+   * Get requestId
    * @return requestId
   **/
   public String getRequestId() {
@@ -69,7 +69,7 @@ public class ErrorDetails {
 
   /**
    * Set requestId.
-   * @param requestId The request id
+   * @param requestId 
   **/
   public void setRequestId(String requestId) {
     this.requestId = requestId;
@@ -77,7 +77,7 @@ public class ErrorDetails {
 
   /**
    * Set date and return this.
-   * @param date Date
+   * @param date 
    * @return this
   **/
   public ErrorDetails date(Date date) {
@@ -86,7 +86,7 @@ public class ErrorDetails {
   }
 
   /**
-   * Date
+   * Get date
    * @return date
   **/
   public Date getDate() {
@@ -95,7 +95,7 @@ public class ErrorDetails {
 
   /**
    * Set date.
-   * @param date Date
+   * @param date 
   **/
   public void setDate(Date date) {
     this.date = date;
@@ -149,8 +149,8 @@ public class ErrorDetails {
 
   /**
    * Initializes a new instance of the ErrorDetails
-   * @param requestId The request id
-   * @param date Date
+   * @param requestId 
+   * @param date 
    */
   public ErrorDetails(String requestId, Date date) {
     super();

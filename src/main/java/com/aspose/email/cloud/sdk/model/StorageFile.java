@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * File or folder information
+ * StorageFile
  */
 public class StorageFile {
   @JsonProperty("name")
@@ -60,7 +60,7 @@ public class StorageFile {
 
   /**
    * Set name and return this.
-   * @param name File or folder name.
+   * @param name 
    * @return this
   **/
   public StorageFile name(String name) {
@@ -69,7 +69,7 @@ public class StorageFile {
   }
 
   /**
-   * File or folder name.
+   * Get name
    * @return name
   **/
   public String getName() {
@@ -78,7 +78,7 @@ public class StorageFile {
 
   /**
    * Set name.
-   * @param name File or folder name.
+   * @param name 
   **/
   public void setName(String name) {
     this.name = name;
@@ -86,7 +86,7 @@ public class StorageFile {
 
   /**
    * Set isFolder and return this.
-   * @param isFolder True if it is a folder.
+   * @param isFolder 
    * @return this
   **/
   public StorageFile isFolder(Boolean isFolder) {
@@ -95,7 +95,7 @@ public class StorageFile {
   }
 
   /**
-   * True if it is a folder.
+   * Get isFolder
    * @return isFolder
   **/
   public Boolean isIsFolder() {
@@ -104,7 +104,7 @@ public class StorageFile {
 
   /**
    * Set isFolder.
-   * @param isFolder True if it is a folder.
+   * @param isFolder 
   **/
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
@@ -112,7 +112,7 @@ public class StorageFile {
 
   /**
    * Set modifiedDate and return this.
-   * @param modifiedDate File or folder last modified DateTime.
+   * @param modifiedDate 
    * @return this
   **/
   public StorageFile modifiedDate(Date modifiedDate) {
@@ -121,7 +121,7 @@ public class StorageFile {
   }
 
   /**
-   * File or folder last modified DateTime.
+   * Get modifiedDate
    * @return modifiedDate
   **/
   public Date getModifiedDate() {
@@ -130,7 +130,7 @@ public class StorageFile {
 
   /**
    * Set modifiedDate.
-   * @param modifiedDate File or folder last modified DateTime.
+   * @param modifiedDate 
   **/
   public void setModifiedDate(Date modifiedDate) {
     this.modifiedDate = modifiedDate;
@@ -138,7 +138,7 @@ public class StorageFile {
 
   /**
    * Set size and return this.
-   * @param size File or folder size.
+   * @param size 
    * @return this
   **/
   public StorageFile size(Long size) {
@@ -147,7 +147,7 @@ public class StorageFile {
   }
 
   /**
-   * File or folder size.
+   * Get size
    * @return size
   **/
   public Long getSize() {
@@ -156,7 +156,7 @@ public class StorageFile {
 
   /**
    * Set size.
-   * @param size File or folder size.
+   * @param size 
   **/
   public void setSize(Long size) {
     this.size = size;
@@ -164,7 +164,7 @@ public class StorageFile {
 
   /**
    * Set path and return this.
-   * @param path File or folder path.
+   * @param path 
    * @return this
   **/
   public StorageFile path(String path) {
@@ -173,7 +173,7 @@ public class StorageFile {
   }
 
   /**
-   * File or folder path.
+   * Get path
    * @return path
   **/
   public String getPath() {
@@ -182,7 +182,7 @@ public class StorageFile {
 
   /**
    * Set path.
-   * @param path File or folder path.
+   * @param path 
   **/
   public void setPath(String path) {
     this.path = path;
@@ -242,11 +242,11 @@ public class StorageFile {
 
   /**
    * Initializes a new instance of the StorageFile
-   * @param name File or folder name.
-   * @param isFolder True if it is a folder.
-   * @param modifiedDate File or folder last modified DateTime.
-   * @param size File or folder size.
-   * @param path File or folder path.
+   * @param name 
+   * @param isFolder 
+   * @param modifiedDate 
+   * @param size 
+   * @param path 
    */
   public StorageFile(String name, Boolean isFolder, Date modifiedDate, Long size, String path) {
     super();
