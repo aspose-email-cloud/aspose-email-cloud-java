@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **messageId** | **String** | Message identifier              | 
+**folder** | **String** | Account folder where message located. Should be specified for some accounts              |  [optional]
 **deletePermanently** | **Boolean** | Specifies that message should be deleted permanently              | 
 
 

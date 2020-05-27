@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="ListEmailModelsRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,18 +37,18 @@ public class ListEmailModelsRequestData
     /**
     * Initializes a new instance of the ListEmailModelsRequestData class.   
     * @param folder A folder in email account
-    * @param queryString A MailQuery search string
     * @param firstAccount Email account
-    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * @param queryString A MailQuery search string
+    * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     * @param recursive Specifies that should message be searched in subfolders recursively
     **/
-    public ListEmailModelsRequestData(String folder, String queryString, String firstAccount, String secondAccount, String storage, String storageFolder, Boolean recursive)             
+    public ListEmailModelsRequestData(String folder, String firstAccount, String queryString, String secondAccount, String storage, String storageFolder, Boolean recursive)             
     {
         this.folder = folder;
-        this.queryString = queryString;
         this.firstAccount = firstAccount;
+        this.queryString = queryString;
         this.secondAccount = secondAccount;
         this.storage = storage;
         this.storageFolder = storageFolder;
@@ -61,17 +61,17 @@ public class ListEmailModelsRequestData
     public String folder;
 
     /**
-    * A MailQuery search string
-    **/
-    public String queryString;
-
-    /**
     * Email account
     **/
     public String firstAccount;
 
     /**
-    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * A MailQuery search string
+    **/
+    public String queryString;
+
+    /**
+    * Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     **/
     public String secondAccount;
 

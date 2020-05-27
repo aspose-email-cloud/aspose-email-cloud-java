@@ -1,7 +1,7 @@
 package com.aspose.email.cloud.sdk.api;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -25,12 +25,12 @@ public class EmailApiTests {
     @BeforeClass(alwaysRun = true)
     public void oneTimeSetUp() throws ApiException {
         api = new EmailApi(
-            System.getenv("appKey"),
-            System.getenv("appSid"),
-            System.getenv("apiBaseUrl"),
-            "v3.0",
-            false,
-            System.getenv("authUrl"));
+                System.getenv("appKey"),
+                System.getenv("appSid"),
+                System.getenv("apiBaseUrl"),
+                "v3.0",
+                false,
+                System.getenv("authUrl"));
         folder = UUID.randomUUID().toString();
         api.createFolder(new CreateFolderRequestData(folder, storage));
     }
@@ -40,7 +40,7 @@ public class EmailApiTests {
         api.deleteFolder(new DeleteFolderRequestData(folder, storage, true));
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void hierarchicalTest() throws ApiException {
         String fileName = createCalendar();
         HierarchicalObject calendar = api.getCalendar(new GetCalendarRequestData(fileName, folder, storage));
@@ -55,7 +55,7 @@ public class EmailApiTests {
         assert first.getValue() != null;
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void dateTest() throws ApiException, ParseException {
         Calendar startDate = Calendar.getInstance();
         startDate.set(Calendar.MILLISECOND, 0);
@@ -73,11 +73,11 @@ public class EmailApiTests {
         assert DateUtils.truncatedEquals(startDate, factStartDate, Calendar.SECOND);
     }
 
-    @Test(groups = { "pipeline" })
-    public void fileTest() throws ApiException {
+    @Test(groups = {"pipeline"})
+    public void fileTest() throws ApiException, UnsupportedEncodingException {
         String file = createCalendar();
         byte[] fileBytes = api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
-        String calendarContent = new String(fileBytes, StandardCharsets.UTF_8);
+        String calendarContent = new String(fileBytes, "UTF-8");
         assert calendarContent.contains("organizer@am.ru");
         String uploadedName = UUID.randomUUID().toString() + ".ics";
         String path = folder + "/" + uploadedName;
@@ -86,9 +86,9 @@ public class EmailApiTests {
         assert exist.isExists();
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void contactFormatTest() throws ApiException {
-        String[] formats = { "vcard", "msg" };
+        String[] formats = {"vcard", "msg"};
         for (String format : formats) {
             String extension = format.equals("vcard") ? ".vcf" : ".msg";
             String fileName = UUID.randomUUID().toString() + extension;
@@ -101,7 +101,7 @@ public class EmailApiTests {
         }
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameGenderizeTest() throws ApiException {
         ListResponseOfAiNameGenderHypothesis result = api
                 .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
@@ -109,14 +109,14 @@ public class EmailApiTests {
         assert result.getValue().get(0).getGender().equals("Male");
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameFormatTest() throws ApiException {
         AiNameFormatted result = api.aiNameFormat(
                 new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
         assert result.getName().equals("Mr. Cane J. M.");
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameMatchTest() throws ApiException {
         final String first = "John Michael Cane";
         final String second = "Cane J.";
@@ -125,7 +125,7 @@ public class EmailApiTests {
         assert result.getSimilarity() >= 0.5;
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameExpandTest() throws ApiException {
         String name = "Smith Bobby";
         AiNameWeightedVariants result = api
@@ -138,7 +138,7 @@ public class EmailApiTests {
         assert expandedNames.contains("B. Smith");
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameCompleteTest() throws ApiException {
         String prefix = "Dav";
         AiNameWeightedVariants result = api
@@ -152,15 +152,15 @@ public class EmailApiTests {
         assert names.contains("Davis");
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiNameParseEmailAddressTest() throws ApiException {
         String address = "john-cane@gmail.com";
         ListResponseOfAiNameExtracted result = api
                 .aiNameParseEmailAddress(new AiNameParseEmailAddressRequestData(address, null, null, null, null, null));
         String givenName = null;
         String surname = null;
-        for(AiNameExtracted extracted: result.getValue()) {
-            for(AiNameExtractedComponent component: extracted.getName()) {
+        for (AiNameExtracted extracted : result.getValue()) {
+            for (AiNameExtractedComponent component : extracted.getName()) {
                 if (component.getCategory().equals("GivenName")) {
                     givenName = component.getValue();
                 }
@@ -173,12 +173,12 @@ public class EmailApiTests {
         assert "Cane".equals(surname);
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiBcrParseStorageTest() throws ApiException, IOException {
         String fileName = UUID.randomUUID().toString() + ".png";
         String filePath = folder + "/" + fileName;
         byte[] fileBytes = IOUtils.toByteArray(
-            this.getClass().getResourceAsStream("test_single_0001.png"));
+                this.getClass().getResourceAsStream("test_single_0001.png"));
         // 1) Upload business card image to storage
         api.uploadFile(new UploadFileRequestData(filePath, fileBytes, storage));
         String outFolder = UUID.randomUUID().toString();
@@ -186,45 +186,45 @@ public class EmailApiTests {
         api.createFolder(new CreateFolderRequestData(outFolderPath, storage));
         // 2) Call business card recognition action
         ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
-            new AiBcrParseStorageRq(
-                null,
-                Arrays.asList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
-                new StorageFolderLocation(storage, outFolderPath))));
+                new AiBcrParseStorageRq(
+                        null,
+                        Collections.singletonList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
+                        new StorageFolderLocation(storage, outFolderPath))));
         // Check that only one file produced
         assert result.getValue().size() == 1;
         // 3) Get file name from recognition result
         StorageFileLocation contactFile = result.getValue().get(0);
         // 4) Download VCard file, produced by recognition method, check it contains text "Thomas"
         byte[] contactBytes = api.downloadFile(new DownloadFileRequestData(
-            contactFile.getFolderPath() + "/" + contactFile.getFileName(),
-            contactFile.getStorage(),
-            null));
-        String contactFileContent = new String(contactBytes, StandardCharsets.UTF_8);
+                contactFile.getFolderPath() + "/" + contactFile.getFileName(),
+                contactFile.getStorage(),
+                null));
+        String contactFileContent = new String(contactBytes, "UTF-8");
         assert contactFileContent.contains("Thomas");
         // 5) Get VCard object properties list, check that there are 3 properties or more
         HierarchicalObject contactProperties = api.getContactProperties(new GetContactPropertiesRequestData(
-            "VCard", contactFile.getFileName(), contactFile.getFolderPath(), contactFile.getStorage()));
+                "VCard", contactFile.getFileName(), contactFile.getFolderPath(), contactFile.getStorage()));
         ArrayList<PrimitiveObject> primitives = new ArrayList<PrimitiveObject>();
-        for (BaseObject property: contactProperties.getInternalProperties()) {
+        for (BaseObject property : contactProperties.getInternalProperties()) {
             if (property.getType().equals("PrimitiveObject")) {
-                primitives.add((PrimitiveObject)property);
+                primitives.add((PrimitiveObject) property);
             }
         }
         assert primitives.size() >= 3;
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiBcrParseTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
-            this.getClass().getResourceAsStream("test_single_0001.png"));
+                this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
         ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
-            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
+                new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
         assert result.getValue().size() == 1;
         PrimitiveObject displayName = null;
-        for(BaseObject property: result.getValue().get(0).getInternalProperties()) {
+        for (BaseObject property : result.getValue().get(0).getInternalProperties()) {
             if (property.getName().equals("DISPLAYNAME")) {
-                displayName = (PrimitiveObject)property;
+                displayName = (PrimitiveObject) property;
                 break;
             }
         }
@@ -232,186 +232,267 @@ public class EmailApiTests {
         assert displayName.getValue().contains("Thomas");
     }
 
-    @Test(groups = { "pipeline" })
-    public void createCalendarEmailTest() throws ApiException {
+    @Test(groups = {"pipeline"})
+    public void createCalendarEmailTest() throws ApiException, UnsupportedEncodingException {
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
         CalendarDto calendar = new CalendarDto()
-            .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted"))
-            .description("Some description")
-            .summary("Some summary")
-            .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted"))
-            .startDate(startDate.getTime())
-            .endDate(endDate.getTime())
-            .location("Some location");
+                .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted", null))
+                .description("Some description")
+                .summary("Some summary")
+                .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted", null))
+                .startDate(startDate.getTime())
+                .endDate(endDate.getTime())
+                .location("Some location");
 
         StorageFolderLocation folderLocation = new StorageFolderLocation(storage, folder);
         String calendarFile = UUID.randomUUID().toString() + ".ics";
         api.saveCalendarModel(new SaveCalendarModelRequestData(
-            calendarFile,
-            new StorageModelRqOfCalendarDto(calendar, folderLocation)));
+                calendarFile,
+                new StorageModelRqOfCalendarDto(calendar, folderLocation)));
 
         ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
-            folder + "/" + calendarFile, storage, null));
+                folder + "/" + calendarFile, storage, null));
         assert objectExist.isExists();
 
         AlternateView alternate = api.convertCalendarModelToAlternate(
-            new ConvertCalendarModelToAlternateRequestData(
-                new CalendarDtoAlternateRq(calendar, "Create", null)));
+                new ConvertCalendarModelToAlternateRequestData(
+                        new CalendarDtoAlternateRq(calendar, "Create", null)));
 
         EmailDto email = new EmailDto()
-            .addAlternateViewsItem(alternate)
-            .from(new MailAddress("From Name", "organizer@aspose.com", null))
-            .addToItem(new MailAddress("To Name", "attendee@aspose.com", null))
-            .subject("Some subject")
-            .body("Some body");
+                .addAlternateViewsItem(alternate)
+                .from(new MailAddress("From Name", "organizer@aspose.com", null, null))
+                .addToItem(new MailAddress("To Name", "attendee@aspose.com", null, null))
+                .subject("Some subject")
+                .body("Some body");
         String emailFile = UUID.randomUUID().toString() + ".eml";
         api.saveEmailModel(new SaveEmailModelRequestData(
-            "Eml", emailFile, new StorageModelRqOfEmailDto(email, folderLocation)));
+                "Eml", emailFile, new StorageModelRqOfEmailDto(email, folderLocation)));
 
         byte[] downloaded = api.downloadFile(
-            new DownloadFileRequestData(folder + "/" + emailFile, storage, null));
-        String calendarContent = new String(downloaded, StandardCharsets.UTF_8);
+                new DownloadFileRequestData(folder + "/" + emailFile, storage, null));
+        String calendarContent = new String(downloaded, "UTF-8");
         assert calendarContent.contains("Some subject");
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void contactModelTest() throws ApiException {
         ContactDto contact = new ContactDto()
-            .gender("Male")
-            .surname("Thomas")
-            .givenName("Alex")
-            .addEmailAddressesItem(new EmailAddress(
-                new EnumWithCustomOfEmailAddressCategory("Work", null),
-                "Alex Thomas", true, null, "alex.thomas@work.com"))
-            .addPhoneNumbersItem(new PhoneNumber(
-                new EnumWithCustomOfPhoneNumberCategory("Work", null),
-                "+49211424721", true));
+                .gender("Male")
+                .surname("Thomas")
+                .givenName("Alex")
+                .addEmailAddressesItem(new EmailAddress(
+                        new EnumWithCustomOfEmailAddressCategory("Work", null),
+                        "Alex Thomas", true, null, "alex.thomas@work.com", null))
+                .addPhoneNumbersItem(new PhoneNumber(
+                        new EnumWithCustomOfPhoneNumberCategory("Work", null),
+                        "+49211424721", true));
         String contactFile = UUID.randomUUID().toString() + ".vcf";
         api.saveContactModel(new SaveContactModelRequestData(
-            "VCard", contactFile, new StorageModelRqOfContactDto(
+                "VCard", contactFile, new StorageModelRqOfContactDto(
                 contact, new StorageFolderLocation(storage, folder))));
 
         ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
-            folder + "/" + contactFile, storage, null));
+                folder + "/" + contactFile, storage, null));
         assert objectExist.isExists();
     }
 
-    @Test(groups = { "ai", "pipeline" })
+    @Test(groups = {"ai", "pipeline"})
     public void aiBcrParseModelTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
-            this.getClass().getResourceAsStream("test_single_0001.png"));
+                this.getClass().getResourceAsStream("test_single_0001.png"));
         String fileBase64 = Base64.encodeToString(fileBytes, false);
         ListResponseOfContactDto result = api.aiBcrParseModel(new AiBcrParseModelRequestData(
-            new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
+                new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
         assert result.getValue().size() == 1;
         ContactDto firstVCard = result.getValue().get(0);
         assert firstVCard.getDisplayName().contains("Thomas");
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void discoverEmailConfigTest() throws ApiException {
         EmailAccountConfigList configList = api.discoverEmailConfig(
-            new DiscoverEmailConfigRequestData("example@gmail.com", true));
+                new DiscoverEmailConfigRequestData("example@gmail.com", true));
         assert configList.getValue().size() >= 2;
         for (EmailAccountConfig config : configList.getValue()) {
-            if (config.getProtocolType().equals("SMTP"))
-                assert "smtp.gmail.com".equals(config.getHost());
+            assert !config.getProtocolType().equals("SMTP") || "smtp.gmail.com".equals(config.getHost());
         }
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void createMapiTest() throws ApiException {
         String fileName = UUID.randomUUID().toString() + ".msg";
         api.createMapi(new CreateMapiRequestData(
-            fileName,
-            new HierarchicalObjectRequest(
-                new HierarchicalObject("IPM.Contact", null, Arrays.<BaseObject>asList(
-                    new PrimitiveObject("Tag:'PidTagMessageClass':0x1A:String", null, "IPM.Contact"),
-                    new PrimitiveObject("Tag:'PidTagSubject':0x37:String", null, "null"),
-                    new PrimitiveObject("Tag:'PidTagSubjectPrefix':0x3D:String", null, null),
-                    new PrimitiveObject("Tag:'PidTagMessageFlags':0xE07:Integer32", null, "8"),
-                    new PrimitiveObject("Tag:'PidTagNormalizedSubject':0xE1D:String", null, null),
-                    new PrimitiveObject("Tag:'PidTagBody':0x1000:String", null, null),
-                    new PrimitiveObject("Tag:'PidTagStoreSupportMask':0x340D:Integer32", null, "265849"),
-                    new PrimitiveObject("Tag:'PidTagSurname':0x3A11:String", null, "Surname"),
-                    new PrimitiveObject("Tag:'PidTagOtherTelephoneNumber':0x3A1F:String", null, "+79123456789"),
-                    new PrimitiveObject("Tag:'':0x6662:Integer32", null, "0"),
-                    new PrimitiveObject("Lid:'PidLidAddressBookProviderArrayType':0x8029:Integer32:00062004-0000-0000-c000-000000000046", null, "1"))),
-                new StorageFolderLocation(storage, folder))));
+                fileName,
+                new HierarchicalObjectRequest(
+                        new HierarchicalObject("IPM.Contact", null, Arrays.<BaseObject>asList(
+                                new PrimitiveObject("Tag:'PidTagMessageClass':0x1A:String", null, "IPM.Contact"),
+                                new PrimitiveObject("Tag:'PidTagSubject':0x37:String", null, "null"),
+                                new PrimitiveObject("Tag:'PidTagSubjectPrefix':0x3D:String", null, null),
+                                new PrimitiveObject("Tag:'PidTagMessageFlags':0xE07:Integer32", null, "8"),
+                                new PrimitiveObject("Tag:'PidTagNormalizedSubject':0xE1D:String", null, null),
+                                new PrimitiveObject("Tag:'PidTagBody':0x1000:String", null, null),
+                                new PrimitiveObject("Tag:'PidTagStoreSupportMask':0x340D:Integer32", null, "265849"),
+                                new PrimitiveObject("Tag:'PidTagSurname':0x3A11:String", null, "Surname"),
+                                new PrimitiveObject("Tag:'PidTagOtherTelephoneNumber':0x3A1F:String", null, "+79123456789"),
+                                new PrimitiveObject("Tag:'':0x6662:Integer32", null, "0"),
+                                new PrimitiveObject("Lid:'PidLidAddressBookProviderArrayType':0x8029:Integer32:00062004-0000-0000-c000-000000000046", null, "1"))),
+                        new StorageFolderLocation(storage, folder))));
         assert api.objectExists(new ObjectExistsRequestData(folder + "/" + fileName, storage, null))
-            .isExists();
+                .isExists();
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void addMapiAttachment() throws ApiException {
         String calendar = createCalendar();
         String calendarAttachment = createCalendar();
         api.addMapiAttachment(new AddMapiAttachmentRequestData(calendar, calendarAttachment,
-            new AddAttachmentRequest(
-                new StorageFolderLocation(storage, folder),
-                new StorageFolderLocation(storage, folder))));
+                new AddAttachmentRequest(
+                        new StorageFolderLocation(storage, folder),
+                        new StorageFolderLocation(storage, folder))));
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void getMapiPropertiesTest() throws ApiException {
         String fileName = createCalendar();
         HierarchicalObjectResponse properties = api.getMapiProperties(new GetMapiPropertiesRequestData(fileName, folder, storage));
         assert properties.getHierarchicalObject().getName().contains("IPM.Schedule");
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void isDisposableEmailTest() throws ApiException {
         ValueTOfBoolean disposable = api.isEmailAddressDisposable(
-            new IsEmailAddressDisposableRequestData("example@mailcatch.com"));
+                new IsEmailAddressDisposableRequestData("example@mailcatch.com"));
         assert disposable.isValue();
         ValueTOfBoolean regular = api.isEmailAddressDisposable(
-            new IsEmailAddressDisposableRequestData("example@gmail.com"));
+                new IsEmailAddressDisposableRequestData("example@gmail.com"));
         assert !regular.isValue();
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void emailClientAccountTest() throws ApiException {
         EmailClientAccount account = new EmailClientAccount(
-            "smtp.gmail.com",
-            551,
-            "SSLAuto",
-            "SMTP",
-            new EmailClientAccountPasswordCredentials("login", null, "password"));
+                "smtp.gmail.com",
+                551,
+                "SSLAuto",
+                "SMTP",
+                new EmailClientAccountPasswordCredentials("login", null, "password"),
+                null);
         String fileName = UUID.randomUUID().toString() + ".account";
         api.saveEmailClientAccount(new SaveEmailClientAccountRequestData(
-            new StorageFileRqOfEmailClientAccount(
-                account,
-                new StorageFileLocation(storage, folder, fileName))));
+                new StorageFileRqOfEmailClientAccount(
+                        account,
+                        new StorageFileLocation(storage, folder, fileName))));
         EmailClientAccount response = api.getEmailClientAccount(
-            new GetEmailClientAccountRequestData(fileName, folder, storage));
+                new GetEmailClientAccountRequestData(fileName, folder, storage));
         assert response.getCredentials().getClass().getSimpleName()
-            .equals("EmailClientAccountPasswordCredentials");
+                .equals("EmailClientAccountPasswordCredentials");
         assert account.getHost().equals(response.getHost());
     }
 
-    @Test(groups = { "pipeline" })
+    @Test(groups = {"pipeline"})
     public void emailClientMultiAccountTest() throws ApiException {
         EmailClientMultiAccount multiAccount = new EmailClientMultiAccount(
-            Arrays.<EmailClientAccount>asList(
-                new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP", 
-                    new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")),
-                new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS", 
-                    new EmailClientAccountOauthCredentials(
-                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken", null))),
-            new EmailClientAccount("smtp.gmail.com", 465, "SSLAuto", "SMTP", 
-                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password")));
+                Arrays.asList(
+                        new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP",
+                                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"), null),
+                        new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS",
+                                new EmailClientAccountOauthCredentials(
+                                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken", null), null)),
+                new EmailClientAccount("smtp.gmail.com", 465, "SSLAuto", "SMTP",
+                        new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"), null));
         String fileName = UUID.randomUUID().toString() + ".multi.account";
         api.saveEmailClientMultiAccount(new SaveEmailClientMultiAccountRequestData(
-            new StorageFileRqOfEmailClientMultiAccount(
-                multiAccount,
-                new StorageFileLocation(storage, folder, fileName))));
+                new StorageFileRqOfEmailClientMultiAccount(
+                        multiAccount,
+                        new StorageFileLocation(storage, folder, fileName))));
         EmailClientMultiAccount multiAccountFromStorage = api.getEmailClientMultiAccount(
-            new GetEmailClientMultiAccountRequestData(fileName, folder, storage));
+                new GetEmailClientMultiAccountRequestData(fileName, folder, storage));
         assert multiAccountFromStorage.getReceiveAccounts().size() == 2;
         assert multiAccountFromStorage.getSendAccount().getCredentials().getDiscriminator().equals(
-            multiAccount.getSendAccount().getCredentials().getDiscriminator());
+                multiAccount.getSendAccount().getCredentials().getDiscriminator());
+    }
+
+    @Test(groups = {"pipeline"})
+    public void ConvertCalendarTest() throws ApiException, UnsupportedEncodingException {
+        final String location = "Some location";
+        //Create DTO with specified location:
+        CalendarDto calendarDto = new CalendarDto()
+            .location(location)
+            .summary("Some summary")
+            .description("Some description")
+            .startDate(Calendar.getInstance().getTime())
+            .endDate(Calendar.getInstance().getTime())
+            .organizer(new MailAddress().address("organizer@aspose.com"))
+            .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")));
+        //We can convert this DTO to a MAPI or ICS file:
+        byte[] mapiBytes = api.convertCalendarModelToFile(
+            new ConvertCalendarModelToFileRequestData(
+                "Msg", calendarDto));
+        /*
+        // mapiBytes can be saved as a calendar.msg file:
+        try (FileOutputStream stream = new FileOutputStream("calendar.msg")){
+            stream.write(mapiBytes);
+        }
+         */
+
+        //Let's convert this bytes to an ICS file:
+        byte[] icsBytes = api.convertCalendar(new ConvertCalendarRequestData("Ics", mapiBytes));
+        /*
+        //icsBytes can be saved as a calendar.ics file:
+        try (FileOutputStream stream = new FileOutputStream("calendar.ics")){
+            stream.write(icsBytes);
+        }
+        */
+        //ICS is a text format. We can convert icsBytes to a string and check that it
+        //contains specified location as a substring:
+        String calendarContent = new String(icsBytes, "UTF-8");
+        assert calendarContent.contains(location);
+        //We can also convert file bytes back to a CalendarDto
+        CalendarDto dto = api.getCalendarFileAsModel(
+            new GetCalendarFileAsModelRequestData(icsBytes));
+        assert location.equals(dto.getLocation());
+    }
+
+    @Test(groups = {"pipeline"})
+    public void ConvertContactTest() throws ApiException, UnsupportedEncodingException {
+        final String surname = "Cane";
+        ContactDto contactDto = new ContactDto()
+            .surname(surname)
+            .givenName("John")
+            .gender("Male")
+            .emailAddresses(Collections.singletonList(new EmailAddress().address("address@aspose.com")))
+            .phoneNumbers(Collections.singletonList(new PhoneNumber().number("+472343234542342")));
+        byte[] mapiBytes = api.convertContactModelToFile(
+            new ConvertContactModelToFileRequestData(
+                "Msg", contactDto));
+        byte[] vcardBytes = api.convertContact(new ConvertContactRequestData("VCard", "Msg", mapiBytes));
+        String contactContent = new String(vcardBytes, "UTF-8");
+        assert contactContent.contains(surname);
+        ContactDto dto = api.getContactFileAsModel(
+            new GetContactFileAsModelRequestData("VCard", vcardBytes));
+        assert surname.equals(dto.getSurname());
+    }
+
+    @Test(groups = {"pipeline"})
+    public void ConvertEmailTest() throws ApiException, UnsupportedEncodingException {
+        final String from = "from@aspose.com";
+        EmailDto emailDto = new EmailDto()
+            .from(new MailAddress().address(from))
+            .to(Collections.singletonList(new MailAddress().address("to@aspose.com")))
+            .subject("Some subject")
+            .body("Some body")
+            .date(new Date());
+        byte[] mapiBytes = api.convertEmailModelToFile(
+            new ConvertEmailModelToFileRequestData(
+                "Msg", emailDto));
+        byte[] emlBytes = api.convertEmail(new ConvertEmailRequestData("Eml", mapiBytes));
+        String emlContent = new String(emlBytes, "UTF-8");
+        assert emlContent.contains(from);
+        EmailDto dto = api.getEmailFileAsModel(
+            new GetEmailFileAsModelRequestData(emlBytes));
+        assert from.equals(dto.getFrom().getAddress());
     }
 
     private String createCalendar() throws ApiException {
@@ -421,22 +502,22 @@ public class EmailApiTests {
 
     private String createCalendar(Calendar startDate) throws ApiException {
         String fileName = UUID.randomUUID().toString() + ".ics";
-        Calendar endDate =(Calendar) startDate.clone();
+        Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
         api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest(
-            new HierarchicalObject("CALENDAR", null, Arrays.<BaseObject>asList(
-                new PrimitiveObject("LOCATION", null, "location"),
-                new PrimitiveObject("STARTDATE", null, dateFormat.format(startDate.getTime())),
-                new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
-                new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
-                    new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
-                    new PrimitiveObject("DISPLAYNAME", null, "Organizer Name"))),
-                new HierarchicalObject("ATTENDEES", null, Arrays.<BaseObject>asList(
-                    new IndexedHierarchicalObject(
-                        "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
-                            new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
-                            new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
-            new StorageFolderLocation(storage, folder))));
+                new HierarchicalObject("CALENDAR", null, Arrays.asList(
+                        new PrimitiveObject("LOCATION", null, "location"),
+                        new PrimitiveObject("STARTDATE", null, dateFormat.format(startDate.getTime())),
+                        new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
+                        new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
+                                new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
+                                new PrimitiveObject("DISPLAYNAME", null, "Organizer Name"))),
+                        new HierarchicalObject("ATTENDEES", null, Collections.<BaseObject>singletonList(
+                                new IndexedHierarchicalObject(
+                                        "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
+                                        new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
+                                        new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
+                new StorageFolderLocation(storage, folder))));
         return fileName;
     }
 }

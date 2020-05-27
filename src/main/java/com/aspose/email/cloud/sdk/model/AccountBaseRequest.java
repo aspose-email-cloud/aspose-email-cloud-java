@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="AccountBaseRequest.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,7 @@ public class AccountBaseRequest {
 
   /**
    * Set firstAccount and return this.
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param firstAccount First account storage file name             
    * @return this
   **/
   public AccountBaseRequest firstAccount(String firstAccount) {
@@ -63,7 +63,7 @@ public class AccountBaseRequest {
   }
 
   /**
-   * First account storage file name for receiving emails (or universal one)             
+   * First account storage file name             
    * @return firstAccount
   **/
   public String getFirstAccount() {
@@ -72,7 +72,7 @@ public class AccountBaseRequest {
 
   /**
    * Set firstAccount.
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
+   * @param firstAccount First account storage file name             
   **/
   public void setFirstAccount(String firstAccount) {
     this.firstAccount = firstAccount;
@@ -80,7 +80,7 @@ public class AccountBaseRequest {
 
   /**
    * Set secondAccount and return this.
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @return this
   **/
   public AccountBaseRequest secondAccount(String secondAccount) {
@@ -89,7 +89,7 @@ public class AccountBaseRequest {
   }
 
   /**
-   * Second account storage file name for sending emails (ignored if first is universal)             
+   * Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @return secondAccount
   **/
   public String getSecondAccount() {
@@ -98,7 +98,7 @@ public class AccountBaseRequest {
 
   /**
    * Set secondAccount.
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
   **/
   public void setSecondAccount(String secondAccount) {
     this.secondAccount = secondAccount;
@@ -180,8 +180,8 @@ public class AccountBaseRequest {
 
   /**
    * Initializes a new instance of the AccountBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    */
   public AccountBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder) {

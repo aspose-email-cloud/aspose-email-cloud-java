@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="SaveEmailModelRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ public class SaveEmailModelRequestData
     /**
     * Initializes a new instance of the SaveEmailModelRequestData class.   
     * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    * @param name iCalendar file name in storage.
+    * @param name Email document file name in storage.
     * @param rq Calendar properties update request.
     **/
     public SaveEmailModelRequestData(String format, String name, StorageModelRqOfEmailDto rq)             
@@ -53,7 +53,7 @@ public class SaveEmailModelRequestData
     public String format;
 
     /**
-    * iCalendar file name in storage.
+    * Email document file name in storage.
     **/
     public String name;
 

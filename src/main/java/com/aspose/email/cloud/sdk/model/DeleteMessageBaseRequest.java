@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="DeleteMessageBaseRequest.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +46,9 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   @JsonProperty("messageId")
   private String messageId = null;
 
+  @JsonProperty("folder")
+  private String folder = null;
+
   @JsonProperty("deletePermanently")
   private Boolean deletePermanently = null;
 
@@ -73,6 +76,32 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   **/
   public void setMessageId(String messageId) {
     this.messageId = messageId;
+  }
+
+  /**
+   * Set folder and return this.
+   * @param folder Account folder where message located. Should be specified for some accounts             
+   * @return this
+  **/
+  public DeleteMessageBaseRequest folder(String folder) {
+    this.folder = folder;
+    return this;
+  }
+
+  /**
+   * Account folder where message located. Should be specified for some accounts             
+   * @return folder
+  **/
+  public String getFolder() {
+    return folder;
+  }  
+
+  /**
+   * Set folder.
+   * @param folder Account folder where message located. Should be specified for some accounts             
+  **/
+  public void setFolder(String folder) {
+    this.folder = folder;
   }
 
   /**
@@ -112,13 +141,14 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
   }
     DeleteMessageBaseRequest deleteMessageBaseRequest = (DeleteMessageBaseRequest) o;
     return ObjectUtils.equals(this.messageId, deleteMessageBaseRequest.messageId) &&
+    ObjectUtils.equals(this.folder, deleteMessageBaseRequest.folder) &&
     ObjectUtils.equals(this.deletePermanently, deleteMessageBaseRequest.deletePermanently) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(messageId, deletePermanently, super.hashCode());
+    return ObjectUtils.hashCodeMulti(messageId, folder, deletePermanently, super.hashCode());
   }
 
 
@@ -131,6 +161,7 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
     sb.append("    secondAccount: ").append(toIndentedString(getSecondAccount())).append("\n");
     sb.append("    storageFolder: ").append(toIndentedString(getStorageFolder())).append("\n");
     sb.append("    messageId: ").append(toIndentedString(getMessageId())).append("\n");
+    sb.append("    folder: ").append(toIndentedString(getFolder())).append("\n");
     sb.append("    deletePermanently: ").append(toIndentedString(isDeletePermanently())).append("\n");
     sb.append("}");
     return sb.toString();
@@ -153,18 +184,20 @@ public class DeleteMessageBaseRequest extends AccountBaseRequest {
 
   /**
    * Initializes a new instance of the DeleteMessageBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param messageId Message identifier             
+   * @param folder Account folder where message located. Should be specified for some accounts             
    * @param deletePermanently Specifies that message should be deleted permanently             
    */
-  public DeleteMessageBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String messageId, Boolean deletePermanently) {
+  public DeleteMessageBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String messageId, String folder, Boolean deletePermanently) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);
     setStorageFolder(storageFolder);
     setMessageId(messageId);
+    setFolder(folder);
     setDeletePermanently(deletePermanently);
   }
 

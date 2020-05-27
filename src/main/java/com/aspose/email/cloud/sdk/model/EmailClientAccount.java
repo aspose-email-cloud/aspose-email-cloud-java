@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailClientAccount.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +57,9 @@ public class EmailClientAccount {
 
   @JsonProperty("credentials")
   private EmailClientAccountCredentials credentials = null;
+
+  @JsonProperty("cacheFile")
+  private StorageFileLocation cacheFile = null;
 
   /**
    * Set host and return this.
@@ -190,6 +193,32 @@ public class EmailClientAccount {
     this.credentials = credentials;
   }
 
+  /**
+   * Set cacheFile and return this.
+   * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
+   * @return this
+  **/
+  public EmailClientAccount cacheFile(StorageFileLocation cacheFile) {
+    this.cacheFile = cacheFile;
+    return this;
+  }
+
+  /**
+   * File with messages cache. Used to provide extra functions, which are not supported by account             
+   * @return cacheFile
+  **/
+  public StorageFileLocation getCacheFile() {
+    return cacheFile;
+  }  
+
+  /**
+   * Set cacheFile.
+   * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
+  **/
+  public void setCacheFile(StorageFileLocation cacheFile) {
+    this.cacheFile = cacheFile;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -204,12 +233,13 @@ public class EmailClientAccount {
     ObjectUtils.equals(this.port, emailClientAccount.port) &&
     ObjectUtils.equals(this.securityOptions, emailClientAccount.securityOptions) &&
     ObjectUtils.equals(this.protocolType, emailClientAccount.protocolType) &&
-    ObjectUtils.equals(this.credentials, emailClientAccount.credentials);
+    ObjectUtils.equals(this.credentials, emailClientAccount.credentials) &&
+    ObjectUtils.equals(this.cacheFile, emailClientAccount.cacheFile);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(host, port, securityOptions, protocolType, credentials);
+    return ObjectUtils.hashCodeMulti(host, port, securityOptions, protocolType, credentials, cacheFile);
   }
 
 
@@ -223,6 +253,7 @@ public class EmailClientAccount {
     sb.append("    securityOptions: ").append(toIndentedString(getSecurityOptions())).append("\n");
     sb.append("    protocolType: ").append(toIndentedString(getProtocolType())).append("\n");
     sb.append("    credentials: ").append(toIndentedString(getCredentials())).append("\n");
+    sb.append("    cacheFile: ").append(toIndentedString(getCacheFile())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -249,14 +280,16 @@ public class EmailClientAccount {
    * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param credentials Email client account credentials             
+   * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
    */
-  public EmailClientAccount(String host, Integer port, String securityOptions, String protocolType, EmailClientAccountCredentials credentials) {
+  public EmailClientAccount(String host, Integer port, String securityOptions, String protocolType, EmailClientAccountCredentials credentials, StorageFileLocation cacheFile) {
     super();
     setHost(host);
     setPort(port);
     setSecurityOptions(securityOptions);
     setProtocolType(protocolType);
     setCredentials(credentials);
+    setCacheFile(cacheFile);
   }
 
 }

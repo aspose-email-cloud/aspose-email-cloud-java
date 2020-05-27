@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="SetMessageReadFlagAccountBaseRequest.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,8 +153,8 @@ public class SetMessageReadFlagAccountBaseRequest extends AccountBaseRequest {
 
   /**
    * Initializes a new instance of the SetMessageReadFlagAccountBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param messageId Message identifier             
    * @param isRead Specifies that message should be marked read or unread             

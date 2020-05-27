@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="ConvertEmailRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ public class ConvertEmailRequestData
     /**
     * Initializes a new instance of the ConvertEmailRequestData class.   
     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    * @param file File to upload
+    * @param file File to convert
     **/
     public ConvertEmailRequestData(String format, byte[] file)             
     {
@@ -51,7 +51,7 @@ public class ConvertEmailRequestData
     public String format;
 
     /**
-    * File to upload
+    * File to convert
     **/
     public byte[] File;
 }

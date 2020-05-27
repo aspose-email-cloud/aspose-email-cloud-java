@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="DiscUsage.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Class for disc space information.
+ * DiscUsage
  */
 public class DiscUsage {
   @JsonProperty("usedSize")
@@ -51,7 +51,7 @@ public class DiscUsage {
 
   /**
    * Set usedSize and return this.
-   * @param usedSize Application used disc space.
+   * @param usedSize 
    * @return this
   **/
   public DiscUsage usedSize(Long usedSize) {
@@ -60,7 +60,7 @@ public class DiscUsage {
   }
 
   /**
-   * Application used disc space.
+   * Get usedSize
    * @return usedSize
   **/
   public Long getUsedSize() {
@@ -69,7 +69,7 @@ public class DiscUsage {
 
   /**
    * Set usedSize.
-   * @param usedSize Application used disc space.
+   * @param usedSize 
   **/
   public void setUsedSize(Long usedSize) {
     this.usedSize = usedSize;
@@ -77,7 +77,7 @@ public class DiscUsage {
 
   /**
    * Set totalSize and return this.
-   * @param totalSize Total disc space.
+   * @param totalSize 
    * @return this
   **/
   public DiscUsage totalSize(Long totalSize) {
@@ -86,7 +86,7 @@ public class DiscUsage {
   }
 
   /**
-   * Total disc space.
+   * Get totalSize
    * @return totalSize
   **/
   public Long getTotalSize() {
@@ -95,7 +95,7 @@ public class DiscUsage {
 
   /**
    * Set totalSize.
-   * @param totalSize Total disc space.
+   * @param totalSize 
   **/
   public void setTotalSize(Long totalSize) {
     this.totalSize = totalSize;
@@ -149,8 +149,8 @@ public class DiscUsage {
 
   /**
    * Initializes a new instance of the DiscUsage
-   * @param usedSize Application used disc space.
-   * @param totalSize Total disc space.
+   * @param usedSize 
+   * @param totalSize 
    */
   public DiscUsage(Long usedSize, Long totalSize) {
     super();

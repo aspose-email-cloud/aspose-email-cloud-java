@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="AppendEmailModelRq.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
   @JsonProperty("message")
-  private EmailDto message = null;
+  private Object message = null;
 
   /**
    * Set message and return this.
    * @param message Email document             
    * @return this
   **/
-  public AppendEmailModelRq message(EmailDto message) {
+  public AppendEmailModelRq message(Object message) {
     this.message = message;
     return this;
   }
@@ -60,7 +60,7 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
    * Email document             
    * @return message
   **/
-  public EmailDto getMessage() {
+  public Object getMessage() {
     return message;
   }  
 
@@ -68,7 +68,7 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
    * Set message.
    * @param message Email document             
   **/
-  public void setMessage(EmailDto message) {
+  public void setMessage(Object message) {
     this.message = message;
   }
 
@@ -124,14 +124,14 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
 
   /**
    * Initializes a new instance of the AppendEmailModelRq
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param folder Email account folder to store a message             
    * @param markAsSent Mark message as sent             
    * @param message Email document             
    */
-  public AppendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, EmailDto message) {
+  public AppendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, Object message) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

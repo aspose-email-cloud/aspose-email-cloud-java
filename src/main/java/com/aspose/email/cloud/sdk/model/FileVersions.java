@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="FileVersions.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * File versions FileVersion.
+ * FileVersions
  */
 public class FileVersions {
   @JsonProperty("value")
@@ -48,7 +48,7 @@ public class FileVersions {
 
   /**
    * Set value and return this.
-   * @param value File versions FileVersion.
+   * @param value 
    * @return this
   **/
   public FileVersions value(List<FileVersion> value) {
@@ -57,7 +57,7 @@ public class FileVersions {
   }
   /**
    * Add an item to value and return this.
-   * @param valueItem An item of: File versions FileVersion.
+   * @param valueItem An item of: 
    * @return this
   **/
   public FileVersions addValueItem(FileVersion valueItem) {
@@ -69,7 +69,7 @@ public class FileVersions {
   }
 
   /**
-   * File versions FileVersion.
+   * Get value
    * @return value
   **/
   public List<FileVersion> getValue() {
@@ -78,7 +78,7 @@ public class FileVersions {
 
   /**
    * Set value.
-   * @param value File versions FileVersion.
+   * @param value 
   **/
   public void setValue(List<FileVersion> value) {
     this.value = value;
@@ -130,7 +130,7 @@ public class FileVersions {
 
   /**
    * Initializes a new instance of the FileVersions
-   * @param value File versions FileVersion.
+   * @param value 
    */
   public FileVersions(List<FileVersion> value) {
     super();

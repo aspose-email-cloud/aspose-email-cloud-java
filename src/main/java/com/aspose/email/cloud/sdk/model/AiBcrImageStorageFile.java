@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="AiBcrImageStorageFile.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AiBcrImageStorageFile extends AiBcrImage {
   @JsonProperty("file")
-  private StorageFileLocation file = null;
+  private Object file = null;
 
   /**
    * Set file and return this.
    * @param file Image location             
    * @return this
   **/
-  public AiBcrImageStorageFile file(StorageFileLocation file) {
+  public AiBcrImageStorageFile file(Object file) {
     this.file = file;
     return this;
   }
@@ -60,7 +60,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * Image location             
    * @return file
   **/
-  public StorageFileLocation getFile() {
+  public Object getFile() {
     return file;
   }  
 
@@ -68,7 +68,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * Set file.
    * @param file Image location             
   **/
-  public void setFile(StorageFileLocation file) {
+  public void setFile(Object file) {
     this.file = file;
   }
 
@@ -123,7 +123,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
    * @param file Image location             
    */
-  public AiBcrImageStorageFile(Boolean isSingle, StorageFileLocation file) {
+  public AiBcrImageStorageFile(Boolean isSingle, Object file) {
     super();
     setIsSingle(isSingle);
     setFile(file);

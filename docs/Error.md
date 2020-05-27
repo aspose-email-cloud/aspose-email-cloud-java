@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **String** | Code              |  [optional]
-**message** | **String** | Message              |  [optional]
-**description** | **String** | Description              |  [optional]
-**innerError** | [**ErrorDetails**](ErrorDetails.md) | Inner Error              |  [optional]
+**code** | **String** |  |  [optional]
+**message** | **String** |  |  [optional]
+**description** | **String** |  |  [optional]
+**innerError** | [**ErrorDetails**](ErrorDetails.md) |  |  [optional]
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

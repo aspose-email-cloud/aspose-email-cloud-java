@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="CopyFileRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,11 +36,11 @@ public class CopyFileRequestData
 {
     /**
     * Initializes a new instance of the CopyFileRequestData class.   
-    * @param srcPath Source file path e.g. &#39;/folder/file.ext&#39;
-    * @param destPath Destination file path
-    * @param srcStorageName Source storage name
-    * @param destStorageName Destination storage name
-    * @param versionId File version ID to copy
+    * @param srcPath 
+    * @param destPath 
+    * @param srcStorageName 
+    * @param destStorageName 
+    * @param versionId 
     **/
     public CopyFileRequestData(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
@@ -52,27 +52,27 @@ public class CopyFileRequestData
     }
         
     /**
-    * Source file path e.g. '/folder/file.ext'
+    * Gets or sets srcPath
     **/
     public String srcPath;
 
     /**
-    * Destination file path
+    * Gets or sets destPath
     **/
     public String destPath;
 
     /**
-    * Source storage name
+    * Gets or sets srcStorageName
     **/
     public String srcStorageName;
 
     /**
-    * Destination storage name
+    * Gets or sets destStorageName
     **/
     public String destStorageName;
 
     /**
-    * File version ID to copy
+    * Gets or sets versionId
     **/
     public String versionId;
 }

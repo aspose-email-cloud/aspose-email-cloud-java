@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="ListEmailFoldersRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,7 @@ public class ListEmailFoldersRequestData
     /**
     * Initializes a new instance of the ListEmailFoldersRequestData class.   
     * @param firstAccount Email account
-    * @param secondAccount Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * @param secondAccount Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     * @param storage Storage name where account file(s) located
     * @param storageFolder Folder in storage where account file(s) located
     * @param parentFolder Folder in which subfolders should be listed
@@ -57,7 +57,7 @@ public class ListEmailFoldersRequestData
     public String firstAccount;
 
     /**
-    * Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    * Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     **/
     public String secondAccount;
 

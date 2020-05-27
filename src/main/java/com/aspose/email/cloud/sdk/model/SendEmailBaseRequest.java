@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="SendEmailBaseRequest.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class SendEmailBaseRequest extends AccountBaseRequest {
   @JsonProperty("emailFile")
-  private StorageFileLocation emailFile = null;
+  private Object emailFile = null;
 
   /**
    * Set emailFile and return this.
    * @param emailFile Email document (*.eml) file location in storage             
    * @return this
   **/
-  public SendEmailBaseRequest emailFile(StorageFileLocation emailFile) {
+  public SendEmailBaseRequest emailFile(Object emailFile) {
     this.emailFile = emailFile;
     return this;
   }
@@ -60,7 +60,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
    * Email document (*.eml) file location in storage             
    * @return emailFile
   **/
-  public StorageFileLocation getEmailFile() {
+  public Object getEmailFile() {
     return emailFile;
   }  
 
@@ -68,7 +68,7 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
    * Set emailFile.
    * @param emailFile Email document (*.eml) file location in storage             
   **/
-  public void setEmailFile(StorageFileLocation emailFile) {
+  public void setEmailFile(Object emailFile) {
     this.emailFile = emailFile;
   }
 
@@ -122,12 +122,12 @@ public class SendEmailBaseRequest extends AccountBaseRequest {
 
   /**
    * Initializes a new instance of the SendEmailBaseRequest
-   * @param firstAccount First account storage file name for receiving emails (or universal one)             
-   * @param secondAccount Second account storage file name for sending emails (ignored if first is universal)             
+   * @param firstAccount First account storage file name             
+   * @param secondAccount Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
    * @param storageFolder Storage folder location of account files             
    * @param emailFile Email document (*.eml) file location in storage             
    */
-  public SendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, StorageFileLocation emailFile) {
+  public SendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Object emailFile) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

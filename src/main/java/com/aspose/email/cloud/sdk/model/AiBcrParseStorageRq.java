@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="AiBcrParseStorageRq.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
   @JsonProperty("outFolder")
-  private StorageFolderLocation outFolder = null;
+  private Object outFolder = null;
 
   /**
    * Set outFolder and return this.
    * @param outFolder Parse output folder location on storage             
    * @return this
   **/
-  public AiBcrParseStorageRq outFolder(StorageFolderLocation outFolder) {
+  public AiBcrParseStorageRq outFolder(Object outFolder) {
     this.outFolder = outFolder;
     return this;
   }
@@ -60,7 +60,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * Parse output folder location on storage             
    * @return outFolder
   **/
-  public StorageFolderLocation getOutFolder() {
+  public Object getOutFolder() {
     return outFolder;
   }  
 
@@ -68,7 +68,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * Set outFolder.
    * @param outFolder Parse output folder location on storage             
   **/
-  public void setOutFolder(StorageFolderLocation outFolder) {
+  public void setOutFolder(Object outFolder) {
     this.outFolder = outFolder;
   }
 
@@ -125,7 +125,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * @param images List of images with business cards             
    * @param outFolder Parse output folder location on storage             
    */
-  public AiBcrParseStorageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images, StorageFolderLocation outFolder) {
+  public AiBcrParseStorageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images, Object outFolder) {
     super();
     setOptions(options);
     setImages(images);

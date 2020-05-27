@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="ObjectExistsRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,9 +36,9 @@ public class ObjectExistsRequestData
 {
     /**
     * Initializes a new instance of the ObjectExistsRequestData class.   
-    * @param path File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;
-    * @param storageName Storage name
-    * @param versionId File version ID
+    * @param path 
+    * @param storageName 
+    * @param versionId 
     **/
     public ObjectExistsRequestData(String path, String storageName, String versionId)             
     {
@@ -48,17 +48,17 @@ public class ObjectExistsRequestData
     }
         
     /**
-    * File or folder path e.g. '/file.ext' or '/folder'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 
     /**
-    * File version ID
+    * Gets or sets versionId
     **/
     public String versionId;
 }

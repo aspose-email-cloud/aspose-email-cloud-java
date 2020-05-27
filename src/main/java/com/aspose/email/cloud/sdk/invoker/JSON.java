@@ -32,6 +32,7 @@ import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
+import java.util.Date;
 
 /**
  * JSON helper class.
@@ -44,6 +45,7 @@ public class JSON {
         GsonBuilder builder = new GsonBuilder();
         builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
         Derive.registerAdapters(builder);
+        builder.registerTypeAdapter(Date.class, new DateDeserializer());
         gsonExt = builder.create();
     }
     public static String serialize(Object object)

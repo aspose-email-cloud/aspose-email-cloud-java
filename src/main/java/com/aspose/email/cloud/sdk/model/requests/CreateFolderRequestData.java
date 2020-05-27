@@ -2,7 +2,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="CreateFolderRequestData.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,8 +36,8 @@ public class CreateFolderRequestData
 {
     /**
     * Initializes a new instance of the CreateFolderRequestData class.   
-    * @param path Folder path to create e.g. &#39;folder_1/folder_2/&#39;
-    * @param storageName Storage name
+    * @param path 
+    * @param storageName 
     **/
     public CreateFolderRequestData(String path, String storageName)             
     {
@@ -46,12 +46,12 @@ public class CreateFolderRequestData
     }
         
     /**
-    * Folder path to create e.g. 'folder_1/folder_2/'
+    * Gets or sets path
     **/
     public String path;
 
     /**
-    * Storage name
+    * Gets or sets storageName
     **/
     public String storageName;
 }

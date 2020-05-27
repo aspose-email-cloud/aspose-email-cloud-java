@@ -620,6 +620,30 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertCalendar"></a>
+## **convertCalendar**
+> byte[] convertCalendar(ConvertCalendarRequestData request)
+
+Converts calendar document to specified format and returns as file             
+
+### **ConvertCalendarRequestData** Parameters
+```java
+public ConvertCalendarRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertCalendarModelToAlternate"></a>
 ## **convertCalendarModelToAlternate**
 > [AlternateView](AlternateView.md) convertCalendarModelToAlternate(ConvertCalendarModelToAlternateRequestData request)
@@ -642,9 +666,83 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertCalendarModelToFile"></a>
+## **convertCalendarModelToFile**
+> byte[] convertCalendarModelToFile(ConvertCalendarModelToFileRequestData request)
+
+Converts calendar model to specified format and returns as file             
+
+### **ConvertCalendarModelToFileRequestData** Parameters
+```java
+public ConvertCalendarModelToFileRequestData(
+    String format, 
+    CalendarDto calendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **calendarDto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertContact"></a>
+## **convertContact**
+> byte[] convertContact(ConvertContactRequestData request)
+
+Converts contact document to specified format and returns as file             
+
+### **ConvertContactRequestData** Parameters
+```java
+public ConvertContactRequestData(
+    String destinationFormat, 
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format to convert to Enum, available values: VCard, WebDav, Msg |
+ **format** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertContactModelToFile"></a>
+## **convertContactModelToFile**
+> byte[] convertContactModelToFile(ConvertContactModelToFileRequestData request)
+
+Converts contact model to specified format and returns as file             
+
+### **ConvertContactModelToFileRequestData** Parameters
+```java
+public ConvertContactModelToFileRequestData(
+    String destinationFormat, 
+    ContactDto contactDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **contactDto** | [**ContactDto**](ContactDto.md)| Contact model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertEmail"></a>
 ## **convertEmail**
-> [File](File.md) convertEmail(ConvertEmailRequestData request)
+> byte[] convertEmail(ConvertEmailRequestData request)
 
 Converts email document to specified format and returns as file             
 
@@ -658,11 +756,35 @@ public ConvertEmailRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
- **file** | **byte[]**| File to upload |
+ **file** | **byte[]**| File to convert |
 
 ### Return type
 
-[**File**](File.md)
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertEmailModelToFile"></a>
+## **convertEmailModelToFile**
+> byte[] convertEmailModelToFile(ConvertEmailModelToFileRequestData request)
+
+Converts Email model to specified format and returns as file             
+
+### **ConvertEmailModelToFileRequestData** Parameters
+```java
+public ConvertEmailModelToFileRequestData(
+    String destinationFormat, 
+    EmailDto emailDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **emailDto** | [**EmailDto**](EmailDto.md)| Email model to convert |
+
+### Return type
+
+**byte[]**
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -670,7 +792,7 @@ Name | Type | Description  | Notes
 ## **copyFile**
 > void copyFile(CopyFileRequestData request)
 
-Copy file
+
 
 ### **CopyFileRequestData** Parameters
 ```java
@@ -684,11 +806,11 @@ public CopyFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source file path e.g. &#39;/folder/file.ext&#39; |
- **destPath** | **String**| Destination file path |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to copy | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -700,7 +822,7 @@ void (empty response body)
 ## **copyFolder**
 > void copyFolder(CopyFolderRequestData request)
 
-Copy folder
+
 
 ### **CopyFolderRequestData** Parameters
 ```java
@@ -713,10 +835,10 @@ public CopyFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source folder path e.g. &#39;/src&#39; |
- **destPath** | **String**| Destination folder path e.g. &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -824,7 +946,7 @@ void (empty response body)
 ## **createFolder**
 > void createFolder(CreateFolderRequestData request)
 
-Create the folder
+
 
 ### **CreateFolderRequestData** Parameters
 ```java
@@ -835,8 +957,8 @@ public CreateFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -970,11 +1092,35 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="deleteEmailThread"></a>
+## **deleteEmailThread**
+> void deleteEmailThread(DeleteEmailThreadRequestData request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+### **DeleteEmailThreadRequestData** Parameters
+```java
+public DeleteEmailThreadRequestData(
+    String threadId, 
+    DeleteEmailThreadAccountRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread id |
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="deleteFile"></a>
 ## **deleteFile**
 > void deleteFile(DeleteFileRequestData request)
 
-Delete file
+
 
 ### **DeleteFileRequestData** Parameters
 ```java
@@ -986,9 +1132,9 @@ public DeleteFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to delete | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -1000,7 +1146,7 @@ void (empty response body)
 ## **deleteFolder**
 > void deleteFolder(DeleteFolderRequestData request)
 
-Delete folder
+
 
 ### **DeleteFolderRequestData** Parameters
 ```java
@@ -1012,9 +1158,9 @@ public DeleteFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **recursive** | **Boolean**| Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **recursive** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1144,7 +1290,7 @@ Name | Type | Description  | Notes
 ## **downloadFile**
 > byte[] downloadFile(DownloadFileRequestData request)
 
-Download file
+
 
 ### **DownloadFileRequestData** Parameters
 ```java
@@ -1156,9 +1302,9 @@ public DownloadFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to download | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -1178,6 +1324,7 @@ public FetchEmailMessageRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
+    String folder, 
     String storage, 
     String storageFolder)
 ```
@@ -1186,7 +1333,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
@@ -1208,6 +1356,7 @@ public FetchEmailModelRequestData(
     String messageId, 
     String firstAccount, 
     String secondAccount, 
+    String folder, 
     String storage, 
     String storageFolder)
 ```
@@ -1216,13 +1365,46 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **String**| Message identifier |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
 
 ### Return type
 
 [**EmailDto**](EmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="fetchEmailThreadMessages"></a>
+## **fetchEmailThreadMessages**
+> [ListResponseOfEmailDto](ListResponseOfEmailDto.md) fetchEmailThreadMessages(FetchEmailThreadMessagesRequestData request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### **FetchEmailThreadMessagesRequestData** Parameters
+```java
+public FetchEmailThreadMessagesRequestData(
+    String threadId, 
+    String firstAccount, 
+    String secondAccount, 
+    String folder, 
+    String storage, 
+    String storageFolder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread identifier |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **folder** | **String**| Specifies account folder to get thread from              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1252,6 +1434,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getCalendarAsFile"></a>
+## **getCalendarAsFile**
+> byte[] getCalendarAsFile(GetCalendarAsFileRequestData request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### **GetCalendarAsFileRequestData** Parameters
+```java
+public GetCalendarAsFileRequestData(
+    String fileName, 
+    String format, 
+    String storage, 
+    String folder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileName** | **String**| Calendar document file name |
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **storage** | **String**| Storage name | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendarAttachment"></a>
 ## **getCalendarAttachment**
 > byte[] getCalendarAttachment(GetCalendarAttachmentRequestData request)
@@ -1277,6 +1487,28 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getCalendarFileAsModel"></a>
+## **getCalendarFileAsModel**
+> [CalendarDto](CalendarDto.md) getCalendarFileAsModel(GetCalendarFileAsModelRequestData request)
+
+Converts calendar document to a model representation             
+
+### **GetCalendarFileAsModelRequestData** Parameters
+```java
+public GetCalendarFileAsModelRequestData(
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1392,6 +1624,36 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getContactAsFile"></a>
+## **getContactAsFile**
+> byte[] getContactAsFile(GetContactAsFileRequestData request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### **GetContactAsFileRequestData** Parameters
+```java
+public GetContactAsFileRequestData(
+    String fileName, 
+    String destinationFormat, 
+    String format, 
+    String storage, 
+    String folder)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileName** | **String**| Calendar document file name |
+ **destinationFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **format** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
+ **storage** | **String**| Storage name | [optional]
+ **folder** | **String**| Path to folder in storage | [optional]
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getContactAttachment"></a>
 ## **getContactAttachment**
 > byte[] getContactAttachment(GetContactAttachmentRequestData request)
@@ -1419,6 +1681,30 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactFileAsModel"></a>
+## **getContactFileAsModel**
+> [ContactDto](ContactDto.md) getContactFileAsModel(GetContactFileAsModelRequestData request)
+
+Converts contact document to a model representation             
+
+### **GetContactFileAsModelRequestData** Parameters
+```java
+public GetContactFileAsModelRequestData(
+    String format, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1542,7 +1828,7 @@ Name | Type | Description  | Notes
 ## **getDiscUsage**
 > [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequestData request)
 
-Get disc usage
+
 
 ### **GetDiscUsageRequestData** Parameters
 ```java
@@ -1552,7 +1838,7 @@ public GetDiscUsageRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storageName** | **String**| Storage name | [optional]
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -1694,6 +1980,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getEmailFileAsModel"></a>
+## **getEmailFileAsModel**
+> [EmailDto](EmailDto.md) getEmailFileAsModel(GetEmailFileAsModelRequestData request)
+
+Converts email document to a model representation             
+
+### **GetEmailFileAsModelRequestData** Parameters
+```java
+public GetEmailFileAsModelRequestData(
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getEmailModel"></a>
 ## **getEmailModel**
 > [EmailDto](EmailDto.md) getEmailModel(GetEmailModelRequestData request)
@@ -1784,7 +2092,7 @@ Name | Type | Description  | Notes
 ## **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
 
-Get file versions
+
 
 ### **GetFileVersionsRequestData** Parameters
 ```java
@@ -1795,8 +2103,8 @@ public GetFileVersionsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File path e.g. &#39;/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -1808,7 +2116,7 @@ Name | Type | Description  | Notes
 ## **getFilesList**
 > [FilesList](FilesList.md) getFilesList(GetFilesListRequestData request)
 
-Get all files and folders within a folder
+
 
 ### **GetFilesListRequestData** Parameters
 ```java
@@ -1819,8 +2127,8 @@ public GetFilesListRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -1977,7 +2285,7 @@ public ListEmailFoldersRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **parentFolder** | **String**| Folder in which subfolders should be listed | [optional]
@@ -2013,7 +2321,7 @@ Name | Type | Description  | Notes
  **folder** | **String**| A folder in email account |
  **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -2036,8 +2344,8 @@ The query string should have the following view.      The example of a simple ex
 ```java
 public ListEmailModelsRequestData(
     String folder, 
-    String queryString, 
     String firstAccount, 
+    String queryString, 
     String secondAccount, 
     String storage, 
     String storageFolder, 
@@ -2047,9 +2355,9 @@ public ListEmailModelsRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **String**| A folder in email account |
- **queryString** | **String**| A MailQuery search string |
  **firstAccount** | **String**| Email account |
- **secondAccount** | **String**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional]
+ **queryString** | **String**| A MailQuery search string | [optional]
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
  **storage** | **String**| Storage name where account file(s) located | [optional]
  **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
  **recursive** | **Boolean**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -2060,11 +2368,91 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="listEmailThreads"></a>
+## **listEmailThreads**
+> [EmailThreadList](EmailThreadList.md) listEmailThreads(ListEmailThreadsRequestData request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+### **ListEmailThreadsRequestData** Parameters
+```java
+public ListEmailThreadsRequestData(
+    String folder, 
+    String firstAccount, 
+    String secondAccount, 
+    String storage, 
+    String storageFolder, 
+    Boolean updateFolderCache, 
+    Integer messagesCacheLimit)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **String**| A folder in email account.              |
+ **firstAccount** | **String**| Email account |
+ **secondAccount** | **String**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional]
+ **storage** | **String**| Storage name where account file(s) located | [optional]
+ **storageFolder** | **String**| Folder in storage where account file(s) located | [optional]
+ **updateFolderCache** | **Boolean**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messagesCacheLimit** | **Integer**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
+
+### Return type
+
+[**EmailThreadList**](EmailThreadList.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="moveEmailMessage"></a>
+## **moveEmailMessage**
+> void moveEmailMessage(MoveEmailMessageRequestData request)
+
+Move message to another folder             
+
+### **MoveEmailMessageRequestData** Parameters
+```java
+public MoveEmailMessageRequestData(
+    MoveEmailMessageRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="moveEmailThread"></a>
+## **moveEmailThread**
+> void moveEmailThread(MoveEmailThreadRequestData request)
+
+Move thread to another folder             
+
+### **MoveEmailThreadRequestData** Parameters
+```java
+public MoveEmailThreadRequestData(
+    String threadId, 
+    MoveEmailThreadRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread identifier |
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="moveFile"></a>
 ## **moveFile**
 > void moveFile(MoveFileRequestData request)
 
-Move file
+
 
 ### **MoveFileRequestData** Parameters
 ```java
@@ -2078,11 +2466,11 @@ public MoveFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Source file path e.g. &#39;/src.ext&#39; |
- **destPath** | **String**| Destination file path e.g. &#39;/dest.ext&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to move | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -2094,7 +2482,7 @@ void (empty response body)
 ## **moveFolder**
 > void moveFolder(MoveFolderRequestData request)
 
-Move folder
+
 
 ### **MoveFolderRequestData** Parameters
 ```java
@@ -2107,10 +2495,10 @@ public MoveFolderRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **srcPath** | **String**| Folder path to move e.g. &#39;/folder&#39; |
- **destPath** | **String**| Destination folder path to move to e.g &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -2122,7 +2510,7 @@ void (empty response body)
 ## **objectExists**
 > [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequestData request)
 
-Check if file or folder exists
+
 
 ### **ObjectExistsRequestData** Parameters
 ```java
@@ -2134,9 +2522,9 @@ public ObjectExistsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -2255,7 +2643,7 @@ public SaveEmailModelRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
- **name** | **String**| iCalendar file name in storage. |
+ **name** | **String**| Email document file name in storage. |
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. |
 
 ### Return type
@@ -2422,11 +2810,35 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="setEmailThreadReadFlag"></a>
+## **setEmailThreadReadFlag**
+> void setEmailThreadReadFlag(SetEmailThreadReadFlagRequestData request)
+
+Mark all messages in thread as read or unread             
+
+### **SetEmailThreadReadFlagRequestData** Parameters
+```java
+public SetEmailThreadReadFlagRequestData(
+    String threadId, 
+    EmailThreadReadFlagRq request)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **threadId** | **String**| Thread id |
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="storageExists"></a>
 ## **storageExists**
 > [StorageExist](StorageExist.md) storageExists(StorageExistsRequestData request)
 
-Check if storage exists
+
 
 ### **StorageExistsRequestData** Parameters
 ```java
@@ -2436,7 +2848,7 @@ public StorageExistsRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storageName** | **String**| Storage name |
+ **storageName** | **String**|  |
 
 ### Return type
 
@@ -2522,7 +2934,7 @@ void (empty response body)
 ## **uploadFile**
 > [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequestData request)
 
-Upload file
+
 
 ### **UploadFileRequestData** Parameters
 ```java
@@ -2534,9 +2946,9 @@ public UploadFileRequestData(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **String**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              |
+ **path** | **String**|  |
  **file** | **byte[]**| File to upload |
- **storageName** | **String**| Storage name | [optional]
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 

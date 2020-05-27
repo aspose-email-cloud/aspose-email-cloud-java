@@ -26,7 +26,6 @@ target
 .gradle
 build
 
-.settings
 .classpath
 .project
 
@@ -35,4 +34,6 @@ build
 
 # BlueJ files
 *.ctxt
+
 .vscode
+.idea

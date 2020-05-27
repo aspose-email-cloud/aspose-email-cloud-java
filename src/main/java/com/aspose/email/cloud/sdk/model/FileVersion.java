@@ -1,7 +1,7 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="FileVersion.java">
-*   Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
 *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * File Version
+ * FileVersion
  */
 public class FileVersion extends StorageFile {
   @JsonProperty("versionId")
@@ -51,7 +51,7 @@ public class FileVersion extends StorageFile {
 
   /**
    * Set versionId and return this.
-   * @param versionId File Version ID.
+   * @param versionId 
    * @return this
   **/
   public FileVersion versionId(String versionId) {
@@ -60,7 +60,7 @@ public class FileVersion extends StorageFile {
   }
 
   /**
-   * File Version ID.
+   * Get versionId
    * @return versionId
   **/
   public String getVersionId() {
@@ -69,7 +69,7 @@ public class FileVersion extends StorageFile {
 
   /**
    * Set versionId.
-   * @param versionId File Version ID.
+   * @param versionId 
   **/
   public void setVersionId(String versionId) {
     this.versionId = versionId;
@@ -77,7 +77,7 @@ public class FileVersion extends StorageFile {
 
   /**
    * Set isLatest and return this.
-   * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+   * @param isLatest 
    * @return this
   **/
   public FileVersion isLatest(Boolean isLatest) {
@@ -86,7 +86,7 @@ public class FileVersion extends StorageFile {
   }
 
   /**
-   * Specifies whether the file is (true) or is not (false) the latest version of an file.
+   * Get isLatest
    * @return isLatest
   **/
   public Boolean isIsLatest() {
@@ -95,7 +95,7 @@ public class FileVersion extends StorageFile {
 
   /**
    * Set isLatest.
-   * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+   * @param isLatest 
   **/
   public void setIsLatest(Boolean isLatest) {
     this.isLatest = isLatest;
@@ -155,13 +155,13 @@ public class FileVersion extends StorageFile {
 
   /**
    * Initializes a new instance of the FileVersion
-   * @param name File or folder name.
-   * @param isFolder True if it is a folder.
-   * @param modifiedDate File or folder last modified DateTime.
-   * @param size File or folder size.
-   * @param path File or folder path.
-   * @param versionId File Version ID.
-   * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+   * @param name 
+   * @param isFolder 
+   * @param modifiedDate 
+   * @param size 
+   * @param path 
+   * @param versionId 
+   * @param isLatest 
    */
   public FileVersion(String name, Boolean isFolder, Date modifiedDate, Long size, String path, String versionId, Boolean isLatest) {
     super();
