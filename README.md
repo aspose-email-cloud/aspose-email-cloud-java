@@ -43,7 +43,7 @@ Use [SDK tutorials](https://docs.aspose.cloud/display/emailcloud/SDK+Tutorials):
 - [Email Client Threads](https://docs.aspose.cloud/display/emailcloud/Email+Client+Threads) - Fetch/Move/Delete email message threads using builtin email client
 - [File converters](https://docs.aspose.cloud/display/emailcloud/Convert+Email%2C+Calendar+and+Contact+Files)
 
-SDK reference documentation is available in [this README](https://github.com/aspose-email-cloud/aspose-email-cloud-dotnet/blob/master/docs/README.md)
+SDK reference documentation is available in [this README](https://github.com/aspose-email-cloud/aspose-email-cloud-java/blob/master/docs/README.md)
 
 ### Prerequisites
 To use these SDK, you need an App SID and an App Key; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
