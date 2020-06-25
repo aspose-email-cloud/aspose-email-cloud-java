@@ -173,7 +173,7 @@ public class EmailApiTests {
         assert "Cane".equals(surname);
     }
 
-    @Test(groups = {"ai", "pipeline"})
+    @Test(groups = {"ai"})
     public void aiBcrParseStorageTest() throws ApiException, IOException {
         String fileName = UUID.randomUUID().toString() + ".png";
         String filePath = folder + "/" + fileName;
@@ -213,7 +213,7 @@ public class EmailApiTests {
         assert primitives.size() >= 3;
     }
 
-    @Test(groups = {"ai", "pipeline"})
+    @Test(groups = {"ai"})
     public void aiBcrParseTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
                 this.getClass().getResourceAsStream("test_single_0001.png"));
@@ -298,7 +298,7 @@ public class EmailApiTests {
         assert objectExist.isExists();
     }
 
-    @Test(groups = {"ai", "pipeline"})
+    @Test(groups = {"ai"})
     public void aiBcrParseModelTest() throws ApiException, IOException {
         byte[] fileBytes = IOUtils.toByteArray(
                 this.getClass().getResourceAsStream("test_single_0001.png"));
