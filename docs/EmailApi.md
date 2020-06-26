@@ -644,6 +644,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertCalendarDtoToMapiModel"></a>
+## **convertCalendarDtoToMapiModel**
+> [MapiCalendarDto](MapiCalendarDto.md) convertCalendarDtoToMapiModel(ConvertCalendarDtoToMapiModelRequestData request)
+
+Convert CalendarDto to MapiCalendarDto             
+
+### **ConvertCalendarDtoToMapiModelRequestData** Parameters
+```java
+public ConvertCalendarDtoToMapiModelRequestData(
+    CalendarDto calendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendarDto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation |
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertCalendarModelToAlternate"></a>
 ## **convertCalendarModelToAlternate**
 > [AlternateView](AlternateView.md) convertCalendarModelToAlternate(ConvertCalendarModelToAlternateRequestData request)
@@ -740,6 +762,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="convertContactModelToMapiModel"></a>
+## **convertContactModelToMapiModel**
+> [MapiContactDto](MapiContactDto.md) convertContactModelToMapiModel(ConvertContactModelToMapiModelRequestData request)
+
+Convert contact model to MAPI model contact representation             
+
+### **ConvertContactModelToMapiModelRequestData** Parameters
+```java
+public ConvertContactModelToMapiModelRequestData(
+    ContactDto contactDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contactDto** | [**ContactDto**](ContactDto.md)| Contact model to convert |
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="convertEmail"></a>
 ## **convertEmail**
 > byte[] convertEmail(ConvertEmailRequestData request)
@@ -781,6 +825,166 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinationFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
  **emailDto** | [**EmailDto**](EmailDto.md)| Email model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertEmailModelToMapiModel"></a>
+## **convertEmailModelToMapiModel**
+> [MapiMessageDto](MapiMessageDto.md) convertEmailModelToMapiModel(ConvertEmailModelToMapiModelRequestData request)
+
+Converts Email model to MAPI model message representation             
+
+### **ConvertEmailModelToMapiModelRequestData** Parameters
+```java
+public ConvertEmailModelToMapiModelRequestData(
+    EmailDto emailDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **emailDto** | [**EmailDto**](EmailDto.md)| Email model to convert |
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiCalendarModelToCalendarModel"></a>
+## **convertMapiCalendarModelToCalendarModel**
+> [CalendarDto](CalendarDto.md) convertMapiCalendarModelToCalendarModel(ConvertMapiCalendarModelToCalendarModelRequestData request)
+
+Converts MAPI calendar model to CalendarDto model             
+
+### **ConvertMapiCalendarModelToCalendarModelRequestData** Parameters
+```java
+public ConvertMapiCalendarModelToCalendarModelRequestData(
+    MapiCalendarDto mapiCalendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapiCalendarDto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert |
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiCalendarModelToFile"></a>
+## **convertMapiCalendarModelToFile**
+> byte[] convertMapiCalendarModelToFile(ConvertMapiCalendarModelToFileRequestData request)
+
+Converts MAPI calendar model to specified format and returns as file             
+
+### **ConvertMapiCalendarModelToFileRequestData** Parameters
+```java
+public ConvertMapiCalendarModelToFileRequestData(
+    String destinationFormat, 
+    MapiCalendarDto mapiCalendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: Ics, Msg |
+ **mapiCalendarDto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiContactModelToContactModel"></a>
+## **convertMapiContactModelToContactModel**
+> [ContactDto](ContactDto.md) convertMapiContactModelToContactModel(ConvertMapiContactModelToContactModelRequestData request)
+
+Converts MAPI contact model to Contact model             
+
+### **ConvertMapiContactModelToContactModelRequestData** Parameters
+```java
+public ConvertMapiContactModelToContactModelRequestData(
+    MapiContactDto mapiContactDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapiContactDto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert |
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiContactModelToFile"></a>
+## **convertMapiContactModelToFile**
+> byte[] convertMapiContactModelToFile(ConvertMapiContactModelToFileRequestData request)
+
+Converts MAPI contact model to specified format and returns as file             
+
+### **ConvertMapiContactModelToFileRequestData** Parameters
+```java
+public ConvertMapiContactModelToFileRequestData(
+    String destinationFormat, 
+    MapiContactDto mapiContactDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **mapiContactDto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert |
+
+### Return type
+
+**byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiMessageModelToEmailModel"></a>
+## **convertMapiMessageModelToEmailModel**
+> [EmailDto](EmailDto.md) convertMapiMessageModelToEmailModel(ConvertMapiMessageModelToEmailModelRequestData request)
+
+Converts MAPI message model to EmailDto model             
+
+### **ConvertMapiMessageModelToEmailModelRequestData** Parameters
+```java
+public ConvertMapiMessageModelToEmailModelRequestData(
+    MapiMessageDto mapiMessage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapiMessage** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert |
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertMapiMessageModelToFile"></a>
+## **convertMapiMessageModelToFile**
+> byte[] convertMapiMessageModelToFile(ConvertMapiMessageModelToFileRequestData request)
+
+Converts MAPI message model to specified format and returns as file             
+
+### **ConvertMapiMessageModelToFileRequestData** Parameters
+```java
+public ConvertMapiMessageModelToFileRequestData(
+    String destinationFormat, 
+    MapiMessageDto mapiMessage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinationFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **mapiMessage** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert |
 
 ### Return type
 
@@ -1490,6 +1694,28 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getCalendarFileAsMapiModel"></a>
+## **getCalendarFileAsMapiModel**
+> [MapiCalendarDto](MapiCalendarDto.md) getCalendarFileAsMapiModel(GetCalendarFileAsMapiModelRequestData request)
+
+Converts calendar file to a MAPI model representation             
+
+### **GetCalendarFileAsMapiModelRequestData** Parameters
+```java
+public GetCalendarFileAsMapiModelRequestData(
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getCalendarFileAsModel"></a>
 ## **getCalendarFileAsModel**
 > [CalendarDto](CalendarDto.md) getCalendarFileAsModel(GetCalendarFileAsModelRequestData request)
@@ -1681,6 +1907,30 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getContactFileAsMapiModel"></a>
+## **getContactFileAsMapiModel**
+> [MapiContactDto](MapiContactDto.md) getContactFileAsMapiModel(GetContactFileAsMapiModelRequestData request)
+
+Converts contact file to a MAPI model representation             
+
+### **GetContactFileAsMapiModelRequestData** Parameters
+```java
+public GetContactFileAsMapiModelRequestData(
+    String fileFormat, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -1980,6 +2230,30 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getEmailFileAsMapiModel"></a>
+## **getEmailFileAsMapiModel**
+> [MapiMessageDto](MapiMessageDto.md) getEmailFileAsMapiModel(GetEmailFileAsMapiModelRequestData request)
+
+Converts email file to a MAPI model representation             
+
+### **GetEmailFileAsMapiModelRequestData** Parameters
+```java
+public GetEmailFileAsMapiModelRequestData(
+    String fileFormat, 
+    byte[] file)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **file** | **byte[]**| File to convert |
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getEmailFileAsModel"></a>
 ## **getEmailFileAsModel**
 > [EmailDto](EmailDto.md) getEmailFileAsModel(GetEmailFileAsModelRequestData request)
@@ -2190,6 +2464,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
+<a name="getMapiCalendarModel"></a>
+## **getMapiCalendarModel**
+> [MapiCalendarDto](MapiCalendarDto.md) getMapiCalendarModel(GetMapiCalendarModelRequestData request)
+
+Get calendar file             
+
+### **GetMapiCalendarModelRequestData** Parameters
+```java
+public GetMapiCalendarModelRequestData(
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| Calendar file name in storage |
+ **folder** | **String**| Path to folder in storage | [optional]
+ **storage** | **String**| Storage name | [optional]
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getMapiContactModel"></a>
+## **getMapiContactModel**
+> [MapiContactDto](MapiContactDto.md) getMapiContactModel(GetMapiContactModelRequestData request)
+
+Get contact document.             
+
+### **GetMapiContactModelRequestData** Parameters
+```java
+public GetMapiContactModelRequestData(
+    String format, 
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
+ **name** | **String**| Contact document file name. |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
 <a name="getMapiList"></a>
 ## **getMapiList**
 > [ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md) getMapiList(GetMapiListRequestData request)
@@ -2215,6 +2543,34 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="getMapiMessageModel"></a>
+## **getMapiMessageModel**
+> [MapiMessageDto](MapiMessageDto.md) getMapiMessageModel(GetMapiMessageModelRequestData request)
+
+MAPI message document.             
+
+### **GetMapiMessageModelRequestData** Parameters
+```java
+public GetMapiMessageModelRequestData(
+    String format, 
+    String name, 
+    String folder, 
+    String storage)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **name** | **String**| Email document file name. |
+ **folder** | **String**| Path to folder in storage. | [optional]
+ **storage** | **String**| Storage name. | [optional]
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
@@ -2548,7 +2904,7 @@ public SaveCalendarModelRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| iCalendar file name in storage |
- **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request |
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar update request |
 
 ### Return type
 
@@ -2574,7 +2930,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name. |
- **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. |
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create/Update contact request. |
 
 ### Return type
 
@@ -2644,7 +3000,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **String**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
  **name** | **String**| Email document file name in storage. |
- **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. |
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Email document create/update request. |
 
 ### Return type
 
@@ -2689,6 +3045,84 @@ public SaveMailOAuthAccountRequestData(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SaveOAuthEmailAccountRequest**](SaveOAuthEmailAccountRequest.md)| Email account information |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveMapiCalendarModel"></a>
+## **saveMapiCalendarModel**
+> void saveMapiCalendarModel(SaveMapiCalendarModelRequestData request)
+
+Save MAPI Calendar to storage.             
+
+### **SaveMapiCalendarModelRequestData** Parameters
+```java
+public SaveMapiCalendarModelRequestData(
+    String name, 
+    String format, 
+    StorageModelRqOfMapiCalendarDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| Calendar file name in storage |
+ **format** | **String**| File format Enum, available values: Ics, Msg |
+ **rq** | [**StorageModelRqOfMapiCalendarDto**](StorageModelRqOfMapiCalendarDto.md)| Calendar update request |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveMapiContactModel"></a>
+## **saveMapiContactModel**
+> void saveMapiContactModel(SaveMapiContactModelRequestData request)
+
+Save contact.             
+
+### **SaveMapiContactModelRequestData** Parameters
+```java
+public SaveMapiContactModelRequestData(
+    String format, 
+    String name, 
+    StorageModelRqOfMapiContactDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
+ **name** | **String**| Contact document file name. |
+ **rq** | [**StorageModelRqOfMapiContactDto**](StorageModelRqOfMapiContactDto.md)| Create/Update contact request. |
+
+### Return type
+
+void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="saveMapiMessageModel"></a>
+## **saveMapiMessageModel**
+> void saveMapiMessageModel(SaveMapiMessageModelRequestData request)
+
+Save MAPI message.             
+
+### **SaveMapiMessageModelRequestData** Parameters
+```java
+public SaveMapiMessageModelRequestData(
+    String format, 
+    String name, 
+    StorageModelRqOfMapiMessageDto rq)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **String**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html |
+ **name** | **String**| Message file name in storage. |
+ **rq** | [**StorageModelRqOfMapiMessageDto**](StorageModelRqOfMapiMessageDto.md)| Message create/update request. |
 
 ### Return type
 

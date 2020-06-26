@@ -9,6 +9,7 @@ public class Derive {
         builder.registerTypeAdapter(AiBcrRq.class, new TypeDeriveAdapter<AiBcrRq>());
         builder.registerTypeAdapter(AiNameParsedRq.class, new TypeDeriveAdapter<AiNameParsedRq>());
         builder.registerTypeAdapter(AttachmentBase.class, new TypeDeriveAdapter<AttachmentBase>());
+        builder.registerTypeAdapter(ContactPhoto.class, new TypeDeriveAdapter<ContactPhoto>());
         builder.registerTypeAdapter(DiscoverEmailConfigRq.class, new TypeDeriveAdapter<DiscoverEmailConfigRq>());
         builder.registerTypeAdapter(EmailAccountRequest.class, new TypeDeriveAdapter<EmailAccountRequest>());
         builder.registerTypeAdapter(EmailClientAccountCredentials.class, new TypeDeriveAdapter<EmailClientAccountCredentials>());
@@ -17,7 +18,12 @@ public class Derive {
         builder.registerTypeAdapter(ListResponseOfStorageModelOfCalendarDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfCalendarDto>());
         builder.registerTypeAdapter(ListResponseOfStorageModelOfContactDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfContactDto>());
         builder.registerTypeAdapter(ListResponseOfStorageModelOfEmailDto.class, new TypeDeriveAdapter<ListResponseOfStorageModelOfEmailDto>());
+        builder.registerTypeAdapter(MapiCalendarRecurrencePatternDto.class, new TypeDeriveAdapter<MapiCalendarRecurrencePatternDto>());
+        builder.registerTypeAdapter(MapiMessageItemBaseDto.class, new TypeDeriveAdapter<MapiMessageItemBaseDto>());
+        builder.registerTypeAdapter(MapiPropertyDescriptor.class, new TypeDeriveAdapter<MapiPropertyDescriptor>());
+        builder.registerTypeAdapter(MapiPropertyDto.class, new TypeDeriveAdapter<MapiPropertyDto>());
         builder.registerTypeAdapter(StorageFile.class, new TypeDeriveAdapter<StorageFile>());
         builder.registerTypeAdapter(StorageFolderLocation.class, new TypeDeriveAdapter<StorageFolderLocation>());
+        builder.registerTypeAdapter(MapiPidPropertyDescriptor.class, new TypeDeriveAdapter<MapiPidPropertyDescriptor>());
     }
 }
