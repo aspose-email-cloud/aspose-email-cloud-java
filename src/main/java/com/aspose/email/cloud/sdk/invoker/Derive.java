@@ -22,6 +22,7 @@ public class Derive {
         builder.registerTypeAdapter(MapiMessageItemBaseDto.class, new TypeDeriveAdapter<MapiMessageItemBaseDto>());
         builder.registerTypeAdapter(MapiPropertyDescriptor.class, new TypeDeriveAdapter<MapiPropertyDescriptor>());
         builder.registerTypeAdapter(MapiPropertyDto.class, new TypeDeriveAdapter<MapiPropertyDto>());
+        builder.registerTypeAdapter(RecurrencePatternDto.class, new TypeDeriveAdapter<RecurrencePatternDto>());
         builder.registerTypeAdapter(StorageFile.class, new TypeDeriveAdapter<StorageFile>());
         builder.registerTypeAdapter(StorageFolderLocation.class, new TypeDeriveAdapter<StorageFolderLocation>());
         builder.registerTypeAdapter(MapiPidPropertyDescriptor.class, new TypeDeriveAdapter<MapiPidPropertyDescriptor>());

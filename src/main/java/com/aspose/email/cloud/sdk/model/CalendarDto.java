@@ -85,6 +85,9 @@ public class CalendarDto {
   @JsonProperty("recurrenceString")
   private String recurrenceString = null;
 
+  @JsonProperty("recurrence")
+  private RecurrencePatternDto recurrence = null;
+
   @JsonProperty("reminders")
   private List<CalendarReminder> reminders = null;
 
@@ -491,7 +494,7 @@ public class CalendarDto {
 
   /**
    * Set recurrenceString and return this.
-   * @param recurrenceString String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
+   * @param recurrenceString Deprecated, use &#39;Recurrence&#39; property. String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
    * @return this
   **/
   public CalendarDto recurrenceString(String recurrenceString) {
@@ -500,7 +503,7 @@ public class CalendarDto {
   }
 
   /**
-   * String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
+   * Deprecated, use &#39;Recurrence&#39; property. String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
    * @return recurrenceString
   **/
   public String getRecurrenceString() {
@@ -509,10 +512,36 @@ public class CalendarDto {
 
   /**
    * Set recurrenceString.
-   * @param recurrenceString String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
+   * @param recurrenceString Deprecated, use &#39;Recurrence&#39; property. String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
   **/
   public void setRecurrenceString(String recurrenceString) {
     this.recurrenceString = recurrenceString;
+  }
+
+  /**
+   * Set recurrence and return this.
+   * @param recurrence Recurrence pattern             
+   * @return this
+  **/
+  public CalendarDto recurrence(RecurrencePatternDto recurrence) {
+    this.recurrence = recurrence;
+    return this;
+  }
+
+  /**
+   * Recurrence pattern             
+   * @return recurrence
+  **/
+  public RecurrencePatternDto getRecurrence() {
+    return recurrence;
+  }  
+
+  /**
+   * Set recurrence.
+   * @param recurrence Recurrence pattern             
+  **/
+  public void setRecurrence(RecurrencePatternDto recurrence) {
+    this.recurrence = recurrence;
   }
 
   /**
@@ -733,6 +762,7 @@ public class CalendarDto {
     ObjectUtils.equals(this.optionalAttendees, calendarDto.optionalAttendees) &&
     ObjectUtils.equals(this.organizer, calendarDto.organizer) &&
     ObjectUtils.equals(this.recurrenceString, calendarDto.recurrenceString) &&
+    ObjectUtils.equals(this.recurrence, calendarDto.recurrence) &&
     ObjectUtils.equals(this.reminders, calendarDto.reminders) &&
     ObjectUtils.equals(this.sequenceId, calendarDto.sequenceId) &&
     ObjectUtils.equals(this.startDate, calendarDto.startDate) &&
@@ -744,7 +774,7 @@ public class CalendarDto {
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency);
+    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency);
   }
 
 
@@ -767,6 +797,7 @@ public class CalendarDto {
     sb.append("    optionalAttendees: ").append(toIndentedString(getOptionalAttendees())).append("\n");
     sb.append("    organizer: ").append(toIndentedString(getOrganizer())).append("\n");
     sb.append("    recurrenceString: ").append(toIndentedString(getRecurrenceString())).append("\n");
+    sb.append("    recurrence: ").append(toIndentedString(getRecurrence())).append("\n");
     sb.append("    reminders: ").append(toIndentedString(getReminders())).append("\n");
     sb.append("    sequenceId: ").append(toIndentedString(getSequenceId())).append("\n");
     sb.append("    startDate: ").append(toIndentedString(getStartDate())).append("\n");
@@ -808,7 +839,8 @@ public class CalendarDto {
    * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @param optionalAttendees Optional attendees.             
    * @param organizer Event organizer.             
-   * @param recurrenceString String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
+   * @param recurrenceString Deprecated, use &#39;Recurrence&#39; property. String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
+   * @param recurrence Recurrence pattern             
    * @param reminders Reminders.
    * @param sequenceId The sequence id. Read only.
    * @param startDate Start date.
@@ -817,7 +849,7 @@ public class CalendarDto {
    * @param summary Summary.
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
    */
-  public CalendarDto(List<Attachment> attachments, List<MailAddress> attendees, String description, Date endDate, String endTimeZone, List<String> flags, Boolean isDescriptionHtml, String location, String method, String microsoftBusyStatus, String microsoftIntendedStatus, List<MailAddress> optionalAttendees, MailAddress organizer, String recurrenceString, List<CalendarReminder> reminders, String sequenceId, Date startDate, String startTimeZone, String status, String summary, String transparency) {
+  public CalendarDto(List<Attachment> attachments, List<MailAddress> attendees, String description, Date endDate, String endTimeZone, List<String> flags, Boolean isDescriptionHtml, String location, String method, String microsoftBusyStatus, String microsoftIntendedStatus, List<MailAddress> optionalAttendees, MailAddress organizer, String recurrenceString, RecurrencePatternDto recurrence, List<CalendarReminder> reminders, String sequenceId, Date startDate, String startTimeZone, String status, String summary, String transparency) {
     super();
     setAttachments(attachments);
     setAttendees(attendees);
@@ -833,6 +865,7 @@ public class CalendarDto {
     setOptionalAttendees(optionalAttendees);
     setOrganizer(organizer);
     setRecurrenceString(recurrenceString);
+    setRecurrence(recurrence);
     setReminders(reminders);
     setSequenceId(sequenceId);
     setStartDate(startDate);

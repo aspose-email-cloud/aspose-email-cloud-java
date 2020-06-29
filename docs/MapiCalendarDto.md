@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **startDate** | [**Date**](Date.md) | Start date and time of the event. If the date is not set, default value for DateTime is returned.              | 
 **startDateTimeZone** | **Object** | Time zone information that indicates the time zone of the StartDate property.              |  [optional]
 **uid** | **String** | Unique identifier.              |  [optional]
+**organizer** | **Object** | Organizer              |  [optional]
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

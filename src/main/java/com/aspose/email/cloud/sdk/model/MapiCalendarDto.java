@@ -94,6 +94,9 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   @JsonProperty("uid")
   private String uid = null;
 
+  @JsonProperty("organizer")
+  private Object organizer = null;
+
   /**
    * Set appointmentCounterProposal and return this.
    * @param appointmentCounterProposal Value indicating whether a Meeting Response object is a counter proposal.             
@@ -548,6 +551,32 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.uid = uid;
   }
 
+  /**
+   * Set organizer and return this.
+   * @param organizer Organizer             
+   * @return this
+  **/
+  public MapiCalendarDto organizer(Object organizer) {
+    this.organizer = organizer;
+    return this;
+  }
+
+  /**
+   * Organizer             
+   * @return organizer
+  **/
+  public Object getOrganizer() {
+    return organizer;
+  }  
+
+  /**
+   * Set organizer.
+   * @param organizer Organizer             
+  **/
+  public void setOrganizer(Object organizer) {
+    this.organizer = organizer;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -575,12 +604,13 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     ObjectUtils.equals(this.startDate, mapiCalendarDto.startDate) &&
     ObjectUtils.equals(this.startDateTimeZone, mapiCalendarDto.startDateTimeZone) &&
     ObjectUtils.equals(this.uid, mapiCalendarDto.uid) &&
+    ObjectUtils.equals(this.organizer, mapiCalendarDto.organizer) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(appointmentCounterProposal, attendees, busyStatus, clientIntent, endDate, endDateTimeZone, isAllDay, keyWords, location, recurrence, reminderDelta, reminderFileParameter, reminderSet, sequence, startDate, startDateTimeZone, uid, super.hashCode());
+    return ObjectUtils.hashCodeMulti(appointmentCounterProposal, attendees, busyStatus, clientIntent, endDate, endDateTimeZone, isAllDay, keyWords, location, recurrence, reminderDelta, reminderFileParameter, reminderSet, sequence, startDate, startDateTimeZone, uid, organizer, super.hashCode());
   }
 
 
@@ -623,6 +653,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     sb.append("    startDate: ").append(toIndentedString(getStartDate())).append("\n");
     sb.append("    startDateTimeZone: ").append(toIndentedString(getStartDateTimeZone())).append("\n");
     sb.append("    uid: ").append(toIndentedString(getUid())).append("\n");
+    sb.append("    organizer: ").append(toIndentedString(getOrganizer())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -678,8 +709,9 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param startDate Start date and time of the event. If the date is not set, default value for DateTime is returned.             
    * @param startDateTimeZone Time zone information that indicates the time zone of the StartDate property.             
    * @param uid Unique identifier.             
+   * @param organizer Organizer             
    */
-  public MapiCalendarDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, Boolean appointmentCounterProposal, Object attendees, String busyStatus, List<String> clientIntent, Date endDate, Object endDateTimeZone, Boolean isAllDay, String keyWords, String location, Object recurrence, Integer reminderDelta, String reminderFileParameter, Boolean reminderSet, Integer sequence, Date startDate, Object startDateTimeZone, String uid) {
+  public MapiCalendarDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, Boolean appointmentCounterProposal, Object attendees, String busyStatus, List<String> clientIntent, Date endDate, Object endDateTimeZone, Boolean isAllDay, String keyWords, String location, Object recurrence, Integer reminderDelta, String reminderFileParameter, Boolean reminderSet, Integer sequence, Date startDate, Object startDateTimeZone, String uid, Object organizer) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -715,6 +747,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     setStartDate(startDate);
     setStartDateTimeZone(startDateTimeZone);
     setUid(uid);
+    setOrganizer(organizer);
   }
 
 }
