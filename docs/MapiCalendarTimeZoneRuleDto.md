@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | [**Date**](Date.md) | Date and time that indicate when to begin using the Standard/Daylight time.              | 
-**dayOfWeek** | **String** | Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday | 
+**dayOfWeek** | **String** | Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday | 
 **hour** | **Integer** | Hour.              | 
 **milliseconds** | **Integer** | Milliseconds.              | 
 **minute** | **Integer** | Minute.              | 

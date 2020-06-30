@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AiBcrImageStorageFile extends AiBcrImage {
   @JsonProperty("file")
-  private Object file = null;
+  private StorageFileLocation file = null;
 
   /**
    * Set file and return this.
    * @param file Image location             
    * @return this
   **/
-  public AiBcrImageStorageFile file(Object file) {
+  public AiBcrImageStorageFile file(StorageFileLocation file) {
     this.file = file;
     return this;
   }
@@ -60,7 +60,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * Image location             
    * @return file
   **/
-  public Object getFile() {
+  public StorageFileLocation getFile() {
     return file;
   }  
 
@@ -68,7 +68,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * Set file.
    * @param file Image location             
   **/
-  public void setFile(Object file) {
+  public void setFile(StorageFileLocation file) {
     this.file = file;
   }
 
@@ -123,7 +123,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
    * @param file Image location             
    */
-  public AiBcrImageStorageFile(Boolean isSingle, Object file) {
+  public AiBcrImageStorageFile(Boolean isSingle, StorageFileLocation file) {
     super();
     setIsSingle(isSingle);
     setFile(file);

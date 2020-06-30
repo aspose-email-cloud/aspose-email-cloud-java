@@ -219,7 +219,7 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
    * @param period Interval at which the meeting pattern repeats.             
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
-   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param discriminator 
    * @param day Day of the month on which the recurrence falls.             
    * @param dayOfWeek Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern Enum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday

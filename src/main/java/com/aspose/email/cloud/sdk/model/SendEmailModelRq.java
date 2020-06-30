@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class SendEmailModelRq extends AccountBaseRequest {
   @JsonProperty("message")
-  private Object message = null;
+  private EmailDto message = null;
 
   /**
    * Set message and return this.
    * @param message Message to send             
    * @return this
   **/
-  public SendEmailModelRq message(Object message) {
+  public SendEmailModelRq message(EmailDto message) {
     this.message = message;
     return this;
   }
@@ -60,7 +60,7 @@ public class SendEmailModelRq extends AccountBaseRequest {
    * Message to send             
    * @return message
   **/
-  public Object getMessage() {
+  public EmailDto getMessage() {
     return message;
   }  
 
@@ -68,7 +68,7 @@ public class SendEmailModelRq extends AccountBaseRequest {
    * Set message.
    * @param message Message to send             
   **/
-  public void setMessage(Object message) {
+  public void setMessage(EmailDto message) {
     this.message = message;
   }
 
@@ -127,7 +127,7 @@ public class SendEmailModelRq extends AccountBaseRequest {
    * @param storageFolder Storage folder location of account files             
    * @param message Message to send             
    */
-  public SendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, Object message) {
+  public SendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, EmailDto message) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

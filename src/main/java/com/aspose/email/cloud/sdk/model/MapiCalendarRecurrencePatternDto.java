@@ -435,7 +435,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set weekStartDay and return this.
-   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto weekStartDay(String weekStartDay) {
@@ -444,7 +444,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return weekStartDay
   **/
   public String getWeekStartDay() {
@@ -453,7 +453,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set weekStartDay.
-   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
   public void setWeekStartDay(String weekStartDay) {
     this.weekStartDay = weekStartDay;
@@ -564,7 +564,7 @@ public class MapiCalendarRecurrencePatternDto {
    * @param period Interval at which the meeting pattern repeats.             
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
-   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param discriminator 
    */
   public MapiCalendarRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, String weekStartDay, String discriminator) {

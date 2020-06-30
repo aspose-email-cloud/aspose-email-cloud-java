@@ -98,7 +98,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set dayOfWeek and return this.
-   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
   public MapiCalendarTimeZoneRuleDto dayOfWeek(String dayOfWeek) {
@@ -107,7 +107,7 @@ public class MapiCalendarTimeZoneRuleDto {
   }
 
   /**
-   * Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return dayOfWeek
   **/
   public String getDayOfWeek() {
@@ -116,7 +116,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set dayOfWeek.
-   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
   public void setDayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
@@ -367,7 +367,7 @@ public class MapiCalendarTimeZoneRuleDto {
   /**
    * Initializes a new instance of the MapiCalendarTimeZoneRuleDto
    * @param date Date and time that indicate when to begin using the Standard/Daylight time.             
-   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param hour Hour.             
    * @param milliseconds Milliseconds.             
    * @param minute Minute.             

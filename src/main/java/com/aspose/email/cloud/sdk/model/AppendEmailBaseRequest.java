@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
   @JsonProperty("emailFile")
-  private Object emailFile = null;
+  private StorageFileLocation emailFile = null;
 
   /**
    * Set emailFile and return this.
    * @param emailFile Email document file location in storage             
    * @return this
   **/
-  public AppendEmailBaseRequest emailFile(Object emailFile) {
+  public AppendEmailBaseRequest emailFile(StorageFileLocation emailFile) {
     this.emailFile = emailFile;
     return this;
   }
@@ -60,7 +60,7 @@ public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
    * Email document file location in storage             
    * @return emailFile
   **/
-  public Object getEmailFile() {
+  public StorageFileLocation getEmailFile() {
     return emailFile;
   }  
 
@@ -68,7 +68,7 @@ public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
    * Set emailFile.
    * @param emailFile Email document file location in storage             
   **/
-  public void setEmailFile(Object emailFile) {
+  public void setEmailFile(StorageFileLocation emailFile) {
     this.emailFile = emailFile;
   }
 
@@ -131,7 +131,7 @@ public class AppendEmailBaseRequest extends AppendEmailAccountBaseRequest {
    * @param markAsSent Mark message as sent             
    * @param emailFile Email document file location in storage             
    */
-  public AppendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, Object emailFile) {
+  public AppendEmailBaseRequest(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, StorageFileLocation emailFile) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

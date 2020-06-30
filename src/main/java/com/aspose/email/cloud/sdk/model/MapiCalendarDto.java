@@ -47,7 +47,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   private Boolean appointmentCounterProposal = null;
 
   @JsonProperty("attendees")
-  private Object attendees = null;
+  private MapiCalendarAttendeesDto attendees = null;
 
   @JsonProperty("busyStatus")
   private String busyStatus = null;
@@ -59,7 +59,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   private Date endDate = null;
 
   @JsonProperty("endDateTimeZone")
-  private Object endDateTimeZone = null;
+  private MapiCalendarTimeZoneDto endDateTimeZone = null;
 
   @JsonProperty("isAllDay")
   private Boolean isAllDay = null;
@@ -71,7 +71,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   private String location = null;
 
   @JsonProperty("recurrence")
-  private Object recurrence = null;
+  private MapiCalendarEventRecurrenceDto recurrence = null;
 
   @JsonProperty("reminderDelta")
   private Integer reminderDelta = null;
@@ -89,13 +89,13 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   private Date startDate = null;
 
   @JsonProperty("startDateTimeZone")
-  private Object startDateTimeZone = null;
+  private MapiCalendarTimeZoneDto startDateTimeZone = null;
 
   @JsonProperty("uid")
   private String uid = null;
 
   @JsonProperty("organizer")
-  private Object organizer = null;
+  private MapiElectronicAddressDto organizer = null;
 
   /**
    * Set appointmentCounterProposal and return this.
@@ -128,7 +128,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param attendees Attendees             
    * @return this
   **/
-  public MapiCalendarDto attendees(Object attendees) {
+  public MapiCalendarDto attendees(MapiCalendarAttendeesDto attendees) {
     this.attendees = attendees;
     return this;
   }
@@ -137,7 +137,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Attendees             
    * @return attendees
   **/
-  public Object getAttendees() {
+  public MapiCalendarAttendeesDto getAttendees() {
     return attendees;
   }  
 
@@ -145,7 +145,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Set attendees.
    * @param attendees Attendees             
   **/
-  public void setAttendees(Object attendees) {
+  public void setAttendees(MapiCalendarAttendeesDto attendees) {
     this.attendees = attendees;
   }
 
@@ -244,7 +244,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param endDateTimeZone Time zone information that indicates the time zone of the EndDate property.             
    * @return this
   **/
-  public MapiCalendarDto endDateTimeZone(Object endDateTimeZone) {
+  public MapiCalendarDto endDateTimeZone(MapiCalendarTimeZoneDto endDateTimeZone) {
     this.endDateTimeZone = endDateTimeZone;
     return this;
   }
@@ -253,7 +253,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Time zone information that indicates the time zone of the EndDate property.             
    * @return endDateTimeZone
   **/
-  public Object getEndDateTimeZone() {
+  public MapiCalendarTimeZoneDto getEndDateTimeZone() {
     return endDateTimeZone;
   }  
 
@@ -261,7 +261,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Set endDateTimeZone.
    * @param endDateTimeZone Time zone information that indicates the time zone of the EndDate property.             
   **/
-  public void setEndDateTimeZone(Object endDateTimeZone) {
+  public void setEndDateTimeZone(MapiCalendarTimeZoneDto endDateTimeZone) {
     this.endDateTimeZone = endDateTimeZone;
   }
 
@@ -348,7 +348,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param recurrence Recurrence properties.             
    * @return this
   **/
-  public MapiCalendarDto recurrence(Object recurrence) {
+  public MapiCalendarDto recurrence(MapiCalendarEventRecurrenceDto recurrence) {
     this.recurrence = recurrence;
     return this;
   }
@@ -357,7 +357,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Recurrence properties.             
    * @return recurrence
   **/
-  public Object getRecurrence() {
+  public MapiCalendarEventRecurrenceDto getRecurrence() {
     return recurrence;
   }  
 
@@ -365,7 +365,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Set recurrence.
    * @param recurrence Recurrence properties.             
   **/
-  public void setRecurrence(Object recurrence) {
+  public void setRecurrence(MapiCalendarEventRecurrenceDto recurrence) {
     this.recurrence = recurrence;
   }
 
@@ -504,7 +504,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param startDateTimeZone Time zone information that indicates the time zone of the StartDate property.             
    * @return this
   **/
-  public MapiCalendarDto startDateTimeZone(Object startDateTimeZone) {
+  public MapiCalendarDto startDateTimeZone(MapiCalendarTimeZoneDto startDateTimeZone) {
     this.startDateTimeZone = startDateTimeZone;
     return this;
   }
@@ -513,7 +513,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Time zone information that indicates the time zone of the StartDate property.             
    * @return startDateTimeZone
   **/
-  public Object getStartDateTimeZone() {
+  public MapiCalendarTimeZoneDto getStartDateTimeZone() {
     return startDateTimeZone;
   }  
 
@@ -521,7 +521,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Set startDateTimeZone.
    * @param startDateTimeZone Time zone information that indicates the time zone of the StartDate property.             
   **/
-  public void setStartDateTimeZone(Object startDateTimeZone) {
+  public void setStartDateTimeZone(MapiCalendarTimeZoneDto startDateTimeZone) {
     this.startDateTimeZone = startDateTimeZone;
   }
 
@@ -556,7 +556,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param organizer Organizer             
    * @return this
   **/
-  public MapiCalendarDto organizer(Object organizer) {
+  public MapiCalendarDto organizer(MapiElectronicAddressDto organizer) {
     this.organizer = organizer;
     return this;
   }
@@ -565,7 +565,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Organizer             
    * @return organizer
   **/
-  public Object getOrganizer() {
+  public MapiElectronicAddressDto getOrganizer() {
     return organizer;
   }  
 
@@ -573,7 +573,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * Set organizer.
    * @param organizer Organizer             
   **/
-  public void setOrganizer(Object organizer) {
+  public void setOrganizer(MapiElectronicAddressDto organizer) {
     this.organizer = organizer;
   }
 
@@ -711,7 +711,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param uid Unique identifier.             
    * @param organizer Organizer             
    */
-  public MapiCalendarDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, Boolean appointmentCounterProposal, Object attendees, String busyStatus, List<String> clientIntent, Date endDate, Object endDateTimeZone, Boolean isAllDay, String keyWords, String location, Object recurrence, Integer reminderDelta, String reminderFileParameter, Boolean reminderSet, Integer sequence, Date startDate, Object startDateTimeZone, String uid, Object organizer) {
+  public MapiCalendarDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, Boolean appointmentCounterProposal, MapiCalendarAttendeesDto attendees, String busyStatus, List<String> clientIntent, Date endDate, MapiCalendarTimeZoneDto endDateTimeZone, Boolean isAllDay, String keyWords, String location, MapiCalendarEventRecurrenceDto recurrence, Integer reminderDelta, String reminderFileParameter, Boolean reminderSet, Integer sequence, Date startDate, MapiCalendarTimeZoneDto startDateTimeZone, String uid, MapiElectronicAddressDto organizer) {
     super();
     setAttachments(attachments);
     setBilling(billing);

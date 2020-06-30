@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
   @JsonProperty("outFolder")
-  private Object outFolder = null;
+  private StorageFolderLocation outFolder = null;
 
   /**
    * Set outFolder and return this.
    * @param outFolder Parse output folder location on storage             
    * @return this
   **/
-  public AiBcrParseStorageRq outFolder(Object outFolder) {
+  public AiBcrParseStorageRq outFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
     return this;
   }
@@ -60,7 +60,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * Parse output folder location on storage             
    * @return outFolder
   **/
-  public Object getOutFolder() {
+  public StorageFolderLocation getOutFolder() {
     return outFolder;
   }  
 
@@ -68,7 +68,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * Set outFolder.
    * @param outFolder Parse output folder location on storage             
   **/
-  public void setOutFolder(Object outFolder) {
+  public void setOutFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
   }
 
@@ -125,7 +125,7 @@ public class AiBcrParseStorageRq extends AiBcrStorageImageRq {
    * @param images List of images with business cards             
    * @param outFolder Parse output folder location on storage             
    */
-  public AiBcrParseStorageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images, Object outFolder) {
+  public AiBcrParseStorageRq(AiBcrOptions options, List<AiBcrImageStorageFile> images, StorageFolderLocation outFolder) {
     super();
     setOptions(options);
     setImages(images);
