@@ -47,7 +47,7 @@ public class MapiCalendarTimeZoneRuleDto {
   private Date date = null;
 
   @JsonProperty("dayOfWeek")
-  private Object dayOfWeek = null;
+  private String dayOfWeek = null;
 
   @JsonProperty("hour")
   private Integer hour = null;
@@ -98,27 +98,27 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set dayOfWeek and return this.
-   * @param dayOfWeek Day of week.             
+   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
-  public MapiCalendarTimeZoneRuleDto dayOfWeek(Object dayOfWeek) {
+  public MapiCalendarTimeZoneRuleDto dayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
     return this;
   }
 
   /**
-   * Day of week.             
+   * Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return dayOfWeek
   **/
-  public Object getDayOfWeek() {
+  public String getDayOfWeek() {
     return dayOfWeek;
   }  
 
   /**
    * Set dayOfWeek.
-   * @param dayOfWeek Day of week.             
+   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
-  public void setDayOfWeek(Object dayOfWeek) {
+  public void setDayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
@@ -367,7 +367,7 @@ public class MapiCalendarTimeZoneRuleDto {
   /**
    * Initializes a new instance of the MapiCalendarTimeZoneRuleDto
    * @param date Date and time that indicate when to begin using the Standard/Daylight time.             
-   * @param dayOfWeek Day of week.             
+   * @param dayOfWeek Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param hour Hour.             
    * @param milliseconds Milliseconds.             
    * @param minute Minute.             
@@ -376,7 +376,7 @@ public class MapiCalendarTimeZoneRuleDto {
    * @param seconds Seconds.             
    * @param year Year.             
    */
-  public MapiCalendarTimeZoneRuleDto(Date date, Object dayOfWeek, Integer hour, Integer milliseconds, Integer minute, Integer month, String position, Integer seconds, Integer year) {
+  public MapiCalendarTimeZoneRuleDto(Date date, String dayOfWeek, Integer hour, Integer milliseconds, Integer minute, Integer month, String position, Integer seconds, Integer year) {
     super();
     setDate(date);
     setDayOfWeek(dayOfWeek);

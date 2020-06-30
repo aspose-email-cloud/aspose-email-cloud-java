@@ -80,7 +80,7 @@ public class MapiCalendarRecurrencePatternDto {
   private Date startDate = null;
 
   @JsonProperty("weekStartDay")
-  private Object weekStartDay = null;
+  private String weekStartDay = null;
 
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
@@ -435,27 +435,27 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set weekStartDay and return this.
-   * @param weekStartDay First day of the calendar week.             
+   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
-  public MapiCalendarRecurrencePatternDto weekStartDay(Object weekStartDay) {
+  public MapiCalendarRecurrencePatternDto weekStartDay(String weekStartDay) {
     this.weekStartDay = weekStartDay;
     return this;
   }
 
   /**
-   * First day of the calendar week.             
+   * Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return weekStartDay
   **/
-  public Object getWeekStartDay() {
+  public String getWeekStartDay() {
     return weekStartDay;
   }  
 
   /**
    * Set weekStartDay.
-   * @param weekStartDay First day of the calendar week.             
+   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
-  public void setWeekStartDay(Object weekStartDay) {
+  public void setWeekStartDay(String weekStartDay) {
     this.weekStartDay = weekStartDay;
   }
 
@@ -564,10 +564,10 @@ public class MapiCalendarRecurrencePatternDto {
    * @param period Interval at which the meeting pattern repeats.             
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
-   * @param weekStartDay First day of the calendar week.             
+   * @param weekStartDay Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param discriminator 
    */
-  public MapiCalendarRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, Object weekStartDay, String discriminator) {
+  public MapiCalendarRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, String weekStartDay, String discriminator) {
     super();
     setCalendarType(calendarType);
     setDeletedInstanceDates(deletedInstanceDates);
