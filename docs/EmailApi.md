@@ -644,28 +644,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 
-<a name="convertCalendarDtoToMapiModel"></a>
-## **convertCalendarDtoToMapiModel**
-> [MapiCalendarDto](MapiCalendarDto.md) convertCalendarDtoToMapiModel(ConvertCalendarDtoToMapiModelRequestData request)
-
-Convert CalendarDto to MapiCalendarDto             
-
-### **ConvertCalendarDtoToMapiModelRequestData** Parameters
-```java
-public ConvertCalendarDtoToMapiModelRequestData(
-    CalendarDto calendarDto)
-```
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendarDto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation |
-
-### Return type
-
-[**MapiCalendarDto**](MapiCalendarDto.md)
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
 <a name="convertCalendarModelToAlternate"></a>
 ## **convertCalendarModelToAlternate**
 > [AlternateView](AlternateView.md) convertCalendarModelToAlternate(ConvertCalendarModelToAlternateRequestData request)
@@ -709,6 +687,28 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+
+<a name="convertCalendarModelToMapiModel"></a>
+## **convertCalendarModelToMapiModel**
+> [MapiCalendarDto](MapiCalendarDto.md) convertCalendarModelToMapiModel(ConvertCalendarModelToMapiModelRequestData request)
+
+Convert CalendarDto to MapiCalendarDto             
+
+### **ConvertCalendarModelToMapiModelRequestData** Parameters
+```java
+public ConvertCalendarModelToMapiModelRequestData(
+    CalendarDto calendarDto)
+```
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendarDto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation |
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
 

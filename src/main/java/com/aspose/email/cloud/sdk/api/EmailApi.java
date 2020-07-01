@@ -1387,51 +1387,6 @@ public class EmailApi
     }
   
     /**
-     * Convert CalendarDto to MapiCalendarDto             
-     * 
-     * @param request Holds parameters for this request invocation.
-     * @return MapiCalendarDto
-     * @throws ApiException 
-     */
-    public MapiCalendarDto convertCalendarDtoToMapiModel(ConvertCalendarDtoToMapiModelRequestData request) throws ApiException 
-    {
-      try {
-         // verify the required parameter 'request.calendarDto' is set
-        if (request.calendarDto== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.calendarDto' when calling convertCalendarDtoToMapiModel");
-        }
-        // create path and map variables
-        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/model-as-mapi-model";
-        
-        HashMap<String, Object> formParams = new HashMap<String, Object>();
-        
-        
-        String postBody = null;
-        
-        postBody = SerializationHelper.serialize(request.calendarDto);
-        
-        byte[] response = this.apiInvoker.invokeApi(
-            resourcePath, 
-            "PUT", 
-            postBody, 
-            null, 
-            formParams);
-            
-        
-        if (response == null)
-        {
-            return null;
-        }
-        
-        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
-      } catch(ApiException exception) {
-        throw exception;
-      } catch(Exception exception) {
-        throw new ApiException(400, exception.getMessage());
-      }
-    }
-  
-    /**
      * Convert iCalendar to AlternateView             
      * 
      * @param request Holds parameters for this request invocation.
@@ -1514,6 +1469,51 @@ public class EmailApi
             
         return response;
         
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Convert CalendarDto to MapiCalendarDto             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiCalendarDto
+     * @throws ApiException 
+     */
+    public MapiCalendarDto convertCalendarModelToMapiModel(ConvertCalendarModelToMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.calendarDto' is set
+        if (request.calendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.calendarDto' when calling convertCalendarModelToMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/model-as-mapi-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.calendarDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {

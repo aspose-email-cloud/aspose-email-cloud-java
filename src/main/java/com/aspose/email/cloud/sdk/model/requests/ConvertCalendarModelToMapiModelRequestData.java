@@ -1,7 +1,7 @@
 
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="ConvertCalendarDtoToMapiModelRequestData.java">
+* <copyright company="Aspose" file="ConvertCalendarModelToMapiModelRequestData.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -30,15 +30,15 @@ package com.aspose.email.cloud.sdk.model.requests;
 import com.aspose.email.cloud.sdk.model.*;
 
 /**
-* Class that holds parameters for EmailApi.convertCalendarDtoToMapiModel request invocation.
+* Class that holds parameters for EmailApi.convertCalendarModelToMapiModel request invocation.
 **/   
-public class ConvertCalendarDtoToMapiModelRequestData
+public class ConvertCalendarModelToMapiModelRequestData
 {
     /**
-    * Initializes a new instance of the ConvertCalendarDtoToMapiModelRequestData class.   
+    * Initializes a new instance of the ConvertCalendarModelToMapiModelRequestData class.   
     * @param calendarDto iCalendar model calendar representation
     **/
-    public ConvertCalendarDtoToMapiModelRequestData(CalendarDto calendarDto)             
+    public ConvertCalendarModelToMapiModelRequestData(CalendarDto calendarDto)             
     {
         this.calendarDto = calendarDto;
     }
