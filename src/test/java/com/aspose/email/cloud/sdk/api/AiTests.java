@@ -1,0 +1,158 @@
+package com.aspose.email.cloud.sdk.api;
+
+import com.aspose.email.cloud.sdk.invoker.ApiException;
+import com.aspose.email.cloud.sdk.model.*;
+import com.aspose.email.cloud.sdk.model.requests.*;
+import com.migcomponents.migbase64.Base64;
+import org.apache.commons.io.IOUtils;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.UUID;
+
+public class AiTests extends TestBase {
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameGenderizeTest() throws ApiException {
+        ListResponseOfAiNameGenderHypothesis result = api
+            .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
+        assert result.getValue().size() >= 1;
+        assert result.getValue().get(0).getGender().equals("Male");
+    }
+
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameFormatTest() throws ApiException {
+        AiNameFormatted result = api.aiNameFormat(
+            new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
+        assert result.getName().equals("Mr. Cane J. M.");
+    }
+
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameMatchTest() throws ApiException {
+        final String first = "John Michael Cane";
+        final String second = "Cane J.";
+        AiNameMatchResult result = api
+            .aiNameMatch(new AiNameMatchRequestData(first, second, null, null, null, null, null));
+        assert result.getSimilarity() >= 0.5;
+    }
+
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameExpandTest() throws ApiException {
+        String name = "Smith Bobby";
+        AiNameWeightedVariants result = api
+            .aiNameExpand(new AiNameExpandRequestData(name, null, null, null, null, null));
+        ArrayList<String> expandedNames = new ArrayList<String>();
+        for (AiNameWeighted weighted : result.getNames()) {
+            expandedNames.add(weighted.getName());
+        }
+        assert expandedNames.contains("Mr. Smith");
+        assert expandedNames.contains("B. Smith");
+    }
+
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameCompleteTest() throws ApiException {
+        String prefix = "Dav";
+        AiNameWeightedVariants result = api
+            .aiNameComplete(new AiNameCompleteRequestData(prefix, null, null, null, null, null));
+        ArrayList<String> names = new ArrayList<String>();
+        for (AiNameWeighted weighted : result.getNames()) {
+            names.add(prefix + weighted.getName());
+        }
+        assert names.contains("David");
+        assert names.contains("Dave");
+        assert names.contains("Davis");
+    }
+
+    @Test(groups = {"ai", "pipeline"})
+    public void aiNameParseEmailAddressTest() throws ApiException {
+        String address = "john-cane@gmail.com";
+        ListResponseOfAiNameExtracted result = api
+            .aiNameParseEmailAddress(new AiNameParseEmailAddressRequestData(address, null, null, null, null, null));
+        String givenName = null;
+        String surname = null;
+        for (AiNameExtracted extracted : result.getValue()) {
+            for (AiNameExtractedComponent component : extracted.getName()) {
+                if (component.getCategory().equals("GivenName")) {
+                    givenName = component.getValue();
+                }
+                if (component.getCategory().equals("Surname")) {
+                    surname = component.getValue();
+                }
+            }
+        }
+        assert "John".equals(givenName);
+        assert "Cane".equals(surname);
+    }
+
+    @Test(groups = {"ai"})
+    public void aiBcrParseStorageTest() throws ApiException, IOException {
+        String fileName = UUID.randomUUID().toString() + ".png";
+        String filePath = folder + "/" + fileName;
+        byte[] fileBytes = IOUtils.toByteArray(
+            this.getClass().getResourceAsStream("test_single_0001.png"));
+        // 1) Upload business card image to storage
+        api.uploadFile(new UploadFileRequestData(filePath, fileBytes, storage));
+        String outFolder = UUID.randomUUID().toString();
+        String outFolderPath = folder + "/" + outFolder;
+        api.createFolder(new CreateFolderRequestData(outFolderPath, storage));
+        // 2) Call business card recognition action
+        ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
+            new AiBcrParseStorageRq(
+                null,
+                Collections.singletonList(new AiBcrImageStorageFile(true, new StorageFileLocation(storage, folder, fileName))),
+                new StorageFolderLocation(storage, outFolderPath))));
+        // Check that only one file produced
+        assert result.getValue().size() == 1;
+        // 3) Get file name from recognition result
+        StorageFileLocation contactFile = result.getValue().get(0);
+        // 4) Download VCard file, produced by recognition method, check it contains text "Thomas"
+        byte[] contactBytes = api.downloadFile(new DownloadFileRequestData(
+            contactFile.getFolderPath() + "/" + contactFile.getFileName(),
+            contactFile.getStorage(),
+            null));
+        String contactFileContent = new String(contactBytes, "UTF-8");
+        assert contactFileContent.contains("Thomas");
+        // 5) Get VCard object properties list, check that there are 3 properties or more
+        HierarchicalObject contactProperties = api.getContactProperties(new GetContactPropertiesRequestData(
+            "VCard", contactFile.getFileName(), contactFile.getFolderPath(), contactFile.getStorage()));
+        ArrayList<PrimitiveObject> primitives = new ArrayList<PrimitiveObject>();
+        for (BaseObject property : contactProperties.getInternalProperties()) {
+            if (property.getType().equals("PrimitiveObject")) {
+                primitives.add((PrimitiveObject) property);
+            }
+        }
+        assert primitives.size() >= 3;
+    }
+
+    @Test(groups = {"ai"})
+    public void aiBcrParseTest() throws ApiException, IOException {
+        byte[] fileBytes = IOUtils.toByteArray(
+            this.getClass().getResourceAsStream("test_single_0001.png"));
+        String fileBase64 = Base64.encodeToString(fileBytes, false);
+        ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
+            new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
+        assert result.getValue().size() == 1;
+        PrimitiveObject displayName = null;
+        for (BaseObject property : result.getValue().get(0).getInternalProperties()) {
+            if (property.getName().equals("DISPLAYNAME")) {
+                displayName = (PrimitiveObject) property;
+                break;
+            }
+        }
+        assert displayName != null;
+        assert displayName.getValue().contains("Thomas");
+    }
+
+    @Test(groups = {"ai"})
+    public void aiBcrParseModelTest() throws ApiException, IOException {
+        byte[] fileBytes = IOUtils.toByteArray(
+            this.getClass().getResourceAsStream("test_single_0001.png"));
+        String fileBase64 = Base64.encodeToString(fileBytes, false);
+        ListResponseOfContactDto result = api.aiBcrParseModel(new AiBcrParseModelRequestData(
+            new AiBcrBase64Rq(null, Collections.singletonList(new AiBcrBase64Image(true, fileBase64)))));
+        assert result.getValue().size() == 1;
+        ContactDto firstVCard = result.getValue().get(0);
+        assert firstVCard.getDisplayName().contains("Thomas");
+    }
+}
