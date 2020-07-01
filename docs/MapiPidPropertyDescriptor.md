@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **dataType** | **String** | [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object | 
 **multipleValuesDataType** | **Boolean** | Indicates if data type contains of multiple values              | 
 **name** | **String** | A string that identifies the property              |  [optional]
-**discriminator** | **String** |  | 
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

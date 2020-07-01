@@ -55,9 +55,6 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
   @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("discriminator")
-  private String discriminator = this.getClass().getSimpleName();
-
   /**
    * Set canonicalName and return this.
    * @param canonicalName The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
@@ -162,27 +159,6 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
     this.name = name;
   }
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
-
-
-  /**
-   * Get discriminator
-   * @return discriminator
-  **/
-  public String getDiscriminator() {
-    return discriminator;
-  }  
-
-  /**
-   * Set discriminator.
-   * @param discriminator 
-  **/
-  public void setDiscriminator(String type) {/* do nothing */}
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,13 +173,12 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
     ObjectUtils.equals(this.dataType, mapiPidPropertyDescriptor.dataType) &&
     ObjectUtils.equals(this.multipleValuesDataType, mapiPidPropertyDescriptor.multipleValuesDataType) &&
     ObjectUtils.equals(this.name, mapiPidPropertyDescriptor.name) &&
-    ObjectUtils.equals(this.discriminator, mapiPidPropertyDescriptor.discriminator) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(canonicalName, dataType, multipleValuesDataType, name, discriminator, super.hashCode());
+    return ObjectUtils.hashCodeMulti(canonicalName, dataType, multipleValuesDataType, name, super.hashCode());
   }
 
 

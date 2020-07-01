@@ -14,6 +14,17 @@ import java.util.Collections;
 import java.util.UUID;
 
 public class CalendarTests extends TestBase {
+
+    private static final String location = "Some location";
+    private final CalendarDto calendarDto = new CalendarDto()
+        .location(location)
+        .summary("Some summary")
+        .description("Some description")
+        .startDate(Calendar.getInstance().getTime())
+        .endDate(Calendar.getInstance().getTime())
+        .organizer(new MailAddress().address("organizer@aspose.com"))
+        .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")));
+
     @Test(groups = {"pipeline"})
     public void hierarchicalTest() throws ApiException {
         String fileName = createCalendar();
@@ -66,20 +77,12 @@ public class CalendarTests extends TestBase {
         Calendar startDate = Calendar.getInstance();
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
-        CalendarDto calendar = new CalendarDto()
-            .addAttendeesItem(new MailAddress("Attendee Name", "attendee@aspose.com", "Accepted", null))
-            .description("Some description")
-            .summary("Some summary")
-            .organizer(new MailAddress("Organizer Name", "organizer@aspose.com", "Accepted", null))
-            .startDate(startDate.getTime())
-            .endDate(endDate.getTime())
-            .location("Some location");
 
         StorageFolderLocation folderLocation = new StorageFolderLocation(storage, folder);
         String calendarFile = UUID.randomUUID().toString() + ".ics";
         api.saveCalendarModel(new SaveCalendarModelRequestData(
             calendarFile,
-            new StorageModelRqOfCalendarDto(calendar, folderLocation)));
+            new StorageModelRqOfCalendarDto(calendarDto, folderLocation)));
 
         ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
             folder + "/" + calendarFile, storage, null));
@@ -87,7 +90,7 @@ public class CalendarTests extends TestBase {
 
         AlternateView alternate = api.convertCalendarModelToAlternate(
             new ConvertCalendarModelToAlternateRequestData(
-                new CalendarDtoAlternateRq(calendar, "Create", null)));
+                new CalendarDtoAlternateRq(calendarDto, "Create", null)));
 
         EmailDto email = new EmailDto()
             .addAlternateViewsItem(alternate)
@@ -106,17 +109,8 @@ public class CalendarTests extends TestBase {
     }
 
     @Test(groups = {"pipeline"})
-    public void ConvertCalendarTest() throws ApiException, UnsupportedEncodingException {
-        final String location = "Some location";
+    public void convertCalendarTest() throws ApiException, UnsupportedEncodingException {
         //Create DTO with specified location:
-        CalendarDto calendarDto = new CalendarDto()
-            .location(location)
-            .summary("Some summary")
-            .description("Some description")
-            .startDate(Calendar.getInstance().getTime())
-            .endDate(Calendar.getInstance().getTime())
-            .organizer(new MailAddress().address("organizer@aspose.com"))
-            .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")));
         //We can convert this DTO to a MAPI or ICS file:
         byte[] mapiBytes = api.convertCalendarModelToFile(
             new ConvertCalendarModelToFileRequestData(
@@ -146,4 +140,10 @@ public class CalendarTests extends TestBase {
         assert location.equals(dto.getLocation());
     }
 
+    @Test(groups = {"pipeline"})
+    public void convertModelToMapiModelTest() {
+        MapiCalendarDto mapiCalendarDto = api.convertCalendarModelToMapiModel(
+            new ConvertCalendarModelToMapiModelRequestData(calendarDto));
+        assert calendarDto.getLocation().equals(mapiCalendarDto.getLocation());
+    }
 }

@@ -25,6 +25,5 @@ public class Derive {
         builder.registerTypeAdapter(RecurrencePatternDto.class, new TypeDeriveAdapter<RecurrencePatternDto>());
         builder.registerTypeAdapter(StorageFile.class, new TypeDeriveAdapter<StorageFile>());
         builder.registerTypeAdapter(StorageFolderLocation.class, new TypeDeriveAdapter<StorageFolderLocation>());
-        builder.registerTypeAdapter(MapiPidPropertyDescriptor.class, new TypeDeriveAdapter<MapiPidPropertyDescriptor>());
     }
 }

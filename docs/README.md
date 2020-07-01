@@ -317,6 +317,7 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.MapiLegacyFreeBusyPropertyDto](MapiLegacyFreeBusyPropertyDto.md)
  - [com.aspose.email.cloud.sdk.model.MapiMessageDto](MapiMessageDto.md)
  - [com.aspose.email.cloud.sdk.model.MapiMultiIntPropertyDto](MapiMultiIntPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiMultiStringPropertyDto](MapiMultiStringPropertyDto.md)
  - [com.aspose.email.cloud.sdk.model.MapiPhysicalAddressIndexPropertyDto](MapiPhysicalAddressIndexPropertyDto.md)
  - [com.aspose.email.cloud.sdk.model.MapiPidPropertyDescriptor](MapiPidPropertyDescriptor.md)
  - [com.aspose.email.cloud.sdk.model.MapiResponseTypePropertyDto](MapiResponseTypePropertyDto.md)
