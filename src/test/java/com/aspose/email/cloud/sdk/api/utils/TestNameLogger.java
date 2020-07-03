@@ -1,25 +1,27 @@
 package com.aspose.email.cloud.sdk.api.utils;
+
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
-public class TestNameLogger extends TestListenerAdapter{
+public class TestNameLogger extends TestListenerAdapter {
     @Override
     public void onTestFailure(ITestResult tr) {
-        log(tr.getName()+ ": - FAILED -");
+        log(tr, "- FAILED -");
     }
 
     @Override
     public void onTestSkipped(ITestResult tr) {
-        log(tr.getName()+ ": / skipped /");
+        log(tr, "/ skipped /");
     }
 
     @Override
     public void onTestSuccess(ITestResult tr) {
-        log(tr.getName()+ ": + SUCCESS +");
+        log(tr, "+ SUCCESS +");
     }
 
-    private void log(String string) {
-        System.out.println(string);
+    private void log(ITestResult tr, String result) {
+        String suiteName = tr.getTestClass().getRealClass().getSimpleName();
+        System.out.println(suiteName + "." + tr.getName() + ": " + result);
     }
 
 }
