@@ -1,5 +1,6 @@
-package com.aspose.email.cloud.sdk.api;
+package com.aspose.email.cloud.sdk.api.utils;
 
+import com.aspose.email.cloud.sdk.api.EmailApi;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.model.requests.CreateCalendarRequestData;
@@ -7,6 +8,7 @@ import com.aspose.email.cloud.sdk.model.requests.CreateFolderRequestData;
 import com.aspose.email.cloud.sdk.model.requests.DeleteFolderRequestData;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,6 +17,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.UUID;
 
+@Listeners({TestNameLogger.class})
 public class TestBase {
     protected EmailApi api;
     protected String folder;

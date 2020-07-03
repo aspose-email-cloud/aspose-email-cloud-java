@@ -1,5 +1,6 @@
 package com.aspose.email.cloud.sdk.api;
 
+import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.model.requests.*;
