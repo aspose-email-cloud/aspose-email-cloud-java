@@ -24,7 +24,10 @@ public class CalendarTests extends TestBase {
         .startDate(Calendar.getInstance().getTime())
         .endDate(Calendar.getInstance().getTime())
         .organizer(new MailAddress().address("organizer@aspose.com"))
-        .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")));
+        .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")))
+        .recurrence(new DailyRecurrencePatternDto()
+            .occurs(10)
+            .weekStart("Monday"));
 
     @Test(groups = {"pipeline"})
     public void hierarchicalTest() throws ApiException {
@@ -47,7 +50,8 @@ public class CalendarTests extends TestBase {
         Calendar startDate = Calendar.getInstance();
         startDate.set(Calendar.MILLISECOND, 0);
         String calendarFile = createCalendar(startDate);
-        HierarchicalObject calendar = api.getCalendar(new GetCalendarRequestData(calendarFile, folder, storage));
+        HierarchicalObject calendar =
+            api.getCalendar(new GetCalendarRequestData(calendarFile, folder, storage));
         PrimitiveObject startDateProperty = null;
         for (BaseObject property : calendar.getInternalProperties()) {
             if (property.getName().equals("STARTDATE")) {
@@ -63,7 +67,8 @@ public class CalendarTests extends TestBase {
     @Test(groups = {"pipeline"})
     public void fileTest() throws ApiException, UnsupportedEncodingException {
         String file = createCalendar();
-        byte[] fileBytes = api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
+        byte[] fileBytes =
+            api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
         String calendarContent = new String(fileBytes, "UTF-8");
         assert calendarContent.contains("organizer@am.ru");
         String uploadedName = UUID.randomUUID().toString() + ".ics";
@@ -146,5 +151,7 @@ public class CalendarTests extends TestBase {
         MapiCalendarDto mapiCalendarDto = api.convertCalendarModelToMapiModel(
             new ConvertCalendarModelToMapiModelRequestData(calendarDto));
         assert calendarDto.getLocation().equals(mapiCalendarDto.getLocation());
+        assert "MapiCalendarDailyRecurrencePatternDto"
+            .equals(mapiCalendarDto.getRecurrence().getRecurrencePattern().getDiscriminator());
     }
 }
