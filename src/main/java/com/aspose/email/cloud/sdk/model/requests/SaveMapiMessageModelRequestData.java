@@ -36,7 +36,7 @@ public class SaveMapiMessageModelRequestData
 {
     /**
     * Initializes a new instance of the SaveMapiMessageModelRequestData class.   
-    * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param name Message file name in storage.
     * @param rq Message create/update request.
     **/
@@ -48,7 +48,7 @@ public class SaveMapiMessageModelRequestData
     }
         
     /**
-    * File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 

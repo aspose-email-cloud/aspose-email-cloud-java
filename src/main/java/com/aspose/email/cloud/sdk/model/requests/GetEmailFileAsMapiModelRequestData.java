@@ -36,7 +36,7 @@ public class GetEmailFileAsMapiModelRequestData
 {
     /**
     * Initializes a new instance of the GetEmailFileAsMapiModelRequestData class.   
-    * @param fileFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param fileFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param file File to convert
     **/
     public GetEmailFileAsMapiModelRequestData(String fileFormat, byte[] file)             
@@ -46,7 +46,7 @@ public class GetEmailFileAsMapiModelRequestData
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String fileFormat;
 

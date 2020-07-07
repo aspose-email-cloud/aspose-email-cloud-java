@@ -36,7 +36,7 @@ public class ConvertMapiMessageModelToFileRequestData
 {
     /**
     * Initializes a new instance of the ConvertMapiMessageModelToFileRequestData class.   
-    * @param destinationFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param destinationFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param mapiMessage MAPI message model to convert
     **/
     public ConvertMapiMessageModelToFileRequestData(String destinationFormat, MapiMessageDto mapiMessage)             
@@ -46,7 +46,7 @@ public class ConvertMapiMessageModelToFileRequestData
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String destinationFormat;
 

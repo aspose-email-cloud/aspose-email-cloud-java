@@ -36,7 +36,7 @@ public class ConvertEmailRequestData
 {
     /**
     * Initializes a new instance of the ConvertEmailRequestData class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param file File to convert
     **/
     public ConvertEmailRequestData(String format, byte[] file)             
@@ -46,7 +46,7 @@ public class ConvertEmailRequestData
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 

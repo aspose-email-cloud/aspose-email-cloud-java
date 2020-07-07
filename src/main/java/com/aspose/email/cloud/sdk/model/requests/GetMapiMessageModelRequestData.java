@@ -36,7 +36,7 @@ public class GetMapiMessageModelRequestData
 {
     /**
     * Initializes a new instance of the GetMapiMessageModelRequestData class.   
-    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param name Email document file name.
     * @param folder Path to folder in storage.
     * @param storage Storage name.
@@ -50,7 +50,7 @@ public class GetMapiMessageModelRequestData
     }
         
     /**
-    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 

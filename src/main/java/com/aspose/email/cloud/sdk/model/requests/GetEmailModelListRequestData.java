@@ -36,7 +36,7 @@ public class GetEmailModelListRequestData
 {
     /**
     * Initializes a new instance of the GetEmailModelListRequestData class.   
-    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param folder Path to folder in storage.
     * @param storage Storage name.
     * @param itemsPerPage Count of items on page.
@@ -52,7 +52,7 @@ public class GetEmailModelListRequestData
     }
         
     /**
-    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 

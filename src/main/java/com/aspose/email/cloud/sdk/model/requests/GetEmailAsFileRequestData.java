@@ -37,7 +37,7 @@ public class GetEmailAsFileRequestData
     /**
     * Initializes a new instance of the GetEmailAsFileRequestData class.   
     * @param fileName Email document file name
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param storage Storage name
     * @param folder Path to folder in storage
     **/
@@ -55,7 +55,7 @@ public class GetEmailAsFileRequestData
     public String fileName;
 
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 
