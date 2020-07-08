@@ -54,6 +54,6 @@ public class MapiContactTests extends TestBase {
         MapiContactDto mapiContactFromStorage = api.getMapiContactModel(
             new GetMapiContactModelRequestData(
                 "Msg", fileName, folder, storage));
-        assert mapiContact.getNameInfo().getSurname().equals( mapiContactFromStorage.getNameInfo().getSurname());
+        assert mapiContact.getNameInfo().getSurname().equals(mapiContactFromStorage.getNameInfo().getSurname());
     }
 }
