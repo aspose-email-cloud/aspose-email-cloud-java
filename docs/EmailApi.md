@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 ## **convertCalendarModelToMapiModel**
 > [MapiCalendarDto](MapiCalendarDto.md) convertCalendarModelToMapiModel(ConvertCalendarModelToMapiModelRequestData request)
 
-Convert CalendarDto to MapiCalendarDto             
+Converts CalendarDto to MapiCalendarDto.             
 
 ### **ConvertCalendarModelToMapiModelRequestData** Parameters
 ```java
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 ## **convertContactModelToMapiModel**
 > [MapiContactDto](MapiContactDto.md) convertContactModelToMapiModel(ConvertContactModelToMapiModelRequestData request)
 
-Convert contact model to MAPI model contact representation             
+Converts ContactDto to MapiContactDto.             
 
 ### **ConvertContactModelToMapiModelRequestData** Parameters
 ```java
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
 ## **convertEmailModelToMapiModel**
 > [MapiMessageDto](MapiMessageDto.md) convertEmailModelToMapiModel(ConvertEmailModelToMapiModelRequestData request)
 
-Converts Email model to MAPI model message representation             
+Converts EmailDto to MapiMessageDto.             
 
 ### **ConvertEmailModelToMapiModelRequestData** Parameters
 ```java
@@ -904,7 +904,7 @@ Name | Type | Description  | Notes
 ## **convertMapiContactModelToContactModel**
 > [ContactDto](ContactDto.md) convertMapiContactModelToContactModel(ConvertMapiContactModelToContactModelRequestData request)
 
-Converts MAPI contact model to Contact model             
+Converts MAPI contact model to ContactDto model             
 
 ### **ConvertMapiContactModelToContactModelRequestData** Parameters
 ```java
@@ -2468,7 +2468,7 @@ Name | Type | Description  | Notes
 ## **getMapiCalendarModel**
 > [MapiCalendarDto](MapiCalendarDto.md) getMapiCalendarModel(GetMapiCalendarModelRequestData request)
 
-Get calendar file             
+Get MAPI calendar document.             
 
 ### **GetMapiCalendarModelRequestData** Parameters
 ```java
@@ -2494,7 +2494,7 @@ Name | Type | Description  | Notes
 ## **getMapiContactModel**
 > [MapiContactDto](MapiContactDto.md) getMapiContactModel(GetMapiContactModelRequestData request)
 
-Get contact document.             
+Get MAPI contact document.             
 
 ### **GetMapiContactModelRequestData** Parameters
 ```java
@@ -2550,7 +2550,7 @@ Name | Type | Description  | Notes
 ## **getMapiMessageModel**
 > [MapiMessageDto](MapiMessageDto.md) getMapiMessageModel(GetMapiMessageModelRequestData request)
 
-MAPI message document.             
+Get MAPI message document.             
 
 ### **GetMapiMessageModelRequestData** Parameters
 ```java
@@ -3082,7 +3082,7 @@ void (empty response body)
 ## **saveMapiContactModel**
 > void saveMapiContactModel(SaveMapiContactModelRequestData request)
 
-Save contact.             
+Save MAPI Contact to storage.             
 
 ### **SaveMapiContactModelRequestData** Parameters
 ```java
@@ -3108,7 +3108,7 @@ void (empty response body)
 ## **saveMapiMessageModel**
 > void saveMapiMessageModel(SaveMapiMessageModelRequestData request)
 
-Save MAPI message.             
+Save MAPI message to storage.             
 
 ### **SaveMapiMessageModelRequestData** Parameters
 ```java

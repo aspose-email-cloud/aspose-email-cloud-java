@@ -1477,7 +1477,7 @@ public class EmailApi
     }
   
     /**
-     * Convert CalendarDto to MapiCalendarDto             
+     * Converts CalendarDto to MapiCalendarDto.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiCalendarDto
@@ -1617,7 +1617,7 @@ public class EmailApi
     }
   
     /**
-     * Convert contact model to MAPI model contact representation             
+     * Converts ContactDto to MapiContactDto.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiContactDto
@@ -1752,7 +1752,7 @@ public class EmailApi
     }
   
     /**
-     * Converts Email model to MAPI model message representation             
+     * Converts EmailDto to MapiMessageDto.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiMessageDto
@@ -1887,7 +1887,7 @@ public class EmailApi
     }
   
     /**
-     * Converts MAPI contact model to Contact model             
+     * Converts MAPI contact model to ContactDto model             
      * 
      * @param request Holds parameters for this request invocation.
      * @return ContactDto
@@ -4639,7 +4639,7 @@ public class EmailApi
     }
   
     /**
-     * Get calendar file             
+     * Get MAPI calendar document.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiCalendarDto
@@ -4684,7 +4684,7 @@ public class EmailApi
     }
   
     /**
-     * Get contact document.             
+     * Get MAPI contact document.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiContactDto
@@ -4776,7 +4776,7 @@ public class EmailApi
     }
   
     /**
-     * MAPI message document.             
+     * Get MAPI message document.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return MapiMessageDto
@@ -5664,7 +5664,7 @@ public class EmailApi
     }
   
     /**
-     * Save contact.             
+     * Save MAPI Contact to storage.             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
@@ -5711,7 +5711,7 @@ public class EmailApi
     }
   
     /**
-     * Save MAPI message.             
+     * Save MAPI message to storage.             
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException 
