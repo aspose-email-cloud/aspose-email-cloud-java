@@ -1,0 +1,496 @@
+
+/*
+* --------------------------------------------------------------------------------------------------------------------
+* <copyright company="Aspose" file="CalendarApi.java">
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
+* </copyright>
+* <summary>
+*   Permission is hereby granted, free of charge, to any person obtaining a copy
+*  of this software and associated documentation files (the "Software"), to deal
+*  in the Software without restriction, including without limitation the rights
+*  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*  copies of the Software, and to permit persons to whom the Software is
+*  furnished to do so, subject to the following conditions:
+* 
+*  The above copyright notice and this permission notice shall be included in all
+*  copies or substantial portions of the Software.
+* 
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*  SOFTWARE.
+* </summary>
+* --------------------------------------------------------------------------------------------------------------------
+*/
+package com.aspose.email.cloud.sdk.api;
+
+import com.aspose.email.cloud.sdk.model.*;
+import com.aspose.email.cloud.sdk.invoker.*;
+import com.aspose.email.cloud.sdk.invoker.internal.*;
+import java.io.*;
+
+import java.util.HashMap;
+
+/**
+ * CalendarApi operations.
+ */
+public class CalendarApi 
+{
+    /**
+     * The configuration
+     */
+    private final Configuration Configuration;
+    
+    /**
+     * The API invoker
+     */
+    private final ApiInvoker apiInvoker;
+       
+    CalendarApi(ApiInvoker apiInvoker, Configuration configuration) {
+        this.Configuration = configuration;
+        this.apiInvoker = apiInvoker;
+    }
+
+            
+    /**
+     * Convert iCalendar to AlternateView             
+     * 
+     * @param request iCalendar to AlternateView request
+     * @return AlternateView
+     * @throws ApiException API error.
+     */
+    public AlternateView AsAlternate(
+        CalendarAsAlternateRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request' is set
+        if (request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request' when calling AsAlternate");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/as-alternate";
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request);
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            null);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), AlternateView.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Converts calendar model to specified format and returns as file.             
+     * 
+     * @param request Calendar model and format to convert.
+     * @return byte[]
+     * @throws ApiException API error.
+     */
+    public byte[] AsFile(
+        CalendarAsFileRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request' is set
+        if (request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request' when calling AsFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/as-file";
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request);
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            null);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Converts CalendarDto to MapiCalendarDto.             
+     * 
+     * @param calendarDto iCalendar model calendar representation.
+     * @return MapiCalendarDto
+     * @throws ApiException API error.
+     */
+    public MapiCalendarDto AsMapi(
+        CalendarDto calendarDto) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'calendarDto' is set
+        if (calendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'calendarDto' when calling AsMapi");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/as-mapi";
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(calendarDto);
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            null);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Converts calendar document to specified format and returns as file.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException API error.
+     */
+    public byte[] Convert(CalendarConvertRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling Convert");
+        }
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling Convert");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/convert";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        
+        if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Converts calendar document to a model representation.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return CalendarDto
+     * @throws ApiException API error.
+     */
+    public CalendarDto FromFile(CalendarFromFileRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling FromFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/from-file";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), CalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Get calendar file from storage.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return CalendarDto
+     * @throws ApiException API error.
+     */
+    public CalendarDto Get(CalendarGetRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), CalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Get iCalendar from storage as AlternateView             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return AlternateView
+     * @throws ApiException API error.
+     */
+    public AlternateView GetAsAlternate(CalendarGetAsAlternateRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling GetAsAlternate");
+        }
+         // verify the required parameter 'request.calendarAction' is set
+        if (request.calendarAction== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.calendarAction' when calling GetAsAlternate");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/as-alternate";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "calendarAction", request.calendarAction);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "sequenceId", request.sequenceId);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), AlternateView.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Converts calendar document from storage to specified format and returns as file.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException API error.
+     */
+    public byte[] GetAsFile(CalendarGetAsFileRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.fileName' is set
+        if (request.fileName== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling GetAsFile");
+        }
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling GetAsFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/as-file";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fileName", request.fileName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Get iCalendar list from storage folder.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return CalendarStorageList
+     * @throws ApiException API error.
+     */
+    public CalendarStorageList GetList(CalendarGetListRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.folder' is set
+        if (request.folder== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling GetList");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar/list";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "itemsPerPage", request.itemsPerPage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "pageNumber", request.pageNumber);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), CalendarStorageList.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+            
+    /**
+     * Save iCalendar             
+     * 
+     * @param request iCalendar create/update request
+     * @throws ApiException API error.
+     */
+    public void Save(
+        CalendarSaveRequest request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request' is set
+        if (request== null) {
+            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/Calendar";
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request);
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            null);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+
+}
+

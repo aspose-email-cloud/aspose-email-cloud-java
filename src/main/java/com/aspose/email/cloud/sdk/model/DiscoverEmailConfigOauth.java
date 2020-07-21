@@ -42,7 +42,7 @@ import java.io.*;
 /**
  * DiscoverEmailConfigOauth
  */
-public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
+public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   @JsonProperty("clientId")
   private String clientId = null;
 

@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * DiscUsage
+ * Class for disc space information.
  */
 public class DiscUsage {
   @JsonProperty("usedSize")
@@ -51,7 +51,7 @@ public class DiscUsage {
 
   /**
    * Set usedSize and return this.
-   * @param usedSize 
+   * @param usedSize Application used disc space.
    * @return this
   **/
   public DiscUsage usedSize(Long usedSize) {
@@ -60,7 +60,7 @@ public class DiscUsage {
   }
 
   /**
-   * Get usedSize
+   * Application used disc space.
    * @return usedSize
   **/
   public Long getUsedSize() {
@@ -69,7 +69,7 @@ public class DiscUsage {
 
   /**
    * Set usedSize.
-   * @param usedSize 
+   * @param usedSize Application used disc space.
   **/
   public void setUsedSize(Long usedSize) {
     this.usedSize = usedSize;
@@ -77,7 +77,7 @@ public class DiscUsage {
 
   /**
    * Set totalSize and return this.
-   * @param totalSize 
+   * @param totalSize Total disc space.
    * @return this
   **/
   public DiscUsage totalSize(Long totalSize) {
@@ -86,7 +86,7 @@ public class DiscUsage {
   }
 
   /**
-   * Get totalSize
+   * Total disc space.
    * @return totalSize
   **/
   public Long getTotalSize() {
@@ -95,7 +95,7 @@ public class DiscUsage {
 
   /**
    * Set totalSize.
-   * @param totalSize 
+   * @param totalSize Total disc space.
   **/
   public void setTotalSize(Long totalSize) {
     this.totalSize = totalSize;
@@ -149,8 +149,8 @@ public class DiscUsage {
 
   /**
    * Initializes a new instance of the DiscUsage
-   * @param usedSize 
-   * @param totalSize 
+   * @param usedSize Application used disc space.
+   * @param totalSize Total disc space.
    */
   public DiscUsage(Long usedSize, Long totalSize) {
     super();

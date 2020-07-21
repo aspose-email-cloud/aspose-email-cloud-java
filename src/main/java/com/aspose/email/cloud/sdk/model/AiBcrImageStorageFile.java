@@ -120,7 +120,7 @@ public class AiBcrImageStorageFile extends AiBcrImage {
 
   /**
    * Initializes a new instance of the AiBcrImageStorageFile
-   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * @param isSingle Determines that image contains single VCard or more.             
    * @param file Image location             
    */
   public AiBcrImageStorageFile(Boolean isSingle, StorageFileLocation file) {
