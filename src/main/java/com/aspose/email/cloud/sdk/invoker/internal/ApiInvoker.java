@@ -27,17 +27,12 @@
 
 package com.aspose.email.cloud.sdk.invoker.internal;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.commons.io.Charsets;
 
-import com.aspose.email.cloud.sdk.api.EmailApi;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.invoker.Configuration;
 import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.IRequestHandler;
@@ -79,9 +74,7 @@ public class ApiInvoker
      */
     public ApiInvoker(IRequestHandler[] requestHandlers, Configuration configuration)
     {
-        String sdkVersion = EmailApi.Version;
         this.addDefaultHeader(AsposeClientHeaderName, "java sdk");
-        this.addDefaultHeader(AsposeClientVersionHeaderName, sdkVersion);
         this.requestHandlers = requestHandlers;
         this.configuration = configuration;
     }
@@ -94,7 +87,7 @@ public class ApiInvoker
      * @param headerParams The header parameters.
      * @param formParams The form parameters.
      * @return Resulting data.
-     * @throws Exception 
+     * @throws Exception
      */
     public byte[] invokeApi(
         String path,
@@ -115,7 +108,7 @@ public class ApiInvoker
      * @param formParams The form parameters.
      * @param contentType Type of the content.
      * @return Resulting data.
-     * @throws Exception 
+     * @throws Exception
      */
     public byte[] invokeApi(
         String path,
@@ -180,7 +173,7 @@ public class ApiInvoker
      * @return
      */
     private static byte[] getMultipartFormData(HashMap<String, Object> postParameters, String boundary)
-    {
+        throws UnsupportedEncodingException {
         ByteArrayOutputStream formDataStream = new ByteArrayOutputStream();
         
         Boolean needsClrf = false;
@@ -241,8 +234,8 @@ public class ApiInvoker
     }
     
     private static void WriteStringToStream(ByteArrayOutputStream formDataStream, String data)
-    {
-        byte[] bytesArray = data.getBytes(Charsets.UTF_8);
+        throws UnsupportedEncodingException {
+        byte[] bytesArray = data.getBytes("UTF-8");
         formDataStream.write(bytesArray, 0, bytesArray.length);
     }
 
@@ -268,7 +261,7 @@ public class ApiInvoker
      * @param formParams The form parameters.
      * @param contentType Type of the content.
      * @return Resulting data.
-     * @throws Exception 
+     * @throws Exception
      */
     private byte[] invokeInternal(
         String path,
