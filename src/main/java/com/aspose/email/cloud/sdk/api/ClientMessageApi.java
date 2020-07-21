@@ -62,13 +62,13 @@ public class ClientMessageApi
      * @return ValueTOfString
      * @throws ApiException API error.
      */
-    public ValueTOfString Append(
+    public ValueTOfString append(
         ClientMessageAppendRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Append");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling append");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/append";
@@ -104,16 +104,16 @@ public class ClientMessageApi
      * @return ValueTOfString
      * @throws ApiException API error.
      */
-    public ValueTOfString AppendFile(ClientMessageAppendFileRequest request) throws ApiException 
+    public ValueTOfString appendFile(ClientMessageAppendFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling AppendFile");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling appendFile");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling AppendFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling appendFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/file/append";
@@ -159,13 +159,13 @@ public class ClientMessageApi
      * @param request Delete message request.
      * @throws ApiException API error.
      */
-    public void Delete(
+    public void delete(
         ClientMessageDeleteRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Delete");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling delete");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message";
@@ -194,16 +194,16 @@ public class ClientMessageApi
      * @return MailMessageBase
      * @throws ApiException API error.
      */
-    public MailMessageBase Fetch(ClientMessageFetchRequest request) throws ApiException 
+    public MailMessageBase fetch(ClientMessageFetchRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.messageId' is set
         if (request.messageId== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling Fetch");
+            throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling fetch");
         }
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling Fetch");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling fetch");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message";
@@ -248,16 +248,16 @@ public class ClientMessageApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] FetchFile(ClientMessageFetchFileRequest request) throws ApiException 
+    public byte[] fetchFile(ClientMessageFetchFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.messageId' is set
         if (request.messageId== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling FetchFile");
+            throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling fetchFile");
         }
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling FetchFile");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling fetchFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/file";
@@ -296,16 +296,16 @@ public class ClientMessageApi
      * @return MailMessageBaseList
      * @throws ApiException API error.
      */
-    public MailMessageBaseList List(ClientMessageListRequest request) throws ApiException 
+    public MailMessageBaseList list(ClientMessageListRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.folder' is set
         if (request.folder== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling List");
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling list");
         }
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling List");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling list");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/list";
@@ -350,13 +350,13 @@ public class ClientMessageApi
      * @param request Move message request.
      * @throws ApiException API error.
      */
-    public void Move(
+    public void move(
         ClientMessageMoveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Move");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling move");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/move";
@@ -384,13 +384,13 @@ public class ClientMessageApi
      * @param request Send email request.
      * @throws ApiException API error.
      */
-    public void Send(
+    public void send(
         ClientMessageSendRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Send");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling send");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message";
@@ -418,16 +418,16 @@ public class ClientMessageApi
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
      */
-    public void SendFile(ClientMessageSendFileRequest request) throws ApiException 
+    public void sendFile(ClientMessageSendFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling SendFile");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling sendFile");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling SendFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling sendFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/file";
@@ -464,13 +464,13 @@ public class ClientMessageApi
      * @param request Delete message request.
      * @throws ApiException API error.
      */
-    public void SetIsRead(
+    public void setIsRead(
         ClientMessageSetIsReadRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling SetIsRead");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling setIsRead");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/message/set-is-read";

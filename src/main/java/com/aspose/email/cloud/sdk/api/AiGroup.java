@@ -40,23 +40,23 @@ import java.util.HashMap;
  */
 public class AiGroup {
 
-    private AiBcrApi bcr;
+    private final AiBcrApi bcr;
 
-    private AiNameApi name;
+    private final AiNameApi name;
 
 
 
     /**
      *  AI Business card recognition operations.             
      */
-    public AiBcrApi Bcr() {
+    public AiBcrApi bcr() {
         return bcr;
     }
 
     /**
      *  AI Name operations.             
      */
-    public AiNameApi Name() {
+    public AiNameApi name() {
         return name;
     }
 

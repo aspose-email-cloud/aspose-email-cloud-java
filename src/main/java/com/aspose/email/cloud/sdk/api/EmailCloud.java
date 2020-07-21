@@ -66,35 +66,35 @@ public class EmailCloud {
     /**
      *  iCalendar document operations.             
      */
-    public CalendarApi Calendar() {
+    public CalendarApi calendar() {
         return calendar;
     }
 
     /**
      *  Contact document operations. Supported formats: VCard, MSG, WebDav             
      */
-    public ContactApi Contact() {
+    public ContactApi contact() {
         return contact;
     }
 
     /**
      *  Email document (*.eml) operations.             
      */
-    public EmailApi Email() {
+    public EmailApi email() {
         return email;
     }
 
     /**
      *  Check email address is disposable operations             
      */
-    public DisposableEmailApi DisposableEmail() {
+    public DisposableEmailApi disposableEmail() {
         return disposableEmail;
     }
 
     /**
      *  Email server configuration discovery.             
      */
-    public EmailConfigApi EmailConfig() {
+    public EmailConfigApi emailConfig() {
         return emailConfig;
     }
 
@@ -103,28 +103,28 @@ public class EmailCloud {
     /**
      *  MAPI operations.             
      */
-    public MapiGroup Mapi() {
+    public MapiGroup mapi() {
         return mapi;
     }
 
     /**
      *  Builtin Email client operations.             
      */
-    public ClientGroup Client() {
+    public ClientGroup client() {
         return client;
     }
 
     /**
      *  AI powered operations.             
      */
-    public AiGroup Ai() {
+    public AiGroup ai() {
         return ai;
     }
 
     /**
      *  Cloud file storage operations.             
      */
-    public CloudStorageGroup CloudStorage() {
+    public CloudStorageGroup cloudStorage() {
         return cloudStorage;
     }
 

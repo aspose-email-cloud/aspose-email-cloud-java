@@ -62,13 +62,13 @@ public class EmailApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] AsFile(
+    public byte[] asFile(
         EmailAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling AsFile");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling asFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/as-file";
@@ -99,13 +99,13 @@ public class EmailApi
      * @return MapiMessageDto
      * @throws ApiException API error.
      */
-    public MapiMessageDto AsMapi(
+    public MapiMessageDto asMapi(
         EmailDto emailDto) throws ApiException 
     {
       try {
          // verify the required parameter 'emailDto' is set
         if (emailDto== null) {
-            throw new ApiException(400, "Missing the required parameter 'emailDto' when calling AsMapi");
+            throw new ApiException(400, "Missing the required parameter 'emailDto' when calling asMapi");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/as-mapi";
@@ -141,16 +141,16 @@ public class EmailApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] Convert(EmailConvertRequest request) throws ApiException 
+    public byte[] convert(EmailConvertRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling Convert");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling convert");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling Convert");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling convert");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/convert";
@@ -187,12 +187,12 @@ public class EmailApi
      * @return EmailDto
      * @throws ApiException API error.
      */
-    public EmailDto FromFile(EmailFromFileRequest request) throws ApiException 
+    public EmailDto fromFile(EmailFromFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling fromFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/from-file";
@@ -233,16 +233,16 @@ public class EmailApi
      * @return EmailDto
      * @throws ApiException API error.
      */
-    public EmailDto Get(EmailGetRequest request) throws ApiException 
+    public EmailDto get(EmailGetRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling get");
         }
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email";
@@ -284,16 +284,16 @@ public class EmailApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] GetAsFile(EmailGetAsFileRequest request) throws ApiException 
+    public byte[] getAsFile(EmailGetAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.fileName' is set
         if (request.fileName== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling GetAsFile");
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling getAsFile");
         }
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling GetAsFile");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getAsFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/as-file";
@@ -330,12 +330,12 @@ public class EmailApi
      * @return EmailStorageList
      * @throws ApiException API error.
      */
-    public EmailStorageList GetList(EmailGetListRequest request) throws ApiException 
+    public EmailStorageList getList(EmailGetListRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling GetList");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getList");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/list";
@@ -377,13 +377,13 @@ public class EmailApi
      * @param request Email document create/update request.
      * @throws ApiException API error.
      */
-    public void Save(
+    public void save(
         EmailSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling save");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email";

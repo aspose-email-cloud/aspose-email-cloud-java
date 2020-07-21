@@ -10,7 +10,6 @@ import org.testng.annotations.Listeners;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.UUID;
@@ -48,12 +47,12 @@ public class TestBase {
         configuration.setAuthUrl(System.getenv("authUrl"));
         api = new EmailCloud(configuration);
         folder = UUID.randomUUID().toString();
-        api.CloudStorage().Folder().createFolder(new CreateFolderRequest(folder, storage));
+        api.cloudStorage().folder().createFolder(new CreateFolderRequest(folder, storage));
     }
 
     @AfterClass(alwaysRun = true)
     public void oneTimeTearDown() throws ApiException {
-        api.CloudStorage().Folder().deleteFolder(new DeleteFolderRequest(folder, storage, true));
+        api.cloudStorage().folder().deleteFolder(new DeleteFolderRequest(folder, storage, true));
     }
 
     protected String createCalendar() throws ApiException {
@@ -68,7 +67,7 @@ public class TestBase {
         CalendarDto calendarDto = getCalendarDto();
         calendarDto.setStartDate(startDate.getTime());
         calendarDto.setEndDate(endDate.getTime());
-        api.Calendar().Save(
+        api.calendar().save(
             new CalendarSaveRequest(new StorageFileLocation(storage, folder, fileName), calendarDto,
                 "Ics"));
         return fileName;

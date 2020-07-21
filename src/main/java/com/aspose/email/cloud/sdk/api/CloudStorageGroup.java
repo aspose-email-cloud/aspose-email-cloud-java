@@ -40,32 +40,32 @@ import java.util.HashMap;
  */
 public class CloudStorageGroup {
 
-    private FileApi file;
+    private final FileApi file;
 
-    private FolderApi folder;
+    private final FolderApi folder;
 
-    private StorageApi storage;
+    private final StorageApi storage;
 
 
 
     /**
      *  File operations controller
      */
-    public FileApi File() {
+    public FileApi file() {
         return file;
     }
 
     /**
      *  Folder operations controller
      */
-    public FolderApi Folder() {
+    public FolderApi folder() {
         return folder;
     }
 
     /**
      *  Storage operations controller
      */
-    public StorageApi Storage() {
+    public StorageApi storage() {
         return storage;
     }
 

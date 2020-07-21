@@ -62,12 +62,12 @@ public class ClientAccountApi
      * @return EmailClientAccount
      * @throws ApiException API error.
      */
-    public EmailClientAccount Get(ClientAccountGetRequest request) throws ApiException 
+    public EmailClientAccount get(ClientAccountGetRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/account";
@@ -108,12 +108,12 @@ public class ClientAccountApi
      * @return EmailClientMultiAccount
      * @throws ApiException API error.
      */
-    public EmailClientMultiAccount GetMulti(ClientAccountGetMultiRequest request) throws ApiException 
+    public EmailClientMultiAccount getMulti(ClientAccountGetMultiRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling GetMulti");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getMulti");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/account/multi";
@@ -153,13 +153,13 @@ public class ClientAccountApi
      * @param request Email account information
      * @throws ApiException API error.
      */
-    public void Save(
+    public void save(
         EmailClientAccountSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling save");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/account";
@@ -187,13 +187,13 @@ public class ClientAccountApi
      * @param request Email accounts information.
      * @throws ApiException API error.
      */
-    public void SaveMulti(
+    public void saveMulti(
         EmailClientMultiAccountSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling SaveMulti");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling saveMulti");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/account/multi";

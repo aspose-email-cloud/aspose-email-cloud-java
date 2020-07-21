@@ -40,32 +40,32 @@ import java.util.HashMap;
  */
 public class MapiGroup {
 
-    private MapiCalendarApi calendar;
+    private final MapiCalendarApi calendar;
 
-    private MapiContactApi contact;
+    private final MapiContactApi contact;
 
-    private MapiMessageApi message;
+    private final MapiMessageApi message;
 
 
 
     /**
      *  MAPI calendar operations.             
      */
-    public MapiCalendarApi Calendar() {
+    public MapiCalendarApi calendar() {
         return calendar;
     }
 
     /**
      *  MAPI contact operations             
      */
-    public MapiContactApi Contact() {
+    public MapiContactApi contact() {
         return contact;
     }
 
     /**
      *  MAPI message operations             
      */
-    public MapiMessageApi Message() {
+    public MapiMessageApi message() {
         return message;
     }
 

@@ -193,12 +193,12 @@ public class StorageApi
      * @return StorageExist
      * @throws ApiException API error.
      */
-    public StorageExist Exists(StorageExistsRequest request) throws ApiException 
+    public StorageExist exists(StorageExistsRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.storageName' is set
         if (request.storageName== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.storageName' when calling Exists");
+            throw new ApiException(400, "Missing the required parameter 'request.storageName' when calling exists");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/{storageName}/exist";

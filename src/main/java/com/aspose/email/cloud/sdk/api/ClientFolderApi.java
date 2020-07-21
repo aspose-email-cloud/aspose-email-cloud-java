@@ -61,13 +61,13 @@ public class ClientFolderApi
      * @param request Create folder request
      * @throws ApiException API error.
      */
-    public void Create(
+    public void create(
         ClientFolderCreateRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Create");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling create");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/folder";
@@ -95,13 +95,13 @@ public class ClientFolderApi
      * @param request Delete folder request
      * @throws ApiException API error.
      */
-    public void Delete(
+    public void delete(
         ClientFolderDeleteRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Delete");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling delete");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/folder";
@@ -130,12 +130,12 @@ public class ClientFolderApi
      * @return MailServerFolderList
      * @throws ApiException API error.
      */
-    public MailServerFolderList GetList(ClientFolderGetListRequest request) throws ApiException 
+    public MailServerFolderList getList(ClientFolderGetListRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling GetList");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling getList");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/folder/list";

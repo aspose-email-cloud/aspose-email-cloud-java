@@ -40,41 +40,41 @@ import java.util.HashMap;
  */
 public class ClientGroup {
 
-    private ClientAccountApi account;
+    private final ClientAccountApi account;
 
-    private ClientFolderApi folder;
+    private final ClientFolderApi folder;
 
-    private ClientMessageApi message;
+    private final ClientMessageApi message;
 
-    private ClientThreadApi thread;
+    private final ClientThreadApi thread;
 
 
 
     /**
      *  Email server account for built-in client operations.             
      */
-    public ClientAccountApi Account() {
+    public ClientAccountApi account() {
         return account;
     }
 
     /**
      *  Email client folder operations.             
      */
-    public ClientFolderApi Folder() {
+    public ClientFolderApi folder() {
         return folder;
     }
 
     /**
      *  Email client message operations.             
      */
-    public ClientMessageApi Message() {
+    public ClientMessageApi message() {
         return message;
     }
 
     /**
      *  Email client thread operations.             
      */
-    public ClientThreadApi Thread() {
+    public ClientThreadApi thread() {
         return thread;
     }
 

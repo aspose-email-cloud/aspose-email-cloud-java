@@ -62,13 +62,13 @@ public class ContactApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] AsFile(
+    public byte[] asFile(
         ContactAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling AsFile");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling asFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/as-file";
@@ -99,13 +99,13 @@ public class ContactApi
      * @return MapiContactDto
      * @throws ApiException API error.
      */
-    public MapiContactDto AsMapi(
+    public MapiContactDto asMapi(
         ContactDto contactDto) throws ApiException 
     {
       try {
          // verify the required parameter 'contactDto' is set
         if (contactDto== null) {
-            throw new ApiException(400, "Missing the required parameter 'contactDto' when calling AsMapi");
+            throw new ApiException(400, "Missing the required parameter 'contactDto' when calling asMapi");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/as-mapi";
@@ -141,20 +141,20 @@ public class ContactApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] Convert(ContactConvertRequest request) throws ApiException 
+    public byte[] convert(ContactConvertRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.toFormat' is set
         if (request.toFormat== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.toFormat' when calling Convert");
+            throw new ApiException(400, "Missing the required parameter 'request.toFormat' when calling convert");
         }
          // verify the required parameter 'request.fromFormat' is set
         if (request.fromFormat== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.fromFormat' when calling Convert");
+            throw new ApiException(400, "Missing the required parameter 'request.fromFormat' when calling convert");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling Convert");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling convert");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/convert";
@@ -192,16 +192,16 @@ public class ContactApi
      * @return ContactDto
      * @throws ApiException API error.
      */
-    public ContactDto FromFile(ContactFromFileRequest request) throws ApiException 
+    public ContactDto fromFile(ContactFromFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling fromFile");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling fromFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/from-file";
@@ -243,16 +243,16 @@ public class ContactApi
      * @return ContactDto
      * @throws ApiException API error.
      */
-    public ContactDto Get(ContactGetRequest request) throws ApiException 
+    public ContactDto get(ContactGetRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling get");
         }
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact";
@@ -294,20 +294,20 @@ public class ContactApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] GetAsFile(ContactGetAsFileRequest request) throws ApiException 
+    public byte[] getAsFile(ContactGetAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.fileName' is set
         if (request.fileName== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling GetAsFile");
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling getAsFile");
         }
          // verify the required parameter 'request.toFormat' is set
         if (request.toFormat== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.toFormat' when calling GetAsFile");
+            throw new ApiException(400, "Missing the required parameter 'request.toFormat' when calling getAsFile");
         }
          // verify the required parameter 'request.fromFormat' is set
         if (request.fromFormat== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.fromFormat' when calling GetAsFile");
+            throw new ApiException(400, "Missing the required parameter 'request.fromFormat' when calling getAsFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/as-file";
@@ -345,12 +345,12 @@ public class ContactApi
      * @return ContactStorageList
      * @throws ApiException API error.
      */
-    public ContactStorageList GetList(ContactGetListRequest request) throws ApiException 
+    public ContactStorageList getList(ContactGetListRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling GetList");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getList");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact/list";
@@ -392,13 +392,13 @@ public class ContactApi
      * @param request Create/Update contact request.
      * @throws ApiException API error.
      */
-    public void Save(
+    public void save(
         ContactSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling save");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/Contact";

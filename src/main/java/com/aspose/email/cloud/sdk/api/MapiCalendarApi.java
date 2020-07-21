@@ -62,13 +62,13 @@ public class MapiCalendarApi
      * @return CalendarDto
      * @throws ApiException API error.
      */
-    public CalendarDto AsCalendarDto(
+    public CalendarDto asCalendarDto(
         MapiCalendarDto mapiCalendarDto) throws ApiException 
     {
       try {
          // verify the required parameter 'mapiCalendarDto' is set
         if (mapiCalendarDto== null) {
-            throw new ApiException(400, "Missing the required parameter 'mapiCalendarDto' when calling AsCalendarDto");
+            throw new ApiException(400, "Missing the required parameter 'mapiCalendarDto' when calling asCalendarDto");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/as-calendar-dto";
@@ -104,13 +104,13 @@ public class MapiCalendarApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] AsFile(
+    public byte[] asFile(
         MapiCalendarAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling AsFile");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling asFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/as-file";
@@ -141,12 +141,12 @@ public class MapiCalendarApi
      * @return MapiCalendarDto
      * @throws ApiException API error.
      */
-    public MapiCalendarDto FromFile(MapiCalendarFromFileRequest request) throws ApiException 
+    public MapiCalendarDto fromFile(MapiCalendarFromFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling fromFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/from-file";
@@ -187,12 +187,12 @@ public class MapiCalendarApi
      * @return MapiCalendarDto
      * @throws ApiException API error.
      */
-    public MapiCalendarDto Get(MapiCalendarGetRequest request) throws ApiException 
+    public MapiCalendarDto get(MapiCalendarGetRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar";
@@ -232,13 +232,13 @@ public class MapiCalendarApi
      * @param request Calendar create/update request.
      * @throws ApiException API error.
      */
-    public void Save(
+    public void save(
         MapiCalendarSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling save");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar";

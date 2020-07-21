@@ -61,13 +61,13 @@ public class ClientThreadApi
      * @param request Delete email thread request.
      * @throws ApiException API error.
      */
-    public void Delete(
+    public void delete(
         ClientThreadDeleteRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Delete");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling delete");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/thread";
@@ -96,16 +96,16 @@ public class ClientThreadApi
      * @return EmailThreadList
      * @throws ApiException API error.
      */
-    public EmailThreadList GetList(ClientThreadGetListRequest request) throws ApiException 
+    public EmailThreadList getList(ClientThreadGetListRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.folder' is set
         if (request.folder== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling GetList");
+            throw new ApiException(400, "Missing the required parameter 'request.folder' when calling getList");
         }
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling GetList");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling getList");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/thread/list";
@@ -149,16 +149,16 @@ public class ClientThreadApi
      * @return EmailList
      * @throws ApiException API error.
      */
-    public EmailList GetMessages(ClientThreadGetMessagesRequest request) throws ApiException 
+    public EmailList getMessages(ClientThreadGetMessagesRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.threadId' is set
         if (request.threadId== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling GetMessages");
+            throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling getMessages");
         }
          // verify the required parameter 'request.account' is set
         if (request.account== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.account' when calling GetMessages");
+            throw new ApiException(400, "Missing the required parameter 'request.account' when calling getMessages");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/thread/messages";
@@ -200,13 +200,13 @@ public class ClientThreadApi
      * @param request Move thread request.
      * @throws ApiException API error.
      */
-    public void Move(
+    public void move(
         ClientThreadMoveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Move");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling move");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/thread/move";
@@ -234,13 +234,13 @@ public class ClientThreadApi
      * @param request Email account specifier and IsRead flag.
      * @throws ApiException API error.
      */
-    public void SetIsRead(
+    public void setIsRead(
         ClientThreadSetIsReadRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling SetIsRead");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling setIsRead");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/client/thread/set-is-read";

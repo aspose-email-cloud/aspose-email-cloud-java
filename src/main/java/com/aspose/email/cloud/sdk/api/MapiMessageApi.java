@@ -62,13 +62,13 @@ public class MapiMessageApi
      * @return EmailDto
      * @throws ApiException API error.
      */
-    public EmailDto AsEmailDto(
+    public EmailDto asEmailDto(
         MapiMessageDto mapiMessage) throws ApiException 
     {
       try {
          // verify the required parameter 'mapiMessage' is set
         if (mapiMessage== null) {
-            throw new ApiException(400, "Missing the required parameter 'mapiMessage' when calling AsEmailDto");
+            throw new ApiException(400, "Missing the required parameter 'mapiMessage' when calling asEmailDto");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/as-email-dto";
@@ -104,13 +104,13 @@ public class MapiMessageApi
      * @return byte[]
      * @throws ApiException API error.
      */
-    public byte[] AsFile(
+    public byte[] asFile(
         MapiMessageAsFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling AsFile");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling asFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/as-file";
@@ -141,16 +141,16 @@ public class MapiMessageApi
      * @return MapiMessageDto
      * @throws ApiException API error.
      */
-    public MapiMessageDto FromFile(MapiMessageFromFileRequest request) throws ApiException 
+    public MapiMessageDto fromFile(MapiMessageFromFileRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.fileFormat' is set
         if (request.fileFormat== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.fileFormat' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.fileFormat' when calling fromFile");
         }
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling FromFile");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling fromFile");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/from-file";
@@ -192,16 +192,16 @@ public class MapiMessageApi
      * @return MapiMessageDto
      * @throws ApiException API error.
      */
-    public MapiMessageDto Get(MapiMessageGetRequest request) throws ApiException 
+    public MapiMessageDto get(MapiMessageGetRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.format' is set
         if (request.format== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling get");
         }
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Get");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage";
@@ -242,13 +242,13 @@ public class MapiMessageApi
      * @param request Message create/update request.
      * @throws ApiException API error.
      */
-    public void Save(
+    public void save(
         MapiMessageSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling Save");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling save");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage";

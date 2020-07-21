@@ -62,12 +62,12 @@ public class DisposableEmailApi
      * @return ValueTOfBoolean
      * @throws ApiException API error.
      */
-    public ValueTOfBoolean IsDisposable(DisposableEmailIsDisposableRequest request) throws ApiException 
+    public ValueTOfBoolean isDisposable(DisposableEmailIsDisposableRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.address' is set
         if (request.address== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.address' when calling IsDisposable");
+            throw new ApiException(400, "Missing the required parameter 'request.address' when calling isDisposable");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/disposable/is-disposable";

@@ -62,12 +62,12 @@ public class AiBcrApi
      * @return ContactList
      * @throws ApiException API error.
      */
-    public ContactList Parse(AiBcrParseRequest request) throws ApiException 
+    public ContactList parse(AiBcrParseRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.file' is set
         if (request.File== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.file' when calling Parse");
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling parse");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse";
@@ -111,13 +111,13 @@ public class AiBcrApi
      * @return StorageFileLocationList
      * @throws ApiException API error.
      */
-    public StorageFileLocationList ParseStorage(
+    public StorageFileLocationList parseStorage(
         AiBcrParseStorageRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling ParseStorage");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling parseStorage");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiBcr/parse-storage";

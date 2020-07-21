@@ -62,12 +62,12 @@ public class EmailConfigApi
      * @return EmailAccountConfigList
      * @throws ApiException API error.
      */
-    public EmailAccountConfigList Discover(EmailConfigDiscoverRequest request) throws ApiException 
+    public EmailAccountConfigList discover(EmailConfigDiscoverRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.address' is set
         if (request.address== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.address' when calling Discover");
+            throw new ApiException(400, "Missing the required parameter 'request.address' when calling discover");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/config/discover";
@@ -107,13 +107,13 @@ public class EmailConfigApi
      * @return EmailAccountConfigList
      * @throws ApiException API error.
      */
-    public EmailAccountConfigList DiscoverOauth(
+    public EmailAccountConfigList discoverOauth(
         DiscoverEmailConfigOauth request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling DiscoverOauth");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling discoverOauth");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/config/discover/oauth";
@@ -149,13 +149,13 @@ public class EmailConfigApi
      * @return EmailAccountConfigList
      * @throws ApiException API error.
      */
-    public EmailAccountConfigList DiscoverPassword(
+    public EmailAccountConfigList discoverPassword(
         DiscoverEmailConfigPassword request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling DiscoverPassword");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling discoverPassword");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/config/discover/password";

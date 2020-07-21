@@ -62,12 +62,12 @@ public class AiNameApi
      * @return AiNameWeightedVariants
      * @throws ApiException API error.
      */
-    public AiNameWeightedVariants Complete(AiNameCompleteRequest request) throws ApiException 
+    public AiNameWeightedVariants complete(AiNameCompleteRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Complete");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling complete");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/complete";
@@ -111,12 +111,12 @@ public class AiNameApi
      * @return AiNameWeightedVariants
      * @throws ApiException API error.
      */
-    public AiNameWeightedVariants Expand(AiNameExpandRequest request) throws ApiException 
+    public AiNameWeightedVariants expand(AiNameExpandRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Expand");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling expand");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/expand";
@@ -160,13 +160,13 @@ public class AiNameApi
      * @return AiNameWeightedVariants
      * @throws ApiException API error.
      */
-    public AiNameWeightedVariants ExpandParsed(
+    public AiNameWeightedVariants expandParsed(
         AiNameParsedRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling ExpandParsed");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling expandParsed");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/expand-parsed";
@@ -202,12 +202,12 @@ public class AiNameApi
      * @return AiNameFormatted
      * @throws ApiException API error.
      */
-    public AiNameFormatted Format(AiNameFormatRequest request) throws ApiException 
+    public AiNameFormatted format(AiNameFormatRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Format");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling format");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/format";
@@ -252,13 +252,13 @@ public class AiNameApi
      * @return AiNameFormatted
      * @throws ApiException API error.
      */
-    public AiNameFormatted FormatParsed(
+    public AiNameFormatted formatParsed(
         AiNameParsedRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling FormatParsed");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling formatParsed");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/format-parsed";
@@ -294,12 +294,12 @@ public class AiNameApi
      * @return AiNameGenderHypothesisList
      * @throws ApiException API error.
      */
-    public AiNameGenderHypothesisList Genderize(AiNameGenderizeRequest request) throws ApiException 
+    public AiNameGenderHypothesisList genderize(AiNameGenderizeRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Genderize");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling genderize");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/genderize";
@@ -343,13 +343,13 @@ public class AiNameApi
      * @return AiNameGenderHypothesisList
      * @throws ApiException API error.
      */
-    public AiNameGenderHypothesisList GenderizeParsed(
+    public AiNameGenderHypothesisList genderizeParsed(
         AiNameParsedRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling GenderizeParsed");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling genderizeParsed");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/genderize-parsed";
@@ -385,16 +385,16 @@ public class AiNameApi
      * @return AiNameMatchResult
      * @throws ApiException API error.
      */
-    public AiNameMatchResult Match(AiNameMatchRequest request) throws ApiException 
+    public AiNameMatchResult match(AiNameMatchRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Match");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling match");
         }
          // verify the required parameter 'request.otherName' is set
         if (request.otherName== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.otherName' when calling Match");
+            throw new ApiException(400, "Missing the required parameter 'request.otherName' when calling match");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/match";
@@ -439,13 +439,13 @@ public class AiNameApi
      * @return AiNameMatchResult
      * @throws ApiException API error.
      */
-    public AiNameMatchResult MatchParsed(
+    public AiNameMatchResult matchParsed(
         AiNameParsedMatchRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
         if (request== null) {
-            throw new ApiException(400, "Missing the required parameter 'request' when calling MatchParsed");
+            throw new ApiException(400, "Missing the required parameter 'request' when calling matchParsed");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/match-parsed";
@@ -481,12 +481,12 @@ public class AiNameApi
      * @return AiNameComponentList
      * @throws ApiException API error.
      */
-    public AiNameComponentList Parse(AiNameParseRequest request) throws ApiException 
+    public AiNameComponentList parse(AiNameParseRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.name' is set
         if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling Parse");
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling parse");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/parse";
@@ -530,12 +530,12 @@ public class AiNameApi
      * @return AiNameExtractedList
      * @throws ApiException API error.
      */
-    public AiNameExtractedList ParseEmailAddress(AiNameParseEmailAddressRequest request) throws ApiException 
+    public AiNameExtractedList parseEmailAddress(AiNameParseEmailAddressRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request.emailAddress' is set
         if (request.emailAddress== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.emailAddress' when calling ParseEmailAddress");
+            throw new ApiException(400, "Missing the required parameter 'request.emailAddress' when calling parseEmailAddress");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/AiName/parse-email-address";
