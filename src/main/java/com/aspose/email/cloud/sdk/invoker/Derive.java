@@ -1,3 +1,5 @@
+
+
 package com.aspose.email.cloud.sdk.invoker;
 import com.aspose.email.cloud.sdk.model.*;
 import com.google.gson.GsonBuilder;
@@ -40,5 +42,9 @@ public class Derive {
         builder.registerTypeAdapter(StorageModelOfMapiCalendarDto.class, new TypeDeriveAdapter<StorageModelOfMapiCalendarDto>());
         builder.registerTypeAdapter(StorageModelOfMapiContactDto.class, new TypeDeriveAdapter<StorageModelOfMapiContactDto>());
         builder.registerTypeAdapter(StorageModelOfMapiMessageDto.class, new TypeDeriveAdapter<StorageModelOfMapiMessageDto>());
+
     }
 }
+
+
+    
