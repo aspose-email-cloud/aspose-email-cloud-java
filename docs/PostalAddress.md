@@ -17,5 +17,49 @@ Name | Type | Description | Notes
 **street** | **String** | Address&#39;s street.              |  [optional]
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

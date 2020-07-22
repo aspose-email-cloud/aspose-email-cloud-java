@@ -9,5 +9,17 @@ Name | Type | Description | Notes
 **login** | **String** | Email account login. If not specified, address used as a login.              |  [optional]
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

@@ -9,5 +9,17 @@ Name | Type | Description | Notes
 **preferred** | **Boolean** | Determines whether this address is preferred.              | 
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

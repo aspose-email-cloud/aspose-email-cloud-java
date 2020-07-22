@@ -13,5 +13,33 @@ Name | Type | Description | Notes
 **year** | **Integer** | Year in which this rule is scheduled to take effect.              | 
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

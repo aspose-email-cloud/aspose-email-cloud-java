@@ -9,6 +9,22 @@ Name | Type | Description | Notes
 **refreshToken** | **String** | OAuth refresh token.              | 
 **requestUrl** | **String** | The url to obtain access token. If not specified, will be discovered from email configuration.              |  [optional]
 
+ Parent class: [DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+    
+    
+
+ Parent class: [DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+    
+    
+
+ Parent class: [DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+    
+    
+
+ Parent class: [DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+    
+    
+
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

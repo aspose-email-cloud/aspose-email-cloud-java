@@ -14,5 +14,37 @@ Name | Type | Description | Notes
 **trigger** | [**ReminderTrigger**](ReminderTrigger.md) | Specifies when an alarm will trigger. |  [optional]
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

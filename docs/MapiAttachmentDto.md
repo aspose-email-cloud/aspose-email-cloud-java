@@ -8,5 +8,13 @@ Name | Type | Description | Notes
 **dataBase64** | **String** | Attachment data represented as Base64 string.              |  [optional]
 
 
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

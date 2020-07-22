@@ -10,5 +10,21 @@ Name | Type | Description | Notes
 **responseRequested** | **Boolean** | Value indicating whether a response is requested to a Message object.              | 
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

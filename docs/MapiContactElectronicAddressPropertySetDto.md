@@ -15,5 +15,41 @@ Name | Type | Description | Notes
 **useAutocomplete** | **Boolean** | Indicates that one electronic address is completed automatically in case if user does not set any electronic address              | 
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

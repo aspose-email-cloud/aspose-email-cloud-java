@@ -9,5 +9,17 @@ Name | Type | Description | Notes
 **related** | **String** | Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End | 
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

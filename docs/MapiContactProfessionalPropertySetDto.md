@@ -13,5 +13,33 @@ Name | Type | Description | Notes
 **profession** | **String** | Gets or sets the profession of the contact              |  [optional]
 
 
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

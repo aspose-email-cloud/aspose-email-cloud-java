@@ -23,6 +23,78 @@ Name | Type | Description | Notes
 **uid** | **String** | Unique identifier.              |  [optional]
 **organizer** | [**MapiElectronicAddressDto**](MapiElectronicAddressDto.md) | Organizer              |  [optional]
 
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
+ Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+    
+    
+
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 
