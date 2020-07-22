@@ -1,20 +1,21 @@
 # com.aspose.email.cloud.sdk.api.EmailConfigApi
 
-<a name="emailConfigDiscover"></a>
-## **emailConfigDiscover**
-> [EmailAccountConfigList](EmailAccountConfigList.md) emailConfigDiscover(EmailConfigDiscoverRequestData request)
+            ﻿
+<a name="discover"></a>
+# **discover**
+> [EmailAccountConfigList](EmailAccountConfigList.md) discover(EmailConfigDiscoverRequest request)
 
 Discover email accounts by email address. Does not validate discovered accounts.             
 
-### **EmailConfigDiscoverRequestData** Parameters
+### **EmailConfigDiscoverRequest** Parameters
 ```java
-public EmailConfigDiscoverRequestData(
+public EmailConfigDiscoverRequest(
     String address, 
     Boolean fastProcessing)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **address** | **String**| Email address. |
  **fastProcessing** | **Boolean**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.              | [optional] [default to false]
 
@@ -22,49 +23,37 @@ Name | Type | Description  | Notes
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailConfigDiscoverOauth"></a>
-## **emailConfigDiscoverOauth**
-> [EmailAccountConfigList](EmailAccountConfigList.md) emailConfigDiscoverOauth(EmailConfigDiscoverOauthRequestData request)
+            ﻿
+<a name="discoverOauth"></a>
+# discoverOauth
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverOauth([DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md) request)
 
 Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
-### **EmailConfigDiscoverOauthRequestData** Parameters
-```java
-public EmailConfigDiscoverOauthRequestData(
-    DiscoverEmailConfigOauth request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. |
+See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
 
 ### Return type
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="emailConfigDiscoverPassword"></a>
-## **emailConfigDiscoverPassword**
-> [EmailAccountConfigList](EmailAccountConfigList.md) emailConfigDiscoverPassword(EmailConfigDiscoverPasswordRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="discoverPassword"></a>
+# discoverPassword
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverPassword([DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md) request)
 
 Discover email accounts by email address. Validates discovered accounts using login and password.             
 
-### **EmailConfigDiscoverPasswordRequestData** Parameters
-```java
-public EmailConfigDiscoverPasswordRequestData(
-    DiscoverEmailConfigPassword request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. |
+See parameter model documentation at [DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
 
 ### Return type
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

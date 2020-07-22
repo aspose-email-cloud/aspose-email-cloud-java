@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for CalendarApi.calendarFromFile request invocation.
+* Class that holds parameters for CalendarApi.fromFile request invocation.
 **/   
 public class CalendarFromFileRequest
 {

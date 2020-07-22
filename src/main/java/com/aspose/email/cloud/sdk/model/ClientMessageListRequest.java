@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientMessageApi.clientMessageList request invocation.
+* Class that holds parameters for ClientMessageApi.list request invocation.
 **/   
 public class ClientMessageListRequest
 {

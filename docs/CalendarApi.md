@@ -1,86 +1,69 @@
 # com.aspose.email.cloud.sdk.api.CalendarApi
 
-<a name="calendarAsAlternate"></a>
-## **calendarAsAlternate**
-> [AlternateView](AlternateView.md) calendarAsAlternate(CalendarAsAlternateRequestData request)
+            ﻿
+<a name="asAlternate"></a>
+# asAlternate
+> [AlternateView](AlternateView.md) asAlternate([CalendarAsAlternateRequest](CalendarAsAlternateRequest.md) request)
 
 Convert iCalendar to AlternateView             
 
-### **CalendarAsAlternateRequestData** Parameters
-```java
-public CalendarAsAlternateRequestData(
-    CalendarAsAlternateRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CalendarAsAlternateRequest**](CalendarAsAlternateRequest.md)| iCalendar to AlternateView request |
+See parameter model documentation at [CalendarAsAlternateRequest](CalendarAsAlternateRequest.md)
 
 ### Return type
 
 [**AlternateView**](AlternateView.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="calendarAsFile"></a>
-## **calendarAsFile**
-> byte[] calendarAsFile(CalendarAsFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([CalendarAsFileRequest](CalendarAsFileRequest.md) request)
 
 Converts calendar model to specified format and returns as file.             
 
-### **CalendarAsFileRequestData** Parameters
-```java
-public CalendarAsFileRequestData(
-    CalendarAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CalendarAsFileRequest**](CalendarAsFileRequest.md)| Calendar model and format to convert. |
+See parameter model documentation at [CalendarAsFileRequest](CalendarAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="calendarAsMapi"></a>
-## **calendarAsMapi**
-> [MapiCalendarDto](MapiCalendarDto.md) calendarAsMapi(CalendarAsMapiRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asMapi"></a>
+# asMapi
+> [MapiCalendarDto](MapiCalendarDto.md) asMapi([CalendarDto](CalendarDto.md) calendarDto)
 
 Converts CalendarDto to MapiCalendarDto.             
 
-### **CalendarAsMapiRequestData** Parameters
-```java
-public CalendarAsMapiRequestData(
-    CalendarDto calendarDto)
-```
+### calendarDto Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendarDto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation. |
+See parameter model documentation at [CalendarDto](CalendarDto.md)
 
 ### Return type
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="calendarConvert"></a>
-## **calendarConvert**
-> byte[] calendarConvert(CalendarConvertRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="convert"></a>
+# **convert**
+> byte[] convert(CalendarConvertRequest request)
 
 Converts calendar document to specified format and returns as file.             
 
-### **CalendarConvertRequestData** Parameters
+### **CalendarConvertRequest** Parameters
 ```java
-public CalendarConvertRequestData(
+public CalendarConvertRequest(
     String format, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| File format. Enum, available values: Ics, Msg |
  **file** | **byte[]**| File to convert |
 
@@ -88,46 +71,48 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarFromFile"></a>
-## **calendarFromFile**
-> [CalendarDto](CalendarDto.md) calendarFromFile(CalendarFromFileRequestData request)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [CalendarDto](CalendarDto.md) fromFile(CalendarFromFileRequest request)
 
 Converts calendar document to a model representation.             
 
-### **CalendarFromFileRequestData** Parameters
+### **CalendarFromFileRequest** Parameters
 ```java
-public CalendarFromFileRequestData(
+public CalendarFromFileRequest(
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarGet"></a>
-## **calendarGet**
-> [CalendarDto](CalendarDto.md) calendarGet(CalendarGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [CalendarDto](CalendarDto.md) get(CalendarGetRequest request)
 
 Get calendar file from storage.             
 
-### **CalendarGetRequestData** Parameters
+### **CalendarGetRequest** Parameters
 ```java
-public CalendarGetRequestData(
+public CalendarGetRequest(
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| iCalendar file name in storage. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -136,17 +121,18 @@ Name | Type | Description  | Notes
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarGetAsAlternate"></a>
-## **calendarGetAsAlternate**
-> [AlternateView](AlternateView.md) calendarGetAsAlternate(CalendarGetAsAlternateRequestData request)
+            ﻿
+<a name="getAsAlternate"></a>
+# **getAsAlternate**
+> [AlternateView](AlternateView.md) getAsAlternate(CalendarGetAsAlternateRequest request)
 
 Get iCalendar from storage as AlternateView             
 
-### **CalendarGetAsAlternateRequestData** Parameters
+### **CalendarGetAsAlternateRequest** Parameters
 ```java
-public CalendarGetAsAlternateRequestData(
+public CalendarGetAsAlternateRequest(
     String name, 
     String calendarAction, 
     String sequenceId, 
@@ -154,8 +140,8 @@ public CalendarGetAsAlternateRequestData(
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| iCalendar file name in storage |
  **calendarAction** | **String**| iCalendar method type Enum, available values: Create, Update, Cancel |
  **sequenceId** | **String**| The sequence id | [optional]
@@ -166,25 +152,26 @@ Name | Type | Description  | Notes
 
 [**AlternateView**](AlternateView.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarGetAsFile"></a>
-## **calendarGetAsFile**
-> byte[] calendarGetAsFile(CalendarGetAsFileRequestData request)
+            ﻿
+<a name="getAsFile"></a>
+# **getAsFile**
+> byte[] getAsFile(CalendarGetAsFileRequest request)
 
 Converts calendar document from storage to specified format and returns as file.             
 
-### **CalendarGetAsFileRequestData** Parameters
+### **CalendarGetAsFileRequest** Parameters
 ```java
-public CalendarGetAsFileRequestData(
+public CalendarGetAsFileRequest(
     String fileName, 
     String format, 
     String storage, 
     String folder)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **fileName** | **String**| Calendar document file name. |
  **format** | **String**| File format. Enum, available values: Ics, Msg |
  **storage** | **String**| Storage name. | [optional]
@@ -194,25 +181,26 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarGetList"></a>
-## **calendarGetList**
-> [CalendarStorageList](CalendarStorageList.md) calendarGetList(CalendarGetListRequestData request)
+            ﻿
+<a name="getList"></a>
+# **getList**
+> [CalendarStorageList](CalendarStorageList.md) getList(CalendarGetListRequest request)
 
 Get iCalendar list from storage folder.             
 
-### **CalendarGetListRequestData** Parameters
+### **CalendarGetListRequest** Parameters
 ```java
-public CalendarGetListRequestData(
+public CalendarGetListRequest(
     String folder, 
     Integer itemsPerPage, 
     Integer pageNumber, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **folder** | **String**| Path to folder in storage. |
  **itemsPerPage** | **Integer**| Count of items on page. | [optional] [default to 10]
  **pageNumber** | **Integer**| Page number. | [optional] [default to 0]
@@ -222,27 +210,21 @@ Name | Type | Description  | Notes
 
 [**CalendarStorageList**](CalendarStorageList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="calendarSave"></a>
-## **calendarSave**
-> void calendarSave(CalendarSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([CalendarSaveRequest](CalendarSaveRequest.md) request)
 
 Save iCalendar             
 
-### **CalendarSaveRequestData** Parameters
-```java
-public CalendarSaveRequestData(
-    CalendarSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CalendarSaveRequest**](CalendarSaveRequest.md)| iCalendar create/update request |
+See parameter model documentation at [CalendarSaveRequest](CalendarSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

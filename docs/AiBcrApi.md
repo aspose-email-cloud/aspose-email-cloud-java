@@ -1,22 +1,23 @@
 # com.aspose.email.cloud.sdk.api.AiBcrApi
 
-<a name="aiBcrParse"></a>
-## **aiBcrParse**
-> [ContactList](ContactList.md) aiBcrParse(AiBcrParseRequestData request)
+            ﻿
+<a name="parse"></a>
+# **parse**
+> [ContactList](ContactList.md) parse(AiBcrParseRequest request)
 
 Parse images to vCard document models             
 
-### **AiBcrParseRequestData** Parameters
+### **AiBcrParseRequest** Parameters
 ```java
-public AiBcrParseRequestData(
+public AiBcrParseRequest(
     byte[] file, 
     String countries, 
     String languages, 
     Boolean isSingle)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **file** | **byte[]**| File to parse |
  **countries** | **String**| Comma-separated codes of countries. | [optional] [default to ]
  **languages** | **String**| Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.              | [optional] [default to ]
@@ -26,27 +27,21 @@ Name | Type | Description  | Notes
 
 [**ContactList**](ContactList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiBcrParseStorage"></a>
-## **aiBcrParseStorage**
-> [StorageFileLocationList](StorageFileLocationList.md) aiBcrParseStorage(AiBcrParseStorageRequestData request)
+            ﻿
+<a name="parseStorage"></a>
+# parseStorage
+> [StorageFileLocationList](StorageFileLocationList.md) parseStorage([AiBcrParseStorageRequest](AiBcrParseStorageRequest.md) request)
 
 Parse images from storage to vCard files             
 
-### **AiBcrParseStorageRequestData** Parameters
-```java
-public AiBcrParseStorageRequestData(
-    AiBcrParseStorageRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseStorageRequest**](AiBcrParseStorageRequest.md)| Request with images located on storage |
+See parameter model documentation at [AiBcrParseStorageRequest](AiBcrParseStorageRequest.md)
 
 ### Return type
 
 [**StorageFileLocationList**](StorageFileLocationList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

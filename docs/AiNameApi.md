@@ -1,14 +1,15 @@
 # com.aspose.email.cloud.sdk.api.AiNameApi
 
-<a name="aiNameComplete"></a>
-## **aiNameComplete**
-> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameComplete(AiNameCompleteRequestData request)
+            ﻿
+<a name="complete"></a>
+# **complete**
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) complete(AiNameCompleteRequest request)
 
 The call proposes k most probable names for given starting characters             
 
-### **AiNameCompleteRequestData** Parameters
+### **AiNameCompleteRequest** Parameters
 ```java
-public AiNameCompleteRequestData(
+public AiNameCompleteRequest(
     String name, 
     String language, 
     String location, 
@@ -17,8 +18,8 @@ public AiNameCompleteRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to complete (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -30,17 +31,18 @@ Name | Type | Description  | Notes
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameExpand"></a>
-## **aiNameExpand**
-> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameExpand(AiNameExpandRequestData request)
+            ﻿
+<a name="expand"></a>
+# **expand**
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) expand(AiNameExpandRequest request)
 
 Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
 
-### **AiNameExpandRequestData** Parameters
+### **AiNameExpandRequest** Parameters
 ```java
-public AiNameExpandRequestData(
+public AiNameExpandRequest(
     String name, 
     String language, 
     String location, 
@@ -49,8 +51,8 @@ public AiNameExpandRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to format (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -62,39 +64,34 @@ Name | Type | Description  | Notes
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameExpandParsed"></a>
-## **aiNameExpandParsed**
-> [AiNameWeightedVariants](AiNameWeightedVariants.md) aiNameExpandParsed(AiNameExpandParsedRequestData request)
+            ﻿
+<a name="expandParsed"></a>
+# expandParsed
+> [AiNameWeightedVariants](AiNameWeightedVariants.md) expandParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
 
 Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
 
-### **AiNameExpandParsedRequestData** Parameters
-```java
-public AiNameExpandParsedRequestData(
-    AiNameParsedRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options |
+See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.md)
 
 ### Return type
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="aiNameFormat"></a>
-## **aiNameFormat**
-> [AiNameFormatted](AiNameFormatted.md) aiNameFormat(AiNameFormatRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="format"></a>
+# **format**
+> [AiNameFormatted](AiNameFormatted.md) format(AiNameFormatRequest request)
 
 Formats a person&#39;s name in correct case and name order using options for formatting instructions             
 
-### **AiNameFormatRequestData** Parameters
+### **AiNameFormatRequest** Parameters
 ```java
-public AiNameFormatRequestData(
+public AiNameFormatRequest(
     String name, 
     String language, 
     String location, 
@@ -104,8 +101,8 @@ public AiNameFormatRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to format (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -118,39 +115,34 @@ Name | Type | Description  | Notes
 
 [**AiNameFormatted**](AiNameFormatted.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameFormatParsed"></a>
-## **aiNameFormatParsed**
-> [AiNameFormatted](AiNameFormatted.md) aiNameFormatParsed(AiNameFormatParsedRequestData request)
+            ﻿
+<a name="formatParsed"></a>
+# formatParsed
+> [AiNameFormatted](AiNameFormatted.md) formatParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
 
 Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
 
-### **AiNameFormatParsedRequestData** Parameters
-```java
-public AiNameFormatParsedRequestData(
-    AiNameParsedRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options |
+See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.md)
 
 ### Return type
 
 [**AiNameFormatted**](AiNameFormatted.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="aiNameGenderize"></a>
-## **aiNameGenderize**
-> [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) aiNameGenderize(AiNameGenderizeRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="genderize"></a>
+# **genderize**
+> [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) genderize(AiNameGenderizeRequest request)
 
 Detect person&#39;s gender from name string             
 
-### **AiNameGenderizeRequestData** Parameters
+### **AiNameGenderizeRequest** Parameters
 ```java
-public AiNameGenderizeRequestData(
+public AiNameGenderizeRequest(
     String name, 
     String language, 
     String location, 
@@ -159,8 +151,8 @@ public AiNameGenderizeRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to parse (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -172,39 +164,34 @@ Name | Type | Description  | Notes
 
 [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameGenderizeParsed"></a>
-## **aiNameGenderizeParsed**
-> [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) aiNameGenderizeParsed(AiNameGenderizeParsedRequestData request)
+            ﻿
+<a name="genderizeParsed"></a>
+# genderizeParsed
+> [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) genderizeParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
 
 Detect person&#39;s gender from parsed name             
 
-### **AiNameGenderizeParsedRequestData** Parameters
-```java
-public AiNameGenderizeParsedRequestData(
-    AiNameParsedRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Gender detection request data |
+See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.md)
 
 ### Return type
 
 [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="aiNameMatch"></a>
-## **aiNameMatch**
-> [AiNameMatchResult](AiNameMatchResult.md) aiNameMatch(AiNameMatchRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="match"></a>
+# **match**
+> [AiNameMatchResult](AiNameMatchResult.md) match(AiNameMatchRequest request)
 
 Compare people&#39;s names. Uses options for comparing instructions             
 
-### **AiNameMatchRequestData** Parameters
+### **AiNameMatchRequest** Parameters
 ```java
-public AiNameMatchRequestData(
+public AiNameMatchRequest(
     String name, 
     String otherName, 
     String language, 
@@ -214,8 +201,8 @@ public AiNameMatchRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to match (required) |
  **otherName** | **String**| Another name to match (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
@@ -228,39 +215,34 @@ Name | Type | Description  | Notes
 
 [**AiNameMatchResult**](AiNameMatchResult.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameMatchParsed"></a>
-## **aiNameMatchParsed**
-> [AiNameMatchResult](AiNameMatchResult.md) aiNameMatchParsed(AiNameMatchParsedRequestData request)
+            ﻿
+<a name="matchParsed"></a>
+# matchParsed
+> [AiNameMatchResult](AiNameMatchResult.md) matchParsed([AiNameParsedMatchRequest](AiNameParsedMatchRequest.md) request)
 
 Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
 
-### **AiNameMatchParsedRequestData** Parameters
-```java
-public AiNameMatchParsedRequestData(
-    AiNameParsedMatchRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedMatchRequest**](AiNameParsedMatchRequest.md)| Parsed names to match |
+See parameter model documentation at [AiNameParsedMatchRequest](AiNameParsedMatchRequest.md)
 
 ### Return type
 
 [**AiNameMatchResult**](AiNameMatchResult.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="aiNameParse"></a>
-## **aiNameParse**
-> [AiNameComponentList](AiNameComponentList.md) aiNameParse(AiNameParseRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="parse"></a>
+# **parse**
+> [AiNameComponentList](AiNameComponentList.md) parse(AiNameParseRequest request)
 
 Parse name to components             
 
-### **AiNameParseRequestData** Parameters
+### **AiNameParseRequest** Parameters
 ```java
-public AiNameParseRequestData(
+public AiNameParseRequest(
     String name, 
     String language, 
     String location, 
@@ -269,8 +251,8 @@ public AiNameParseRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| A name to parse (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -282,17 +264,18 @@ Name | Type | Description  | Notes
 
 [**AiNameComponentList**](AiNameComponentList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="aiNameParseEmailAddress"></a>
-## **aiNameParseEmailAddress**
-> [AiNameExtractedList](AiNameExtractedList.md) aiNameParseEmailAddress(AiNameParseEmailAddressRequestData request)
+            ﻿
+<a name="parseEmailAddress"></a>
+# **parseEmailAddress**
+> [AiNameExtractedList](AiNameExtractedList.md) parseEmailAddress(AiNameParseEmailAddressRequest request)
 
 Parse person&#39;s name out of an email address             
 
-### **AiNameParseEmailAddressRequestData** Parameters
+### **AiNameParseEmailAddressRequest** Parameters
 ```java
-public AiNameParseEmailAddressRequestData(
+public AiNameParseEmailAddressRequest(
     String emailAddress, 
     String language, 
     String location, 
@@ -301,8 +284,8 @@ public AiNameParseEmailAddressRequestData(
     String style)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **emailAddress** | **String**| Email address to parse (required) |
  **language** | **String**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
  **location** | **String**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
@@ -314,5 +297,5 @@ Name | Type | Description  | Notes
 
 [**AiNameExtractedList**](AiNameExtractedList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 

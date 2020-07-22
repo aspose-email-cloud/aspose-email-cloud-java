@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailApi.emailConvert request invocation.
+* Class that holds parameters for EmailApi.convert request invocation.
 **/   
 public class EmailConvertRequest
 {

@@ -1,21 +1,22 @@
 # com.aspose.email.cloud.sdk.api.ClientAccountApi
 
-<a name="clientAccountGet"></a>
-## **clientAccountGet**
-> [EmailClientAccount](EmailClientAccount.md) clientAccountGet(ClientAccountGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [EmailClientAccount](EmailClientAccount.md) get(ClientAccountGetRequest request)
 
 Get email client account from storage.             
 
-### **ClientAccountGetRequestData** Parameters
+### **ClientAccountGetRequest** Parameters
 ```java
-public ClientAccountGetRequestData(
+public ClientAccountGetRequest(
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| File name on storage. |
  **folder** | **String**| Folder on storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -24,24 +25,25 @@ Name | Type | Description  | Notes
 
 [**EmailClientAccount**](EmailClientAccount.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="clientAccountGetMulti"></a>
-## **clientAccountGetMulti**
-> [EmailClientMultiAccount](EmailClientMultiAccount.md) clientAccountGetMulti(ClientAccountGetMultiRequestData request)
+            ﻿
+<a name="getMulti"></a>
+# **getMulti**
+> [EmailClientMultiAccount](EmailClientMultiAccount.md) getMulti(ClientAccountGetMultiRequest request)
 
 Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-### **ClientAccountGetMultiRequestData** Parameters
+### **ClientAccountGetMultiRequest** Parameters
 ```java
-public ClientAccountGetMultiRequestData(
+public ClientAccountGetMultiRequest(
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| File name on storage |
  **folder** | **String**| Folder on storage | [optional]
  **storage** | **String**| Storage name | [optional]
@@ -50,49 +52,37 @@ Name | Type | Description  | Notes
 
 [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="clientAccountSave"></a>
-## **clientAccountSave**
-> void clientAccountSave(ClientAccountSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md) request)
 
 Create/update email client account file (*.account) with credentials             
 
-### **ClientAccountSaveRequestData** Parameters
-```java
-public ClientAccountSaveRequestData(
-    EmailClientAccountSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**EmailClientAccountSaveRequest**](EmailClientAccountSaveRequest.md)| Email account information |
+See parameter model documentation at [EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="clientAccountSaveMulti"></a>
-## **clientAccountSaveMulti**
-> void clientAccountSaveMulti(ClientAccountSaveMultiRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="saveMulti"></a>
+# saveMulti
+> void saveMulti([EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md) request)
 
 Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-### **ClientAccountSaveMultiRequestData** Parameters
-```java
-public ClientAccountSaveMultiRequestData(
-    EmailClientMultiAccountSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**EmailClientMultiAccountSaveRequest**](EmailClientMultiAccountSaveRequest.md)| Email accounts information. |
+See parameter model documentation at [EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

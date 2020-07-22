@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailConfigApi.emailConfigDiscover request invocation.
+* Class that holds parameters for EmailConfigApi.discover request invocation.
 **/   
 public class EmailConfigDiscoverRequest
 {

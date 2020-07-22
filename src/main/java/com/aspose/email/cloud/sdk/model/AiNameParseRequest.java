@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiNameApi.aiNameParse request invocation.
+* Class that holds parameters for AiNameApi.parse request invocation.
 **/   
 public class AiNameParseRequest
 {

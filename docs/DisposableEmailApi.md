@@ -1,24 +1,25 @@
 # com.aspose.email.cloud.sdk.api.DisposableEmailApi
 
-<a name="disposableEmailIsDisposable"></a>
-## **disposableEmailIsDisposable**
-> [ValueTOfBoolean](ValueTOfBoolean.md) disposableEmailIsDisposable(DisposableEmailIsDisposableRequestData request)
+            ﻿
+<a name="isDisposable"></a>
+# **isDisposable**
+> [ValueTOfBoolean](ValueTOfBoolean.md) isDisposable(DisposableEmailIsDisposableRequest request)
 
 Check email address is disposable             
 
-### **DisposableEmailIsDisposableRequestData** Parameters
+### **DisposableEmailIsDisposableRequest** Parameters
 ```java
-public DisposableEmailIsDisposableRequestData(
+public DisposableEmailIsDisposableRequest(
     String address)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **address** | **String**| An email address to check |
 
 ### Return type
 
 [**ValueTOfBoolean**](ValueTOfBoolean.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 

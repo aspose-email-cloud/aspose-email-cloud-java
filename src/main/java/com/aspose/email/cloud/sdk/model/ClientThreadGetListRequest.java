@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientThreadApi.clientThreadGetList request invocation.
+* Class that holds parameters for ClientThreadApi.getList request invocation.
 **/   
 public class ClientThreadGetListRequest
 {

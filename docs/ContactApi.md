@@ -1,65 +1,54 @@
 # com.aspose.email.cloud.sdk.api.ContactApi
 
-<a name="contactAsFile"></a>
-## **contactAsFile**
-> byte[] contactAsFile(ContactAsFileRequestData request)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([ContactAsFileRequest](ContactAsFileRequest.md) request)
 
 Converts contact model to specified format and returns as file             
 
-### **ContactAsFileRequestData** Parameters
-```java
-public ContactAsFileRequestData(
-    ContactAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ContactAsFileRequest**](ContactAsFileRequest.md)| Contact model and format to convert |
+See parameter model documentation at [ContactAsFileRequest](ContactAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="contactAsMapi"></a>
-## **contactAsMapi**
-> [MapiContactDto](MapiContactDto.md) contactAsMapi(ContactAsMapiRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asMapi"></a>
+# asMapi
+> [MapiContactDto](MapiContactDto.md) asMapi([ContactDto](ContactDto.md) contactDto)
 
 Converts ContactDto to MapiContactDto.             
 
-### **ContactAsMapiRequestData** Parameters
-```java
-public ContactAsMapiRequestData(
-    ContactDto contactDto)
-```
+### contactDto Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactDto** | [**ContactDto**](ContactDto.md)| Contact model to convert |
+See parameter model documentation at [ContactDto](ContactDto.md)
 
 ### Return type
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="contactConvert"></a>
-## **contactConvert**
-> byte[] contactConvert(ContactConvertRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="convert"></a>
+# **convert**
+> byte[] convert(ContactConvertRequest request)
 
 Converts contact document to specified format and returns as file             
 
-### **ContactConvertRequestData** Parameters
+### **ContactConvertRequest** Parameters
 ```java
-public ContactConvertRequestData(
+public ContactConvertRequest(
     String toFormat, 
     String fromFormat, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **toFormat** | **String**| File format to convert to Enum, available values: VCard, WebDav, Msg |
  **fromFormat** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
  **file** | **byte[]**| File to convert |
@@ -68,23 +57,24 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="contactFromFile"></a>
-## **contactFromFile**
-> [ContactDto](ContactDto.md) contactFromFile(ContactFromFileRequestData request)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [ContactDto](ContactDto.md) fromFile(ContactFromFileRequest request)
 
 Converts contact document to a model representation             
 
-### **ContactFromFileRequestData** Parameters
+### **ContactFromFileRequest** Parameters
 ```java
-public ContactFromFileRequestData(
+public ContactFromFileRequest(
     String format, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| File format Enum, available values: VCard, WebDav, Msg |
  **file** | **byte[]**| File to convert |
 
@@ -92,25 +82,26 @@ Name | Type | Description  | Notes
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="contactGet"></a>
-## **contactGet**
-> [ContactDto](ContactDto.md) contactGet(ContactGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [ContactDto](ContactDto.md) get(ContactGetRequest request)
 
 Get contact document from storage.             
 
-### **ContactGetRequestData** Parameters
+### **ContactGetRequest** Parameters
 ```java
-public ContactGetRequestData(
+public ContactGetRequest(
     String format, 
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
@@ -120,17 +111,18 @@ Name | Type | Description  | Notes
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="contactGetAsFile"></a>
-## **contactGetAsFile**
-> byte[] contactGetAsFile(ContactGetAsFileRequestData request)
+            ﻿
+<a name="getAsFile"></a>
+# **getAsFile**
+> byte[] getAsFile(ContactGetAsFileRequest request)
 
 Converts contact document from storage to specified format and returns as file             
 
-### **ContactGetAsFileRequestData** Parameters
+### **ContactGetAsFileRequest** Parameters
 ```java
-public ContactGetAsFileRequestData(
+public ContactGetAsFileRequest(
     String fileName, 
     String toFormat, 
     String fromFormat, 
@@ -138,8 +130,8 @@ public ContactGetAsFileRequestData(
     String folder)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **fileName** | **String**| Calendar document file name |
  **toFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
  **fromFormat** | **String**| File format to convert from Enum, available values: VCard, WebDav, Msg |
@@ -150,17 +142,18 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="contactGetList"></a>
-## **contactGetList**
-> [ContactStorageList](ContactStorageList.md) contactGetList(ContactGetListRequestData request)
+            ﻿
+<a name="getList"></a>
+# **getList**
+> [ContactStorageList](ContactStorageList.md) getList(ContactGetListRequest request)
 
 Get contact list from storage folder.             
 
-### **ContactGetListRequestData** Parameters
+### **ContactGetListRequest** Parameters
 ```java
-public ContactGetListRequestData(
+public ContactGetListRequest(
     String format, 
     String folder, 
     String storage, 
@@ -168,8 +161,8 @@ public ContactGetListRequestData(
     Integer pageNumber)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -180,27 +173,21 @@ Name | Type | Description  | Notes
 
 [**ContactStorageList**](ContactStorageList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="contactSave"></a>
-## **contactSave**
-> void contactSave(ContactSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([ContactSaveRequest](ContactSaveRequest.md) request)
 
 Save contact to storage.             
 
-### **ContactSaveRequestData** Parameters
-```java
-public ContactSaveRequestData(
-    ContactSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ContactSaveRequest**](ContactSaveRequest.md)| Create/Update contact request. |
+See parameter model documentation at [ContactSaveRequest](ContactSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

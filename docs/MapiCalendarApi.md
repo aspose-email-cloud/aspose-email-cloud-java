@@ -1,87 +1,77 @@
 # com.aspose.email.cloud.sdk.api.MapiCalendarApi
 
-<a name="mapiCalendarAsCalendarDto"></a>
-## **mapiCalendarAsCalendarDto**
-> [CalendarDto](CalendarDto.md) mapiCalendarAsCalendarDto(MapiCalendarAsCalendarDtoRequestData request)
+            ﻿
+<a name="asCalendarDto"></a>
+# asCalendarDto
+> [CalendarDto](CalendarDto.md) asCalendarDto([MapiCalendarDto](MapiCalendarDto.md) mapiCalendarDto)
 
 Converts MAPI calendar model to CalendarDto model.             
 
-### **MapiCalendarAsCalendarDtoRequestData** Parameters
-```java
-public MapiCalendarAsCalendarDtoRequestData(
-    MapiCalendarDto mapiCalendarDto)
-```
+### mapiCalendarDto Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mapiCalendarDto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert. |
+See parameter model documentation at [MapiCalendarDto](MapiCalendarDto.md)
 
 ### Return type
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiCalendarAsFile"></a>
-## **mapiCalendarAsFile**
-> byte[] mapiCalendarAsFile(MapiCalendarAsFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([MapiCalendarAsFileRequest](MapiCalendarAsFileRequest.md) request)
 
 Converts MAPI calendar model to specified format and returns as file.             
 
-### **MapiCalendarAsFileRequestData** Parameters
-```java
-public MapiCalendarAsFileRequestData(
-    MapiCalendarAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiCalendarAsFileRequest**](MapiCalendarAsFileRequest.md)| MAPI calendar model to convert. |
+See parameter model documentation at [MapiCalendarAsFileRequest](MapiCalendarAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiCalendarFromFile"></a>
-## **mapiCalendarFromFile**
-> [MapiCalendarDto](MapiCalendarDto.md) mapiCalendarFromFile(MapiCalendarFromFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [MapiCalendarDto](MapiCalendarDto.md) fromFile(MapiCalendarFromFileRequest request)
 
 Converts calendar file to a MAPI model representation.             
 
-### **MapiCalendarFromFileRequestData** Parameters
+### **MapiCalendarFromFileRequest** Parameters
 ```java
-public MapiCalendarFromFileRequestData(
+public MapiCalendarFromFileRequest(
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiCalendarGet"></a>
-## **mapiCalendarGet**
-> [MapiCalendarDto](MapiCalendarDto.md) mapiCalendarGet(MapiCalendarGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [MapiCalendarDto](MapiCalendarDto.md) get(MapiCalendarGetRequest request)
 
 Get MAPI calendar document.             
 
-### **MapiCalendarGetRequestData** Parameters
+### **MapiCalendarGetRequest** Parameters
 ```java
-public MapiCalendarGetRequestData(
+public MapiCalendarGetRequest(
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **name** | **String**| Calendar file name in storage. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -90,27 +80,21 @@ Name | Type | Description  | Notes
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiCalendarSave"></a>
-## **mapiCalendarSave**
-> void mapiCalendarSave(MapiCalendarSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([MapiCalendarSaveRequest](MapiCalendarSaveRequest.md) request)
 
 Save MAPI Calendar to storage.             
 
-### **MapiCalendarSaveRequestData** Parameters
-```java
-public MapiCalendarSaveRequestData(
-    MapiCalendarSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiCalendarSaveRequest**](MapiCalendarSaveRequest.md)| Calendar create/update request. |
+See parameter model documentation at [MapiCalendarSaveRequest](MapiCalendarSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

@@ -1,42 +1,44 @@
 # com.aspose.email.cloud.sdk.api.StorageApi
 
+            ﻿
 <a name="getDiscUsage"></a>
-## **getDiscUsage**
-> [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequestData request)
+# **getDiscUsage**
+> [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequest request)
 
 Get disc usage
 
-### **GetDiscUsageRequestData** Parameters
+### **GetDiscUsageRequest** Parameters
 ```java
-public GetDiscUsageRequestData(
+public GetDiscUsageRequest(
     String storageName)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **storageName** | **String**| Storage name | [optional]
 
 ### Return type
 
 [**DiscUsage**](DiscUsage.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="getFileVersions"></a>
-## **getFileVersions**
-> [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequestData request)
+# **getFileVersions**
+> [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequest request)
 
 Get file versions
 
-### **GetFileVersionsRequestData** Parameters
+### **GetFileVersionsRequest** Parameters
 ```java
-public GetFileVersionsRequestData(
+public GetFileVersionsRequest(
     String path, 
     String storageName)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **path** | **String**| File path e.g. &#39;/file.ext&#39; |
  **storageName** | **String**| Storage name | [optional]
 
@@ -44,24 +46,25 @@ Name | Type | Description  | Notes
 
 [**FileVersions**](FileVersions.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="objectExists"></a>
-## **objectExists**
-> [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequestData request)
+# **objectExists**
+> [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequest request)
 
 Check if file or folder exists
 
-### **ObjectExistsRequestData** Parameters
+### **ObjectExistsRequest** Parameters
 ```java
-public ObjectExistsRequestData(
+public ObjectExistsRequest(
     String path, 
     String storageName, 
     String versionId)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
  **storageName** | **String**| Storage name | [optional]
  **versionId** | **String**| File version ID | [optional]
@@ -70,27 +73,28 @@ Name | Type | Description  | Notes
 
 [**ObjectExist**](ObjectExist.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="storageExists"></a>
-## **storageExists**
-> [StorageExist](StorageExist.md) storageExists(StorageExistsRequestData request)
+            ﻿
+<a name="exists"></a>
+# **exists**
+> [StorageExist](StorageExist.md) exists(StorageExistsRequest request)
 
 Check if storage exists
 
-### **StorageExistsRequestData** Parameters
+### **StorageExistsRequest** Parameters
 ```java
-public StorageExistsRequestData(
+public StorageExistsRequest(
     String storageName)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **storageName** | **String**| Storage name |
 
 ### Return type
 
 [**StorageExist**](StorageExist.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 

@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for DisposableEmailApi.disposableEmailIsDisposable request invocation.
+* Class that holds parameters for DisposableEmailApi.isDisposable request invocation.
 **/   
 public class DisposableEmailIsDisposableRequest
 {

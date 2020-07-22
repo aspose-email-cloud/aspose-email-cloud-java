@@ -1,64 +1,53 @@
 # com.aspose.email.cloud.sdk.api.MapiContactApi
 
-<a name="mapiContactAsContactDto"></a>
-## **mapiContactAsContactDto**
-> [ContactDto](ContactDto.md) mapiContactAsContactDto(MapiContactAsContactDtoRequestData request)
+            ﻿
+<a name="asContactDto"></a>
+# asContactDto
+> [ContactDto](ContactDto.md) asContactDto([MapiContactDto](MapiContactDto.md) mapiContactDto)
 
 Converts MAPI contact model to ContactDto model.             
 
-### **MapiContactAsContactDtoRequestData** Parameters
-```java
-public MapiContactAsContactDtoRequestData(
-    MapiContactDto mapiContactDto)
-```
+### mapiContactDto Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mapiContactDto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert. |
+See parameter model documentation at [MapiContactDto](MapiContactDto.md)
 
 ### Return type
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiContactAsFile"></a>
-## **mapiContactAsFile**
-> byte[] mapiContactAsFile(MapiContactAsFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([MapiContactAsFileRequest](MapiContactAsFileRequest.md) request)
 
 Converts MAPI contact model to specified format and returns as file.             
 
-### **MapiContactAsFileRequestData** Parameters
-```java
-public MapiContactAsFileRequestData(
-    MapiContactAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiContactAsFileRequest**](MapiContactAsFileRequest.md)| MAPI contact model to convert. |
+See parameter model documentation at [MapiContactAsFileRequest](MapiContactAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiContactFromFile"></a>
-## **mapiContactFromFile**
-> [MapiContactDto](MapiContactDto.md) mapiContactFromFile(MapiContactFromFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [MapiContactDto](MapiContactDto.md) fromFile(MapiContactFromFileRequest request)
 
 Converts contact file to a MAPI model representation.             
 
-### **MapiContactFromFileRequestData** Parameters
+### **MapiContactFromFileRequest** Parameters
 ```java
-public MapiContactFromFileRequestData(
+public MapiContactFromFileRequest(
     String fileFormat, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **fileFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
  **file** | **byte[]**| File to convert |
 
@@ -66,25 +55,26 @@ Name | Type | Description  | Notes
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiContactGet"></a>
-## **mapiContactGet**
-> [MapiContactDto](MapiContactDto.md) mapiContactGet(MapiContactGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [MapiContactDto](MapiContactDto.md) get(MapiContactGetRequest request)
 
 Get MAPI contact document.             
 
-### **MapiContactGetRequestData** Parameters
+### **MapiContactGetRequest** Parameters
 ```java
-public MapiContactGetRequestData(
+public MapiContactGetRequest(
     String format, 
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
  **name** | **String**| Contact document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
@@ -94,27 +84,21 @@ Name | Type | Description  | Notes
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiContactSave"></a>
-## **mapiContactSave**
-> void mapiContactSave(MapiContactSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([MapiContactSaveRequest](MapiContactSaveRequest.md) request)
 
 Save MAPI Contact to storage.             
 
-### **MapiContactSaveRequestData** Parameters
-```java
-public MapiContactSaveRequestData(
-    MapiContactSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiContactSaveRequest**](MapiContactSaveRequest.md)| Create/Update contact request. |
+See parameter model documentation at [MapiContactSaveRequest](MapiContactSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

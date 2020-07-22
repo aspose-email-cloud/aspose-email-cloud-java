@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiMessageApi.mapiMessageFromFile request invocation.
+* Class that holds parameters for MapiMessageApi.fromFile request invocation.
 **/   
 public class MapiMessageFromFileRequest
 {

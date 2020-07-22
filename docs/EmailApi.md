@@ -1,64 +1,53 @@
 # com.aspose.email.cloud.sdk.api.EmailApi
 
-<a name="emailAsFile"></a>
-## **emailAsFile**
-> byte[] emailAsFile(EmailAsFileRequestData request)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([EmailAsFileRequest](EmailAsFileRequest.md) request)
 
 Converts Email model to specified format and returns as file.             
 
-### **EmailAsFileRequestData** Parameters
-```java
-public EmailAsFileRequestData(
-    EmailAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**EmailAsFileRequest**](EmailAsFileRequest.md)| Email model and format to convert. |
+See parameter model documentation at [EmailAsFileRequest](EmailAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="emailAsMapi"></a>
-## **emailAsMapi**
-> [MapiMessageDto](MapiMessageDto.md) emailAsMapi(EmailAsMapiRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asMapi"></a>
+# asMapi
+> [MapiMessageDto](MapiMessageDto.md) asMapi([EmailDto](EmailDto.md) emailDto)
 
 Converts EmailDto to MapiMessageDto.             
 
-### **EmailAsMapiRequestData** Parameters
-```java
-public EmailAsMapiRequestData(
-    EmailDto emailDto)
-```
+### emailDto Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **emailDto** | [**EmailDto**](EmailDto.md)| Email model to convert |
+See parameter model documentation at [EmailDto](EmailDto.md)
 
 ### Return type
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="emailConvert"></a>
-## **emailConvert**
-> byte[] emailConvert(EmailConvertRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="convert"></a>
+# **convert**
+> byte[] convert(EmailConvertRequest request)
 
 Converts email document to specified format and returns as file             
 
-### **EmailConvertRequestData** Parameters
+### **EmailConvertRequest** Parameters
 ```java
-public EmailConvertRequestData(
+public EmailConvertRequest(
     String format, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **file** | **byte[]**| File to convert |
 
@@ -66,47 +55,49 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailFromFile"></a>
-## **emailFromFile**
-> [EmailDto](EmailDto.md) emailFromFile(EmailFromFileRequestData request)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [EmailDto](EmailDto.md) fromFile(EmailFromFileRequest request)
 
 Converts email document to a model representation             
 
-### **EmailFromFileRequestData** Parameters
+### **EmailFromFileRequest** Parameters
 ```java
-public EmailFromFileRequestData(
+public EmailFromFileRequest(
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailGet"></a>
-## **emailGet**
-> [EmailDto](EmailDto.md) emailGet(EmailGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [EmailDto](EmailDto.md) get(EmailGetRequest request)
 
 Get email document from storage.             
 
-### **EmailGetRequestData** Parameters
+### **EmailGetRequest** Parameters
 ```java
-public EmailGetRequestData(
+public EmailGetRequest(
     String format, 
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **name** | **String**| Email document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
@@ -116,25 +107,26 @@ Name | Type | Description  | Notes
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailGetAsFile"></a>
-## **emailGetAsFile**
-> byte[] emailGetAsFile(EmailGetAsFileRequestData request)
+            ﻿
+<a name="getAsFile"></a>
+# **getAsFile**
+> byte[] getAsFile(EmailGetAsFileRequest request)
 
 Converts email document from storage to specified format and returns as file             
 
-### **EmailGetAsFileRequestData** Parameters
+### **EmailGetAsFileRequest** Parameters
 ```java
-public EmailGetAsFileRequestData(
+public EmailGetAsFileRequest(
     String fileName, 
     String format, 
     String storage, 
     String folder)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **fileName** | **String**| Email document file name |
  **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **storage** | **String**| Storage name | [optional]
@@ -144,17 +136,18 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailGetList"></a>
-## **emailGetList**
-> [EmailStorageList](EmailStorageList.md) emailGetList(EmailGetListRequestData request)
+            ﻿
+<a name="getList"></a>
+# **getList**
+> [EmailStorageList](EmailStorageList.md) getList(EmailGetListRequest request)
 
 Get email list from storage folder.             
 
-### **EmailGetListRequestData** Parameters
+### **EmailGetListRequest** Parameters
 ```java
-public EmailGetListRequestData(
+public EmailGetListRequest(
     String format, 
     String folder, 
     String storage, 
@@ -162,8 +155,8 @@ public EmailGetListRequestData(
     Integer pageNumber)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -174,27 +167,21 @@ Name | Type | Description  | Notes
 
 [**EmailStorageList**](EmailStorageList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="emailSave"></a>
-## **emailSave**
-> void emailSave(EmailSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([EmailSaveRequest](EmailSaveRequest.md) request)
 
 Save email document to storage.             
 
-### **EmailSaveRequestData** Parameters
-```java
-public EmailSaveRequestData(
-    EmailSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**EmailSaveRequest**](EmailSaveRequest.md)| Email document create/update request. |
+See parameter model documentation at [EmailSaveRequest](EmailSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

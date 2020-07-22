@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ContactApi.contactFromFile request invocation.
+* Class that holds parameters for ContactApi.fromFile request invocation.
 **/   
 public class ContactFromFileRequest
 {

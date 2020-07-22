@@ -3,6 +3,6 @@ MAPI operations.
 
 API | Description
 --- | -----------
-[EmailCloud.Mapi.**Calendar**](MapiCalendarApi_list.md) | MAPI calendar operations.             
-[EmailCloud.Mapi.**Contact**](MapiContactApi_list.md) | MAPI contact operations             
-[EmailCloud.Mapi.**Message**](MapiMessageApi_list.md) | MAPI message operations             
+[EmailCloud.mapi().**calendar()**](MapiCalendarApi_list.md) | MAPI calendar operations.             
+[EmailCloud.mapi().**contact()**](MapiContactApi_list.md) | MAPI contact operations             
+[EmailCloud.mapi().**message()**](MapiMessageApi_list.md) | MAPI message operations             

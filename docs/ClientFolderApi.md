@@ -1,66 +1,55 @@
 # com.aspose.email.cloud.sdk.api.ClientFolderApi
 
-<a name="clientFolderCreate"></a>
-## **clientFolderCreate**
-> void clientFolderCreate(ClientFolderCreateRequestData request)
+            ﻿
+<a name="create"></a>
+# create
+> void create([ClientFolderCreateRequest](ClientFolderCreateRequest.md) request)
 
 Create new folder in email account             
 
-### **ClientFolderCreateRequestData** Parameters
-```java
-public ClientFolderCreateRequestData(
-    ClientFolderCreateRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ClientFolderCreateRequest**](ClientFolderCreateRequest.md)| Create folder request |
+See parameter model documentation at [ClientFolderCreateRequest](ClientFolderCreateRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="clientFolderDelete"></a>
-## **clientFolderDelete**
-> void clientFolderDelete(ClientFolderDeleteRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="delete"></a>
+# delete
+> void delete([ClientFolderDeleteRequest](ClientFolderDeleteRequest.md) request)
 
 Delete a folder in email account             
 
-### **ClientFolderDeleteRequestData** Parameters
-```java
-public ClientFolderDeleteRequestData(
-    ClientFolderDeleteRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ClientFolderDeleteRequest**](ClientFolderDeleteRequest.md)| Delete folder request |
+See parameter model documentation at [ClientFolderDeleteRequest](ClientFolderDeleteRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="clientFolderGetList"></a>
-## **clientFolderGetList**
-> [MailServerFolderList](MailServerFolderList.md) clientFolderGetList(ClientFolderGetListRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="getList"></a>
+# **getList**
+> [MailServerFolderList](MailServerFolderList.md) getList(ClientFolderGetListRequest request)
 
 Get folders list in email account             
 
-### **ClientFolderGetListRequestData** Parameters
+### **ClientFolderGetListRequest** Parameters
 ```java
-public ClientFolderGetListRequestData(
+public ClientFolderGetListRequest(
     String account, 
     String storage, 
     String accountStorageFolder, 
     String parentFolder)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **account** | **String**| Email account |
  **storage** | **String**| Storage name where account file located | [optional]
  **accountStorageFolder** | **String**| Folder in storage where account file located | [optional]
@@ -70,5 +59,5 @@ Name | Type | Description  | Notes
 
 [**MailServerFolderList**](MailServerFolderList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 

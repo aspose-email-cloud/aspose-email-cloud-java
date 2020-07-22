@@ -1,14 +1,15 @@
 # com.aspose.email.cloud.sdk.api.FileApi
 
+            ﻿
 <a name="copyFile"></a>
-## **copyFile**
-> void copyFile(CopyFileRequestData request)
+# **copyFile**
+> void copyFile(CopyFileRequest request)
 
 Copy file
 
-### **CopyFileRequestData** Parameters
+### **CopyFileRequest** Parameters
 ```java
-public CopyFileRequestData(
+public CopyFileRequest(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -16,8 +17,8 @@ public CopyFileRequestData(
     String versionId)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **srcPath** | **String**| Source file path e.g. &#39;/folder/file.ext&#39; |
  **destPath** | **String**| Destination file path |
  **srcStorageName** | **String**| Source storage name | [optional]
@@ -28,24 +29,25 @@ Name | Type | Description  | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="deleteFile"></a>
-## **deleteFile**
-> void deleteFile(DeleteFileRequestData request)
+# **deleteFile**
+> void deleteFile(DeleteFileRequest request)
 
 Delete file
 
-### **DeleteFileRequestData** Parameters
+### **DeleteFileRequest** Parameters
 ```java
-public DeleteFileRequestData(
+public DeleteFileRequest(
     String path, 
     String storageName, 
     String versionId)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
  **storageName** | **String**| Storage name | [optional]
  **versionId** | **String**| File version ID to delete | [optional]
@@ -54,24 +56,25 @@ Name | Type | Description  | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="downloadFile"></a>
-## **downloadFile**
-> byte[] downloadFile(DownloadFileRequestData request)
+# **downloadFile**
+> byte[] downloadFile(DownloadFileRequest request)
 
 Download file
 
-### **DownloadFileRequestData** Parameters
+### **DownloadFileRequest** Parameters
 ```java
-public DownloadFileRequestData(
+public DownloadFileRequest(
     String path, 
     String storageName, 
     String versionId)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
  **storageName** | **String**| Storage name | [optional]
  **versionId** | **String**| File version ID to download | [optional]
@@ -80,17 +83,18 @@ Name | Type | Description  | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="moveFile"></a>
-## **moveFile**
-> void moveFile(MoveFileRequestData request)
+# **moveFile**
+> void moveFile(MoveFileRequest request)
 
 Move file
 
-### **MoveFileRequestData** Parameters
+### **MoveFileRequest** Parameters
 ```java
-public MoveFileRequestData(
+public MoveFileRequest(
     String srcPath, 
     String destPath, 
     String srcStorageName, 
@@ -98,8 +102,8 @@ public MoveFileRequestData(
     String versionId)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **srcPath** | **String**| Source file path e.g. &#39;/src.ext&#39; |
  **destPath** | **String**| Destination file path e.g. &#39;/dest.ext&#39; |
  **srcStorageName** | **String**| Source storage name | [optional]
@@ -110,24 +114,25 @@ Name | Type | Description  | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
+            ﻿
 <a name="uploadFile"></a>
-## **uploadFile**
-> [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequestData request)
+# **uploadFile**
+> [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequest request)
 
 Upload file
 
-### **UploadFileRequestData** Parameters
+### **UploadFileRequest** Parameters
 ```java
-public UploadFileRequestData(
+public UploadFileRequest(
     String path, 
     byte[] file, 
     String storageName)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **path** | **String**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              |
  **file** | **byte[]**| File to upload |
  **storageName** | **String**| Storage name | [optional]
@@ -136,5 +141,5 @@ Name | Type | Description  | Notes
 
 [**FilesUploadResult**](FilesUploadResult.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 

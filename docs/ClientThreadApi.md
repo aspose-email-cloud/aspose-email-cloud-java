@@ -1,36 +1,31 @@
 # com.aspose.email.cloud.sdk.api.ClientThreadApi
 
-<a name="clientThreadDelete"></a>
-## **clientThreadDelete**
-> void clientThreadDelete(ClientThreadDeleteRequestData request)
+            ﻿
+<a name="delete"></a>
+# delete
+> void delete([ClientThreadDeleteRequest](ClientThreadDeleteRequest.md) request)
 
 Delete thread by id. All messages from thread will also be deleted.             
 
-### **ClientThreadDeleteRequestData** Parameters
-```java
-public ClientThreadDeleteRequestData(
-    ClientThreadDeleteRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ClientThreadDeleteRequest**](ClientThreadDeleteRequest.md)| Delete email thread request. |
+See parameter model documentation at [ClientThreadDeleteRequest](ClientThreadDeleteRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="clientThreadGetList"></a>
-## **clientThreadGetList**
-> [EmailThreadList](EmailThreadList.md) clientThreadGetList(ClientThreadGetListRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="getList"></a>
+# **getList**
+> [EmailThreadList](EmailThreadList.md) getList(ClientThreadGetListRequest request)
 
 Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
 
-### **ClientThreadGetListRequestData** Parameters
+### **ClientThreadGetListRequest** Parameters
 ```java
-public ClientThreadGetListRequestData(
+public ClientThreadGetListRequest(
     String folder, 
     String account, 
     String storage, 
@@ -39,8 +34,8 @@ public ClientThreadGetListRequestData(
     Integer messagesCacheLimit)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **folder** | **String**| A folder in email account.              |
  **account** | **String**| Email account |
  **storage** | **String**| Storage name where account file located | [optional]
@@ -52,17 +47,18 @@ Name | Type | Description  | Notes
 
 [**EmailThreadList**](EmailThreadList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="clientThreadGetMessages"></a>
-## **clientThreadGetMessages**
-> [EmailList](EmailList.md) clientThreadGetMessages(ClientThreadGetMessagesRequestData request)
+            ﻿
+<a name="getMessages"></a>
+# **getMessages**
+> [EmailList](EmailList.md) getMessages(ClientThreadGetMessagesRequest request)
 
 Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 
-### **ClientThreadGetMessagesRequestData** Parameters
+### **ClientThreadGetMessagesRequest** Parameters
 ```java
-public ClientThreadGetMessagesRequestData(
+public ClientThreadGetMessagesRequest(
     String threadId, 
     String account, 
     String folder, 
@@ -70,8 +66,8 @@ public ClientThreadGetMessagesRequestData(
     String accountStorageFolder)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **threadId** | **String**| Thread identifier |
  **account** | **String**| Email account |
  **folder** | **String**| Specifies account folder to get thread from              | [optional]
@@ -82,49 +78,37 @@ Name | Type | Description  | Notes
 
 [**EmailList**](EmailList.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="clientThreadMove"></a>
-## **clientThreadMove**
-> void clientThreadMove(ClientThreadMoveRequestData request)
+            ﻿
+<a name="move"></a>
+# move
+> void move([ClientThreadMoveRequest](ClientThreadMoveRequest.md) request)
 
 Move thread to another folder.             
 
-### **ClientThreadMoveRequestData** Parameters
-```java
-public ClientThreadMoveRequestData(
-    ClientThreadMoveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ClientThreadMoveRequest**](ClientThreadMoveRequest.md)| Move thread request. |
+See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="clientThreadSetIsRead"></a>
-## **clientThreadSetIsRead**
-> void clientThreadSetIsRead(ClientThreadSetIsReadRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="setIsRead"></a>
+# setIsRead
+> void setIsRead([ClientThreadSetIsReadRequest](ClientThreadSetIsReadRequest.md) request)
 
 Mark all messages in thread as read or unread.             
 
-### **ClientThreadSetIsReadRequestData** Parameters
-```java
-public ClientThreadSetIsReadRequestData(
-    ClientThreadSetIsReadRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ClientThreadSetIsReadRequest**](ClientThreadSetIsReadRequest.md)| Email account specifier and IsRead flag. |
+See parameter model documentation at [ClientThreadSetIsReadRequest](ClientThreadSetIsReadRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)

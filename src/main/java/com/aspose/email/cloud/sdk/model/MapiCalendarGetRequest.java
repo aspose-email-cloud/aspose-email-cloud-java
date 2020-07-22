@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiCalendarApi.mapiCalendarGet request invocation.
+* Class that holds parameters for MapiCalendarApi.get request invocation.
 **/   
 public class MapiCalendarGetRequest
 {

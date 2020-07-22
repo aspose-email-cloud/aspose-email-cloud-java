@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientFolderApi.clientFolderGetList request invocation.
+* Class that holds parameters for ClientFolderApi.getList request invocation.
 **/   
 public class ClientFolderGetListRequest
 {

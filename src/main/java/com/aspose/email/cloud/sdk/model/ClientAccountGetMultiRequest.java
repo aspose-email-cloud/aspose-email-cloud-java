@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientAccountApi.clientAccountGetMulti request invocation.
+* Class that holds parameters for ClientAccountApi.getMulti request invocation.
 **/   
 public class ClientAccountGetMultiRequest
 {

@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiNameApi.aiNameExpand request invocation.
+* Class that holds parameters for AiNameApi.expand request invocation.
 **/   
 public class AiNameExpandRequest
 {

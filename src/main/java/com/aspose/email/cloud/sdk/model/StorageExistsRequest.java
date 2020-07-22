@@ -29,7 +29,7 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for StorageApi.storageExists request invocation.
+* Class that holds parameters for StorageApi.exists request invocation.
 **/   
 public class StorageExistsRequest
 {

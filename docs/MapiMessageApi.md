@@ -1,64 +1,53 @@
 # com.aspose.email.cloud.sdk.api.MapiMessageApi
 
-<a name="mapiMessageAsEmailDto"></a>
-## **mapiMessageAsEmailDto**
-> [EmailDto](EmailDto.md) mapiMessageAsEmailDto(MapiMessageAsEmailDtoRequestData request)
+            ﻿
+<a name="asEmailDto"></a>
+# asEmailDto
+> [EmailDto](EmailDto.md) asEmailDto([MapiMessageDto](MapiMessageDto.md) mapiMessage)
 
 Converts MAPI message model to EmailDto model             
 
-### **MapiMessageAsEmailDtoRequestData** Parameters
-```java
-public MapiMessageAsEmailDtoRequestData(
-    MapiMessageDto mapiMessage)
-```
+### mapiMessage Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mapiMessage** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert |
+See parameter model documentation at [MapiMessageDto](MapiMessageDto.md)
 
 ### Return type
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiMessageAsFile"></a>
-## **mapiMessageAsFile**
-> byte[] mapiMessageAsFile(MapiMessageAsFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="asFile"></a>
+# asFile
+> byte[] asFile([MapiMessageAsFileRequest](MapiMessageAsFileRequest.md) request)
 
 Converts MAPI message model to specified format and returns as file.             
 
-### **MapiMessageAsFileRequestData** Parameters
-```java
-public MapiMessageAsFileRequestData(
-    MapiMessageAsFileRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiMessageAsFileRequest**](MapiMessageAsFileRequest.md)| MAPI message model to convert. |
+See parameter model documentation at [MapiMessageAsFileRequest](MapiMessageAsFileRequest.md)
 
 ### Return type
 
 **byte[]**
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
-<a name="mapiMessageFromFile"></a>
-## **mapiMessageFromFile**
-> [MapiMessageDto](MapiMessageDto.md) mapiMessageFromFile(MapiMessageFromFileRequestData request)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+            ﻿
+<a name="fromFile"></a>
+# **fromFile**
+> [MapiMessageDto](MapiMessageDto.md) fromFile(MapiMessageFromFileRequest request)
 
 Converts email file to a MAPI model representation             
 
-### **MapiMessageFromFileRequestData** Parameters
+### **MapiMessageFromFileRequest** Parameters
 ```java
-public MapiMessageFromFileRequestData(
+public MapiMessageFromFileRequest(
     String fileFormat, 
     byte[] file)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **fileFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **file** | **byte[]**| File to convert |
 
@@ -66,25 +55,26 @@ Name | Type | Description  | Notes
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiMessageGet"></a>
-## **mapiMessageGet**
-> [MapiMessageDto](MapiMessageDto.md) mapiMessageGet(MapiMessageGetRequestData request)
+            ﻿
+<a name="get"></a>
+# **get**
+> [MapiMessageDto](MapiMessageDto.md) get(MapiMessageGetRequest request)
 
 Get MAPI message document.             
 
-### **MapiMessageGetRequestData** Parameters
+### **MapiMessageGetRequest** Parameters
 ```java
-public MapiMessageGetRequestData(
+public MapiMessageGetRequest(
     String format, 
     String name, 
     String folder, 
     String storage)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
  **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **name** | **String**| Email document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
@@ -94,27 +84,21 @@ Name | Type | Description  | Notes
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
 
-<a name="mapiMessageSave"></a>
-## **mapiMessageSave**
-> void mapiMessageSave(MapiMessageSaveRequestData request)
+            ﻿
+<a name="save"></a>
+# save
+> void save([MapiMessageSaveRequest](MapiMessageSaveRequest.md) request)
 
 Save MAPI message to storage.             
 
-### **MapiMessageSaveRequestData** Parameters
-```java
-public MapiMessageSaveRequestData(
-    MapiMessageSaveRequest request)
-```
+### request Parameter
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**MapiMessageSaveRequest**](MapiMessageSaveRequest.md)| Message create/update request. |
+See parameter model documentation at [MapiMessageSaveRequest](MapiMessageSaveRequest.md)
 
 ### Return type
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to API README]](README.md)
-
+[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
