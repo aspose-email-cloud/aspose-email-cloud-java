@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameMismatch
+# AiNameMismatch
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

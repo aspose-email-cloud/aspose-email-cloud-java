@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.DailyRecurrencePatternDto
+# DailyRecurrencePatternDto
 ## Properties
 Class has no properties
 

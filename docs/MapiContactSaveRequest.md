@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactSaveRequest
+# MapiContactSaveRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

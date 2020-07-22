@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientFolderCreateRequest
+# ClientFolderCreateRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

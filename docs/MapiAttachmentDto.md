@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiAttachmentDto
+# MapiAttachmentDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

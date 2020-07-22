@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiCalendarDto
+# MapiCalendarDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

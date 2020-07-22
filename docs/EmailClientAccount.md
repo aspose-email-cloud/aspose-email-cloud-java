@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailClientAccount
+# EmailClientAccount
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

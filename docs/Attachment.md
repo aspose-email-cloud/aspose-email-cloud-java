@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.Attachment
+# Attachment
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

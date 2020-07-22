@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiBinaryPropertyDto
+# MapiBinaryPropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

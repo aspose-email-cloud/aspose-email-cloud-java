@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ContentTypeParameter
+# ContentTypeParameter
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

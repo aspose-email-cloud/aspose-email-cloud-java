@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfMailMessageBase
+# ListResponseOfMailMessageBase
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

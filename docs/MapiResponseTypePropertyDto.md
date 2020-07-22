@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiResponseTypePropertyDto
+# MapiResponseTypePropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

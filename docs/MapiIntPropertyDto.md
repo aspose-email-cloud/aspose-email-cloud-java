@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiIntPropertyDto
+# MapiIntPropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

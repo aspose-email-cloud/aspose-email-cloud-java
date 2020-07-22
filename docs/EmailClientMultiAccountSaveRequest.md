@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailClientMultiAccountSaveRequest
+# EmailClientMultiAccountSaveRequest
 ## Properties
 Class has no properties
 

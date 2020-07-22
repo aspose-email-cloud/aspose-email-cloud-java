@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ContactAsFileRequest
+# ContactAsFileRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

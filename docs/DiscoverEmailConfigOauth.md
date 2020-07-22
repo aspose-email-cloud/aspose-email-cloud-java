@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.DiscoverEmailConfigOauth
+# DiscoverEmailConfigOauth
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

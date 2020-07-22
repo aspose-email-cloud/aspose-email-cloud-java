@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MailServerFolderList
+# MailServerFolderList
 ## Properties
 Class has no properties
 

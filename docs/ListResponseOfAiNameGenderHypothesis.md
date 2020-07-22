@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfAiNameGenderHypothesis
+# ListResponseOfAiNameGenderHypothesis
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

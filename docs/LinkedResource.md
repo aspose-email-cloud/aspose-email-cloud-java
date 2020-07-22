@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.LinkedResource
+# LinkedResource
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

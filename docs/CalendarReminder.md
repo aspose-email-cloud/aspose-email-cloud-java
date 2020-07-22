@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.CalendarReminder
+# CalendarReminder
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

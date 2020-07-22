@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientFolderDeleteRequest
+# ClientFolderDeleteRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

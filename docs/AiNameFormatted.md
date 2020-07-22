@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameFormatted
+# AiNameFormatted
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

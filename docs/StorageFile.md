@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.StorageFile
+# StorageFile
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.StorageModelOfMapiContactDto
+# StorageModelOfMapiContactDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

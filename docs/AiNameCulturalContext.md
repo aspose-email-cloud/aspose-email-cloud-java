@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameCulturalContext
+# AiNameCulturalContext
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

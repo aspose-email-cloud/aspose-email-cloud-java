@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrImageStorageFile
+# AiBcrImageStorageFile
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

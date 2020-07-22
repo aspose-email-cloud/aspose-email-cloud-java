@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ContactList
+# ContactList
 ## Properties
 Class has no properties
 

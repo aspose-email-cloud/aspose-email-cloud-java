@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MailMessageMapi
+# MailMessageMapi
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

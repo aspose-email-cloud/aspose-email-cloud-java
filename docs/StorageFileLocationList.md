@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.StorageFileLocationList
+# StorageFileLocationList
 ## Properties
 Class has no properties
 

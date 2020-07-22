@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.FileVersion
+# FileVersion
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

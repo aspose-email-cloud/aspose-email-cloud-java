@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AttachmentBase
+# AttachmentBase
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

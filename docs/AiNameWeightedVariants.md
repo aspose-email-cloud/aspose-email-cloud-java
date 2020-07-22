@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameWeightedVariants
+# AiNameWeightedVariants
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

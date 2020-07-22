@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailClientMultiAccount
+# EmailClientMultiAccount
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

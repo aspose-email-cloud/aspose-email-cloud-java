@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientMessageBaseRequest
+# ClientMessageBaseRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

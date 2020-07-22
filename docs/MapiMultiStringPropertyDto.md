@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiMultiStringPropertyDto
+# MapiMultiStringPropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

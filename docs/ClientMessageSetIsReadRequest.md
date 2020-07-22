@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientMessageSetIsReadRequest
+# ClientMessageSetIsReadRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

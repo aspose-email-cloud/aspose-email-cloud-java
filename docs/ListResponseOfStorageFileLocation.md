@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfStorageFileLocation
+# ListResponseOfStorageFileLocation
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

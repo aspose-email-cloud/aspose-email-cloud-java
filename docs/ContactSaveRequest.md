@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ContactSaveRequest
+# ContactSaveRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

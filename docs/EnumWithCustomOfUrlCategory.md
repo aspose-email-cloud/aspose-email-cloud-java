@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EnumWithCustomOfUrlCategory
+# EnumWithCustomOfUrlCategory
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

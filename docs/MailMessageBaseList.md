@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MailMessageBaseList
+# MailMessageBaseList
 ## Properties
 Class has no properties
 

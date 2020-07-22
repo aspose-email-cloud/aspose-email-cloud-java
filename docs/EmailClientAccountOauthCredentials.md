@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailClientAccountOauthCredentials
+# EmailClientAccountOauthCredentials
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

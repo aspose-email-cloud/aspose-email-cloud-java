@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiPidPropertyDescriptor
+# MapiPidPropertyDescriptor
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

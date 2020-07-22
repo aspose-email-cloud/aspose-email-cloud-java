@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ValueTOfBoolean
+# ValueTOfBoolean
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

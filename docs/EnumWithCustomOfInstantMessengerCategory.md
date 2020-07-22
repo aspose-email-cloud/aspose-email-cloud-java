@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EnumWithCustomOfInstantMessengerCategory
+# EnumWithCustomOfInstantMessengerCategory
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

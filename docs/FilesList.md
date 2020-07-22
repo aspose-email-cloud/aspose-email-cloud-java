@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.FilesList
+# FilesList
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.PostalAddress
+# PostalAddress
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

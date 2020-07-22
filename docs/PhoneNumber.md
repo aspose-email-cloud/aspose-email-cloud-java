@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.PhoneNumber
+# PhoneNumber
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

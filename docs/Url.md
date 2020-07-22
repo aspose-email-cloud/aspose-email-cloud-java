@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.Url
+# Url
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

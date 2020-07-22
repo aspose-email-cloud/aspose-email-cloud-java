@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameComponentList
+# AiNameComponentList
 ## Properties
 Class has no properties
 

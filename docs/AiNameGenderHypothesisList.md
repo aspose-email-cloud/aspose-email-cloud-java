@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameGenderHypothesisList
+# AiNameGenderHypothesisList
 ## Properties
 Class has no properties
 

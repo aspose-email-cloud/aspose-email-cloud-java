@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiCalendarTimeZoneRuleDto
+# MapiCalendarTimeZoneRuleDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

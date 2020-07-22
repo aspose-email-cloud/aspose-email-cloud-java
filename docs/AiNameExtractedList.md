@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameExtractedList
+# AiNameExtractedList
 ## Properties
 Class has no properties
 

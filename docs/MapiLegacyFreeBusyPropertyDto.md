@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiLegacyFreeBusyPropertyDto
+# MapiLegacyFreeBusyPropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

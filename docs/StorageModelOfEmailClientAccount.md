@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.StorageModelOfEmailClientAccount
+# StorageModelOfEmailClientAccount
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

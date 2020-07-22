@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientMessageMoveRequest
+# ClientMessageMoveRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.NameValuePair
+# NameValuePair
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

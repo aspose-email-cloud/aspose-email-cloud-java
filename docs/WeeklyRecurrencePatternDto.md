@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.WeeklyRecurrencePatternDto
+# WeeklyRecurrencePatternDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.DiscoverEmailConfigPassword
+# DiscoverEmailConfigPassword
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactPhysicalAddressDto
+# MapiContactPhysicalAddressDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

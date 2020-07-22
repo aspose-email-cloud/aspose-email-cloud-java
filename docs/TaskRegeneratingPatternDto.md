@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.TaskRegeneratingPatternDto
+# TaskRegeneratingPatternDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

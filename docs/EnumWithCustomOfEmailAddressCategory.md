@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EnumWithCustomOfEmailAddressCategory
+# EnumWithCustomOfEmailAddressCategory
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

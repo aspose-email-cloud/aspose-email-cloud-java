@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ContactDto
+# ContactDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfAiNameComponent
+# ListResponseOfAiNameComponent
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

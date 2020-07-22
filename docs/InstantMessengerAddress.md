@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.InstantMessengerAddress
+# InstantMessengerAddress
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

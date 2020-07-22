@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfContactDto
+# ListResponseOfContactDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

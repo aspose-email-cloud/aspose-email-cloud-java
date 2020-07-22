@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrParseStorageRequest
+# AiBcrParseStorageRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

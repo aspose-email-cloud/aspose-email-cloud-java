@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ErrorDetails
+# ErrorDetails
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

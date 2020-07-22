@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.RecurrencePatternDto
+# RecurrencePatternDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

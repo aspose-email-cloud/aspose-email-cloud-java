@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.CalendarStorageList
+# CalendarStorageList
 ## Properties
 Class has no properties
 

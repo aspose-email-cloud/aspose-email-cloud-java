@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailStorageList
+# EmailStorageList
 ## Properties
 Class has no properties
 

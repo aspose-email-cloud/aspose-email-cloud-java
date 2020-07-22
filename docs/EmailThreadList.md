@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailThreadList
+# EmailThreadList
 ## Properties
 Class has no properties
 

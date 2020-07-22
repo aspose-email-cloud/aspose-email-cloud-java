@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AlternateView
+# AlternateView
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

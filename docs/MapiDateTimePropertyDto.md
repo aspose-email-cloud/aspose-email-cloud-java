@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiDateTimePropertyDto
+# MapiDateTimePropertyDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

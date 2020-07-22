@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiNameExtracted
+# AiNameExtracted
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

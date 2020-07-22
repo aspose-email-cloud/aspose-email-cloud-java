@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ClientThreadDeleteRequest
+# ClientThreadDeleteRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

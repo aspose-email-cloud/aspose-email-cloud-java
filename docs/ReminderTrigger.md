@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ReminderTrigger
+# ReminderTrigger
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

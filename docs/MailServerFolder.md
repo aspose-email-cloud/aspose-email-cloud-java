@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MailServerFolder
+# MailServerFolder
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

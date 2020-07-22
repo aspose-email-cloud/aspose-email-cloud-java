@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ReminderAttendee
+# ReminderAttendee
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

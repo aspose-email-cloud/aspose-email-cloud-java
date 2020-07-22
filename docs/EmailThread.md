@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailThread
+# EmailThread
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

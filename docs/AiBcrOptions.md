@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrOptions
+# AiBcrOptions
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.CalendarAsFileRequest
+# CalendarAsFileRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

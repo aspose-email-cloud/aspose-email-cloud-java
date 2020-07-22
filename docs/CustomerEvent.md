@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.CustomerEvent
+# CustomerEvent
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

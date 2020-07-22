@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ObjectExist
+# ObjectExist
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

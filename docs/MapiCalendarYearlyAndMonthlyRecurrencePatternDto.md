@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiCalendarYearlyAndMonthlyRecurrencePatternDto
+# MapiCalendarYearlyAndMonthlyRecurrencePatternDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

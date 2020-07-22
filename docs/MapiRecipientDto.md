@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiRecipientDto
+# MapiRecipientDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

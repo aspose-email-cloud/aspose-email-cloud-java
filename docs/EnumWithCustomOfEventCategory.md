@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EnumWithCustomOfEventCategory
+# EnumWithCustomOfEventCategory
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

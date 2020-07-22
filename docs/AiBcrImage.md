@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.AiBcrImage
+# AiBcrImage
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactProfessionalPropertySetDto
+# MapiContactProfessionalPropertySetDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

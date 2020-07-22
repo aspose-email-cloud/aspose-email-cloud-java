@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MailMessageBase64
+# MailMessageBase64
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

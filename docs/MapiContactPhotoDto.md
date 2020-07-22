@@ -1,5 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactPhotoDto
+# MapiContactPhotoDto
 ## Properties
 Class has no properties
 
