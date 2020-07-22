@@ -39,36 +39,36 @@ import java.util.HashMap;
  * MAPI operations.             
  */
 public class MapiGroup {
-
+    
     private final MapiCalendarApi calendar;
-
+    
     private final MapiContactApi contact;
-
+    
     private final MapiMessageApi message;
+    
 
-
-
+    
     /**
      *  MAPI calendar operations.             
      */
     public MapiCalendarApi calendar() {
         return calendar;
     }
-
+    
     /**
      *  MAPI contact operations             
      */
     public MapiContactApi contact() {
         return contact;
     }
-
+    
     /**
      *  MAPI message operations             
      */
     public MapiMessageApi message() {
         return message;
     }
-
+    
 
     MapiGroup(ApiInvoker apiInvoker, Configuration configuration)
     {
@@ -79,5 +79,6 @@ public class MapiGroup {
     
         message = new MapiMessageApi(apiInvoker, configuration);
     
+
     }
 }

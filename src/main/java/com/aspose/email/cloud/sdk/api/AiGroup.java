@@ -39,27 +39,27 @@ import java.util.HashMap;
  * AI powered operations.             
  */
 public class AiGroup {
-
+    
     private final AiBcrApi bcr;
-
+    
     private final AiNameApi name;
+    
 
-
-
+    
     /**
      *  AI Business card recognition operations.             
      */
     public AiBcrApi bcr() {
         return bcr;
     }
-
+    
     /**
      *  AI Name operations.             
      */
     public AiNameApi name() {
         return name;
     }
-
+    
 
     AiGroup(ApiInvoker apiInvoker, Configuration configuration)
     {
@@ -68,5 +68,6 @@ public class AiGroup {
     
         name = new AiNameApi(apiInvoker, configuration);
     
+
     }
 }

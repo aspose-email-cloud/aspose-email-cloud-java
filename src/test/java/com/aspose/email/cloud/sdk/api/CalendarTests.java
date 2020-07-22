@@ -3,13 +3,9 @@ package com.aspose.email.cloud.sdk.api;
 import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
-import com.aspose.email.cloud.sdk.model.requests.*;
-import org.apache.commons.lang3.time.DateUtils;
 import org.testng.annotations.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.UUID;
@@ -30,73 +26,34 @@ public class CalendarTests extends TestBase {
             .weekStart("Monday"));
 
     @Test(groups = {"pipeline"})
-    public void hierarchicalTest() throws ApiException {
-        String fileName = createCalendar();
-        HierarchicalObject
-            calendar = api.getCalendar(new GetCalendarRequestData(fileName, folder, storage));
-        ArrayList<PrimitiveObject> primitives = new ArrayList<PrimitiveObject>();
-        for (BaseObject property : calendar.getInternalProperties()) {
-            if (property.getType().equals("PrimitiveObject")) {
-                primitives.add((PrimitiveObject) property);
-            }
-        }
-        assert primitives.size() >= 3;
-        PrimitiveObject first = primitives.get(0);
-        assert first.getValue() != null;
-    }
-
-    @Test(groups = {"pipeline"})
-    public void dateTest() throws ApiException, ParseException {
-        Calendar startDate = Calendar.getInstance();
-        startDate.set(Calendar.MILLISECOND, 0);
-        String calendarFile = createCalendar(startDate);
-        HierarchicalObject calendar =
-            api.getCalendar(new GetCalendarRequestData(calendarFile, folder, storage));
-        PrimitiveObject startDateProperty = null;
-        for (BaseObject property : calendar.getInternalProperties()) {
-            if (property.getName().equals("STARTDATE")) {
-                startDateProperty = (PrimitiveObject) property;
-            }
-        }
-        assert startDateProperty != null;
-        Calendar factStartDate = Calendar.getInstance();
-        factStartDate.setTime(dateFormat.parse(startDateProperty.getValue()));
-        assert DateUtils.truncatedEquals(startDate, factStartDate, Calendar.SECOND);
-    }
-
-    @Test(groups = {"pipeline"})
     public void fileTest() throws ApiException, UnsupportedEncodingException {
         String file = createCalendar();
         byte[] fileBytes =
-            api.downloadFile(new DownloadFileRequestData(folder + "/" + file, storage, null));
+            api.cloudStorage().file()
+                .downloadFile(new DownloadFileRequest(folder + "/" + file, storage, null));
         String calendarContent = new String(fileBytes, "UTF-8");
         assert calendarContent.contains("organizer@am.ru");
         String uploadedName = UUID.randomUUID().toString() + ".ics";
         String path = folder + "/" + uploadedName;
-        api.uploadFile(new UploadFileRequestData(path, fileBytes, storage));
-        ObjectExist exist = api.objectExists(new ObjectExistsRequestData(path, storage, null));
+        api.cloudStorage().file().uploadFile(new UploadFileRequest(path, fileBytes, storage));
+        ObjectExist exist =
+            api.cloudStorage().storage().objectExists(new ObjectExistsRequest(path, storage, null));
         assert exist.isExists();
     }
 
     @Test(groups = {"pipeline"})
     public void createCalendarEmailTest() throws ApiException, UnsupportedEncodingException {
-        Calendar startDate = Calendar.getInstance();
-        Calendar endDate = (Calendar) startDate.clone();
-        endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
-
-        StorageFolderLocation folderLocation = new StorageFolderLocation(storage, folder);
         String calendarFile = UUID.randomUUID().toString() + ".ics";
-        api.saveCalendarModel(new SaveCalendarModelRequestData(
-            calendarFile,
-            new StorageModelRqOfCalendarDto(calendarDto, folderLocation)));
+        api.calendar().save(
+            new CalendarSaveRequest(new StorageFileLocation(storage, folder, calendarFile),
+                calendarDto, "Ics"));
 
-        ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
-            folder + "/" + calendarFile, storage, null));
+        ObjectExist objectExist = api.cloudStorage().storage()
+            .objectExists(new ObjectExistsRequest(folder + "/" + calendarFile, storage, null));
         assert objectExist.isExists();
 
-        AlternateView alternate = api.convertCalendarModelToAlternate(
-            new ConvertCalendarModelToAlternateRequestData(
-                new CalendarDtoAlternateRq(calendarDto, "Create", null)));
+        AlternateView alternate =
+            api.calendar().asAlternate(new CalendarAsAlternateRequest(calendarDto, "Create", null));
 
         EmailDto email = new EmailDto()
             .addAlternateViewsItem(alternate)
@@ -105,11 +62,12 @@ public class CalendarTests extends TestBase {
             .subject("Some subject")
             .body("Some body");
         String emailFile = UUID.randomUUID().toString() + ".eml";
-        api.saveEmailModel(new SaveEmailModelRequestData(
-            "Eml", emailFile, new StorageModelRqOfEmailDto(email, folderLocation)));
+        api.email().save(
+            new EmailSaveRequest(new StorageFileLocation(storage, folder, emailFile), email,
+                "Eml"));
 
-        byte[] downloaded = api.downloadFile(
-            new DownloadFileRequestData(folder + "/" + emailFile, storage, null));
+        byte[] downloaded = api.cloudStorage().file()
+            .downloadFile(new DownloadFileRequest(folder + "/" + emailFile, storage, null));
         String calendarContent = new String(downloaded, "UTF-8");
         assert calendarContent.contains("Some subject");
     }
@@ -118,9 +76,7 @@ public class CalendarTests extends TestBase {
     public void convertCalendarTest() throws ApiException, UnsupportedEncodingException {
         //Create DTO with specified location:
         //We can convert this DTO to a MAPI or ICS file:
-        byte[] mapiBytes = api.convertCalendarModelToFile(
-            new ConvertCalendarModelToFileRequestData(
-                "Msg", calendarDto));
+        byte[] mapiBytes = api.calendar().asFile(new CalendarAsFileRequest("Msg", calendarDto));
         /*
         // mapiBytes can be saved as a calendar.msg file:
         try (FileOutputStream stream = new FileOutputStream("calendar.msg")){
@@ -129,7 +85,7 @@ public class CalendarTests extends TestBase {
          */
 
         //Let's convert this bytes to an ICS file:
-        byte[] icsBytes = api.convertCalendar(new ConvertCalendarRequestData("Ics", mapiBytes));
+        byte[] icsBytes = api.calendar().convert(new CalendarConvertRequest("Ics", mapiBytes));
         /*
         //icsBytes can be saved as a calendar.ics file:
         try (FileOutputStream stream = new FileOutputStream("calendar.ics")){
@@ -141,15 +97,13 @@ public class CalendarTests extends TestBase {
         String calendarContent = new String(icsBytes, "UTF-8");
         assert calendarContent.contains(location);
         //We can also convert file bytes back to a CalendarDto
-        CalendarDto dto = api.getCalendarFileAsModel(
-            new GetCalendarFileAsModelRequestData(icsBytes));
+        CalendarDto dto = api.calendar().fromFile(new CalendarFromFileRequest(icsBytes));
         assert location.equals(dto.getLocation());
     }
 
     @Test(groups = {"pipeline"})
     public void convertModelToMapiModelTest() {
-        MapiCalendarDto mapiCalendarDto = api.convertCalendarModelToMapiModel(
-            new ConvertCalendarModelToMapiModelRequestData(calendarDto));
+        MapiCalendarDto mapiCalendarDto = api.calendar().asMapi(calendarDto);
         assert calendarDto.getLocation().equals(mapiCalendarDto.getLocation());
         assert "MapiCalendarDailyRecurrencePatternDto"
             .equals(mapiCalendarDto.getRecurrence().getRecurrencePattern().getDiscriminator());

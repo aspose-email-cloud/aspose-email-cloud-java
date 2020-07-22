@@ -39,36 +39,36 @@ import java.util.HashMap;
  * Cloud file storage operations.             
  */
 public class CloudStorageGroup {
-
+    
     private final FileApi file;
-
+    
     private final FolderApi folder;
-
+    
     private final StorageApi storage;
+    
 
-
-
+    
     /**
      *  File operations controller
      */
     public FileApi file() {
         return file;
     }
-
+    
     /**
      *  Folder operations controller
      */
     public FolderApi folder() {
         return folder;
     }
-
+    
     /**
      *  Storage operations controller
      */
     public StorageApi storage() {
         return storage;
     }
-
+    
 
     CloudStorageGroup(ApiInvoker apiInvoker, Configuration configuration)
     {
@@ -79,5 +79,6 @@ public class CloudStorageGroup {
     
         storage = new StorageApi(apiInvoker, configuration);
     
+
     }
 }

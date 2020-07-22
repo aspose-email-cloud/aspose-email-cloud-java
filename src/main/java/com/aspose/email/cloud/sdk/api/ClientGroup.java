@@ -39,45 +39,45 @@ import java.util.HashMap;
  * Builtin Email client operations.             
  */
 public class ClientGroup {
-
+    
     private final ClientAccountApi account;
-
+    
     private final ClientFolderApi folder;
-
+    
     private final ClientMessageApi message;
-
+    
     private final ClientThreadApi thread;
+    
 
-
-
+    
     /**
      *  Email server account for built-in client operations.             
      */
     public ClientAccountApi account() {
         return account;
     }
-
+    
     /**
      *  Email client folder operations.             
      */
     public ClientFolderApi folder() {
         return folder;
     }
-
+    
     /**
      *  Email client message operations.             
      */
     public ClientMessageApi message() {
         return message;
     }
-
+    
     /**
      *  Email client thread operations.             
      */
     public ClientThreadApi thread() {
         return thread;
     }
-
+    
 
     ClientGroup(ApiInvoker apiInvoker, Configuration configuration)
     {
@@ -90,5 +90,6 @@ public class ClientGroup {
     
         thread = new ClientThreadApi(apiInvoker, configuration);
     
+
     }
 }

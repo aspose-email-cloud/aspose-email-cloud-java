@@ -42,92 +42,93 @@ public class EmailCloud {
     private Configuration configuration;
     private ApiInvoker apiInvoker;
 
+    
     private CalendarApi calendar;
-
+    
     private ContactApi contact;
-
+    
     private EmailApi email;
-
+    
     private DisposableEmailApi disposableEmail;
-
+    
     private EmailConfigApi emailConfig;
-
-
+    
+    
     private MapiGroup mapi;
-
+    
     private ClientGroup client;
-
+    
     private AiGroup ai;
-
+    
     private CloudStorageGroup cloudStorage;
+    
 
-
-
+    
     /**
      *  iCalendar document operations.             
      */
     public CalendarApi calendar() {
         return calendar;
     }
-
+    
     /**
      *  Contact document operations. Supported formats: VCard, MSG, WebDav             
      */
     public ContactApi contact() {
         return contact;
     }
-
+    
     /**
      *  Email document (*.eml) operations.             
      */
     public EmailApi email() {
         return email;
     }
-
+    
     /**
      *  Check email address is disposable operations             
      */
     public DisposableEmailApi disposableEmail() {
         return disposableEmail;
     }
-
+    
     /**
      *  Email server configuration discovery.             
      */
     public EmailConfigApi emailConfig() {
         return emailConfig;
     }
+    
 
-
-
+    
     /**
      *  MAPI operations.             
      */
     public MapiGroup mapi() {
         return mapi;
     }
-
+    
     /**
      *  Builtin Email client operations.             
      */
     public ClientGroup client() {
         return client;
     }
-
+    
     /**
      *  AI powered operations.             
      */
     public AiGroup ai() {
         return ai;
     }
-
+    
     /**
      *  Cloud file storage operations.             
      */
     public CloudStorageGroup cloudStorage() {
         return cloudStorage;
     }
-
+    
 
 
     /**
@@ -190,5 +191,6 @@ public class EmailCloud {
     
         cloudStorage = new CloudStorageGroup(apiInvoker, configuration);
     
+
     }
 }
