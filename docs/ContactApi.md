@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.ContactApi
+# ContactApi
 
             ﻿
 <a name="asFile"></a>

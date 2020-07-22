@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.MapiMessageApi
+# MapiMessageApi
 
             ﻿
 <a name="asEmailDto"></a>

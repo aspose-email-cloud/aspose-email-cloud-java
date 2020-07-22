@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.MapiCalendarApi
+# MapiCalendarApi
 
             ﻿
 <a name="asCalendarDto"></a>

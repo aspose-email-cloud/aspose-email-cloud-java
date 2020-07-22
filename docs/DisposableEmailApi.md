@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.DisposableEmailApi
+# DisposableEmailApi
 
             ﻿
 <a name="isDisposable"></a>

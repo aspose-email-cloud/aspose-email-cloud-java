@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.ClientFolderApi
+# ClientFolderApi
 
             ﻿
 <a name="create"></a>

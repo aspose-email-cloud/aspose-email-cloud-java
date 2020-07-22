@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.ClientAccountApi
+# ClientAccountApi
 
             ﻿
 <a name="get"></a>

@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.FolderApi
+# FolderApi
 
             ﻿
 <a name="copyFolder"></a>

@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.StorageApi
+# StorageApi
 
             ﻿
 <a name="getDiscUsage"></a>

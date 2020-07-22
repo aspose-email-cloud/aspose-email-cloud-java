@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.AiNameApi
+# AiNameApi
 
             ﻿
 <a name="complete"></a>

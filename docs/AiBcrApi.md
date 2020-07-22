@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.AiBcrApi
+# AiBcrApi
 
             ﻿
 <a name="parse"></a>

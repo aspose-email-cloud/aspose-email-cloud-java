@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.ClientMessageApi
+# ClientMessageApi
 
             ﻿
 <a name="append"></a>

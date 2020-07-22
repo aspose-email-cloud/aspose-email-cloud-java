@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.FileApi
+# FileApi
 
             ﻿
 <a name="copyFile"></a>

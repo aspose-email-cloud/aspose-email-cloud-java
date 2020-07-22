@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.ClientThreadApi
+# ClientThreadApi
 
             ﻿
 <a name="delete"></a>

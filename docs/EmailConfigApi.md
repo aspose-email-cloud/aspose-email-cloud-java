@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.EmailConfigApi
+# EmailConfigApi
 
             ﻿
 <a name="discover"></a>

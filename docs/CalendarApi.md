@@ -1,4 +1,4 @@
-# com.aspose.email.cloud.sdk.api.CalendarApi
+# CalendarApi
 
             ﻿
 <a name="asAlternate"></a>
