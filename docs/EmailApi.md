@@ -15,7 +15,7 @@ See parameter model documentation at [EmailAsFileRequest](EmailAsFileRequest.md)
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asMapi"></a>
 # asMapi
@@ -31,7 +31,7 @@ See parameter model documentation at [EmailDto](EmailDto.md)
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="convert"></a>
 # **convert**
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="fromFile"></a>
@@ -78,7 +78,7 @@ Name | Type | Description | Notes
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -107,7 +107,7 @@ Name | Type | Description | Notes
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getAsFile"></a>
@@ -136,7 +136,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getList"></a>
@@ -167,7 +167,7 @@ Name | Type | Description | Notes
 
 [**EmailStorageList**](EmailStorageList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -184,4 +184,4 @@ See parameter model documentation at [EmailSaveRequest](EmailSaveRequest.md)
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

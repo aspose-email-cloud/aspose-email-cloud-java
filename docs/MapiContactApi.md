@@ -15,7 +15,7 @@ See parameter model documentation at [MapiContactDto](MapiContactDto.md)
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asFile"></a>
 # asFile
@@ -31,7 +31,7 @@ See parameter model documentation at [MapiContactAsFileRequest](MapiContactAsFil
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="fromFile"></a>
 # **fromFile**
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -84,7 +84,7 @@ Name | Type | Description | Notes
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -101,4 +101,4 @@ See parameter model documentation at [MapiContactSaveRequest](MapiContactSaveReq
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

@@ -21,5 +21,5 @@ Name | Type | Description | Notes
 
 [**ValueTOfBoolean**](ValueTOfBoolean.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

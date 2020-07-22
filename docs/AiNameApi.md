@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="expand"></a>
@@ -64,7 +64,7 @@ Name | Type | Description | Notes
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="expandParsed"></a>
@@ -81,7 +81,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="format"></a>
 # **format**
@@ -115,7 +115,7 @@ Name | Type | Description | Notes
 
 [**AiNameFormatted**](AiNameFormatted.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="formatParsed"></a>
@@ -132,7 +132,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 
 [**AiNameFormatted**](AiNameFormatted.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="genderize"></a>
 # **genderize**
@@ -164,7 +164,7 @@ Name | Type | Description | Notes
 
 [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="genderizeParsed"></a>
@@ -181,7 +181,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 
 [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="match"></a>
 # **match**
@@ -215,7 +215,7 @@ Name | Type | Description | Notes
 
 [**AiNameMatchResult**](AiNameMatchResult.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="matchParsed"></a>
@@ -232,7 +232,7 @@ See parameter model documentation at [AiNameParsedMatchRequest](AiNameParsedMatc
 
 [**AiNameMatchResult**](AiNameMatchResult.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="parse"></a>
 # **parse**
@@ -264,7 +264,7 @@ Name | Type | Description | Notes
 
 [**AiNameComponentList**](AiNameComponentList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="parseEmailAddress"></a>
@@ -297,5 +297,5 @@ Name | Type | Description | Notes
 
 [**AiNameExtractedList**](AiNameExtractedList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

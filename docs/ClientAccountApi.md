@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 [**EmailClientAccount**](EmailClientAccount.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getMulti"></a>
@@ -52,7 +52,7 @@ Name | Type | Description | Notes
 
 [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -69,7 +69,7 @@ See parameter model documentation at [EmailClientAccountSaveRequest](EmailClient
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="saveMulti"></a>
 # saveMulti
@@ -85,4 +85,4 @@ See parameter model documentation at [EmailClientMultiAccountSaveRequest](EmailC
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
