@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MapiContactNamePropertySetDto
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -16,44 +15,6 @@ Name | Type | Description | Notes
 **surname** | **String** | Surname (family name) of the contact              |  [optional]
 
 
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

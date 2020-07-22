@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.Attachment
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,26 +9,10 @@ Name | Type | Description | Notes
 **nameEncoding** | **String** | Encoding of attachment name.              |  [optional]
 **preferredTextEncoding** | **String** | Preferred text encoding.              |  [optional]
 
- Parent class: [AttachmentBase](AttachmentBase.md)
-    
-    
 
- Parent class: [AttachmentBase](AttachmentBase.md)
-    
-    
+## Parent class
 
- Parent class: [AttachmentBase](AttachmentBase.md)
-    
-    
-
- Parent class: [AttachmentBase](AttachmentBase.md)
-    
-    
-
- Parent class: [AttachmentBase](AttachmentBase.md)
-    
-    
-
+See: [AttachmentBase](AttachmentBase.md)
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

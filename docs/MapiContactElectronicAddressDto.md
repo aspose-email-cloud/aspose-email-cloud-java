@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MapiContactElectronicAddressDto
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,28 +11,6 @@ Name | Type | Description | Notes
 **originalDisplayName** | **String** | SMTP e-mail address that corresponds to the e-mail address for the Contact object. |  [optional]
 
 
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

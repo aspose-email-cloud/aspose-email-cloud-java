@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MapiPidPropertyDescriptor
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,22 +8,10 @@ Name | Type | Description | Notes
 **multipleValuesDataType** | **Boolean** | Indicates if data type contains of multiple values              | 
 **name** | **String** | A string that identifies the property              |  [optional]
 
- Parent class: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
-    
-    
 
- Parent class: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
-    
-    
+## Parent class
 
- Parent class: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
-    
-    
-
- Parent class: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
-    
-    
-
+See: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MailServerFolder
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,12 +7,6 @@ Name | Type | Description | Notes
 **id** | **String** | Gets or sets mail folder id              |  [optional]
 
 
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

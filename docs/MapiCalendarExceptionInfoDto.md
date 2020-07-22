@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MapiCalendarExceptionInfoDto
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -20,60 +19,6 @@ Name | Type | Description | Notes
 **subType** | **Integer** | SubType.              | 
 
 
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

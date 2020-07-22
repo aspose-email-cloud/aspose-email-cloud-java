@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.AiBcrOptions
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,12 +7,6 @@ Name | Type | Description | Notes
 **countries** | **String** | Comma-separated codes of countries.              |  [optional]
 
 
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

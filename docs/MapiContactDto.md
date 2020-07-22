@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.MapiContactDto
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -14,42 +13,10 @@ Name | Type | Description | Notes
 **professionalInfo** | [**MapiContactProfessionalPropertySetDto**](MapiContactProfessionalPropertySetDto.md) | Properties are used to store professional details for the person represented by the contact.              |  [optional]
 **telephones** | [**MapiContactTelephonePropertySetDto**](MapiContactTelephonePropertySetDto.md) | Specify telephone numbers for the contact.              |  [optional]
 
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
 
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
+## Parent class
 
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
- Parent class: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
-    
-    
-
+See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
 

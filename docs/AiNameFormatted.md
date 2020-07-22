@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.AiNameFormatted
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,12 +7,6 @@ Name | Type | Description | Notes
 **comments** | **String** | Usually empty; can contain extra message describing some issue occurred during the formatting              |  [optional]
 
 
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

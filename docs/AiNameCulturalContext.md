@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.AiNameCulturalContext
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,24 +10,6 @@ Name | Type | Description | Notes
 **style** | **String** | Name writing style. Enum, available values: Formal, Informal, Legal, Academic | 
 
 
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)

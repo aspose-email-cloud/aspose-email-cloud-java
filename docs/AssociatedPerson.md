@@ -1,6 +1,5 @@
 
 # com.aspose.email.cloud.sdk.model.AssociatedPerson
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,16 +8,6 @@ Name | Type | Description | Notes
 **preferred** | **Boolean** | Defines whether associated person is preferred.              | 
 
 
-    
-    
-
-
-    
-    
-
-
-    
-    
 
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
