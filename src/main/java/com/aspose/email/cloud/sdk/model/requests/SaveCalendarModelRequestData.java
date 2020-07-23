@@ -37,7 +37,7 @@ public class SaveCalendarModelRequestData
     /**
     * Initializes a new instance of the SaveCalendarModelRequestData class.   
     * @param name iCalendar file name in storage
-    * @param rq Calendar properties update request
+    * @param rq Calendar update request
     **/
     public SaveCalendarModelRequestData(String name, StorageModelRqOfCalendarDto rq)             
     {
@@ -51,7 +51,7 @@ public class SaveCalendarModelRequestData
     public String name;
 
     /**
-    * Calendar properties update request
+    * Calendar update request
     **/
     public StorageModelRqOfCalendarDto rq;
 }

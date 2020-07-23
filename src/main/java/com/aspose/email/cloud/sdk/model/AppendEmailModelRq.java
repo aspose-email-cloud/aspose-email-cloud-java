@@ -44,14 +44,14 @@ import java.io.*;
  */
 public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
   @JsonProperty("message")
-  private Object message = null;
+  private EmailDto message = null;
 
   /**
    * Set message and return this.
    * @param message Email document             
    * @return this
   **/
-  public AppendEmailModelRq message(Object message) {
+  public AppendEmailModelRq message(EmailDto message) {
     this.message = message;
     return this;
   }
@@ -60,7 +60,7 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
    * Email document             
    * @return message
   **/
-  public Object getMessage() {
+  public EmailDto getMessage() {
     return message;
   }  
 
@@ -68,7 +68,7 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
    * Set message.
    * @param message Email document             
   **/
-  public void setMessage(Object message) {
+  public void setMessage(EmailDto message) {
     this.message = message;
   }
 
@@ -131,7 +131,7 @@ public class AppendEmailModelRq extends AppendEmailAccountBaseRequest {
    * @param markAsSent Mark message as sent             
    * @param message Email document             
    */
-  public AppendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, Object message) {
+  public AppendEmailModelRq(String firstAccount, String secondAccount, StorageFolderLocation storageFolder, String folder, Boolean markAsSent, EmailDto message) {
     super();
     setFirstAccount(firstAccount);
     setSecondAccount(secondAccount);

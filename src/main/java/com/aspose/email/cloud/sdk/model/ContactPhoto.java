@@ -49,6 +49,9 @@ public class ContactPhoto {
   @JsonProperty("base64Data")
   private String base64Data = null;
 
+  @JsonProperty("discriminator")
+  private String discriminator = this.getClass().getSimpleName();
+
   /**
    * Set photoImageFormat and return this.
    * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
@@ -101,6 +104,27 @@ public class ContactPhoto {
     this.base64Data = base64Data;
   }
 
+  /**
+   * Set discriminator and return this.
+   * @param discriminator 
+   * @return this
+  **/
+
+
+  /**
+   * Get discriminator
+   * @return discriminator
+  **/
+  public String getDiscriminator() {
+    return discriminator;
+  }  
+
+  /**
+   * Set discriminator.
+   * @param discriminator 
+  **/
+  public void setDiscriminator(String type) {/* do nothing */}
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -112,12 +136,13 @@ public class ContactPhoto {
   }
     ContactPhoto contactPhoto = (ContactPhoto) o;
     return ObjectUtils.equals(this.photoImageFormat, contactPhoto.photoImageFormat) &&
-    ObjectUtils.equals(this.base64Data, contactPhoto.base64Data);
+    ObjectUtils.equals(this.base64Data, contactPhoto.base64Data) &&
+    ObjectUtils.equals(this.discriminator, contactPhoto.discriminator);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(photoImageFormat, base64Data);
+    return ObjectUtils.hashCodeMulti(photoImageFormat, base64Data, discriminator);
   }
 
 
@@ -128,6 +153,7 @@ public class ContactPhoto {
     
     sb.append("    photoImageFormat: ").append(toIndentedString(getPhotoImageFormat())).append("\n");
     sb.append("    base64Data: ").append(toIndentedString(getBase64Data())).append("\n");
+    sb.append("    discriminator: ").append(toIndentedString(getDiscriminator())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -151,11 +177,13 @@ public class ContactPhoto {
    * Initializes a new instance of the ContactPhoto
    * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
+   * @param discriminator 
    */
-  public ContactPhoto(String photoImageFormat, String base64Data) {
+  public ContactPhoto(String photoImageFormat, String base64Data, String discriminator) {
     super();
     setPhotoImageFormat(photoImageFormat);
     setBase64Data(base64Data);
+    setDiscriminator(discriminator);
   }
 
 }

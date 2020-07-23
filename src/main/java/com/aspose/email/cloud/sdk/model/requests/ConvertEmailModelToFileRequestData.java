@@ -36,7 +36,7 @@ public class ConvertEmailModelToFileRequestData
 {
     /**
     * Initializes a new instance of the ConvertEmailModelToFileRequestData class.   
-    * @param destinationFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param destinationFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param emailDto Email model to convert
     **/
     public ConvertEmailModelToFileRequestData(String destinationFormat, EmailDto emailDto)             
@@ -46,7 +46,7 @@ public class ConvertEmailModelToFileRequestData
     }
         
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String destinationFormat;
 

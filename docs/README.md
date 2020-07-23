@@ -34,10 +34,19 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**convertCalendar**](EmailApi.md#convertcalendar) | **PUT** /email/CalendarModel/convert/{format} | Converts calendar document to specified format and returns as file             
 *EmailApi* | [**convertCalendarModelToAlternate**](EmailApi.md#convertcalendarmodeltoalternate) | **PUT** /email/CalendarModel/as-alternate | Convert iCalendar to AlternateView             
 *EmailApi* | [**convertCalendarModelToFile**](EmailApi.md#convertcalendarmodeltofile) | **PUT** /email/CalendarModel/model-as-file/{format} | Converts calendar model to specified format and returns as file             
+*EmailApi* | [**convertCalendarModelToMapiModel**](EmailApi.md#convertcalendarmodeltomapimodel) | **PUT** /email/CalendarModel/model-as-mapi-model | Converts CalendarDto to MapiCalendarDto.             
 *EmailApi* | [**convertContact**](EmailApi.md#convertcontact) | **PUT** /email/ContactModel/{format}/convert/{destinationFormat} | Converts contact document to specified format and returns as file             
 *EmailApi* | [**convertContactModelToFile**](EmailApi.md#convertcontactmodeltofile) | **PUT** /email/ContactModel/model-as-file/{destinationFormat} | Converts contact model to specified format and returns as file             
+*EmailApi* | [**convertContactModelToMapiModel**](EmailApi.md#convertcontactmodeltomapimodel) | **PUT** /email/ContactModel/model-as-mapi-model | Converts ContactDto to MapiContactDto.             
 *EmailApi* | [**convertEmail**](EmailApi.md#convertemail) | **PUT** /email/convert/{format} | Converts email document to specified format and returns as file             
 *EmailApi* | [**convertEmailModelToFile**](EmailApi.md#convertemailmodeltofile) | **PUT** /email/model/model-as-file/{destinationFormat} | Converts Email model to specified format and returns as file             
+*EmailApi* | [**convertEmailModelToMapiModel**](EmailApi.md#convertemailmodeltomapimodel) | **PUT** /email/model/model-as-mapi-model | Converts EmailDto to MapiMessageDto.             
+*EmailApi* | [**convertMapiCalendarModelToCalendarModel**](EmailApi.md#convertmapicalendarmodeltocalendarmodel) | **PUT** /email/MapiCalendar/model-as-calendar-model | Converts MAPI calendar model to CalendarDto model             
+*EmailApi* | [**convertMapiCalendarModelToFile**](EmailApi.md#convertmapicalendarmodeltofile) | **PUT** /email/MapiCalendar/model-as-file/{destinationFormat} | Converts MAPI calendar model to specified format and returns as file             
+*EmailApi* | [**convertMapiContactModelToContactModel**](EmailApi.md#convertmapicontactmodeltocontactmodel) | **PUT** /email/MapiContact/model-as-contact-model | Converts MAPI contact model to ContactDto model             
+*EmailApi* | [**convertMapiContactModelToFile**](EmailApi.md#convertmapicontactmodeltofile) | **PUT** /email/MapiContact/model-as-file/{destinationFormat} | Converts MAPI contact model to specified format and returns as file             
+*EmailApi* | [**convertMapiMessageModelToEmailModel**](EmailApi.md#convertmapimessagemodeltoemailmodel) | **PUT** /email/MapiMessage/model-as-email-model | Converts MAPI message model to EmailDto model             
+*EmailApi* | [**convertMapiMessageModelToFile**](EmailApi.md#convertmapimessagemodeltofile) | **PUT** /email/MapiMessage/model-as-file/{destinationFormat} | Converts MAPI message model to specified format and returns as file             
 *EmailApi* | [**copyFile**](EmailApi.md#copyfile) | **PUT** /email/storage/file/copy/{srcPath} | 
 *EmailApi* | [**copyFolder**](EmailApi.md#copyfolder) | **PUT** /email/storage/folder/copy/{srcPath} | 
 *EmailApi* | [**createCalendar**](EmailApi.md#createcalendar) | **PUT** /email/Calendar/{name} | Create calendar file             
@@ -65,6 +74,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getCalendar**](EmailApi.md#getcalendar) | **GET** /email/Calendar/{name}/properties | Get calendar file properties             
 *EmailApi* | [**getCalendarAsFile**](EmailApi.md#getcalendarasfile) | **GET** /email/CalendarModel/{fileName}/as-file/{format} | Converts calendar document from storage to specified format and returns as file             
 *EmailApi* | [**getCalendarAttachment**](EmailApi.md#getcalendarattachment) | **GET** /email/Calendar/{name}/attachments/{attachment} | Get iCalendar document attachment by name             
+*EmailApi* | [**getCalendarFileAsMapiModel**](EmailApi.md#getcalendarfileasmapimodel) | **PUT** /email/MapiCalendar/file-as-model | Converts calendar file to a MAPI model representation             
 *EmailApi* | [**getCalendarFileAsModel**](EmailApi.md#getcalendarfileasmodel) | **PUT** /email/CalendarModel/file-as-model | Converts calendar document to a model representation             
 *EmailApi* | [**getCalendarList**](EmailApi.md#getcalendarlist) | **GET** /email/Calendar | Get iCalendar files list in folder on storage             
 *EmailApi* | [**getCalendarModel**](EmailApi.md#getcalendarmodel) | **GET** /email/CalendarModel/{name} | Get calendar file             
@@ -72,6 +82,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getCalendarModelList**](EmailApi.md#getcalendarmodellist) | **GET** /email/CalendarModel | Get iCalendar list from storage folder             
 *EmailApi* | [**getContactAsFile**](EmailApi.md#getcontactasfile) | **GET** /email/ContactModel/{format}/{fileName}/as-file/{destinationFormat} | Converts calendar document from storage to specified format and returns as file             
 *EmailApi* | [**getContactAttachment**](EmailApi.md#getcontactattachment) | **GET** /email/Contact/{format}/{name}/attachments/{attachment} | Get attachment file by name             
+*EmailApi* | [**getContactFileAsMapiModel**](EmailApi.md#getcontactfileasmapimodel) | **PUT** /email/MapiContact/{fileFormat}/file-as-model | Converts contact file to a MAPI model representation             
 *EmailApi* | [**getContactFileAsModel**](EmailApi.md#getcontactfileasmodel) | **PUT** /email/ContactModel/{format}/file-as-model | Converts contact document to a model representation             
 *EmailApi* | [**getContactList**](EmailApi.md#getcontactlist) | **GET** /email/Contact/{format} | Get contact list from storage folder             
 *EmailApi* | [**getContactModel**](EmailApi.md#getcontactmodel) | **GET** /email/ContactModel/{format}/{name} | Get contact document.             
@@ -83,6 +94,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getEmailAttachment**](EmailApi.md#getemailattachment) | **GET** /email/{fileName}/attachments/{attachment} | Get email attachment by name             
 *EmailApi* | [**getEmailClientAccount**](EmailApi.md#getemailclientaccount) | **GET** /email/client/email-client-account | Get email client account from storage             
 *EmailApi* | [**getEmailClientMultiAccount**](EmailApi.md#getemailclientmultiaccount) | **GET** /email/client/multi-account | Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+*EmailApi* | [**getEmailFileAsMapiModel**](EmailApi.md#getemailfileasmapimodel) | **PUT** /email/MapiMessage/{fileFormat}/file-as-model | Converts email file to a MAPI model representation             
 *EmailApi* | [**getEmailFileAsModel**](EmailApi.md#getemailfileasmodel) | **PUT** /email/model/file-as-model | Converts email document to a model representation             
 *EmailApi* | [**getEmailModel**](EmailApi.md#getemailmodel) | **GET** /email/model/{format}/{name} | Get email document.             
 *EmailApi* | [**getEmailModelList**](EmailApi.md#getemailmodellist) | **GET** /email/model/{format} | Get email list from storage folder.             
@@ -91,7 +103,10 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**getFilesList**](EmailApi.md#getfileslist) | **GET** /email/storage/folder/{path} | 
 *EmailApi* | [**getMapiAttachment**](EmailApi.md#getmapiattachment) | **GET** /email/Mapi/{name}/attachments/{attachment} | Get document attachment as file stream             
 *EmailApi* | [**getMapiAttachments**](EmailApi.md#getmapiattachments) | **GET** /email/Mapi/{name}/attachments | Get document attachment list             
+*EmailApi* | [**getMapiCalendarModel**](EmailApi.md#getmapicalendarmodel) | **GET** /email/MapiCalendar/{name} | Get MAPI calendar document.             
+*EmailApi* | [**getMapiContactModel**](EmailApi.md#getmapicontactmodel) | **GET** /email/MapiContact/{format}/{name} | Get MAPI contact document.             
 *EmailApi* | [**getMapiList**](EmailApi.md#getmapilist) | **GET** /email/Mapi | Get document list from storage folder             
+*EmailApi* | [**getMapiMessageModel**](EmailApi.md#getmapimessagemodel) | **GET** /email/MapiMessage/{format}/{name} | Get MAPI message document.             
 *EmailApi* | [**getMapiProperties**](EmailApi.md#getmapiproperties) | **GET** /email/Mapi/{name}/properties | Get document properties             
 *EmailApi* | [**isEmailAddressDisposable**](EmailApi.md#isemailaddressdisposable) | **GET** /email/disposable/isDisposable/{address} | Check email address is disposable             
 *EmailApi* | [**listEmailFolders**](EmailApi.md#listemailfolders) | **GET** /email/client/ListFolders | Get folders list in email account             
@@ -110,6 +125,9 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**saveEmailModel**](EmailApi.md#saveemailmodel) | **PUT** /email/model/{format}/{name} | Save email document.             
 *EmailApi* | [**saveMailAccount**](EmailApi.md#savemailaccount) | **POST** /email/client/SaveMailAccount | Create email account file (*.account) with login/password authentication             
 *EmailApi* | [**saveMailOAuthAccount**](EmailApi.md#savemailoauthaccount) | **POST** /email/client/SaveMailOAuthAccount | Create email account file (*.account) with OAuth             
+*EmailApi* | [**saveMapiCalendarModel**](EmailApi.md#savemapicalendarmodel) | **PUT** /email/MapiCalendar/{format}/{name} | Save MAPI Calendar to storage.             
+*EmailApi* | [**saveMapiContactModel**](EmailApi.md#savemapicontactmodel) | **PUT** /email/MapiContact/{format}/{name} | Save MAPI Contact to storage.             
+*EmailApi* | [**saveMapiMessageModel**](EmailApi.md#savemapimessagemodel) | **PUT** /email/MapiMessage/{format}/{name} | Save MAPI message to storage.             
 *EmailApi* | [**sendEmail**](EmailApi.md#sendemail) | **POST** /email/client/Send | Send an email from *.eml file located on storage             
 *EmailApi* | [**sendEmailMime**](EmailApi.md#sendemailmime) | **POST** /email/client/SendMime | Send an email specified by MIME in request             
 *EmailApi* | [**sendEmailModel**](EmailApi.md#sendemailmodel) | **POST** /email/client/SendModel | Send an email specified by model in request             
@@ -205,11 +223,35 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.ListResponseOfString](ListResponseOfString.md)
  - [com.aspose.email.cloud.sdk.model.MailAddress](MailAddress.md)
  - [com.aspose.email.cloud.sdk.model.MailServerFolder](MailServerFolder.md)
+ - [com.aspose.email.cloud.sdk.model.MapiAttachmentDto](MapiAttachmentDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarAttendeesDto](MapiCalendarAttendeesDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarEventRecurrenceDto](MapiCalendarEventRecurrenceDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarExceptionInfoDto](MapiCalendarExceptionInfoDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarRecurrencePatternDto](MapiCalendarRecurrencePatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarTimeZoneDto](MapiCalendarTimeZoneDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarTimeZoneInfoDto](MapiCalendarTimeZoneInfoDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarTimeZoneRuleDto](MapiCalendarTimeZoneRuleDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactElectronicAddressDto](MapiContactElectronicAddressDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactElectronicAddressPropertySetDto](MapiContactElectronicAddressPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactEventPropertySetDto](MapiContactEventPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactNamePropertySetDto](MapiContactNamePropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactOtherPropertySetDto](MapiContactOtherPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactPersonalInfoPropertySetDto](MapiContactPersonalInfoPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactPhysicalAddressDto](MapiContactPhysicalAddressDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactPhysicalAddressPropertySetDto](MapiContactPhysicalAddressPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactProfessionalPropertySetDto](MapiContactProfessionalPropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactTelephonePropertySetDto](MapiContactTelephonePropertySetDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiElectronicAddressDto](MapiElectronicAddressDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPropertyDescriptor](MapiPropertyDescriptor.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPropertyDto](MapiPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiRecipientDto](MapiRecipientDto.md)
  - [com.aspose.email.cloud.sdk.model.MimeResponse](MimeResponse.md)
  - [com.aspose.email.cloud.sdk.model.NameValuePair](NameValuePair.md)
  - [com.aspose.email.cloud.sdk.model.ObjectExist](ObjectExist.md)
  - [com.aspose.email.cloud.sdk.model.PhoneNumber](PhoneNumber.md)
  - [com.aspose.email.cloud.sdk.model.PostalAddress](PostalAddress.md)
+ - [com.aspose.email.cloud.sdk.model.RecurrencePatternDto](RecurrencePatternDto.md)
  - [com.aspose.email.cloud.sdk.model.ReminderAttendee](ReminderAttendee.md)
  - [com.aspose.email.cloud.sdk.model.ReminderTrigger](ReminderTrigger.md)
  - [com.aspose.email.cloud.sdk.model.SetEmailPropertyRequest](SetEmailPropertyRequest.md)
@@ -224,6 +266,9 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.StorageModelRqOfCalendarDto](StorageModelRqOfCalendarDto.md)
  - [com.aspose.email.cloud.sdk.model.StorageModelRqOfContactDto](StorageModelRqOfContactDto.md)
  - [com.aspose.email.cloud.sdk.model.StorageModelRqOfEmailDto](StorageModelRqOfEmailDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfMapiCalendarDto](StorageModelRqOfMapiCalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfMapiContactDto](StorageModelRqOfMapiContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.StorageModelRqOfMapiMessageDto](StorageModelRqOfMapiMessageDto.md)
  - [com.aspose.email.cloud.sdk.model.Url](Url.md)
  - [com.aspose.email.cloud.sdk.model.ValueResponse](ValueResponse.md)
  - [com.aspose.email.cloud.sdk.model.ValueTOfBoolean](ValueTOfBoolean.md)
@@ -239,6 +284,7 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.CalendarDtoList](CalendarDtoList.md)
  - [com.aspose.email.cloud.sdk.model.ContactDtoList](ContactDtoList.md)
  - [com.aspose.email.cloud.sdk.model.CreateFolderBaseRequest](CreateFolderBaseRequest.md)
+ - [com.aspose.email.cloud.sdk.model.DailyRecurrencePatternDto](DailyRecurrencePatternDto.md)
  - [com.aspose.email.cloud.sdk.model.DeleteEmailThreadAccountRq](DeleteEmailThreadAccountRq.md)
  - [com.aspose.email.cloud.sdk.model.DeleteFolderBaseRequest](DeleteFolderBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.DeleteMessageBaseRequest](DeleteMessageBaseRequest.md)
@@ -255,6 +301,28 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.IndexedHierarchicalObject](IndexedHierarchicalObject.md)
  - [com.aspose.email.cloud.sdk.model.IndexedPrimitiveObject](IndexedPrimitiveObject.md)
  - [com.aspose.email.cloud.sdk.model.LinkedResource](LinkedResource.md)
+ - [com.aspose.email.cloud.sdk.model.MapiBinaryPropertyDto](MapiBinaryPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiBooleanPropertyDto](MapiBooleanPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarDailyRecurrencePatternDto](MapiCalendarDailyRecurrencePatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarDto](MapiCalendarDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarWeeklyRecurrencePatternDto](MapiCalendarWeeklyRecurrencePatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiCalendarYearlyAndMonthlyRecurrencePatternDto](MapiCalendarYearlyAndMonthlyRecurrencePatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactDto](MapiContactDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiContactPhotoDto](MapiContactPhotoDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiDateTimePropertyDto](MapiDateTimePropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiFileAsPropertyDto](MapiFileAsPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiImportancePropertyDto](MapiImportancePropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiIntPropertyDto](MapiIntPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiKnownPropertyDescriptor](MapiKnownPropertyDescriptor.md)
+ - [com.aspose.email.cloud.sdk.model.MapiLegacyFreeBusyPropertyDto](MapiLegacyFreeBusyPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiMessageDto](MapiMessageDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiMultiIntPropertyDto](MapiMultiIntPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiMultiStringPropertyDto](MapiMultiStringPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPhysicalAddressIndexPropertyDto](MapiPhysicalAddressIndexPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPidPropertyDescriptor](MapiPidPropertyDescriptor.md)
+ - [com.aspose.email.cloud.sdk.model.MapiResponseTypePropertyDto](MapiResponseTypePropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MapiStringPropertyDto](MapiStringPropertyDto.md)
+ - [com.aspose.email.cloud.sdk.model.MonthlyRecurrencePatternDto](MonthlyRecurrencePatternDto.md)
  - [com.aspose.email.cloud.sdk.model.MoveEmailMessageRq](MoveEmailMessageRq.md)
  - [com.aspose.email.cloud.sdk.model.MoveEmailThreadRq](MoveEmailThreadRq.md)
  - [com.aspose.email.cloud.sdk.model.PrimitiveObject](PrimitiveObject.md)
@@ -265,8 +333,14 @@ Class | Method | HTTP request | Description
  - [com.aspose.email.cloud.sdk.model.SendEmailModelRq](SendEmailModelRq.md)
  - [com.aspose.email.cloud.sdk.model.SetMessageReadFlagAccountBaseRequest](SetMessageReadFlagAccountBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.StorageFileLocation](StorageFileLocation.md)
+ - [com.aspose.email.cloud.sdk.model.TaskRegeneratingPatternDto](TaskRegeneratingPatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.WeeklyRecurrencePatternDto](WeeklyRecurrencePatternDto.md)
+ - [com.aspose.email.cloud.sdk.model.YearlyRecurrencePatternDto](YearlyRecurrencePatternDto.md)
  - [com.aspose.email.cloud.sdk.model.AiBcrParseStorageRq](AiBcrParseStorageRq.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailBaseRequest](AppendEmailBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailMimeBaseRequest](AppendEmailMimeBaseRequest.md)
  - [com.aspose.email.cloud.sdk.model.AppendEmailModelRq](AppendEmailModelRq.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPidLidPropertyDescriptor](MapiPidLidPropertyDescriptor.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPidNamePropertyDescriptor](MapiPidNamePropertyDescriptor.md)
+ - [com.aspose.email.cloud.sdk.model.MapiPidTagPropertyDescriptor](MapiPidTagPropertyDescriptor.md)
 

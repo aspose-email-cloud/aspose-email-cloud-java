@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Run tests
-      run: mvn test -Dgroups=pipeline --batch-mode
+      run: mvn test -Dgroups=pipeline --batch-mode -q
       env:
         appSid: ${{secrets.appSid}}
         appKey: ${{secrets.appKey}}

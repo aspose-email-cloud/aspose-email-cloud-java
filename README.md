@@ -1,16 +1,49 @@
-﻿# Aspose.Email Cloud SDK for Java [![Maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepository.aspose.cloud%2Frepo%2Fcom%2Faspose%2Faspose-email-cloud%2Fmaven-metadata.xml)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-java)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-java/workflows/tests/badge.svg)
+﻿# Aspose.Email Cloud SDK for Java
+[![Maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepository.aspose.cloud%2Frepo%2Fcom%2Faspose%2Faspose-email-cloud%2Fmaven-metadata.xml)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-java)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-java/workflows/tests/badge.svg)
+
 This repository contains Aspose.Email Cloud SDK for Java source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Java applications quickly and easily, with zero initial cost.
 
 [Aspose.Email Cloud home](https://products.aspose.cloud/email/family "Aspose.Email Cloud")  
 [API Reference](https://apireference.aspose.cloud/email/)  
 
+# Key features
+Aspose.Email Cloud is a REST API for creating email applications that work with standard email file formats. This SDK:
+- Lets developers manipulate different emails’ formats such as Outlook MSG, EML, VCard, and iCalendar files
+- Lets developers manipulate different emails' formats such as Outlook MSG, EML, VCard, and iCalendar files
+- Supports AI functions:
+    - The Business card recognition
+    - The Name API for parsing and handling personal names
+- Has a built-in email client. This client provides:
+    - Unified REST API for different email protocols: IMAP, POP3, SMTP, EWS, WebDav
+    - Virtual multi-account
+    - Message threads (POP3 accounts are also supported)
+- Email configuration discovery
+- Disposable email address detection
 
+## New features in version 20.7
+- New MAPI message files API with models:
+    - `MapiMessageDto` - represents the Microsoft Outlook message.
+    - `MapiCalendarDto` - represents the Microsoft Outlook calendar object.
+    - `MapiContactDto` - represents the Microsoft Outlook contact information. 
+- Improved Recurrence pattern support for CalendarDto.
 
+See [Release notes](https://docs.aspose.cloud/display/emailcloud/Aspose.Email+Cloud+20.7+Release+Notes)
 
 ## How to use the SDK?
 The complete source code is available in the GIT repository.
 
-Use [SDK tutorials](https://docs.aspose.cloud/display/emailcloud/SDK+Tutorials), [reference documentation](https://github.com/aspose-email-cloud/aspose-email-cloud-java/blob/master/docs/README.md) and [examples from this document](#usage-examples)
+Use [SDK tutorials](https://docs.aspose.cloud/display/emailcloud/SDK+Tutorials):
+- [SDK setup](https://docs.aspose.cloud/display/emailcloud/SDK+setup) - installation, account setup, first API calls
+- [Business Cards Recognition API](https://docs.aspose.cloud/display/emailcloud/Business+Cards+Recognition+API) - convert captured business cards and name card images, into a vCard format
+- [Working with Name API](https://docs.aspose.cloud/display/emailcloud/Working+with+Name+API) - format, genderize, compare, parse, autocomplete names
+- [Email Message Files](https://docs.aspose.cloud/display/emailcloud/Email+Message+Files) - Convert EML to MSG and back, edit EML files, etc.
+- [Quick Start With iCalendar API](https://docs.aspose.cloud/display/emailcloud/Quick+Start+With+iCalendar+API) - Crate and edit iCalendar files
+- [Quick Start With VCard API](https://docs.aspose.cloud/display/emailcloud/Quick+Start+With+VCard+API) - Create and edit VCard files, business card recognition
+- [Quick Start With Email Client](https://docs.aspose.cloud/display/emailcloud/Quick+Start+With+Email+Client) - Setup builtin email client, search/fetch/send/move/delete messages
+- [Email Client Threads](https://docs.aspose.cloud/display/emailcloud/Email+Client+Threads) - Fetch/Move/Delete email message threads using builtin email client
+- [File converters](https://docs.aspose.cloud/display/emailcloud/Convert+Email%2C+Calendar+and+Contact+Files)
+
+SDK reference documentation is available in [this README](https://github.com/aspose-email-cloud/aspose-email-cloud-java/blob/master/docs/README.md)
 
 ### Prerequisites
 To use these SDK, you need an App SID and an App Key; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
@@ -34,6 +67,8 @@ Then, add a dependency:
 </dependency>
 ```
 
+See more details about SDK installation in this tutorial: [SDK setup](https://docs.aspose.cloud/display/emailcloud/SDK+setup)
+
 ### Usage examples
 To use the API, you should create an EmailApi object:
 ```java
@@ -41,180 +76,17 @@ EmailApi api = new EmailApi("Your App Key", "Your App SID");
 ```
 
 #### Business cards recognition API
-See examples below:
-
-<details open>
-    <summary>Parse business card images to VCard contact files</summary>
+Use `AiBcrParseModel` method to parse business card image to VCard DTO:
 
 ```java
-// Upload business card image to storage
-String storage = "First Storage"; //Your storage name
-String fileName = "someFileName.png"; //Supports different image formats: PNG, JPEG, BMP, TIFF, GIF, etc.
-String folder = "some/folder/path/on/storage";
-String filePath = folder + "/" + fileName;
-byte[] fileBytes = IOUtils.toByteArray(
-    new FileInputStream("some/business/card/image/on/disk.png"));
-api.uploadFile(new UploadFileRequestData(
-    filePath,
-    fileBytes,
-    storage));
-String outFolderPath = "some/other/folder/path/on/storage"; //Business card recognition results will be saved here
-api.createFolder(new CreateFolderRequestData(outFolderPath, storage));
-// Call business card recognition action
-ListResponseOfStorageFileLocation result = api.aiBcrParseStorage(new AiBcrParseStorageRequestData(
-    new AiBcrParseStorageRq(
-        null,
-        //We can process multiple images in one request
-        Arrays.asList(new AiBcrImageStorageFile(
-            true, //Flag isSingle determines that image contains single VCard or more.
-                  //Only single VCard on image variant is supported in current version.
-            new StorageFileLocation(storage, folder, fileName))),
-        new StorageFolderLocation(storage, outFolderPath))));
-// Get file name from recognition result
-StorageFileLocation contactFile = result.getValue().get(0); //result.getValue() can contain multiple files, if we sent multicard images or multiple images
-//  You can download the VCard file, which produced by the recognition method ...
-byte[] contactBytes = api.downloadFile(new DownloadFileRequestData(
-    contactFile.getFolderPath() + "/" + contactFile.getFileName(),
-    contactFile.getStorage(),
-    null));
-String contactFileContent = new String(contactBytes, StandardCharsets.UTF_8);
-//... and print it
-System.out.println(contactFileContent);
-// Also, you can get VCard object properties’ list using Contact API
-HierarchicalObject contactProperties = api.getContactProperties(
-    new GetContactPropertiesRequestData(
-        "VCard",
-        contactFile.getFileName(),
-        contactFile.getFolderPath(),
-        contactFile.getStorage()));
-//All VCard’s properties are available as a list. Complex properties are represented as hierarchical structures.
-//Let's print all primitive properties’ values:
-for (BaseObject property: contactProperties.getInternalProperties()) {
-    if (property.getType().equals("PrimitiveObject")) {
-        PrimitiveObject primitive = (PrimitiveObject)property;
-        System.out.println("Property name: " +
-            primitive.getName() +
-            " value: " +
-            primitive.getValue());
-    }
-}
-```
-</details>
-
-
-<details>
-    <summary>Parse images directly, without the using of a storage</summary>
-
-```java
-//Read image from file and convert it to Base64 string
-byte[] fileBytes = IOUtils.toByteArray(
-    new FileInputStream("some/business/card/image/on/disk.png"));
+byte[] fileBytes = IOUtils.toByteArray(new FileInputStream("/tmp/alex.png"));
 String fileBase64 = Base64.encodeToString(fileBytes, false);
-ListResponseOfHierarchicalObject result = api.aiBcrParse(new AiBcrParseRequestData(
+ListResponseOfContactDto result = api.aiBcrParseModel(new AiBcrParseModelRequestData(
     new AiBcrBase64Rq(null, Arrays.asList(new AiBcrBase64Image(true, fileBase64)))));
-//Result contains all recognized VCard objects (only the one in our case)
-HierarchicalObject contactProperties = result.getValue().get(0);
-//VCard object is available as a list of properties, without any external calls:
-for (BaseObject property: contactProperties.getInternalProperties()) {
-    if (property.getType().equals("PrimitiveObject")) {
-        PrimitiveObject primitive = (PrimitiveObject)property;
-        System.out.println("Property name: " +
-            primitive.getName() +
-            " value: " +
-            primitive.getValue());
-    }
-}
+ContactDto contact = result.getValue().get(0);
 ```
-</details>
 
-
-#### Name API
-See examples below:
-<details open>
-    <summary>Detect a person's gender by name</summary>
-
-```java
-ListResponseOfAiNameGenderHypothesis result = api
-        .aiNameGenderize(new AiNameGenderizeRequestData("John Cane", null, null, null, null, null));
-// the result contains a list of hypothesis about a person's gender.
-// all hypothesis include score, so you can use the most scored version,
-// which will be the first in a list:
-System.out.println(result.getValue().get(0).getGender()); //prints "Male"
-```
-</details>
-
-<details>
-    <summary>Format person's name using defined format</summary>
-
-```java
-AiNameFormatted result = api.aiNameFormat(
-        new AiNameFormatRequestData("Mr. John Michael Cane", null, null, null, null, "%t%L%f%m", null));
-System.out.println(result.getName()) // prints "Mr. Cane J. M."
-```
-</details>
-
-<details>
-    <summary>Compare the names to find out if they belong to the same person or not</summary>
-
-```java
-final String first = "John Michael Cane";
-final String second = "Cane J.";
-AiNameMatchResult result = api
-        .aiNameMatch(new AiNameMatchRequestData(first, second, null, null, null, null, null));
-System.out.println(result.getSimilarity() >= 0.5); //prints "true", names look similar
-```
-</details>
-
-<details>
-    <summary>Expand a person's name into a list of possible alternatives</summary>
-
-
-```java
-String name = "Smith Bobby";
-AiNameWeightedVariants result = api
-        .aiNameExpand(new AiNameExpandRequestData(name, null, null, null, null, null));
-for (AiNameWeighted weighted : result.getNames()) {
-    System.out.println(weighted.getName()); //prints "Mr. Smith", "B. Smith", etc.
-}
-```
-</details>
-
-<details>
-    <summary>Get k most probable names for given starting characters</summary>
-
-```java
-String prefix = "Dav";
-AiNameWeightedVariants result = api
-        .aiNameComplete(new AiNameCompleteRequestData(prefix, null, null, null, null, null));
-for (AiNameWeighted weighted : result.getNames()) {
-    System.out.println(prefix + weighted.getName()); //prints "David", "Dave", "Davis", etc.
-}
-```
-</details>
-
-<details>
-    <summary>Parse out a person's name from an email address.</summary>
-
-```java
-String address = "john-cane@gmail.com";
-ListResponseOfAiNameExtracted result = api
-        .aiNameParseEmailAddress(new AiNameParseEmailAddressRequestData(address, null, null, null, null, null));
-String givenName = null;
-String surname = null;
-for(AiNameExtracted extracted: result.getValue()) {
-    for(AiNameExtractedComponent component: extracted.getName()) {
-        if (component.getCategory().equals("GivenName")) {
-            givenName = component.getValue();
-        }
-        if (component.getCategory().equals("Surname")) {
-            surname = component.getValue();
-        }
-    }
-}
-System.out.println("Given name is " + givenName); // "John"
-System.out.println("Surname is " + surname); // "Cane"
-```
-</details>
+See more details [here](https://docs.aspose.cloud/display/emailcloud/Parse+Image+To+VCard+File) and [here](https://docs.aspose.cloud/display/emailcloud/Business+Cards+Recognition+API)
 
 # Licensing
 All Aspose.Email for Cloud SDKs, helper scripts and templates are licensed under [MIT License](LICENSE).

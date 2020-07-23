@@ -36,9 +36,9 @@ public class SaveEmailModelRequestData
 {
     /**
     * Initializes a new instance of the SaveEmailModelRequestData class.   
-    * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     * @param name Email document file name in storage.
-    * @param rq Calendar properties update request.
+    * @param rq Email document create/update request.
     **/
     public SaveEmailModelRequestData(String format, String name, StorageModelRqOfEmailDto rq)             
     {
@@ -48,7 +48,7 @@ public class SaveEmailModelRequestData
     }
         
     /**
-    * File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    * File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     **/
     public String format;
 
@@ -58,7 +58,7 @@ public class SaveEmailModelRequestData
     public String name;
 
     /**
-    * Calendar properties update request.
+    * Email document create/update request.
     **/
     public StorageModelRqOfEmailDto rq;
 }

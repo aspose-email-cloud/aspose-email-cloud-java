@@ -1477,6 +1477,51 @@ public class EmailApi
     }
   
     /**
+     * Converts CalendarDto to MapiCalendarDto.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiCalendarDto
+     * @throws ApiException 
+     */
+    public MapiCalendarDto convertCalendarModelToMapiModel(ConvertCalendarModelToMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.calendarDto' is set
+        if (request.calendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.calendarDto' when calling convertCalendarModelToMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/CalendarModel/model-as-mapi-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.calendarDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Converts contact document to specified format and returns as file             
      * 
      * @param request Holds parameters for this request invocation.
@@ -1572,6 +1617,51 @@ public class EmailApi
     }
   
     /**
+     * Converts ContactDto to MapiContactDto.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiContactDto
+     * @throws ApiException 
+     */
+    public MapiContactDto convertContactModelToMapiModel(ConvertContactModelToMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.contactDto' is set
+        if (request.contactDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.contactDto' when calling convertContactModelToMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/ContactModel/model-as-mapi-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.contactDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiContactDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Converts email document to specified format and returns as file             
      * 
      * @param request Holds parameters for this request invocation.
@@ -1644,6 +1734,321 @@ public class EmailApi
         String postBody = null;
         
         postBody = SerializationHelper.serialize(request.emailDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts EmailDto to MapiMessageDto.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiMessageDto
+     * @throws ApiException 
+     */
+    public MapiMessageDto convertEmailModelToMapiModel(ConvertEmailModelToMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.emailDto' is set
+        if (request.emailDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.emailDto' when calling convertEmailModelToMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/model/model-as-mapi-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.emailDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiMessageDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI calendar model to CalendarDto model             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return CalendarDto
+     * @throws ApiException 
+     */
+    public CalendarDto convertMapiCalendarModelToCalendarModel(ConvertMapiCalendarModelToCalendarModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.mapiCalendarDto' is set
+        if (request.mapiCalendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiCalendarDto' when calling convertMapiCalendarModelToCalendarModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/model-as-calendar-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiCalendarDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), CalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI calendar model to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] convertMapiCalendarModelToFile(ConvertMapiCalendarModelToFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling convertMapiCalendarModelToFile");
+        }
+         // verify the required parameter 'request.mapiCalendarDto' is set
+        if (request.mapiCalendarDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiCalendarDto' when calling convertMapiCalendarModelToFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/model-as-file/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiCalendarDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI contact model to ContactDto model             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return ContactDto
+     * @throws ApiException 
+     */
+    public ContactDto convertMapiContactModelToContactModel(ConvertMapiContactModelToContactModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.mapiContactDto' is set
+        if (request.mapiContactDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiContactDto' when calling convertMapiContactModelToContactModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiContact/model-as-contact-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiContactDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), ContactDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI contact model to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] convertMapiContactModelToFile(ConvertMapiContactModelToFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling convertMapiContactModelToFile");
+        }
+         // verify the required parameter 'request.mapiContactDto' is set
+        if (request.mapiContactDto== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiContactDto' when calling convertMapiContactModelToFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiContact/model-as-file/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiContactDto);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        return response;
+        
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI message model to EmailDto model             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return EmailDto
+     * @throws ApiException 
+     */
+    public EmailDto convertMapiMessageModelToEmailModel(ConvertMapiMessageModelToEmailModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.mapiMessage' is set
+        if (request.mapiMessage== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiMessage' when calling convertMapiMessageModelToEmailModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/model-as-email-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiMessage);
+        
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), EmailDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts MAPI message model to specified format and returns as file             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return byte[]
+     * @throws ApiException 
+     */
+    public byte[] convertMapiMessageModelToFile(ConvertMapiMessageModelToFileRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.destinationFormat' is set
+        if (request.destinationFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.destinationFormat' when calling convertMapiMessageModelToFile");
+        }
+         // verify the required parameter 'request.mapiMessage' is set
+        if (request.mapiMessage== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.mapiMessage' when calling convertMapiMessageModelToFile");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/model-as-file/{destinationFormat}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "destinationFormat", request.destinationFormat);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.mapiMessage);
         
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
@@ -2854,6 +3259,51 @@ public class EmailApi
     }
   
     /**
+     * Converts calendar file to a MAPI model representation             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiCalendarDto
+     * @throws ApiException 
+     */
+    public MapiCalendarDto getCalendarFileAsMapiModel(GetCalendarFileAsMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling getCalendarFileAsMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/file-as-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        
+        
+                if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Converts calendar document to a model representation             
      * 
      * @param request Holds parameters for this request invocation.
@@ -3187,6 +3637,56 @@ public class EmailApi
             
         return response;
         
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Converts contact file to a MAPI model representation             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiContactDto
+     * @throws ApiException 
+     */
+    public MapiContactDto getContactFileAsMapiModel(GetContactFileAsMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.fileFormat' is set
+        if (request.fileFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileFormat' when calling getContactFileAsMapiModel");
+        }
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling getContactFileAsMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiContact/{fileFormat}/file-as-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "fileFormat", request.fileFormat);
+        
+        
+                if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiContactDto.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -3719,6 +4219,56 @@ public class EmailApi
     }
   
     /**
+     * Converts email file to a MAPI model representation             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiMessageDto
+     * @throws ApiException 
+     */
+    public MapiMessageDto getEmailFileAsMapiModel(GetEmailFileAsMapiModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.fileFormat' is set
+        if (request.fileFormat== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileFormat' when calling getEmailFileAsMapiModel");
+        }
+         // verify the required parameter 'request.file' is set
+        if (request.File== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.file' when calling getEmailFileAsMapiModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/{fileFormat}/file-as-model";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "fileFormat", request.fileFormat);
+        
+        
+                if (request.File != null) 
+        {
+            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+        }
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiMessageDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Converts email document to a model representation             
      * 
      * @param request Holds parameters for this request invocation.
@@ -4089,6 +4639,101 @@ public class EmailApi
     }
   
     /**
+     * Get MAPI calendar document.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiCalendarDto
+     * @throws ApiException 
+     */
+    public MapiCalendarDto getMapiCalendarModel(GetMapiCalendarModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getMapiCalendarModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiCalendarDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Get MAPI contact document.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiContactDto
+     * @throws ApiException 
+     */
+    public MapiContactDto getMapiContactModel(GetMapiContactModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getMapiContactModel");
+        }
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getMapiContactModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiContact/{format}/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiContactDto.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
      * Get document list from storage folder             
      * 
      * @param request Holds parameters for this request invocation.
@@ -4123,6 +4768,56 @@ public class EmailApi
         }
         
         return SerializationHelper.deserialize(new String(response), ListResponseOfHierarchicalObjectResponse.class);
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Get MAPI message document.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @return MapiMessageDto
+     * @throws ApiException 
+     */
+    public MapiMessageDto getMapiMessageModel(GetMapiMessageModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling getMapiMessageModel");
+        }
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling getMapiMessageModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/{format}/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        
+                
+        byte[] response = this.apiInvoker.invokeApi(
+            resourcePath, 
+            "GET", 
+            null, 
+            null, 
+            formParams);
+            
+        
+        if (response == null)
+        {
+            return null;
+        }
+        
+        return SerializationHelper.deserialize(new String(response), MapiMessageDto.class);
       } catch(ApiException exception) {
         throw exception;
       } catch(Exception exception) {
@@ -4910,6 +5605,147 @@ public class EmailApi
         this.apiInvoker.invokeApi(
             resourcePath, 
             "POST", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Save MAPI Calendar to storage.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void saveMapiCalendarModel(SaveMapiCalendarModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling saveMapiCalendarModel");
+        }
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling saveMapiCalendarModel");
+        }
+         // verify the required parameter 'request.rq' is set
+        if (request.rq== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.rq' when calling saveMapiCalendarModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiCalendar/{format}/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.rq);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Save MAPI Contact to storage.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void saveMapiContactModel(SaveMapiContactModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling saveMapiContactModel");
+        }
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling saveMapiContactModel");
+        }
+         // verify the required parameter 'request.rq' is set
+        if (request.rq== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.rq' when calling saveMapiContactModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiContact/{format}/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.rq);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
+            postBody, 
+            null, 
+            formParams);
+            
+      } catch(ApiException exception) {
+        throw exception;
+      } catch(Exception exception) {
+        throw new ApiException(400, exception.getMessage());
+      }
+    }
+  
+    /**
+     * Save MAPI message to storage.             
+     * 
+     * @param request Holds parameters for this request invocation.
+     * @throws ApiException 
+     */
+    public void saveMapiMessageModel(SaveMapiMessageModelRequestData request) throws ApiException 
+    {
+      try {
+         // verify the required parameter 'request.format' is set
+        if (request.format== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling saveMapiMessageModel");
+        }
+         // verify the required parameter 'request.name' is set
+        if (request.name== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.name' when calling saveMapiMessageModel");
+        }
+         // verify the required parameter 'request.rq' is set
+        if (request.rq== null) {
+            throw new ApiException(400, "Missing the required parameter 'request.rq' when calling saveMapiMessageModel");
+        }
+        // create path and map variables
+        String resourcePath = this.Configuration.getApiRootUrl() + "/email/MapiMessage/{format}/{name}";
+        
+        HashMap<String, Object> formParams = new HashMap<String, Object>();
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "name", request.name);
+        
+        
+        String postBody = null;
+        
+        postBody = SerializationHelper.serialize(request.rq);
+        
+        this.apiInvoker.invokeApi(
+            resourcePath, 
+            "PUT", 
             postBody, 
             null, 
             formParams);

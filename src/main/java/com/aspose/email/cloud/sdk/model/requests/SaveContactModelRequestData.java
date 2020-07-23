@@ -38,7 +38,7 @@ public class SaveContactModelRequestData
     * Initializes a new instance of the SaveContactModelRequestData class.   
     * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
     * @param name Contact document file name.
-    * @param rq Create contact request.
+    * @param rq Create/Update contact request.
     **/
     public SaveContactModelRequestData(String format, String name, StorageModelRqOfContactDto rq)             
     {
@@ -58,7 +58,7 @@ public class SaveContactModelRequestData
     public String name;
 
     /**
-    * Create contact request.
+    * Create/Update contact request.
     **/
     public StorageModelRqOfContactDto rq;
 }
