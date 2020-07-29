@@ -29,35 +29,100 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiCalendarApi.get request invocation.
-**/   
+ * Class that holds parameters for MapiCalendarApi.get request invocation.
+ **/   
 public class MapiCalendarGetRequest
 {
     /**
-    * Initializes a new instance of the MapiCalendarGetRequest class.   
-    * @param name Calendar file name in storage.
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    **/
-    public MapiCalendarGetRequest(String name, String folder, String storage)             
+     * Initializes a new instance of the MapiCalendarGetRequest class.
+     **/
+    public MapiCalendarGetRequest()
     {
-        this.name = name;
+    }
+
+    /**
+     * Initializes a new instance of the MapiCalendarGetRequest class.   
+     * @param fileName Calendar file name in storage.
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     **/
+    public MapiCalendarGetRequest(String fileName, String folder, String storage)             
+    {
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * Calendar file name in storage.
-    **/
-    public String name;
+    private String fileName;
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Getter for: Calendar file name in storage.
+     **/
+    public String getFileName() {
+        return fileName;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Calendar file name in storage.
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: Calendar file name in storage.
+     **/
+    public MapiCalendarGetRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public MapiCalendarGetRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public MapiCalendarGetRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }

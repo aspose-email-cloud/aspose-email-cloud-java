@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for StorageApi.getFileVersions request invocation.
-**/   
+ * Class that holds parameters for StorageApi.getFileVersions request invocation.
+ **/   
 public class GetFileVersionsRequest
 {
     /**
-    * Initializes a new instance of the GetFileVersionsRequest class.   
-    * @param path File path e.g. &#39;/file.ext&#39;
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the GetFileVersionsRequest class.
+     **/
+    public GetFileVersionsRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the GetFileVersionsRequest class.   
+     * @param path File path e.g. &#39;/file.ext&#39;
+     * @param storageName Storage name
+     **/
     public GetFileVersionsRequest(String path, String storageName)             
     {
         this.path = path;
         this.storageName = storageName;
     }
         
-    /**
-    * File path e.g. '/file.ext'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: File path e.g. '/file.ext'
+     **/
+    public String getPath() {
+        return path;
+    }
+
+    /**
+     * Setter for: File path e.g. '/file.ext'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: File path e.g. '/file.ext'
+     **/
+    public GetFileVersionsRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public GetFileVersionsRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }
 

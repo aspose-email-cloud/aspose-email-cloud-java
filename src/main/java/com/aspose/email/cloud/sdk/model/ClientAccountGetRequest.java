@@ -29,36 +29,101 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientAccountApi.get request invocation.
-**/   
+ * Class that holds parameters for ClientAccountApi.get request invocation.
+ **/   
 public class ClientAccountGetRequest
 {
     /**
-    * Initializes a new instance of the ClientAccountGetRequest class.   
-    * @param name File name on storage.
-    * @param folder Folder on storage.
-    * @param storage Storage name.
-    **/
-    public ClientAccountGetRequest(String name, String folder, String storage)             
+     * Initializes a new instance of the ClientAccountGetRequest class.
+     **/
+    public ClientAccountGetRequest()
     {
-        this.name = name;
+    }
+
+    /**
+     * Initializes a new instance of the ClientAccountGetRequest class.   
+     * @param fileName File name on storage.
+     * @param folder Folder on storage.
+     * @param storage Storage name.
+     **/
+    public ClientAccountGetRequest(String fileName, String folder, String storage)             
+    {
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * File name on storage.
-    **/
-    public String name;
+    private String fileName;
 
     /**
-    * Folder on storage.
-    **/
-    public String folder;
+     * Getter for: File name on storage.
+     **/
+    public String getFileName() {
+        return fileName;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: File name on storage.
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: File name on storage.
+     **/
+    public ClientAccountGetRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Folder on storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Folder on storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Folder on storage.
+     **/
+    public ClientAccountGetRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public ClientAccountGetRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }
 

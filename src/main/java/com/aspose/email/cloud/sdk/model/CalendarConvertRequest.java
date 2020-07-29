@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for CalendarApi.convert request invocation.
-**/   
+ * Class that holds parameters for CalendarApi.convert request invocation.
+ **/   
 public class CalendarConvertRequest
 {
     /**
-    * Initializes a new instance of the CalendarConvertRequest class.   
-    * @param format File format. Enum, available values: Ics, Msg
-    * @param file File to convert
-    **/
+     * Initializes a new instance of the CalendarConvertRequest class.
+     **/
+    public CalendarConvertRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CalendarConvertRequest class.   
+     * @param format File format. Enum, available values: Ics, Msg
+     * @param file File to convert
+     **/
     public CalendarConvertRequest(String format, byte[] file)             
     {
         this.format = format;
-        this.File = file;
+        this.file = file;
     }
         
-    /**
-    * File format. Enum, available values: Ics, Msg
-    **/
-    public String format;
+    private String format;
 
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Getter for: File format. Enum, available values: Ics, Msg
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format. Enum, available values: Ics, Msg
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format. Enum, available values: Ics, Msg
+     **/
+    public CalendarConvertRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public CalendarConvertRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

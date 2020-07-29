@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ContactApi.fromFile request invocation.
-**/   
+ * Class that holds parameters for ContactApi.fromFile request invocation.
+ **/   
 public class ContactFromFileRequest
 {
     /**
-    * Initializes a new instance of the ContactFromFileRequest class.   
-    * @param format File format Enum, available values: VCard, WebDav, Msg
-    * @param file File to convert
-    **/
+     * Initializes a new instance of the ContactFromFileRequest class.
+     **/
+    public ContactFromFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ContactFromFileRequest class.   
+     * @param format File format Enum, available values: VCard, WebDav, Msg
+     * @param file File to convert
+     **/
     public ContactFromFileRequest(String format, byte[] file)             
     {
         this.format = format;
-        this.File = file;
+        this.file = file;
     }
         
-    /**
-    * File format Enum, available values: VCard, WebDav, Msg
-    **/
-    public String format;
+    private String format;
 
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Getter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public ContactFromFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public ContactFromFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

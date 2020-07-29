@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="deleteFile"></a>
@@ -56,7 +56,7 @@ Name | Type | Description | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="downloadFile"></a>
@@ -83,7 +83,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="moveFile"></a>
@@ -114,7 +114,7 @@ Name | Type | Description | Notes
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="uploadFile"></a>
@@ -141,5 +141,5 @@ Name | Type | Description | Notes
 
 [**FilesUploadResult**](FilesUploadResult.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

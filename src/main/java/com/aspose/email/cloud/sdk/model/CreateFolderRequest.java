@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FolderApi.createFolder request invocation.
-**/   
+ * Class that holds parameters for FolderApi.createFolder request invocation.
+ **/   
 public class CreateFolderRequest
 {
     /**
-    * Initializes a new instance of the CreateFolderRequest class.   
-    * @param path Folder path to create e.g. &#39;folder_1/folder_2/&#39;
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the CreateFolderRequest class.
+     **/
+    public CreateFolderRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CreateFolderRequest class.   
+     * @param path Folder path to create e.g. &#39;folder_1/folder_2/&#39;
+     * @param storageName Storage name
+     **/
     public CreateFolderRequest(String path, String storageName)             
     {
         this.path = path;
         this.storageName = storageName;
     }
         
-    /**
-    * Folder path to create e.g. 'folder_1/folder_2/'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: Folder path to create e.g. 'folder_1/folder_2/'
+     **/
+    public String getPath() {
+        return path;
+    }
+
+    /**
+     * Setter for: Folder path to create e.g. 'folder_1/folder_2/'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: Folder path to create e.g. 'folder_1/folder_2/'
+     **/
+    public CreateFolderRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public CreateFolderRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }
 

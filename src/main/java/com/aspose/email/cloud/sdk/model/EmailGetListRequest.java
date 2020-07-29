@@ -29,18 +29,25 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailApi.getList request invocation.
-**/   
+ * Class that holds parameters for EmailApi.getList request invocation.
+ **/   
 public class EmailGetListRequest
 {
     /**
-    * Initializes a new instance of the EmailGetListRequest class.   
-    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    * @param itemsPerPage Count of items on page.
-    * @param pageNumber Page number.
-    **/
+     * Initializes a new instance of the EmailGetListRequest class.
+     **/
+    public EmailGetListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the EmailGetListRequest class.   
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     * @param itemsPerPage Count of items on page.
+     * @param pageNumber Page number.
+     **/
     public EmailGetListRequest(String format, String folder, String storage, Integer itemsPerPage, Integer pageNumber)             
     {
         this.format = format;
@@ -50,28 +57,124 @@ public class EmailGetListRequest
         this.pageNumber = pageNumber;
     }
         
-    /**
-    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+    private String format;
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Getter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
 
     /**
-    * Count of items on page.
-    **/
-    public Integer itemsPerPage;
+     * Setter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public EmailGetListRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String folder;
 
     /**
-    * Page number.
-    **/
-    public Integer pageNumber;
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public EmailGetListRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public EmailGetListRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private Integer itemsPerPage;
+
+    /**
+     * Getter for: Count of items on page.
+     **/
+    public Integer getItemsPerPage() {
+        return itemsPerPage;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public void setItemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public EmailGetListRequest itemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+        return this;
+    }
+
+    private Integer pageNumber;
+
+    /**
+     * Getter for: Page number.
+     **/
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public void setPageNumber(Integer value) {
+        this.pageNumber = value;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public EmailGetListRequest pageNumber(Integer value) {
+        this.pageNumber = value;
+        return this;
+    }
+
 }

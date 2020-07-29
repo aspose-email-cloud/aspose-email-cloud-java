@@ -29,22 +29,49 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for StorageApi.getDiscUsage request invocation.
-**/   
+ * Class that holds parameters for StorageApi.getDiscUsage request invocation.
+ **/   
 public class GetDiscUsageRequest
 {
     /**
-    * Initializes a new instance of the GetDiscUsageRequest class.   
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the GetDiscUsageRequest class.
+     **/
+    public GetDiscUsageRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the GetDiscUsageRequest class.   
+     * @param storageName Storage name
+     **/
     public GetDiscUsageRequest(String storageName)             
     {
         this.storageName = storageName;
     }
         
+    private String storageName;
+
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public GetDiscUsageRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }
 

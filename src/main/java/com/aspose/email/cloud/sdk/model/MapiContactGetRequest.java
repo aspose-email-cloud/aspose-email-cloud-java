@@ -29,42 +29,126 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiContactApi.get request invocation.
-**/   
+ * Class that holds parameters for MapiContactApi.get request invocation.
+ **/   
 public class MapiContactGetRequest
 {
     /**
-    * Initializes a new instance of the MapiContactGetRequest class.   
-    * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
-    * @param name Contact document file name.
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    **/
-    public MapiContactGetRequest(String format, String name, String folder, String storage)             
+     * Initializes a new instance of the MapiContactGetRequest class.
+     **/
+    public MapiContactGetRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the MapiContactGetRequest class.   
+     * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
+     * @param fileName Contact document file name.
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     **/
+    public MapiContactGetRequest(String format, String fileName, String folder, String storage)             
     {
         this.format = format;
-        this.name = name;
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * Contact document format. Enum, available values: VCard, WebDav, Msg
-    **/
-    public String format;
+    private String format;
 
     /**
-    * Contact document file name.
-    **/
-    public String name;
+     * Getter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public String getFormat() {
+        return format;
+    }
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public MapiContactGetRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String fileName;
+
+    /**
+     * Getter for: Contact document file name.
+     **/
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * Setter for: Contact document file name.
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: Contact document file name.
+     **/
+    public MapiContactGetRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public MapiContactGetRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public MapiContactGetRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }

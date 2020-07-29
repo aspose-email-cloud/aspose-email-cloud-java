@@ -29,19 +29,26 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiNameApi.complete request invocation.
-**/   
+ * Class that holds parameters for AiNameApi.complete request invocation.
+ **/   
 public class AiNameCompleteRequest
 {
     /**
-    * Initializes a new instance of the AiNameCompleteRequest class.   
-    * @param name A name to complete (required)
-    * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
-    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
-    * @param encoding A character encoding name
-    * @param script A writing system code; starts with the ISO-15924 script name
-    * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
+     * Initializes a new instance of the AiNameCompleteRequest class.
+     **/
+    public AiNameCompleteRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the AiNameCompleteRequest class.   
+     * @param name A name to complete.
+     * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian).             
+     * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France.             
+     * @param encoding A character encoding name.
+     * @param script A writing system code; starts with the ISO-15924 script name.
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
     public AiNameCompleteRequest(String name, String language, String location, String encoding, String script, String style)             
     {
         this.name = name;
@@ -52,34 +59,149 @@ public class AiNameCompleteRequest
         this.style = style;
     }
         
-    /**
-    * A name to complete (required)
-    **/
-    public String name;
+    private String name;
 
     /**
-    * An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
-    **/
-    public String language;
+     * Getter for: A name to complete.
+     **/
+    public String getName() {
+        return name;
+    }
 
     /**
-    * A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
-    **/
-    public String location;
+     * Setter for: A name to complete.
+     **/
+    public void setName(String value) {
+        this.name = value;
+    }
 
     /**
-    * A character encoding name
-    **/
-    public String encoding;
+     * Setter for: A name to complete.
+     **/
+    public AiNameCompleteRequest name(String value) {
+        this.name = value;
+        return this;
+    }
+
+    private String language;
 
     /**
-    * A writing system code; starts with the ISO-15924 script name
-    **/
-    public String script;
+     * Getter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public String getLanguage() {
+        return language;
+    }
 
     /**
-    * Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
-    public String style;
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public void setLanguage(String value) {
+        this.language = value;
+    }
+
+    /**
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public AiNameCompleteRequest language(String value) {
+        this.language = value;
+        return this;
+    }
+
+    private String location;
+
+    /**
+     * Getter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public void setLocation(String value) {
+        this.location = value;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public AiNameCompleteRequest location(String value) {
+        this.location = value;
+        return this;
+    }
+
+    private String encoding;
+
+    /**
+     * Getter for: A character encoding name.
+     **/
+    public String getEncoding() {
+        return encoding;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public void setEncoding(String value) {
+        this.encoding = value;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public AiNameCompleteRequest encoding(String value) {
+        this.encoding = value;
+        return this;
+    }
+
+    private String script;
+
+    /**
+     * Getter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public String getScript() {
+        return script;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public void setScript(String value) {
+        this.script = value;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public AiNameCompleteRequest script(String value) {
+        this.script = value;
+        return this;
+    }
+
+    private String style;
+
+    /**
+     * Getter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public String getStyle() {
+        return style;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public void setStyle(String value) {
+        this.style = value;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public AiNameCompleteRequest style(String value) {
+        this.style = value;
+        return this;
+    }
+
 }
 

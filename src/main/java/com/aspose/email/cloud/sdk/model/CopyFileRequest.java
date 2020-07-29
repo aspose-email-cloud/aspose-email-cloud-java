@@ -29,18 +29,25 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FileApi.copyFile request invocation.
-**/   
+ * Class that holds parameters for FileApi.copyFile request invocation.
+ **/   
 public class CopyFileRequest
 {
     /**
-    * Initializes a new instance of the CopyFileRequest class.   
-    * @param srcPath Source file path e.g. &#39;/folder/file.ext&#39;
-    * @param destPath Destination file path
-    * @param srcStorageName Source storage name
-    * @param destStorageName Destination storage name
-    * @param versionId File version ID to copy
-    **/
+     * Initializes a new instance of the CopyFileRequest class.
+     **/
+    public CopyFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CopyFileRequest class.   
+     * @param srcPath Source file path e.g. &#39;/folder/file.ext&#39;
+     * @param destPath Destination file path
+     * @param srcStorageName Source storage name
+     * @param destStorageName Destination storage name
+     * @param versionId File version ID to copy
+     **/
     public CopyFileRequest(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
         this.srcPath = srcPath;
@@ -50,29 +57,125 @@ public class CopyFileRequest
         this.versionId = versionId;
     }
         
-    /**
-    * Source file path e.g. '/folder/file.ext'
-    **/
-    public String srcPath;
+    private String srcPath;
 
     /**
-    * Destination file path
-    **/
-    public String destPath;
+     * Getter for: Source file path e.g. '/folder/file.ext'
+     **/
+    public String getSrcPath() {
+        return srcPath;
+    }
 
     /**
-    * Source storage name
-    **/
-    public String srcStorageName;
+     * Setter for: Source file path e.g. '/folder/file.ext'
+     **/
+    public void setSrcPath(String value) {
+        this.srcPath = value;
+    }
 
     /**
-    * Destination storage name
-    **/
-    public String destStorageName;
+     * Setter for: Source file path e.g. '/folder/file.ext'
+     **/
+    public CopyFileRequest srcPath(String value) {
+        this.srcPath = value;
+        return this;
+    }
+
+    private String destPath;
 
     /**
-    * File version ID to copy
-    **/
-    public String versionId;
+     * Getter for: Destination file path
+     **/
+    public String getDestPath() {
+        return destPath;
+    }
+
+    /**
+     * Setter for: Destination file path
+     **/
+    public void setDestPath(String value) {
+        this.destPath = value;
+    }
+
+    /**
+     * Setter for: Destination file path
+     **/
+    public CopyFileRequest destPath(String value) {
+        this.destPath = value;
+        return this;
+    }
+
+    private String srcStorageName;
+
+    /**
+     * Getter for: Source storage name
+     **/
+    public String getSrcStorageName() {
+        return srcStorageName;
+    }
+
+    /**
+     * Setter for: Source storage name
+     **/
+    public void setSrcStorageName(String value) {
+        this.srcStorageName = value;
+    }
+
+    /**
+     * Setter for: Source storage name
+     **/
+    public CopyFileRequest srcStorageName(String value) {
+        this.srcStorageName = value;
+        return this;
+    }
+
+    private String destStorageName;
+
+    /**
+     * Getter for: Destination storage name
+     **/
+    public String getDestStorageName() {
+        return destStorageName;
+    }
+
+    /**
+     * Setter for: Destination storage name
+     **/
+    public void setDestStorageName(String value) {
+        this.destStorageName = value;
+    }
+
+    /**
+     * Setter for: Destination storage name
+     **/
+    public CopyFileRequest destStorageName(String value) {
+        this.destStorageName = value;
+        return this;
+    }
+
+    private String versionId;
+
+    /**
+     * Getter for: File version ID to copy
+     **/
+    public String getVersionId() {
+        return versionId;
+    }
+
+    /**
+     * Setter for: File version ID to copy
+     **/
+    public void setVersionId(String value) {
+        this.versionId = value;
+    }
+
+    /**
+     * Setter for: File version ID to copy
+     **/
+    public CopyFileRequest versionId(String value) {
+        this.versionId = value;
+        return this;
+    }
+
 }
 

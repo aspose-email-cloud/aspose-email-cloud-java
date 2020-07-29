@@ -29,21 +29,48 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for StorageApi.exists request invocation.
-**/   
+ * Class that holds parameters for StorageApi.exists request invocation.
+ **/   
 public class StorageExistsRequest
 {
     /**
-    * Initializes a new instance of the StorageExistsRequest class.   
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the StorageExistsRequest class.
+     **/
+    public StorageExistsRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the StorageExistsRequest class.   
+     * @param storageName Storage name
+     **/
     public StorageExistsRequest(String storageName)             
     {
         this.storageName = storageName;
     }
         
+    private String storageName;
+
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public StorageExistsRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }

@@ -44,7 +44,11 @@ public class OtherTests extends TestBase {
             new EmailClientAccountSaveRequest(new StorageFileLocation(storage, folder, fileName),
                 account));
         EmailClientAccount response =
-            api.client().account().get(new ClientAccountGetRequest(fileName, folder, storage));
+            api.client().account().get(
+                new ClientAccountGetRequest()
+                    .fileName(fileName)
+                    .folder(folder)
+                    .storage(storage));
         assert response.getCredentials().getClass().getSimpleName()
             .equals("EmailClientAccountPasswordCredentials");
         assert account.getHost().equals(response.getHost());

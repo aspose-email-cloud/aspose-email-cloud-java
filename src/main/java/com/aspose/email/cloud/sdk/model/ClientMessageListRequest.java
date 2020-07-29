@@ -29,21 +29,28 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientMessageApi.list request invocation.
-**/   
+ * Class that holds parameters for ClientMessageApi.list request invocation.
+ **/   
 public class ClientMessageListRequest
 {
     /**
-    * Initializes a new instance of the ClientMessageListRequest class.   
-    * @param folder A folder in email account
-    * @param account Email account
-    * @param queryString A MailQuery search string
-    * @param storage Storage name where account file located
-    * @param accountStorageFolder Folder in storage where account file located
-    * @param recursive Specifies that should message be searched in subfolders recursively
-    * @param type MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-    * @param format Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
+     * Initializes a new instance of the ClientMessageListRequest class.
+     **/
+    public ClientMessageListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ClientMessageListRequest class.   
+     * @param folder A folder in email account
+     * @param account Email account
+     * @param queryString A MailQuery search string
+     * @param storage Storage name where account file located
+     * @param accountStorageFolder Folder in storage where account file located
+     * @param recursive Specifies that should message be searched in subfolders recursively
+     * @param type MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * @param format Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
     public ClientMessageListRequest(String folder, String account, String queryString, String storage, String accountStorageFolder, Boolean recursive, String type, String format)             
     {
         this.folder = folder;
@@ -56,44 +63,197 @@ public class ClientMessageListRequest
         this.format = format;
     }
         
-    /**
-    * A folder in email account
-    **/
-    public String folder;
+    private String folder;
 
     /**
-    * Email account
-    **/
-    public String account;
+     * Getter for: A folder in email account
+     **/
+    public String getFolder() {
+        return folder;
+    }
 
     /**
-    * A MailQuery search string
-    **/
-    public String queryString;
+     * Setter for: A folder in email account
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
 
     /**
-    * Storage name where account file located
-    **/
-    public String storage;
+     * Setter for: A folder in email account
+     **/
+    public ClientMessageListRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String account;
 
     /**
-    * Folder in storage where account file located
-    **/
-    public String accountStorageFolder;
+     * Getter for: Email account
+     **/
+    public String getAccount() {
+        return account;
+    }
 
     /**
-    * Specifies that should message be searched in subfolders recursively
-    **/
-    public Boolean recursive;
+     * Setter for: Email account
+     **/
+    public void setAccount(String value) {
+        this.account = value;
+    }
 
     /**
-    * MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-    **/
-    public String type;
+     * Setter for: Email account
+     **/
+    public ClientMessageListRequest account(String value) {
+        this.account = value;
+        return this;
+    }
+
+    private String queryString;
 
     /**
-    * Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+     * Getter for: A MailQuery search string
+     **/
+    public String getQueryString() {
+        return queryString;
+    }
+
+    /**
+     * Setter for: A MailQuery search string
+     **/
+    public void setQueryString(String value) {
+        this.queryString = value;
+    }
+
+    /**
+     * Setter for: A MailQuery search string
+     **/
+    public ClientMessageListRequest queryString(String value) {
+        this.queryString = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name where account file located
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public ClientMessageListRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String accountStorageFolder;
+
+    /**
+     * Getter for: Folder in storage where account file located
+     **/
+    public String getAccountStorageFolder() {
+        return accountStorageFolder;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public void setAccountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public ClientMessageListRequest accountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+        return this;
+    }
+
+    private Boolean recursive;
+
+    /**
+     * Getter for: Specifies that should message be searched in subfolders recursively
+     **/
+    public Boolean getRecursive() {
+        return recursive;
+    }
+
+    /**
+     * Setter for: Specifies that should message be searched in subfolders recursively
+     **/
+    public void setRecursive(Boolean value) {
+        this.recursive = value;
+    }
+
+    /**
+     * Setter for: Specifies that should message be searched in subfolders recursively
+     **/
+    public ClientMessageListRequest recursive(Boolean value) {
+        this.recursive = value;
+        return this;
+    }
+
+    private String type;
+
+    /**
+     * Getter for: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     **/
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * Setter for: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     **/
+    public void setType(String value) {
+        this.type = value;
+    }
+
+    /**
+     * Setter for: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     **/
+    public ClientMessageListRequest type(String value) {
+        this.type = value;
+        return this;
+    }
+
+    private String format;
+
+    /**
+     * Getter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public ClientMessageListRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
 }
 

@@ -108,11 +108,11 @@ public class ClientMessageApi
     {
       try {
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling appendFile");
         }
          // verify the required parameter 'request.file' is set
-        if (request.File== null) {
+        if (request.getFile() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling appendFile");
         }
         // create path and map variables
@@ -120,16 +120,16 @@ public class ClientMessageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "markAsSent", request.markAsSent);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "markAsSent", request.getMarkAsSent());
         
-        if (request.File != null) 
+        if (request.getFile() != null) 
         {
-            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+            formParams.put("file", this.apiInvoker.toFileInfo(request.getFile(), "File"));
         }
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
@@ -198,11 +198,11 @@ public class ClientMessageApi
     {
       try {
          // verify the required parameter 'request.messageId' is set
-        if (request.messageId== null) {
+        if (request.getMessageId() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling fetch");
         }
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling fetch");
         }
         // create path and map variables
@@ -210,13 +210,13 @@ public class ClientMessageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.messageId);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "type", request.type);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.getMessageId());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "type", request.getType());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -252,11 +252,11 @@ public class ClientMessageApi
     {
       try {
          // verify the required parameter 'request.messageId' is set
-        if (request.messageId== null) {
+        if (request.getMessageId() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.messageId' when calling fetchFile");
         }
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling fetchFile");
         }
         // create path and map variables
@@ -264,12 +264,12 @@ public class ClientMessageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.messageId);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messageId", request.getMessageId());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -300,11 +300,11 @@ public class ClientMessageApi
     {
       try {
          // verify the required parameter 'request.folder' is set
-        if (request.folder== null) {
+        if (request.getFolder() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.folder' when calling list");
         }
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling list");
         }
         // create path and map variables
@@ -312,14 +312,14 @@ public class ClientMessageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "queryString", request.queryString);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "recursive", request.recursive);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "type", request.type);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "queryString", request.getQueryString());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "recursive", request.getRecursive());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "type", request.getType());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -422,11 +422,11 @@ public class ClientMessageApi
     {
       try {
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling sendFile");
         }
          // verify the required parameter 'request.file' is set
-        if (request.File== null) {
+        if (request.getFile() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling sendFile");
         }
         // create path and map variables
@@ -434,14 +434,14 @@ public class ClientMessageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
-        if (request.File != null) 
+        if (request.getFile() != null) 
         {
-            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+            formParams.put("file", this.apiInvoker.toFileInfo(request.getFile(), "File"));
         }
         this.apiInvoker.invokeApi(
             resourcePath, 

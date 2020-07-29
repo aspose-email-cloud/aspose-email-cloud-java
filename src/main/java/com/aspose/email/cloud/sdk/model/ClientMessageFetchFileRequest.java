@@ -29,19 +29,26 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientMessageApi.fetchFile request invocation.
-**/   
+ * Class that holds parameters for ClientMessageApi.fetchFile request invocation.
+ **/   
 public class ClientMessageFetchFileRequest
 {
     /**
-    * Initializes a new instance of the ClientMessageFetchFileRequest class.   
-    * @param messageId Message identifier
-    * @param account Email account
-    * @param folder Account folder to fetch from (should be specified for some protocols such as IMAP)             
-    * @param storage Storage name where account file located.
-    * @param accountStorageFolder Folder in storage where account file located.
-    * @param format Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
+     * Initializes a new instance of the ClientMessageFetchFileRequest class.
+     **/
+    public ClientMessageFetchFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ClientMessageFetchFileRequest class.   
+     * @param messageId Message identifier
+     * @param account Email account
+     * @param folder Account folder to fetch from (should be specified for some protocols such as IMAP)             
+     * @param storage Storage name where account file located.
+     * @param accountStorageFolder Folder in storage where account file located.
+     * @param format Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
     public ClientMessageFetchFileRequest(String messageId, String account, String folder, String storage, String accountStorageFolder, String format)             
     {
         this.messageId = messageId;
@@ -52,34 +59,149 @@ public class ClientMessageFetchFileRequest
         this.format = format;
     }
         
-    /**
-    * Message identifier
-    **/
-    public String messageId;
+    private String messageId;
 
     /**
-    * Email account
-    **/
-    public String account;
+     * Getter for: Message identifier
+     **/
+    public String getMessageId() {
+        return messageId;
+    }
 
     /**
-    * Account folder to fetch from (should be specified for some protocols such as IMAP)             
-    **/
-    public String folder;
+     * Setter for: Message identifier
+     **/
+    public void setMessageId(String value) {
+        this.messageId = value;
+    }
 
     /**
-    * Storage name where account file located.
-    **/
-    public String storage;
+     * Setter for: Message identifier
+     **/
+    public ClientMessageFetchFileRequest messageId(String value) {
+        this.messageId = value;
+        return this;
+    }
+
+    private String account;
 
     /**
-    * Folder in storage where account file located.
-    **/
-    public String accountStorageFolder;
+     * Getter for: Email account
+     **/
+    public String getAccount() {
+        return account;
+    }
 
     /**
-    * Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+     * Setter for: Email account
+     **/
+    public void setAccount(String value) {
+        this.account = value;
+    }
+
+    /**
+     * Setter for: Email account
+     **/
+    public ClientMessageFetchFileRequest account(String value) {
+        this.account = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+     **/
+    public ClientMessageFetchFileRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name where account file located.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name where account file located.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name where account file located.
+     **/
+    public ClientMessageFetchFileRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String accountStorageFolder;
+
+    /**
+     * Getter for: Folder in storage where account file located.
+     **/
+    public String getAccountStorageFolder() {
+        return accountStorageFolder;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located.
+     **/
+    public void setAccountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located.
+     **/
+    public ClientMessageFetchFileRequest accountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+        return this;
+    }
+
+    private String format;
+
+    /**
+     * Getter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public ClientMessageFetchFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
 }
 

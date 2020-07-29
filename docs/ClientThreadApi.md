@@ -15,7 +15,7 @@ See parameter model documentation at [ClientThreadDeleteRequest](ClientThreadDel
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="getList"></a>
 # **getList**
@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 
 [**EmailThreadList**](EmailThreadList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getMessages"></a>
@@ -78,7 +78,7 @@ Name | Type | Description | Notes
 
 [**EmailList**](EmailList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="move"></a>
@@ -95,7 +95,7 @@ See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveR
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="setIsRead"></a>
 # setIsRead
@@ -111,4 +111,4 @@ See parameter model documentation at [ClientThreadSetIsReadRequest](ClientThread
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

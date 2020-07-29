@@ -66,7 +66,7 @@ public class AiBcrApi
     {
       try {
          // verify the required parameter 'request.file' is set
-        if (request.File== null) {
+        if (request.getFile() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling parse");
         }
         // create path and map variables
@@ -74,17 +74,17 @@ public class AiBcrApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "countries", request.countries);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "languages", request.languages);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "isSingle", request.isSingle);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "countries", request.getCountries());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "languages", request.getLanguages());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "isSingle", request.getIsSingle());
         
-        if (request.File != null) 
+        if (request.getFile() != null) 
         {
-            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+            formParams.put("file", this.apiInvoker.toFileInfo(request.getFile(), "File"));
         }
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             null, 
             null, 
             formParams);

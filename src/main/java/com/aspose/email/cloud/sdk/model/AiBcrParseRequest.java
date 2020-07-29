@@ -29,42 +29,126 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiBcrApi.parse request invocation.
-**/   
+ * Class that holds parameters for AiBcrApi.parse request invocation.
+ **/   
 public class AiBcrParseRequest
 {
     /**
-    * Initializes a new instance of the AiBcrParseRequest class.   
-    * @param file File to parse
-    * @param countries Comma-separated codes of countries.
-    * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
-    * @param isSingle Determines that image contains single VCard or more.
-    **/
+     * Initializes a new instance of the AiBcrParseRequest class.
+     **/
+    public AiBcrParseRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the AiBcrParseRequest class.   
+     * @param file File to parse
+     * @param countries Comma-separated codes of countries.
+     * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
+     * @param isSingle Determines that image contains single VCard or more.
+     **/
     public AiBcrParseRequest(byte[] file, String countries, String languages, Boolean isSingle)             
     {
-        this.File = file;
+        this.file = file;
         this.countries = countries;
         this.languages = languages;
         this.isSingle = isSingle;
     }
         
-    /**
-    * File to parse
-    **/
-    public byte[] File;
+    private byte[] file;
 
     /**
-    * Comma-separated codes of countries.
-    **/
-    public String countries;
+     * Getter for: File to parse
+     **/
+    public byte[] getFile() {
+        return file;
+    }
 
     /**
-    * Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
-    **/
-    public String languages;
+     * Setter for: File to parse
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
 
     /**
-    * Determines that image contains single VCard or more.
-    **/
-    public Boolean isSingle;
+     * Setter for: File to parse
+     **/
+    public AiBcrParseRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
+    private String countries;
+
+    /**
+     * Getter for: Comma-separated codes of countries.
+     **/
+    public String getCountries() {
+        return countries;
+    }
+
+    /**
+     * Setter for: Comma-separated codes of countries.
+     **/
+    public void setCountries(String value) {
+        this.countries = value;
+    }
+
+    /**
+     * Setter for: Comma-separated codes of countries.
+     **/
+    public AiBcrParseRequest countries(String value) {
+        this.countries = value;
+        return this;
+    }
+
+    private String languages;
+
+    /**
+     * Getter for: Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+     **/
+    public String getLanguages() {
+        return languages;
+    }
+
+    /**
+     * Setter for: Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+     **/
+    public void setLanguages(String value) {
+        this.languages = value;
+    }
+
+    /**
+     * Setter for: Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+     **/
+    public AiBcrParseRequest languages(String value) {
+        this.languages = value;
+        return this;
+    }
+
+    private Boolean isSingle;
+
+    /**
+     * Getter for: Determines that image contains single VCard or more.
+     **/
+    public Boolean getIsSingle() {
+        return isSingle;
+    }
+
+    /**
+     * Setter for: Determines that image contains single VCard or more.
+     **/
+    public void setIsSingle(Boolean value) {
+        this.isSingle = value;
+    }
+
+    /**
+     * Setter for: Determines that image contains single VCard or more.
+     **/
+    public AiBcrParseRequest isSingle(Boolean value) {
+        this.isSingle = value;
+        return this;
+    }
+
 }

@@ -56,7 +56,7 @@ public class AiNameApi
 
             
     /**
-     * The call proposes k most probable names for given starting characters             
+     * The call proposes k most probable names for given starting characters.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameWeightedVariants
@@ -66,7 +66,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling complete");
         }
         // create path and map variables
@@ -74,12 +74,12 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -105,7 +105,7 @@ public class AiNameApi
 
             
     /**
-     * Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
+     * Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameWeightedVariants
@@ -115,7 +115,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling expand");
         }
         // create path and map variables
@@ -123,12 +123,12 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -154,9 +154,9 @@ public class AiNameApi
 
             
     /**
-     * Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
+     * Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions.             
      * 
-     * @param request Parsed name with options
+     * @param request Parsed name with options.
      * @return AiNameWeightedVariants
      * @throws ApiException API error.
      */
@@ -175,7 +175,7 @@ public class AiNameApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);
@@ -196,7 +196,7 @@ public class AiNameApi
 
             
     /**
-     * Formats a person&#39;s name in correct case and name order using options for formatting instructions             
+     * Formats a person&#39;s name in correct case and name order using options for formatting instructions.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameFormatted
@@ -206,7 +206,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling format");
         }
         // create path and map variables
@@ -214,13 +214,13 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -246,9 +246,9 @@ public class AiNameApi
 
             
     /**
-     * Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
+     * Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions.             
      * 
-     * @param request Parsed name with options
+     * @param request Parsed name with options.
      * @return AiNameFormatted
      * @throws ApiException API error.
      */
@@ -267,7 +267,7 @@ public class AiNameApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);
@@ -288,7 +288,7 @@ public class AiNameApi
 
             
     /**
-     * Detect person&#39;s gender from name string             
+     * Detect person&#39;s gender from name string.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameGenderHypothesisList
@@ -298,7 +298,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling genderize");
         }
         // create path and map variables
@@ -306,12 +306,12 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -337,9 +337,9 @@ public class AiNameApi
 
             
     /**
-     * Detect person&#39;s gender from parsed name             
+     * Detect person&#39;s gender from parsed name.             
      * 
-     * @param request Gender detection request data
+     * @param request Gender detection request data.
      * @return AiNameGenderHypothesisList
      * @throws ApiException API error.
      */
@@ -358,7 +358,7 @@ public class AiNameApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);
@@ -379,7 +379,7 @@ public class AiNameApi
 
             
     /**
-     * Compare people&#39;s names. Uses options for comparing instructions             
+     * Compare people&#39;s names. Uses options for comparing instructions.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameMatchResult
@@ -389,11 +389,11 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling match");
         }
          // verify the required parameter 'request.otherName' is set
-        if (request.otherName== null) {
+        if (request.getOtherName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.otherName' when calling match");
         }
         // create path and map variables
@@ -401,13 +401,13 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "otherName", request.otherName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "otherName", request.getOtherName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -433,9 +433,9 @@ public class AiNameApi
 
             
     /**
-     * Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
+     * Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
      * 
-     * @param request Parsed names to match
+     * @param request Parsed names to match.
      * @return AiNameMatchResult
      * @throws ApiException API error.
      */
@@ -454,7 +454,7 @@ public class AiNameApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);
@@ -475,7 +475,7 @@ public class AiNameApi
 
             
     /**
-     * Parse name to components             
+     * Parse name to components.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameComponentList
@@ -485,7 +485,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.name' is set
-        if (request.name== null) {
+        if (request.getName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.name' when calling parse");
         }
         // create path and map variables
@@ -493,12 +493,12 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.getName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -524,7 +524,7 @@ public class AiNameApi
 
             
     /**
-     * Parse person&#39;s name out of an email address             
+     * Parse person&#39;s name out of an email address.             
      * 
      * @param request Holds parameters for this request invocation.
      * @return AiNameExtractedList
@@ -534,7 +534,7 @@ public class AiNameApi
     {
       try {
          // verify the required parameter 'request.emailAddress' is set
-        if (request.emailAddress== null) {
+        if (request.getEmailAddress() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.emailAddress' when calling parseEmailAddress");
         }
         // create path and map variables
@@ -542,12 +542,12 @@ public class AiNameApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "emailAddress", request.emailAddress);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.language);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.location);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.encoding);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.script);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.style);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "emailAddress", request.getEmailAddress());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "language", request.getLanguage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "location", request.getLocation());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "encoding", request.getEncoding());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "script", request.getScript());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "style", request.getStyle());
         
         
         byte[] response = this.apiInvoker.invokeApi(

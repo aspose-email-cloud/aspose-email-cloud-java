@@ -29,22 +29,49 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for CalendarApi.fromFile request invocation.
-**/   
+ * Class that holds parameters for CalendarApi.fromFile request invocation.
+ **/   
 public class CalendarFromFileRequest
 {
     /**
-    * Initializes a new instance of the CalendarFromFileRequest class.   
-    * @param file File to convert
-    **/
+     * Initializes a new instance of the CalendarFromFileRequest class.
+     **/
+    public CalendarFromFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CalendarFromFileRequest class.   
+     * @param file File to convert
+     **/
     public CalendarFromFileRequest(byte[] file)             
     {
-        this.File = file;
+        this.file = file;
     }
         
+    private byte[] file;
+
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public CalendarFromFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

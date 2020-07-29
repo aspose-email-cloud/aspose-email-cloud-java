@@ -15,7 +15,7 @@ See parameter model documentation at [MapiCalendarDto](MapiCalendarDto.md)
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asFile"></a>
 # asFile
@@ -31,7 +31,7 @@ See parameter model documentation at [MapiCalendarAsFileRequest](MapiCalendarAsF
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="fromFile"></a>
 # **fromFile**
@@ -53,7 +53,7 @@ Name | Type | Description | Notes
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -65,14 +65,14 @@ Get MAPI calendar document.
 ### **MapiCalendarGetRequest** Parameters
 ```java
 public MapiCalendarGetRequest(
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **name** | **String**| Calendar file name in storage. |
+ **fileName** | **String**| Calendar file name in storage. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -80,7 +80,7 @@ Name | Type | Description | Notes
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -97,4 +97,4 @@ See parameter model documentation at [MapiCalendarSaveRequest](MapiCalendarSaveR
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

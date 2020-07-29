@@ -70,7 +70,7 @@ public class StorageApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -106,16 +106,16 @@ public class StorageApi
     {
       try {
          // verify the required parameter 'request.path' is set
-        if (request.path== null) {
+        if (request.getPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.path' when calling getFileVersions");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/version/{path}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.path);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.getPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -151,17 +151,17 @@ public class StorageApi
     {
       try {
          // verify the required parameter 'request.path' is set
-        if (request.path== null) {
+        if (request.getPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.path' when calling objectExists");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/exist/{path}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.path);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.getPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "versionId", request.versionId);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "versionId", request.getVersionId());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -197,14 +197,14 @@ public class StorageApi
     {
       try {
          // verify the required parameter 'request.storageName' is set
-        if (request.storageName== null) {
+        if (request.getStorageName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.storageName' when calling exists");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/{storageName}/exist";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "storageName", request.storageName);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "storageName", request.getStorageName());
         
         
         

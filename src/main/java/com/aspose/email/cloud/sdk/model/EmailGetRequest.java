@@ -29,43 +29,127 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailApi.get request invocation.
-**/   
+ * Class that holds parameters for EmailApi.get request invocation.
+ **/   
 public class EmailGetRequest
 {
     /**
-    * Initializes a new instance of the EmailGetRequest class.   
-    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param name Email document file name.
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    **/
-    public EmailGetRequest(String format, String name, String folder, String storage)             
+     * Initializes a new instance of the EmailGetRequest class.
+     **/
+    public EmailGetRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the EmailGetRequest class.   
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param fileName Email document file name.
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     **/
+    public EmailGetRequest(String format, String fileName, String folder, String storage)             
     {
         this.format = format;
-        this.name = name;
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+    private String format;
 
     /**
-    * Email document file name.
-    **/
-    public String name;
+     * Getter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Setter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public EmailGetRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String fileName;
+
+    /**
+     * Getter for: Email document file name.
+     **/
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * Setter for: Email document file name.
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: Email document file name.
+     **/
+    public EmailGetRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public EmailGetRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public EmailGetRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }
 

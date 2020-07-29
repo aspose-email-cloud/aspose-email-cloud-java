@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 
 [**ContactList**](ContactList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="parseStorage"></a>
@@ -44,4 +44,4 @@ See parameter model documentation at [AiBcrParseStorageRequest](AiBcrParseStorag
 
 [**StorageFileLocationList**](StorageFileLocationList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="discoverOauth"></a>
@@ -40,7 +40,7 @@ See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailCon
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="discoverPassword"></a>
 # discoverPassword
@@ -56,4 +56,4 @@ See parameter model documentation at [DiscoverEmailConfigPassword](DiscoverEmail
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

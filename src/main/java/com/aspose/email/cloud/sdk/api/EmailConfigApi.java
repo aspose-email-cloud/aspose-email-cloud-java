@@ -66,7 +66,7 @@ public class EmailConfigApi
     {
       try {
          // verify the required parameter 'request.address' is set
-        if (request.address== null) {
+        if (request.getAddress() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.address' when calling discover");
         }
         // create path and map variables
@@ -74,8 +74,8 @@ public class EmailConfigApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "address", request.address);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fastProcessing", request.fastProcessing);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "address", request.getAddress());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fastProcessing", request.getFastProcessing());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -122,7 +122,7 @@ public class EmailConfigApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);
@@ -164,7 +164,7 @@ public class EmailConfigApi
         postBody = SerializationHelper.serialize(request);
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
-            "POST", 
+            "PUT", 
             postBody, 
             null, 
             null);

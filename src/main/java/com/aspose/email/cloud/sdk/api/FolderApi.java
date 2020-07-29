@@ -65,22 +65,22 @@ public class FolderApi
     {
       try {
          // verify the required parameter 'request.srcPath' is set
-        if (request.srcPath== null) {
+        if (request.getSrcPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.srcPath' when calling copyFolder");
         }
          // verify the required parameter 'request.destPath' is set
-        if (request.destPath== null) {
+        if (request.getDestPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.destPath' when calling copyFolder");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/folder/copy/{srcPath}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "srcPath", request.srcPath);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "srcPath", request.getSrcPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destPath", request.destPath);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "srcStorageName", request.srcStorageName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destStorageName", request.destStorageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destPath", request.getDestPath());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "srcStorageName", request.getSrcStorageName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destStorageName", request.getDestStorageName());
         
         
         this.apiInvoker.invokeApi(
@@ -108,16 +108,16 @@ public class FolderApi
     {
       try {
          // verify the required parameter 'request.path' is set
-        if (request.path== null) {
+        if (request.getPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.path' when calling createFolder");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/folder/{path}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.path);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.getPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
         
         
         this.apiInvoker.invokeApi(
@@ -145,17 +145,17 @@ public class FolderApi
     {
       try {
          // verify the required parameter 'request.path' is set
-        if (request.path== null) {
+        if (request.getPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.path' when calling deleteFolder");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/folder/{path}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.path);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.getPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "recursive", request.recursive);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "recursive", request.getRecursive());
         
         
         this.apiInvoker.invokeApi(
@@ -184,16 +184,16 @@ public class FolderApi
     {
       try {
          // verify the required parameter 'request.path' is set
-        if (request.path== null) {
+        if (request.getPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.path' when calling getFilesList");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/folder/{path}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.path);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "path", request.getPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.storageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storageName", request.getStorageName());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -228,22 +228,22 @@ public class FolderApi
     {
       try {
          // verify the required parameter 'request.srcPath' is set
-        if (request.srcPath== null) {
+        if (request.getSrcPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.srcPath' when calling moveFolder");
         }
          // verify the required parameter 'request.destPath' is set
-        if (request.destPath== null) {
+        if (request.getDestPath() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.destPath' when calling moveFolder");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email/storage/folder/move/{srcPath}";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
-        resourcePath = UrlHelper.addPathParameter(resourcePath, "srcPath", request.srcPath);
+        resourcePath = UrlHelper.addPathParameter(resourcePath, "srcPath", request.getSrcPath());
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destPath", request.destPath);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "srcStorageName", request.srcStorageName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destStorageName", request.destStorageName);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destPath", request.getDestPath());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "srcStorageName", request.getSrcStorageName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "destStorageName", request.getDestStorageName());
         
         
         this.apiInvoker.invokeApi(

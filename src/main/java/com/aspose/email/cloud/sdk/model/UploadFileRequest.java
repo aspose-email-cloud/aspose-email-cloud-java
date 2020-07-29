@@ -29,35 +29,100 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FileApi.uploadFile request invocation.
-**/   
+ * Class that holds parameters for FileApi.uploadFile request invocation.
+ **/   
 public class UploadFileRequest
 {
     /**
-    * Initializes a new instance of the UploadFileRequest class.   
-    * @param path Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
-    * @param file File to upload
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the UploadFileRequest class.
+     **/
+    public UploadFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the UploadFileRequest class.   
+     * @param path Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     * @param file File to upload
+     * @param storageName Storage name
+     **/
     public UploadFileRequest(String path, byte[] file, String storageName)             
     {
         this.path = path;
-        this.File = file;
+        this.file = file;
         this.storageName = storageName;
     }
         
-    /**
-    * Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
-    **/
-    public String path;
+    private String path;
 
     /**
-    * File to upload
-    **/
-    public byte[] File;
+     * Getter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     **/
+    public String getPath() {
+        return path;
+    }
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Setter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     **/
+    public UploadFileRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to upload
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to upload
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to upload
+     **/
+    public UploadFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public UploadFileRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }

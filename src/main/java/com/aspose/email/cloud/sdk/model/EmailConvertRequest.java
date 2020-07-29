@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailApi.convert request invocation.
-**/   
+ * Class that holds parameters for EmailApi.convert request invocation.
+ **/   
 public class EmailConvertRequest
 {
     /**
-    * Initializes a new instance of the EmailConvertRequest class.   
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param file File to convert
-    **/
+     * Initializes a new instance of the EmailConvertRequest class.
+     **/
+    public EmailConvertRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the EmailConvertRequest class.   
+     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param file File to convert
+     **/
     public EmailConvertRequest(String format, byte[] file)             
     {
         this.format = format;
-        this.File = file;
+        this.file = file;
     }
         
-    /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+    private String format;
 
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public EmailConvertRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public EmailConvertRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

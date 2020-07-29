@@ -29,28 +29,74 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailConfigApi.discover request invocation.
-**/   
+ * Class that holds parameters for EmailConfigApi.discover request invocation.
+ **/   
 public class EmailConfigDiscoverRequest
 {
     /**
-    * Initializes a new instance of the EmailConfigDiscoverRequest class.   
-    * @param address Email address.
-    * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
-    **/
+     * Initializes a new instance of the EmailConfigDiscoverRequest class.
+     **/
+    public EmailConfigDiscoverRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the EmailConfigDiscoverRequest class.   
+     * @param address Email address.
+     * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     **/
     public EmailConfigDiscoverRequest(String address, Boolean fastProcessing)             
     {
         this.address = address;
         this.fastProcessing = fastProcessing;
     }
         
-    /**
-    * Email address.
-    **/
-    public String address;
+    private String address;
 
     /**
-    * Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
-    **/
-    public Boolean fastProcessing;
+     * Getter for: Email address.
+     **/
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Setter for: Email address.
+     **/
+    public void setAddress(String value) {
+        this.address = value;
+    }
+
+    /**
+     * Setter for: Email address.
+     **/
+    public EmailConfigDiscoverRequest address(String value) {
+        this.address = value;
+        return this;
+    }
+
+    private Boolean fastProcessing;
+
+    /**
+     * Getter for: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     **/
+    public Boolean getFastProcessing() {
+        return fastProcessing;
+    }
+
+    /**
+     * Setter for: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     **/
+    public void setFastProcessing(Boolean value) {
+        this.fastProcessing = value;
+    }
+
+    /**
+     * Setter for: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     **/
+    public EmailConfigDiscoverRequest fastProcessing(Boolean value) {
+        this.fastProcessing = value;
+        return this;
+    }
+
 }

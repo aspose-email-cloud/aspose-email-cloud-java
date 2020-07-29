@@ -10,14 +10,14 @@ Get email client account from storage.
 ### **ClientAccountGetRequest** Parameters
 ```java
 public ClientAccountGetRequest(
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **name** | **String**| File name on storage. |
+ **fileName** | **String**| File name on storage. |
  **folder** | **String**| Folder on storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 [**EmailClientAccount**](EmailClientAccount.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getMulti"></a>
@@ -37,14 +37,14 @@ Get email client multi account file (*.multi.account). Will respond error if fil
 ### **ClientAccountGetMultiRequest** Parameters
 ```java
 public ClientAccountGetMultiRequest(
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **name** | **String**| File name on storage |
+ **fileName** | **String**| File name on storage |
  **folder** | **String**| Folder on storage | [optional]
  **storage** | **String**| Storage name | [optional]
 
@@ -52,7 +52,7 @@ Name | Type | Description | Notes
 
 [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -69,7 +69,7 @@ See parameter model documentation at [EmailClientAccountSaveRequest](EmailClient
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="saveMulti"></a>
 # saveMulti
@@ -85,4 +85,4 @@ See parameter model documentation at [EmailClientMultiAccountSaveRequest](EmailC
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

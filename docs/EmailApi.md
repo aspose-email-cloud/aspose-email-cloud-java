@@ -15,7 +15,7 @@ See parameter model documentation at [EmailAsFileRequest](EmailAsFileRequest.md)
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asMapi"></a>
 # asMapi
@@ -31,7 +31,7 @@ See parameter model documentation at [EmailDto](EmailDto.md)
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="convert"></a>
 # **convert**
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="fromFile"></a>
@@ -67,18 +67,20 @@ Converts email document to a model representation
 ### **EmailFromFileRequest** Parameters
 ```java
 public EmailFromFileRequest(
+    String format, 
     byte[] file)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
+ **format** | **String**|  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -91,7 +93,7 @@ Get email document from storage.
 ```java
 public EmailGetRequest(
     String format, 
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
@@ -99,7 +101,7 @@ public EmailGetRequest(
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
  **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
- **name** | **String**| Email document file name. |
+ **fileName** | **String**| Email document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -107,7 +109,7 @@ Name | Type | Description | Notes
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getAsFile"></a>
@@ -136,7 +138,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getList"></a>
@@ -167,7 +169,7 @@ Name | Type | Description | Notes
 
 [**EmailStorageList**](EmailStorageList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -184,4 +186,4 @@ See parameter model documentation at [EmailSaveRequest](EmailSaveRequest.md)
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

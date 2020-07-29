@@ -29,19 +29,26 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiNameApi.parseEmailAddress request invocation.
-**/   
+ * Class that holds parameters for AiNameApi.parseEmailAddress request invocation.
+ **/   
 public class AiNameParseEmailAddressRequest
 {
     /**
-    * Initializes a new instance of the AiNameParseEmailAddressRequest class.   
-    * @param emailAddress Email address to parse (required)
-    * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
-    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
-    * @param encoding A character encoding name
-    * @param script A writing system code; starts with the ISO-15924 script name
-    * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
+     * Initializes a new instance of the AiNameParseEmailAddressRequest class.
+     **/
+    public AiNameParseEmailAddressRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the AiNameParseEmailAddressRequest class.   
+     * @param emailAddress Email address to parse.
+     * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian).             
+     * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France.             
+     * @param encoding A character encoding name.
+     * @param script A writing system code; starts with the ISO-15924 script name.
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
     public AiNameParseEmailAddressRequest(String emailAddress, String language, String location, String encoding, String script, String style)             
     {
         this.emailAddress = emailAddress;
@@ -52,33 +59,148 @@ public class AiNameParseEmailAddressRequest
         this.style = style;
     }
         
-    /**
-    * Email address to parse (required)
-    **/
-    public String emailAddress;
+    private String emailAddress;
 
     /**
-    * An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
-    **/
-    public String language;
+     * Getter for: Email address to parse.
+     **/
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
     /**
-    * A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
-    **/
-    public String location;
+     * Setter for: Email address to parse.
+     **/
+    public void setEmailAddress(String value) {
+        this.emailAddress = value;
+    }
 
     /**
-    * A character encoding name
-    **/
-    public String encoding;
+     * Setter for: Email address to parse.
+     **/
+    public AiNameParseEmailAddressRequest emailAddress(String value) {
+        this.emailAddress = value;
+        return this;
+    }
+
+    private String language;
 
     /**
-    * A writing system code; starts with the ISO-15924 script name
-    **/
-    public String script;
+     * Getter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public String getLanguage() {
+        return language;
+    }
 
     /**
-    * Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
-    public String style;
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public void setLanguage(String value) {
+        this.language = value;
+    }
+
+    /**
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public AiNameParseEmailAddressRequest language(String value) {
+        this.language = value;
+        return this;
+    }
+
+    private String location;
+
+    /**
+     * Getter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public void setLocation(String value) {
+        this.location = value;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public AiNameParseEmailAddressRequest location(String value) {
+        this.location = value;
+        return this;
+    }
+
+    private String encoding;
+
+    /**
+     * Getter for: A character encoding name.
+     **/
+    public String getEncoding() {
+        return encoding;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public void setEncoding(String value) {
+        this.encoding = value;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public AiNameParseEmailAddressRequest encoding(String value) {
+        this.encoding = value;
+        return this;
+    }
+
+    private String script;
+
+    /**
+     * Getter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public String getScript() {
+        return script;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public void setScript(String value) {
+        this.script = value;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public AiNameParseEmailAddressRequest script(String value) {
+        this.script = value;
+        return this;
+    }
+
+    private String style;
+
+    /**
+     * Getter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public String getStyle() {
+        return style;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public void setStyle(String value) {
+        this.style = value;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public AiNameParseEmailAddressRequest style(String value) {
+        this.style = value;
+        return this;
+    }
+
 }

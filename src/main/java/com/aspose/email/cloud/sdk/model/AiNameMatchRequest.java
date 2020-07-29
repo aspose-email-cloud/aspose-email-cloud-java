@@ -29,20 +29,27 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for AiNameApi.match request invocation.
-**/   
+ * Class that holds parameters for AiNameApi.match request invocation.
+ **/   
 public class AiNameMatchRequest
 {
     /**
-    * Initializes a new instance of the AiNameMatchRequest class.   
-    * @param name A name to match (required)
-    * @param otherName Another name to match (required)
-    * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
-    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
-    * @param encoding A character encoding name
-    * @param script A writing system code; starts with the ISO-15924 script name
-    * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
+     * Initializes a new instance of the AiNameMatchRequest class.
+     **/
+    public AiNameMatchRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the AiNameMatchRequest class.   
+     * @param name A name to match.
+     * @param otherName Another name to match.
+     * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian).             
+     * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France.             
+     * @param encoding A character encoding name.
+     * @param script A writing system code; starts with the ISO-15924 script name.
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
     public AiNameMatchRequest(String name, String otherName, String language, String location, String encoding, String script, String style)             
     {
         this.name = name;
@@ -54,39 +61,173 @@ public class AiNameMatchRequest
         this.style = style;
     }
         
-    /**
-    * A name to match (required)
-    **/
-    public String name;
+    private String name;
 
     /**
-    * Another name to match (required)
-    **/
-    public String otherName;
+     * Getter for: A name to match.
+     **/
+    public String getName() {
+        return name;
+    }
 
     /**
-    * An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
-    **/
-    public String language;
+     * Setter for: A name to match.
+     **/
+    public void setName(String value) {
+        this.name = value;
+    }
 
     /**
-    * A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
-    **/
-    public String location;
+     * Setter for: A name to match.
+     **/
+    public AiNameMatchRequest name(String value) {
+        this.name = value;
+        return this;
+    }
+
+    private String otherName;
 
     /**
-    * A character encoding name
-    **/
-    public String encoding;
+     * Getter for: Another name to match.
+     **/
+    public String getOtherName() {
+        return otherName;
+    }
 
     /**
-    * A writing system code; starts with the ISO-15924 script name
-    **/
-    public String script;
+     * Setter for: Another name to match.
+     **/
+    public void setOtherName(String value) {
+        this.otherName = value;
+    }
 
     /**
-    * Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-    **/
-    public String style;
+     * Setter for: Another name to match.
+     **/
+    public AiNameMatchRequest otherName(String value) {
+        this.otherName = value;
+        return this;
+    }
+
+    private String language;
+
+    /**
+     * Getter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public String getLanguage() {
+        return language;
+    }
+
+    /**
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public void setLanguage(String value) {
+        this.language = value;
+    }
+
+    /**
+     * Setter for: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+     **/
+    public AiNameMatchRequest language(String value) {
+        this.language = value;
+        return this;
+    }
+
+    private String location;
+
+    /**
+     * Getter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public void setLocation(String value) {
+        this.location = value;
+    }
+
+    /**
+     * Setter for: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+     **/
+    public AiNameMatchRequest location(String value) {
+        this.location = value;
+        return this;
+    }
+
+    private String encoding;
+
+    /**
+     * Getter for: A character encoding name.
+     **/
+    public String getEncoding() {
+        return encoding;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public void setEncoding(String value) {
+        this.encoding = value;
+    }
+
+    /**
+     * Setter for: A character encoding name.
+     **/
+    public AiNameMatchRequest encoding(String value) {
+        this.encoding = value;
+        return this;
+    }
+
+    private String script;
+
+    /**
+     * Getter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public String getScript() {
+        return script;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public void setScript(String value) {
+        this.script = value;
+    }
+
+    /**
+     * Setter for: A writing system code; starts with the ISO-15924 script name.
+     **/
+    public AiNameMatchRequest script(String value) {
+        this.script = value;
+        return this;
+    }
+
+    private String style;
+
+    /**
+     * Getter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public String getStyle() {
+        return style;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public void setStyle(String value) {
+        this.style = value;
+    }
+
+    /**
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     **/
+    public AiNameMatchRequest style(String value) {
+        this.style = value;
+        return this;
+    }
+
 }
 

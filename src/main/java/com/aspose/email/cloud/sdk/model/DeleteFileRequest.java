@@ -29,16 +29,23 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FileApi.deleteFile request invocation.
-**/   
+ * Class that holds parameters for FileApi.deleteFile request invocation.
+ **/   
 public class DeleteFileRequest
 {
     /**
-    * Initializes a new instance of the DeleteFileRequest class.   
-    * @param path File path e.g. &#39;/folder/file.ext&#39;
-    * @param storageName Storage name
-    * @param versionId File version ID to delete
-    **/
+     * Initializes a new instance of the DeleteFileRequest class.
+     **/
+    public DeleteFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the DeleteFileRequest class.   
+     * @param path File path e.g. &#39;/folder/file.ext&#39;
+     * @param storageName Storage name
+     * @param versionId File version ID to delete
+     **/
     public DeleteFileRequest(String path, String storageName, String versionId)             
     {
         this.path = path;
@@ -46,19 +53,77 @@ public class DeleteFileRequest
         this.versionId = versionId;
     }
         
-    /**
-    * File path e.g. '/folder/file.ext'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: File path e.g. '/folder/file.ext'
+     **/
+    public String getPath() {
+        return path;
+    }
 
     /**
-    * File version ID to delete
-    **/
-    public String versionId;
+     * Setter for: File path e.g. '/folder/file.ext'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: File path e.g. '/folder/file.ext'
+     **/
+    public DeleteFileRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public DeleteFileRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
+    private String versionId;
+
+    /**
+     * Getter for: File version ID to delete
+     **/
+    public String getVersionId() {
+        return versionId;
+    }
+
+    /**
+     * Setter for: File version ID to delete
+     **/
+    public void setVersionId(String value) {
+        this.versionId = value;
+    }
+
+    /**
+     * Setter for: File version ID to delete
+     **/
+    public DeleteFileRequest versionId(String value) {
+        this.versionId = value;
+        return this;
+    }
+
 }
 

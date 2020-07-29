@@ -29,17 +29,24 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientFolderApi.getList request invocation.
-**/   
+ * Class that holds parameters for ClientFolderApi.getList request invocation.
+ **/   
 public class ClientFolderGetListRequest
 {
     /**
-    * Initializes a new instance of the ClientFolderGetListRequest class.   
-    * @param account Email account
-    * @param storage Storage name where account file located
-    * @param accountStorageFolder Folder in storage where account file located
-    * @param parentFolder Folder in which subfolders should be listed
-    **/
+     * Initializes a new instance of the ClientFolderGetListRequest class.
+     **/
+    public ClientFolderGetListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ClientFolderGetListRequest class.   
+     * @param account Email account
+     * @param storage Storage name where account file located
+     * @param accountStorageFolder Folder in storage where account file located
+     * @param parentFolder Folder in which subfolders should be listed
+     **/
     public ClientFolderGetListRequest(String account, String storage, String accountStorageFolder, String parentFolder)             
     {
         this.account = account;
@@ -48,23 +55,100 @@ public class ClientFolderGetListRequest
         this.parentFolder = parentFolder;
     }
         
-    /**
-    * Email account
-    **/
-    public String account;
+    private String account;
 
     /**
-    * Storage name where account file located
-    **/
-    public String storage;
+     * Getter for: Email account
+     **/
+    public String getAccount() {
+        return account;
+    }
 
     /**
-    * Folder in storage where account file located
-    **/
-    public String accountStorageFolder;
+     * Setter for: Email account
+     **/
+    public void setAccount(String value) {
+        this.account = value;
+    }
 
     /**
-    * Folder in which subfolders should be listed
-    **/
-    public String parentFolder;
+     * Setter for: Email account
+     **/
+    public ClientFolderGetListRequest account(String value) {
+        this.account = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name where account file located
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public ClientFolderGetListRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String accountStorageFolder;
+
+    /**
+     * Getter for: Folder in storage where account file located
+     **/
+    public String getAccountStorageFolder() {
+        return accountStorageFolder;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public void setAccountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public ClientFolderGetListRequest accountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+        return this;
+    }
+
+    private String parentFolder;
+
+    /**
+     * Getter for: Folder in which subfolders should be listed
+     **/
+    public String getParentFolder() {
+        return parentFolder;
+    }
+
+    /**
+     * Setter for: Folder in which subfolders should be listed
+     **/
+    public void setParentFolder(String value) {
+        this.parentFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in which subfolders should be listed
+     **/
+    public ClientFolderGetListRequest parentFolder(String value) {
+        this.parentFolder = value;
+        return this;
+    }
+
 }

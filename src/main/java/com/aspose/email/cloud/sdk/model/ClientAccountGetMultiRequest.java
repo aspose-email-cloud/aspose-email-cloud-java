@@ -29,35 +29,100 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientAccountApi.getMulti request invocation.
-**/   
+ * Class that holds parameters for ClientAccountApi.getMulti request invocation.
+ **/   
 public class ClientAccountGetMultiRequest
 {
     /**
-    * Initializes a new instance of the ClientAccountGetMultiRequest class.   
-    * @param name File name on storage
-    * @param folder Folder on storage
-    * @param storage Storage name
-    **/
-    public ClientAccountGetMultiRequest(String name, String folder, String storage)             
+     * Initializes a new instance of the ClientAccountGetMultiRequest class.
+     **/
+    public ClientAccountGetMultiRequest()
     {
-        this.name = name;
+    }
+
+    /**
+     * Initializes a new instance of the ClientAccountGetMultiRequest class.   
+     * @param fileName File name on storage
+     * @param folder Folder on storage
+     * @param storage Storage name
+     **/
+    public ClientAccountGetMultiRequest(String fileName, String folder, String storage)             
+    {
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * File name on storage
-    **/
-    public String name;
+    private String fileName;
 
     /**
-    * Folder on storage
-    **/
-    public String folder;
+     * Getter for: File name on storage
+     **/
+    public String getFileName() {
+        return fileName;
+    }
 
     /**
-    * Storage name
-    **/
-    public String storage;
+     * Setter for: File name on storage
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: File name on storage
+     **/
+    public ClientAccountGetMultiRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Folder on storage
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Folder on storage
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Folder on storage
+     **/
+    public ClientAccountGetMultiRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public ClientAccountGetMultiRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }

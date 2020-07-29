@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiContactApi.fromFile request invocation.
-**/   
+ * Class that holds parameters for MapiContactApi.fromFile request invocation.
+ **/   
 public class MapiContactFromFileRequest
 {
     /**
-    * Initializes a new instance of the MapiContactFromFileRequest class.   
-    * @param fileFormat File format Enum, available values: VCard, WebDav, Msg
-    * @param file File to convert
-    **/
-    public MapiContactFromFileRequest(String fileFormat, byte[] file)             
+     * Initializes a new instance of the MapiContactFromFileRequest class.
+     **/
+    public MapiContactFromFileRequest()
     {
-        this.fileFormat = fileFormat;
-        this.File = file;
     }
-        
-    /**
-    * File format Enum, available values: VCard, WebDav, Msg
-    **/
-    public String fileFormat;
 
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Initializes a new instance of the MapiContactFromFileRequest class.   
+     * @param format File format Enum, available values: VCard, WebDav, Msg
+     * @param file File to convert
+     **/
+    public MapiContactFromFileRequest(String format, byte[] file)             
+    {
+        this.format = format;
+        this.file = file;
+    }
+        
+    private String format;
+
+    /**
+     * Getter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     **/
+    public MapiContactFromFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public MapiContactFromFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

@@ -29,24 +29,31 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientMessageApi.appendFile request invocation.
-**/   
+ * Class that holds parameters for ClientMessageApi.appendFile request invocation.
+ **/   
 public class ClientMessageAppendFileRequest
 {
     /**
-    * Initializes a new instance of the ClientMessageAppendFileRequest class.   
-    * @param account Email account.
-    * @param file Message file to append.
-    * @param storage Storage name where account file located.
-    * @param accountStorageFolder Folder in storage where account file located.
-    * @param format Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param folder Path to folder on email server to append message to.
-    * @param markAsSent Determines that appended message should be market as sent or not.
-    **/
+     * Initializes a new instance of the ClientMessageAppendFileRequest class.
+     **/
+    public ClientMessageAppendFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ClientMessageAppendFileRequest class.   
+     * @param account Email account.
+     * @param file Message file to append.
+     * @param storage Storage name where account file located.
+     * @param accountStorageFolder Folder in storage where account file located.
+     * @param format Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param folder Path to folder on email server to append message to.
+     * @param markAsSent Determines that appended message should be market as sent or not.
+     **/
     public ClientMessageAppendFileRequest(String account, byte[] file, String storage, String accountStorageFolder, String format, String folder, Boolean markAsSent)             
     {
         this.account = account;
-        this.File = file;
+        this.file = file;
         this.storage = storage;
         this.accountStorageFolder = accountStorageFolder;
         this.format = format;
@@ -54,39 +61,173 @@ public class ClientMessageAppendFileRequest
         this.markAsSent = markAsSent;
     }
         
-    /**
-    * Email account.
-    **/
-    public String account;
+    private String account;
 
     /**
-    * Message file to append.
-    **/
-    public byte[] File;
+     * Getter for: Email account.
+     **/
+    public String getAccount() {
+        return account;
+    }
 
     /**
-    * Storage name where account file located.
-    **/
-    public String storage;
+     * Setter for: Email account.
+     **/
+    public void setAccount(String value) {
+        this.account = value;
+    }
 
     /**
-    * Folder in storage where account file located.
-    **/
-    public String accountStorageFolder;
+     * Setter for: Email account.
+     **/
+    public ClientMessageAppendFileRequest account(String value) {
+        this.account = value;
+        return this;
+    }
+
+    private byte[] file;
 
     /**
-    * Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+     * Getter for: Message file to append.
+     **/
+    public byte[] getFile() {
+        return file;
+    }
 
     /**
-    * Path to folder on email server to append message to.
-    **/
-    public String folder;
+     * Setter for: Message file to append.
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
 
     /**
-    * Determines that appended message should be market as sent or not.
-    **/
-    public Boolean markAsSent;
+     * Setter for: Message file to append.
+     **/
+    public ClientMessageAppendFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name where account file located.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name where account file located.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name where account file located.
+     **/
+    public ClientMessageAppendFileRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String accountStorageFolder;
+
+    /**
+     * Getter for: Folder in storage where account file located.
+     **/
+    public String getAccountStorageFolder() {
+        return accountStorageFolder;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located.
+     **/
+    public void setAccountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located.
+     **/
+    public ClientMessageAppendFileRequest accountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+        return this;
+    }
+
+    private String format;
+
+    /**
+     * Getter for: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public ClientMessageAppendFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder on email server to append message to.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder on email server to append message to.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder on email server to append message to.
+     **/
+    public ClientMessageAppendFileRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private Boolean markAsSent;
+
+    /**
+     * Getter for: Determines that appended message should be market as sent or not.
+     **/
+    public Boolean getMarkAsSent() {
+        return markAsSent;
+    }
+
+    /**
+     * Setter for: Determines that appended message should be market as sent or not.
+     **/
+    public void setMarkAsSent(Boolean value) {
+        this.markAsSent = value;
+    }
+
+    /**
+     * Setter for: Determines that appended message should be market as sent or not.
+     **/
+    public ClientMessageAppendFileRequest markAsSent(Boolean value) {
+        this.markAsSent = value;
+        return this;
+    }
+
 }
 

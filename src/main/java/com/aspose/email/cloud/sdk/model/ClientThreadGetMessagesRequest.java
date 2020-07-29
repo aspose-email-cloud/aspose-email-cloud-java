@@ -29,18 +29,25 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ClientThreadApi.getMessages request invocation.
-**/   
+ * Class that holds parameters for ClientThreadApi.getMessages request invocation.
+ **/   
 public class ClientThreadGetMessagesRequest
 {
     /**
-    * Initializes a new instance of the ClientThreadGetMessagesRequest class.   
-    * @param threadId Thread identifier
-    * @param account Email account
-    * @param folder Specifies account folder to get thread from             
-    * @param storage Storage name where account file located
-    * @param accountStorageFolder Folder in storage where account file located
-    **/
+     * Initializes a new instance of the ClientThreadGetMessagesRequest class.
+     **/
+    public ClientThreadGetMessagesRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ClientThreadGetMessagesRequest class.   
+     * @param threadId Thread identifier
+     * @param account Email account
+     * @param folder Specifies account folder to get thread from             
+     * @param storage Storage name where account file located
+     * @param accountStorageFolder Folder in storage where account file located
+     **/
     public ClientThreadGetMessagesRequest(String threadId, String account, String folder, String storage, String accountStorageFolder)             
     {
         this.threadId = threadId;
@@ -50,28 +57,124 @@ public class ClientThreadGetMessagesRequest
         this.accountStorageFolder = accountStorageFolder;
     }
         
-    /**
-    * Thread identifier
-    **/
-    public String threadId;
+    private String threadId;
 
     /**
-    * Email account
-    **/
-    public String account;
+     * Getter for: Thread identifier
+     **/
+    public String getThreadId() {
+        return threadId;
+    }
 
     /**
-    * Specifies account folder to get thread from             
-    **/
-    public String folder;
+     * Setter for: Thread identifier
+     **/
+    public void setThreadId(String value) {
+        this.threadId = value;
+    }
 
     /**
-    * Storage name where account file located
-    **/
-    public String storage;
+     * Setter for: Thread identifier
+     **/
+    public ClientThreadGetMessagesRequest threadId(String value) {
+        this.threadId = value;
+        return this;
+    }
+
+    private String account;
 
     /**
-    * Folder in storage where account file located
-    **/
-    public String accountStorageFolder;
+     * Getter for: Email account
+     **/
+    public String getAccount() {
+        return account;
+    }
+
+    /**
+     * Setter for: Email account
+     **/
+    public void setAccount(String value) {
+        this.account = value;
+    }
+
+    /**
+     * Setter for: Email account
+     **/
+    public ClientThreadGetMessagesRequest account(String value) {
+        this.account = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Specifies account folder to get thread from             
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Specifies account folder to get thread from             
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Specifies account folder to get thread from             
+     **/
+    public ClientThreadGetMessagesRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name where account file located
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name where account file located
+     **/
+    public ClientThreadGetMessagesRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String accountStorageFolder;
+
+    /**
+     * Getter for: Folder in storage where account file located
+     **/
+    public String getAccountStorageFolder() {
+        return accountStorageFolder;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public void setAccountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+    }
+
+    /**
+     * Setter for: Folder in storage where account file located
+     **/
+    public ClientThreadGetMessagesRequest accountStorageFolder(String value) {
+        this.accountStorageFolder = value;
+        return this;
+    }
+
 }

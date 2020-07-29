@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 
 [**DiscUsage**](DiscUsage.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getFileVersions"></a>
@@ -46,7 +46,7 @@ Name | Type | Description | Notes
 
 [**FileVersions**](FileVersions.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="objectExists"></a>
@@ -73,7 +73,7 @@ Name | Type | Description | Notes
 
 [**ObjectExist**](ObjectExist.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="exists"></a>
@@ -96,5 +96,5 @@ Name | Type | Description | Notes
 
 [**StorageExist**](StorageExist.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

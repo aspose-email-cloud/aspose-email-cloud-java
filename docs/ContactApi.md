@@ -15,7 +15,7 @@ See parameter model documentation at [ContactAsFileRequest](ContactAsFileRequest
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asMapi"></a>
 # asMapi
@@ -31,7 +31,7 @@ See parameter model documentation at [ContactDto](ContactDto.md)
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="convert"></a>
 # **convert**
@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="fromFile"></a>
@@ -82,7 +82,7 @@ Name | Type | Description | Notes
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -95,7 +95,7 @@ Get contact document from storage.
 ```java
 public ContactGetRequest(
     String format, 
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
@@ -103,7 +103,7 @@ public ContactGetRequest(
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
- **name** | **String**| Contact document file name. |
+ **fileName** | **String**| Contact document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -111,7 +111,7 @@ Name | Type | Description | Notes
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getAsFile"></a>
@@ -142,7 +142,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getList"></a>
@@ -173,7 +173,7 @@ Name | Type | Description | Notes
 
 [**ContactStorageList**](ContactStorageList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -190,4 +190,4 @@ See parameter model documentation at [ContactSaveRequest](ContactSaveRequest.md)
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

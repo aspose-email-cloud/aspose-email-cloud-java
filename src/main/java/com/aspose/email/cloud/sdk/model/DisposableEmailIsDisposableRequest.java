@@ -29,21 +29,48 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for DisposableEmailApi.isDisposable request invocation.
-**/   
+ * Class that holds parameters for DisposableEmailApi.isDisposable request invocation.
+ **/   
 public class DisposableEmailIsDisposableRequest
 {
     /**
-    * Initializes a new instance of the DisposableEmailIsDisposableRequest class.   
-    * @param address An email address to check
-    **/
+     * Initializes a new instance of the DisposableEmailIsDisposableRequest class.
+     **/
+    public DisposableEmailIsDisposableRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the DisposableEmailIsDisposableRequest class.   
+     * @param address An email address to check
+     **/
     public DisposableEmailIsDisposableRequest(String address)             
     {
         this.address = address;
     }
         
+    private String address;
+
     /**
-    * An email address to check
-    **/
-    public String address;
+     * Getter for: An email address to check
+     **/
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Setter for: An email address to check
+     **/
+    public void setAddress(String value) {
+        this.address = value;
+    }
+
+    /**
+     * Setter for: An email address to check
+     **/
+    public DisposableEmailIsDisposableRequest address(String value) {
+        this.address = value;
+        return this;
+    }
+
 }

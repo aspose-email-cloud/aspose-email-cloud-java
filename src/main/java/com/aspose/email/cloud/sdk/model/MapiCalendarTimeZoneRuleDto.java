@@ -212,6 +212,8 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Month.             
+   * minimum: 0
+   * maximum: 12
    * @return month
   **/
   public Integer getMonth() {

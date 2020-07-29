@@ -15,7 +15,7 @@ See parameter model documentation at [MapiContactDto](MapiContactDto.md)
 
 [**ContactDto**](ContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asFile"></a>
 # asFile
@@ -31,7 +31,7 @@ See parameter model documentation at [MapiContactAsFileRequest](MapiContactAsFil
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="fromFile"></a>
 # **fromFile**
@@ -42,20 +42,20 @@ Converts contact file to a MAPI model representation.
 ### **MapiContactFromFileRequest** Parameters
 ```java
 public MapiContactFromFileRequest(
-    String fileFormat, 
+    String format, 
     byte[] file)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **fileFormat** | **String**| File format Enum, available values: VCard, WebDav, Msg |
+ **format** | **String**| File format Enum, available values: VCard, WebDav, Msg |
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -68,7 +68,7 @@ Get MAPI contact document.
 ```java
 public MapiContactGetRequest(
     String format, 
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
@@ -76,7 +76,7 @@ public MapiContactGetRequest(
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
  **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
- **name** | **String**| Contact document file name. |
+ **fileName** | **String**| Contact document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -84,7 +84,7 @@ Name | Type | Description | Notes
 
 [**MapiContactDto**](MapiContactDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -101,4 +101,4 @@ See parameter model documentation at [MapiContactSaveRequest](MapiContactSaveReq
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

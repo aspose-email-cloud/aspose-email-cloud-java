@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for MapiMessageApi.fromFile request invocation.
-**/   
+ * Class that holds parameters for MapiMessageApi.fromFile request invocation.
+ **/   
 public class MapiMessageFromFileRequest
 {
     /**
-    * Initializes a new instance of the MapiMessageFromFileRequest class.   
-    * @param fileFormat File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param file File to convert
-    **/
-    public MapiMessageFromFileRequest(String fileFormat, byte[] file)             
+     * Initializes a new instance of the MapiMessageFromFileRequest class.
+     **/
+    public MapiMessageFromFileRequest()
     {
-        this.fileFormat = fileFormat;
-        this.File = file;
     }
-        
-    /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String fileFormat;
 
     /**
-    * File to convert
-    **/
-    public byte[] File;
+     * Initializes a new instance of the MapiMessageFromFileRequest class.   
+     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param file File to convert
+     **/
+    public MapiMessageFromFileRequest(String format, byte[] file)             
+    {
+        this.format = format;
+        this.file = file;
+    }
+        
+    private String format;
+
+    /**
+     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public MapiMessageFromFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private byte[] file;
+
+    /**
+     * Getter for: File to convert
+     **/
+    public byte[] getFile() {
+        return file;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public void setFile(byte[] value) {
+        this.file = value;
+    }
+
+    /**
+     * Setter for: File to convert
+     **/
+    public MapiMessageFromFileRequest file(byte[] value) {
+        this.file = value;
+        return this;
+    }
+
 }
 

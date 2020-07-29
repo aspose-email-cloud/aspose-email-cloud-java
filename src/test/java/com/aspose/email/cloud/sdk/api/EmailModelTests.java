@@ -23,7 +23,7 @@ public class EmailModelTests extends TestBase {
         byte[] emlBytes = api.email().convert(new EmailConvertRequest("Eml", mapiBytes));
         String emlContent = new String(emlBytes, "UTF-8");
         assert emlContent.contains(from);
-        EmailDto dto = api.email().fromFile(new EmailFromFileRequest(emlBytes));
+        EmailDto dto = api.email().fromFile(new EmailFromFileRequest("Eml", emlBytes));
         assert from.equals(dto.getFrom().getAddress());
     }
 

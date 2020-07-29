@@ -66,7 +66,7 @@ public class DisposableEmailApi
     {
       try {
          // verify the required parameter 'request.address' is set
-        if (request.address== null) {
+        if (request.getAddress() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.address' when calling isDisposable");
         }
         // create path and map variables
@@ -74,7 +74,7 @@ public class DisposableEmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "address", request.address);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "address", request.getAddress());
         
         
         byte[] response = this.apiInvoker.invokeApi(

@@ -29,17 +29,24 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for CalendarApi.getList request invocation.
-**/   
+ * Class that holds parameters for CalendarApi.getList request invocation.
+ **/   
 public class CalendarGetListRequest
 {
     /**
-    * Initializes a new instance of the CalendarGetListRequest class.   
-    * @param folder Path to folder in storage.
-    * @param itemsPerPage Count of items on page.
-    * @param pageNumber Page number.
-    * @param storage Storage name.
-    **/
+     * Initializes a new instance of the CalendarGetListRequest class.
+     **/
+    public CalendarGetListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CalendarGetListRequest class.   
+     * @param folder Path to folder in storage.
+     * @param itemsPerPage Count of items on page.
+     * @param pageNumber Page number.
+     * @param storage Storage name.
+     **/
     public CalendarGetListRequest(String folder, Integer itemsPerPage, Integer pageNumber, String storage)             
     {
         this.folder = folder;
@@ -48,23 +55,100 @@ public class CalendarGetListRequest
         this.storage = storage;
     }
         
-    /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+    private String folder;
 
     /**
-    * Count of items on page.
-    **/
-    public Integer itemsPerPage;
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
 
     /**
-    * Page number.
-    **/
-    public Integer pageNumber;
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Path to folder in storage.
+     **/
+    public CalendarGetListRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private Integer itemsPerPage;
+
+    /**
+     * Getter for: Count of items on page.
+     **/
+    public Integer getItemsPerPage() {
+        return itemsPerPage;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public void setItemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public CalendarGetListRequest itemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+        return this;
+    }
+
+    private Integer pageNumber;
+
+    /**
+     * Getter for: Page number.
+     **/
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public void setPageNumber(Integer value) {
+        this.pageNumber = value;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public CalendarGetListRequest pageNumber(Integer value) {
+        this.pageNumber = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public CalendarGetListRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }

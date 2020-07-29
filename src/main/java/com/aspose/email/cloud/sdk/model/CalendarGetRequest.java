@@ -29,36 +29,101 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for CalendarApi.get request invocation.
-**/   
+ * Class that holds parameters for CalendarApi.get request invocation.
+ **/   
 public class CalendarGetRequest
 {
     /**
-    * Initializes a new instance of the CalendarGetRequest class.   
-    * @param name iCalendar file name in storage.
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    **/
-    public CalendarGetRequest(String name, String folder, String storage)             
+     * Initializes a new instance of the CalendarGetRequest class.
+     **/
+    public CalendarGetRequest()
     {
-        this.name = name;
+    }
+
+    /**
+     * Initializes a new instance of the CalendarGetRequest class.   
+     * @param fileName iCalendar file name in storage.
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     **/
+    public CalendarGetRequest(String fileName, String folder, String storage)             
+    {
+        this.fileName = fileName;
         this.folder = folder;
         this.storage = storage;
     }
         
-    /**
-    * iCalendar file name in storage.
-    **/
-    public String name;
+    private String fileName;
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Getter for: iCalendar file name in storage.
+     **/
+    public String getFileName() {
+        return fileName;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: iCalendar file name in storage.
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
+
+    /**
+     * Setter for: iCalendar file name in storage.
+     **/
+    public CalendarGetRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public CalendarGetRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public CalendarGetRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
 }
 

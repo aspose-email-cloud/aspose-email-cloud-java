@@ -29,16 +29,23 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for StorageApi.objectExists request invocation.
-**/   
+ * Class that holds parameters for StorageApi.objectExists request invocation.
+ **/   
 public class ObjectExistsRequest
 {
     /**
-    * Initializes a new instance of the ObjectExistsRequest class.   
-    * @param path File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;
-    * @param storageName Storage name
-    * @param versionId File version ID
-    **/
+     * Initializes a new instance of the ObjectExistsRequest class.
+     **/
+    public ObjectExistsRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ObjectExistsRequest class.   
+     * @param path File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;
+     * @param storageName Storage name
+     * @param versionId File version ID
+     **/
     public ObjectExistsRequest(String path, String storageName, String versionId)             
     {
         this.path = path;
@@ -46,19 +53,77 @@ public class ObjectExistsRequest
         this.versionId = versionId;
     }
         
-    /**
-    * File or folder path e.g. '/file.ext' or '/folder'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: File or folder path e.g. '/file.ext' or '/folder'
+     **/
+    public String getPath() {
+        return path;
+    }
 
     /**
-    * File version ID
-    **/
-    public String versionId;
+     * Setter for: File or folder path e.g. '/file.ext' or '/folder'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: File or folder path e.g. '/file.ext' or '/folder'
+     **/
+    public ObjectExistsRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public ObjectExistsRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
+    private String versionId;
+
+    /**
+     * Getter for: File version ID
+     **/
+    public String getVersionId() {
+        return versionId;
+    }
+
+    /**
+     * Setter for: File version ID
+     **/
+    public void setVersionId(String value) {
+        this.versionId = value;
+    }
+
+    /**
+     * Setter for: File version ID
+     **/
+    public ObjectExistsRequest versionId(String value) {
+        this.versionId = value;
+        return this;
+    }
+
 }
 

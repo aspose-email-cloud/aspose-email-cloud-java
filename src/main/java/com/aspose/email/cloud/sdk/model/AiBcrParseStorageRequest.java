@@ -47,7 +47,7 @@ public class AiBcrParseStorageRequest {
   private StorageFolderLocation outFolder = null;
 
   @JsonProperty("images")
-  private List<AiBcrImageStorageFile> images = null;
+  private List<AiBcrImageStorageFile> images = new ArrayList<AiBcrImageStorageFile>();
 
   @JsonProperty("options")
   private AiBcrOptions options = null;
@@ -93,9 +93,6 @@ public class AiBcrParseStorageRequest {
    * @return this
   **/
   public AiBcrParseStorageRequest addImagesItem(AiBcrImageStorageFile imagesItem) {
-    if (this.images == null) {
-      this.images = new ArrayList<AiBcrImageStorageFile>();
-    }
     this.images.add(imagesItem);
     return this;
   }

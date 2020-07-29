@@ -29,16 +29,23 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FolderApi.deleteFolder request invocation.
-**/   
+ * Class that holds parameters for FolderApi.deleteFolder request invocation.
+ **/   
 public class DeleteFolderRequest
 {
     /**
-    * Initializes a new instance of the DeleteFolderRequest class.   
-    * @param path Folder path e.g. &#39;/folder&#39;
-    * @param storageName Storage name
-    * @param recursive Enable to delete folders, subfolders and files
-    **/
+     * Initializes a new instance of the DeleteFolderRequest class.
+     **/
+    public DeleteFolderRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the DeleteFolderRequest class.   
+     * @param path Folder path e.g. &#39;/folder&#39;
+     * @param storageName Storage name
+     * @param recursive Enable to delete folders, subfolders and files
+     **/
     public DeleteFolderRequest(String path, String storageName, Boolean recursive)             
     {
         this.path = path;
@@ -46,19 +53,77 @@ public class DeleteFolderRequest
         this.recursive = recursive;
     }
         
-    /**
-    * Folder path e.g. '/folder'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: Folder path e.g. '/folder'
+     **/
+    public String getPath() {
+        return path;
+    }
 
     /**
-    * Enable to delete folders, subfolders and files
-    **/
-    public Boolean recursive;
+     * Setter for: Folder path e.g. '/folder'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: Folder path e.g. '/folder'
+     **/
+    public DeleteFolderRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public DeleteFolderRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
+    private Boolean recursive;
+
+    /**
+     * Getter for: Enable to delete folders, subfolders and files
+     **/
+    public Boolean getRecursive() {
+        return recursive;
+    }
+
+    /**
+     * Setter for: Enable to delete folders, subfolders and files
+     **/
+    public void setRecursive(Boolean value) {
+        this.recursive = value;
+    }
+
+    /**
+     * Setter for: Enable to delete folders, subfolders and files
+     **/
+    public DeleteFolderRequest recursive(Boolean value) {
+        this.recursive = value;
+        return this;
+    }
+
 }
 

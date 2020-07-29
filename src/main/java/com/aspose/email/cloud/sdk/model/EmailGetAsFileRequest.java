@@ -29,17 +29,24 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for EmailApi.getAsFile request invocation.
-**/   
+ * Class that holds parameters for EmailApi.getAsFile request invocation.
+ **/   
 public class EmailGetAsFileRequest
 {
     /**
-    * Initializes a new instance of the EmailGetAsFileRequest class.   
-    * @param fileName Email document file name
-    * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    * @param storage Storage name
-    * @param folder Path to folder in storage
-    **/
+     * Initializes a new instance of the EmailGetAsFileRequest class.
+     **/
+    public EmailGetAsFileRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the EmailGetAsFileRequest class.   
+     * @param fileName Email document file name
+     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param storage Storage name
+     * @param folder Path to folder in storage
+     **/
     public EmailGetAsFileRequest(String fileName, String format, String storage, String folder)             
     {
         this.fileName = fileName;
@@ -48,24 +55,101 @@ public class EmailGetAsFileRequest
         this.folder = folder;
     }
         
-    /**
-    * Email document file name
-    **/
-    public String fileName;
+    private String fileName;
 
     /**
-    * File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    **/
-    public String format;
+     * Getter for: Email document file name
+     **/
+    public String getFileName() {
+        return fileName;
+    }
 
     /**
-    * Storage name
-    **/
-    public String storage;
+     * Setter for: Email document file name
+     **/
+    public void setFileName(String value) {
+        this.fileName = value;
+    }
 
     /**
-    * Path to folder in storage
-    **/
-    public String folder;
+     * Setter for: Email document file name
+     **/
+    public EmailGetAsFileRequest fileName(String value) {
+        this.fileName = value;
+        return this;
+    }
+
+    private String format;
+
+    /**
+     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getFormat() {
+        return format;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
+
+    /**
+     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public EmailGetAsFileRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public EmailGetAsFileRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private String folder;
+
+    /**
+     * Getter for: Path to folder in storage
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage
+     **/
+    public EmailGetAsFileRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
 }
 

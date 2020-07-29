@@ -15,7 +15,7 @@ See parameter model documentation at [CalendarAsAlternateRequest](CalendarAsAlte
 
 [**AlternateView**](AlternateView.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asFile"></a>
 # asFile
@@ -31,7 +31,7 @@ See parameter model documentation at [CalendarAsFileRequest](CalendarAsFileReque
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asMapi"></a>
 # asMapi
@@ -47,7 +47,7 @@ See parameter model documentation at [CalendarDto](CalendarDto.md)
 
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="convert"></a>
 # **convert**
@@ -71,7 +71,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="fromFile"></a>
@@ -94,7 +94,7 @@ Name | Type | Description | Notes
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -106,14 +106,14 @@ Get calendar file from storage.
 ### **CalendarGetRequest** Parameters
 ```java
 public CalendarGetRequest(
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **name** | **String**| iCalendar file name in storage. |
+ **fileName** | **String**| iCalendar file name in storage. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -121,7 +121,7 @@ Name | Type | Description | Notes
 
 [**CalendarDto**](CalendarDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getAsAlternate"></a>
@@ -133,7 +133,7 @@ Get iCalendar from storage as AlternateView
 ### **CalendarGetAsAlternateRequest** Parameters
 ```java
 public CalendarGetAsAlternateRequest(
-    String name, 
+    String fileName, 
     String calendarAction, 
     String sequenceId, 
     String folder, 
@@ -142,7 +142,7 @@ public CalendarGetAsAlternateRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **name** | **String**| iCalendar file name in storage |
+ **fileName** | **String**| iCalendar file name in storage |
  **calendarAction** | **String**| iCalendar method type Enum, available values: Create, Update, Cancel |
  **sequenceId** | **String**| The sequence id | [optional]
  **folder** | **String**| Path to folder in storage | [optional]
@@ -152,7 +152,7 @@ Name | Type | Description | Notes
 
 [**AlternateView**](AlternateView.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getAsFile"></a>
@@ -181,7 +181,7 @@ Name | Type | Description | Notes
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="getList"></a>
@@ -210,7 +210,7 @@ Name | Type | Description | Notes
 
 [**CalendarStorageList**](CalendarStorageList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -227,4 +227,4 @@ See parameter model documentation at [CalendarSaveRequest](CalendarSaveRequest.m
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

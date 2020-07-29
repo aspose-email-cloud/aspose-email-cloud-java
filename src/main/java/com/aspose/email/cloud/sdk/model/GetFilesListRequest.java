@@ -29,29 +29,75 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FolderApi.getFilesList request invocation.
-**/   
+ * Class that holds parameters for FolderApi.getFilesList request invocation.
+ **/   
 public class GetFilesListRequest
 {
     /**
-    * Initializes a new instance of the GetFilesListRequest class.   
-    * @param path Folder path e.g. &#39;/folder&#39;
-    * @param storageName Storage name
-    **/
+     * Initializes a new instance of the GetFilesListRequest class.
+     **/
+    public GetFilesListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the GetFilesListRequest class.   
+     * @param path Folder path e.g. &#39;/folder&#39;
+     * @param storageName Storage name
+     **/
     public GetFilesListRequest(String path, String storageName)             
     {
         this.path = path;
         this.storageName = storageName;
     }
         
-    /**
-    * Folder path e.g. '/folder'
-    **/
-    public String path;
+    private String path;
 
     /**
-    * Storage name
-    **/
-    public String storageName;
+     * Getter for: Folder path e.g. '/folder'
+     **/
+    public String getPath() {
+        return path;
+    }
+
+    /**
+     * Setter for: Folder path e.g. '/folder'
+     **/
+    public void setPath(String value) {
+        this.path = value;
+    }
+
+    /**
+     * Setter for: Folder path e.g. '/folder'
+     **/
+    public GetFilesListRequest path(String value) {
+        this.path = value;
+        return this;
+    }
+
+    private String storageName;
+
+    /**
+     * Getter for: Storage name
+     **/
+    public String getStorageName() {
+        return storageName;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public void setStorageName(String value) {
+        this.storageName = value;
+    }
+
+    /**
+     * Setter for: Storage name
+     **/
+    public GetFilesListRequest storageName(String value) {
+        this.storageName = value;
+        return this;
+    }
+
 }
 

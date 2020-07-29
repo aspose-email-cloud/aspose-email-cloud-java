@@ -100,11 +100,11 @@ public class ClientThreadApi
     {
       try {
          // verify the required parameter 'request.folder' is set
-        if (request.folder== null) {
+        if (request.getFolder() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.folder' when calling getList");
         }
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling getList");
         }
         // create path and map variables
@@ -112,12 +112,12 @@ public class ClientThreadApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "updateFolderCache", request.updateFolderCache);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messagesCacheLimit", request.messagesCacheLimit);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "updateFolderCache", request.getUpdateFolderCache());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "messagesCacheLimit", request.getMessagesCacheLimit());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -153,11 +153,11 @@ public class ClientThreadApi
     {
       try {
          // verify the required parameter 'request.threadId' is set
-        if (request.threadId== null) {
+        if (request.getThreadId() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.threadId' when calling getMessages");
         }
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling getMessages");
         }
         // create path and map variables
@@ -165,11 +165,11 @@ public class ClientThreadApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "threadId", request.threadId);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "threadId", request.getThreadId());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
         
         
         byte[] response = this.apiInvoker.invokeApi(

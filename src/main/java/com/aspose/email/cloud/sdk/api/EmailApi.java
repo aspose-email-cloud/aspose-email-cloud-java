@@ -145,11 +145,11 @@ public class EmailApi
     {
       try {
          // verify the required parameter 'request.format' is set
-        if (request.format== null) {
+        if (request.getFormat() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.format' when calling convert");
         }
          // verify the required parameter 'request.file' is set
-        if (request.File== null) {
+        if (request.getFile() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling convert");
         }
         // create path and map variables
@@ -157,11 +157,11 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
-        if (request.File != null) 
+        if (request.getFile() != null) 
         {
-            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+            formParams.put("file", this.apiInvoker.toFileInfo(request.getFile(), "File"));
         }
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
@@ -190,8 +190,12 @@ public class EmailApi
     public EmailDto fromFile(EmailFromFileRequest request) throws ApiException 
     {
       try {
+         // verify the required parameter 'request.format' is set
+        if (request.getFormat() == null) {
+            throw new ApiException(400, "Missing the required parameter 'request.format' when calling fromFile");
+        }
          // verify the required parameter 'request.file' is set
-        if (request.File== null) {
+        if (request.getFile() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.file' when calling fromFile");
         }
         // create path and map variables
@@ -199,10 +203,11 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
         
-        if (request.File != null) 
+        if (request.getFile() != null) 
         {
-            formParams.put("file", this.apiInvoker.toFileInfo(request.File, "File"));
+            formParams.put("file", this.apiInvoker.toFileInfo(request.getFile(), "File"));
         }
         byte[] response = this.apiInvoker.invokeApi(
             resourcePath, 
@@ -237,22 +242,22 @@ public class EmailApi
     {
       try {
          // verify the required parameter 'request.format' is set
-        if (request.format== null) {
+        if (request.getFormat() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.format' when calling get");
         }
-         // verify the required parameter 'request.name' is set
-        if (request.name== null) {
-            throw new ApiException(400, "Missing the required parameter 'request.name' when calling get");
+         // verify the required parameter 'request.fileName' is set
+        if (request.getFileName() == null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling get");
         }
         // create path and map variables
         String resourcePath = this.Configuration.getApiRootUrl() + "/email";
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "name", request.name);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fileName", request.getFileName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -288,11 +293,11 @@ public class EmailApi
     {
       try {
          // verify the required parameter 'request.fileName' is set
-        if (request.fileName== null) {
+        if (request.getFileName() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.fileName' when calling getAsFile");
         }
          // verify the required parameter 'request.format' is set
-        if (request.format== null) {
+        if (request.getFormat() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.format' when calling getAsFile");
         }
         // create path and map variables
@@ -300,10 +305,10 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fileName", request.fileName);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fileName", request.getFileName());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
         
         
         byte[] response = this.apiInvoker.invokeApi(
@@ -334,7 +339,7 @@ public class EmailApi
     {
       try {
          // verify the required parameter 'request.format' is set
-        if (request.format== null) {
+        if (request.getFormat() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.format' when calling getList");
         }
         // create path and map variables
@@ -342,11 +347,11 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.format);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.folder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "itemsPerPage", request.itemsPerPage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "pageNumber", request.pageNumber);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "folder", request.getFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "itemsPerPage", request.getItemsPerPage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "pageNumber", request.getPageNumber());
         
         
         byte[] response = this.apiInvoker.invokeApi(

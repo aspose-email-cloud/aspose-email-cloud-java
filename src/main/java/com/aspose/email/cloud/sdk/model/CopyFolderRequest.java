@@ -29,17 +29,24 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for FolderApi.copyFolder request invocation.
-**/   
+ * Class that holds parameters for FolderApi.copyFolder request invocation.
+ **/   
 public class CopyFolderRequest
 {
     /**
-    * Initializes a new instance of the CopyFolderRequest class.   
-    * @param srcPath Source folder path e.g. &#39;/src&#39;
-    * @param destPath Destination folder path e.g. &#39;/dst&#39;
-    * @param srcStorageName Source storage name
-    * @param destStorageName Destination storage name
-    **/
+     * Initializes a new instance of the CopyFolderRequest class.
+     **/
+    public CopyFolderRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the CopyFolderRequest class.   
+     * @param srcPath Source folder path e.g. &#39;/src&#39;
+     * @param destPath Destination folder path e.g. &#39;/dst&#39;
+     * @param srcStorageName Source storage name
+     * @param destStorageName Destination storage name
+     **/
     public CopyFolderRequest(String srcPath, String destPath, String srcStorageName, String destStorageName)             
     {
         this.srcPath = srcPath;
@@ -48,24 +55,101 @@ public class CopyFolderRequest
         this.destStorageName = destStorageName;
     }
         
-    /**
-    * Source folder path e.g. '/src'
-    **/
-    public String srcPath;
+    private String srcPath;
 
     /**
-    * Destination folder path e.g. '/dst'
-    **/
-    public String destPath;
+     * Getter for: Source folder path e.g. '/src'
+     **/
+    public String getSrcPath() {
+        return srcPath;
+    }
 
     /**
-    * Source storage name
-    **/
-    public String srcStorageName;
+     * Setter for: Source folder path e.g. '/src'
+     **/
+    public void setSrcPath(String value) {
+        this.srcPath = value;
+    }
 
     /**
-    * Destination storage name
-    **/
-    public String destStorageName;
+     * Setter for: Source folder path e.g. '/src'
+     **/
+    public CopyFolderRequest srcPath(String value) {
+        this.srcPath = value;
+        return this;
+    }
+
+    private String destPath;
+
+    /**
+     * Getter for: Destination folder path e.g. '/dst'
+     **/
+    public String getDestPath() {
+        return destPath;
+    }
+
+    /**
+     * Setter for: Destination folder path e.g. '/dst'
+     **/
+    public void setDestPath(String value) {
+        this.destPath = value;
+    }
+
+    /**
+     * Setter for: Destination folder path e.g. '/dst'
+     **/
+    public CopyFolderRequest destPath(String value) {
+        this.destPath = value;
+        return this;
+    }
+
+    private String srcStorageName;
+
+    /**
+     * Getter for: Source storage name
+     **/
+    public String getSrcStorageName() {
+        return srcStorageName;
+    }
+
+    /**
+     * Setter for: Source storage name
+     **/
+    public void setSrcStorageName(String value) {
+        this.srcStorageName = value;
+    }
+
+    /**
+     * Setter for: Source storage name
+     **/
+    public CopyFolderRequest srcStorageName(String value) {
+        this.srcStorageName = value;
+        return this;
+    }
+
+    private String destStorageName;
+
+    /**
+     * Getter for: Destination storage name
+     **/
+    public String getDestStorageName() {
+        return destStorageName;
+    }
+
+    /**
+     * Setter for: Destination storage name
+     **/
+    public void setDestStorageName(String value) {
+        this.destStorageName = value;
+    }
+
+    /**
+     * Setter for: Destination storage name
+     **/
+    public CopyFolderRequest destStorageName(String value) {
+        this.destStorageName = value;
+        return this;
+    }
+
 }
 

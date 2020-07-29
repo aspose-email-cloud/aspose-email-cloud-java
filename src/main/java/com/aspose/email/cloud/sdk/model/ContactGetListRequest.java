@@ -29,18 +29,25 @@
 package com.aspose.email.cloud.sdk.model;
 
 /**
-* Class that holds parameters for ContactApi.getList request invocation.
-**/   
+ * Class that holds parameters for ContactApi.getList request invocation.
+ **/   
 public class ContactGetListRequest
 {
     /**
-    * Initializes a new instance of the ContactGetListRequest class.   
-    * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
-    * @param folder Path to folder in storage.
-    * @param storage Storage name.
-    * @param itemsPerPage Count of items on page.
-    * @param pageNumber Page number.
-    **/
+     * Initializes a new instance of the ContactGetListRequest class.
+     **/
+    public ContactGetListRequest()
+    {
+    }
+
+    /**
+     * Initializes a new instance of the ContactGetListRequest class.   
+     * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
+     * @param folder Path to folder in storage.
+     * @param storage Storage name.
+     * @param itemsPerPage Count of items on page.
+     * @param pageNumber Page number.
+     **/
     public ContactGetListRequest(String format, String folder, String storage, Integer itemsPerPage, Integer pageNumber)             
     {
         this.format = format;
@@ -50,28 +57,124 @@ public class ContactGetListRequest
         this.pageNumber = pageNumber;
     }
         
-    /**
-    * Contact document format. Enum, available values: VCard, WebDav, Msg
-    **/
-    public String format;
+    private String format;
 
     /**
-    * Path to folder in storage.
-    **/
-    public String folder;
+     * Getter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public String getFormat() {
+        return format;
+    }
 
     /**
-    * Storage name.
-    **/
-    public String storage;
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public void setFormat(String value) {
+        this.format = value;
+    }
 
     /**
-    * Count of items on page.
-    **/
-    public Integer itemsPerPage;
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     **/
+    public ContactGetListRequest format(String value) {
+        this.format = value;
+        return this;
+    }
+
+    private String folder;
 
     /**
-    * Page number.
-    **/
-    public Integer pageNumber;
+     * Getter for: Path to folder in storage.
+     **/
+    public String getFolder() {
+        return folder;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public void setFolder(String value) {
+        this.folder = value;
+    }
+
+    /**
+     * Setter for: Path to folder in storage.
+     **/
+    public ContactGetListRequest folder(String value) {
+        this.folder = value;
+        return this;
+    }
+
+    private String storage;
+
+    /**
+     * Getter for: Storage name.
+     **/
+    public String getStorage() {
+        return storage;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public void setStorage(String value) {
+        this.storage = value;
+    }
+
+    /**
+     * Setter for: Storage name.
+     **/
+    public ContactGetListRequest storage(String value) {
+        this.storage = value;
+        return this;
+    }
+
+    private Integer itemsPerPage;
+
+    /**
+     * Getter for: Count of items on page.
+     **/
+    public Integer getItemsPerPage() {
+        return itemsPerPage;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public void setItemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+    }
+
+    /**
+     * Setter for: Count of items on page.
+     **/
+    public ContactGetListRequest itemsPerPage(Integer value) {
+        this.itemsPerPage = value;
+        return this;
+    }
+
+    private Integer pageNumber;
+
+    /**
+     * Getter for: Page number.
+     **/
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public void setPageNumber(Integer value) {
+        this.pageNumber = value;
+    }
+
+    /**
+     * Setter for: Page number.
+     **/
+    public ContactGetListRequest pageNumber(Integer value) {
+        this.pageNumber = value;
+        return this;
+    }
+
 }

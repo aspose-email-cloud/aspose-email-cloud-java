@@ -134,7 +134,7 @@ public class ClientFolderApi
     {
       try {
          // verify the required parameter 'request.account' is set
-        if (request.account== null) {
+        if (request.getAccount() == null) {
             throw new ApiException(400, "Missing the required parameter 'request.account' when calling getList");
         }
         // create path and map variables
@@ -142,10 +142,10 @@ public class ClientFolderApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.account);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.storage);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.accountStorageFolder);
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "parentFolder", request.parentFolder);
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "account", request.getAccount());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "storage", request.getStorage());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "accountStorageFolder", request.getAccountStorageFolder());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "parentFolder", request.getParentFolder());
         
         
         byte[] response = this.apiInvoker.invokeApi(

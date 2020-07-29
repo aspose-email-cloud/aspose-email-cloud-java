@@ -15,7 +15,7 @@ See parameter model documentation at [MapiMessageDto](MapiMessageDto.md)
 
 [**EmailDto**](EmailDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="asFile"></a>
 # asFile
@@ -31,7 +31,7 @@ See parameter model documentation at [MapiMessageAsFileRequest](MapiMessageAsFil
 
 **byte[]**
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="fromFile"></a>
 # **fromFile**
@@ -42,20 +42,20 @@ Converts email file to a MAPI model representation
 ### **MapiMessageFromFileRequest** Parameters
 ```java
 public MapiMessageFromFileRequest(
-    String fileFormat, 
+    String format, 
     byte[] file)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **fileFormat** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **file** | **byte[]**| File to convert |
 
 ### Return type
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="get"></a>
@@ -68,7 +68,7 @@ Get MAPI message document.
 ```java
 public MapiMessageGetRequest(
     String format, 
-    String name, 
+    String fileName, 
     String folder, 
     String storage)
 ```
@@ -76,7 +76,7 @@ public MapiMessageGetRequest(
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
  **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
- **name** | **String**| Email document file name. |
+ **fileName** | **String**| Email document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
 
@@ -84,7 +84,7 @@ Name | Type | Description | Notes
 
 [**MapiMessageDto**](MapiMessageDto.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
             ﻿
 <a name="save"></a>
@@ -101,4 +101,4 @@ See parameter model documentation at [MapiMessageSaveRequest](MapiMessageSaveReq
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

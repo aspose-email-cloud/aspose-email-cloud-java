@@ -15,7 +15,7 @@ See parameter model documentation at [ClientFolderCreateRequest](ClientFolderCre
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="delete"></a>
 # delete
@@ -31,7 +31,7 @@ See parameter model documentation at [ClientFolderDeleteRequest](ClientFolderDel
 
 void (empty response body)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
             ﻿
 <a name="getList"></a>
 # **getList**
@@ -59,5 +59,5 @@ Name | Type | Description | Notes
 
 [**MailServerFolderList**](MailServerFolderList.md)
 
-[[Back to top]](#) [[Back to Model list]](Model.md) [[Back to API README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
