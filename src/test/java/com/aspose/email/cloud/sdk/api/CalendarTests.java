@@ -32,7 +32,7 @@ public class CalendarTests extends TestBase {
             api.cloudStorage().file()
                 .downloadFile(new DownloadFileRequest(folder + "/" + file, storage, null));
         String calendarContent = new String(fileBytes, "UTF-8");
-        assert calendarContent.contains("organizer@am.ru");
+        assert calendarContent.contains("organizer@aspose.com");
         String uploadedName = UUID.randomUUID().toString() + ".ics";
         String path = folder + "/" + uploadedName;
         api.cloudStorage().file().uploadFile(new UploadFileRequest(path, fileBytes, storage));
