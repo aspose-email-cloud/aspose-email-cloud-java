@@ -152,7 +152,10 @@ public class StorageModelOfContactDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfContactDto(StorageFileLocation storageFile, ContactDto value) {
+  public StorageModelOfContactDto(
+    StorageFileLocation storageFile,
+    ContactDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

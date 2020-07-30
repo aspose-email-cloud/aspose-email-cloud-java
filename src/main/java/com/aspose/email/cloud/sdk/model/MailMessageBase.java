@@ -65,7 +65,7 @@ public class MailMessageBase {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -106,18 +106,18 @@ public class MailMessageBase {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
+/*
   public MailMessageBase() {
     super();
-  }
+  }/*
 
   /**
    * Initializes a new instance of the MailMessageBase
-   * @param discriminator 
    */
-  public MailMessageBase(String discriminator) {
+  public MailMessageBase(/*
+    String discriminator*/
+  ) {
     super();
-    setDiscriminator(discriminator);
   }
 
 }

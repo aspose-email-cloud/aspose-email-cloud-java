@@ -708,7 +708,27 @@ public class MapiContactPersonalInfoPropertySetDto {
    * @param referredByName Specifies the name of the person who referred this contact to the user             
    * @param children Contains a list of names of children.             
    */
-  public MapiContactPersonalInfoPropertySetDto(String spouseName, String personalHomePage, String language, String notes, String hobbies, String location, String instantMessagingAddress, String organizationalIdNumber, String customerId, String governmentIdNumber, String freeBusyLocation, String account, String html, String businessHomePage, String ftpSite, String computerNetworkName, String gender, String referredByName, List<String> children) {
+  public MapiContactPersonalInfoPropertySetDto(
+    String spouseName,
+    String personalHomePage,
+    String language,
+    String notes,
+    String hobbies,
+    String location,
+    String instantMessagingAddress,
+    String organizationalIdNumber,
+    String customerId,
+    String governmentIdNumber,
+    String freeBusyLocation,
+    String account,
+    String html,
+    String businessHomePage,
+    String ftpSite,
+    String computerNetworkName,
+    String gender,
+    String referredByName,
+    List<String> children
+  ) {
     super();
     setSpouseName(spouseName);
     setPersonalHomePage(personalHomePage);

@@ -125,7 +125,11 @@ public class EmailSaveRequest extends StorageModelOfEmailDto {
    * @param value 
    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
    */
-  public EmailSaveRequest(StorageFileLocation storageFile, EmailDto value, String format) {
+  public EmailSaveRequest(
+    StorageFileLocation storageFile,
+    EmailDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

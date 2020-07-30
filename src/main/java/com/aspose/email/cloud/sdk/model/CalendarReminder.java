@@ -368,7 +368,16 @@ public class CalendarReminder {
    * @param summary Defines a short summary or subject for the alarm.
    * @param trigger Specifies when an alarm will trigger.
    */
-  public CalendarReminder(String action, List<String> attachments, List<ReminderAttendee> attendees, String description, Long duration, Integer repeat, String summary, ReminderTrigger trigger) {
+  public CalendarReminder(
+    String action,
+    List<String> attachments,
+    List<ReminderAttendee> attendees,
+    String description,
+    Long duration,
+    Integer repeat,
+    String summary,
+    ReminderTrigger trigger
+  ) {
     super();
     setAction(action);
     setAttachments(attachments);

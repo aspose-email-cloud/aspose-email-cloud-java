@@ -125,7 +125,11 @@ public class ClientMessageSetIsReadRequest extends ClientMessageBaseRequest {
    * @param messageId Message identifier.             
    * @param isRead Message is read flag.             
    */
-  public ClientMessageSetIsReadRequest(StorageFileLocation accountLocation, String messageId, Boolean isRead) {
+  public ClientMessageSetIsReadRequest(
+    StorageFileLocation accountLocation,
+    String messageId,
+    Boolean isRead
+  ) {
     super();
     setAccountLocation(accountLocation);
     setMessageId(messageId);

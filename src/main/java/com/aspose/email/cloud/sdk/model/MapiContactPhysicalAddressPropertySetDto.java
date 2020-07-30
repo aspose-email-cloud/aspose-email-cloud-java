@@ -184,7 +184,11 @@ public class MapiContactPhysicalAddressPropertySetDto {
    * @param homeAddress Specifies the address of the contact&#39;s home             
    * @param otherAddress Specifies the other contact&#39;s address             
    */
-  public MapiContactPhysicalAddressPropertySetDto(MapiContactPhysicalAddressDto workAddress, MapiContactPhysicalAddressDto homeAddress, MapiContactPhysicalAddressDto otherAddress) {
+  public MapiContactPhysicalAddressPropertySetDto(
+    MapiContactPhysicalAddressDto workAddress,
+    MapiContactPhysicalAddressDto homeAddress,
+    MapiContactPhysicalAddressDto otherAddress
+  ) {
     super();
     setWorkAddress(workAddress);
     setHomeAddress(homeAddress);

@@ -215,16 +215,21 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
   /**
    * Initializes a new instance of the EmailClientAccountOauthCredentials
    * @param login Email client account login             
-   * @param discriminator 
    * @param clientId The client ID obtained from the Google Cloud Console during application registration.             
    * @param clientSecret The client secret obtained during application registration.             
    * @param refreshToken OAuth 2.0 refresh token             
    * @param requestUrl The url to obtain access token. If not specified, will try to discover from email client account host.             
    */
-  public EmailClientAccountOauthCredentials(String login, String discriminator, String clientId, String clientSecret, String refreshToken, String requestUrl) {
+  public EmailClientAccountOauthCredentials(
+    String login/*,
+    String discriminator*/,
+    String clientId,
+    String clientSecret,
+    String refreshToken,
+    String requestUrl
+  ) {
     super();
     setLogin(login);
-    setDiscriminator(discriminator);
     setClientId(clientId);
     setClientSecret(clientSecret);
     setRefreshToken(refreshToken);

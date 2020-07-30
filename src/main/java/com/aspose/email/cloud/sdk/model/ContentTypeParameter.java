@@ -152,7 +152,10 @@ public class ContentTypeParameter {
    * @param name Parameter name             
    * @param value Parameter value             
    */
-  public ContentTypeParameter(String name, String value) {
+  public ContentTypeParameter(
+    String name,
+    String value
+  ) {
     super();
     setName(name);
     setValue(value);

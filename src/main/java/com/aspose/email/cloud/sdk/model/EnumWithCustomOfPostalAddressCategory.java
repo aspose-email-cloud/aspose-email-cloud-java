@@ -152,7 +152,10 @@ public class EnumWithCustomOfPostalAddressCategory {
    * @param value Address category. Enum, available values: Home, Work, Custom
    * @param description 
    */
-  public EnumWithCustomOfPostalAddressCategory(String value, String description) {
+  public EnumWithCustomOfPostalAddressCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

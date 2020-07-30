@@ -120,12 +120,13 @@ public class MailMessageMapi extends MailMessageBase {
 
   /**
    * Initializes a new instance of the MailMessageMapi
-   * @param discriminator 
    * @param value Email message object.             
    */
-  public MailMessageMapi(String discriminator, MapiMessageDto value) {
+  public MailMessageMapi(/*
+    String discriminator*/,
+    MapiMessageDto value
+  ) {
     super();
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

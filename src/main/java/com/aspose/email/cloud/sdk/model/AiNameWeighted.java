@@ -152,7 +152,10 @@ public class AiNameWeighted {
    * @param name Name             
    * @param score Score of name             
    */
-  public AiNameWeighted(String name, Double score) {
+  public AiNameWeighted(
+    String name,
+    Double score
+  ) {
     super();
     setName(name);
     setScore(score);

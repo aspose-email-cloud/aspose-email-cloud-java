@@ -589,7 +589,7 @@ public class MapiMessageItemBaseDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -685,9 +685,26 @@ public class MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    */
-  public MapiMessageItemBaseDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator) {
+  public MapiMessageItemBaseDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties/*,
+    String discriminator*/
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -705,7 +722,6 @@ public class MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
   }
 
 }

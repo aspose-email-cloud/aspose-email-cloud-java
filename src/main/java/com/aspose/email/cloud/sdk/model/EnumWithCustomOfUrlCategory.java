@@ -152,7 +152,10 @@ public class EnumWithCustomOfUrlCategory {
    * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
    * @param description 
    */
-  public EnumWithCustomOfUrlCategory(String value, String description) {
+  public EnumWithCustomOfUrlCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

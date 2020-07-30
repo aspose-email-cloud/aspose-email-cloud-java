@@ -696,7 +696,27 @@ public class MapiContactTelephonePropertySetDto {
    * @param isdnNumber Gets or sets the integrated services digital network (ISDN) number             
    * @param pagerTelephoneNumber Gets or sets a pager telephone number             
    */
-  public MapiContactTelephonePropertySetDto(Boolean isEmpty, String defaultTelephoneNumber, Boolean useAutocomplete, String callbackTelephoneNumber, String businessTelephoneNumber, String homeTelephoneNumber, String primaryTelephoneNumber, String business2TelephoneNumber, String mobileTelephoneNumber, String radioTelephoneNumber, String carTelephoneNumber, String otherTelephoneNumber, String assistantTelephoneNumber, String home2TelephoneNumber, String ttyTddPhoneNumber, String companyMainTelephoneNumber, String telexNumber, String isdnNumber, String pagerTelephoneNumber) {
+  public MapiContactTelephonePropertySetDto(
+    Boolean isEmpty,
+    String defaultTelephoneNumber,
+    Boolean useAutocomplete,
+    String callbackTelephoneNumber,
+    String businessTelephoneNumber,
+    String homeTelephoneNumber,
+    String primaryTelephoneNumber,
+    String business2TelephoneNumber,
+    String mobileTelephoneNumber,
+    String radioTelephoneNumber,
+    String carTelephoneNumber,
+    String otherTelephoneNumber,
+    String assistantTelephoneNumber,
+    String home2TelephoneNumber,
+    String ttyTddPhoneNumber,
+    String companyMainTelephoneNumber,
+    String telexNumber,
+    String isdnNumber,
+    String pagerTelephoneNumber
+  ) {
     super();
     setIsEmpty(isEmpty);
     setDefaultTelephoneNumber(defaultTelephoneNumber);

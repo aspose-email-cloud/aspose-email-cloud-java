@@ -90,7 +90,9 @@ public class AiNameGenderHypothesisList extends ListResponseOfAiNameGenderHypoth
    * Initializes a new instance of the AiNameGenderHypothesisList
    * @param value 
    */
-  public AiNameGenderHypothesisList(List<AiNameGenderHypothesis> value) {
+  public AiNameGenderHypothesisList(
+    List<AiNameGenderHypothesis> value
+  ) {
     super();
     setValue(value);
   }

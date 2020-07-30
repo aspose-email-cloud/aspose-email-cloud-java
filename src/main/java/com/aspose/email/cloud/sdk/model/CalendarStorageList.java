@@ -90,7 +90,9 @@ public class CalendarStorageList extends ListResponseOfStorageModelOfCalendarDto
    * Initializes a new instance of the CalendarStorageList
    * @param value 
    */
-  public CalendarStorageList(List<StorageModelOfCalendarDto> value) {
+  public CalendarStorageList(
+    List<StorageModelOfCalendarDto> value
+  ) {
     super();
     setValue(value);
   }

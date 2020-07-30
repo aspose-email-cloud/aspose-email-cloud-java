@@ -280,7 +280,14 @@ public class MapiCalendarEventRecurrenceDto {
    * @param recurrencePattern Recurrence pattern.             
    * @param timeZoneStruct Time zone information for a recurring meeting.             
    */
-  public MapiCalendarEventRecurrenceDto(MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur, Date clipEnd, Date clipStart, Boolean isException, MapiCalendarRecurrencePatternDto recurrencePattern, MapiCalendarTimeZoneDto timeZoneStruct) {
+  public MapiCalendarEventRecurrenceDto(
+    MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur,
+    Date clipEnd,
+    Date clipStart,
+    Boolean isException,
+    MapiCalendarRecurrencePatternDto recurrencePattern,
+    MapiCalendarTimeZoneDto timeZoneStruct
+  ) {
     super();
     setAppointmentTimeZoneDefinitionRecur(appointmentTimeZoneDefinitionRecur);
     setClipEnd(clipEnd);

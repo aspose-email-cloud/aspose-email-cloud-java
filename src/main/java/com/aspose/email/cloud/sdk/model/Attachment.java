@@ -257,7 +257,17 @@ public class Attachment extends AttachmentBase {
    * @param nameEncoding Encoding of attachment name.             
    * @param preferredTextEncoding Preferred text encoding.             
    */
-  public Attachment(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String contentDisposition, Boolean isEmbeddedMessage, String name, String nameEncoding, String preferredTextEncoding) {
+  public Attachment(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers,
+    String contentDisposition,
+    Boolean isEmbeddedMessage,
+    String name,
+    String nameEncoding,
+    String preferredTextEncoding
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

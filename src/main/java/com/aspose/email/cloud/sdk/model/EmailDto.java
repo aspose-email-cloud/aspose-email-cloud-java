@@ -1235,7 +1235,40 @@ public class EmailDto {
    * @param to The address collection that contains the recipients of message.             
    * @param xMailer The X-Mailer the software that created the e-mail message.             
    */
-  public EmailDto(List<AlternateView> alternateViews, List<Attachment> attachments, List<MailAddress> bcc, String body, String bodyEncoding, String bodyType, List<MailAddress> cc, Date date, List<String> deliveryNotificationOptions, MailAddress from, Map<String, String> headers, String htmlBody, String htmlBodyText, Boolean isBodyHtml, Boolean isDraft, Boolean isEncrypted, Boolean isSigned, List<LinkedResource> linkedResources, String messageId, Boolean originalIsTnef, String preferredTextEncoding, String priority, List<MailAddress> readReceiptTo, List<MailAddress> replyToList, MailAddress reversePath, MailAddress sender, String sensitivity, String subject, String subjectEncoding, Long timeZoneOffset, List<MailAddress> to, String xMailer) {
+  public EmailDto(
+    List<AlternateView> alternateViews,
+    List<Attachment> attachments,
+    List<MailAddress> bcc,
+    String body,
+    String bodyEncoding,
+    String bodyType,
+    List<MailAddress> cc,
+    Date date,
+    List<String> deliveryNotificationOptions,
+    MailAddress from,
+    Map<String, String> headers,
+    String htmlBody,
+    String htmlBodyText,
+    Boolean isBodyHtml,
+    Boolean isDraft,
+    Boolean isEncrypted,
+    Boolean isSigned,
+    List<LinkedResource> linkedResources,
+    String messageId,
+    Boolean originalIsTnef,
+    String preferredTextEncoding,
+    String priority,
+    List<MailAddress> readReceiptTo,
+    List<MailAddress> replyToList,
+    MailAddress reversePath,
+    MailAddress sender,
+    String sensitivity,
+    String subject,
+    String subjectEncoding,
+    Long timeZoneOffset,
+    List<MailAddress> to,
+    String xMailer
+  ) {
     super();
     setAlternateViews(alternateViews);
     setAttachments(attachments);

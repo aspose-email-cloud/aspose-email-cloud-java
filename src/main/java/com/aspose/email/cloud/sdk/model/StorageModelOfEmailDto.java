@@ -152,7 +152,10 @@ public class StorageModelOfEmailDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfEmailDto(StorageFileLocation storageFile, EmailDto value) {
+  public StorageModelOfEmailDto(
+    StorageFileLocation storageFile,
+    EmailDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

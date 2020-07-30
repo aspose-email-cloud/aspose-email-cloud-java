@@ -324,7 +324,15 @@ public class MapiCalendarTimeZoneInfoDto {
    * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
    * @param year Year in which this rule is scheduled to take effect.             
    */
-  public MapiCalendarTimeZoneInfoDto(Integer bias, Integer daylightBias, MapiCalendarTimeZoneRuleDto daylightDate, Integer standardBias, MapiCalendarTimeZoneRuleDto standardDate, List<String> timeZoneFlags, Integer year) {
+  public MapiCalendarTimeZoneInfoDto(
+    Integer bias,
+    Integer daylightBias,
+    MapiCalendarTimeZoneRuleDto daylightDate,
+    Integer standardBias,
+    MapiCalendarTimeZoneRuleDto standardDate,
+    List<String> timeZoneFlags,
+    Integer year
+  ) {
     super();
     setBias(bias);
     setDaylightBias(daylightBias);

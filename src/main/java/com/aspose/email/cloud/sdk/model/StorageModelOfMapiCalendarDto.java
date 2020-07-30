@@ -152,7 +152,10 @@ public class StorageModelOfMapiCalendarDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfMapiCalendarDto(StorageFileLocation storageFile, MapiCalendarDto value) {
+  public StorageModelOfMapiCalendarDto(
+    StorageFileLocation storageFile,
+    MapiCalendarDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

@@ -90,7 +90,9 @@ public class AiNameExtractedList extends ListResponseOfAiNameExtracted {
    * Initializes a new instance of the AiNameExtractedList
    * @param value 
    */
-  public AiNameExtractedList(List<AiNameExtracted> value) {
+  public AiNameExtractedList(
+    List<AiNameExtracted> value
+  ) {
     super();
     setValue(value);
   }

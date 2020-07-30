@@ -90,7 +90,9 @@ public class MailMessageBaseList extends ListResponseOfMailMessageBase {
    * Initializes a new instance of the MailMessageBaseList
    * @param value 
    */
-  public MailMessageBaseList(List<MailMessageBase> value) {
+  public MailMessageBaseList(
+    List<MailMessageBase> value
+  ) {
     super();
     setValue(value);
   }

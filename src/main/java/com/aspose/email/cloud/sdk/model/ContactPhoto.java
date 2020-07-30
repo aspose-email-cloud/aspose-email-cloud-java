@@ -123,7 +123,7 @@ public class ContactPhoto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -177,13 +177,15 @@ public class ContactPhoto {
    * Initializes a new instance of the ContactPhoto
    * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
-   * @param discriminator 
    */
-  public ContactPhoto(String photoImageFormat, String base64Data, String discriminator) {
+  public ContactPhoto(
+    String photoImageFormat,
+    String base64Data/*,
+    String discriminator*/
+  ) {
     super();
     setPhotoImageFormat(photoImageFormat);
     setBase64Data(base64Data);
-    setDiscriminator(discriminator);
   }
 
 }

@@ -176,7 +176,10 @@ public class FilesUploadResult {
    * @param uploaded List of uploaded file names
    * @param errors List of errors.
    */
-  public FilesUploadResult(List<String> uploaded, List<Error> errors) {
+  public FilesUploadResult(
+    List<String> uploaded,
+    List<Error> errors
+  ) {
     super();
     setUploaded(uploaded);
     setErrors(errors);

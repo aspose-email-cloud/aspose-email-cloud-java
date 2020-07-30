@@ -240,7 +240,12 @@ public class MapiCalendarAttendeesDto {
    * @param notAllowPropose Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
    * @param responseRequested Value indicating whether a response is requested to a Message object.             
    */
-  public MapiCalendarAttendeesDto(List<MapiRecipientDto> appointmentRecipients, List<MapiRecipientDto> appointmentUnsendableRecipients, Boolean notAllowPropose, Boolean responseRequested) {
+  public MapiCalendarAttendeesDto(
+    List<MapiRecipientDto> appointmentRecipients,
+    List<MapiRecipientDto> appointmentUnsendableRecipients,
+    Boolean notAllowPropose,
+    Boolean responseRequested
+  ) {
     super();
     setAppointmentRecipients(appointmentRecipients);
     setAppointmentUnsendableRecipients(appointmentUnsendableRecipients);

@@ -157,7 +157,12 @@ public class ClientThreadSetIsReadRequest extends ClientThreadBaseRequest {
    * @param isRead Message is read flag.             
    * @param folder Folder on email server, where thread is stored.             
    */
-  public ClientThreadSetIsReadRequest(StorageFileLocation accountLocation, String threadId, Boolean isRead, String folder) {
+  public ClientThreadSetIsReadRequest(
+    StorageFileLocation accountLocation,
+    String threadId,
+    Boolean isRead,
+    String folder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setThreadId(threadId);

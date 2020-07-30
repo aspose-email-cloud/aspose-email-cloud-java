@@ -152,7 +152,10 @@ public class EnumWithCustomOfAssociatedPersonCategory {
    * @param value Associated person&#39;s category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
    * @param description 
    */
-  public EnumWithCustomOfAssociatedPersonCategory(String value, String description) {
+  public EnumWithCustomOfAssociatedPersonCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

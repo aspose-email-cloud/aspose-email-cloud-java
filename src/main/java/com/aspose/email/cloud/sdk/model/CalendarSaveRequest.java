@@ -125,7 +125,11 @@ public class CalendarSaveRequest extends StorageModelOfCalendarDto {
    * @param value 
    * @param format Calendar file format Enum, available values: Ics, Msg
    */
-  public CalendarSaveRequest(StorageFileLocation storageFile, CalendarDto value, String format) {
+  public CalendarSaveRequest(
+    StorageFileLocation storageFile,
+    CalendarDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

@@ -123,7 +123,10 @@ public class ClientMessageSendRequest extends ClientAccountBaseRequest {
    * @param accountLocation Email client account configuration location on storage.             
    * @param message Message to send             
    */
-  public ClientMessageSendRequest(StorageFileLocation accountLocation, MailMessageBase message) {
+  public ClientMessageSendRequest(
+    StorageFileLocation accountLocation,
+    MailMessageBase message
+  ) {
     super();
     setAccountLocation(accountLocation);
     setMessage(message);

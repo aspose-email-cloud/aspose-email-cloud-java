@@ -122,13 +122,15 @@ public class MapiBooleanPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiBooleanPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Property value             
    */
-  public MapiBooleanPropertyDto(MapiPropertyDescriptor descriptor, String discriminator, Boolean value) {
+  public MapiBooleanPropertyDto(
+    MapiPropertyDescriptor descriptor/*,
+    String discriminator*/,
+    Boolean value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

@@ -123,7 +123,10 @@ public class ClientFolderDeleteRequest extends ClientAccountBaseRequest {
    * @param accountLocation Email client account configuration location on storage.             
    * @param folder Path to folder to delete.             
    */
-  public ClientFolderDeleteRequest(StorageFileLocation accountLocation, String folder) {
+  public ClientFolderDeleteRequest(
+    StorageFileLocation accountLocation,
+    String folder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setFolder(folder);

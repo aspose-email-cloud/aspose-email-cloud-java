@@ -120,7 +120,9 @@ public class ValueTOfString {
    * Initializes a new instance of the ValueTOfString
    * @param value 
    */
-  public ValueTOfString(String value) {
+  public ValueTOfString(
+    String value
+  ) {
     super();
     setValue(value);
   }

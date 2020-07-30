@@ -125,7 +125,11 @@ public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
    * @param threadId Thread identifier.             
    * @param destinationFolder Email account folder to move thread to.             
    */
-  public ClientThreadMoveRequest(StorageFileLocation accountLocation, String threadId, String destinationFolder) {
+  public ClientThreadMoveRequest(
+    StorageFileLocation accountLocation,
+    String threadId,
+    String destinationFolder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setThreadId(threadId);

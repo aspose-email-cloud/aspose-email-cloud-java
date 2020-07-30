@@ -152,7 +152,10 @@ public class StorageFolderLocation {
    * @param storage A storage name             
    * @param folderPath A path to a folder in specified storage             
    */
-  public StorageFolderLocation(String storage, String folderPath) {
+  public StorageFolderLocation(
+    String storage,
+    String folderPath
+  ) {
     super();
     setStorage(storage);
     setFolderPath(folderPath);

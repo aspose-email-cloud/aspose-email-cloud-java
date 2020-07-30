@@ -152,7 +152,10 @@ public class ObjectExist {
    * @param exists Indicates that the file or folder exists.
    * @param isFolder True if it is a folder, false if it is a file.
    */
-  public ObjectExist(Boolean exists, Boolean isFolder) {
+  public ObjectExist(
+    Boolean exists,
+    Boolean isFolder
+  ) {
     super();
     setExists(exists);
     setIsFolder(isFolder);

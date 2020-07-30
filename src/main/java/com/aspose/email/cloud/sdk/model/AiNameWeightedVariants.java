@@ -164,7 +164,10 @@ public class AiNameWeightedVariants {
    * @param names List of name variations             
    * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
    */
-  public AiNameWeightedVariants(List<AiNameWeighted> names, String comments) {
+  public AiNameWeightedVariants(
+    List<AiNameWeighted> names,
+    String comments
+  ) {
     super();
     setNames(names);
     setComments(comments);

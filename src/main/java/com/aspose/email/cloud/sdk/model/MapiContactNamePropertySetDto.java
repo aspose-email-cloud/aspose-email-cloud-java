@@ -408,7 +408,18 @@ public class MapiContactNamePropertySetDto {
    * @param nickname Nickname of the contact             
    * @param surname Surname (family name) of the contact             
    */
-  public MapiContactNamePropertySetDto(String displayName, String displayNamePrefix, String fileUnder, Long fileUnderId, String generation, String givenName, String initials, String middleName, String nickname, String surname) {
+  public MapiContactNamePropertySetDto(
+    String displayName,
+    String displayNamePrefix,
+    String fileUnder,
+    Long fileUnderId,
+    String generation,
+    String givenName,
+    String initials,
+    String middleName,
+    String nickname,
+    String surname
+  ) {
     super();
     setDisplayName(displayName);
     setDisplayNamePrefix(displayNamePrefix);

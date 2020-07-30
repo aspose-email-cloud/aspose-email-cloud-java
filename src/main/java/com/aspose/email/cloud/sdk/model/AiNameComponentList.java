@@ -90,7 +90,9 @@ public class AiNameComponentList extends ListResponseOfAiNameComponent {
    * Initializes a new instance of the AiNameComponentList
    * @param value 
    */
-  public AiNameComponentList(List<AiNameComponent> value) {
+  public AiNameComponentList(
+    List<AiNameComponent> value
+  ) {
     super();
     setValue(value);
   }

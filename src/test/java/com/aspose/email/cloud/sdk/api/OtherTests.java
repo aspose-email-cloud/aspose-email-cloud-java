@@ -37,7 +37,7 @@ public class OtherTests extends TestBase {
             551,
             "SSLAuto",
             "SMTP",
-            new EmailClientAccountPasswordCredentials("login", null, "password"),
+            new EmailClientAccountPasswordCredentials("login", "password"),
             null);
         String fileName = UUID.randomUUID().toString() + ".account";
         api.client().account().save(
@@ -59,14 +59,13 @@ public class OtherTests extends TestBase {
         EmailClientMultiAccount multiAccount = new EmailClientMultiAccount(
             Arrays.asList(
                 new EmailClientAccount("imap.gmail.com", 993, "SSLAuto", "IMAP",
-                    new EmailClientAccountPasswordCredentials("example@gmail.com", null,
-                        "password"), null),
+                    new EmailClientAccountPasswordCredentials("example@gmail.com", "password"),
+                    null),
                 new EmailClientAccount("exchange.outlook.com", 443, "SSLAuto", "EWS",
-                    new EmailClientAccountOauthCredentials(
-                        "example@outlook.com", null, "clientId", "clientSecret", "refreshToken",
-                        null), null)),
+                    new EmailClientAccountOauthCredentials("example@outlook.com", "clientId",
+                        "clientSecret", "refreshToken", null), null)),
             new EmailClientAccount("smtp.gmail.com", 465, "SSLAuto", "SMTP",
-                new EmailClientAccountPasswordCredentials("example@gmail.com", null, "password"),
+                new EmailClientAccountPasswordCredentials("example@gmail.com", "password"),
                 null));
         String fileName = UUID.randomUUID().toString() + ".multi.account";
         api.client().account().saveMulti(new EmailClientMultiAccountSaveRequest(

@@ -125,7 +125,11 @@ public class ClientMessageDeleteRequest extends ClientMessageBaseRequest {
    * @param messageId Message identifier.             
    * @param folder Folder to delete message from.             
    */
-  public ClientMessageDeleteRequest(StorageFileLocation accountLocation, String messageId, String folder) {
+  public ClientMessageDeleteRequest(
+    StorageFileLocation accountLocation,
+    String messageId,
+    String folder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setMessageId(messageId);

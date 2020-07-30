@@ -94,7 +94,7 @@ public class MapiPropertyDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -145,12 +145,13 @@ public class MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    */
-  public MapiPropertyDto(MapiPropertyDescriptor descriptor, String discriminator) {
+  public MapiPropertyDto(
+    MapiPropertyDescriptor descriptor/*,
+    String discriminator*/
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
   }
 
 }

@@ -152,7 +152,10 @@ public class AiNameFormatted {
    * @param name Formatted name value             
    * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
    */
-  public AiNameFormatted(String name, String comments) {
+  public AiNameFormatted(
+    String name,
+    String comments
+  ) {
     super();
     setName(name);
     setComments(comments);

@@ -152,7 +152,10 @@ public class EnumWithCustomOfEmailAddressCategory {
    * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @param description 
    */
-  public EnumWithCustomOfEmailAddressCategory(String value, String description) {
+  public EnumWithCustomOfEmailAddressCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

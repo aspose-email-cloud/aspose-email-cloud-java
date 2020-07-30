@@ -152,7 +152,10 @@ public class MapiMessageAsFileRequest {
    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
    * @param value MAPI message model.             
    */
-  public MapiMessageAsFileRequest(String format, MapiMessageDto value) {
+  public MapiMessageAsFileRequest(
+    String format,
+    MapiMessageDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

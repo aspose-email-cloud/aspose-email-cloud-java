@@ -152,7 +152,10 @@ public class ContactAsFileRequest {
    * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @param value Contact model.             
    */
-  public ContactAsFileRequest(String format, ContactDto value) {
+  public ContactAsFileRequest(
+    String format,
+    ContactDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

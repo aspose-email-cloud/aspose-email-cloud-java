@@ -122,13 +122,15 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiLegacyFreeBusyPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
    */
-  public MapiLegacyFreeBusyPropertyDto(MapiPropertyDescriptor descriptor, String discriminator, String value) {
+  public MapiLegacyFreeBusyPropertyDto(
+    MapiPropertyDescriptor descriptor/*,
+    String discriminator*/,
+    String value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

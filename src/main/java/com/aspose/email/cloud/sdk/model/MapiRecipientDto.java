@@ -216,7 +216,12 @@ public class MapiRecipientDto {
    * @param displayName Display name of the message recipient or sender.             
    * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
    */
-  public MapiRecipientDto(String emailAddress, String addressType, String displayName, String recipientType) {
+  public MapiRecipientDto(
+    String emailAddress,
+    String addressType,
+    String displayName,
+    String recipientType
+  ) {
     super();
     setEmailAddress(emailAddress);
     setAddressType(addressType);

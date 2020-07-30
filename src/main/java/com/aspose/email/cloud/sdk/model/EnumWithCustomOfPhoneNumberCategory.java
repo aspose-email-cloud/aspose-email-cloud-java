@@ -152,7 +152,10 @@ public class EnumWithCustomOfPhoneNumberCategory {
    * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
    * @param description 
    */
-  public EnumWithCustomOfPhoneNumberCategory(String value, String description) {
+  public EnumWithCustomOfPhoneNumberCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

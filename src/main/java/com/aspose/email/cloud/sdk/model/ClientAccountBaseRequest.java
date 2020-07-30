@@ -120,7 +120,9 @@ public class ClientAccountBaseRequest {
    * Initializes a new instance of the ClientAccountBaseRequest
    * @param accountLocation Email client account configuration location on storage.             
    */
-  public ClientAccountBaseRequest(StorageFileLocation accountLocation) {
+  public ClientAccountBaseRequest(
+    StorageFileLocation accountLocation
+  ) {
     super();
     setAccountLocation(accountLocation);
   }

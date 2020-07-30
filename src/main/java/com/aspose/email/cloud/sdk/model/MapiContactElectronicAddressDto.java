@@ -280,7 +280,14 @@ public class MapiContactElectronicAddressDto {
    * @param isEmpty Shows if MapiContactElectronicAddress is empty
    * @param originalDisplayName SMTP e-mail address that corresponds to the e-mail address for the Contact object.
    */
-  public MapiContactElectronicAddressDto(String addressType, String displayName, String emailAddress, String faxNumber, Boolean isEmpty, String originalDisplayName) {
+  public MapiContactElectronicAddressDto(
+    String addressType,
+    String displayName,
+    String emailAddress,
+    String faxNumber,
+    Boolean isEmpty,
+    String originalDisplayName
+  ) {
     super();
     setAddressType(addressType);
     setDisplayName(displayName);

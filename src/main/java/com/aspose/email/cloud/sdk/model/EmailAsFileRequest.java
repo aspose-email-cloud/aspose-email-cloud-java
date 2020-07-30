@@ -152,7 +152,10 @@ public class EmailAsFileRequest {
    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
    * @param value Email model.             
    */
-  public EmailAsFileRequest(String format, EmailDto value) {
+  public EmailAsFileRequest(
+    String format,
+    EmailDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

@@ -228,7 +228,12 @@ public class EmailThread {
    * @param messages List of messages in thread             
    * @param folder Thread folder location             
    */
-  public EmailThread(String id, String subject, List<EmailDto> messages, String folder) {
+  public EmailThread(
+    String id,
+    String subject,
+    List<EmailDto> messages,
+    String folder
+  ) {
     super();
     setId(id);
     setSubject(subject);

@@ -184,7 +184,11 @@ public class PhoneNumber {
    * @param number Phone number.             
    * @param preferred Defines whether phone number is preferred.             
    */
-  public PhoneNumber(EnumWithCustomOfPhoneNumberCategory category, String number, Boolean preferred) {
+  public PhoneNumber(
+    EnumWithCustomOfPhoneNumberCategory category,
+    String number,
+    Boolean preferred
+  ) {
     super();
     setCategory(category);
     setNumber(number);

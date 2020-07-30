@@ -193,7 +193,11 @@ public class AiBcrParseStorageRequest {
    * @param images Images to parse.             
    * @param options Recognition options.             
    */
-  public AiBcrParseStorageRequest(StorageFolderLocation outFolder, List<AiBcrImageStorageFile> images, AiBcrOptions options) {
+  public AiBcrParseStorageRequest(
+    StorageFolderLocation outFolder,
+    List<AiBcrImageStorageFile> images,
+    AiBcrOptions options
+  ) {
     super();
     setOutFolder(outFolder);
     setImages(images);

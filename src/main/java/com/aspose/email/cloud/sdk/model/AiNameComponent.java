@@ -216,7 +216,12 @@ public class AiNameComponent {
    * @param score Score from 0.0 to 1.0             
    * @param position Component position from 0             
    */
-  public AiNameComponent(String value, String category, Double score, Integer position) {
+  public AiNameComponent(
+    String value,
+    String category,
+    Double score,
+    Integer position
+  ) {
     super();
     setValue(value);
     setCategory(category);

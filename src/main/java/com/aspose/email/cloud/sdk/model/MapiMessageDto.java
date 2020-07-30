@@ -923,7 +923,6 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    * @param messageBody Message text             
    * @param clientSubmitTime Date and time the message sender submitted a message.             
    * @param conversationTopic Topic of the first message in a conversation thread.             
@@ -950,7 +949,50 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param sentRepresentingSmtpAddress E-mail address for the messaging user represented by the sender.
    * @param transportMessageHeaders Transport-specific message envelope information.
    */
-  public MapiMessageDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, String messageBody, Date clientSubmitTime, String conversationTopic, Date deliveryTime, String displayBcc, String displayCc, String displayName, String displayNamePrefix, String displayTo, List<String> flags, Map<String, String> headers, String internetMessageId, String messageFormat, String normalizedSubject, Boolean readReceiptRequested, String replyTo, String senderAddressType, String senderEmailAddress, String senderName, String senderSmtpAddress, String sentRepresentingAddressType, String sentRepresentingEmailAddress, String sentRepresentingName, String sentRepresentingSmtpAddress, String transportMessageHeaders) {
+  public MapiMessageDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties/*,
+    String discriminator*/,
+    String messageBody,
+    Date clientSubmitTime,
+    String conversationTopic,
+    Date deliveryTime,
+    String displayBcc,
+    String displayCc,
+    String displayName,
+    String displayNamePrefix,
+    String displayTo,
+    List<String> flags,
+    Map<String, String> headers,
+    String internetMessageId,
+    String messageFormat,
+    String normalizedSubject,
+    Boolean readReceiptRequested,
+    String replyTo,
+    String senderAddressType,
+    String senderEmailAddress,
+    String senderName,
+    String senderSmtpAddress,
+    String sentRepresentingAddressType,
+    String sentRepresentingEmailAddress,
+    String sentRepresentingName,
+    String sentRepresentingSmtpAddress,
+    String transportMessageHeaders
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -968,7 +1010,6 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
     setMessageBody(messageBody);
     setClientSubmitTime(clientSubmitTime);
     setConversationTopic(conversationTopic);

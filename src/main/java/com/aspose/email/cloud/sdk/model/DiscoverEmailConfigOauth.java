@@ -223,7 +223,15 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param refreshToken OAuth refresh token.             
    * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
    */
-  public DiscoverEmailConfigOauth(String address, Boolean fastProcessing, String login, String clientId, String clientSecret, String refreshToken, String requestUrl) {
+  public DiscoverEmailConfigOauth(
+    String address,
+    Boolean fastProcessing,
+    String login,
+    String clientId,
+    String clientSecret,
+    String refreshToken,
+    String requestUrl
+  ) {
     super();
     setAddress(address);
     setFastProcessing(fastProcessing);

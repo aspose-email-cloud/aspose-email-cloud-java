@@ -312,7 +312,15 @@ public class MapiContactProfessionalPropertySetDto {
    * @param assistant Gets or sets the name of the contact&#39;s assistant             
    * @param profession Gets or sets the profession of the contact             
    */
-  public MapiContactProfessionalPropertySetDto(String title, String companyName, String departmentName, String officeLocation, String managerName, String assistant, String profession) {
+  public MapiContactProfessionalPropertySetDto(
+    String title,
+    String companyName,
+    String departmentName,
+    String officeLocation,
+    String managerName,
+    String assistant,
+    String profession
+  ) {
     super();
     setTitle(title);
     setCompanyName(companyName);

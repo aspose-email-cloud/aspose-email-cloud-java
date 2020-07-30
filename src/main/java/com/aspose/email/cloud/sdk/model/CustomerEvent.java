@@ -152,7 +152,10 @@ public class CustomerEvent {
    * @param category Event category.             
    * @param date Event date.             
    */
-  public CustomerEvent(EnumWithCustomOfEventCategory category, Date date) {
+  public CustomerEvent(
+    EnumWithCustomOfEventCategory category,
+    Date date
+  ) {
     super();
     setCategory(category);
     setDate(date);

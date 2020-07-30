@@ -173,7 +173,14 @@ public class AlternateView extends AttachmentBase {
    * @param baseUri Base URI.             
    * @param linkedResources Embedded resources referred to by this alternate view.             
    */
-  public AlternateView(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String baseUri, List<LinkedResource> linkedResources) {
+  public AlternateView(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers,
+    String baseUri,
+    List<LinkedResource> linkedResources
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

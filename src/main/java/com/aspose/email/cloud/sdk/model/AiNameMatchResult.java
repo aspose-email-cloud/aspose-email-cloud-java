@@ -164,7 +164,10 @@ public class AiNameMatchResult {
    * @param similarity Similarity score             
    * @param mismatches Detailed description of mismatches             
    */
-  public AiNameMatchResult(Double similarity, List<AiNameMismatch> mismatches) {
+  public AiNameMatchResult(
+    Double similarity,
+    List<AiNameMismatch> mismatches
+  ) {
     super();
     setSimilarity(similarity);
     setMismatches(mismatches);

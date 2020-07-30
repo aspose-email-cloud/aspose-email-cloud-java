@@ -157,7 +157,12 @@ public class ClientMessageMoveRequest extends ClientMessageBaseRequest {
    * @param sourceFolder Folder to move message from.             
    * @param destinationFolder Folder to move message to.             
    */
-  public ClientMessageMoveRequest(StorageFileLocation accountLocation, String messageId, String sourceFolder, String destinationFolder) {
+  public ClientMessageMoveRequest(
+    StorageFileLocation accountLocation,
+    String messageId,
+    String sourceFolder,
+    String destinationFolder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setMessageId(messageId);

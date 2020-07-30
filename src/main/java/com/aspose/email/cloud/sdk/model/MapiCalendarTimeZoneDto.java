@@ -164,7 +164,10 @@ public class MapiCalendarTimeZoneDto {
    * @param keyName Human-readable description of the time zone.             
    * @param timeZoneRules Time zone rules             
    */
-  public MapiCalendarTimeZoneDto(String keyName, List<MapiCalendarTimeZoneInfoDto> timeZoneRules) {
+  public MapiCalendarTimeZoneDto(
+    String keyName,
+    List<MapiCalendarTimeZoneInfoDto> timeZoneRules
+  ) {
     super();
     setKeyName(keyName);
     setTimeZoneRules(timeZoneRules);

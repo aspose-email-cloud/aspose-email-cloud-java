@@ -184,7 +184,11 @@ public class InstantMessengerAddress {
    * @param address Address.             
    * @param preferred Determines whether this address is preferred.             
    */
-  public InstantMessengerAddress(EnumWithCustomOfInstantMessengerCategory category, String address, Boolean preferred) {
+  public InstantMessengerAddress(
+    EnumWithCustomOfInstantMessengerCategory category,
+    String address,
+    Boolean preferred
+  ) {
     super();
     setCategory(category);
     setAddress(address);

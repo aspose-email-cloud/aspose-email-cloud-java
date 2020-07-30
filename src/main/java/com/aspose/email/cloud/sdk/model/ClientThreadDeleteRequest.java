@@ -125,7 +125,11 @@ public class ClientThreadDeleteRequest extends ClientThreadBaseRequest {
    * @param threadId Thread identifier.             
    * @param folder Folder on email server, where thread is stored.             
    */
-  public ClientThreadDeleteRequest(StorageFileLocation accountLocation, String threadId, String folder) {
+  public ClientThreadDeleteRequest(
+    StorageFileLocation accountLocation,
+    String threadId,
+    String folder
+  ) {
     super();
     setAccountLocation(accountLocation);
     setThreadId(threadId);

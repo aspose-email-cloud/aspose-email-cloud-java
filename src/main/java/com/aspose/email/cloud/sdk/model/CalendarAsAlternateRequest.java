@@ -184,7 +184,11 @@ public class CalendarAsAlternateRequest {
    * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
    * @param sequenceId iCalendar sequence id             
    */
-  public CalendarAsAlternateRequest(CalendarDto value, String action, String sequenceId) {
+  public CalendarAsAlternateRequest(
+    CalendarDto value,
+    String action,
+    String sequenceId
+  ) {
     super();
     setValue(value);
     setAction(action);

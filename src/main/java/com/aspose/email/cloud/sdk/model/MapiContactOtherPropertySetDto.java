@@ -344,7 +344,16 @@ public class MapiContactOtherPropertySetDto {
    * @param userField3 Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
    * @param userField4 Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
    */
-  public MapiContactOtherPropertySetDto(Boolean _private, Boolean journal, Date reminderTime, String reminderTopic, String userField1, String userField2, String userField3, String userField4) {
+  public MapiContactOtherPropertySetDto(
+    Boolean _private,
+    Boolean journal,
+    Date reminderTime,
+    String reminderTopic,
+    String userField1,
+    String userField2,
+    String userField3,
+    String userField4
+  ) {
     super();
     setPrivate(_private);
     setJournal(journal);

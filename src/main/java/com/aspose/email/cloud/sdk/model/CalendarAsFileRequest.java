@@ -152,7 +152,10 @@ public class CalendarAsFileRequest {
    * @param format Calendar file format Enum, available values: Ics, Msg
    * @param value iCalendar model             
    */
-  public CalendarAsFileRequest(String format, CalendarDto value) {
+  public CalendarAsFileRequest(
+    String format,
+    CalendarDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

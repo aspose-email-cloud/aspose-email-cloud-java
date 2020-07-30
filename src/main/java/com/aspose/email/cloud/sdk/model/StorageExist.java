@@ -120,7 +120,9 @@ public class StorageExist {
    * Initializes a new instance of the StorageExist
    * @param exists Shows that the storage exists.             
    */
-  public StorageExist(Boolean exists) {
+  public StorageExist(
+    Boolean exists
+  ) {
     super();
     setExists(exists);
   }

@@ -260,7 +260,13 @@ public class ContentType {
    * @param name Name parameter.             
    * @param parameters Full list of parameters             
    */
-  public ContentType(String boundary, String charSet, String mediaType, String name, List<ContentTypeParameter> parameters) {
+  public ContentType(
+    String boundary,
+    String charSet,
+    String mediaType,
+    String name,
+    List<ContentTypeParameter> parameters
+  ) {
     super();
     setBoundary(boundary);
     setCharSet(charSet);

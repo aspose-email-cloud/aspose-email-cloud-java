@@ -190,18 +190,25 @@ public class MonthlyRecurrencePatternDto extends RecurrencePatternDto {
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
    * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param discriminator 
    * @param startDay Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    * @param startOffset Start offset.             
    * @param startPosition Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
    */
-  public MonthlyRecurrencePatternDto(Integer interval, Integer occurs, Date endDate, String weekStart, String discriminator, String startDay, Integer startOffset, String startPosition) {
+  public MonthlyRecurrencePatternDto(
+    Integer interval,
+    Integer occurs,
+    Date endDate,
+    String weekStart/*,
+    String discriminator*/,
+    String startDay,
+    Integer startOffset,
+    String startPosition
+  ) {
     super();
     setInterval(interval);
     setOccurs(occurs);
     setEndDate(endDate);
     setWeekStart(weekStart);
-    setDiscriminator(discriminator);
     setStartDay(startDay);
     setStartOffset(startOffset);
     setStartPosition(startPosition);

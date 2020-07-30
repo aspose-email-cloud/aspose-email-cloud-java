@@ -125,7 +125,11 @@ public class MapiCalendarSaveRequest extends StorageModelOfMapiCalendarDto {
    * @param value 
    * @param format Calendar file format Enum, available values: Ics, Msg
    */
-  public MapiCalendarSaveRequest(StorageFileLocation storageFile, MapiCalendarDto value, String format) {
+  public MapiCalendarSaveRequest(
+    StorageFileLocation storageFile,
+    MapiCalendarDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

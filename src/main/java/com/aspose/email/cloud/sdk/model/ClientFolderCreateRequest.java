@@ -155,7 +155,11 @@ public class ClientFolderCreateRequest extends ClientAccountBaseRequest {
    * @param parentFolder Path to parent folder.             
    * @param folderName Folder name.             
    */
-  public ClientFolderCreateRequest(StorageFileLocation accountLocation, String parentFolder, String folderName) {
+  public ClientFolderCreateRequest(
+    StorageFileLocation accountLocation,
+    String parentFolder,
+    String folderName
+  ) {
     super();
     setAccountLocation(accountLocation);
     setParentFolder(parentFolder);

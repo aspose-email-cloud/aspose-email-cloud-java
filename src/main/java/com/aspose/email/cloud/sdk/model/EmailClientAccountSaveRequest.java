@@ -92,7 +92,10 @@ public class EmailClientAccountSaveRequest extends StorageModelOfEmailClientAcco
    * @param storageFile 
    * @param value 
    */
-  public EmailClientAccountSaveRequest(StorageFileLocation storageFile, EmailClientAccount value) {
+  public EmailClientAccountSaveRequest(
+    StorageFileLocation storageFile,
+    EmailClientAccount value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

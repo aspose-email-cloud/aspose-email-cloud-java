@@ -152,7 +152,10 @@ public class DiscUsage {
    * @param usedSize Application used disc space.
    * @param totalSize Total disc space.
    */
-  public DiscUsage(Long usedSize, Long totalSize) {
+  public DiscUsage(
+    Long usedSize,
+    Long totalSize
+  ) {
     super();
     setUsedSize(usedSize);
     setTotalSize(totalSize);

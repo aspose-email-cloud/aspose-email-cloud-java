@@ -152,7 +152,10 @@ public class StorageModelOfCalendarDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfCalendarDto(StorageFileLocation storageFile, CalendarDto value) {
+  public StorageModelOfCalendarDto(
+    StorageFileLocation storageFile,
+    CalendarDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

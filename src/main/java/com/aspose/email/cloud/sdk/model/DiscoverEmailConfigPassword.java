@@ -127,7 +127,12 @@ public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRequest {
    * @param login Email account login. If not specified, address used as a login.             
    * @param password Email account password.             
    */
-  public DiscoverEmailConfigPassword(String address, Boolean fastProcessing, String login, String password) {
+  public DiscoverEmailConfigPassword(
+    String address,
+    Boolean fastProcessing,
+    String login,
+    String password
+  ) {
     super();
     setAddress(address);
     setFastProcessing(fastProcessing);

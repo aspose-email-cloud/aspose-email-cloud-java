@@ -120,7 +120,9 @@ public class AiBcrImage {
    * Initializes a new instance of the AiBcrImage
    * @param isSingle Determines that image contains single VCard or more.             
    */
-  public AiBcrImage(Boolean isSingle) {
+  public AiBcrImage(
+    Boolean isSingle
+  ) {
     super();
     setIsSingle(isSingle);
   }

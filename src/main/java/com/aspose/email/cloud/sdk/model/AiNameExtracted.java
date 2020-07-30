@@ -164,7 +164,10 @@ public class AiNameExtracted {
    * @param name Extracted name components             
    * @param score Extracted name score             
    */
-  public AiNameExtracted(List<AiNameExtractedComponent> name, Double score) {
+  public AiNameExtracted(
+    List<AiNameExtractedComponent> name,
+    Double score
+  ) {
     super();
     setName(name);
     setScore(score);

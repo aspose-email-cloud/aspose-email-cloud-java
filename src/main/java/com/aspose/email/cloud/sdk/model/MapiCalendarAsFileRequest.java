@@ -152,7 +152,10 @@ public class MapiCalendarAsFileRequest {
    * @param format Calendar file format Enum, available values: Ics, Msg
    * @param value MAPI calendar model.             
    */
-  public MapiCalendarAsFileRequest(String format, MapiCalendarDto value) {
+  public MapiCalendarAsFileRequest(
+    String format,
+    MapiCalendarDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

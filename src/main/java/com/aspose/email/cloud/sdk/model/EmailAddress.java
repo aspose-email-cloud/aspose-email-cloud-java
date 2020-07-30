@@ -280,7 +280,14 @@ public class EmailAddress {
    * @param address Email address.             
    * @param originalAddressString The original e-mail address string             
    */
-  public EmailAddress(EnumWithCustomOfEmailAddressCategory category, String displayName, Boolean preferred, String routingType, String address, String originalAddressString) {
+  public EmailAddress(
+    EnumWithCustomOfEmailAddressCategory category,
+    String displayName,
+    Boolean preferred,
+    String routingType,
+    String address,
+    String originalAddressString
+  ) {
     super();
     setCategory(category);
     setDisplayName(displayName);

@@ -248,7 +248,13 @@ public class StorageFile {
    * @param size File or folder size.
    * @param path File or folder path.
    */
-  public StorageFile(String name, Boolean isFolder, Date modifiedDate, Long size, String path) {
+  public StorageFile(
+    String name,
+    Boolean isFolder,
+    Date modifiedDate,
+    Long size,
+    String path
+  ) {
     super();
     setName(name);
     setIsFolder(isFolder);

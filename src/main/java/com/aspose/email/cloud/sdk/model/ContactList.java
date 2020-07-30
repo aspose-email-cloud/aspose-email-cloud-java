@@ -90,7 +90,9 @@ public class ContactList extends ListResponseOfContactDto {
    * Initializes a new instance of the ContactList
    * @param value 
    */
-  public ContactList(List<ContactDto> value) {
+  public ContactList(
+    List<ContactDto> value
+  ) {
     super();
     setValue(value);
   }

@@ -184,7 +184,11 @@ public class AiNameMismatch {
    * @param similarity Similarity score             
    * @param explanation Explanation or mismatch subtype             
    */
-  public AiNameMismatch(String category, Double similarity, String explanation) {
+  public AiNameMismatch(
+    String category,
+    Double similarity,
+    String explanation
+  ) {
     super();
     setCategory(category);
     setSimilarity(similarity);

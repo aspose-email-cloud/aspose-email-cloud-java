@@ -378,7 +378,17 @@ public class MapiCalendarTimeZoneRuleDto {
    * @param seconds Seconds.             
    * @param year Year.             
    */
-  public MapiCalendarTimeZoneRuleDto(Date date, String dayOfWeek, Integer hour, Integer milliseconds, Integer minute, Integer month, String position, Integer seconds, Integer year) {
+  public MapiCalendarTimeZoneRuleDto(
+    Date date,
+    String dayOfWeek,
+    Integer hour,
+    Integer milliseconds,
+    Integer minute,
+    Integer month,
+    String position,
+    Integer seconds,
+    Integer year
+  ) {
     super();
     setDate(date);
     setDayOfWeek(dayOfWeek);

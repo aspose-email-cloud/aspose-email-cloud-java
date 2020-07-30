@@ -90,7 +90,9 @@ public class ContactStorageList extends ListResponseOfStorageModelOfContactDto {
    * Initializes a new instance of the ContactStorageList
    * @param value 
    */
-  public ContactStorageList(List<StorageModelOfContactDto> value) {
+  public ContactStorageList(
+    List<StorageModelOfContactDto> value
+  ) {
     super();
     setValue(value);
   }

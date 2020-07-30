@@ -152,7 +152,10 @@ public class EnumWithCustomOfEventCategory {
    * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
    * @param description 
    */
-  public EnumWithCustomOfEventCategory(String value, String description) {
+  public EnumWithCustomOfEventCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

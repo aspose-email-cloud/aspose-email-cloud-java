@@ -123,7 +123,10 @@ public class ClientThreadBaseRequest extends ClientAccountBaseRequest {
    * @param accountLocation Email client account configuration location on storage.             
    * @param threadId Thread identifier.             
    */
-  public ClientThreadBaseRequest(StorageFileLocation accountLocation, String threadId) {
+  public ClientThreadBaseRequest(
+    StorageFileLocation accountLocation,
+    String threadId
+  ) {
     super();
     setAccountLocation(accountLocation);
     setThreadId(threadId);

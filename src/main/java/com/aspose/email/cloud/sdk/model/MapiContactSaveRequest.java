@@ -125,7 +125,11 @@ public class MapiContactSaveRequest extends StorageModelOfMapiContactDto {
    * @param value 
    * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    */
-  public MapiContactSaveRequest(StorageFileLocation storageFile, MapiContactDto value, String format) {
+  public MapiContactSaveRequest(
+    StorageFileLocation storageFile,
+    MapiContactDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

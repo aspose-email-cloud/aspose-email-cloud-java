@@ -248,7 +248,13 @@ public class MapiElectronicAddressDto {
    * @param faxNumber Telephone number of the mail user&#39;s primary fax machine.             
    * @param originalDisplayName SMTP e-mail address that  corresponds to the e-mail address.             
    */
-  public MapiElectronicAddressDto(String addressType, String emailAddress, String displayName, String faxNumber, String originalDisplayName) {
+  public MapiElectronicAddressDto(
+    String addressType,
+    String emailAddress,
+    String displayName,
+    String faxNumber,
+    String originalDisplayName
+  ) {
     super();
     setAddressType(addressType);
     setEmailAddress(emailAddress);

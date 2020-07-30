@@ -282,7 +282,14 @@ public class EmailClientAccount {
    * @param credentials Email client account credentials             
    * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
    */
-  public EmailClientAccount(String host, Integer port, String securityOptions, String protocolType, EmailClientAccountCredentials credentials, StorageFileLocation cacheFile) {
+  public EmailClientAccount(
+    String host,
+    Integer port,
+    String securityOptions,
+    String protocolType,
+    EmailClientAccountCredentials credentials,
+    StorageFileLocation cacheFile
+  ) {
     super();
     setHost(host);
     setPort(port);

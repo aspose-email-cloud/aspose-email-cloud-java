@@ -181,7 +181,7 @@ public class RecurrencePatternDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -241,15 +241,19 @@ public class RecurrencePatternDto {
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
    * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param discriminator 
    */
-  public RecurrencePatternDto(Integer interval, Integer occurs, Date endDate, String weekStart, String discriminator) {
+  public RecurrencePatternDto(
+    Integer interval,
+    Integer occurs,
+    Date endDate,
+    String weekStart/*,
+    String discriminator*/
+  ) {
     super();
     setInterval(interval);
     setOccurs(occurs);
     setEndDate(endDate);
     setWeekStart(weekStart);
-    setDiscriminator(discriminator);
   }
 
 }

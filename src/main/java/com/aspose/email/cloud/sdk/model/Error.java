@@ -216,7 +216,12 @@ public class Error {
    * @param description Description             
    * @param innerError Inner Error             
    */
-  public Error(String code, String message, String description, ErrorDetails innerError) {
+  public Error(
+    String code,
+    String message,
+    String description,
+    ErrorDetails innerError
+  ) {
     super();
     setCode(code);
     setMessage(message);

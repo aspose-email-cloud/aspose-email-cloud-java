@@ -128,16 +128,21 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
    * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param discriminator 
    * @param regeneratingType Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
    */
-  public TaskRegeneratingPatternDto(Integer interval, Integer occurs, Date endDate, String weekStart, String discriminator, String regeneratingType) {
+  public TaskRegeneratingPatternDto(
+    Integer interval,
+    Integer occurs,
+    Date endDate,
+    String weekStart/*,
+    String discriminator*/,
+    String regeneratingType
+  ) {
     super();
     setInterval(interval);
     setOccurs(occurs);
     setEndDate(endDate);
     setWeekStart(weekStart);
-    setDiscriminator(discriminator);
     setRegeneratingType(regeneratingType);
   }
 

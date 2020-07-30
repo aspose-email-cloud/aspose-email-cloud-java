@@ -152,7 +152,10 @@ public class NameValuePair {
    * @param name Property name             
    * @param value Property value             
    */
-  public NameValuePair(String name, String value) {
+  public NameValuePair(
+    String name,
+    String value
+  ) {
     super();
     setName(name);
     setValue(value);

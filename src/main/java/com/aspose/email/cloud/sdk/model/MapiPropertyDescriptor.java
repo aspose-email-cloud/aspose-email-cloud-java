@@ -65,7 +65,7 @@ public class MapiPropertyDescriptor {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -106,18 +106,18 @@ public class MapiPropertyDescriptor {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
+/*
   public MapiPropertyDescriptor() {
     super();
-  }
+  }/*
 
   /**
    * Initializes a new instance of the MapiPropertyDescriptor
-   * @param discriminator 
    */
-  public MapiPropertyDescriptor(String discriminator) {
+  public MapiPropertyDescriptor(/*
+    String discriminator*/
+  ) {
     super();
-    setDiscriminator(discriminator);
   }
 
 }

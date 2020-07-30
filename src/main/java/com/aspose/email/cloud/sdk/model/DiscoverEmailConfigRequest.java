@@ -184,7 +184,11 @@ public class DiscoverEmailConfigRequest {
    * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
    * @param login Email account login. If not specified, address used as a login.             
    */
-  public DiscoverEmailConfigRequest(String address, Boolean fastProcessing, String login) {
+  public DiscoverEmailConfigRequest(
+    String address,
+    Boolean fastProcessing,
+    String login
+  ) {
     super();
     setAddress(address);
     setFastProcessing(fastProcessing);

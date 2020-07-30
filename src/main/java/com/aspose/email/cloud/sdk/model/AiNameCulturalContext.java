@@ -248,7 +248,13 @@ public class AiNameCulturalContext {
    * @param encoding A character encoding name             
    * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    */
-  public AiNameCulturalContext(String language, String location, String script, String encoding, String style) {
+  public AiNameCulturalContext(
+    String language,
+    String location,
+    String script,
+    String encoding,
+    String style
+  ) {
     super();
     setLanguage(language);
     setLocation(location);

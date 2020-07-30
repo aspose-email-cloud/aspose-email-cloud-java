@@ -90,7 +90,9 @@ public class MailServerFolderList extends ListResponseOfMailServerFolder {
    * Initializes a new instance of the MailServerFolderList
    * @param value 
    */
-  public MailServerFolderList(List<MailServerFolder> value) {
+  public MailServerFolderList(
+    List<MailServerFolder> value
+  ) {
     super();
     setValue(value);
   }

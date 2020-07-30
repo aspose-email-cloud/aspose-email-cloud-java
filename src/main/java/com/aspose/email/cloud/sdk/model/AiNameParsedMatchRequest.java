@@ -136,7 +136,12 @@ public class AiNameParsedMatchRequest extends AiNameParsedRequest {
    * @param parsedName Parsed name             
    * @param otherParsedName Other parsed name to match             
    */
-  public AiNameParsedMatchRequest(AiNameCulturalContext culturalContext, String format, List<AiNameComponent> parsedName, List<AiNameComponent> otherParsedName) {
+  public AiNameParsedMatchRequest(
+    AiNameCulturalContext culturalContext,
+    String format,
+    List<AiNameComponent> parsedName,
+    List<AiNameComponent> otherParsedName
+  ) {
     super();
     setCulturalContext(culturalContext);
     setFormat(format);

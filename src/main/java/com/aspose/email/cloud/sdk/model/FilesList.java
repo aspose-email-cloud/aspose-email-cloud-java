@@ -132,7 +132,9 @@ public class FilesList {
    * Initializes a new instance of the FilesList
    * @param value Files and folders contained by folder StorageFile.
    */
-  public FilesList(List<StorageFile> value) {
+  public FilesList(
+    List<StorageFile> value
+  ) {
     super();
     setValue(value);
   }

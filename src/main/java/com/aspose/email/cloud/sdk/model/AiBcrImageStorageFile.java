@@ -123,7 +123,10 @@ public class AiBcrImageStorageFile extends AiBcrImage {
    * @param isSingle Determines that image contains single VCard or more.             
    * @param file Image location             
    */
-  public AiBcrImageStorageFile(Boolean isSingle, StorageFileLocation file) {
+  public AiBcrImageStorageFile(
+    Boolean isSingle,
+    StorageFileLocation file
+  ) {
     super();
     setIsSingle(isSingle);
     setFile(file);

@@ -184,7 +184,11 @@ public class ReminderTrigger {
    * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
    * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
    */
-  public ReminderTrigger(Date dateTime, Long duration, String related) {
+  public ReminderTrigger(
+    Date dateTime,
+    Long duration,
+    String related
+  ) {
     super();
     setDateTime(dateTime);
     setDuration(duration);

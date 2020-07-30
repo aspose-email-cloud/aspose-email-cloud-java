@@ -140,16 +140,21 @@ public class WeeklyRecurrencePatternDto extends RecurrencePatternDto {
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
    * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param discriminator 
    * @param startDays Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    */
-  public WeeklyRecurrencePatternDto(Integer interval, Integer occurs, Date endDate, String weekStart, String discriminator, List<String> startDays) {
+  public WeeklyRecurrencePatternDto(
+    Integer interval,
+    Integer occurs,
+    Date endDate,
+    String weekStart/*,
+    String discriminator*/,
+    List<String> startDays
+  ) {
     super();
     setInterval(interval);
     setOccurs(occurs);
     setEndDate(endDate);
     setWeekStart(weekStart);
-    setDiscriminator(discriminator);
     setStartDays(startDays);
   }
 

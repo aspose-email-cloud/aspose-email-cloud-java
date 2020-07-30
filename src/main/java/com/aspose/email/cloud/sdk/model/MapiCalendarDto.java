@@ -691,7 +691,6 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    * @param appointmentCounterProposal Value indicating whether a Meeting Response object is a counter proposal.             
    * @param attendees Attendees             
    * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
@@ -711,7 +710,43 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param uid Unique identifier.             
    * @param organizer Organizer             
    */
-  public MapiCalendarDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, Boolean appointmentCounterProposal, MapiCalendarAttendeesDto attendees, String busyStatus, List<String> clientIntent, Date endDate, MapiCalendarTimeZoneDto endDateTimeZone, Boolean isAllDay, String keyWords, String location, MapiCalendarEventRecurrenceDto recurrence, Integer reminderDelta, String reminderFileParameter, Boolean reminderSet, Integer sequence, Date startDate, MapiCalendarTimeZoneDto startDateTimeZone, String uid, MapiElectronicAddressDto organizer) {
+  public MapiCalendarDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties/*,
+    String discriminator*/,
+    Boolean appointmentCounterProposal,
+    MapiCalendarAttendeesDto attendees,
+    String busyStatus,
+    List<String> clientIntent,
+    Date endDate,
+    MapiCalendarTimeZoneDto endDateTimeZone,
+    Boolean isAllDay,
+    String keyWords,
+    String location,
+    MapiCalendarEventRecurrenceDto recurrence,
+    Integer reminderDelta,
+    String reminderFileParameter,
+    Boolean reminderSet,
+    Integer sequence,
+    Date startDate,
+    MapiCalendarTimeZoneDto startDateTimeZone,
+    String uid,
+    MapiElectronicAddressDto organizer
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -729,7 +764,6 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
     setAppointmentCounterProposal(appointmentCounterProposal);
     setAttendees(attendees);
     setBusyStatus(busyStatus);

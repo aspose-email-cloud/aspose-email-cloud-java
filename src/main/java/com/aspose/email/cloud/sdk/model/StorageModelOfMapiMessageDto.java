@@ -152,7 +152,10 @@ public class StorageModelOfMapiMessageDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfMapiMessageDto(StorageFileLocation storageFile, MapiMessageDto value) {
+  public StorageModelOfMapiMessageDto(
+    StorageFileLocation storageFile,
+    MapiMessageDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

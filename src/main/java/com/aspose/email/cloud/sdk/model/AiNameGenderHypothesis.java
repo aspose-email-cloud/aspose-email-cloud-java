@@ -152,7 +152,10 @@ public class AiNameGenderHypothesis {
    * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
    * @param score Hypothesis score             
    */
-  public AiNameGenderHypothesis(String gender, Double score) {
+  public AiNameGenderHypothesis(
+    String gender,
+    Double score
+  ) {
     super();
     setGender(gender);
     setScore(score);

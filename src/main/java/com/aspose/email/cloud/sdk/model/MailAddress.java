@@ -216,7 +216,12 @@ public class MailAddress {
    * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
    * @param originalAddressString The original e-mail address string             
    */
-  public MailAddress(String displayName, String address, String participationStatus, String originalAddressString) {
+  public MailAddress(
+    String displayName,
+    String address,
+    String participationStatus,
+    String originalAddressString
+  ) {
     super();
     setDisplayName(displayName);
     setAddress(address);

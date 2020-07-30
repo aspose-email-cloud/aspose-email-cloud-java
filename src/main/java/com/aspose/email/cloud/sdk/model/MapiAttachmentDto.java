@@ -152,7 +152,10 @@ public class MapiAttachmentDto {
    * @param name Attachment&#39;s name             
    * @param dataBase64 Attachment data represented as Base64 string.             
    */
-  public MapiAttachmentDto(String name, String dataBase64) {
+  public MapiAttachmentDto(
+    String name,
+    String dataBase64
+  ) {
     super();
     setName(name);
     setDataBase64(dataBase64);

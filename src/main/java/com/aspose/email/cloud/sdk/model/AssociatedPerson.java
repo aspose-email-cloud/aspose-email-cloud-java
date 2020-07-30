@@ -184,7 +184,11 @@ public class AssociatedPerson {
    * @param category Associated person&#39;s category.             
    * @param preferred Defines whether associated person is preferred.             
    */
-  public AssociatedPerson(String name, EnumWithCustomOfAssociatedPersonCategory category, Boolean preferred) {
+  public AssociatedPerson(
+    String name,
+    EnumWithCustomOfAssociatedPersonCategory category,
+    Boolean preferred
+  ) {
     super();
     setName(name);
     setCategory(category);

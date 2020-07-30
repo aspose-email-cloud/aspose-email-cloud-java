@@ -132,7 +132,9 @@ public class FileVersions {
    * Initializes a new instance of the FileVersions
    * @param value File versions FileVersion.
    */
-  public FileVersions(List<FileVersion> value) {
+  public FileVersions(
+    List<FileVersion> value
+  ) {
     super();
     setValue(value);
   }

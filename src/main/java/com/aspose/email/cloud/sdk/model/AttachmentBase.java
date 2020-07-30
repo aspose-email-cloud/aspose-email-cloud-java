@@ -231,7 +231,12 @@ public class AttachmentBase {
    * @param contentType Content type             
    * @param headers Attachment headers.             
    */
-  public AttachmentBase(String base64Data, String contentId, ContentType contentType, Map<String, String> headers) {
+  public AttachmentBase(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

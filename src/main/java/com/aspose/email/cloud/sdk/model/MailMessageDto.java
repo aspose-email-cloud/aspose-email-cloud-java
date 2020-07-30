@@ -120,12 +120,13 @@ public class MailMessageDto extends MailMessageBase {
 
   /**
    * Initializes a new instance of the MailMessageDto
-   * @param discriminator 
    * @param value Message document object.             
    */
-  public MailMessageDto(String discriminator, EmailDto value) {
+  public MailMessageDto(/*
+    String discriminator*/,
+    EmailDto value
+  ) {
     super();
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

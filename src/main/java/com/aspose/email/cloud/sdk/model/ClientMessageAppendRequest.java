@@ -187,7 +187,12 @@ public class ClientMessageAppendRequest extends ClientAccountBaseRequest {
    * @param message Message to append.             
    * @param markAsSent Determines that appended message should be market as sent or not.             
    */
-  public ClientMessageAppendRequest(StorageFileLocation accountLocation, String folder, MailMessageBase message, Boolean markAsSent) {
+  public ClientMessageAppendRequest(
+    StorageFileLocation accountLocation,
+    String folder,
+    MailMessageBase message,
+    Boolean markAsSent
+  ) {
     super();
     setAccountLocation(accountLocation);
     setFolder(folder);

@@ -90,7 +90,9 @@ public class EmailStorageList extends ListResponseOfStorageModelOfEmailDto {
    * Initializes a new instance of the EmailStorageList
    * @param value 
    */
-  public EmailStorageList(List<StorageModelOfEmailDto> value) {
+  public EmailStorageList(
+    List<StorageModelOfEmailDto> value
+  ) {
     super();
     setValue(value);
   }

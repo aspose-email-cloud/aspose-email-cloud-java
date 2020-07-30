@@ -163,7 +163,15 @@ public class FileVersion extends StorageFile {
    * @param versionId File Version ID.
    * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
    */
-  public FileVersion(String name, Boolean isFolder, Date modifiedDate, Long size, String path, String versionId, Boolean isLatest) {
+  public FileVersion(
+    String name,
+    Boolean isFolder,
+    Date modifiedDate,
+    Long size,
+    String path,
+    String versionId,
+    Boolean isLatest
+  ) {
     super();
     setName(name);
     setIsFolder(isFolder);

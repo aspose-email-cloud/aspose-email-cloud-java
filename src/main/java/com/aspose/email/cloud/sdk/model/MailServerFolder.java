@@ -152,7 +152,10 @@ public class MailServerFolder {
    * @param name Gets or sets mail folder name             
    * @param id Gets or sets mail folder id             
    */
-  public MailServerFolder(String name, String id) {
+  public MailServerFolder(
+    String name,
+    String id
+  ) {
     super();
     setName(name);
     setId(id);

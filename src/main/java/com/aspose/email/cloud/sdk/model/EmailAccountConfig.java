@@ -368,7 +368,16 @@ public class EmailAccountConfig {
    * @param extraInfo Extra account information.             
    * @param isValidated Determines that configuration validated. Set to false if validation skipped.             
    */
-  public EmailAccountConfig(String displayName, String protocolType, String host, Integer port, String socketType, List<String> authenticationTypes, List<NameValuePair> extraInfo, Boolean isValidated) {
+  public EmailAccountConfig(
+    String displayName,
+    String protocolType,
+    String host,
+    Integer port,
+    String socketType,
+    List<String> authenticationTypes,
+    List<NameValuePair> extraInfo,
+    Boolean isValidated
+  ) {
     super();
     setDisplayName(displayName);
     setProtocolType(protocolType);

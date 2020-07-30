@@ -1336,7 +1336,44 @@ public class ContactDto {
    * @param surname Person&#39;s surname.             
    * @param urls Person&#39;s urls.             
    */
-  public ContactDto(List<AssociatedPerson> associatedPersons, List<Attachment> attachments, String companyName, String computerNetworkName, String customerId, String departmentName, String displayName, List<EmailAddress> emailAddresses, List<CustomerEvent> events, String fileAs, String fileAsMapping, String freeBusyLocation, String gender, String givenName, String governmentIdNumber, String hobbies, String initials, List<InstantMessengerAddress> instantMessengers, String jobTitle, String language, String location, String middleName, String nickname, String notes, String notesFormat, String officeLocation, String organizationalIdNumber, List<PhoneNumber> phoneNumbers, ContactPhoto photo, List<PostalAddress> physicalAddresses, String preferredTextEncoding, String prefix, String profession, String suffix, String surname, List<Url> urls) {
+  public ContactDto(
+    List<AssociatedPerson> associatedPersons,
+    List<Attachment> attachments,
+    String companyName,
+    String computerNetworkName,
+    String customerId,
+    String departmentName,
+    String displayName,
+    List<EmailAddress> emailAddresses,
+    List<CustomerEvent> events,
+    String fileAs,
+    String fileAsMapping,
+    String freeBusyLocation,
+    String gender,
+    String givenName,
+    String governmentIdNumber,
+    String hobbies,
+    String initials,
+    List<InstantMessengerAddress> instantMessengers,
+    String jobTitle,
+    String language,
+    String location,
+    String middleName,
+    String nickname,
+    String notes,
+    String notesFormat,
+    String officeLocation,
+    String organizationalIdNumber,
+    List<PhoneNumber> phoneNumbers,
+    ContactPhoto photo,
+    List<PostalAddress> physicalAddresses,
+    String preferredTextEncoding,
+    String prefix,
+    String profession,
+    String suffix,
+    String surname,
+    List<Url> urls
+  ) {
     super();
     setAssociatedPersons(associatedPersons);
     setAttachments(attachments);

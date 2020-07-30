@@ -152,7 +152,10 @@ public class StorageModelOfEmailClientAccount {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfEmailClientAccount(StorageFileLocation storageFile, EmailClientAccount value) {
+  public StorageModelOfEmailClientAccount(
+    StorageFileLocation storageFile,
+    EmailClientAccount value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

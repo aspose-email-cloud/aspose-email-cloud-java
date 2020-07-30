@@ -134,13 +134,15 @@ public class MapiMultiIntPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiMultiIntPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param values Property values             
    */
-  public MapiMultiIntPropertyDto(MapiPropertyDescriptor descriptor, String discriminator, List<Integer> values) {
+  public MapiMultiIntPropertyDto(
+    MapiPropertyDescriptor descriptor/*,
+    String discriminator*/,
+    List<Integer> values
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValues(values);
   }
 

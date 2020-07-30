@@ -152,7 +152,10 @@ public class ErrorDetails {
    * @param requestId The request id
    * @param date Date
    */
-  public ErrorDetails(String requestId, Date date) {
+  public ErrorDetails(
+    String requestId,
+    Date date
+  ) {
     super();
     setRequestId(requestId);
     setDate(date);

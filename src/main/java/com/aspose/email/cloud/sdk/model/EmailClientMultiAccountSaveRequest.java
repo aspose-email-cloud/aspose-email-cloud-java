@@ -92,7 +92,10 @@ public class EmailClientMultiAccountSaveRequest extends StorageModelOfEmailClien
    * @param storageFile 
    * @param value 
    */
-  public EmailClientMultiAccountSaveRequest(StorageFileLocation storageFile, EmailClientMultiAccount value) {
+  public EmailClientMultiAccountSaveRequest(
+    StorageFileLocation storageFile,
+    EmailClientMultiAccount value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

@@ -478,7 +478,7 @@ public class MapiCalendarRecurrencePatternDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -565,9 +565,23 @@ public class MapiCalendarRecurrencePatternDto {
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
    * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-   * @param discriminator 
    */
-  public MapiCalendarRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, String weekStartDay, String discriminator) {
+  public MapiCalendarRecurrencePatternDto(
+    String calendarType,
+    List<Date> deletedInstanceDates,
+    Date endDate,
+    String endType,
+    List<MapiCalendarExceptionInfoDto> exceptions,
+    String frequency,
+    List<Date> modifiedInstanceDates,
+    Long occurrenceCount,
+    String patternType,
+    Long period,
+    Boolean slidingFlag,
+    Date startDate,
+    String weekStartDay/*,
+    String discriminator*/
+  ) {
     super();
     setCalendarType(calendarType);
     setDeletedInstanceDates(deletedInstanceDates);
@@ -582,7 +596,6 @@ public class MapiCalendarRecurrencePatternDto {
     setSlidingFlag(slidingFlag);
     setStartDate(startDate);
     setWeekStartDay(weekStartDay);
-    setDiscriminator(discriminator);
   }
 
 }

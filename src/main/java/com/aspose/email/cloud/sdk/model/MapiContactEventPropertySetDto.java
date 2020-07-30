@@ -152,7 +152,10 @@ public class MapiContactEventPropertySetDto {
    * @param birthday Specifies the birthday of the contact.
    * @param weddingAnniversary Specifies the wedding anniversary of the contact.             
    */
-  public MapiContactEventPropertySetDto(Date birthday, Date weddingAnniversary) {
+  public MapiContactEventPropertySetDto(
+    Date birthday,
+    Date weddingAnniversary
+  ) {
     super();
     setBirthday(birthday);
     setWeddingAnniversary(weddingAnniversary);

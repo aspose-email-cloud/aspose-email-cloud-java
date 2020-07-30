@@ -440,7 +440,19 @@ public class PostalAddress {
    * @param stateOrProvince Address&#39;s region.             
    * @param street Address&#39;s street.             
    */
-  public PostalAddress(String address, EnumWithCustomOfPostalAddressCategory category, String city, String country, String countryCode, Boolean isMailingAddress, String postalCode, String postOfficeBox, Boolean preferred, String stateOrProvince, String street) {
+  public PostalAddress(
+    String address,
+    EnumWithCustomOfPostalAddressCategory category,
+    String city,
+    String country,
+    String countryCode,
+    Boolean isMailingAddress,
+    String postalCode,
+    String postOfficeBox,
+    Boolean preferred,
+    String stateOrProvince,
+    String street
+  ) {
     super();
     setAddress(address);
     setCategory(category);

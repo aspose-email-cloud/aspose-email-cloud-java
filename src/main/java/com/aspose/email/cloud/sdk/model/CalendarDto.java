@@ -849,7 +849,30 @@ public class CalendarDto {
    * @param summary Summary.
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
    */
-  public CalendarDto(List<Attachment> attachments, List<MailAddress> attendees, String description, Date endDate, String endTimeZone, List<String> flags, Boolean isDescriptionHtml, String location, String method, String microsoftBusyStatus, String microsoftIntendedStatus, List<MailAddress> optionalAttendees, MailAddress organizer, String recurrenceString, RecurrencePatternDto recurrence, List<CalendarReminder> reminders, String sequenceId, Date startDate, String startTimeZone, String status, String summary, String transparency) {
+  public CalendarDto(
+    List<Attachment> attachments,
+    List<MailAddress> attendees,
+    String description,
+    Date endDate,
+    String endTimeZone,
+    List<String> flags,
+    Boolean isDescriptionHtml,
+    String location,
+    String method,
+    String microsoftBusyStatus,
+    String microsoftIntendedStatus,
+    List<MailAddress> optionalAttendees,
+    MailAddress organizer,
+    String recurrenceString,
+    RecurrencePatternDto recurrence,
+    List<CalendarReminder> reminders,
+    String sequenceId,
+    Date startDate,
+    String startTimeZone,
+    String status,
+    String summary,
+    String transparency
+  ) {
     super();
     setAttachments(attachments);
     setAttendees(attendees);

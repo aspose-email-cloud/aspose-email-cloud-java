@@ -132,7 +132,9 @@ public class ListResponseOfMailMessageBase {
    * Initializes a new instance of the ListResponseOfMailMessageBase
    * @param value 
    */
-  public ListResponseOfMailMessageBase(List<MailMessageBase> value) {
+  public ListResponseOfMailMessageBase(
+    List<MailMessageBase> value
+  ) {
     super();
     setValue(value);
   }

@@ -123,7 +123,10 @@ public class ClientMessageBaseRequest extends ClientAccountBaseRequest {
    * @param accountLocation Email client account configuration location on storage.             
    * @param messageId Message identifier.             
    */
-  public ClientMessageBaseRequest(StorageFileLocation accountLocation, String messageId) {
+  public ClientMessageBaseRequest(
+    StorageFileLocation accountLocation,
+    String messageId
+  ) {
     super();
     setAccountLocation(accountLocation);
     setMessageId(messageId);

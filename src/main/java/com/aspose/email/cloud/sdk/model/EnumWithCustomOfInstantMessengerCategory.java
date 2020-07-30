@@ -152,7 +152,10 @@ public class EnumWithCustomOfInstantMessengerCategory {
    * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @param description 
    */
-  public EnumWithCustomOfInstantMessengerCategory(String value, String description) {
+  public EnumWithCustomOfInstantMessengerCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

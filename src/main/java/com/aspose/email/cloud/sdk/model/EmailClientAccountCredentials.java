@@ -94,7 +94,7 @@ public class EmailClientAccountCredentials {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {/* do nothing */}
 
 
   @Override
@@ -145,12 +145,13 @@ public class EmailClientAccountCredentials {
   /**
    * Initializes a new instance of the EmailClientAccountCredentials
    * @param login Email client account login             
-   * @param discriminator 
    */
-  public EmailClientAccountCredentials(String login, String discriminator) {
+  public EmailClientAccountCredentials(
+    String login/*,
+    String discriminator*/
+  ) {
     super();
     setLogin(login);
-    setDiscriminator(discriminator);
   }
 
 }

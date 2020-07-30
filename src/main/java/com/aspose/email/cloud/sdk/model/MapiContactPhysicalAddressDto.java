@@ -376,7 +376,17 @@ public class MapiContactPhysicalAddressDto {
    * @param address Specifies the complete address of the contact&#39;s address             
    * @param postOfficeBox Gets or sets the post office box             
    */
-  public MapiContactPhysicalAddressDto(Boolean isMailingAddress, String street, String city, String stateOrProvince, String postalCode, String country, String countryCode, String address, String postOfficeBox) {
+  public MapiContactPhysicalAddressDto(
+    Boolean isMailingAddress,
+    String street,
+    String city,
+    String stateOrProvince,
+    String postalCode,
+    String country,
+    String countryCode,
+    String address,
+    String postOfficeBox
+  ) {
     super();
     setIsMailingAddress(isMailingAddress);
     setStreet(street);

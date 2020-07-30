@@ -376,7 +376,17 @@ public class MapiContactElectronicAddressPropertySetDto {
    * @param primaryFax Refers to the group of properties that define the primary fax address for a contact.             
    * @param useAutocomplete Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
    */
-  public MapiContactElectronicAddressPropertySetDto(MapiContactElectronicAddressDto businessFax, MapiContactElectronicAddressDto defaultEmailAddress, MapiContactElectronicAddressDto email1, MapiContactElectronicAddressDto email2, MapiContactElectronicAddressDto email3, MapiContactElectronicAddressDto homeFax, Boolean isEmpty, MapiContactElectronicAddressDto primaryFax, Boolean useAutocomplete) {
+  public MapiContactElectronicAddressPropertySetDto(
+    MapiContactElectronicAddressDto businessFax,
+    MapiContactElectronicAddressDto defaultEmailAddress,
+    MapiContactElectronicAddressDto email1,
+    MapiContactElectronicAddressDto email2,
+    MapiContactElectronicAddressDto email3,
+    MapiContactElectronicAddressDto homeFax,
+    Boolean isEmpty,
+    MapiContactElectronicAddressDto primaryFax,
+    Boolean useAutocomplete
+  ) {
     super();
     setBusinessFax(businessFax);
     setDefaultEmailAddress(defaultEmailAddress);

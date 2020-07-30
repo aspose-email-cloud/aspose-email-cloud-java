@@ -122,13 +122,15 @@ public class EmailClientAccountPasswordCredentials extends EmailClientAccountCre
   /**
    * Initializes a new instance of the EmailClientAccountPasswordCredentials
    * @param login Email client account login             
-   * @param discriminator 
    * @param password Email client account password             
    */
-  public EmailClientAccountPasswordCredentials(String login, String discriminator, String password) {
+  public EmailClientAccountPasswordCredentials(
+    String login/*,
+    String discriminator*/,
+    String password
+  ) {
     super();
     setLogin(login);
-    setDiscriminator(discriminator);
     setPassword(password);
   }
 

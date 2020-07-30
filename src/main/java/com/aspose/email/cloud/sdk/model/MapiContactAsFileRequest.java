@@ -152,7 +152,10 @@ public class MapiContactAsFileRequest {
    * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @param value MAPI contact model.             
    */
-  public MapiContactAsFileRequest(String format, MapiContactDto value) {
+  public MapiContactAsFileRequest(
+    String format,
+    MapiContactDto value
+  ) {
     super();
     setFormat(format);
     setValue(value);

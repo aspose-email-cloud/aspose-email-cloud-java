@@ -161,7 +161,10 @@ public class EmailClientMultiAccount {
    * @param receiveAccounts Email client receive accounts             
    * @param sendAccount Email client send account             
    */
-  public EmailClientMultiAccount(List<EmailClientAccount> receiveAccounts, EmailClientAccount sendAccount) {
+  public EmailClientMultiAccount(
+    List<EmailClientAccount> receiveAccounts,
+    EmailClientAccount sendAccount
+  ) {
     super();
     setReceiveAccounts(receiveAccounts);
     setSendAccount(sendAccount);

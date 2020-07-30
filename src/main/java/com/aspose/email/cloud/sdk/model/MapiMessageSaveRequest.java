@@ -125,7 +125,11 @@ public class MapiMessageSaveRequest extends StorageModelOfMapiMessageDto {
    * @param value 
    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
    */
-  public MapiMessageSaveRequest(StorageFileLocation storageFile, MapiMessageDto value, String format) {
+  public MapiMessageSaveRequest(
+    StorageFileLocation storageFile,
+    MapiMessageDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

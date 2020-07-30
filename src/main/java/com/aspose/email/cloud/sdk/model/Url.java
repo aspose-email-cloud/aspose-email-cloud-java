@@ -184,7 +184,11 @@ public class Url {
    * @param preferred Defines whether url is preferred.             
    * @param href URL.             
    */
-  public Url(EnumWithCustomOfUrlCategory category, Boolean preferred, String href) {
+  public Url(
+    EnumWithCustomOfUrlCategory category,
+    Boolean preferred,
+    String href
+  ) {
     super();
     setCategory(category);
     setPreferred(preferred);

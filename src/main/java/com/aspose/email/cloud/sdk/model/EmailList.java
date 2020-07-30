@@ -90,7 +90,9 @@ public class EmailList extends ListResponseOfEmailDto {
    * Initializes a new instance of the EmailList
    * @param value 
    */
-  public EmailList(List<EmailDto> value) {
+  public EmailList(
+    List<EmailDto> value
+  ) {
     super();
     setValue(value);
   }

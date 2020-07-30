@@ -125,7 +125,11 @@ public class ContactSaveRequest extends StorageModelOfContactDto {
    * @param value 
    * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    */
-  public ContactSaveRequest(StorageFileLocation storageFile, ContactDto value, String format) {
+  public ContactSaveRequest(
+    StorageFileLocation storageFile,
+    ContactDto value,
+    String format
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

@@ -152,7 +152,10 @@ public class StorageModelOfMapiContactDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfMapiContactDto(StorageFileLocation storageFile, MapiContactDto value) {
+  public StorageModelOfMapiContactDto(
+    StorageFileLocation storageFile,
+    MapiContactDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

@@ -90,7 +90,9 @@ public class StorageFileLocationList extends ListResponseOfStorageFileLocation {
    * Initializes a new instance of the StorageFileLocationList
    * @param value 
    */
-  public StorageFileLocationList(List<StorageFileLocation> value) {
+  public StorageFileLocationList(
+    List<StorageFileLocation> value
+  ) {
     super();
     setValue(value);
   }
