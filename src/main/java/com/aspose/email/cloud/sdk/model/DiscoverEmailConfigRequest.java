@@ -45,10 +45,8 @@ import java.io.*;
 public class DiscoverEmailConfigRequest {
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("fastProcessing")
   private Boolean fastProcessing = null;
-
   @JsonProperty("login")
   private String login = null;
 
@@ -78,6 +76,7 @@ public class DiscoverEmailConfigRequest {
     this.address = address;
   }
 
+
   /**
    * Set fastProcessing and return this.
    * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
@@ -103,6 +102,7 @@ public class DiscoverEmailConfigRequest {
   public void setFastProcessing(Boolean fastProcessing) {
     this.fastProcessing = fastProcessing;
   }
+
 
   /**
    * Set login and return this.

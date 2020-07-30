@@ -45,25 +45,18 @@ import java.io.*;
 public class EmailAccountConfig {
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("protocolType")
   private String protocolType = null;
-
   @JsonProperty("host")
   private String host = null;
-
   @JsonProperty("port")
   private Integer port = null;
-
   @JsonProperty("socketType")
   private String socketType = null;
-
   @JsonProperty("authenticationTypes")
   private List<String> authenticationTypes = null;
-
   @JsonProperty("extraInfo")
   private List<NameValuePair> extraInfo = null;
-
   @JsonProperty("isValidated")
   private Boolean isValidated = null;
 
@@ -93,6 +86,7 @@ public class EmailAccountConfig {
     this.displayName = displayName;
   }
 
+
   /**
    * Set protocolType and return this.
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
@@ -118,6 +112,7 @@ public class EmailAccountConfig {
   public void setProtocolType(String protocolType) {
     this.protocolType = protocolType;
   }
+
 
   /**
    * Set host and return this.
@@ -145,6 +140,7 @@ public class EmailAccountConfig {
     this.host = host;
   }
 
+
   /**
    * Set port and return this.
    * @param port Port.             
@@ -171,6 +167,7 @@ public class EmailAccountConfig {
     this.port = port;
   }
 
+
   /**
    * Set socketType and return this.
    * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
@@ -196,6 +193,7 @@ public class EmailAccountConfig {
   public void setSocketType(String socketType) {
     this.socketType = socketType;
   }
+
 
   /**
    * Set authenticationTypes and return this.
@@ -235,6 +233,7 @@ public class EmailAccountConfig {
     this.authenticationTypes = authenticationTypes;
   }
 
+
   /**
    * Set extraInfo and return this.
    * @param extraInfo Extra account information.             
@@ -272,6 +271,7 @@ public class EmailAccountConfig {
   public void setExtraInfo(List<NameValuePair> extraInfo) {
     this.extraInfo = extraInfo;
   }
+
 
   /**
    * Set isValidated and return this.

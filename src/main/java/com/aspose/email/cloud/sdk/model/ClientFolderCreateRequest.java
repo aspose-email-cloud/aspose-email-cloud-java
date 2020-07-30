@@ -45,7 +45,6 @@ import java.io.*;
 public class ClientFolderCreateRequest extends ClientAccountBaseRequest {
   @JsonProperty("parentFolder")
   private String parentFolder = null;
-
   @JsonProperty("folderName")
   private String folderName = null;
 
@@ -74,6 +73,7 @@ public class ClientFolderCreateRequest extends ClientAccountBaseRequest {
   public void setParentFolder(String parentFolder) {
     this.parentFolder = parentFolder;
   }
+
 
   /**
    * Set folderName and return this.

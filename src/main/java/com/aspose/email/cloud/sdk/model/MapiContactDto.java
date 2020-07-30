@@ -45,28 +45,20 @@ import java.io.*;
 public class MapiContactDto extends MapiMessageItemBaseDto {
   @JsonProperty("electronicAddresses")
   private MapiContactElectronicAddressPropertySetDto electronicAddresses = null;
-
   @JsonProperty("events")
   private MapiContactEventPropertySetDto events = null;
-
   @JsonProperty("nameInfo")
   private MapiContactNamePropertySetDto nameInfo = null;
-
   @JsonProperty("otherFields")
   private MapiContactOtherPropertySetDto otherFields = null;
-
   @JsonProperty("personalInfo")
   private MapiContactPersonalInfoPropertySetDto personalInfo = null;
-
   @JsonProperty("photo")
   private MapiContactPhotoDto photo = null;
-
   @JsonProperty("physicalAddresses")
   private MapiContactPhysicalAddressPropertySetDto physicalAddresses = null;
-
   @JsonProperty("professionalInfo")
   private MapiContactProfessionalPropertySetDto professionalInfo = null;
-
   @JsonProperty("telephones")
   private MapiContactTelephonePropertySetDto telephones = null;
 
@@ -96,6 +88,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.electronicAddresses = electronicAddresses;
   }
 
+
   /**
    * Set events and return this.
    * @param events Specify events associated with a contact.             
@@ -121,6 +114,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setEvents(MapiContactEventPropertySetDto events) {
     this.events = events;
   }
+
 
   /**
    * Set nameInfo and return this.
@@ -148,6 +142,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.nameInfo = nameInfo;
   }
 
+
   /**
    * Set otherFields and return this.
    * @param otherFields Specify other fields of contact.             
@@ -173,6 +168,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setOtherFields(MapiContactOtherPropertySetDto otherFields) {
     this.otherFields = otherFields;
   }
+
 
   /**
    * Set personalInfo and return this.
@@ -200,6 +196,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.personalInfo = personalInfo;
   }
 
+
   /**
    * Set photo and return this.
    * @param photo Contact photo.             
@@ -225,6 +222,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setPhoto(MapiContactPhotoDto photo) {
     this.photo = photo;
   }
+
 
   /**
    * Set physicalAddresses and return this.
@@ -252,6 +250,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.physicalAddresses = physicalAddresses;
   }
 
+
   /**
    * Set professionalInfo and return this.
    * @param professionalInfo Properties are used to store professional details for the person represented by the contact.             
@@ -277,6 +276,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setProfessionalInfo(MapiContactProfessionalPropertySetDto professionalInfo) {
     this.professionalInfo = professionalInfo;
   }
+
 
   /**
    * Set telephones and return this.

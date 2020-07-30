@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameExtracted {
   @JsonProperty("name")
   private List<AiNameExtractedComponent> name = null;
-
   @JsonProperty("score")
   private Double score = null;
 
@@ -86,6 +85,7 @@ public class AiNameExtracted {
   public void setName(List<AiNameExtractedComponent> name) {
     this.name = name;
   }
+
 
   /**
    * Set score and return this.

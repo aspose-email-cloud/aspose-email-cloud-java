@@ -45,109 +45,74 @@ import java.io.*;
 public class ContactDto {
   @JsonProperty("associatedPersons")
   private List<AssociatedPerson> associatedPersons = null;
-
   @JsonProperty("attachments")
   private List<Attachment> attachments = null;
-
   @JsonProperty("companyName")
   private String companyName = null;
-
   @JsonProperty("computerNetworkName")
   private String computerNetworkName = null;
-
   @JsonProperty("customerId")
   private String customerId = null;
-
   @JsonProperty("departmentName")
   private String departmentName = null;
-
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("emailAddresses")
   private List<EmailAddress> emailAddresses = null;
-
   @JsonProperty("events")
   private List<CustomerEvent> events = null;
-
   @JsonProperty("fileAs")
   private String fileAs = null;
-
   @JsonProperty("fileAsMapping")
   private String fileAsMapping = null;
-
   @JsonProperty("freeBusyLocation")
   private String freeBusyLocation = null;
-
   @JsonProperty("gender")
   private String gender = null;
-
   @JsonProperty("givenName")
   private String givenName = null;
-
   @JsonProperty("governmentIdNumber")
   private String governmentIdNumber = null;
-
   @JsonProperty("hobbies")
   private String hobbies = null;
-
   @JsonProperty("initials")
   private String initials = null;
-
   @JsonProperty("instantMessengers")
   private List<InstantMessengerAddress> instantMessengers = null;
-
   @JsonProperty("jobTitle")
   private String jobTitle = null;
-
   @JsonProperty("language")
   private String language = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("middleName")
   private String middleName = null;
-
   @JsonProperty("nickname")
   private String nickname = null;
-
   @JsonProperty("notes")
   private String notes = null;
-
   @JsonProperty("notesFormat")
   private String notesFormat = null;
-
   @JsonProperty("officeLocation")
   private String officeLocation = null;
-
   @JsonProperty("organizationalIdNumber")
   private String organizationalIdNumber = null;
-
   @JsonProperty("phoneNumbers")
   private List<PhoneNumber> phoneNumbers = null;
-
   @JsonProperty("photo")
   private ContactPhoto photo = null;
-
   @JsonProperty("physicalAddresses")
   private List<PostalAddress> physicalAddresses = null;
-
   @JsonProperty("preferredTextEncoding")
   private String preferredTextEncoding = null;
-
   @JsonProperty("prefix")
   private String prefix = null;
-
   @JsonProperty("profession")
   private String profession = null;
-
   @JsonProperty("suffix")
   private String suffix = null;
-
   @JsonProperty("surname")
   private String surname = null;
-
   @JsonProperty("urls")
   private List<Url> urls = null;
 
@@ -189,6 +154,7 @@ public class ContactDto {
     this.associatedPersons = associatedPersons;
   }
 
+
   /**
    * Set attachments and return this.
    * @param attachments Document attachments.             
@@ -227,6 +193,7 @@ public class ContactDto {
     this.attachments = attachments;
   }
 
+
   /**
    * Set companyName and return this.
    * @param companyName Company name.             
@@ -252,6 +219,7 @@ public class ContactDto {
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
+
 
   /**
    * Set computerNetworkName and return this.
@@ -279,6 +247,7 @@ public class ContactDto {
     this.computerNetworkName = computerNetworkName;
   }
 
+
   /**
    * Set customerId and return this.
    * @param customerId Customer id.             
@@ -304,6 +273,7 @@ public class ContactDto {
   public void setCustomerId(String customerId) {
     this.customerId = customerId;
   }
+
 
   /**
    * Set departmentName and return this.
@@ -331,6 +301,7 @@ public class ContactDto {
     this.departmentName = departmentName;
   }
 
+
   /**
    * Set displayName and return this.
    * @param displayName Display name.             
@@ -356,6 +327,7 @@ public class ContactDto {
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
+
 
   /**
    * Set emailAddresses and return this.
@@ -395,6 +367,7 @@ public class ContactDto {
     this.emailAddresses = emailAddresses;
   }
 
+
   /**
    * Set events and return this.
    * @param events Person&#39;s events.             
@@ -433,6 +406,7 @@ public class ContactDto {
     this.events = events;
   }
 
+
   /**
    * Set fileAs and return this.
    * @param fileAs A name used for sorting.             
@@ -458,6 +432,7 @@ public class ContactDto {
   public void setFileAs(String fileAs) {
     this.fileAs = fileAs;
   }
+
 
   /**
    * Set fileAsMapping and return this.
@@ -485,6 +460,7 @@ public class ContactDto {
     this.fileAsMapping = fileAsMapping;
   }
 
+
   /**
    * Set freeBusyLocation and return this.
    * @param freeBusyLocation URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
@@ -510,6 +486,7 @@ public class ContactDto {
   public void setFreeBusyLocation(String freeBusyLocation) {
     this.freeBusyLocation = freeBusyLocation;
   }
+
 
   /**
    * Set gender and return this.
@@ -537,6 +514,7 @@ public class ContactDto {
     this.gender = gender;
   }
 
+
   /**
    * Set givenName and return this.
    * @param givenName Person&#39;s given name.             
@@ -562,6 +540,7 @@ public class ContactDto {
   public void setGivenName(String givenName) {
     this.givenName = givenName;
   }
+
 
   /**
    * Set governmentIdNumber and return this.
@@ -589,6 +568,7 @@ public class ContactDto {
     this.governmentIdNumber = governmentIdNumber;
   }
 
+
   /**
    * Set hobbies and return this.
    * @param hobbies Person&#39;s hobbies.             
@@ -615,6 +595,7 @@ public class ContactDto {
     this.hobbies = hobbies;
   }
 
+
   /**
    * Set initials and return this.
    * @param initials Person&#39;s initials.             
@@ -640,6 +621,7 @@ public class ContactDto {
   public void setInitials(String initials) {
     this.initials = initials;
   }
+
 
   /**
    * Set instantMessengers and return this.
@@ -679,6 +661,7 @@ public class ContactDto {
     this.instantMessengers = instantMessengers;
   }
 
+
   /**
    * Set jobTitle and return this.
    * @param jobTitle Person&#39;s job title.             
@@ -704,6 +687,7 @@ public class ContactDto {
   public void setJobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
   }
+
 
   /**
    * Set language and return this.
@@ -731,6 +715,7 @@ public class ContactDto {
     this.language = language;
   }
 
+
   /**
    * Set location and return this.
    * @param location Person&#39;s location.             
@@ -756,6 +741,7 @@ public class ContactDto {
   public void setLocation(String location) {
     this.location = location;
   }
+
 
   /**
    * Set middleName and return this.
@@ -783,6 +769,7 @@ public class ContactDto {
     this.middleName = middleName;
   }
 
+
   /**
    * Set nickname and return this.
    * @param nickname Person&#39;s nickname.             
@@ -808,6 +795,7 @@ public class ContactDto {
   public void setNickname(String nickname) {
     this.nickname = nickname;
   }
+
 
   /**
    * Set notes and return this.
@@ -835,6 +823,7 @@ public class ContactDto {
     this.notes = notes;
   }
 
+
   /**
    * Set notesFormat and return this.
    * @param notesFormat Defines format of a text. Enum, available values: Text, Html
@@ -860,6 +849,7 @@ public class ContactDto {
   public void setNotesFormat(String notesFormat) {
     this.notesFormat = notesFormat;
   }
+
 
   /**
    * Set officeLocation and return this.
@@ -887,6 +877,7 @@ public class ContactDto {
     this.officeLocation = officeLocation;
   }
 
+
   /**
    * Set organizationalIdNumber and return this.
    * @param organizationalIdNumber Contains an identifier for the mail user used within the mail user&#39;s organization.             
@@ -912,6 +903,7 @@ public class ContactDto {
   public void setOrganizationalIdNumber(String organizationalIdNumber) {
     this.organizationalIdNumber = organizationalIdNumber;
   }
+
 
   /**
    * Set phoneNumbers and return this.
@@ -951,6 +943,7 @@ public class ContactDto {
     this.phoneNumbers = phoneNumbers;
   }
 
+
   /**
    * Set photo and return this.
    * @param photo Person&#39;s photo.             
@@ -976,6 +969,7 @@ public class ContactDto {
   public void setPhoto(ContactPhoto photo) {
     this.photo = photo;
   }
+
 
   /**
    * Set physicalAddresses and return this.
@@ -1015,6 +1009,7 @@ public class ContactDto {
     this.physicalAddresses = physicalAddresses;
   }
 
+
   /**
    * Set preferredTextEncoding and return this.
    * @param preferredTextEncoding Encoding for all text properties.             
@@ -1040,6 +1035,7 @@ public class ContactDto {
   public void setPreferredTextEncoding(String preferredTextEncoding) {
     this.preferredTextEncoding = preferredTextEncoding;
   }
+
 
   /**
    * Set prefix and return this.
@@ -1067,6 +1063,7 @@ public class ContactDto {
     this.prefix = prefix;
   }
 
+
   /**
    * Set profession and return this.
    * @param profession A job position of a person in a company.             
@@ -1092,6 +1089,7 @@ public class ContactDto {
   public void setProfession(String profession) {
     this.profession = profession;
   }
+
 
   /**
    * Set suffix and return this.
@@ -1119,6 +1117,7 @@ public class ContactDto {
     this.suffix = suffix;
   }
 
+
   /**
    * Set surname and return this.
    * @param surname Person&#39;s surname.             
@@ -1144,6 +1143,7 @@ public class ContactDto {
   public void setSurname(String surname) {
     this.surname = surname;
   }
+
 
   /**
    * Set urls and return this.

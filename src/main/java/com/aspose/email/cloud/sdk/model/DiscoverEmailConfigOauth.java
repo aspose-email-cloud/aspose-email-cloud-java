@@ -45,13 +45,10 @@ import java.io.*;
 public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   @JsonProperty("clientId")
   private String clientId = null;
-
   @JsonProperty("clientSecret")
   private String clientSecret = null;
-
   @JsonProperty("refreshToken")
   private String refreshToken = null;
-
   @JsonProperty("requestUrl")
   private String requestUrl = null;
 
@@ -81,6 +78,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
     this.clientId = clientId;
   }
 
+
   /**
    * Set clientSecret and return this.
    * @param clientSecret OAuth client secret.             
@@ -107,6 +105,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
     this.clientSecret = clientSecret;
   }
 
+
   /**
    * Set refreshToken and return this.
    * @param refreshToken OAuth refresh token.             
@@ -132,6 +131,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
+
 
   /**
    * Set requestUrl and return this.

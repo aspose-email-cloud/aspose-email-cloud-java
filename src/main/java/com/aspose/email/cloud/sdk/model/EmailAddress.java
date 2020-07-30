@@ -45,19 +45,14 @@ import java.io.*;
 public class EmailAddress {
   @JsonProperty("category")
   private EnumWithCustomOfEmailAddressCategory category = null;
-
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
-
   @JsonProperty("routingType")
   private String routingType = null;
-
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("originalAddressString")
   private String originalAddressString = null;
 
@@ -87,6 +82,7 @@ public class EmailAddress {
     this.category = category;
   }
 
+
   /**
    * Set displayName and return this.
    * @param displayName Display name.             
@@ -112,6 +108,7 @@ public class EmailAddress {
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
+
 
   /**
    * Set preferred and return this.
@@ -139,6 +136,7 @@ public class EmailAddress {
     this.preferred = preferred;
   }
 
+
   /**
    * Set routingType and return this.
    * @param routingType A routing type for an email.             
@@ -165,6 +163,7 @@ public class EmailAddress {
     this.routingType = routingType;
   }
 
+
   /**
    * Set address and return this.
    * @param address Email address.             
@@ -190,6 +189,7 @@ public class EmailAddress {
   public void setAddress(String address) {
     this.address = address;
   }
+
 
   /**
    * Set originalAddressString and return this.

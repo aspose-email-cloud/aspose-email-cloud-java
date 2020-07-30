@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameMatchResult {
   @JsonProperty("similarity")
   private Double similarity = null;
-
   @JsonProperty("mismatches")
   private List<AiNameMismatch> mismatches = null;
 
@@ -74,6 +73,7 @@ public class AiNameMatchResult {
   public void setSimilarity(Double similarity) {
     this.similarity = similarity;
   }
+
 
   /**
    * Set mismatches and return this.

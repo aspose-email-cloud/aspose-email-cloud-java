@@ -45,7 +45,6 @@ import java.io.*;
 public class EmailAsFileRequest {
   @JsonProperty("format")
   private String format = null;
-
   @JsonProperty("value")
   private EmailDto value = null;
 
@@ -74,6 +73,7 @@ public class EmailAsFileRequest {
   public void setFormat(String format) {
     this.format = format;
   }
+
 
   /**
    * Set value and return this.

@@ -45,13 +45,10 @@ import java.io.*;
 public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
   @JsonProperty("canonicalName")
   private String canonicalName = null;
-
   @JsonProperty("dataType")
   private String dataType = null;
-
   @JsonProperty("multipleValuesDataType")
   private Boolean multipleValuesDataType = null;
-
   @JsonProperty("name")
   private String name = null;
 
@@ -81,6 +78,7 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
     this.canonicalName = canonicalName;
   }
 
+
   /**
    * Set dataType and return this.
    * @param dataType [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
@@ -107,6 +105,7 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
     this.dataType = dataType;
   }
 
+
   /**
    * Set multipleValuesDataType and return this.
    * @param multipleValuesDataType Indicates if data type contains of multiple values             
@@ -132,6 +131,7 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
   public void setMultipleValuesDataType(Boolean multipleValuesDataType) {
     this.multipleValuesDataType = multipleValuesDataType;
   }
+
 
   /**
    * Set name and return this.

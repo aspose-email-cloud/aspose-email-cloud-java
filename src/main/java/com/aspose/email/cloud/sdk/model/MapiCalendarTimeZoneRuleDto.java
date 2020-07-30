@@ -45,28 +45,20 @@ import java.io.*;
 public class MapiCalendarTimeZoneRuleDto {
   @JsonProperty("date")
   private Date date = null;
-
   @JsonProperty("dayOfWeek")
   private String dayOfWeek = null;
-
   @JsonProperty("hour")
   private Integer hour = null;
-
   @JsonProperty("milliseconds")
   private Integer milliseconds = null;
-
   @JsonProperty("minute")
   private Integer minute = null;
-
   @JsonProperty("month")
   private Integer month = null;
-
   @JsonProperty("position")
   private String position = null;
-
   @JsonProperty("seconds")
   private Integer seconds = null;
-
   @JsonProperty("year")
   private Integer year = null;
 
@@ -96,6 +88,7 @@ public class MapiCalendarTimeZoneRuleDto {
     this.date = date;
   }
 
+
   /**
    * Set dayOfWeek and return this.
    * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
@@ -121,6 +114,7 @@ public class MapiCalendarTimeZoneRuleDto {
   public void setDayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
+
 
   /**
    * Set hour and return this.
@@ -148,6 +142,7 @@ public class MapiCalendarTimeZoneRuleDto {
     this.hour = hour;
   }
 
+
   /**
    * Set milliseconds and return this.
    * @param milliseconds Milliseconds.             
@@ -174,6 +169,7 @@ public class MapiCalendarTimeZoneRuleDto {
     this.milliseconds = milliseconds;
   }
 
+
   /**
    * Set minute and return this.
    * @param minute Minute.             
@@ -199,6 +195,7 @@ public class MapiCalendarTimeZoneRuleDto {
   public void setMinute(Integer minute) {
     this.minute = minute;
   }
+
 
   /**
    * Set month and return this.
@@ -228,6 +225,7 @@ public class MapiCalendarTimeZoneRuleDto {
     this.month = month;
   }
 
+
   /**
    * Set position and return this.
    * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
@@ -254,6 +252,7 @@ public class MapiCalendarTimeZoneRuleDto {
     this.position = position;
   }
 
+
   /**
    * Set seconds and return this.
    * @param seconds Seconds.             
@@ -279,6 +278,7 @@ public class MapiCalendarTimeZoneRuleDto {
   public void setSeconds(Integer seconds) {
     this.seconds = seconds;
   }
+
 
   /**
    * Set year and return this.

@@ -45,10 +45,8 @@ import java.io.*;
 public class PhoneNumber {
   @JsonProperty("category")
   private EnumWithCustomOfPhoneNumberCategory category = null;
-
   @JsonProperty("number")
   private String number = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
@@ -78,6 +76,7 @@ public class PhoneNumber {
     this.category = category;
   }
 
+
   /**
    * Set number and return this.
    * @param number Phone number.             
@@ -103,6 +102,7 @@ public class PhoneNumber {
   public void setNumber(String number) {
     this.number = number;
   }
+
 
   /**
    * Set preferred and return this.

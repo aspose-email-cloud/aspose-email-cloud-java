@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameExtractedComponent {
   @JsonProperty("category")
   private String category = null;
-
   @JsonProperty("value")
   private String value = null;
 
@@ -74,6 +73,7 @@ public class AiNameExtractedComponent {
   public void setCategory(String category) {
     this.category = category;
   }
+
 
   /**
    * Set value and return this.

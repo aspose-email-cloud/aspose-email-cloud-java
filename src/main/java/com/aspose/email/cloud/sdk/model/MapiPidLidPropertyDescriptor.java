@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiPidLidPropertyDescriptor extends MapiPidPropertyDescriptor {
   @JsonProperty("longId")
   private Long longId = null;
-
   @JsonProperty("propertySet")
   private String propertySet = null;
 
@@ -74,6 +73,7 @@ public class MapiPidLidPropertyDescriptor extends MapiPidPropertyDescriptor {
   public void setLongId(Long longId) {
     this.longId = longId;
   }
+
 
   /**
    * Set propertySet and return this.

@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiContactEventPropertySetDto {
   @JsonProperty("birthday")
   private Date birthday = null;
-
   @JsonProperty("weddingAnniversary")
   private Date weddingAnniversary = null;
 
@@ -74,6 +73,7 @@ public class MapiContactEventPropertySetDto {
   public void setBirthday(Date birthday) {
     this.birthday = birthday;
   }
+
 
   /**
    * Set weddingAnniversary and return this.

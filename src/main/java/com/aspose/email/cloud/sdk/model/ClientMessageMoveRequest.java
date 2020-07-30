@@ -45,7 +45,6 @@ import java.io.*;
 public class ClientMessageMoveRequest extends ClientMessageBaseRequest {
   @JsonProperty("sourceFolder")
   private String sourceFolder = null;
-
   @JsonProperty("destinationFolder")
   private String destinationFolder = null;
 
@@ -74,6 +73,7 @@ public class ClientMessageMoveRequest extends ClientMessageBaseRequest {
   public void setSourceFolder(String sourceFolder) {
     this.sourceFolder = sourceFolder;
   }
+
 
   /**
    * Set destinationFolder and return this.

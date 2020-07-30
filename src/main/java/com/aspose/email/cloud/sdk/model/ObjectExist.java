@@ -45,7 +45,6 @@ import java.io.*;
 public class ObjectExist {
   @JsonProperty("exists")
   private Boolean exists = null;
-
   @JsonProperty("isFolder")
   private Boolean isFolder = null;
 
@@ -74,6 +73,7 @@ public class ObjectExist {
   public void setExists(Boolean exists) {
     this.exists = exists;
   }
+
 
   /**
    * Set isFolder and return this.

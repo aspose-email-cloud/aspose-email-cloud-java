@@ -45,55 +45,38 @@ import java.io.*;
 public class MapiCalendarDto extends MapiMessageItemBaseDto {
   @JsonProperty("appointmentCounterProposal")
   private Boolean appointmentCounterProposal = null;
-
   @JsonProperty("attendees")
   private MapiCalendarAttendeesDto attendees = null;
-
   @JsonProperty("busyStatus")
   private String busyStatus = null;
-
   @JsonProperty("clientIntent")
   private List<String> clientIntent = null;
-
   @JsonProperty("endDate")
   private Date endDate = null;
-
   @JsonProperty("endDateTimeZone")
   private MapiCalendarTimeZoneDto endDateTimeZone = null;
-
   @JsonProperty("isAllDay")
   private Boolean isAllDay = null;
-
   @JsonProperty("keyWords")
   private String keyWords = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("recurrence")
   private MapiCalendarEventRecurrenceDto recurrence = null;
-
   @JsonProperty("reminderDelta")
   private Integer reminderDelta = null;
-
   @JsonProperty("reminderFileParameter")
   private String reminderFileParameter = null;
-
   @JsonProperty("reminderSet")
   private Boolean reminderSet = null;
-
   @JsonProperty("sequence")
   private Integer sequence = null;
-
   @JsonProperty("startDate")
   private Date startDate = null;
-
   @JsonProperty("startDateTimeZone")
   private MapiCalendarTimeZoneDto startDateTimeZone = null;
-
   @JsonProperty("uid")
   private String uid = null;
-
   @JsonProperty("organizer")
   private MapiElectronicAddressDto organizer = null;
 
@@ -123,6 +106,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.appointmentCounterProposal = appointmentCounterProposal;
   }
 
+
   /**
    * Set attendees and return this.
    * @param attendees Attendees             
@@ -149,6 +133,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.attendees = attendees;
   }
 
+
   /**
    * Set busyStatus and return this.
    * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
@@ -174,6 +159,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setBusyStatus(String busyStatus) {
     this.busyStatus = busyStatus;
   }
+
 
   /**
    * Set clientIntent and return this.
@@ -213,6 +199,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.clientIntent = clientIntent;
   }
 
+
   /**
    * Set endDate and return this.
    * @param endDate End date and time of the event. If the date is not set, default value for DateTime is returned.             
@@ -238,6 +225,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setEndDate(Date endDate) {
     this.endDate = endDate;
   }
+
 
   /**
    * Set endDateTimeZone and return this.
@@ -265,6 +253,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.endDateTimeZone = endDateTimeZone;
   }
 
+
   /**
    * Set isAllDay and return this.
    * @param isAllDay Value indicating whether the event is an all-day event.             
@@ -290,6 +279,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setIsAllDay(Boolean isAllDay) {
     this.isAllDay = isAllDay;
   }
+
 
   /**
    * Set keyWords and return this.
@@ -317,6 +307,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.keyWords = keyWords;
   }
 
+
   /**
    * Set location and return this.
    * @param location Location of the event.             
@@ -342,6 +333,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setLocation(String location) {
     this.location = location;
   }
+
 
   /**
    * Set recurrence and return this.
@@ -369,6 +361,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.recurrence = recurrence;
   }
 
+
   /**
    * Set reminderDelta and return this.
    * @param reminderDelta Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
@@ -394,6 +387,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setReminderDelta(Integer reminderDelta) {
     this.reminderDelta = reminderDelta;
   }
+
 
   /**
    * Set reminderFileParameter and return this.
@@ -421,6 +415,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.reminderFileParameter = reminderFileParameter;
   }
 
+
   /**
    * Set reminderSet and return this.
    * @param reminderSet Value indicating whether a reminder is set on the object.             
@@ -446,6 +441,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setReminderSet(Boolean reminderSet) {
     this.reminderSet = reminderSet;
   }
+
 
   /**
    * Set sequence and return this.
@@ -473,6 +469,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.sequence = sequence;
   }
 
+
   /**
    * Set startDate and return this.
    * @param startDate Start date and time of the event. If the date is not set, default value for DateTime is returned.             
@@ -498,6 +495,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setStartDate(Date startDate) {
     this.startDate = startDate;
   }
+
 
   /**
    * Set startDateTimeZone and return this.
@@ -525,6 +523,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     this.startDateTimeZone = startDateTimeZone;
   }
 
+
   /**
    * Set uid and return this.
    * @param uid Unique identifier.             
@@ -550,6 +549,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   public void setUid(String uid) {
     this.uid = uid;
   }
+
 
   /**
    * Set organizer and return this.

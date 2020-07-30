@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiMessageAsFileRequest {
   @JsonProperty("format")
   private String format = null;
-
   @JsonProperty("value")
   private MapiMessageDto value = null;
 
@@ -74,6 +73,7 @@ public class MapiMessageAsFileRequest {
   public void setFormat(String format) {
     this.format = format;
   }
+
 
   /**
    * Set value and return this.

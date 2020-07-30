@@ -45,7 +45,6 @@ import java.io.*;
 public class FilesUploadResult {
   @JsonProperty("uploaded")
   private List<String> uploaded = null;
-
   @JsonProperty("errors")
   private List<Error> errors = null;
 
@@ -86,6 +85,7 @@ public class FilesUploadResult {
   public void setUploaded(List<String> uploaded) {
     this.uploaded = uploaded;
   }
+
 
   /**
    * Set errors and return this.

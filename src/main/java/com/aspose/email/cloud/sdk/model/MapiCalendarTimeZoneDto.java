@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiCalendarTimeZoneDto {
   @JsonProperty("keyName")
   private String keyName = null;
-
   @JsonProperty("timeZoneRules")
   private List<MapiCalendarTimeZoneInfoDto> timeZoneRules = null;
 
@@ -74,6 +73,7 @@ public class MapiCalendarTimeZoneDto {
   public void setKeyName(String keyName) {
     this.keyName = keyName;
   }
+
 
   /**
    * Set timeZoneRules and return this.

@@ -45,7 +45,6 @@ import java.io.*;
 public class ClientThreadSetIsReadRequest extends ClientThreadBaseRequest {
   @JsonProperty("isRead")
   private Boolean isRead = null;
-
   @JsonProperty("folder")
   private String folder = null;
 
@@ -74,6 +73,7 @@ public class ClientThreadSetIsReadRequest extends ClientThreadBaseRequest {
   public void setIsRead(Boolean isRead) {
     this.isRead = isRead;
   }
+
 
   /**
    * Set folder and return this.

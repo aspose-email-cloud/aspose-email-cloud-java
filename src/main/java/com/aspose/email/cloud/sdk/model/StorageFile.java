@@ -45,16 +45,12 @@ import java.io.*;
 public class StorageFile {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("isFolder")
   private Boolean isFolder = null;
-
   @JsonProperty("modifiedDate")
   private Date modifiedDate = null;
-
   @JsonProperty("size")
   private Long size = null;
-
   @JsonProperty("path")
   private String path = null;
 
@@ -84,6 +80,7 @@ public class StorageFile {
     this.name = name;
   }
 
+
   /**
    * Set isFolder and return this.
    * @param isFolder True if it is a folder.
@@ -109,6 +106,7 @@ public class StorageFile {
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
   }
+
 
   /**
    * Set modifiedDate and return this.
@@ -136,6 +134,7 @@ public class StorageFile {
     this.modifiedDate = modifiedDate;
   }
 
+
   /**
    * Set size and return this.
    * @param size File or folder size.
@@ -161,6 +160,7 @@ public class StorageFile {
   public void setSize(Long size) {
     this.size = size;
   }
+
 
   /**
    * Set path and return this.

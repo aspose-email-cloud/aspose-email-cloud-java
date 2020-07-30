@@ -45,7 +45,6 @@ import java.io.*;
 public class MailMessageBase64 extends MailMessageBase {
   @JsonProperty("valueBase64")
   private String valueBase64 = null;
-
   @JsonProperty("format")
   private String format = null;
 
@@ -74,6 +73,7 @@ public class MailMessageBase64 extends MailMessageBase {
   public void setValueBase64(String valueBase64) {
     this.valueBase64 = valueBase64;
   }
+
 
   /**
    * Set format and return this.

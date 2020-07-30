@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfPostalAddressCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfPostalAddressCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.

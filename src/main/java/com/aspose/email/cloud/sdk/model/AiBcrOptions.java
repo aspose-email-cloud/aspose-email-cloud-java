@@ -45,7 +45,6 @@ import java.io.*;
 public class AiBcrOptions {
   @JsonProperty("languages")
   private String languages = null;
-
   @JsonProperty("countries")
   private String countries = null;
 
@@ -74,6 +73,7 @@ public class AiBcrOptions {
   public void setLanguages(String languages) {
     this.languages = languages;
   }
+
 
   /**
    * Set countries and return this.

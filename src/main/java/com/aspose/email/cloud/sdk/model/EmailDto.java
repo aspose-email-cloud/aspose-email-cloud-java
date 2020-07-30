@@ -45,97 +45,66 @@ import java.io.*;
 public class EmailDto {
   @JsonProperty("alternateViews")
   private List<AlternateView> alternateViews = null;
-
   @JsonProperty("attachments")
   private List<Attachment> attachments = null;
-
   @JsonProperty("bcc")
   private List<MailAddress> bcc = null;
-
   @JsonProperty("body")
   private String body = null;
-
   @JsonProperty("bodyEncoding")
   private String bodyEncoding = null;
-
   @JsonProperty("bodyType")
   private String bodyType = null;
-
   @JsonProperty("cc")
   private List<MailAddress> cc = null;
-
   @JsonProperty("date")
   private Date date = null;
-
   @JsonProperty("deliveryNotificationOptions")
   private List<String> deliveryNotificationOptions = null;
-
   @JsonProperty("from")
   private MailAddress from = null;
-
   @JsonProperty("headers")
   private Map<String, String> headers = null;
-
   @JsonProperty("htmlBody")
   private String htmlBody = null;
-
   @JsonProperty("htmlBodyText")
   private String htmlBodyText = null;
-
   @JsonProperty("isBodyHtml")
   private Boolean isBodyHtml = null;
-
   @JsonProperty("isDraft")
   private Boolean isDraft = null;
-
   @JsonProperty("isEncrypted")
   private Boolean isEncrypted = null;
-
   @JsonProperty("isSigned")
   private Boolean isSigned = null;
-
   @JsonProperty("linkedResources")
   private List<LinkedResource> linkedResources = null;
-
   @JsonProperty("messageId")
   private String messageId = null;
-
   @JsonProperty("originalIsTnef")
   private Boolean originalIsTnef = null;
-
   @JsonProperty("preferredTextEncoding")
   private String preferredTextEncoding = null;
-
   @JsonProperty("priority")
   private String priority = null;
-
   @JsonProperty("readReceiptTo")
   private List<MailAddress> readReceiptTo = null;
-
   @JsonProperty("replyToList")
   private List<MailAddress> replyToList = null;
-
   @JsonProperty("reversePath")
   private MailAddress reversePath = null;
-
   @JsonProperty("sender")
   private MailAddress sender = null;
-
   @JsonProperty("sensitivity")
   private String sensitivity = null;
-
   @JsonProperty("subject")
   private String subject = null;
-
   @JsonProperty("subjectEncoding")
   private String subjectEncoding = null;
-
   @JsonProperty("timeZoneOffset")
   private Long timeZoneOffset = null;
-
   @JsonProperty("to")
   private List<MailAddress> to = null;
-
   @JsonProperty("xMailer")
   private String xMailer = null;
 
@@ -177,6 +146,7 @@ public class EmailDto {
     this.alternateViews = alternateViews;
   }
 
+
   /**
    * Set attachments and return this.
    * @param attachments Email message attachments.             
@@ -214,6 +184,7 @@ public class EmailDto {
   public void setAttachments(List<Attachment> attachments) {
     this.attachments = attachments;
   }
+
 
   /**
    * Set bcc and return this.
@@ -253,6 +224,7 @@ public class EmailDto {
     this.bcc = bcc;
   }
 
+
   /**
    * Set body and return this.
    * @param body Email message body as plain text.             
@@ -278,6 +250,7 @@ public class EmailDto {
   public void setBody(String body) {
     this.body = body;
   }
+
 
   /**
    * Set bodyEncoding and return this.
@@ -305,6 +278,7 @@ public class EmailDto {
     this.bodyEncoding = bodyEncoding;
   }
 
+
   /**
    * Set bodyType and return this.
    * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
@@ -330,6 +304,7 @@ public class EmailDto {
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
   }
+
 
   /**
    * Set cc and return this.
@@ -369,6 +344,7 @@ public class EmailDto {
     this.cc = cc;
   }
 
+
   /**
    * Set date and return this.
    * @param date Message date.             
@@ -394,6 +370,7 @@ public class EmailDto {
   public void setDate(Date date) {
     this.date = date;
   }
+
 
   /**
    * Set deliveryNotificationOptions and return this.
@@ -433,6 +410,7 @@ public class EmailDto {
     this.deliveryNotificationOptions = deliveryNotificationOptions;
   }
 
+
   /**
    * Set from and return this.
    * @param from From address.             
@@ -458,6 +436,7 @@ public class EmailDto {
   public void setFrom(MailAddress from) {
     this.from = from;
   }
+
 
   /**
    * Set headers and return this.
@@ -500,6 +479,7 @@ public class EmailDto {
     this.headers = headers;
   }
 
+
   /**
    * Set htmlBody and return this.
    * @param htmlBody HTML body.             
@@ -525,6 +505,7 @@ public class EmailDto {
   public void setHtmlBody(String htmlBody) {
     this.htmlBody = htmlBody;
   }
+
 
   /**
    * Set htmlBodyText and return this.
@@ -552,6 +533,7 @@ public class EmailDto {
     this.htmlBodyText = htmlBodyText;
   }
 
+
   /**
    * Set isBodyHtml and return this.
    * @param isBodyHtml Indicates whether the message body is in Html.             
@@ -577,6 +559,7 @@ public class EmailDto {
   public void setIsBodyHtml(Boolean isBodyHtml) {
     this.isBodyHtml = isBodyHtml;
   }
+
 
   /**
    * Set isDraft and return this.
@@ -604,6 +587,7 @@ public class EmailDto {
     this.isDraft = isDraft;
   }
 
+
   /**
    * Set isEncrypted and return this.
    * @param isEncrypted Indicates whether the message is encrypted. Read only.             
@@ -630,6 +614,7 @@ public class EmailDto {
     this.isEncrypted = isEncrypted;
   }
 
+
   /**
    * Set isSigned and return this.
    * @param isSigned Indicates whether the message is signed. Read only.             
@@ -655,6 +640,7 @@ public class EmailDto {
   public void setIsSigned(Boolean isSigned) {
     this.isSigned = isSigned;
   }
+
 
   /**
    * Set linkedResources and return this.
@@ -694,6 +680,7 @@ public class EmailDto {
     this.linkedResources = linkedResources;
   }
 
+
   /**
    * Set messageId and return this.
    * @param messageId Message id.             
@@ -719,6 +706,7 @@ public class EmailDto {
   public void setMessageId(String messageId) {
     this.messageId = messageId;
   }
+
 
   /**
    * Set originalIsTnef and return this.
@@ -746,6 +734,7 @@ public class EmailDto {
     this.originalIsTnef = originalIsTnef;
   }
 
+
   /**
    * Set preferredTextEncoding and return this.
    * @param preferredTextEncoding Preferred encoding.             
@@ -772,6 +761,7 @@ public class EmailDto {
     this.preferredTextEncoding = preferredTextEncoding;
   }
 
+
   /**
    * Set priority and return this.
    * @param priority Email priority status. Enum, available values: High, Low, Normal
@@ -797,6 +787,7 @@ public class EmailDto {
   public void setPriority(String priority) {
     this.priority = priority;
   }
+
 
   /**
    * Set readReceiptTo and return this.
@@ -836,6 +827,7 @@ public class EmailDto {
     this.readReceiptTo = readReceiptTo;
   }
 
+
   /**
    * Set replyToList and return this.
    * @param replyToList The list of addresses to reply to for the mail message.             
@@ -874,6 +866,7 @@ public class EmailDto {
     this.replyToList = replyToList;
   }
 
+
   /**
    * Set reversePath and return this.
    * @param reversePath ReversePath address.             
@@ -899,6 +892,7 @@ public class EmailDto {
   public void setReversePath(MailAddress reversePath) {
     this.reversePath = reversePath;
   }
+
 
   /**
    * Set sender and return this.
@@ -926,6 +920,7 @@ public class EmailDto {
     this.sender = sender;
   }
 
+
   /**
    * Set sensitivity and return this.
    * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
@@ -951,6 +946,7 @@ public class EmailDto {
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
   }
+
 
   /**
    * Set subject and return this.
@@ -978,6 +974,7 @@ public class EmailDto {
     this.subject = subject;
   }
 
+
   /**
    * Set subjectEncoding and return this.
    * @param subjectEncoding Subject encoding.             
@@ -1004,6 +1001,7 @@ public class EmailDto {
     this.subjectEncoding = subjectEncoding;
   }
 
+
   /**
    * Set timeZoneOffset and return this.
    * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
@@ -1029,6 +1027,7 @@ public class EmailDto {
   public void setTimeZoneOffset(Long timeZoneOffset) {
     this.timeZoneOffset = timeZoneOffset;
   }
+
 
   /**
    * Set to and return this.
@@ -1067,6 +1066,7 @@ public class EmailDto {
   public void setTo(List<MailAddress> to) {
     this.to = to;
   }
+
 
   /**
    * Set xMailer and return this.

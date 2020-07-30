@@ -45,7 +45,6 @@ import java.io.*;
 public class StorageFolderLocation {
   @JsonProperty("storage")
   private String storage = null;
-
   @JsonProperty("folderPath")
   private String folderPath = null;
 
@@ -74,6 +73,7 @@ public class StorageFolderLocation {
   public void setStorage(String storage) {
     this.storage = storage;
   }
+
 
   /**
    * Set folderPath and return this.

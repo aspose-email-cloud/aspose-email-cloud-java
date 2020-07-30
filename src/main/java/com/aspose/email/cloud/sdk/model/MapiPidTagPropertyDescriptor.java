@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiPidTagPropertyDescriptor extends MapiPidPropertyDescriptor {
   @JsonProperty("id")
   private Integer id = null;
-
   @JsonProperty("tag")
   private Long tag = null;
 
@@ -74,6 +73,7 @@ public class MapiPidTagPropertyDescriptor extends MapiPidPropertyDescriptor {
   public void setId(Integer id) {
     this.id = id;
   }
+
 
   /**
    * Set tag and return this.

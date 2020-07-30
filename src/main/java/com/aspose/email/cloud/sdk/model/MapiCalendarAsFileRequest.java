@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiCalendarAsFileRequest {
   @JsonProperty("format")
   private String format = null;
-
   @JsonProperty("value")
   private MapiCalendarDto value = null;
 
@@ -74,6 +73,7 @@ public class MapiCalendarAsFileRequest {
   public void setFormat(String format) {
     this.format = format;
   }
+
 
   /**
    * Set value and return this.

@@ -45,10 +45,8 @@ import java.io.*;
 public class CalendarAsAlternateRequest {
   @JsonProperty("value")
   private CalendarDto value = null;
-
   @JsonProperty("action")
   private String action = null;
-
   @JsonProperty("sequenceId")
   private String sequenceId = null;
 
@@ -78,6 +76,7 @@ public class CalendarAsAlternateRequest {
     this.value = value;
   }
 
+
   /**
    * Set action and return this.
    * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
@@ -103,6 +102,7 @@ public class CalendarAsAlternateRequest {
   public void setAction(String action) {
     this.action = action;
   }
+
 
   /**
    * Set sequenceId and return this.

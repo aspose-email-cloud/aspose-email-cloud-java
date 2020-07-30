@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameWeightedVariants {
   @JsonProperty("names")
   private List<AiNameWeighted> names = null;
-
   @JsonProperty("comments")
   private String comments = null;
 
@@ -86,6 +85,7 @@ public class AiNameWeightedVariants {
   public void setNames(List<AiNameWeighted> names) {
     this.names = names;
   }
+
 
   /**
    * Set comments and return this.

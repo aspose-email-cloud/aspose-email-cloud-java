@@ -45,31 +45,22 @@ import java.io.*;
 public class MapiContactNamePropertySetDto {
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("displayNamePrefix")
   private String displayNamePrefix = null;
-
   @JsonProperty("fileUnder")
   private String fileUnder = null;
-
   @JsonProperty("fileUnderId")
   private Long fileUnderId = null;
-
   @JsonProperty("generation")
   private String generation = null;
-
   @JsonProperty("givenName")
   private String givenName = null;
-
   @JsonProperty("initials")
   private String initials = null;
-
   @JsonProperty("middleName")
   private String middleName = null;
-
   @JsonProperty("nickname")
   private String nickname = null;
-
   @JsonProperty("surname")
   private String surname = null;
 
@@ -99,6 +90,7 @@ public class MapiContactNamePropertySetDto {
     this.displayName = displayName;
   }
 
+
   /**
    * Set displayNamePrefix and return this.
    * @param displayNamePrefix Title of the contact             
@@ -124,6 +116,7 @@ public class MapiContactNamePropertySetDto {
   public void setDisplayNamePrefix(String displayNamePrefix) {
     this.displayNamePrefix = displayNamePrefix;
   }
+
 
   /**
    * Set fileUnder and return this.
@@ -151,6 +144,7 @@ public class MapiContactNamePropertySetDto {
     this.fileUnder = fileUnder;
   }
 
+
   /**
    * Set fileUnderId and return this.
    * @param fileUnderId Value specifying how to generate and recompute the property when other properties are changed             
@@ -176,6 +170,7 @@ public class MapiContactNamePropertySetDto {
   public void setFileUnderId(Long fileUnderId) {
     this.fileUnderId = fileUnderId;
   }
+
 
   /**
    * Set generation and return this.
@@ -203,6 +198,7 @@ public class MapiContactNamePropertySetDto {
     this.generation = generation;
   }
 
+
   /**
    * Set givenName and return this.
    * @param givenName Given name (first name) of the contact             
@@ -228,6 +224,7 @@ public class MapiContactNamePropertySetDto {
   public void setGivenName(String givenName) {
     this.givenName = givenName;
   }
+
 
   /**
    * Set initials and return this.
@@ -255,6 +252,7 @@ public class MapiContactNamePropertySetDto {
     this.initials = initials;
   }
 
+
   /**
    * Set middleName and return this.
    * @param middleName Middle name of the contact             
@@ -281,6 +279,7 @@ public class MapiContactNamePropertySetDto {
     this.middleName = middleName;
   }
 
+
   /**
    * Set nickname and return this.
    * @param nickname Nickname of the contact             
@@ -306,6 +305,7 @@ public class MapiContactNamePropertySetDto {
   public void setNickname(String nickname) {
     this.nickname = nickname;
   }
+
 
   /**
    * Set surname and return this.

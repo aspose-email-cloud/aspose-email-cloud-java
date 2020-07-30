@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameGenderHypothesis {
   @JsonProperty("gender")
   private String gender = null;
-
   @JsonProperty("score")
   private Double score = null;
 
@@ -74,6 +73,7 @@ public class AiNameGenderHypothesis {
   public void setGender(String gender) {
     this.gender = gender;
   }
+
 
   /**
    * Set score and return this.

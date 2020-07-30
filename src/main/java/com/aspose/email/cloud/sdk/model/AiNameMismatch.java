@@ -45,10 +45,8 @@ import java.io.*;
 public class AiNameMismatch {
   @JsonProperty("category")
   private String category = null;
-
   @JsonProperty("similarity")
   private Double similarity = null;
-
   @JsonProperty("explanation")
   private String explanation = null;
 
@@ -78,6 +76,7 @@ public class AiNameMismatch {
     this.category = category;
   }
 
+
   /**
    * Set similarity and return this.
    * @param similarity Similarity score             
@@ -103,6 +102,7 @@ public class AiNameMismatch {
   public void setSimilarity(Double similarity) {
     this.similarity = similarity;
   }
+
 
   /**
    * Set explanation and return this.

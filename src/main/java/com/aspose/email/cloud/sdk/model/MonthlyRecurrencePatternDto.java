@@ -45,10 +45,8 @@ import java.io.*;
 public class MonthlyRecurrencePatternDto extends RecurrencePatternDto {
   @JsonProperty("startDay")
   private String startDay = null;
-
   @JsonProperty("startOffset")
   private Integer startOffset = null;
-
   @JsonProperty("startPosition")
   private String startPosition = null;
 
@@ -78,6 +76,7 @@ public class MonthlyRecurrencePatternDto extends RecurrencePatternDto {
     this.startDay = startDay;
   }
 
+
   /**
    * Set startOffset and return this.
    * @param startOffset Start offset.             
@@ -103,6 +102,7 @@ public class MonthlyRecurrencePatternDto extends RecurrencePatternDto {
   public void setStartOffset(Integer startOffset) {
     this.startOffset = startOffset;
   }
+
 
   /**
    * Set startPosition and return this.

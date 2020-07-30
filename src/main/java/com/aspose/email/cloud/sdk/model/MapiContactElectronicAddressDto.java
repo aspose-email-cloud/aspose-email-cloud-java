@@ -45,19 +45,14 @@ import java.io.*;
 public class MapiContactElectronicAddressDto {
   @JsonProperty("addressType")
   private String addressType = null;
-
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("emailAddress")
   private String emailAddress = null;
-
   @JsonProperty("faxNumber")
   private String faxNumber = null;
-
   @JsonProperty("isEmpty")
   private Boolean isEmpty = null;
-
   @JsonProperty("originalDisplayName")
   private String originalDisplayName = null;
 
@@ -87,6 +82,7 @@ public class MapiContactElectronicAddressDto {
     this.addressType = addressType;
   }
 
+
   /**
    * Set displayName and return this.
    * @param displayName User-readable display name for the e-mail address
@@ -112,6 +108,7 @@ public class MapiContactElectronicAddressDto {
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
+
 
   /**
    * Set emailAddress and return this.
@@ -139,6 +136,7 @@ public class MapiContactElectronicAddressDto {
     this.emailAddress = emailAddress;
   }
 
+
   /**
    * Set faxNumber and return this.
    * @param faxNumber Telephone number of the mail user&#39;s primary fax machine
@@ -165,6 +163,7 @@ public class MapiContactElectronicAddressDto {
     this.faxNumber = faxNumber;
   }
 
+
   /**
    * Set isEmpty and return this.
    * @param isEmpty Shows if MapiContactElectronicAddress is empty
@@ -190,6 +189,7 @@ public class MapiContactElectronicAddressDto {
   public void setIsEmpty(Boolean isEmpty) {
     this.isEmpty = isEmpty;
   }
+
 
   /**
    * Set originalDisplayName and return this.

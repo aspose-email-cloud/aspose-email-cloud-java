@@ -45,58 +45,40 @@ import java.io.*;
 public class MapiContactTelephonePropertySetDto {
   @JsonProperty("isEmpty")
   private Boolean isEmpty = null;
-
   @JsonProperty("defaultTelephoneNumber")
   private String defaultTelephoneNumber = null;
-
   @JsonProperty("useAutocomplete")
   private Boolean useAutocomplete = null;
-
   @JsonProperty("callbackTelephoneNumber")
   private String callbackTelephoneNumber = null;
-
   @JsonProperty("businessTelephoneNumber")
   private String businessTelephoneNumber = null;
-
   @JsonProperty("homeTelephoneNumber")
   private String homeTelephoneNumber = null;
-
   @JsonProperty("primaryTelephoneNumber")
   private String primaryTelephoneNumber = null;
-
   @JsonProperty("business2TelephoneNumber")
   private String business2TelephoneNumber = null;
-
   @JsonProperty("mobileTelephoneNumber")
   private String mobileTelephoneNumber = null;
-
   @JsonProperty("radioTelephoneNumber")
   private String radioTelephoneNumber = null;
-
   @JsonProperty("carTelephoneNumber")
   private String carTelephoneNumber = null;
-
   @JsonProperty("otherTelephoneNumber")
   private String otherTelephoneNumber = null;
-
   @JsonProperty("assistantTelephoneNumber")
   private String assistantTelephoneNumber = null;
-
   @JsonProperty("home2TelephoneNumber")
   private String home2TelephoneNumber = null;
-
   @JsonProperty("ttyTddPhoneNumber")
   private String ttyTddPhoneNumber = null;
-
   @JsonProperty("companyMainTelephoneNumber")
   private String companyMainTelephoneNumber = null;
-
   @JsonProperty("telexNumber")
   private String telexNumber = null;
-
   @JsonProperty("isdnNumber")
   private String isdnNumber = null;
-
   @JsonProperty("pagerTelephoneNumber")
   private String pagerTelephoneNumber = null;
 
@@ -126,6 +108,7 @@ public class MapiContactTelephonePropertySetDto {
     this.isEmpty = isEmpty;
   }
 
+
   /**
    * Set defaultTelephoneNumber and return this.
    * @param defaultTelephoneNumber Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set &#39;true&#39;             
@@ -151,6 +134,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setDefaultTelephoneNumber(String defaultTelephoneNumber) {
     this.defaultTelephoneNumber = defaultTelephoneNumber;
   }
+
 
   /**
    * Set useAutocomplete and return this.
@@ -178,6 +162,7 @@ public class MapiContactTelephonePropertySetDto {
     this.useAutocomplete = useAutocomplete;
   }
 
+
   /**
    * Set callbackTelephoneNumber and return this.
    * @param callbackTelephoneNumber Gets or sets the callback telephone number             
@@ -203,6 +188,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setCallbackTelephoneNumber(String callbackTelephoneNumber) {
     this.callbackTelephoneNumber = callbackTelephoneNumber;
   }
+
 
   /**
    * Set businessTelephoneNumber and return this.
@@ -230,6 +216,7 @@ public class MapiContactTelephonePropertySetDto {
     this.businessTelephoneNumber = businessTelephoneNumber;
   }
 
+
   /**
    * Set homeTelephoneNumber and return this.
    * @param homeTelephoneNumber Gets or sets the home telephone number             
@@ -255,6 +242,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setHomeTelephoneNumber(String homeTelephoneNumber) {
     this.homeTelephoneNumber = homeTelephoneNumber;
   }
+
 
   /**
    * Set primaryTelephoneNumber and return this.
@@ -282,6 +270,7 @@ public class MapiContactTelephonePropertySetDto {
     this.primaryTelephoneNumber = primaryTelephoneNumber;
   }
 
+
   /**
    * Set business2TelephoneNumber and return this.
    * @param business2TelephoneNumber Gets or sets the second business telephone number             
@@ -307,6 +296,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setBusiness2TelephoneNumber(String business2TelephoneNumber) {
     this.business2TelephoneNumber = business2TelephoneNumber;
   }
+
 
   /**
    * Set mobileTelephoneNumber and return this.
@@ -334,6 +324,7 @@ public class MapiContactTelephonePropertySetDto {
     this.mobileTelephoneNumber = mobileTelephoneNumber;
   }
 
+
   /**
    * Set radioTelephoneNumber and return this.
    * @param radioTelephoneNumber Gets or sets the radio telephone number             
@@ -359,6 +350,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setRadioTelephoneNumber(String radioTelephoneNumber) {
     this.radioTelephoneNumber = radioTelephoneNumber;
   }
+
 
   /**
    * Set carTelephoneNumber and return this.
@@ -386,6 +378,7 @@ public class MapiContactTelephonePropertySetDto {
     this.carTelephoneNumber = carTelephoneNumber;
   }
 
+
   /**
    * Set otherTelephoneNumber and return this.
    * @param otherTelephoneNumber Gets or sets an alternate telephone number             
@@ -411,6 +404,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setOtherTelephoneNumber(String otherTelephoneNumber) {
     this.otherTelephoneNumber = otherTelephoneNumber;
   }
+
 
   /**
    * Set assistantTelephoneNumber and return this.
@@ -438,6 +432,7 @@ public class MapiContactTelephonePropertySetDto {
     this.assistantTelephoneNumber = assistantTelephoneNumber;
   }
 
+
   /**
    * Set home2TelephoneNumber and return this.
    * @param home2TelephoneNumber Gets or sets a second home telephone number             
@@ -463,6 +458,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setHome2TelephoneNumber(String home2TelephoneNumber) {
     this.home2TelephoneNumber = home2TelephoneNumber;
   }
+
 
   /**
    * Set ttyTddPhoneNumber and return this.
@@ -490,6 +486,7 @@ public class MapiContactTelephonePropertySetDto {
     this.ttyTddPhoneNumber = ttyTddPhoneNumber;
   }
 
+
   /**
    * Set companyMainTelephoneNumber and return this.
    * @param companyMainTelephoneNumber Gets or sets the company phone number             
@@ -515,6 +512,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setCompanyMainTelephoneNumber(String companyMainTelephoneNumber) {
     this.companyMainTelephoneNumber = companyMainTelephoneNumber;
   }
+
 
   /**
    * Set telexNumber and return this.
@@ -542,6 +540,7 @@ public class MapiContactTelephonePropertySetDto {
     this.telexNumber = telexNumber;
   }
 
+
   /**
    * Set isdnNumber and return this.
    * @param isdnNumber Gets or sets the integrated services digital network (ISDN) number             
@@ -567,6 +566,7 @@ public class MapiContactTelephonePropertySetDto {
   public void setIsdnNumber(String isdnNumber) {
     this.isdnNumber = isdnNumber;
   }
+
 
   /**
    * Set pagerTelephoneNumber and return this.

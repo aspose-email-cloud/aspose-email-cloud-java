@@ -45,7 +45,6 @@ import java.io.*;
 public class FileVersion extends StorageFile {
   @JsonProperty("versionId")
   private String versionId = null;
-
   @JsonProperty("isLatest")
   private Boolean isLatest = null;
 
@@ -74,6 +73,7 @@ public class FileVersion extends StorageFile {
   public void setVersionId(String versionId) {
     this.versionId = versionId;
   }
+
 
   /**
    * Set isLatest and return this.

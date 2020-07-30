@@ -45,10 +45,8 @@ import java.io.*;
 public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalendarRecurrencePatternDto {
   @JsonProperty("day")
   private Integer day = null;
-
   @JsonProperty("dayOfWeek")
   private List<String> dayOfWeek = null;
-
   @JsonProperty("position")
   private String position = null;
 
@@ -77,6 +75,7 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
   public void setDay(Integer day) {
     this.day = day;
   }
+
 
   /**
    * Set dayOfWeek and return this.
@@ -115,6 +114,7 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
   public void setDayOfWeek(List<String> dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
+
 
   /**
    * Set position and return this.

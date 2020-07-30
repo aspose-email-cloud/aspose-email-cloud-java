@@ -45,7 +45,6 @@ import java.io.*;
 public class StorageModelOfMapiContactDto {
   @JsonProperty("storageFile")
   private StorageFileLocation storageFile = null;
-
   @JsonProperty("value")
   private MapiContactDto value = null;
 
@@ -74,6 +73,7 @@ public class StorageModelOfMapiContactDto {
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
+
 
   /**
    * Set value and return this.

@@ -45,7 +45,6 @@ import java.io.*;
 public class StorageModelOfMapiCalendarDto {
   @JsonProperty("storageFile")
   private StorageFileLocation storageFile = null;
-
   @JsonProperty("value")
   private MapiCalendarDto value = null;
 
@@ -74,6 +73,7 @@ public class StorageModelOfMapiCalendarDto {
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
+
 
   /**
    * Set value and return this.

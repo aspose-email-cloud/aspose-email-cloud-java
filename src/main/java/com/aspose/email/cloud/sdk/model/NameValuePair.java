@@ -45,7 +45,6 @@ import java.io.*;
 public class NameValuePair {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("value")
   private String value = null;
 
@@ -74,6 +73,7 @@ public class NameValuePair {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set value and return this.

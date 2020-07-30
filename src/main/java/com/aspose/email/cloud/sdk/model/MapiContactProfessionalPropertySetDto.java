@@ -45,22 +45,16 @@ import java.io.*;
 public class MapiContactProfessionalPropertySetDto {
   @JsonProperty("title")
   private String title = null;
-
   @JsonProperty("companyName")
   private String companyName = null;
-
   @JsonProperty("departmentName")
   private String departmentName = null;
-
   @JsonProperty("officeLocation")
   private String officeLocation = null;
-
   @JsonProperty("managerName")
   private String managerName = null;
-
   @JsonProperty("assistant")
   private String assistant = null;
-
   @JsonProperty("profession")
   private String profession = null;
 
@@ -90,6 +84,7 @@ public class MapiContactProfessionalPropertySetDto {
     this.title = title;
   }
 
+
   /**
    * Set companyName and return this.
    * @param companyName Gets or sets the company that employs the contact             
@@ -115,6 +110,7 @@ public class MapiContactProfessionalPropertySetDto {
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
+
 
   /**
    * Set departmentName and return this.
@@ -142,6 +138,7 @@ public class MapiContactProfessionalPropertySetDto {
     this.departmentName = departmentName;
   }
 
+
   /**
    * Set officeLocation and return this.
    * @param officeLocation Gets or sets the location of the office that the contact works in             
@@ -167,6 +164,7 @@ public class MapiContactProfessionalPropertySetDto {
   public void setOfficeLocation(String officeLocation) {
     this.officeLocation = officeLocation;
   }
+
 
   /**
    * Set managerName and return this.
@@ -194,6 +192,7 @@ public class MapiContactProfessionalPropertySetDto {
     this.managerName = managerName;
   }
 
+
   /**
    * Set assistant and return this.
    * @param assistant Gets or sets the name of the contact&#39;s assistant             
@@ -219,6 +218,7 @@ public class MapiContactProfessionalPropertySetDto {
   public void setAssistant(String assistant) {
     this.assistant = assistant;
   }
+
 
   /**
    * Set profession and return this.

@@ -45,7 +45,6 @@ import java.io.*;
 public class AlternateView extends AttachmentBase {
   @JsonProperty("baseUri")
   private String baseUri = null;
-
   @JsonProperty("linkedResources")
   private List<LinkedResource> linkedResources = null;
 
@@ -74,6 +73,7 @@ public class AlternateView extends AttachmentBase {
   public void setBaseUri(String baseUri) {
     this.baseUri = baseUri;
   }
+
 
   /**
    * Set linkedResources and return this.

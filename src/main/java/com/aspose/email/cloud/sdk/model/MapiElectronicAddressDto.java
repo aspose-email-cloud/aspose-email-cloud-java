@@ -45,16 +45,12 @@ import java.io.*;
 public class MapiElectronicAddressDto {
   @JsonProperty("addressType")
   private String addressType = null;
-
   @JsonProperty("emailAddress")
   private String emailAddress = null;
-
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("faxNumber")
   private String faxNumber = null;
-
   @JsonProperty("originalDisplayName")
   private String originalDisplayName = null;
 
@@ -84,6 +80,7 @@ public class MapiElectronicAddressDto {
     this.addressType = addressType;
   }
 
+
   /**
    * Set emailAddress and return this.
    * @param emailAddress Email address.             
@@ -109,6 +106,7 @@ public class MapiElectronicAddressDto {
   public void setEmailAddress(String emailAddress) {
     this.emailAddress = emailAddress;
   }
+
 
   /**
    * Set displayName and return this.
@@ -136,6 +134,7 @@ public class MapiElectronicAddressDto {
     this.displayName = displayName;
   }
 
+
   /**
    * Set faxNumber and return this.
    * @param faxNumber Telephone number of the mail user&#39;s primary fax machine.             
@@ -161,6 +160,7 @@ public class MapiElectronicAddressDto {
   public void setFaxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
   }
+
 
   /**
    * Set originalDisplayName and return this.

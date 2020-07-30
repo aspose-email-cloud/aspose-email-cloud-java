@@ -45,25 +45,18 @@ import java.io.*;
 public class CalendarReminder {
   @JsonProperty("action")
   private String action = null;
-
   @JsonProperty("attachments")
   private List<String> attachments = null;
-
   @JsonProperty("attendees")
   private List<ReminderAttendee> attendees = null;
-
   @JsonProperty("description")
   private String description = null;
-
   @JsonProperty("duration")
   private Long duration = null;
-
   @JsonProperty("repeat")
   private Integer repeat = null;
-
   @JsonProperty("summary")
   private String summary = null;
-
   @JsonProperty("trigger")
   private ReminderTrigger trigger = null;
 
@@ -92,6 +85,7 @@ public class CalendarReminder {
   public void setAction(String action) {
     this.action = action;
   }
+
 
   /**
    * Set attachments and return this.
@@ -131,6 +125,7 @@ public class CalendarReminder {
     this.attachments = attachments;
   }
 
+
   /**
    * Set attendees and return this.
    * @param attendees Contains collection of ReminderAttendee objects.             
@@ -169,6 +164,7 @@ public class CalendarReminder {
     this.attendees = attendees;
   }
 
+
   /**
    * Set description and return this.
    * @param description Provides a more complete description of the alarm.
@@ -194,6 +190,7 @@ public class CalendarReminder {
   public void setDescription(String description) {
     this.description = description;
   }
+
 
   /**
    * Set duration and return this.
@@ -221,6 +218,7 @@ public class CalendarReminder {
     this.duration = duration;
   }
 
+
   /**
    * Set repeat and return this.
    * @param repeat Defines the number of time the alarm should be repeated, after the initial trigger.             
@@ -247,6 +245,7 @@ public class CalendarReminder {
     this.repeat = repeat;
   }
 
+
   /**
    * Set summary and return this.
    * @param summary Defines a short summary or subject for the alarm.
@@ -272,6 +271,7 @@ public class CalendarReminder {
   public void setSummary(String summary) {
     this.summary = summary;
   }
+
 
   /**
    * Set trigger and return this.

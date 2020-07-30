@@ -45,7 +45,6 @@ import java.io.*;
 public class DiscUsage {
   @JsonProperty("usedSize")
   private Long usedSize = null;
-
   @JsonProperty("totalSize")
   private Long totalSize = null;
 
@@ -74,6 +73,7 @@ public class DiscUsage {
   public void setUsedSize(Long usedSize) {
     this.usedSize = usedSize;
   }
+
 
   /**
    * Set totalSize and return this.

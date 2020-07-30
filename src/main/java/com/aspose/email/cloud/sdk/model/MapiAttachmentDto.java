@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiAttachmentDto {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("dataBase64")
   private String dataBase64 = null;
 
@@ -74,6 +73,7 @@ public class MapiAttachmentDto {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set dataBase64 and return this.

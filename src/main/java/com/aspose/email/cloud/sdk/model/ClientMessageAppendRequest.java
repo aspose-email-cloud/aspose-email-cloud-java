@@ -45,10 +45,8 @@ import java.io.*;
 public class ClientMessageAppendRequest extends ClientAccountBaseRequest {
   @JsonProperty("folder")
   private String folder = null;
-
   @JsonProperty("message")
   private MailMessageBase message = null;
-
   @JsonProperty("markAsSent")
   private Boolean markAsSent = null;
 
@@ -78,6 +76,7 @@ public class ClientMessageAppendRequest extends ClientAccountBaseRequest {
     this.folder = folder;
   }
 
+
   /**
    * Set message and return this.
    * @param message Message to append.             
@@ -103,6 +102,7 @@ public class ClientMessageAppendRequest extends ClientAccountBaseRequest {
   public void setMessage(MailMessageBase message) {
     this.message = message;
   }
+
 
   /**
    * Set markAsSent and return this.

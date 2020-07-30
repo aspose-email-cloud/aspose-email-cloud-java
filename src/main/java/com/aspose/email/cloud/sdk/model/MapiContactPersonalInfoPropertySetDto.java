@@ -45,58 +45,40 @@ import java.io.*;
 public class MapiContactPersonalInfoPropertySetDto {
   @JsonProperty("spouseName")
   private String spouseName = null;
-
   @JsonProperty("personalHomePage")
   private String personalHomePage = null;
-
   @JsonProperty("language")
   private String language = null;
-
   @JsonProperty("notes")
   private String notes = null;
-
   @JsonProperty("hobbies")
   private String hobbies = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("instantMessagingAddress")
   private String instantMessagingAddress = null;
-
   @JsonProperty("organizationalIdNumber")
   private String organizationalIdNumber = null;
-
   @JsonProperty("customerId")
   private String customerId = null;
-
   @JsonProperty("governmentIdNumber")
   private String governmentIdNumber = null;
-
   @JsonProperty("freeBusyLocation")
   private String freeBusyLocation = null;
-
   @JsonProperty("account")
   private String account = null;
-
   @JsonProperty("html")
   private String html = null;
-
   @JsonProperty("businessHomePage")
   private String businessHomePage = null;
-
   @JsonProperty("ftpSite")
   private String ftpSite = null;
-
   @JsonProperty("computerNetworkName")
   private String computerNetworkName = null;
-
   @JsonProperty("gender")
   private String gender = null;
-
   @JsonProperty("referredByName")
   private String referredByName = null;
-
   @JsonProperty("children")
   private List<String> children = null;
 
@@ -126,6 +108,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.spouseName = spouseName;
   }
 
+
   /**
    * Set personalHomePage and return this.
    * @param personalHomePage Specifies the contact&#39;s personal web page URL             
@@ -151,6 +134,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setPersonalHomePage(String personalHomePage) {
     this.personalHomePage = personalHomePage;
   }
+
 
   /**
    * Set language and return this.
@@ -178,6 +162,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.language = language;
   }
 
+
   /**
    * Set notes and return this.
    * @param notes Specifies the additional notes             
@@ -203,6 +188,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setNotes(String notes) {
     this.notes = notes;
   }
+
 
   /**
    * Set hobbies and return this.
@@ -230,6 +216,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.hobbies = hobbies;
   }
 
+
   /**
    * Set location and return this.
    * @param location Specifies the location of the contact             
@@ -255,6 +242,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setLocation(String location) {
     this.location = location;
   }
+
 
   /**
    * Set instantMessagingAddress and return this.
@@ -282,6 +270,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.instantMessagingAddress = instantMessagingAddress;
   }
 
+
   /**
    * Set organizationalIdNumber and return this.
    * @param organizationalIdNumber Specifies an organizational ID number for the contact             
@@ -307,6 +296,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setOrganizationalIdNumber(String organizationalIdNumber) {
     this.organizationalIdNumber = organizationalIdNumber;
   }
+
 
   /**
    * Set customerId and return this.
@@ -334,6 +324,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.customerId = customerId;
   }
 
+
   /**
    * Set governmentIdNumber and return this.
    * @param governmentIdNumber Specifies the contact&#39;s government ID number             
@@ -359,6 +350,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setGovernmentIdNumber(String governmentIdNumber) {
     this.governmentIdNumber = governmentIdNumber;
   }
+
 
   /**
    * Set freeBusyLocation and return this.
@@ -386,6 +378,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.freeBusyLocation = freeBusyLocation;
   }
 
+
   /**
    * Set account and return this.
    * @param account Specifies the account name of the contact             
@@ -411,6 +404,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setAccount(String account) {
     this.account = account;
   }
+
 
   /**
    * Set html and return this.
@@ -438,6 +432,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.html = html;
   }
 
+
   /**
    * Set businessHomePage and return this.
    * @param businessHomePage Specifies the contact&#39;s business web page URL             
@@ -463,6 +458,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setBusinessHomePage(String businessHomePage) {
     this.businessHomePage = businessHomePage;
   }
+
 
   /**
    * Set ftpSite and return this.
@@ -490,6 +486,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.ftpSite = ftpSite;
   }
 
+
   /**
    * Set computerNetworkName and return this.
    * @param computerNetworkName Specifies the name of the network to which the contact&#39;s computer is connected             
@@ -515,6 +512,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setComputerNetworkName(String computerNetworkName) {
     this.computerNetworkName = computerNetworkName;
   }
+
 
   /**
    * Set gender and return this.
@@ -542,6 +540,7 @@ public class MapiContactPersonalInfoPropertySetDto {
     this.gender = gender;
   }
 
+
   /**
    * Set referredByName and return this.
    * @param referredByName Specifies the name of the person who referred this contact to the user             
@@ -567,6 +566,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   public void setReferredByName(String referredByName) {
     this.referredByName = referredByName;
   }
+
 
   /**
    * Set children and return this.

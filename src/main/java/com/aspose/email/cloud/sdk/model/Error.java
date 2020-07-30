@@ -45,13 +45,10 @@ import java.io.*;
 public class Error {
   @JsonProperty("code")
   private String code = null;
-
   @JsonProperty("message")
   private String message = null;
-
   @JsonProperty("description")
   private String description = null;
-
   @JsonProperty("innerError")
   private ErrorDetails innerError = null;
 
@@ -81,6 +78,7 @@ public class Error {
     this.code = code;
   }
 
+
   /**
    * Set message and return this.
    * @param message Message             
@@ -107,6 +105,7 @@ public class Error {
     this.message = message;
   }
 
+
   /**
    * Set description and return this.
    * @param description Description             
@@ -132,6 +131,7 @@ public class Error {
   public void setDescription(String description) {
     this.description = description;
   }
+
 
   /**
    * Set innerError and return this.

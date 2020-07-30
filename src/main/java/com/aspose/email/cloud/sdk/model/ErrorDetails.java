@@ -45,7 +45,6 @@ import java.io.*;
 public class ErrorDetails {
   @JsonProperty("requestId")
   private String requestId = null;
-
   @JsonProperty("date")
   private Date date = null;
 
@@ -74,6 +73,7 @@ public class ErrorDetails {
   public void setRequestId(String requestId) {
     this.requestId = requestId;
   }
+
 
   /**
    * Set date and return this.

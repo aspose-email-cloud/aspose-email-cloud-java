@@ -45,7 +45,6 @@ import java.io.*;
 public class StorageModelOfEmailClientAccount {
   @JsonProperty("storageFile")
   private StorageFileLocation storageFile = null;
-
   @JsonProperty("value")
   private EmailClientAccount value = null;
 
@@ -74,6 +73,7 @@ public class StorageModelOfEmailClientAccount {
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
+
 
   /**
    * Set value and return this.

@@ -45,28 +45,20 @@ import java.io.*;
 public class MapiContactElectronicAddressPropertySetDto {
   @JsonProperty("businessFax")
   private MapiContactElectronicAddressDto businessFax = null;
-
   @JsonProperty("defaultEmailAddress")
   private MapiContactElectronicAddressDto defaultEmailAddress = null;
-
   @JsonProperty("email1")
   private MapiContactElectronicAddressDto email1 = null;
-
   @JsonProperty("email2")
   private MapiContactElectronicAddressDto email2 = null;
-
   @JsonProperty("email3")
   private MapiContactElectronicAddressDto email3 = null;
-
   @JsonProperty("homeFax")
   private MapiContactElectronicAddressDto homeFax = null;
-
   @JsonProperty("isEmpty")
   private Boolean isEmpty = null;
-
   @JsonProperty("primaryFax")
   private MapiContactElectronicAddressDto primaryFax = null;
-
   @JsonProperty("useAutocomplete")
   private Boolean useAutocomplete = null;
 
@@ -96,6 +88,7 @@ public class MapiContactElectronicAddressPropertySetDto {
     this.businessFax = businessFax;
   }
 
+
   /**
    * Set defaultEmailAddress and return this.
    * @param defaultEmailAddress Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set &#39;true&#39;             
@@ -121,6 +114,7 @@ public class MapiContactElectronicAddressPropertySetDto {
   public void setDefaultEmailAddress(MapiContactElectronicAddressDto defaultEmailAddress) {
     this.defaultEmailAddress = defaultEmailAddress;
   }
+
 
   /**
    * Set email1 and return this.
@@ -148,6 +142,7 @@ public class MapiContactElectronicAddressPropertySetDto {
     this.email1 = email1;
   }
 
+
   /**
    * Set email2 and return this.
    * @param email2 Refers to the group of properties that define the second e-mail address for a contact.             
@@ -173,6 +168,7 @@ public class MapiContactElectronicAddressPropertySetDto {
   public void setEmail2(MapiContactElectronicAddressDto email2) {
     this.email2 = email2;
   }
+
 
   /**
    * Set email3 and return this.
@@ -200,6 +196,7 @@ public class MapiContactElectronicAddressPropertySetDto {
     this.email3 = email3;
   }
 
+
   /**
    * Set homeFax and return this.
    * @param homeFax Refers to the group of properties that define the home fax address for a contact.             
@@ -225,6 +222,7 @@ public class MapiContactElectronicAddressPropertySetDto {
   public void setHomeFax(MapiContactElectronicAddressDto homeFax) {
     this.homeFax = homeFax;
   }
+
 
   /**
    * Set isEmpty and return this.
@@ -252,6 +250,7 @@ public class MapiContactElectronicAddressPropertySetDto {
     this.isEmpty = isEmpty;
   }
 
+
   /**
    * Set primaryFax and return this.
    * @param primaryFax Refers to the group of properties that define the primary fax address for a contact.             
@@ -277,6 +276,7 @@ public class MapiContactElectronicAddressPropertySetDto {
   public void setPrimaryFax(MapiContactElectronicAddressDto primaryFax) {
     this.primaryFax = primaryFax;
   }
+
 
   /**
    * Set useAutocomplete and return this.

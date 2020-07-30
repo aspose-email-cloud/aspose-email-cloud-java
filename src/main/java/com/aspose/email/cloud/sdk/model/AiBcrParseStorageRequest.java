@@ -45,10 +45,8 @@ import java.io.*;
 public class AiBcrParseStorageRequest {
   @JsonProperty("outFolder")
   private StorageFolderLocation outFolder = null;
-
   @JsonProperty("images")
   private List<AiBcrImageStorageFile> images = new ArrayList<AiBcrImageStorageFile>();
-
   @JsonProperty("options")
   private AiBcrOptions options = null;
 
@@ -77,6 +75,7 @@ public class AiBcrParseStorageRequest {
   public void setOutFolder(StorageFolderLocation outFolder) {
     this.outFolder = outFolder;
   }
+
 
   /**
    * Set images and return this.
@@ -112,6 +111,7 @@ public class AiBcrParseStorageRequest {
   public void setImages(List<AiBcrImageStorageFile> images) {
     this.images = images;
   }
+
 
   /**
    * Set options and return this.

@@ -46,12 +46,6 @@ public class MailMessageBase {
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
-
 
   /**
    * Get discriminator
@@ -65,7 +59,9 @@ public class MailMessageBase {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String discriminator) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override

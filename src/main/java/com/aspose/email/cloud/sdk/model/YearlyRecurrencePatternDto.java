@@ -45,13 +45,10 @@ import java.io.*;
 public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
   @JsonProperty("startDay")
   private String startDay = null;
-
   @JsonProperty("startMonth")
   private String startMonth = null;
-
   @JsonProperty("startOffset")
   private Integer startOffset = null;
-
   @JsonProperty("startPosition")
   private String startPosition = null;
 
@@ -81,6 +78,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
     this.startDay = startDay;
   }
 
+
   /**
    * Set startMonth and return this.
    * @param startMonth Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
@@ -107,6 +105,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
     this.startMonth = startMonth;
   }
 
+
   /**
    * Set startOffset and return this.
    * @param startOffset Start offset.             
@@ -132,6 +131,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
   public void setStartOffset(Integer startOffset) {
     this.startOffset = startOffset;
   }
+
 
   /**
    * Set startPosition and return this.

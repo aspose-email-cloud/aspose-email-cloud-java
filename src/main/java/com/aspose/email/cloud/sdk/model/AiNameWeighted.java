@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameWeighted {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("score")
   private Double score = null;
 
@@ -74,6 +73,7 @@ public class AiNameWeighted {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set score and return this.
