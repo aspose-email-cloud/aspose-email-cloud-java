@@ -221,8 +221,8 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
    * @param requestUrl The url to obtain access token. If not specified, will try to discover from email client account host.             
    */
   public EmailClientAccountOauthCredentials(
-    String login/*,
-    String discriminator*/,
+    String login
+    ,
     String clientId,
     String clientSecret,
     String refreshToken,

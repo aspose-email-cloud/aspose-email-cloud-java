@@ -101,8 +101,8 @@ public class DailyRecurrencePatternDto extends RecurrencePatternDto {
     Integer interval,
     Integer occurs,
     Date endDate,
-    String weekStart/*,
-    String discriminator*/
+    String weekStart
+    
   ) {
     super();
     setInterval(interval);

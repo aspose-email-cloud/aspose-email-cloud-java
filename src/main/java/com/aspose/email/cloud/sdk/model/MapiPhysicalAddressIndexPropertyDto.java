@@ -125,8 +125,8 @@ public class MapiPhysicalAddressIndexPropertyDto extends MapiPropertyDto {
    * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
    */
   public MapiPhysicalAddressIndexPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String value
   ) {
     super();

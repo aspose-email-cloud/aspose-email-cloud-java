@@ -95,8 +95,8 @@ public class MapiContactPhotoDto extends ContactPhoto {
    */
   public MapiContactPhotoDto(
     String photoImageFormat,
-    String base64Data/*,
-    String discriminator*/
+    String base64Data
+    
   ) {
     super();
     setPhotoImageFormat(photoImageFormat);

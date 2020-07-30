@@ -154,8 +154,8 @@ public class MailMessageBase64 extends MailMessageBase {
    * @param valueBase64 Email message file data encoded to Base64 string.             
    * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
    */
-  public MailMessageBase64(/*
-    String discriminator*/,
+  public MailMessageBase64(
+    //,
     String valueBase64,
     String format
   ) {

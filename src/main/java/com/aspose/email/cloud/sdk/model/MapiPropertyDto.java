@@ -147,8 +147,8 @@ public class MapiPropertyDto {
    * @param descriptor Property descriptor             
    */
   public MapiPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/
+    MapiPropertyDescriptor descriptor
+    
   ) {
     super();
     setDescriptor(descriptor);

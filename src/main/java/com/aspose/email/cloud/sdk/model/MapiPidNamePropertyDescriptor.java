@@ -130,8 +130,8 @@ public class MapiPidNamePropertyDescriptor extends MapiPidPropertyDescriptor {
    * @param name A string that identifies the property             
    * @param propertySet A GUID that identifies a group of properties with a similar purpose.             
    */
-  public MapiPidNamePropertyDescriptor(/*
-    String discriminator*/,
+  public MapiPidNamePropertyDescriptor(
+    //,
     String canonicalName,
     String dataType,
     Boolean multipleValuesDataType,

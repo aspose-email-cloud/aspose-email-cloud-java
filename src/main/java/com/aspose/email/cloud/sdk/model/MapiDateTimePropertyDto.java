@@ -125,8 +125,8 @@ public class MapiDateTimePropertyDto extends MapiPropertyDto {
    * @param value Property value             
    */
   public MapiDateTimePropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     Date value
   ) {
     super();

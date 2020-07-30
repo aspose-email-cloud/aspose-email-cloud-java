@@ -125,8 +125,8 @@ public class EmailClientAccountPasswordCredentials extends EmailClientAccountCre
    * @param password Email client account password             
    */
   public EmailClientAccountPasswordCredentials(
-    String login/*,
-    String discriminator*/,
+    String login
+    ,
     String password
   ) {
     super();

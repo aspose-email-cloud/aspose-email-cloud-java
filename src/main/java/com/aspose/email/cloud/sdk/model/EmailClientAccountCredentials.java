@@ -147,8 +147,8 @@ public class EmailClientAccountCredentials {
    * @param login Email client account login             
    */
   public EmailClientAccountCredentials(
-    String login/*,
-    String discriminator*/
+    String login
+    
   ) {
     super();
     setLogin(login);

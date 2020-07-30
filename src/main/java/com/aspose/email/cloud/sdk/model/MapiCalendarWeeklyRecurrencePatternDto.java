@@ -173,8 +173,8 @@ public class MapiCalendarWeeklyRecurrencePatternDto extends MapiCalendarRecurren
     Long period,
     Boolean slidingFlag,
     Date startDate,
-    String weekStartDay/*,
-    String discriminator*/,
+    String weekStartDay
+    ,
     List<String> dayOfWeek
   ) {
     super();

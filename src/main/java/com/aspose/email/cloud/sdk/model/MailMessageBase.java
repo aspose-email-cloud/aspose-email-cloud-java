@@ -114,8 +114,8 @@ public class MailMessageBase {
   /**
    * Initializes a new instance of the MailMessageBase
    */
-  public MailMessageBase(/*
-    String discriminator*/
+  public MailMessageBase(
+    
   ) {
     super();
   }

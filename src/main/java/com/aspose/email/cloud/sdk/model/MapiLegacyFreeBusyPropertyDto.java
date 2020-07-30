@@ -125,8 +125,8 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
    * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
    */
   public MapiLegacyFreeBusyPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String value
   ) {
     super();

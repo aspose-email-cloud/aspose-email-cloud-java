@@ -218,8 +218,8 @@ public class MapiPidPropertyDescriptor extends MapiPropertyDescriptor {
    * @param multipleValuesDataType Indicates if data type contains of multiple values             
    * @param name A string that identifies the property             
    */
-  public MapiPidPropertyDescriptor(/*
-    String discriminator*/,
+  public MapiPidPropertyDescriptor(
+    //,
     String canonicalName,
     String dataType,
     Boolean multipleValuesDataType,

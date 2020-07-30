@@ -114,8 +114,8 @@ public class MapiPropertyDescriptor {
   /**
    * Initializes a new instance of the MapiPropertyDescriptor
    */
-  public MapiPropertyDescriptor(/*
-    String discriminator*/
+  public MapiPropertyDescriptor(
+    
   ) {
     super();
   }

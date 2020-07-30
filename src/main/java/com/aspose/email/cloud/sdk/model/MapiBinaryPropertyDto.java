@@ -125,8 +125,8 @@ public class MapiBinaryPropertyDto extends MapiPropertyDto {
    * @param valueBase64 Property value converted to Base64             
    */
   public MapiBinaryPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String valueBase64
   ) {
     super();

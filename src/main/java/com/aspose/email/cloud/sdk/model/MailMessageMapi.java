@@ -122,8 +122,8 @@ public class MailMessageMapi extends MailMessageBase {
    * Initializes a new instance of the MailMessageMapi
    * @param value Email message object.             
    */
-  public MailMessageMapi(/*
-    String discriminator*/,
+  public MailMessageMapi(
+    //,
     MapiMessageDto value
   ) {
     super();

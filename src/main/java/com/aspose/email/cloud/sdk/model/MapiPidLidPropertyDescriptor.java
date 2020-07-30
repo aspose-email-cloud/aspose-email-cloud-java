@@ -162,8 +162,8 @@ public class MapiPidLidPropertyDescriptor extends MapiPidPropertyDescriptor {
    * @param longId An unsigned 32-bit quantity that, along with the property set, identifies a named property.             
    * @param propertySet A GUID that identifies a group of properties with a similar purpose.             
    */
-  public MapiPidLidPropertyDescriptor(/*
-    String discriminator*/,
+  public MapiPidLidPropertyDescriptor(
+    //,
     String canonicalName,
     String dataType,
     Boolean multipleValuesDataType,

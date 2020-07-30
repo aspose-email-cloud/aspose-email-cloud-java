@@ -237,8 +237,8 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
     Long period,
     Boolean slidingFlag,
     Date startDate,
-    String weekStartDay/*,
-    String discriminator*/,
+    String weekStartDay
+    ,
     Integer day,
     List<String> dayOfWeek,
     String position

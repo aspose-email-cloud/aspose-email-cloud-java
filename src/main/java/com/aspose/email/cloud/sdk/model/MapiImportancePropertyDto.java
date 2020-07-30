@@ -125,8 +125,8 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
    * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
    */
   public MapiImportancePropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String value
   ) {
     super();

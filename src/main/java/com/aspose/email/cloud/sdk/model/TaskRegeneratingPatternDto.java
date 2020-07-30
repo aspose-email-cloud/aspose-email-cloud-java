@@ -134,8 +134,8 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
     Integer interval,
     Integer occurs,
     Date endDate,
-    String weekStart/*,
-    String discriminator*/,
+    String weekStart
+    ,
     String regeneratingType
   ) {
     super();

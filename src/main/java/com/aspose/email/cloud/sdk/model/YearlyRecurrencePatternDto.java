@@ -230,8 +230,8 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
     Integer interval,
     Integer occurs,
     Date endDate,
-    String weekStart/*,
-    String discriminator*/,
+    String weekStart
+    ,
     String startDay,
     String startMonth,
     Integer startOffset,

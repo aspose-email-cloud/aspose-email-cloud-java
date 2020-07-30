@@ -125,8 +125,8 @@ public class MapiStringPropertyDto extends MapiPropertyDto {
    * @param value Property value             
    */
   public MapiStringPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String value
   ) {
     super();

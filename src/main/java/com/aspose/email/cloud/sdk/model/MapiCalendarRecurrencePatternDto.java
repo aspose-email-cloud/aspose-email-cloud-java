@@ -579,8 +579,8 @@ public class MapiCalendarRecurrencePatternDto {
     Long period,
     Boolean slidingFlag,
     Date startDate,
-    String weekStartDay/*,
-    String discriminator*/
+    String weekStartDay
+    
   ) {
     super();
     setCalendarType(calendarType);

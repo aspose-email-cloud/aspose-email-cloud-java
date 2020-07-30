@@ -180,8 +180,8 @@ public class ContactPhoto {
    */
   public ContactPhoto(
     String photoImageFormat,
-    String base64Data/*,
-    String discriminator*/
+    String base64Data
+    
   ) {
     super();
     setPhotoImageFormat(photoImageFormat);

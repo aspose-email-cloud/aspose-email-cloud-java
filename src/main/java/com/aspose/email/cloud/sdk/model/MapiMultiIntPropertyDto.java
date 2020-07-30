@@ -137,8 +137,8 @@ public class MapiMultiIntPropertyDto extends MapiPropertyDto {
    * @param values Property values             
    */
   public MapiMultiIntPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     List<Integer> values
   ) {
     super();

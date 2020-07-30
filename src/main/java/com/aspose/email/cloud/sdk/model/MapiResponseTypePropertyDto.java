@@ -125,8 +125,8 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
    * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
    */
   public MapiResponseTypePropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     String value
   ) {
     super();

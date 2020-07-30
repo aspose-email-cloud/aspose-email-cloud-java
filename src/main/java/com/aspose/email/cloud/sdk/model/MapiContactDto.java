@@ -426,8 +426,8 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     String sensitivity,
     String subject,
     String subjectPrefix,
-    List<MapiPropertyDto> properties/*,
-    String discriminator*/,
+    List<MapiPropertyDto> properties
+    ,
     MapiContactElectronicAddressPropertySetDto electronicAddresses,
     MapiContactEventPropertySetDto events,
     MapiContactNamePropertySetDto nameInfo,

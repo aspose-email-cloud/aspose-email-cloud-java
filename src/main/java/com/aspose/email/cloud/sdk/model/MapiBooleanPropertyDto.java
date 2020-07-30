@@ -125,8 +125,8 @@ public class MapiBooleanPropertyDto extends MapiPropertyDto {
    * @param value Property value             
    */
   public MapiBooleanPropertyDto(
-    MapiPropertyDescriptor descriptor/*,
-    String discriminator*/,
+    MapiPropertyDescriptor descriptor
+    ,
     Boolean value
   ) {
     super();

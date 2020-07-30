@@ -726,8 +726,8 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
     String sensitivity,
     String subject,
     String subjectPrefix,
-    List<MapiPropertyDto> properties/*,
-    String discriminator*/,
+    List<MapiPropertyDto> properties
+    ,
     Boolean appointmentCounterProposal,
     MapiCalendarAttendeesDto attendees,
     String busyStatus,
