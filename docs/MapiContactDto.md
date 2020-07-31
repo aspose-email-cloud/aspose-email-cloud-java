@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactDto
-
+# MapiContactDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -15,5 +14,9 @@ Name | Type | Description | Notes
 **telephones** | [**MapiContactTelephonePropertySetDto**](MapiContactTelephonePropertySetDto.md) | Specify telephone numbers for the contact.              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+## Parent class
+
+See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

@@ -132,7 +132,9 @@ public class ListResponseOfMailServerFolder {
    * Initializes a new instance of the ListResponseOfMailServerFolder
    * @param value 
    */
-  public ListResponseOfMailServerFolder(List<MailServerFolder> value) {
+  public ListResponseOfMailServerFolder(
+    List<MailServerFolder> value
+  ) {
     super();
     setValue(value);
   }

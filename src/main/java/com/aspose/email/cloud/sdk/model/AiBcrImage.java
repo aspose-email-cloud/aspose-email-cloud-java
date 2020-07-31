@@ -48,7 +48,7 @@ public class AiBcrImage {
 
   /**
    * Set isSingle and return this.
-   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * @param isSingle Determines that image contains single VCard or more.             
    * @return this
   **/
   public AiBcrImage isSingle(Boolean isSingle) {
@@ -57,7 +57,7 @@ public class AiBcrImage {
   }
 
   /**
-   * Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * Determines that image contains single VCard or more.             
    * @return isSingle
   **/
   public Boolean isIsSingle() {
@@ -66,7 +66,7 @@ public class AiBcrImage {
 
   /**
    * Set isSingle.
-   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * @param isSingle Determines that image contains single VCard or more.             
   **/
   public void setIsSingle(Boolean isSingle) {
     this.isSingle = isSingle;
@@ -118,9 +118,11 @@ public class AiBcrImage {
 
   /**
    * Initializes a new instance of the AiBcrImage
-   * @param isSingle Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+   * @param isSingle Determines that image contains single VCard or more.             
    */
-  public AiBcrImage(Boolean isSingle) {
+  public AiBcrImage(
+    Boolean isSingle
+  ) {
     super();
     setIsSingle(isSingle);
   }

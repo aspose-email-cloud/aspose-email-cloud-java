@@ -132,7 +132,9 @@ public class ListResponseOfEmailDto {
    * Initializes a new instance of the ListResponseOfEmailDto
    * @param value 
    */
-  public ListResponseOfEmailDto(List<EmailDto> value) {
+  public ListResponseOfEmailDto(
+    List<EmailDto> value
+  ) {
     super();
     setValue(value);
   }

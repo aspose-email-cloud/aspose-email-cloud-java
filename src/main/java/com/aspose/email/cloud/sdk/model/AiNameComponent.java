@@ -45,13 +45,10 @@ import java.io.*;
 public class AiNameComponent {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("category")
   private String category = null;
-
   @JsonProperty("score")
   private Double score = null;
-
   @JsonProperty("position")
   private Integer position = null;
 
@@ -81,6 +78,7 @@ public class AiNameComponent {
     this.value = value;
   }
 
+
   /**
    * Set category and return this.
    * @param category Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
@@ -107,6 +105,7 @@ public class AiNameComponent {
     this.category = category;
   }
 
+
   /**
    * Set score and return this.
    * @param score Score from 0.0 to 1.0             
@@ -132,6 +131,7 @@ public class AiNameComponent {
   public void setScore(Double score) {
     this.score = score;
   }
+
 
   /**
    * Set position and return this.
@@ -216,7 +216,12 @@ public class AiNameComponent {
    * @param score Score from 0.0 to 1.0             
    * @param position Component position from 0             
    */
-  public AiNameComponent(String value, String category, Double score, Integer position) {
+  public AiNameComponent(
+    String value,
+    String category,
+    Double score,
+    Integer position
+  ) {
     super();
     setValue(value);
     setCategory(category);

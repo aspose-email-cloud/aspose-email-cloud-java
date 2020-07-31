@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactPersonalInfoPropertySetDto
-
+# MapiContactPersonalInfoPropertySetDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -25,5 +24,7 @@ Name | Type | Description | Notes
 **children** | **List&lt;String&gt;** | Contains a list of names of children.              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

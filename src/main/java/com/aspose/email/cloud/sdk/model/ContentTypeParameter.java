@@ -45,7 +45,6 @@ import java.io.*;
 public class ContentTypeParameter {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("value")
   private String value = null;
 
@@ -74,6 +73,7 @@ public class ContentTypeParameter {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set value and return this.
@@ -152,7 +152,10 @@ public class ContentTypeParameter {
    * @param name Parameter name             
    * @param value Parameter value             
    */
-  public ContentTypeParameter(String name, String value) {
+  public ContentTypeParameter(
+    String name,
+    String value
+  ) {
     super();
     setName(name);
     setValue(value);

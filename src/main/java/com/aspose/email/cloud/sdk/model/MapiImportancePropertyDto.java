@@ -122,13 +122,15 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiImportancePropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
    */
-  public MapiImportancePropertyDto(MapiPropertyDescriptor descriptor, String discriminator, String value) {
+  public MapiImportancePropertyDto(
+    MapiPropertyDescriptor descriptor
+    ,
+    String value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

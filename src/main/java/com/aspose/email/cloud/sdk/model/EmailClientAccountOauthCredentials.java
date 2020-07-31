@@ -45,13 +45,10 @@ import java.io.*;
 public class EmailClientAccountOauthCredentials extends EmailClientAccountCredentials {
   @JsonProperty("clientId")
   private String clientId = null;
-
   @JsonProperty("clientSecret")
   private String clientSecret = null;
-
   @JsonProperty("refreshToken")
   private String refreshToken = null;
-
   @JsonProperty("requestUrl")
   private String requestUrl = null;
 
@@ -81,6 +78,7 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
     this.clientId = clientId;
   }
 
+
   /**
    * Set clientSecret and return this.
    * @param clientSecret The client secret obtained during application registration.             
@@ -107,6 +105,7 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
     this.clientSecret = clientSecret;
   }
 
+
   /**
    * Set refreshToken and return this.
    * @param refreshToken OAuth 2.0 refresh token             
@@ -132,6 +131,7 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
+
 
   /**
    * Set requestUrl and return this.
@@ -215,16 +215,21 @@ public class EmailClientAccountOauthCredentials extends EmailClientAccountCreden
   /**
    * Initializes a new instance of the EmailClientAccountOauthCredentials
    * @param login Email client account login             
-   * @param discriminator 
    * @param clientId The client ID obtained from the Google Cloud Console during application registration.             
    * @param clientSecret The client secret obtained during application registration.             
    * @param refreshToken OAuth 2.0 refresh token             
    * @param requestUrl The url to obtain access token. If not specified, will try to discover from email client account host.             
    */
-  public EmailClientAccountOauthCredentials(String login, String discriminator, String clientId, String clientSecret, String refreshToken, String requestUrl) {
+  public EmailClientAccountOauthCredentials(
+    String login
+    ,
+    String clientId,
+    String clientSecret,
+    String refreshToken,
+    String requestUrl
+  ) {
     super();
     setLogin(login);
-    setDiscriminator(discriminator);
     setClientId(clientId);
     setClientSecret(clientSecret);
     setRefreshToken(refreshToken);

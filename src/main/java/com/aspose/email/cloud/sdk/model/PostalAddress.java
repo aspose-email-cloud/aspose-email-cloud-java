@@ -45,34 +45,24 @@ import java.io.*;
 public class PostalAddress {
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("category")
   private EnumWithCustomOfPostalAddressCategory category = null;
-
   @JsonProperty("city")
   private String city = null;
-
   @JsonProperty("country")
   private String country = null;
-
   @JsonProperty("countryCode")
   private String countryCode = null;
-
   @JsonProperty("isMailingAddress")
   private Boolean isMailingAddress = null;
-
   @JsonProperty("postalCode")
   private String postalCode = null;
-
   @JsonProperty("postOfficeBox")
   private String postOfficeBox = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
-
   @JsonProperty("stateOrProvince")
   private String stateOrProvince = null;
-
   @JsonProperty("street")
   private String street = null;
 
@@ -102,6 +92,7 @@ public class PostalAddress {
     this.address = address;
   }
 
+
   /**
    * Set category and return this.
    * @param category Address category.             
@@ -127,6 +118,7 @@ public class PostalAddress {
   public void setCategory(EnumWithCustomOfPostalAddressCategory category) {
     this.category = category;
   }
+
 
   /**
    * Set city and return this.
@@ -154,6 +146,7 @@ public class PostalAddress {
     this.city = city;
   }
 
+
   /**
    * Set country and return this.
    * @param country Address&#39;s country.             
@@ -179,6 +172,7 @@ public class PostalAddress {
   public void setCountry(String country) {
     this.country = country;
   }
+
 
   /**
    * Set countryCode and return this.
@@ -206,6 +200,7 @@ public class PostalAddress {
     this.countryCode = countryCode;
   }
 
+
   /**
    * Set isMailingAddress and return this.
    * @param isMailingAddress Defines whether address may be used for mailing.             
@@ -231,6 +226,7 @@ public class PostalAddress {
   public void setIsMailingAddress(Boolean isMailingAddress) {
     this.isMailingAddress = isMailingAddress;
   }
+
 
   /**
    * Set postalCode and return this.
@@ -258,6 +254,7 @@ public class PostalAddress {
     this.postalCode = postalCode;
   }
 
+
   /**
    * Set postOfficeBox and return this.
    * @param postOfficeBox Post Office box.             
@@ -283,6 +280,7 @@ public class PostalAddress {
   public void setPostOfficeBox(String postOfficeBox) {
     this.postOfficeBox = postOfficeBox;
   }
+
 
   /**
    * Set preferred and return this.
@@ -310,6 +308,7 @@ public class PostalAddress {
     this.preferred = preferred;
   }
 
+
   /**
    * Set stateOrProvince and return this.
    * @param stateOrProvince Address&#39;s region.             
@@ -335,6 +334,7 @@ public class PostalAddress {
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
+
 
   /**
    * Set street and return this.
@@ -440,7 +440,19 @@ public class PostalAddress {
    * @param stateOrProvince Address&#39;s region.             
    * @param street Address&#39;s street.             
    */
-  public PostalAddress(String address, EnumWithCustomOfPostalAddressCategory category, String city, String country, String countryCode, Boolean isMailingAddress, String postalCode, String postOfficeBox, Boolean preferred, String stateOrProvince, String street) {
+  public PostalAddress(
+    String address,
+    EnumWithCustomOfPostalAddressCategory category,
+    String city,
+    String country,
+    String countryCode,
+    Boolean isMailingAddress,
+    String postalCode,
+    String postOfficeBox,
+    Boolean preferred,
+    String stateOrProvince,
+    String street
+  ) {
     super();
     setAddress(address);
     setCategory(category);

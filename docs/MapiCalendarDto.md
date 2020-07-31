@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiCalendarDto
-
+# MapiCalendarDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -24,5 +23,9 @@ Name | Type | Description | Notes
 **organizer** | [**MapiElectronicAddressDto**](MapiElectronicAddressDto.md) | Organizer              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+## Parent class
+
+See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

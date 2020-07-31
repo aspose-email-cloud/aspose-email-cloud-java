@@ -45,10 +45,8 @@ import java.io.*;
 public class MapiContactPhysicalAddressPropertySetDto {
   @JsonProperty("workAddress")
   private MapiContactPhysicalAddressDto workAddress = null;
-
   @JsonProperty("homeAddress")
   private MapiContactPhysicalAddressDto homeAddress = null;
-
   @JsonProperty("otherAddress")
   private MapiContactPhysicalAddressDto otherAddress = null;
 
@@ -78,6 +76,7 @@ public class MapiContactPhysicalAddressPropertySetDto {
     this.workAddress = workAddress;
   }
 
+
   /**
    * Set homeAddress and return this.
    * @param homeAddress Specifies the address of the contact&#39;s home             
@@ -103,6 +102,7 @@ public class MapiContactPhysicalAddressPropertySetDto {
   public void setHomeAddress(MapiContactPhysicalAddressDto homeAddress) {
     this.homeAddress = homeAddress;
   }
+
 
   /**
    * Set otherAddress and return this.
@@ -184,7 +184,11 @@ public class MapiContactPhysicalAddressPropertySetDto {
    * @param homeAddress Specifies the address of the contact&#39;s home             
    * @param otherAddress Specifies the other contact&#39;s address             
    */
-  public MapiContactPhysicalAddressPropertySetDto(MapiContactPhysicalAddressDto workAddress, MapiContactPhysicalAddressDto homeAddress, MapiContactPhysicalAddressDto otherAddress) {
+  public MapiContactPhysicalAddressPropertySetDto(
+    MapiContactPhysicalAddressDto workAddress,
+    MapiContactPhysicalAddressDto homeAddress,
+    MapiContactPhysicalAddressDto otherAddress
+  ) {
     super();
     setWorkAddress(workAddress);
     setHomeAddress(homeAddress);

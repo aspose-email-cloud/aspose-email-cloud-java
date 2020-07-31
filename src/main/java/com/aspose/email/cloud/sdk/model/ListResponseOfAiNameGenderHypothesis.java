@@ -132,7 +132,9 @@ public class ListResponseOfAiNameGenderHypothesis {
    * Initializes a new instance of the ListResponseOfAiNameGenderHypothesis
    * @param value 
    */
-  public ListResponseOfAiNameGenderHypothesis(List<AiNameGenderHypothesis> value) {
+  public ListResponseOfAiNameGenderHypothesis(
+    List<AiNameGenderHypothesis> value
+  ) {
     super();
     setValue(value);
   }

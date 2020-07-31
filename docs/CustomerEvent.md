@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.CustomerEvent
-
+# CustomerEvent
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,5 +7,7 @@ Name | Type | Description | Notes
 **date** | [**Date**](Date.md) | Event date.              | 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

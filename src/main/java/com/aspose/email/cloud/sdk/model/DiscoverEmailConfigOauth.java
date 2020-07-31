@@ -42,16 +42,13 @@ import java.io.*;
 /**
  * DiscoverEmailConfigOauth
  */
-public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
+public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   @JsonProperty("clientId")
   private String clientId = null;
-
   @JsonProperty("clientSecret")
   private String clientSecret = null;
-
   @JsonProperty("refreshToken")
   private String refreshToken = null;
-
   @JsonProperty("requestUrl")
   private String requestUrl = null;
 
@@ -81,6 +78,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     this.clientId = clientId;
   }
 
+
   /**
    * Set clientSecret and return this.
    * @param clientSecret OAuth client secret.             
@@ -107,6 +105,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
     this.clientSecret = clientSecret;
   }
 
+
   /**
    * Set refreshToken and return this.
    * @param refreshToken OAuth refresh token.             
@@ -132,6 +131,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
+
 
   /**
    * Set requestUrl and return this.
@@ -223,7 +223,15 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRq {
    * @param refreshToken OAuth refresh token.             
    * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
    */
-  public DiscoverEmailConfigOauth(String address, Boolean fastProcessing, String login, String clientId, String clientSecret, String refreshToken, String requestUrl) {
+  public DiscoverEmailConfigOauth(
+    String address,
+    Boolean fastProcessing,
+    String login,
+    String clientId,
+    String clientSecret,
+    String refreshToken,
+    String requestUrl
+  ) {
     super();
     setAddress(address);
     setFastProcessing(fastProcessing);

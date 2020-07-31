@@ -2,7 +2,6 @@ package com.aspose.email.cloud.sdk.api;
 
 import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.model.*;
-import com.aspose.email.cloud.sdk.model.requests.*;
 import org.testng.annotations.Test;
 
 import java.io.UnsupportedEncodingException;
@@ -41,36 +40,31 @@ public class MapiCalendarTests extends TestBase {
 
     @Test(groups = {"pipeline"})
     public void modelToCalendarDtoTest() {
-        CalendarDto calendarDto = api.convertMapiCalendarModelToCalendarModel(
-            new ConvertMapiCalendarModelToCalendarModelRequestData(
-                mapiCalendar));
+        CalendarDto calendarDto = api.mapi().calendar().asCalendarDto(mapiCalendar);
         assert mapiCalendar.getSubject().equals(calendarDto.getSummary());
         assert mapiCalendar.getLocation().equals(calendarDto.getLocation());
     }
 
     @Test(groups = {"pipeline"})
     public void ModelToFileTest() throws UnsupportedEncodingException {
-        byte[] ics = api.convertMapiCalendarModelToFile(
-            new ConvertMapiCalendarModelToFileRequestData(
-                "Ics", mapiCalendar));
+        byte[] ics =
+            api.mapi().calendar().asFile(new MapiCalendarAsFileRequest("Ics", mapiCalendar));
         String calendarContent = new String(ics, "UTF-8");
         assert calendarContent.contains(mapiCalendar.getLocation());
 
-        MapiCalendarDto mapiCalendarConverted = api.getCalendarFileAsMapiModel(
-            new GetCalendarFileAsMapiModelRequestData(ics));
+        MapiCalendarDto mapiCalendarConverted =
+            api.mapi().calendar().fromFile(new MapiCalendarFromFileRequest(ics));
         assert mapiCalendar.getLocation().equals(mapiCalendarConverted.getLocation());
     }
 
     @Test(groups = {"pipeline"})
     public void StorageTest() {
         String fileName = UUID.randomUUID().toString() + ".msg";
-        api.saveMapiCalendarModel(
-            new SaveMapiCalendarModelRequestData(
-                fileName, "Msg", new StorageModelRqOfMapiCalendarDto(
-                mapiCalendar, new StorageFolderLocation(storage, folder))));
-        MapiCalendarDto mapiCalendarFromStorage = api.getMapiCalendarModel(
-            new GetMapiCalendarModelRequestData(
-                fileName, folder, storage));
+        api.mapi().calendar().save(
+            new MapiCalendarSaveRequest(new StorageFileLocation(storage, folder, fileName),
+                mapiCalendar, "Msg"));
+        MapiCalendarDto mapiCalendarFromStorage =
+            api.mapi().calendar().get(new MapiCalendarGetRequest(fileName, folder, storage));
         assert mapiCalendar.getLocation().equals(mapiCalendarFromStorage.getLocation());
     }
 }

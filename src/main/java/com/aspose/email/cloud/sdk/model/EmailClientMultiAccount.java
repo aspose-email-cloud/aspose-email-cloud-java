@@ -45,7 +45,6 @@ import java.io.*;
 public class EmailClientMultiAccount {
   @JsonProperty("receiveAccounts")
   private List<EmailClientAccount> receiveAccounts = new ArrayList<EmailClientAccount>();
-
   @JsonProperty("sendAccount")
   private EmailClientAccount sendAccount = null;
 
@@ -83,6 +82,7 @@ public class EmailClientMultiAccount {
   public void setReceiveAccounts(List<EmailClientAccount> receiveAccounts) {
     this.receiveAccounts = receiveAccounts;
   }
+
 
   /**
    * Set sendAccount and return this.
@@ -161,7 +161,10 @@ public class EmailClientMultiAccount {
    * @param receiveAccounts Email client receive accounts             
    * @param sendAccount Email client send account             
    */
-  public EmailClientMultiAccount(List<EmailClientAccount> receiveAccounts, EmailClientAccount sendAccount) {
+  public EmailClientMultiAccount(
+    List<EmailClientAccount> receiveAccounts,
+    EmailClientAccount sendAccount
+  ) {
     super();
     setReceiveAccounts(receiveAccounts);
     setSendAccount(sendAccount);

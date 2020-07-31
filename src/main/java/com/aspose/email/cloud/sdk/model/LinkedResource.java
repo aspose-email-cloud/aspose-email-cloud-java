@@ -129,7 +129,13 @@ public class LinkedResource extends AttachmentBase {
    * @param headers Attachment headers.             
    * @param contentLink URI that the resource must match.             
    */
-  public LinkedResource(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String contentLink) {
+  public LinkedResource(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers,
+    String contentLink
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

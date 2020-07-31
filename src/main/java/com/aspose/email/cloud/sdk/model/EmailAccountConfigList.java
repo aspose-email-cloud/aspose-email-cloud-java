@@ -90,7 +90,9 @@ public class EmailAccountConfigList extends ListResponseOfEmailAccountConfig {
    * Initializes a new instance of the EmailAccountConfigList
    * @param value 
    */
-  public EmailAccountConfigList(List<EmailAccountConfig> value) {
+  public EmailAccountConfigList(
+    List<EmailAccountConfig> value
+  ) {
     super();
     setValue(value);
   }

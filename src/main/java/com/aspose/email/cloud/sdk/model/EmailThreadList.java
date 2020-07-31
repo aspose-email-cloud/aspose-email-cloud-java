@@ -90,7 +90,9 @@ public class EmailThreadList extends ListResponseOfEmailThread {
    * Initializes a new instance of the EmailThreadList
    * @param value 
    */
-  public EmailThreadList(List<EmailThread> value) {
+  public EmailThreadList(
+    List<EmailThread> value
+  ) {
     super();
     setValue(value);
   }

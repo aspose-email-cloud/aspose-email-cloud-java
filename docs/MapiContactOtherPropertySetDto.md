@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiContactOtherPropertySetDto
-
+# MapiContactOtherPropertySetDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -14,5 +13,7 @@ Name | Type | Description | Notes
 **userField4** | **String** | Specifies the forth field on the contact that is intended for miscellaneous use for the contact.              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

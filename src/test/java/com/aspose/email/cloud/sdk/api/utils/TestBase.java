@@ -1,45 +1,58 @@
 package com.aspose.email.cloud.sdk.api.utils;
 
-import com.aspose.email.cloud.sdk.api.EmailApi;
+import com.aspose.email.cloud.sdk.api.EmailCloud;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
+import com.aspose.email.cloud.sdk.invoker.Configuration;
 import com.aspose.email.cloud.sdk.model.*;
-import com.aspose.email.cloud.sdk.model.requests.CreateCalendarRequestData;
-import com.aspose.email.cloud.sdk.model.requests.CreateFolderRequestData;
-import com.aspose.email.cloud.sdk.model.requests.DeleteFolderRequestData;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.UUID;
 
 @Listeners({TestNameLogger.class})
 public class TestBase {
-    protected EmailApi api;
-    protected String folder;
     protected static final String storage = "First Storage";
     protected static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss'Z'");
+    protected static final String location = "Some location";
+    protected EmailCloud api;
+    protected String folder;
+
+    protected CalendarDto getCalendarDto() {
+        return new CalendarDto()
+            .location(location)
+            .summary("Some summary")
+            .description("Some description")
+            .startDate(Calendar.getInstance().getTime())
+            .endDate(Calendar.getInstance().getTime())
+            .organizer(new MailAddress().address("organizer@aspose.com"))
+            .attendees(Collections.singletonList(new MailAddress().address("attendee@aspose.com")))
+            .recurrence(new DailyRecurrencePatternDto()
+                .occurs(10)
+                .weekStart("Monday"));
+    }
+
 
     @BeforeClass(alwaysRun = true)
-    public void oneTimeSetUp() throws ApiException {
-        api = new EmailApi(
-            System.getenv("appKey"),
-            System.getenv("appSid"),
-            System.getenv("apiBaseUrl"),
-            "v3.0",
-            false,
-            System.getenv("authUrl"));
+    public void oneTimeSetUp() throws Exception {
+        Configuration configuration = new Configuration();
+        configuration.AppKey = System.getenv("appKey");
+        configuration.AppSid = System.getenv("appSid");
+        configuration.setApiBaseUrl(System.getenv("apiBaseUrl"));
+        configuration.setApiVersion("v4.0");
+        configuration.setAuthUrl(System.getenv("authUrl"));
+        api = new EmailCloud(configuration);
         folder = UUID.randomUUID().toString();
-        api.createFolder(new CreateFolderRequestData(folder, storage));
+        api.cloudStorage().folder().createFolder(new CreateFolderRequest(folder, storage));
     }
 
     @AfterClass(alwaysRun = true)
     public void oneTimeTearDown() throws ApiException {
-        api.deleteFolder(new DeleteFolderRequestData(folder, storage, true));
+        api.cloudStorage().folder().deleteFolder(new DeleteFolderRequest(folder, storage, true));
     }
 
     protected String createCalendar() throws ApiException {
@@ -51,20 +64,12 @@ public class TestBase {
         String fileName = UUID.randomUUID().toString() + ".ics";
         Calendar endDate = (Calendar) startDate.clone();
         endDate.set(Calendar.HOUR_OF_DAY, endDate.get(Calendar.HOUR_OF_DAY) + 1);
-        api.createCalendar(new CreateCalendarRequestData(fileName, new HierarchicalObjectRequest(
-            new HierarchicalObject("CALENDAR", null, Arrays.asList(
-                new PrimitiveObject("LOCATION", null, "location"),
-                new PrimitiveObject("STARTDATE", null, dateFormat.format(startDate.getTime())),
-                new PrimitiveObject("ENDDATE", null, dateFormat.format(endDate.getTime())),
-                new HierarchicalObject("ORGANIZER", null, Arrays.<BaseObject>asList(
-                    new PrimitiveObject("ADDRESS", null, "organizer@am.ru"),
-                    new PrimitiveObject("DISPLAYNAME", null, "Organizer Name"))),
-                new HierarchicalObject("ATTENDEES", null, Collections.<BaseObject>singletonList(
-                    new IndexedHierarchicalObject(
-                        "ATTENDEE", null, 0, Arrays.<BaseObject>asList(
-                        new PrimitiveObject("ADDRESS", null, "attendee@am.ru"),
-                        new PrimitiveObject("DISPLAYNAME", null, "Attendee Name"))))))),
-            new StorageFolderLocation(storage, folder))));
+        CalendarDto calendarDto = getCalendarDto();
+        calendarDto.setStartDate(startDate.getTime());
+        calendarDto.setEndDate(endDate.getTime());
+        api.calendar().save(
+            new CalendarSaveRequest(new StorageFileLocation(storage, folder, fileName), calendarDto,
+                "Ics"));
         return fileName;
     }
 }

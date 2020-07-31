@@ -122,13 +122,15 @@ public class MapiFileAsPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiFileAsPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
    */
-  public MapiFileAsPropertyDto(MapiPropertyDescriptor descriptor, String discriminator, String value) {
+  public MapiFileAsPropertyDto(
+    MapiPropertyDescriptor descriptor
+    ,
+    String value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

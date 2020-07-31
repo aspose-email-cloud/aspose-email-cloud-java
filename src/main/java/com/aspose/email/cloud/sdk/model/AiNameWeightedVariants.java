@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameWeightedVariants {
   @JsonProperty("names")
   private List<AiNameWeighted> names = null;
-
   @JsonProperty("comments")
   private String comments = null;
 
@@ -86,6 +85,7 @@ public class AiNameWeightedVariants {
   public void setNames(List<AiNameWeighted> names) {
     this.names = names;
   }
+
 
   /**
    * Set comments and return this.
@@ -164,7 +164,10 @@ public class AiNameWeightedVariants {
    * @param names List of name variations             
    * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
    */
-  public AiNameWeightedVariants(List<AiNameWeighted> names, String comments) {
+  public AiNameWeightedVariants(
+    List<AiNameWeighted> names,
+    String comments
+  ) {
     super();
     setNames(names);
     setComments(comments);

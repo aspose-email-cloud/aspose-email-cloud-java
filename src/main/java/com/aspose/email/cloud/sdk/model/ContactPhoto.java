@@ -45,10 +45,8 @@ import java.io.*;
 public class ContactPhoto {
   @JsonProperty("photoImageFormat")
   private String photoImageFormat = null;
-
   @JsonProperty("base64Data")
   private String base64Data = null;
-
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
@@ -78,6 +76,7 @@ public class ContactPhoto {
     this.photoImageFormat = photoImageFormat;
   }
 
+
   /**
    * Set base64Data and return this.
    * @param base64Data Photo serialized as base64 string.             
@@ -104,11 +103,6 @@ public class ContactPhoto {
     this.base64Data = base64Data;
   }
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
 
 
   /**
@@ -123,7 +117,9 @@ public class ContactPhoto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override
@@ -177,13 +173,15 @@ public class ContactPhoto {
    * Initializes a new instance of the ContactPhoto
    * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
-   * @param discriminator 
    */
-  public ContactPhoto(String photoImageFormat, String base64Data, String discriminator) {
+  public ContactPhoto(
+    String photoImageFormat,
+    String base64Data
+    
+  ) {
     super();
     setPhotoImageFormat(photoImageFormat);
     setBase64Data(base64Data);
-    setDiscriminator(discriminator);
   }
 
 }

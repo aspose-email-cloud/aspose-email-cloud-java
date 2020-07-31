@@ -45,10 +45,8 @@ import java.io.*;
 public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalendarRecurrencePatternDto {
   @JsonProperty("day")
   private Integer day = null;
-
   @JsonProperty("dayOfWeek")
   private List<String> dayOfWeek = null;
-
   @JsonProperty("position")
   private String position = null;
 
@@ -77,6 +75,7 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
   public void setDay(Integer day) {
     this.day = day;
   }
+
 
   /**
    * Set dayOfWeek and return this.
@@ -115,6 +114,7 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
   public void setDayOfWeek(List<String> dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
+
 
   /**
    * Set position and return this.
@@ -220,12 +220,29 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
    * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-   * @param discriminator 
    * @param day Day of the month on which the recurrence falls.             
    * @param dayOfWeek Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern Enum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday
    * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
    */
-  public MapiCalendarYearlyAndMonthlyRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, String weekStartDay, String discriminator, Integer day, List<String> dayOfWeek, String position) {
+  public MapiCalendarYearlyAndMonthlyRecurrencePatternDto(
+    String calendarType,
+    List<Date> deletedInstanceDates,
+    Date endDate,
+    String endType,
+    List<MapiCalendarExceptionInfoDto> exceptions,
+    String frequency,
+    List<Date> modifiedInstanceDates,
+    Long occurrenceCount,
+    String patternType,
+    Long period,
+    Boolean slidingFlag,
+    Date startDate,
+    String weekStartDay
+    ,
+    Integer day,
+    List<String> dayOfWeek,
+    String position
+  ) {
     super();
     setCalendarType(calendarType);
     setDeletedInstanceDates(deletedInstanceDates);
@@ -240,7 +257,6 @@ public class MapiCalendarYearlyAndMonthlyRecurrencePatternDto extends MapiCalend
     setSlidingFlag(slidingFlag);
     setStartDate(startDate);
     setWeekStartDay(weekStartDay);
-    setDiscriminator(discriminator);
     setDay(day);
     setDayOfWeek(dayOfWeek);
     setPosition(position);

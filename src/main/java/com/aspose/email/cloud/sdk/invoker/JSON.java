@@ -27,7 +27,6 @@
 
 package com.aspose.email.cloud.sdk.invoker;
 
-import com.aspose.email.cloud.sdk.model.BaseObject;
 import com.aspose.email.cloud.sdk.model.EmailClientAccountCredentials;
 import com.google.gson.*;
 
@@ -43,7 +42,6 @@ public class JSON {
 
     static {
         GsonBuilder builder = new GsonBuilder();
-        builder.registerTypeAdapter(BaseObject.class, new TypeDeriveAdapter<BaseObject>("type"));
         Derive.registerAdapters(builder);
         builder.registerTypeAdapter(Date.class, new DateDeserializer());
         gsonExt = builder.create();

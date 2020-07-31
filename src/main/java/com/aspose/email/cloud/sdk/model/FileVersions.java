@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * FileVersions
+ * File versions FileVersion.
  */
 public class FileVersions {
   @JsonProperty("value")
@@ -48,7 +48,7 @@ public class FileVersions {
 
   /**
    * Set value and return this.
-   * @param value 
+   * @param value File versions FileVersion.
    * @return this
   **/
   public FileVersions value(List<FileVersion> value) {
@@ -57,7 +57,7 @@ public class FileVersions {
   }
   /**
    * Add an item to value and return this.
-   * @param valueItem An item of: 
+   * @param valueItem An item of: File versions FileVersion.
    * @return this
   **/
   public FileVersions addValueItem(FileVersion valueItem) {
@@ -69,7 +69,7 @@ public class FileVersions {
   }
 
   /**
-   * Get value
+   * File versions FileVersion.
    * @return value
   **/
   public List<FileVersion> getValue() {
@@ -78,7 +78,7 @@ public class FileVersions {
 
   /**
    * Set value.
-   * @param value 
+   * @param value File versions FileVersion.
   **/
   public void setValue(List<FileVersion> value) {
     this.value = value;
@@ -130,9 +130,11 @@ public class FileVersions {
 
   /**
    * Initializes a new instance of the FileVersions
-   * @param value 
+   * @param value File versions FileVersion.
    */
-  public FileVersions(List<FileVersion> value) {
+  public FileVersions(
+    List<FileVersion> value
+  ) {
     super();
     setValue(value);
   }

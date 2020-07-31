@@ -45,16 +45,12 @@ import java.io.*;
 public class Attachment extends AttachmentBase {
   @JsonProperty("contentDisposition")
   private String contentDisposition = null;
-
   @JsonProperty("isEmbeddedMessage")
   private Boolean isEmbeddedMessage = null;
-
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("nameEncoding")
   private String nameEncoding = null;
-
   @JsonProperty("preferredTextEncoding")
   private String preferredTextEncoding = null;
 
@@ -84,6 +80,7 @@ public class Attachment extends AttachmentBase {
     this.contentDisposition = contentDisposition;
   }
 
+
   /**
    * Set isEmbeddedMessage and return this.
    * @param isEmbeddedMessage Determines if attachment is an embedded message. Read only.             
@@ -109,6 +106,7 @@ public class Attachment extends AttachmentBase {
   public void setIsEmbeddedMessage(Boolean isEmbeddedMessage) {
     this.isEmbeddedMessage = isEmbeddedMessage;
   }
+
 
   /**
    * Set name and return this.
@@ -136,6 +134,7 @@ public class Attachment extends AttachmentBase {
     this.name = name;
   }
 
+
   /**
    * Set nameEncoding and return this.
    * @param nameEncoding Encoding of attachment name.             
@@ -161,6 +160,7 @@ public class Attachment extends AttachmentBase {
   public void setNameEncoding(String nameEncoding) {
     this.nameEncoding = nameEncoding;
   }
+
 
   /**
    * Set preferredTextEncoding and return this.
@@ -257,7 +257,17 @@ public class Attachment extends AttachmentBase {
    * @param nameEncoding Encoding of attachment name.             
    * @param preferredTextEncoding Preferred text encoding.             
    */
-  public Attachment(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String contentDisposition, Boolean isEmbeddedMessage, String name, String nameEncoding, String preferredTextEncoding) {
+  public Attachment(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers,
+    String contentDisposition,
+    Boolean isEmbeddedMessage,
+    String name,
+    String nameEncoding,
+    String preferredTextEncoding
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

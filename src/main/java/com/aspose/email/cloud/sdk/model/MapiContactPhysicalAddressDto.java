@@ -45,28 +45,20 @@ import java.io.*;
 public class MapiContactPhysicalAddressDto {
   @JsonProperty("isMailingAddress")
   private Boolean isMailingAddress = null;
-
   @JsonProperty("street")
   private String street = null;
-
   @JsonProperty("city")
   private String city = null;
-
   @JsonProperty("stateOrProvince")
   private String stateOrProvince = null;
-
   @JsonProperty("postalCode")
   private String postalCode = null;
-
   @JsonProperty("country")
   private String country = null;
-
   @JsonProperty("countryCode")
   private String countryCode = null;
-
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("postOfficeBox")
   private String postOfficeBox = null;
 
@@ -96,6 +88,7 @@ public class MapiContactPhysicalAddressDto {
     this.isMailingAddress = isMailingAddress;
   }
 
+
   /**
    * Set street and return this.
    * @param street Specifies the street portion of the contact&#39;s address             
@@ -121,6 +114,7 @@ public class MapiContactPhysicalAddressDto {
   public void setStreet(String street) {
     this.street = street;
   }
+
 
   /**
    * Set city and return this.
@@ -148,6 +142,7 @@ public class MapiContactPhysicalAddressDto {
     this.city = city;
   }
 
+
   /**
    * Set stateOrProvince and return this.
    * @param stateOrProvince Specifies the state or province portion of the contact&#39;s address             
@@ -173,6 +168,7 @@ public class MapiContactPhysicalAddressDto {
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
+
 
   /**
    * Set postalCode and return this.
@@ -200,6 +196,7 @@ public class MapiContactPhysicalAddressDto {
     this.postalCode = postalCode;
   }
 
+
   /**
    * Set country and return this.
    * @param country Specifies the country or region portion of the contact&#39;s address             
@@ -225,6 +222,7 @@ public class MapiContactPhysicalAddressDto {
   public void setCountry(String country) {
     this.country = country;
   }
+
 
   /**
    * Set countryCode and return this.
@@ -252,6 +250,7 @@ public class MapiContactPhysicalAddressDto {
     this.countryCode = countryCode;
   }
 
+
   /**
    * Set address and return this.
    * @param address Specifies the complete address of the contact&#39;s address             
@@ -277,6 +276,7 @@ public class MapiContactPhysicalAddressDto {
   public void setAddress(String address) {
     this.address = address;
   }
+
 
   /**
    * Set postOfficeBox and return this.
@@ -376,7 +376,17 @@ public class MapiContactPhysicalAddressDto {
    * @param address Specifies the complete address of the contact&#39;s address             
    * @param postOfficeBox Gets or sets the post office box             
    */
-  public MapiContactPhysicalAddressDto(Boolean isMailingAddress, String street, String city, String stateOrProvince, String postalCode, String country, String countryCode, String address, String postOfficeBox) {
+  public MapiContactPhysicalAddressDto(
+    Boolean isMailingAddress,
+    String street,
+    String city,
+    String stateOrProvince,
+    String postalCode,
+    String country,
+    String countryCode,
+    String address,
+    String postOfficeBox
+  ) {
     super();
     setIsMailingAddress(isMailingAddress);
     setStreet(street);

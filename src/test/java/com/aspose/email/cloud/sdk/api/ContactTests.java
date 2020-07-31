@@ -3,11 +3,9 @@ package com.aspose.email.cloud.sdk.api;
 import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
-import com.aspose.email.cloud.sdk.model.requests.*;
 import org.testng.annotations.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.UUID;
 
 public class ContactTests extends TestBase {
@@ -24,50 +22,31 @@ public class ContactTests extends TestBase {
             "+49211424721", true));
 
     @Test(groups = {"pipeline"})
-    public void contactFormatTest() throws ApiException {
-        String[] formats = {"vcard", "msg"};
-        for (String format : formats) {
-            String extension = format.equals("vcard") ? ".vcf" : ".msg";
-            String fileName = UUID.randomUUID().toString() + extension;
-            api.createContact(new CreateContactRequestData(format, fileName, new HierarchicalObjectRequest(
-                new HierarchicalObject("CONTACT", null, new ArrayList<BaseObject>()),
-                new StorageFolderLocation(storage, folder))));
-            String path = folder + "/" + fileName;
-            ObjectExist exist = api.objectExists(new ObjectExistsRequestData(path, storage, null));
-            assert exist.isExists();
-        }
-    }
-
-    @Test(groups = {"pipeline"})
     public void contactModelTest() throws ApiException {
         String contactFile = UUID.randomUUID().toString() + ".vcf";
-        api.saveContactModel(new SaveContactModelRequestData(
-            "VCard", contactFile, new StorageModelRqOfContactDto(
-            contactDto, new StorageFolderLocation(storage, folder))));
+        api.contact().save(
+            new ContactSaveRequest(new StorageFileLocation(storage, folder, contactFile),
+                contactDto, "VCard"));
 
-        ObjectExist objectExist = api.objectExists(new ObjectExistsRequestData(
+        ObjectExist objectExist = api.cloudStorage().storage().objectExists(new ObjectExistsRequest(
             folder + "/" + contactFile, storage, null));
         assert objectExist.isExists();
     }
 
     @Test(groups = {"pipeline"})
     public void convertContactTest() throws ApiException, UnsupportedEncodingException {
-        byte[] mapiBytes = api.convertContactModelToFile(
-            new ConvertContactModelToFileRequestData(
-                "Msg", contactDto));
-        byte[] vcardBytes = api.convertContact(new ConvertContactRequestData("VCard", "Msg", mapiBytes));
+        byte[] mapiBytes = api.contact().asFile(new ContactAsFileRequest("Msg", contactDto));
+        byte[] vcardBytes =
+            api.contact().convert(new ContactConvertRequest("VCard", "Msg", mapiBytes));
         String contactContent = new String(vcardBytes, "UTF-8");
         assert contactContent.contains(surname);
-        ContactDto dto = api.getContactFileAsModel(
-            new GetContactFileAsModelRequestData("VCard", vcardBytes));
+        ContactDto dto = api.contact().fromFile(new ContactFromFileRequest("VCard", vcardBytes));
         assert surname.equals(dto.getSurname());
     }
 
     @Test(groups = {"pipeline"})
-    public void convertModelToMapiModelTest()
-    {
-        MapiContactDto mapiContactDto = api.convertContactModelToMapiModel(
-            new ConvertContactModelToMapiModelRequestData(contactDto));
+    public void convertModelToMapiModelTest() {
+        MapiContactDto mapiContactDto = api.contact().asMapi(contactDto);
         assert contactDto.getSurname().equals(mapiContactDto.getNameInfo().getSurname());
     }
 }

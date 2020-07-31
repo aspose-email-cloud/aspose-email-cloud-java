@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MonthlyRecurrencePatternDto
-
+# MonthlyRecurrencePatternDto
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,5 +8,9 @@ Name | Type | Description | Notes
 **startPosition** | **String** | Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last | 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+## Parent class
+
+See: [RecurrencePatternDto](RecurrencePatternDto.md)
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

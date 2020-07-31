@@ -45,25 +45,18 @@ import java.io.*;
 public class MapiContactOtherPropertySetDto {
   @JsonProperty("_private")
   private Boolean _private = null;
-
   @JsonProperty("journal")
   private Boolean journal = null;
-
   @JsonProperty("reminderTime")
   private Date reminderTime = null;
-
   @JsonProperty("reminderTopic")
   private String reminderTopic = null;
-
   @JsonProperty("userField1")
   private String userField1 = null;
-
   @JsonProperty("userField2")
   private String userField2 = null;
-
   @JsonProperty("userField3")
   private String userField3 = null;
-
   @JsonProperty("userField4")
   private String userField4 = null;
 
@@ -93,6 +86,7 @@ public class MapiContactOtherPropertySetDto {
     this._private = _private;
   }
 
+
   /**
    * Set journal and return this.
    * @param journal Specifies whether to create a journal for each action associated with this contact.             
@@ -118,6 +112,7 @@ public class MapiContactOtherPropertySetDto {
   public void setJournal(Boolean journal) {
     this.journal = journal;
   }
+
 
   /**
    * Set reminderTime and return this.
@@ -145,6 +140,7 @@ public class MapiContactOtherPropertySetDto {
     this.reminderTime = reminderTime;
   }
 
+
   /**
    * Set reminderTopic and return this.
    * @param reminderTopic Represents the status of a meeting request.             
@@ -170,6 +166,7 @@ public class MapiContactOtherPropertySetDto {
   public void setReminderTopic(String reminderTopic) {
     this.reminderTopic = reminderTopic;
   }
+
 
   /**
    * Set userField1 and return this.
@@ -197,6 +194,7 @@ public class MapiContactOtherPropertySetDto {
     this.userField1 = userField1;
   }
 
+
   /**
    * Set userField2 and return this.
    * @param userField2 Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
@@ -223,6 +221,7 @@ public class MapiContactOtherPropertySetDto {
     this.userField2 = userField2;
   }
 
+
   /**
    * Set userField3 and return this.
    * @param userField3 Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
@@ -248,6 +247,7 @@ public class MapiContactOtherPropertySetDto {
   public void setUserField3(String userField3) {
     this.userField3 = userField3;
   }
+
 
   /**
    * Set userField4 and return this.
@@ -344,7 +344,16 @@ public class MapiContactOtherPropertySetDto {
    * @param userField3 Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
    * @param userField4 Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
    */
-  public MapiContactOtherPropertySetDto(Boolean _private, Boolean journal, Date reminderTime, String reminderTopic, String userField1, String userField2, String userField3, String userField4) {
+  public MapiContactOtherPropertySetDto(
+    Boolean _private,
+    Boolean journal,
+    Date reminderTime,
+    String reminderTopic,
+    String userField1,
+    String userField2,
+    String userField3,
+    String userField4
+  ) {
     super();
     setPrivate(_private);
     setJournal(journal);

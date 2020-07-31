@@ -45,52 +45,36 @@ import java.io.*;
 public class MapiMessageItemBaseDto {
   @JsonProperty("attachments")
   private List<MapiAttachmentDto> attachments = null;
-
   @JsonProperty("billing")
   private String billing = null;
-
   @JsonProperty("body")
   private String body = null;
-
   @JsonProperty("bodyHtml")
   private String bodyHtml = null;
-
   @JsonProperty("bodyRtf")
   private String bodyRtf = null;
-
   @JsonProperty("bodyType")
   private String bodyType = null;
-
   @JsonProperty("categories")
   private List<String> categories = null;
-
   @JsonProperty("companies")
   private List<String> companies = null;
-
   @JsonProperty("itemId")
   private String itemId = null;
-
   @JsonProperty("messageClass")
   private String messageClass = null;
-
   @JsonProperty("mileage")
   private String mileage = null;
-
   @JsonProperty("recipients")
   private List<MapiRecipientDto> recipients = null;
-
   @JsonProperty("sensitivity")
   private String sensitivity = null;
-
   @JsonProperty("subject")
   private String subject = null;
-
   @JsonProperty("subjectPrefix")
   private String subjectPrefix = null;
-
   @JsonProperty("properties")
   private List<MapiPropertyDto> properties = null;
-
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
@@ -132,6 +116,7 @@ public class MapiMessageItemBaseDto {
     this.attachments = attachments;
   }
 
+
   /**
    * Set billing and return this.
    * @param billing Billing information associated with an item.             
@@ -157,6 +142,7 @@ public class MapiMessageItemBaseDto {
   public void setBilling(String billing) {
     this.billing = billing;
   }
+
 
   /**
    * Set body and return this.
@@ -184,6 +170,7 @@ public class MapiMessageItemBaseDto {
     this.body = body;
   }
 
+
   /**
    * Set bodyHtml and return this.
    * @param bodyHtml Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
@@ -209,6 +196,7 @@ public class MapiMessageItemBaseDto {
   public void setBodyHtml(String bodyHtml) {
     this.bodyHtml = bodyHtml;
   }
+
 
   /**
    * Set bodyRtf and return this.
@@ -236,6 +224,7 @@ public class MapiMessageItemBaseDto {
     this.bodyRtf = bodyRtf;
   }
 
+
   /**
    * Set bodyType and return this.
    * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
@@ -261,6 +250,7 @@ public class MapiMessageItemBaseDto {
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
   }
+
 
   /**
    * Set categories and return this.
@@ -300,6 +290,7 @@ public class MapiMessageItemBaseDto {
     this.categories = categories;
   }
 
+
   /**
    * Set companies and return this.
    * @param companies Contains the names of the companies that are associated with an item.             
@@ -338,6 +329,7 @@ public class MapiMessageItemBaseDto {
     this.companies = companies;
   }
 
+
   /**
    * Set itemId and return this.
    * @param itemId The item id, uses with a server.             
@@ -363,6 +355,7 @@ public class MapiMessageItemBaseDto {
   public void setItemId(String itemId) {
     this.itemId = itemId;
   }
+
 
   /**
    * Set messageClass and return this.
@@ -390,6 +383,7 @@ public class MapiMessageItemBaseDto {
     this.messageClass = messageClass;
   }
 
+
   /**
    * Set mileage and return this.
    * @param mileage Contains the mileage information that is associated with an item.             
@@ -415,6 +409,7 @@ public class MapiMessageItemBaseDto {
   public void setMileage(String mileage) {
     this.mileage = mileage;
   }
+
 
   /**
    * Set recipients and return this.
@@ -454,6 +449,7 @@ public class MapiMessageItemBaseDto {
     this.recipients = recipients;
   }
 
+
   /**
    * Set sensitivity and return this.
    * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
@@ -479,6 +475,7 @@ public class MapiMessageItemBaseDto {
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
   }
+
 
   /**
    * Set subject and return this.
@@ -506,6 +503,7 @@ public class MapiMessageItemBaseDto {
     this.subject = subject;
   }
 
+
   /**
    * Set subjectPrefix and return this.
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
@@ -531,6 +529,7 @@ public class MapiMessageItemBaseDto {
   public void setSubjectPrefix(String subjectPrefix) {
     this.subjectPrefix = subjectPrefix;
   }
+
 
   /**
    * Set properties and return this.
@@ -570,11 +569,6 @@ public class MapiMessageItemBaseDto {
     this.properties = properties;
   }
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
 
 
   /**
@@ -589,7 +583,9 @@ public class MapiMessageItemBaseDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override
@@ -685,9 +681,26 @@ public class MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    */
-  public MapiMessageItemBaseDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator) {
+  public MapiMessageItemBaseDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties
+    
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -705,7 +718,6 @@ public class MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
   }
 
 }

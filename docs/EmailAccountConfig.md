@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailAccountConfig
-
+# EmailAccountConfig
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -14,5 +13,7 @@ Name | Type | Description | Notes
 **isValidated** | **Boolean** | Determines that configuration validated. Set to false if validation skipped.              | 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

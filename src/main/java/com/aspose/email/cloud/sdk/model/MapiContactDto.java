@@ -45,28 +45,20 @@ import java.io.*;
 public class MapiContactDto extends MapiMessageItemBaseDto {
   @JsonProperty("electronicAddresses")
   private MapiContactElectronicAddressPropertySetDto electronicAddresses = null;
-
   @JsonProperty("events")
   private MapiContactEventPropertySetDto events = null;
-
   @JsonProperty("nameInfo")
   private MapiContactNamePropertySetDto nameInfo = null;
-
   @JsonProperty("otherFields")
   private MapiContactOtherPropertySetDto otherFields = null;
-
   @JsonProperty("personalInfo")
   private MapiContactPersonalInfoPropertySetDto personalInfo = null;
-
   @JsonProperty("photo")
   private MapiContactPhotoDto photo = null;
-
   @JsonProperty("physicalAddresses")
   private MapiContactPhysicalAddressPropertySetDto physicalAddresses = null;
-
   @JsonProperty("professionalInfo")
   private MapiContactProfessionalPropertySetDto professionalInfo = null;
-
   @JsonProperty("telephones")
   private MapiContactTelephonePropertySetDto telephones = null;
 
@@ -96,6 +88,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.electronicAddresses = electronicAddresses;
   }
 
+
   /**
    * Set events and return this.
    * @param events Specify events associated with a contact.             
@@ -121,6 +114,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setEvents(MapiContactEventPropertySetDto events) {
     this.events = events;
   }
+
 
   /**
    * Set nameInfo and return this.
@@ -148,6 +142,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.nameInfo = nameInfo;
   }
 
+
   /**
    * Set otherFields and return this.
    * @param otherFields Specify other fields of contact.             
@@ -173,6 +168,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setOtherFields(MapiContactOtherPropertySetDto otherFields) {
     this.otherFields = otherFields;
   }
+
 
   /**
    * Set personalInfo and return this.
@@ -200,6 +196,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.personalInfo = personalInfo;
   }
 
+
   /**
    * Set photo and return this.
    * @param photo Contact photo.             
@@ -225,6 +222,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setPhoto(MapiContactPhotoDto photo) {
     this.photo = photo;
   }
+
 
   /**
    * Set physicalAddresses and return this.
@@ -252,6 +250,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     this.physicalAddresses = physicalAddresses;
   }
 
+
   /**
    * Set professionalInfo and return this.
    * @param professionalInfo Properties are used to store professional details for the person represented by the contact.             
@@ -277,6 +276,7 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
   public void setProfessionalInfo(MapiContactProfessionalPropertySetDto professionalInfo) {
     this.professionalInfo = professionalInfo;
   }
+
 
   /**
    * Set telephones and return this.
@@ -400,7 +400,6 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    * @param electronicAddresses Specify properties for up to three different e-mail addresses and three different fax addresses.             
    * @param events Specify events associated with a contact.             
    * @param nameInfo The properties are used to specify the name of the person represented by the contact.             
@@ -411,7 +410,34 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
    * @param professionalInfo Properties are used to store professional details for the person represented by the contact.             
    * @param telephones Specify telephone numbers for the contact.             
    */
-  public MapiContactDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, MapiContactElectronicAddressPropertySetDto electronicAddresses, MapiContactEventPropertySetDto events, MapiContactNamePropertySetDto nameInfo, MapiContactOtherPropertySetDto otherFields, MapiContactPersonalInfoPropertySetDto personalInfo, MapiContactPhotoDto photo, MapiContactPhysicalAddressPropertySetDto physicalAddresses, MapiContactProfessionalPropertySetDto professionalInfo, MapiContactTelephonePropertySetDto telephones) {
+  public MapiContactDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties
+    ,
+    MapiContactElectronicAddressPropertySetDto electronicAddresses,
+    MapiContactEventPropertySetDto events,
+    MapiContactNamePropertySetDto nameInfo,
+    MapiContactOtherPropertySetDto otherFields,
+    MapiContactPersonalInfoPropertySetDto personalInfo,
+    MapiContactPhotoDto photo,
+    MapiContactPhysicalAddressPropertySetDto physicalAddresses,
+    MapiContactProfessionalPropertySetDto professionalInfo,
+    MapiContactTelephonePropertySetDto telephones
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -429,7 +455,6 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
     setElectronicAddresses(electronicAddresses);
     setEvents(events);
     setNameInfo(nameInfo);

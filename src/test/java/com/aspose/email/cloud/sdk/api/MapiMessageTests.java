@@ -2,7 +2,6 @@ package com.aspose.email.cloud.sdk.api;
 
 import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.model.*;
-import com.aspose.email.cloud.sdk.model.requests.*;
 import com.migcomponents.migbase64.Base64;
 import org.testng.annotations.Test;
 
@@ -40,26 +39,23 @@ public class MapiMessageTests extends TestBase {
 
     @Test(groups = {"pipeline"})
     public void ModelToEmailDtoTest() {
-        EmailDto emailDto = api.convertMapiMessageModelToEmailModel(
-            new ConvertMapiMessageModelToEmailModelRequestData(
-                mapiMessage));
+        EmailDto emailDto = api.mapi().message().asEmailDto(mapiMessage);
         assert mapiMessage.getSubject().equals(emailDto.getSubject());
         assert mapiMessage.getBody().equals(emailDto.getBody());
     }
 
     @Test(groups = {"pipeline"})
     public void ModelToFileTest() throws UnsupportedEncodingException {
-        byte[] emlBytes = api.convertMapiMessageModelToFile(
-            new ConvertMapiMessageModelToFileRequestData(
-                "Eml", mapiMessage));
+        byte[] emlBytes =
+            api.mapi().message().asFile(new MapiMessageAsFileRequest("Eml", mapiMessage));
         String emlString = new String(emlBytes, "UTF-8");
         assert emlString.contains(mapiMessage.getSubject());
-        MapiMessageDto mapiMessageConverted = api.getEmailFileAsMapiModel(
-            new GetEmailFileAsMapiModelRequestData("Eml", emlBytes));
+        MapiMessageDto mapiMessageConverted =
+            api.mapi().message().fromFile(new MapiMessageFromFileRequest("Eml", emlBytes));
         assert mapiMessage.getSubject().equals(mapiMessageConverted.getSubject());
         boolean subjectFound = false;
         //Subject is also available as MapiPropertyDto:
-        for (MapiPropertyDto property: mapiMessageConverted.getProperties()) {
+        for (MapiPropertyDto property : mapiMessageConverted.getProperties()) {
             if (!property.getDescriptor().getDiscriminator().equals("MapiKnownPropertyDescriptor"))
                 continue;
             //There are different Property descriptors supported.
@@ -70,7 +66,7 @@ public class MapiMessageTests extends TestBase {
             if (!knownPropertyDescriptor.getName().equals("TagSubject"))
                 continue;
             //TagSubject is string property:
-            MapiStringPropertyDto mapiStringPropertyDto = (MapiStringPropertyDto)property;
+            MapiStringPropertyDto mapiStringPropertyDto = (MapiStringPropertyDto) property;
             assert mapiStringPropertyDto.getValue().equals(mapiMessage.getSubject());
             subjectFound = true;
         }
@@ -80,13 +76,11 @@ public class MapiMessageTests extends TestBase {
     @Test(groups = {"pipeline"})
     public void StorageTest() {
         String fileName = UUID.randomUUID().toString() + ".msg";
-        api.saveMapiMessageModel(
-            new SaveMapiMessageModelRequestData(
-                "Msg", fileName, new StorageModelRqOfMapiMessageDto(
-                mapiMessage, new StorageFolderLocation(storage, folder))));
-        MapiMessageDto mapiMessageFromStorage = api.getMapiMessageModel(
-            new GetMapiMessageModelRequestData(
-                "Msg", fileName, folder, storage));
+        api.mapi().message().save(
+            new MapiMessageSaveRequest(new StorageFileLocation(storage, folder, fileName),
+                mapiMessage, "Msg"));
+        MapiMessageDto mapiMessageFromStorage =
+            api.mapi().message().get(new MapiMessageGetRequest("Msg", fileName, folder, storage));
         assert mapiMessage.getSubject().equals(mapiMessageFromStorage.getSubject());
     }
 }

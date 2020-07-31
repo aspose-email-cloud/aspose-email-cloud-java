@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameFormatted {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("comments")
   private String comments = null;
 
@@ -74,6 +73,7 @@ public class AiNameFormatted {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set comments and return this.
@@ -152,7 +152,10 @@ public class AiNameFormatted {
    * @param name Formatted name value             
    * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
    */
-  public AiNameFormatted(String name, String comments) {
+  public AiNameFormatted(
+    String name,
+    String comments
+  ) {
     super();
     setName(name);
     setComments(comments);

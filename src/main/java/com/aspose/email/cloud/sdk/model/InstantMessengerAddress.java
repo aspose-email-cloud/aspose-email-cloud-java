@@ -45,10 +45,8 @@ import java.io.*;
 public class InstantMessengerAddress {
   @JsonProperty("category")
   private EnumWithCustomOfInstantMessengerCategory category = null;
-
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
@@ -78,6 +76,7 @@ public class InstantMessengerAddress {
     this.category = category;
   }
 
+
   /**
    * Set address and return this.
    * @param address Address.             
@@ -103,6 +102,7 @@ public class InstantMessengerAddress {
   public void setAddress(String address) {
     this.address = address;
   }
+
 
   /**
    * Set preferred and return this.
@@ -184,7 +184,11 @@ public class InstantMessengerAddress {
    * @param address Address.             
    * @param preferred Determines whether this address is preferred.             
    */
-  public InstantMessengerAddress(EnumWithCustomOfInstantMessengerCategory category, String address, Boolean preferred) {
+  public InstantMessengerAddress(
+    EnumWithCustomOfInstantMessengerCategory category,
+    String address,
+    Boolean preferred
+  ) {
     super();
     setCategory(category);
     setAddress(address);

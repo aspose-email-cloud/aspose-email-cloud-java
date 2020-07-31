@@ -125,7 +125,11 @@ public class StorageFileLocation extends StorageFolderLocation {
    * @param folderPath A path to a folder in specified storage             
    * @param fileName A file name in storage             
    */
-  public StorageFileLocation(String storage, String folderPath, String fileName) {
+  public StorageFileLocation(
+    String storage,
+    String folderPath,
+    String fileName
+  ) {
     super();
     setStorage(storage);
     setFolderPath(folderPath);

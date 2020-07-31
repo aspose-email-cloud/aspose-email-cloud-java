@@ -45,7 +45,6 @@ import java.io.*;
 public class AlternateView extends AttachmentBase {
   @JsonProperty("baseUri")
   private String baseUri = null;
-
   @JsonProperty("linkedResources")
   private List<LinkedResource> linkedResources = null;
 
@@ -74,6 +73,7 @@ public class AlternateView extends AttachmentBase {
   public void setBaseUri(String baseUri) {
     this.baseUri = baseUri;
   }
+
 
   /**
    * Set linkedResources and return this.
@@ -173,7 +173,14 @@ public class AlternateView extends AttachmentBase {
    * @param baseUri Base URI.             
    * @param linkedResources Embedded resources referred to by this alternate view.             
    */
-  public AlternateView(String base64Data, String contentId, ContentType contentType, Map<String, String> headers, String baseUri, List<LinkedResource> linkedResources) {
+  public AlternateView(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers,
+    String baseUri,
+    List<LinkedResource> linkedResources
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

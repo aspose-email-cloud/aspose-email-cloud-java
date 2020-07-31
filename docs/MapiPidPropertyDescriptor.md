@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiPidPropertyDescriptor
-
+# MapiPidPropertyDescriptor
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,5 +9,9 @@ Name | Type | Description | Notes
 **name** | **String** | A string that identifies the property              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+## Parent class
+
+See: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

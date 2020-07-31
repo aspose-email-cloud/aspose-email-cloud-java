@@ -45,22 +45,16 @@ import java.io.*;
 public class MapiCalendarTimeZoneInfoDto {
   @JsonProperty("bias")
   private Integer bias = null;
-
   @JsonProperty("daylightBias")
   private Integer daylightBias = null;
-
   @JsonProperty("daylightDate")
   private MapiCalendarTimeZoneRuleDto daylightDate = null;
-
   @JsonProperty("standardBias")
   private Integer standardBias = null;
-
   @JsonProperty("standardDate")
   private MapiCalendarTimeZoneRuleDto standardDate = null;
-
   @JsonProperty("timeZoneFlags")
   private List<String> timeZoneFlags = null;
-
   @JsonProperty("year")
   private Integer year = null;
 
@@ -90,6 +84,7 @@ public class MapiCalendarTimeZoneInfoDto {
     this.bias = bias;
   }
 
+
   /**
    * Set daylightBias and return this.
    * @param daylightBias Offset in minutes from lBias during daylight saving time.             
@@ -115,6 +110,7 @@ public class MapiCalendarTimeZoneInfoDto {
   public void setDaylightBias(Integer daylightBias) {
     this.daylightBias = daylightBias;
   }
+
 
   /**
    * Set daylightDate and return this.
@@ -142,6 +138,7 @@ public class MapiCalendarTimeZoneInfoDto {
     this.daylightDate = daylightDate;
   }
 
+
   /**
    * Set standardBias and return this.
    * @param standardBias Offset in minutes from lBias during standard time.             
@@ -168,6 +165,7 @@ public class MapiCalendarTimeZoneInfoDto {
     this.standardBias = standardBias;
   }
 
+
   /**
    * Set standardDate and return this.
    * @param standardDate Date and local time that indicate when to begin using the StandardBias.             
@@ -193,6 +191,7 @@ public class MapiCalendarTimeZoneInfoDto {
   public void setStandardDate(MapiCalendarTimeZoneRuleDto standardDate) {
     this.standardDate = standardDate;
   }
+
 
   /**
    * Set timeZoneFlags and return this.
@@ -231,6 +230,7 @@ public class MapiCalendarTimeZoneInfoDto {
   public void setTimeZoneFlags(List<String> timeZoneFlags) {
     this.timeZoneFlags = timeZoneFlags;
   }
+
 
   /**
    * Set year and return this.
@@ -324,7 +324,15 @@ public class MapiCalendarTimeZoneInfoDto {
    * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
    * @param year Year in which this rule is scheduled to take effect.             
    */
-  public MapiCalendarTimeZoneInfoDto(Integer bias, Integer daylightBias, MapiCalendarTimeZoneRuleDto daylightDate, Integer standardBias, MapiCalendarTimeZoneRuleDto standardDate, List<String> timeZoneFlags, Integer year) {
+  public MapiCalendarTimeZoneInfoDto(
+    Integer bias,
+    Integer daylightBias,
+    MapiCalendarTimeZoneRuleDto daylightDate,
+    Integer standardBias,
+    MapiCalendarTimeZoneRuleDto standardDate,
+    List<String> timeZoneFlags,
+    Integer year
+  ) {
     super();
     setBias(bias);
     setDaylightBias(daylightBias);

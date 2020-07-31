@@ -45,13 +45,10 @@ import java.io.*;
 public class EmailThread {
   @JsonProperty("id")
   private String id = null;
-
   @JsonProperty("subject")
   private String subject = null;
-
   @JsonProperty("messages")
   private List<EmailDto> messages = null;
-
   @JsonProperty("folder")
   private String folder = null;
 
@@ -81,6 +78,7 @@ public class EmailThread {
     this.id = id;
   }
 
+
   /**
    * Set subject and return this.
    * @param subject Thread subject             
@@ -106,6 +104,7 @@ public class EmailThread {
   public void setSubject(String subject) {
     this.subject = subject;
   }
+
 
   /**
    * Set messages and return this.
@@ -144,6 +143,7 @@ public class EmailThread {
   public void setMessages(List<EmailDto> messages) {
     this.messages = messages;
   }
+
 
   /**
    * Set folder and return this.
@@ -228,7 +228,12 @@ public class EmailThread {
    * @param messages List of messages in thread             
    * @param folder Thread folder location             
    */
-  public EmailThread(String id, String subject, List<EmailDto> messages, String folder) {
+  public EmailThread(
+    String id,
+    String subject,
+    List<EmailDto> messages,
+    String folder
+  ) {
     super();
     setId(id);
     setSubject(subject);

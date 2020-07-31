@@ -45,76 +45,52 @@ import java.io.*;
 public class MapiMessageDto extends MapiMessageItemBaseDto {
   @JsonProperty("messageBody")
   private String messageBody = null;
-
   @JsonProperty("clientSubmitTime")
   private Date clientSubmitTime = null;
-
   @JsonProperty("conversationTopic")
   private String conversationTopic = null;
-
   @JsonProperty("deliveryTime")
   private Date deliveryTime = null;
-
   @JsonProperty("displayBcc")
   private String displayBcc = null;
-
   @JsonProperty("displayCc")
   private String displayCc = null;
-
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("displayNamePrefix")
   private String displayNamePrefix = null;
-
   @JsonProperty("displayTo")
   private String displayTo = null;
-
   @JsonProperty("flags")
   private List<String> flags = null;
-
   @JsonProperty("headers")
   private Map<String, String> headers = null;
-
   @JsonProperty("internetMessageId")
   private String internetMessageId = null;
-
   @JsonProperty("messageFormat")
   private String messageFormat = null;
-
   @JsonProperty("normalizedSubject")
   private String normalizedSubject = null;
-
   @JsonProperty("readReceiptRequested")
   private Boolean readReceiptRequested = null;
-
   @JsonProperty("replyTo")
   private String replyTo = null;
-
   @JsonProperty("senderAddressType")
   private String senderAddressType = null;
-
   @JsonProperty("senderEmailAddress")
   private String senderEmailAddress = null;
-
   @JsonProperty("senderName")
   private String senderName = null;
-
   @JsonProperty("senderSmtpAddress")
   private String senderSmtpAddress = null;
-
   @JsonProperty("sentRepresentingAddressType")
   private String sentRepresentingAddressType = null;
-
   @JsonProperty("sentRepresentingEmailAddress")
   private String sentRepresentingEmailAddress = null;
-
   @JsonProperty("sentRepresentingName")
   private String sentRepresentingName = null;
-
   @JsonProperty("sentRepresentingSmtpAddress")
   private String sentRepresentingSmtpAddress = null;
-
   @JsonProperty("transportMessageHeaders")
   private String transportMessageHeaders = null;
 
@@ -144,6 +120,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.messageBody = messageBody;
   }
 
+
   /**
    * Set clientSubmitTime and return this.
    * @param clientSubmitTime Date and time the message sender submitted a message.             
@@ -169,6 +146,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setClientSubmitTime(Date clientSubmitTime) {
     this.clientSubmitTime = clientSubmitTime;
   }
+
 
   /**
    * Set conversationTopic and return this.
@@ -196,6 +174,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.conversationTopic = conversationTopic;
   }
 
+
   /**
    * Set deliveryTime and return this.
    * @param deliveryTime Date and time a message was delivered.             
@@ -221,6 +200,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setDeliveryTime(Date deliveryTime) {
     this.deliveryTime = deliveryTime;
   }
+
 
   /**
    * Set displayBcc and return this.
@@ -248,6 +228,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.displayBcc = displayBcc;
   }
 
+
   /**
    * Set displayCc and return this.
    * @param displayCc List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
@@ -273,6 +254,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setDisplayCc(String displayCc) {
     this.displayCc = displayCc;
   }
+
 
   /**
    * Set displayName and return this.
@@ -300,6 +282,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.displayName = displayName;
   }
 
+
   /**
    * Set displayNamePrefix and return this.
    * @param displayNamePrefix Prefix of the display name.             
@@ -326,6 +309,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.displayNamePrefix = displayNamePrefix;
   }
 
+
   /**
    * Set displayTo and return this.
    * @param displayTo List of the display names of the primary (To) message recipients, separated by semicolons (;).             
@@ -351,6 +335,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setDisplayTo(String displayTo) {
     this.displayTo = displayTo;
   }
+
 
   /**
    * Set flags and return this.
@@ -389,6 +374,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setFlags(List<String> flags) {
     this.flags = flags;
   }
+
 
   /**
    * Set headers and return this.
@@ -431,6 +417,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.headers = headers;
   }
 
+
   /**
    * Set internetMessageId and return this.
    * @param internetMessageId Internet message id of the message.             
@@ -456,6 +443,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setInternetMessageId(String internetMessageId) {
     this.internetMessageId = internetMessageId;
   }
+
 
   /**
    * Set messageFormat and return this.
@@ -483,6 +471,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.messageFormat = messageFormat;
   }
 
+
   /**
    * Set normalizedSubject and return this.
    * @param normalizedSubject Normalized subject of the message.             
@@ -508,6 +497,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setNormalizedSubject(String normalizedSubject) {
     this.normalizedSubject = normalizedSubject;
   }
+
 
   /**
    * Set readReceiptRequested and return this.
@@ -535,6 +525,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.readReceiptRequested = readReceiptRequested;
   }
 
+
   /**
    * Set replyTo and return this.
    * @param replyTo Reply to names.
@@ -560,6 +551,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setReplyTo(String replyTo) {
     this.replyTo = replyTo;
   }
+
 
   /**
    * Set senderAddressType and return this.
@@ -587,6 +579,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.senderAddressType = senderAddressType;
   }
 
+
   /**
    * Set senderEmailAddress and return this.
    * @param senderEmailAddress Message sender&#39;s e-mail address.
@@ -612,6 +605,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setSenderEmailAddress(String senderEmailAddress) {
     this.senderEmailAddress = senderEmailAddress;
   }
+
 
   /**
    * Set senderName and return this.
@@ -639,6 +633,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.senderName = senderName;
   }
 
+
   /**
    * Set senderSmtpAddress and return this.
    * @param senderSmtpAddress Message sender&#39;s e-mail address.
@@ -664,6 +659,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setSenderSmtpAddress(String senderSmtpAddress) {
     this.senderSmtpAddress = senderSmtpAddress;
   }
+
 
   /**
    * Set sentRepresentingAddressType and return this.
@@ -691,6 +687,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.sentRepresentingAddressType = sentRepresentingAddressType;
   }
 
+
   /**
    * Set sentRepresentingEmailAddress and return this.
    * @param sentRepresentingEmailAddress E-mail address for the messaging user represented by the sender.
@@ -716,6 +713,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setSentRepresentingEmailAddress(String sentRepresentingEmailAddress) {
     this.sentRepresentingEmailAddress = sentRepresentingEmailAddress;
   }
+
 
   /**
    * Set sentRepresentingName and return this.
@@ -743,6 +741,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     this.sentRepresentingName = sentRepresentingName;
   }
 
+
   /**
    * Set sentRepresentingSmtpAddress and return this.
    * @param sentRepresentingSmtpAddress E-mail address for the messaging user represented by the sender.
@@ -768,6 +767,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   public void setSentRepresentingSmtpAddress(String sentRepresentingSmtpAddress) {
     this.sentRepresentingSmtpAddress = sentRepresentingSmtpAddress;
   }
+
 
   /**
    * Set transportMessageHeaders and return this.
@@ -923,7 +923,6 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
-   * @param discriminator 
    * @param messageBody Message text             
    * @param clientSubmitTime Date and time the message sender submitted a message.             
    * @param conversationTopic Topic of the first message in a conversation thread.             
@@ -950,7 +949,50 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param sentRepresentingSmtpAddress E-mail address for the messaging user represented by the sender.
    * @param transportMessageHeaders Transport-specific message envelope information.
    */
-  public MapiMessageDto(List<MapiAttachmentDto> attachments, String billing, String body, String bodyHtml, String bodyRtf, String bodyType, List<String> categories, List<String> companies, String itemId, String messageClass, String mileage, List<MapiRecipientDto> recipients, String sensitivity, String subject, String subjectPrefix, List<MapiPropertyDto> properties, String discriminator, String messageBody, Date clientSubmitTime, String conversationTopic, Date deliveryTime, String displayBcc, String displayCc, String displayName, String displayNamePrefix, String displayTo, List<String> flags, Map<String, String> headers, String internetMessageId, String messageFormat, String normalizedSubject, Boolean readReceiptRequested, String replyTo, String senderAddressType, String senderEmailAddress, String senderName, String senderSmtpAddress, String sentRepresentingAddressType, String sentRepresentingEmailAddress, String sentRepresentingName, String sentRepresentingSmtpAddress, String transportMessageHeaders) {
+  public MapiMessageDto(
+    List<MapiAttachmentDto> attachments,
+    String billing,
+    String body,
+    String bodyHtml,
+    String bodyRtf,
+    String bodyType,
+    List<String> categories,
+    List<String> companies,
+    String itemId,
+    String messageClass,
+    String mileage,
+    List<MapiRecipientDto> recipients,
+    String sensitivity,
+    String subject,
+    String subjectPrefix,
+    List<MapiPropertyDto> properties
+    ,
+    String messageBody,
+    Date clientSubmitTime,
+    String conversationTopic,
+    Date deliveryTime,
+    String displayBcc,
+    String displayCc,
+    String displayName,
+    String displayNamePrefix,
+    String displayTo,
+    List<String> flags,
+    Map<String, String> headers,
+    String internetMessageId,
+    String messageFormat,
+    String normalizedSubject,
+    Boolean readReceiptRequested,
+    String replyTo,
+    String senderAddressType,
+    String senderEmailAddress,
+    String senderName,
+    String senderSmtpAddress,
+    String sentRepresentingAddressType,
+    String sentRepresentingEmailAddress,
+    String sentRepresentingName,
+    String sentRepresentingSmtpAddress,
+    String transportMessageHeaders
+  ) {
     super();
     setAttachments(attachments);
     setBilling(billing);
@@ -968,7 +1010,6 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
     setSubject(subject);
     setSubjectPrefix(subjectPrefix);
     setProperties(properties);
-    setDiscriminator(discriminator);
     setMessageBody(messageBody);
     setClientSubmitTime(clientSubmitTime);
     setConversationTopic(conversationTopic);

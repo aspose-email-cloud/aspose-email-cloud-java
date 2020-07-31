@@ -132,7 +132,9 @@ public class ListResponseOfStorageFileLocation {
    * Initializes a new instance of the ListResponseOfStorageFileLocation
    * @param value 
    */
-  public ListResponseOfStorageFileLocation(List<StorageFileLocation> value) {
+  public ListResponseOfStorageFileLocation(
+    List<StorageFileLocation> value
+  ) {
     super();
     setValue(value);
   }

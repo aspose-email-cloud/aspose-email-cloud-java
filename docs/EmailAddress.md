@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.EmailAddress
-
+# EmailAddress
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,9 +7,11 @@ Name | Type | Description | Notes
 **displayName** | **String** | Display name.              |  [optional]
 **preferred** | **Boolean** | Defines whether email address is preferred.              | 
 **routingType** | **String** | A routing type for an email.              |  [optional]
-**address** | **String** | Email address.              |  [optional]
+**address** | **String** | Email address.              | 
 **originalAddressString** | **String** | The original e-mail address string              |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

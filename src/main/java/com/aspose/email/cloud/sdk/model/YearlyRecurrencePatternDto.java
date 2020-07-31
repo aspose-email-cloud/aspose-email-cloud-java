@@ -45,13 +45,10 @@ import java.io.*;
 public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
   @JsonProperty("startDay")
   private String startDay = null;
-
   @JsonProperty("startMonth")
   private String startMonth = null;
-
   @JsonProperty("startOffset")
   private Integer startOffset = null;
-
   @JsonProperty("startPosition")
   private String startPosition = null;
 
@@ -81,6 +78,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
     this.startDay = startDay;
   }
 
+
   /**
    * Set startMonth and return this.
    * @param startMonth Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
@@ -107,6 +105,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
     this.startMonth = startMonth;
   }
 
+
   /**
    * Set startOffset and return this.
    * @param startOffset Start offset.             
@@ -132,6 +131,7 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
   public void setStartOffset(Integer startOffset) {
     this.startOffset = startOffset;
   }
+
 
   /**
    * Set startPosition and return this.
@@ -221,19 +221,27 @@ public class YearlyRecurrencePatternDto extends RecurrencePatternDto {
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
    * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param discriminator 
    * @param startDay Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    * @param startMonth Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
    * @param startOffset Start offset.             
    * @param startPosition Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
    */
-  public YearlyRecurrencePatternDto(Integer interval, Integer occurs, Date endDate, String weekStart, String discriminator, String startDay, String startMonth, Integer startOffset, String startPosition) {
+  public YearlyRecurrencePatternDto(
+    Integer interval,
+    Integer occurs,
+    Date endDate,
+    String weekStart
+    ,
+    String startDay,
+    String startMonth,
+    Integer startOffset,
+    String startPosition
+  ) {
     super();
     setInterval(interval);
     setOccurs(occurs);
     setEndDate(endDate);
     setWeekStart(weekStart);
-    setDiscriminator(discriminator);
     setStartDay(startDay);
     setStartMonth(startMonth);
     setStartOffset(startOffset);

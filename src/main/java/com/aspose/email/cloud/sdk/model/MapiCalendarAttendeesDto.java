@@ -45,13 +45,10 @@ import java.io.*;
 public class MapiCalendarAttendeesDto {
   @JsonProperty("appointmentRecipients")
   private List<MapiRecipientDto> appointmentRecipients = null;
-
   @JsonProperty("appointmentUnsendableRecipients")
   private List<MapiRecipientDto> appointmentUnsendableRecipients = null;
-
   @JsonProperty("notAllowPropose")
   private Boolean notAllowPropose = null;
-
   @JsonProperty("responseRequested")
   private Boolean responseRequested = null;
 
@@ -93,6 +90,7 @@ public class MapiCalendarAttendeesDto {
     this.appointmentRecipients = appointmentRecipients;
   }
 
+
   /**
    * Set appointmentUnsendableRecipients and return this.
    * @param appointmentUnsendableRecipients List of unsendable attendees.             
@@ -131,6 +129,7 @@ public class MapiCalendarAttendeesDto {
     this.appointmentUnsendableRecipients = appointmentUnsendableRecipients;
   }
 
+
   /**
    * Set notAllowPropose and return this.
    * @param notAllowPropose Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
@@ -156,6 +155,7 @@ public class MapiCalendarAttendeesDto {
   public void setNotAllowPropose(Boolean notAllowPropose) {
     this.notAllowPropose = notAllowPropose;
   }
+
 
   /**
    * Set responseRequested and return this.
@@ -240,7 +240,12 @@ public class MapiCalendarAttendeesDto {
    * @param notAllowPropose Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
    * @param responseRequested Value indicating whether a response is requested to a Message object.             
    */
-  public MapiCalendarAttendeesDto(List<MapiRecipientDto> appointmentRecipients, List<MapiRecipientDto> appointmentUnsendableRecipients, Boolean notAllowPropose, Boolean responseRequested) {
+  public MapiCalendarAttendeesDto(
+    List<MapiRecipientDto> appointmentRecipients,
+    List<MapiRecipientDto> appointmentUnsendableRecipients,
+    Boolean notAllowPropose,
+    Boolean responseRequested
+  ) {
     super();
     setAppointmentRecipients(appointmentRecipients);
     setAppointmentUnsendableRecipients(appointmentUnsendableRecipients);

@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfUrlCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfUrlCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.
@@ -152,7 +152,10 @@ public class EnumWithCustomOfUrlCategory {
    * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
    * @param description 
    */
-  public EnumWithCustomOfUrlCategory(String value, String description) {
+  public EnumWithCustomOfUrlCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);
