@@ -1,6 +1,6 @@
 # AiNameApi
 
-            ﻿
+            
 <a name="complete"></a>
 # **complete**
 > [AiNameWeightedVariants](AiNameWeightedVariants.md) complete(AiNameCompleteRequest request)
@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="expand"></a>
 # **expand**
 > [AiNameWeightedVariants](AiNameWeightedVariants.md) expand(AiNameExpandRequest request)
@@ -66,7 +66,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="expandParsed"></a>
 # expandParsed
 > [AiNameWeightedVariants](AiNameWeightedVariants.md) expandParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
@@ -82,7 +82,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="format"></a>
 # **format**
 > [AiNameFormatted](AiNameFormatted.md) format(AiNameFormatRequest request)
@@ -117,7 +117,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="formatParsed"></a>
 # formatParsed
 > [AiNameFormatted](AiNameFormatted.md) formatParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
@@ -133,7 +133,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 [**AiNameFormatted**](AiNameFormatted.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="genderize"></a>
 # **genderize**
 > [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) genderize(AiNameGenderizeRequest request)
@@ -166,7 +166,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="genderizeParsed"></a>
 # genderizeParsed
 > [AiNameGenderHypothesisList](AiNameGenderHypothesisList.md) genderizeParsed([AiNameParsedRequest](AiNameParsedRequest.md) request)
@@ -182,7 +182,7 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
 [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="match"></a>
 # **match**
 > [AiNameMatchResult](AiNameMatchResult.md) match(AiNameMatchRequest request)
@@ -217,7 +217,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="matchParsed"></a>
 # matchParsed
 > [AiNameMatchResult](AiNameMatchResult.md) matchParsed([AiNameParsedMatchRequest](AiNameParsedMatchRequest.md) request)
@@ -233,7 +233,7 @@ See parameter model documentation at [AiNameParsedMatchRequest](AiNameParsedMatc
 [**AiNameMatchResult**](AiNameMatchResult.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="parse"></a>
 # **parse**
 > [AiNameComponentList](AiNameComponentList.md) parse(AiNameParseRequest request)
@@ -266,7 +266,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="parseEmailAddress"></a>
 # **parseEmailAddress**
 > [AiNameExtractedList](AiNameExtractedList.md) parseEmailAddress(AiNameParseEmailAddressRequest request)

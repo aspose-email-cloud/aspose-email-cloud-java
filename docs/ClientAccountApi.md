@@ -1,6 +1,6 @@
 # ClientAccountApi
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [EmailClientAccount](EmailClientAccount.md) get(ClientAccountGetRequest request)
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getMulti"></a>
 # **getMulti**
 > [EmailClientMultiAccount](EmailClientMultiAccount.md) getMulti(ClientAccountGetMultiRequest request)
@@ -54,7 +54,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md) request)
@@ -70,7 +70,7 @@ See parameter model documentation at [EmailClientAccountSaveRequest](EmailClient
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="saveMulti"></a>
 # saveMulti
 > void saveMulti([EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md) request)

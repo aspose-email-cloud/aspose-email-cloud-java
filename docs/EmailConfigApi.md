@@ -1,6 +1,6 @@
 # EmailConfigApi
 
-            ﻿
+            
 <a name="discover"></a>
 # **discover**
 > [EmailAccountConfigList](EmailAccountConfigList.md) discover(EmailConfigDiscoverRequest request)
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="discoverOauth"></a>
 # discoverOauth
 > [EmailAccountConfigList](EmailAccountConfigList.md) discoverOauth([DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md) request)
@@ -41,7 +41,7 @@ See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailCon
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="discoverPassword"></a>
 # discoverPassword
 > [EmailAccountConfigList](EmailAccountConfigList.md) discoverPassword([DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md) request)

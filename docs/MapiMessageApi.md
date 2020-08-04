@@ -1,6 +1,6 @@
 # MapiMessageApi
 
-            ﻿
+            
 <a name="asEmailDto"></a>
 # asEmailDto
 > [EmailDto](EmailDto.md) asEmailDto([MapiMessageDto](MapiMessageDto.md) mapiMessage)
@@ -16,7 +16,7 @@ See parameter model documentation at [MapiMessageDto](MapiMessageDto.md)
 [**EmailDto**](EmailDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([MapiMessageAsFileRequest](MapiMessageAsFileRequest.md) request)
@@ -32,7 +32,7 @@ See parameter model documentation at [MapiMessageAsFileRequest](MapiMessageAsFil
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [MapiMessageDto](MapiMessageDto.md) fromFile(MapiMessageFromFileRequest request)
@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [MapiMessageDto](MapiMessageDto.md) get(MapiMessageGetRequest request)
@@ -86,7 +86,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([MapiMessageSaveRequest](MapiMessageSaveRequest.md) request)

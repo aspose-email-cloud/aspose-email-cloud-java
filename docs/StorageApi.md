@@ -1,6 +1,6 @@
 # StorageApi
 
-            ﻿
+            
 <a name="getDiscUsage"></a>
 # **getDiscUsage**
 > [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequest request)
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getFileVersions"></a>
 # **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequest request)
@@ -48,7 +48,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="objectExists"></a>
 # **objectExists**
 > [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequest request)
@@ -75,7 +75,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="exists"></a>
 # **exists**
 > [StorageExist](StorageExist.md) exists(StorageExistsRequest request)

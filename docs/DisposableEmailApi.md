@@ -1,6 +1,6 @@
 # DisposableEmailApi
 
-            ﻿
+            
 <a name="isDisposable"></a>
 # **isDisposable**
 > [ValueTOfBoolean](ValueTOfBoolean.md) isDisposable(DisposableEmailIsDisposableRequest request)

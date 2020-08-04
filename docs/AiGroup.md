@@ -1,4 +1,4 @@
-﻿# EmailCloud.Ai
+# EmailCloud.Ai
 AI powered operations.             
 
 API | Description

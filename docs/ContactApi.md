@@ -1,6 +1,6 @@
 # ContactApi
 
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([ContactAsFileRequest](ContactAsFileRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [ContactAsFileRequest](ContactAsFileRequest
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asMapi"></a>
 # asMapi
 > [MapiContactDto](MapiContactDto.md) asMapi([ContactDto](ContactDto.md) contactDto)
@@ -32,7 +32,7 @@ See parameter model documentation at [ContactDto](ContactDto.md)
 [**MapiContactDto**](MapiContactDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="convert"></a>
 # **convert**
 > byte[] convert(ContactConvertRequest request)
@@ -59,7 +59,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [ContactDto](ContactDto.md) fromFile(ContactFromFileRequest request)
@@ -84,7 +84,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [ContactDto](ContactDto.md) get(ContactGetRequest request)
@@ -113,7 +113,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getAsFile"></a>
 # **getAsFile**
 > byte[] getAsFile(ContactGetAsFileRequest request)
@@ -144,7 +144,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getList"></a>
 # **getList**
 > [ContactStorageList](ContactStorageList.md) getList(ContactGetListRequest request)
@@ -175,7 +175,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([ContactSaveRequest](ContactSaveRequest.md) request)

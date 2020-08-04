@@ -1,4 +1,4 @@
-﻿# EmailCloud.Client
+# EmailCloud.Client
 Builtin Email client operations.             
 
 API | Description

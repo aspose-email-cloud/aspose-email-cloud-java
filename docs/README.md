@@ -1,4 +1,4 @@
-﻿# Reference documentation for Aspose.Email Cloud API
+# Reference documentation for Aspose.Email Cloud API
 
 `EmailCloud` is the main API class. It provides an access to all of Aspose.Email Cloud functions.
 `AppKey` and `AppSid` credentials should be obtained from [dashboard](https://dashboard.aspose.cloud/#/) to use `EmailCloud`:

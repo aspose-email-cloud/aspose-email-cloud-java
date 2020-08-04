@@ -1,4 +1,4 @@
-﻿# EmailCloud.Mapi
+# EmailCloud.Mapi
 MAPI operations.             
 
 API | Description

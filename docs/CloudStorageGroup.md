@@ -1,4 +1,4 @@
-﻿# EmailCloud.CloudStorage
+# EmailCloud.CloudStorage
 Cloud file storage operations.             
 
 API | Description

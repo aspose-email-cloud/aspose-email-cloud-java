@@ -1,6 +1,6 @@
 # AiBcrApi
 
-            ﻿
+            
 <a name="parse"></a>
 # **parse**
 > [ContactList](ContactList.md) parse(AiBcrParseRequest request)
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="parseStorage"></a>
 # parseStorage
 > [StorageFileLocationList](StorageFileLocationList.md) parseStorage([AiBcrParseStorageRequest](AiBcrParseStorageRequest.md) request)

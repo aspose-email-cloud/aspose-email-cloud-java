@@ -1,6 +1,6 @@
 # MapiContactApi
 
-            ﻿
+            
 <a name="asContactDto"></a>
 # asContactDto
 > [ContactDto](ContactDto.md) asContactDto([MapiContactDto](MapiContactDto.md) mapiContactDto)
@@ -16,7 +16,7 @@ See parameter model documentation at [MapiContactDto](MapiContactDto.md)
 [**ContactDto**](ContactDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([MapiContactAsFileRequest](MapiContactAsFileRequest.md) request)
@@ -32,7 +32,7 @@ See parameter model documentation at [MapiContactAsFileRequest](MapiContactAsFil
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [MapiContactDto](MapiContactDto.md) fromFile(MapiContactFromFileRequest request)
@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [MapiContactDto](MapiContactDto.md) get(MapiContactGetRequest request)
@@ -86,7 +86,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([MapiContactSaveRequest](MapiContactSaveRequest.md) request)

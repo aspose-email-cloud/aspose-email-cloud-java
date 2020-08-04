@@ -1,6 +1,6 @@
 # FolderApi
 
-            ﻿
+            
 <a name="copyFolder"></a>
 # **copyFolder**
 > void copyFolder(CopyFolderRequest request)
@@ -29,7 +29,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="createFolder"></a>
 # **createFolder**
 > void createFolder(CreateFolderRequest request)
@@ -54,7 +54,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="deleteFolder"></a>
 # **deleteFolder**
 > void deleteFolder(DeleteFolderRequest request)
@@ -81,7 +81,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getFilesList"></a>
 # **getFilesList**
 > [FilesList](FilesList.md) getFilesList(GetFilesListRequest request)
@@ -106,7 +106,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="moveFolder"></a>
 # **moveFolder**
 > void moveFolder(MoveFolderRequest request)

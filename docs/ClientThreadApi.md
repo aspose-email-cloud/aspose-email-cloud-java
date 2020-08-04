@@ -1,6 +1,6 @@
 # ClientThreadApi
 
-            ﻿
+            
 <a name="delete"></a>
 # delete
 > void delete([ClientThreadDeleteRequest](ClientThreadDeleteRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [ClientThreadDeleteRequest](ClientThreadDel
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="getList"></a>
 # **getList**
 > [EmailThreadList](EmailThreadList.md) getList(ClientThreadGetListRequest request)
@@ -49,7 +49,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getMessages"></a>
 # **getMessages**
 > [EmailList](EmailList.md) getMessages(ClientThreadGetMessagesRequest request)
@@ -80,7 +80,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="move"></a>
 # move
 > void move([ClientThreadMoveRequest](ClientThreadMoveRequest.md) request)
@@ -96,7 +96,7 @@ See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveR
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="setIsRead"></a>
 # setIsRead
 > void setIsRead([ClientThreadSetIsReadRequest](ClientThreadSetIsReadRequest.md) request)

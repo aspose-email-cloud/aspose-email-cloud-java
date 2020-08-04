@@ -1,6 +1,6 @@
 # MapiCalendarApi
 
-            ﻿
+            
 <a name="asCalendarDto"></a>
 # asCalendarDto
 > [CalendarDto](CalendarDto.md) asCalendarDto([MapiCalendarDto](MapiCalendarDto.md) mapiCalendarDto)
@@ -16,7 +16,7 @@ See parameter model documentation at [MapiCalendarDto](MapiCalendarDto.md)
 [**CalendarDto**](CalendarDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([MapiCalendarAsFileRequest](MapiCalendarAsFileRequest.md) request)
@@ -32,7 +32,7 @@ See parameter model documentation at [MapiCalendarAsFileRequest](MapiCalendarAsF
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [MapiCalendarDto](MapiCalendarDto.md) fromFile(MapiCalendarFromFileRequest request)
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [MapiCalendarDto](MapiCalendarDto.md) get(MapiCalendarGetRequest request)
@@ -82,7 +82,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([MapiCalendarSaveRequest](MapiCalendarSaveRequest.md) request)

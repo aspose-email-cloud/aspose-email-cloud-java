@@ -1,6 +1,6 @@
 # ClientFolderApi
 
-            ﻿
+            
 <a name="create"></a>
 # create
 > void create([ClientFolderCreateRequest](ClientFolderCreateRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [ClientFolderCreateRequest](ClientFolderCre
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="delete"></a>
 # delete
 > void delete([ClientFolderDeleteRequest](ClientFolderDeleteRequest.md) request)
@@ -32,7 +32,7 @@ See parameter model documentation at [ClientFolderDeleteRequest](ClientFolderDel
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="getList"></a>
 # **getList**
 > [MailServerFolderList](MailServerFolderList.md) getList(ClientFolderGetListRequest request)

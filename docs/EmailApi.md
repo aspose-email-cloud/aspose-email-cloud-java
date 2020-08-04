@@ -1,6 +1,6 @@
 # EmailApi
 
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([EmailAsFileRequest](EmailAsFileRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [EmailAsFileRequest](EmailAsFileRequest.md)
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asMapi"></a>
 # asMapi
 > [MapiMessageDto](MapiMessageDto.md) asMapi([EmailDto](EmailDto.md) emailDto)
@@ -32,7 +32,7 @@ See parameter model documentation at [EmailDto](EmailDto.md)
 [**MapiMessageDto**](MapiMessageDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="convert"></a>
 # **convert**
 > byte[] convert(EmailConvertRequest request)
@@ -57,7 +57,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [EmailDto](EmailDto.md) fromFile(EmailFromFileRequest request)
@@ -82,7 +82,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [EmailDto](EmailDto.md) get(EmailGetRequest request)
@@ -111,7 +111,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getAsFile"></a>
 # **getAsFile**
 > byte[] getAsFile(EmailGetAsFileRequest request)
@@ -140,7 +140,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getList"></a>
 # **getList**
 > [EmailStorageList](EmailStorageList.md) getList(EmailGetListRequest request)
@@ -171,7 +171,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([EmailSaveRequest](EmailSaveRequest.md) request)

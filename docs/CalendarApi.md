@@ -1,6 +1,6 @@
 # CalendarApi
 
-            ﻿
+            
 <a name="asAlternate"></a>
 # asAlternate
 > [AlternateView](AlternateView.md) asAlternate([CalendarAsAlternateRequest](CalendarAsAlternateRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [CalendarAsAlternateRequest](CalendarAsAlte
 [**AlternateView**](AlternateView.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asFile"></a>
 # asFile
 > byte[] asFile([CalendarAsFileRequest](CalendarAsFileRequest.md) request)
@@ -32,7 +32,7 @@ See parameter model documentation at [CalendarAsFileRequest](CalendarAsFileReque
 **byte[]**
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="asMapi"></a>
 # asMapi
 > [MapiCalendarDto](MapiCalendarDto.md) asMapi([CalendarDto](CalendarDto.md) calendarDto)
@@ -48,7 +48,7 @@ See parameter model documentation at [CalendarDto](CalendarDto.md)
 [**MapiCalendarDto**](MapiCalendarDto.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="convert"></a>
 # **convert**
 > byte[] convert(CalendarConvertRequest request)
@@ -73,7 +73,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="fromFile"></a>
 # **fromFile**
 > [CalendarDto](CalendarDto.md) fromFile(CalendarFromFileRequest request)
@@ -96,7 +96,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="get"></a>
 # **get**
 > [CalendarDto](CalendarDto.md) get(CalendarGetRequest request)
@@ -123,7 +123,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getAsAlternate"></a>
 # **getAsAlternate**
 > [AlternateView](AlternateView.md) getAsAlternate(CalendarGetAsAlternateRequest request)
@@ -154,7 +154,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getAsFile"></a>
 # **getAsFile**
 > byte[] getAsFile(CalendarGetAsFileRequest request)
@@ -183,7 +183,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="getList"></a>
 # **getList**
 > [CalendarStorageList](CalendarStorageList.md) getList(CalendarGetListRequest request)
@@ -212,7 +212,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="save"></a>
 # save
 > void save([CalendarSaveRequest](CalendarSaveRequest.md) request)

@@ -1,6 +1,6 @@
 # FileApi
 
-            ﻿
+            
 <a name="copyFile"></a>
 # **copyFile**
 > void copyFile(CopyFileRequest request)
@@ -31,7 +31,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="deleteFile"></a>
 # **deleteFile**
 > void deleteFile(DeleteFileRequest request)
@@ -58,7 +58,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="downloadFile"></a>
 # **downloadFile**
 > byte[] downloadFile(DownloadFileRequest request)
@@ -85,7 +85,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="moveFile"></a>
 # **moveFile**
 > void moveFile(MoveFileRequest request)
@@ -116,7 +116,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="uploadFile"></a>
 # **uploadFile**
 > [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequest request)

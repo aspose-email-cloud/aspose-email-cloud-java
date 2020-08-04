@@ -1,6 +1,6 @@
 # ClientMessageApi
 
-            ﻿
+            
 <a name="append"></a>
 # append
 > [ValueTOfString](ValueTOfString.md) append([ClientMessageAppendRequest](ClientMessageAppendRequest.md) request)
@@ -16,7 +16,7 @@ See parameter model documentation at [ClientMessageAppendRequest](ClientMessageA
 [**ValueTOfString**](ValueTOfString.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="appendFile"></a>
 # **appendFile**
 > [ValueTOfString](ValueTOfString.md) appendFile(ClientMessageAppendFileRequest request)
@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="delete"></a>
 # delete
 > void delete([ClientMessageDeleteRequest](ClientMessageDeleteRequest.md) request)
@@ -67,7 +67,7 @@ See parameter model documentation at [ClientMessageDeleteRequest](ClientMessageD
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="fetch"></a>
 # **fetch**
 > [MailMessageBase](MailMessageBase.md) fetch(ClientMessageFetchRequest request)
@@ -102,7 +102,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="fetchFile"></a>
 # **fetchFile**
 > byte[] fetchFile(ClientMessageFetchFileRequest request)
@@ -135,7 +135,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="list"></a>
 # **list**
 > [MailMessageBaseList](MailMessageBaseList.md) list(ClientMessageListRequest request)
@@ -174,7 +174,7 @@ Name | Type | Description | Notes
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="move"></a>
 # move
 > void move([ClientMessageMoveRequest](ClientMessageMoveRequest.md) request)
@@ -190,7 +190,7 @@ See parameter model documentation at [ClientMessageMoveRequest](ClientMessageMov
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="send"></a>
 # send
 > void send([ClientMessageSendRequest](ClientMessageSendRequest.md) request)
@@ -206,7 +206,7 @@ See parameter model documentation at [ClientMessageSendRequest](ClientMessageSen
 void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            ﻿
+            
 <a name="sendFile"></a>
 # **sendFile**
 > void sendFile(ClientMessageSendFileRequest request)
@@ -237,7 +237,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            ﻿
+            
 <a name="setIsRead"></a>
 # setIsRead
 > void setIsRead([ClientMessageSetIsReadRequest](ClientMessageSetIsReadRequest.md) request)
