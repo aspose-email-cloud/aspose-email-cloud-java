@@ -1,5 +1,5 @@
 
-# EmailClientMultiAccountSaveRequest
+# ClientAccountSaveMultiRequest
 ## Properties
 Class has no properties
 

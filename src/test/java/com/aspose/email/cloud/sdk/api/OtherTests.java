@@ -41,7 +41,7 @@ public class OtherTests extends TestBase {
             null);
         String fileName = UUID.randomUUID().toString() + ".account";
         api.client().account().save(
-            new EmailClientAccountSaveRequest(new StorageFileLocation(storage, folder, fileName),
+            new ClientAccountSaveRequest(new StorageFileLocation(storage, folder, fileName),
                 account));
         EmailClientAccount response =
             api.client().account().get(
@@ -68,7 +68,7 @@ public class OtherTests extends TestBase {
                 new EmailClientAccountPasswordCredentials("example@gmail.com", "password"),
                 null));
         String fileName = UUID.randomUUID().toString() + ".multi.account";
-        api.client().account().saveMulti(new EmailClientMultiAccountSaveRequest(
+        api.client().account().saveMulti(new ClientAccountSaveMultiRequest(
             new StorageFileLocation(storage, folder, fileName), multiAccount));
         EmailClientMultiAccount multiAccountFromStorage = api.client().account()
             .getMulti(new ClientAccountGetMultiRequest(fileName, folder, storage));

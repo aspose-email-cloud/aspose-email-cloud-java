@@ -154,7 +154,7 @@ public class ClientAccountApi
      * @throws ApiException API error.
      */
     public void save(
-        EmailClientAccountSaveRequest request) throws ApiException 
+        ClientAccountSaveRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
@@ -188,7 +188,7 @@ public class ClientAccountApi
      * @throws ApiException API error.
      */
     public void saveMulti(
-        EmailClientMultiAccountSaveRequest request) throws ApiException 
+        ClientAccountSaveMultiRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set

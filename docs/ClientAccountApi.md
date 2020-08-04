@@ -57,13 +57,13 @@ Name | Type | Description | Notes
             
 <a name="save"></a>
 # save
-> void save([EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md) request)
+> void save([ClientAccountSaveRequest](ClientAccountSaveRequest.md) request)
 
 Create/update email client account file (*.account) with credentials             
 
 ### request Parameter
 
-See parameter model documentation at [EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md)
+See parameter model documentation at [ClientAccountSaveRequest](ClientAccountSaveRequest.md)
 
 ### Return type
 
@@ -73,13 +73,13 @@ void (empty response body)
             
 <a name="saveMulti"></a>
 # saveMulti
-> void saveMulti([EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md) request)
+> void saveMulti([ClientAccountSaveMultiRequest](ClientAccountSaveMultiRequest.md) request)
 
 Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
 ### request Parameter
 
-See parameter model documentation at [EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md)
+See parameter model documentation at [ClientAccountSaveMultiRequest](ClientAccountSaveMultiRequest.md)
 
 ### Return type
 

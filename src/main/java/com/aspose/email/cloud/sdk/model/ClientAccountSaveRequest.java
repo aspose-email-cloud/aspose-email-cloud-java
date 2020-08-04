@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailClientAccountSaveRequest.java">
+* <copyright company="Aspose" file="ClientAccountSaveRequest.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -42,7 +42,7 @@ import java.io.*;
 /**
  * Email client account save request             
  */
-public class EmailClientAccountSaveRequest extends StorageModelOfEmailClientAccount {
+public class ClientAccountSaveRequest extends StorageModelOfEmailClientAccount {
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -64,7 +64,7 @@ public class EmailClientAccountSaveRequest extends StorageModelOfEmailClientAcco
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmailClientAccountSaveRequest {\n");
+    sb.append("class ClientAccountSaveRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
     sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
@@ -83,16 +83,16 @@ public class EmailClientAccountSaveRequest extends StorageModelOfEmailClientAcco
     return o.toString().replace("\n", "\n    ");
   }
 
-  public EmailClientAccountSaveRequest() {
+  public ClientAccountSaveRequest() {
     super();
   }
 
   /**
-   * Initializes a new instance of the EmailClientAccountSaveRequest
+   * Initializes a new instance of the ClientAccountSaveRequest
    * @param storageFile 
    * @param value 
    */
-  public EmailClientAccountSaveRequest(
+  public ClientAccountSaveRequest(
     StorageFileLocation storageFile,
     EmailClientAccount value
   ) {

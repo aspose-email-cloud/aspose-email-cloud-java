@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="DiscoverEmailConfigPassword.java">
+* <copyright company="Aspose" file="ClientAccountSaveMultiRequest.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,38 +40,9 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * DiscoverEmailConfigPassword
+ * Email client multi account save request.             
  */
-public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRequest {
-  @JsonProperty("password")
-  private String password = null;
-
-  /**
-   * Set password and return this.
-   * @param password Email account password.             
-   * @return this
-  **/
-  public DiscoverEmailConfigPassword password(String password) {
-    this.password = password;
-    return this;
-  }
-
-  /**
-   * Email account password.             
-   * @return password
-  **/
-  public String getPassword() {
-    return password;
-  }  
-
-  /**
-   * Set password.
-   * @param password Email account password.             
-  **/
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
+public class ClientAccountSaveMultiRequest extends StorageModelOfEmailClientMultiAccount {
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -81,26 +52,22 @@ public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    DiscoverEmailConfigPassword discoverEmailConfigPassword = (DiscoverEmailConfigPassword) o;
-    return ObjectUtils.equals(this.password, discoverEmailConfigPassword.password) &&
-    super.equals(o);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(password, super.hashCode());
+    return ObjectUtils.hashCodeMulti(super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DiscoverEmailConfigPassword {\n");
+    sb.append("class ClientAccountSaveMultiRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
-    sb.append("    fastProcessing: ").append(toIndentedString(isFastProcessing())).append("\n");
-    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
-    sb.append("    password: ").append(toIndentedString(getPassword())).append("\n");
+    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
+    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -116,28 +83,22 @@ public class DiscoverEmailConfigPassword extends DiscoverEmailConfigRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public DiscoverEmailConfigPassword() {
+  public ClientAccountSaveMultiRequest() {
     super();
   }
 
   /**
-   * Initializes a new instance of the DiscoverEmailConfigPassword
-   * @param address Email address to discover.             
-   * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
-   * @param login Email account login. If not specified, address used as a login.             
-   * @param password Email account password.             
+   * Initializes a new instance of the ClientAccountSaveMultiRequest
+   * @param storageFile 
+   * @param value 
    */
-  public DiscoverEmailConfigPassword(
-    String address,
-    Boolean fastProcessing,
-    String login,
-    String password
+  public ClientAccountSaveMultiRequest(
+    StorageFileLocation storageFile,
+    EmailClientMultiAccount value
   ) {
     super();
-    setAddress(address);
-    setFastProcessing(fastProcessing);
-    setLogin(login);
-    setPassword(password);
+    setStorageFile(storageFile);
+    setValue(value);
   }
 
 }

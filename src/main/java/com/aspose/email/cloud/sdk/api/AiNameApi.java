@@ -440,7 +440,7 @@ public class AiNameApi
      * @throws ApiException API error.
      */
     public AiNameMatchResult matchParsed(
-        AiNameParsedMatchRequest request) throws ApiException 
+        AiNameMatchParsedRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set

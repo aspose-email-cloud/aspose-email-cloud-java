@@ -28,13 +28,13 @@ Name | Type | Description | Notes
             
 <a name="discoverOauth"></a>
 # discoverOauth
-> [EmailAccountConfigList](EmailAccountConfigList.md) discoverOauth([DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md) request)
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverOauth([EmailConfigDiscoverOauthRequest](EmailConfigDiscoverOauthRequest.md) request)
 
 Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
 ### request Parameter
 
-See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
+See parameter model documentation at [EmailConfigDiscoverOauthRequest](EmailConfigDiscoverOauthRequest.md)
 
 ### Return type
 
@@ -44,13 +44,13 @@ See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailCon
             
 <a name="discoverPassword"></a>
 # discoverPassword
-> [EmailAccountConfigList](EmailAccountConfigList.md) discoverPassword([DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md) request)
+> [EmailAccountConfigList](EmailAccountConfigList.md) discoverPassword([EmailConfigDiscoverPasswordRequest](EmailConfigDiscoverPasswordRequest.md) request)
 
 Discover email accounts by email address. Validates discovered accounts using login and password.             
 
 ### request Parameter
 
-See parameter model documentation at [DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
+See parameter model documentation at [EmailConfigDiscoverPasswordRequest](EmailConfigDiscoverPasswordRequest.md)
 
 ### Return type
 

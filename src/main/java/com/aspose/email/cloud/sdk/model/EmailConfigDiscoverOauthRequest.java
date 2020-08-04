@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="DiscoverEmailConfigOauth.java">
+* <copyright company="Aspose" file="EmailConfigDiscoverOauthRequest.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,9 +40,9 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * DiscoverEmailConfigOauth
+ * EmailConfigDiscoverOauthRequest
  */
-public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
+public class EmailConfigDiscoverOauthRequest extends DiscoverEmailConfigRequest {
   @JsonProperty("clientId")
   private String clientId = null;
   @JsonProperty("clientSecret")
@@ -57,7 +57,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param clientId OAuth client id.             
    * @return this
   **/
-  public DiscoverEmailConfigOauth clientId(String clientId) {
+  public EmailConfigDiscoverOauthRequest clientId(String clientId) {
     this.clientId = clientId;
     return this;
   }
@@ -84,7 +84,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param clientSecret OAuth client secret.             
    * @return this
   **/
-  public DiscoverEmailConfigOauth clientSecret(String clientSecret) {
+  public EmailConfigDiscoverOauthRequest clientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
     return this;
   }
@@ -111,7 +111,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param refreshToken OAuth refresh token.             
    * @return this
   **/
-  public DiscoverEmailConfigOauth refreshToken(String refreshToken) {
+  public EmailConfigDiscoverOauthRequest refreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
     return this;
   }
@@ -138,7 +138,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
    * @return this
   **/
-  public DiscoverEmailConfigOauth requestUrl(String requestUrl) {
+  public EmailConfigDiscoverOauthRequest requestUrl(String requestUrl) {
     this.requestUrl = requestUrl;
     return this;
   }
@@ -168,11 +168,11 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    DiscoverEmailConfigOauth discoverEmailConfigOauth = (DiscoverEmailConfigOauth) o;
-    return ObjectUtils.equals(this.clientId, discoverEmailConfigOauth.clientId) &&
-    ObjectUtils.equals(this.clientSecret, discoverEmailConfigOauth.clientSecret) &&
-    ObjectUtils.equals(this.refreshToken, discoverEmailConfigOauth.refreshToken) &&
-    ObjectUtils.equals(this.requestUrl, discoverEmailConfigOauth.requestUrl) &&
+    EmailConfigDiscoverOauthRequest emailConfigDiscoverOauthRequest = (EmailConfigDiscoverOauthRequest) o;
+    return ObjectUtils.equals(this.clientId, emailConfigDiscoverOauthRequest.clientId) &&
+    ObjectUtils.equals(this.clientSecret, emailConfigDiscoverOauthRequest.clientSecret) &&
+    ObjectUtils.equals(this.refreshToken, emailConfigDiscoverOauthRequest.refreshToken) &&
+    ObjectUtils.equals(this.requestUrl, emailConfigDiscoverOauthRequest.requestUrl) &&
     super.equals(o);
   }
 
@@ -185,7 +185,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DiscoverEmailConfigOauth {\n");
+    sb.append("class EmailConfigDiscoverOauthRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
     sb.append("    fastProcessing: ").append(toIndentedString(isFastProcessing())).append("\n");
@@ -209,12 +209,12 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-  public DiscoverEmailConfigOauth() {
+  public EmailConfigDiscoverOauthRequest() {
     super();
   }
 
   /**
-   * Initializes a new instance of the DiscoverEmailConfigOauth
+   * Initializes a new instance of the EmailConfigDiscoverOauthRequest
    * @param address Email address to discover.             
    * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
    * @param login Email account login. If not specified, address used as a login.             
@@ -223,7 +223,7 @@ public class DiscoverEmailConfigOauth extends DiscoverEmailConfigRequest {
    * @param refreshToken OAuth refresh token.             
    * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
    */
-  public DiscoverEmailConfigOauth(
+  public EmailConfigDiscoverOauthRequest(
     String address,
     Boolean fastProcessing,
     String login,

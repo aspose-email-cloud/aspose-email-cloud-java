@@ -220,13 +220,13 @@ Name | Type | Description | Notes
             
 <a name="matchParsed"></a>
 # matchParsed
-> [AiNameMatchResult](AiNameMatchResult.md) matchParsed([AiNameParsedMatchRequest](AiNameParsedMatchRequest.md) request)
+> [AiNameMatchResult](AiNameMatchResult.md) matchParsed([AiNameMatchParsedRequest](AiNameMatchParsedRequest.md) request)
 
 Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
 
 ### request Parameter
 
-See parameter model documentation at [AiNameParsedMatchRequest](AiNameParsedMatchRequest.md)
+See parameter model documentation at [AiNameMatchParsedRequest](AiNameMatchParsedRequest.md)
 
 ### Return type
 

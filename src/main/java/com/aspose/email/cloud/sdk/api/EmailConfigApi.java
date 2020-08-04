@@ -108,7 +108,7 @@ public class EmailConfigApi
      * @throws ApiException API error.
      */
     public EmailAccountConfigList discoverOauth(
-        DiscoverEmailConfigOauth request) throws ApiException 
+        EmailConfigDiscoverOauthRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set
@@ -150,7 +150,7 @@ public class EmailConfigApi
      * @throws ApiException API error.
      */
     public EmailAccountConfigList discoverPassword(
-        DiscoverEmailConfigPassword request) throws ApiException 
+        EmailConfigDiscoverPasswordRequest request) throws ApiException 
     {
       try {
          // verify the required parameter 'request' is set

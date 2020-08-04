@@ -1,6 +1,6 @@
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailClientMultiAccountSaveRequest.java">
+* <copyright company="Aspose" file="EmailConfigDiscoverPasswordRequest.java">
 *   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -40,9 +40,38 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Email client multi account save request.             
+ * EmailConfigDiscoverPasswordRequest
  */
-public class EmailClientMultiAccountSaveRequest extends StorageModelOfEmailClientMultiAccount {
+public class EmailConfigDiscoverPasswordRequest extends DiscoverEmailConfigRequest {
+  @JsonProperty("password")
+  private String password = null;
+
+  /**
+   * Set password and return this.
+   * @param password Email account password.             
+   * @return this
+  **/
+  public EmailConfigDiscoverPasswordRequest password(String password) {
+    this.password = password;
+    return this;
+  }
+
+  /**
+   * Email account password.             
+   * @return password
+  **/
+  public String getPassword() {
+    return password;
+  }  
+
+  /**
+   * Set password.
+   * @param password Email account password.             
+  **/
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -52,22 +81,26 @@ public class EmailClientMultiAccountSaveRequest extends StorageModelOfEmailClien
   if (o == null || getClass() != o.getClass()) {
     return false;
   }
-    return true;
+    EmailConfigDiscoverPasswordRequest emailConfigDiscoverPasswordRequest = (EmailConfigDiscoverPasswordRequest) o;
+    return ObjectUtils.equals(this.password, emailConfigDiscoverPasswordRequest.password) &&
+    super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(super.hashCode());
+    return ObjectUtils.hashCodeMulti(password, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmailClientMultiAccountSaveRequest {\n");
+    sb.append("class EmailConfigDiscoverPasswordRequest {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    storageFile: ").append(toIndentedString(getStorageFile())).append("\n");
-    sb.append("    value: ").append(toIndentedString(getValue())).append("\n");
+    sb.append("    address: ").append(toIndentedString(getAddress())).append("\n");
+    sb.append("    fastProcessing: ").append(toIndentedString(isFastProcessing())).append("\n");
+    sb.append("    login: ").append(toIndentedString(getLogin())).append("\n");
+    sb.append("    password: ").append(toIndentedString(getPassword())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -83,22 +116,28 @@ public class EmailClientMultiAccountSaveRequest extends StorageModelOfEmailClien
     return o.toString().replace("\n", "\n    ");
   }
 
-  public EmailClientMultiAccountSaveRequest() {
+  public EmailConfigDiscoverPasswordRequest() {
     super();
   }
 
   /**
-   * Initializes a new instance of the EmailClientMultiAccountSaveRequest
-   * @param storageFile 
-   * @param value 
+   * Initializes a new instance of the EmailConfigDiscoverPasswordRequest
+   * @param address Email address to discover.             
+   * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+   * @param login Email account login. If not specified, address used as a login.             
+   * @param password Email account password.             
    */
-  public EmailClientMultiAccountSaveRequest(
-    StorageFileLocation storageFile,
-    EmailClientMultiAccount value
+  public EmailConfigDiscoverPasswordRequest(
+    String address,
+    Boolean fastProcessing,
+    String login,
+    String password
   ) {
     super();
-    setStorageFile(storageFile);
-    setValue(value);
+    setAddress(address);
+    setFastProcessing(fastProcessing);
+    setLogin(login);
+    setPassword(password);
   }
 
 }

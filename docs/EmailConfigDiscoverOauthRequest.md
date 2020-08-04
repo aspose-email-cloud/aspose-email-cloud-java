@@ -1,5 +1,5 @@
 
-# DiscoverEmailConfigOauth
+# EmailConfigDiscoverOauthRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
