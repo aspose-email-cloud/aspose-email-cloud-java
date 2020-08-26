@@ -1,6 +1,7 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailCloud.java">
+* <copyright company="Aspose" file="MapiGroup.java">
 *   Copyright (c) 2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -34,9 +35,8 @@ import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.*;
 import java.io.*;
 
 import java.util.HashMap;
-
 /**
- * MAPI operations.             
+ * MAPI operations.
  */
 public class MapiGroup {
     
@@ -49,21 +49,21 @@ public class MapiGroup {
 
     
     /**
-     *  MAPI calendar operations.             
+     *  MAPI calendar operations.
      */
     public MapiCalendarApi calendar() {
         return calendar;
     }
     
     /**
-     *  MAPI contact operations             
+     *  MAPI contact operations
      */
     public MapiContactApi contact() {
         return contact;
     }
     
     /**
-     *  MAPI message operations             
+     *  MAPI message operations
      */
     public MapiMessageApi message() {
         return message;

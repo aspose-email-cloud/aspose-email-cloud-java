@@ -1,5 +1,4 @@
 
-
 package com.aspose.email.cloud.sdk.invoker;
 import com.aspose.email.cloud.sdk.model.*;
 import com.google.gson.GsonBuilder;

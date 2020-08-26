@@ -1,6 +1,7 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailCloud.java">
+* <copyright company="Aspose" file="CloudStorageGroup.java">
 *   Copyright (c) 2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -34,9 +35,8 @@ import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.*;
 import java.io.*;
 
 import java.util.HashMap;
-
 /**
- * Cloud file storage operations.             
+ * Cloud file storage operations.
  */
 public class CloudStorageGroup {
     

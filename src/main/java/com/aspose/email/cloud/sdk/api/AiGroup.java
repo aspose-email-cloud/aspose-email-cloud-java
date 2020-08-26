@@ -1,6 +1,7 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailCloud.java">
+* <copyright company="Aspose" file="AiGroup.java">
 *   Copyright (c) 2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -34,9 +35,8 @@ import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.*;
 import java.io.*;
 
 import java.util.HashMap;
-
 /**
- * AI powered operations.             
+ * AI powered operations.
  */
 public class AiGroup {
     
@@ -47,14 +47,14 @@ public class AiGroup {
 
     
     /**
-     *  AI Business card recognition operations.             
+     *  AI Business card recognition operations.
      */
     public AiBcrApi bcr() {
         return bcr;
     }
     
     /**
-     *  AI Name operations.             
+     *  AI Name operations.
      */
     public AiNameApi name() {
         return name;

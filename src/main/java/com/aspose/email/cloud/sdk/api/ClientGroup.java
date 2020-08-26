@@ -1,6 +1,7 @@
+
 /*
 * --------------------------------------------------------------------------------------------------------------------
-* <copyright company="Aspose" file="EmailCloud.java">
+* <copyright company="Aspose" file="ClientGroup.java">
 *   Copyright (c) 2020 Aspose Pty Ltd. All rights reserved.
 * </copyright>
 * <summary>
@@ -34,9 +35,8 @@ import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.*;
 import java.io.*;
 
 import java.util.HashMap;
-
 /**
- * Builtin Email client operations.             
+ * Builtin Email client operations.
  */
 public class ClientGroup {
     
@@ -51,28 +51,28 @@ public class ClientGroup {
 
     
     /**
-     *  Email server account for built-in client operations.             
+     *  Email server account for built-in client operations.
      */
     public ClientAccountApi account() {
         return account;
     }
     
     /**
-     *  Email client folder operations.             
+     *  Email client folder operations.
      */
     public ClientFolderApi folder() {
         return folder;
     }
     
     /**
-     *  Email client message operations.             
+     *  Email client message operations.
      */
     public ClientMessageApi message() {
         return message;
     }
     
     /**
-     *  Email client thread operations.             
+     *  Email client thread operations.
      */
     public ClientThreadApi thread() {
         return thread;

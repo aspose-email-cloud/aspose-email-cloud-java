@@ -42,13 +42,15 @@ Converts email document to specified format and returns as file
 ### **EmailConvertRequest** Parameters
 ```java
 public EmailConvertRequest(
-    String format, 
+    String fromFormat, 
+    String toFormat, 
     byte[] file)
 ```
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **fromFormat** | **String**| File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **toFormat** | **String**| File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
  **file** | **byte[]**| File to convert |
 
 ### Return type

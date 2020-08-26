@@ -1,4 +1,3 @@
-
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailApi.java">
@@ -144,9 +143,13 @@ public class EmailApi
     public byte[] convert(EmailConvertRequest request) throws ApiException 
     {
       try {
-         // verify the required parameter 'request.format' is set
-        if (request.getFormat() == null) {
-            throw new ApiException(400, "Missing the required parameter 'request.format' when calling convert");
+         // verify the required parameter 'request.fromFormat' is set
+        if (request.getFromFormat() == null) {
+            throw new ApiException(400, "Missing the required parameter 'request.fromFormat' when calling convert");
+        }
+         // verify the required parameter 'request.toFormat' is set
+        if (request.getToFormat() == null) {
+            throw new ApiException(400, "Missing the required parameter 'request.toFormat' when calling convert");
         }
          // verify the required parameter 'request.file' is set
         if (request.getFile() == null) {
@@ -157,7 +160,8 @@ public class EmailApi
         
         HashMap<String, Object> formParams = new HashMap<String, Object>();
         
-        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "format", request.getFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "fromFormat", request.getFromFormat());
+        resourcePath = UrlHelper.addQueryParameterToUrl(resourcePath, "toFormat", request.getToFormat());
         
         if (request.getFile() != null) 
         {

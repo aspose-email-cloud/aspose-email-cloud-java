@@ -1,4 +1,3 @@
-
 /*
 * --------------------------------------------------------------------------------------------------------------------
 * <copyright company="Aspose" file="EmailConvertRequest.java">
@@ -42,36 +41,62 @@ public class EmailConvertRequest
 
     /**
      * Initializes a new instance of the EmailConvertRequest class.   
-     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param fromFormat File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param toFormat File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
      * @param file File to convert
      **/
-    public EmailConvertRequest(String format, byte[] file)             
+    public EmailConvertRequest(String fromFormat, String toFormat, byte[] file)             
     {
-        this.format = format;
+        this.fromFormat = fromFormat;
+        this.toFormat = toFormat;
         this.file = file;
     }
         
-    private String format;
+    private String fromFormat;
 
     /**
-     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Getter for: File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
      **/
-    public String getFormat() {
-        return format;
+    public String getFromFormat() {
+        return fromFormat;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for: File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
      **/
-    public void setFormat(String value) {
-        this.format = value;
+    public void setFromFormat(String value) {
+        this.fromFormat = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for: File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
      **/
-    public EmailConvertRequest format(String value) {
-        this.format = value;
+    public EmailConvertRequest fromFormat(String value) {
+        this.fromFormat = value;
+        return this;
+    }
+
+    private String toFormat;
+
+    /**
+     * Getter for: File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public String getToFormat() {
+        return toFormat;
+    }
+
+    /**
+     * Setter for: File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public void setToFormat(String value) {
+        this.toFormat = value;
+    }
+
+    /**
+     * Setter for: File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     **/
+    public EmailConvertRequest toFormat(String value) {
+        this.toFormat = value;
         return this;
     }
 

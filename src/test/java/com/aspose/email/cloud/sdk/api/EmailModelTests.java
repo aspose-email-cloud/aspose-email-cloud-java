@@ -20,7 +20,7 @@ public class EmailModelTests extends TestBase {
     @Test(groups = {"pipeline"})
     public void convertEmailTest() throws ApiException, UnsupportedEncodingException {
         byte[] mapiBytes = api.email().asFile(new EmailAsFileRequest("Msg", emailDto));
-        byte[] emlBytes = api.email().convert(new EmailConvertRequest("Eml", mapiBytes));
+        byte[] emlBytes = api.email().convert(new EmailConvertRequest("Msg", "Eml", mapiBytes));
         String emlContent = new String(emlBytes, "UTF-8");
         assert emlContent.contains(from);
         EmailDto dto = api.email().fromFile(new EmailFromFileRequest("Eml", emlBytes));
