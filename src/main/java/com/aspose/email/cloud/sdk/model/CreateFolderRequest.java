@@ -41,8 +41,8 @@ public class CreateFolderRequest
 
     /**
      * Initializes a new instance of the CreateFolderRequest class.   
-     * @param path Folder path to create e.g. &#39;folder_1/folder_2/&#39;
-     * @param storageName Storage name
+     * @param path 
+     * @param storageName 
      **/
     public CreateFolderRequest(String path, String storageName)             
     {
@@ -53,21 +53,21 @@ public class CreateFolderRequest
     private String path;
 
     /**
-     * Getter for: Folder path to create e.g. 'folder_1/folder_2/'
+     * Gets path
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Setter for: Folder path to create e.g. 'folder_1/folder_2/'
+     * Sets path
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Setter for: Folder path to create e.g. 'folder_1/folder_2/'
+     * Sets path
      **/
     public CreateFolderRequest path(String value) {
         this.path = value;
@@ -77,21 +77,21 @@ public class CreateFolderRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public CreateFolderRequest storageName(String value) {
         this.storageName = value;

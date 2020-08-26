@@ -41,7 +41,7 @@ public class GetDiscUsageRequest
 
     /**
      * Initializes a new instance of the GetDiscUsageRequest class.   
-     * @param storageName Storage name
+     * @param storageName 
      **/
     public GetDiscUsageRequest(String storageName)             
     {
@@ -51,21 +51,21 @@ public class GetDiscUsageRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public GetDiscUsageRequest storageName(String value) {
         this.storageName = value;

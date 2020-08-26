@@ -41,11 +41,11 @@ public class MoveFileRequest
 
     /**
      * Initializes a new instance of the MoveFileRequest class.   
-     * @param srcPath Source file path e.g. &#39;/src.ext&#39;
-     * @param destPath Destination file path e.g. &#39;/dest.ext&#39;
-     * @param srcStorageName Source storage name
-     * @param destStorageName Destination storage name
-     * @param versionId File version ID to move
+     * @param srcPath 
+     * @param destPath 
+     * @param srcStorageName 
+     * @param destStorageName 
+     * @param versionId 
      **/
     public MoveFileRequest(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
@@ -59,21 +59,21 @@ public class MoveFileRequest
     private String srcPath;
 
     /**
-     * Getter for: Source file path e.g. '/src.ext'
+     * Gets srcPath
      **/
     public String getSrcPath() {
         return srcPath;
     }
 
     /**
-     * Setter for: Source file path e.g. '/src.ext'
+     * Sets srcPath
      **/
     public void setSrcPath(String value) {
         this.srcPath = value;
     }
 
     /**
-     * Setter for: Source file path e.g. '/src.ext'
+     * Sets srcPath
      **/
     public MoveFileRequest srcPath(String value) {
         this.srcPath = value;
@@ -83,21 +83,21 @@ public class MoveFileRequest
     private String destPath;
 
     /**
-     * Getter for: Destination file path e.g. '/dest.ext'
+     * Gets destPath
      **/
     public String getDestPath() {
         return destPath;
     }
 
     /**
-     * Setter for: Destination file path e.g. '/dest.ext'
+     * Sets destPath
      **/
     public void setDestPath(String value) {
         this.destPath = value;
     }
 
     /**
-     * Setter for: Destination file path e.g. '/dest.ext'
+     * Sets destPath
      **/
     public MoveFileRequest destPath(String value) {
         this.destPath = value;
@@ -107,21 +107,21 @@ public class MoveFileRequest
     private String srcStorageName;
 
     /**
-     * Getter for: Source storage name
+     * Gets srcStorageName
      **/
     public String getSrcStorageName() {
         return srcStorageName;
     }
 
     /**
-     * Setter for: Source storage name
+     * Sets srcStorageName
      **/
     public void setSrcStorageName(String value) {
         this.srcStorageName = value;
     }
 
     /**
-     * Setter for: Source storage name
+     * Sets srcStorageName
      **/
     public MoveFileRequest srcStorageName(String value) {
         this.srcStorageName = value;
@@ -131,21 +131,21 @@ public class MoveFileRequest
     private String destStorageName;
 
     /**
-     * Getter for: Destination storage name
+     * Gets destStorageName
      **/
     public String getDestStorageName() {
         return destStorageName;
     }
 
     /**
-     * Setter for: Destination storage name
+     * Sets destStorageName
      **/
     public void setDestStorageName(String value) {
         this.destStorageName = value;
     }
 
     /**
-     * Setter for: Destination storage name
+     * Sets destStorageName
      **/
     public MoveFileRequest destStorageName(String value) {
         this.destStorageName = value;
@@ -155,21 +155,21 @@ public class MoveFileRequest
     private String versionId;
 
     /**
-     * Getter for: File version ID to move
+     * Gets versionId
      **/
     public String getVersionId() {
         return versionId;
     }
 
     /**
-     * Setter for: File version ID to move
+     * Sets versionId
      **/
     public void setVersionId(String value) {
         this.versionId = value;
     }
 
     /**
-     * Setter for: File version ID to move
+     * Sets versionId
      **/
     public MoveFileRequest versionId(String value) {
         this.versionId = value;

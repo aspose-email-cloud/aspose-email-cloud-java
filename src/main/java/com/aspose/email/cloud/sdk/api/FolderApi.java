@@ -55,7 +55,7 @@ public class FolderApi
 
             
     /**
-     * Copy folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -98,7 +98,7 @@ public class FolderApi
 
             
     /**
-     * Create the folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -135,7 +135,7 @@ public class FolderApi
 
             
     /**
-     * Delete folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -173,7 +173,7 @@ public class FolderApi
 
             
     /**
-     * Get all files and folders within a folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @return FilesList
@@ -218,7 +218,7 @@ public class FolderApi
 
             
     /**
-     * Move folder
+     * 
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.

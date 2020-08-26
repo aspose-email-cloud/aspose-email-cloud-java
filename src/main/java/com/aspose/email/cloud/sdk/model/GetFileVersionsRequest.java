@@ -41,8 +41,8 @@ public class GetFileVersionsRequest
 
     /**
      * Initializes a new instance of the GetFileVersionsRequest class.   
-     * @param path File path e.g. &#39;/file.ext&#39;
-     * @param storageName Storage name
+     * @param path 
+     * @param storageName 
      **/
     public GetFileVersionsRequest(String path, String storageName)             
     {
@@ -53,21 +53,21 @@ public class GetFileVersionsRequest
     private String path;
 
     /**
-     * Getter for: File path e.g. '/file.ext'
+     * Gets path
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Setter for: File path e.g. '/file.ext'
+     * Sets path
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Setter for: File path e.g. '/file.ext'
+     * Sets path
      **/
     public GetFileVersionsRequest path(String value) {
         this.path = value;
@@ -77,21 +77,21 @@ public class GetFileVersionsRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public GetFileVersionsRequest storageName(String value) {
         this.storageName = value;

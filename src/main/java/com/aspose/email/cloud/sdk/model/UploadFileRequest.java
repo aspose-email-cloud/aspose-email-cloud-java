@@ -41,9 +41,9 @@ public class UploadFileRequest
 
     /**
      * Initializes a new instance of the UploadFileRequest class.   
-     * @param path Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     * @param path 
      * @param file File to upload
-     * @param storageName Storage name
+     * @param storageName 
      **/
     public UploadFileRequest(String path, byte[] file, String storageName)             
     {
@@ -55,21 +55,21 @@ public class UploadFileRequest
     private String path;
 
     /**
-     * Getter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     * Gets path
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Setter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     * Sets path
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Setter for: Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+     * Sets path
      **/
     public UploadFileRequest path(String value) {
         this.path = value;
@@ -103,21 +103,21 @@ public class UploadFileRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public UploadFileRequest storageName(String value) {
         this.storageName = value;

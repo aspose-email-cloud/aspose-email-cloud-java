@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Storage exists
+ * StorageExist
  */
 public class StorageExist {
   @JsonProperty("exists")
@@ -48,7 +48,7 @@ public class StorageExist {
 
   /**
    * Set exists and return this.
-   * @param exists Shows that the storage exists.             
+   * @param exists 
    * @return this
   **/
   public StorageExist exists(Boolean exists) {
@@ -57,7 +57,7 @@ public class StorageExist {
   }
 
   /**
-   * Shows that the storage exists.             
+   * Get exists
    * @return exists
   **/
   public Boolean isExists() {
@@ -66,7 +66,7 @@ public class StorageExist {
 
   /**
    * Set exists.
-   * @param exists Shows that the storage exists.             
+   * @param exists 
   **/
   public void setExists(Boolean exists) {
     this.exists = exists;
@@ -118,7 +118,7 @@ public class StorageExist {
 
   /**
    * Initializes a new instance of the StorageExist
-   * @param exists Shows that the storage exists.             
+   * @param exists 
    */
   public StorageExist(
     Boolean exists

@@ -41,9 +41,9 @@ public class DeleteFolderRequest
 
     /**
      * Initializes a new instance of the DeleteFolderRequest class.   
-     * @param path Folder path e.g. &#39;/folder&#39;
-     * @param storageName Storage name
-     * @param recursive Enable to delete folders, subfolders and files
+     * @param path 
+     * @param storageName 
+     * @param recursive 
      **/
     public DeleteFolderRequest(String path, String storageName, Boolean recursive)             
     {
@@ -55,21 +55,21 @@ public class DeleteFolderRequest
     private String path;
 
     /**
-     * Getter for: Folder path e.g. '/folder'
+     * Gets path
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Setter for: Folder path e.g. '/folder'
+     * Sets path
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Setter for: Folder path e.g. '/folder'
+     * Sets path
      **/
     public DeleteFolderRequest path(String value) {
         this.path = value;
@@ -79,21 +79,21 @@ public class DeleteFolderRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public DeleteFolderRequest storageName(String value) {
         this.storageName = value;
@@ -103,21 +103,21 @@ public class DeleteFolderRequest
     private Boolean recursive;
 
     /**
-     * Getter for: Enable to delete folders, subfolders and files
+     * Gets recursive
      **/
     public Boolean getRecursive() {
         return recursive;
     }
 
     /**
-     * Setter for: Enable to delete folders, subfolders and files
+     * Sets recursive
      **/
     public void setRecursive(Boolean value) {
         this.recursive = value;
     }
 
     /**
-     * Setter for: Enable to delete folders, subfolders and files
+     * Sets recursive
      **/
     public DeleteFolderRequest recursive(Boolean value) {
         this.recursive = value;

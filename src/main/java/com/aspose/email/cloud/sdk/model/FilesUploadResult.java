@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * File upload result
+ * FilesUploadResult
  */
 public class FilesUploadResult {
   @JsonProperty("uploaded")
@@ -50,7 +50,7 @@ public class FilesUploadResult {
 
   /**
    * Set uploaded and return this.
-   * @param uploaded List of uploaded file names
+   * @param uploaded 
    * @return this
   **/
   public FilesUploadResult uploaded(List<String> uploaded) {
@@ -59,7 +59,7 @@ public class FilesUploadResult {
   }
   /**
    * Add an item to uploaded and return this.
-   * @param uploadedItem An item of: List of uploaded file names
+   * @param uploadedItem An item of: 
    * @return this
   **/
   public FilesUploadResult addUploadedItem(String uploadedItem) {
@@ -71,7 +71,7 @@ public class FilesUploadResult {
   }
 
   /**
-   * List of uploaded file names
+   * Get uploaded
    * @return uploaded
   **/
   public List<String> getUploaded() {
@@ -80,7 +80,7 @@ public class FilesUploadResult {
 
   /**
    * Set uploaded.
-   * @param uploaded List of uploaded file names
+   * @param uploaded 
   **/
   public void setUploaded(List<String> uploaded) {
     this.uploaded = uploaded;
@@ -89,7 +89,7 @@ public class FilesUploadResult {
 
   /**
    * Set errors and return this.
-   * @param errors List of errors.
+   * @param errors 
    * @return this
   **/
   public FilesUploadResult errors(List<Error> errors) {
@@ -98,7 +98,7 @@ public class FilesUploadResult {
   }
   /**
    * Add an item to errors and return this.
-   * @param errorsItem An item of: List of errors.
+   * @param errorsItem An item of: 
    * @return this
   **/
   public FilesUploadResult addErrorsItem(Error errorsItem) {
@@ -110,7 +110,7 @@ public class FilesUploadResult {
   }
 
   /**
-   * List of errors.
+   * Get errors
    * @return errors
   **/
   public List<Error> getErrors() {
@@ -119,7 +119,7 @@ public class FilesUploadResult {
 
   /**
    * Set errors.
-   * @param errors List of errors.
+   * @param errors 
   **/
   public void setErrors(List<Error> errors) {
     this.errors = errors;
@@ -173,8 +173,8 @@ public class FilesUploadResult {
 
   /**
    * Initializes a new instance of the FilesUploadResult
-   * @param uploaded List of uploaded file names
-   * @param errors List of errors.
+   * @param uploaded 
+   * @param errors 
    */
   public FilesUploadResult(
     List<String> uploaded,

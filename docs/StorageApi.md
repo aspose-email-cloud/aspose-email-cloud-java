@@ -5,7 +5,7 @@
 # **getDiscUsage**
 > [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequest request)
 
-Get disc usage
+
 
 ### **GetDiscUsageRequest** Parameters
 ```java
@@ -15,7 +15,7 @@ public GetDiscUsageRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **storageName** | **String**| Storage name | [optional]
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 # **getFileVersions**
 > [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequest request)
 
-Get file versions
+
 
 ### **GetFileVersionsRequest** Parameters
 ```java
@@ -39,8 +39,8 @@ public GetFileVersionsRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **path** | **String**| File path e.g. &#39;/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -53,7 +53,7 @@ Name | Type | Description | Notes
 # **objectExists**
 > [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequest request)
 
-Check if file or folder exists
+
 
 ### **ObjectExistsRequest** Parameters
 ```java
@@ -65,9 +65,9 @@ public ObjectExistsRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **versionId** | **String**|  | [optional]
 
 ### Return type
 
@@ -80,7 +80,7 @@ Name | Type | Description | Notes
 # **exists**
 > [StorageExist](StorageExist.md) exists(StorageExistsRequest request)
 
-Check if storage exists
+
 
 ### **StorageExistsRequest** Parameters
 ```java
@@ -90,7 +90,7 @@ public StorageExistsRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **storageName** | **String**| Storage name |
+ **storageName** | **String**|  |
 
 ### Return type
 

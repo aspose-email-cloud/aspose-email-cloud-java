@@ -41,11 +41,11 @@ public class CopyFileRequest
 
     /**
      * Initializes a new instance of the CopyFileRequest class.   
-     * @param srcPath Source file path e.g. &#39;/folder/file.ext&#39;
-     * @param destPath Destination file path
-     * @param srcStorageName Source storage name
-     * @param destStorageName Destination storage name
-     * @param versionId File version ID to copy
+     * @param srcPath 
+     * @param destPath 
+     * @param srcStorageName 
+     * @param destStorageName 
+     * @param versionId 
      **/
     public CopyFileRequest(String srcPath, String destPath, String srcStorageName, String destStorageName, String versionId)             
     {
@@ -59,21 +59,21 @@ public class CopyFileRequest
     private String srcPath;
 
     /**
-     * Getter for: Source file path e.g. '/folder/file.ext'
+     * Gets srcPath
      **/
     public String getSrcPath() {
         return srcPath;
     }
 
     /**
-     * Setter for: Source file path e.g. '/folder/file.ext'
+     * Sets srcPath
      **/
     public void setSrcPath(String value) {
         this.srcPath = value;
     }
 
     /**
-     * Setter for: Source file path e.g. '/folder/file.ext'
+     * Sets srcPath
      **/
     public CopyFileRequest srcPath(String value) {
         this.srcPath = value;
@@ -83,21 +83,21 @@ public class CopyFileRequest
     private String destPath;
 
     /**
-     * Getter for: Destination file path
+     * Gets destPath
      **/
     public String getDestPath() {
         return destPath;
     }
 
     /**
-     * Setter for: Destination file path
+     * Sets destPath
      **/
     public void setDestPath(String value) {
         this.destPath = value;
     }
 
     /**
-     * Setter for: Destination file path
+     * Sets destPath
      **/
     public CopyFileRequest destPath(String value) {
         this.destPath = value;
@@ -107,21 +107,21 @@ public class CopyFileRequest
     private String srcStorageName;
 
     /**
-     * Getter for: Source storage name
+     * Gets srcStorageName
      **/
     public String getSrcStorageName() {
         return srcStorageName;
     }
 
     /**
-     * Setter for: Source storage name
+     * Sets srcStorageName
      **/
     public void setSrcStorageName(String value) {
         this.srcStorageName = value;
     }
 
     /**
-     * Setter for: Source storage name
+     * Sets srcStorageName
      **/
     public CopyFileRequest srcStorageName(String value) {
         this.srcStorageName = value;
@@ -131,21 +131,21 @@ public class CopyFileRequest
     private String destStorageName;
 
     /**
-     * Getter for: Destination storage name
+     * Gets destStorageName
      **/
     public String getDestStorageName() {
         return destStorageName;
     }
 
     /**
-     * Setter for: Destination storage name
+     * Sets destStorageName
      **/
     public void setDestStorageName(String value) {
         this.destStorageName = value;
     }
 
     /**
-     * Setter for: Destination storage name
+     * Sets destStorageName
      **/
     public CopyFileRequest destStorageName(String value) {
         this.destStorageName = value;
@@ -155,21 +155,21 @@ public class CopyFileRequest
     private String versionId;
 
     /**
-     * Getter for: File version ID to copy
+     * Gets versionId
      **/
     public String getVersionId() {
         return versionId;
     }
 
     /**
-     * Setter for: File version ID to copy
+     * Sets versionId
      **/
     public void setVersionId(String value) {
         this.versionId = value;
     }
 
     /**
-     * Setter for: File version ID to copy
+     * Sets versionId
      **/
     public CopyFileRequest versionId(String value) {
         this.versionId = value;

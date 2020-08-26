@@ -5,7 +5,7 @@
 # **copyFolder**
 > void copyFolder(CopyFolderRequest request)
 
-Copy folder
+
 
 ### **CopyFolderRequest** Parameters
 ```java
@@ -18,10 +18,10 @@ public CopyFolderRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **srcPath** | **String**| Source folder path e.g. &#39;/src&#39; |
- **destPath** | **String**| Destination folder path e.g. &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -34,7 +34,7 @@ void (empty response body)
 # **createFolder**
 > void createFolder(CreateFolderRequest request)
 
-Create the folder
+
 
 ### **CreateFolderRequest** Parameters
 ```java
@@ -45,8 +45,8 @@ public CreateFolderRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **path** | **String**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -59,7 +59,7 @@ void (empty response body)
 # **deleteFolder**
 > void deleteFolder(DeleteFolderRequest request)
 
-Delete folder
+
 
 ### **DeleteFolderRequest** Parameters
 ```java
@@ -71,9 +71,9 @@ public DeleteFolderRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
- **recursive** | **Boolean**| Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
+ **recursive** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
@@ -86,7 +86,7 @@ void (empty response body)
 # **getFilesList**
 > [FilesList](FilesList.md) getFilesList(GetFilesListRequest request)
 
-Get all files and folders within a folder
+
 
 ### **GetFilesListRequest** Parameters
 ```java
@@ -97,8 +97,8 @@ public GetFilesListRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **path** | **String**| Folder path e.g. &#39;/folder&#39; |
- **storageName** | **String**| Storage name | [optional]
+ **path** | **String**|  |
+ **storageName** | **String**|  | [optional]
 
 ### Return type
 
@@ -111,7 +111,7 @@ Name | Type | Description | Notes
 # **moveFolder**
 > void moveFolder(MoveFolderRequest request)
 
-Move folder
+
 
 ### **MoveFolderRequest** Parameters
 ```java
@@ -124,10 +124,10 @@ public MoveFolderRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **srcPath** | **String**| Folder path to move e.g. &#39;/folder&#39; |
- **destPath** | **String**| Destination folder path to move to e.g &#39;/dst&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
+ **srcPath** | **String**|  |
+ **destPath** | **String**|  |
+ **srcStorageName** | **String**|  | [optional]
+ **destStorageName** | **String**|  | [optional]
 
 ### Return type
 

@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Object exists
+ * ObjectExist
  */
 public class ObjectExist {
   @JsonProperty("exists")
@@ -50,7 +50,7 @@ public class ObjectExist {
 
   /**
    * Set exists and return this.
-   * @param exists Indicates that the file or folder exists.
+   * @param exists 
    * @return this
   **/
   public ObjectExist exists(Boolean exists) {
@@ -59,7 +59,7 @@ public class ObjectExist {
   }
 
   /**
-   * Indicates that the file or folder exists.
+   * Get exists
    * @return exists
   **/
   public Boolean isExists() {
@@ -68,7 +68,7 @@ public class ObjectExist {
 
   /**
    * Set exists.
-   * @param exists Indicates that the file or folder exists.
+   * @param exists 
   **/
   public void setExists(Boolean exists) {
     this.exists = exists;
@@ -77,7 +77,7 @@ public class ObjectExist {
 
   /**
    * Set isFolder and return this.
-   * @param isFolder True if it is a folder, false if it is a file.
+   * @param isFolder 
    * @return this
   **/
   public ObjectExist isFolder(Boolean isFolder) {
@@ -86,7 +86,7 @@ public class ObjectExist {
   }
 
   /**
-   * True if it is a folder, false if it is a file.
+   * Get isFolder
    * @return isFolder
   **/
   public Boolean isIsFolder() {
@@ -95,7 +95,7 @@ public class ObjectExist {
 
   /**
    * Set isFolder.
-   * @param isFolder True if it is a folder, false if it is a file.
+   * @param isFolder 
   **/
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
@@ -149,8 +149,8 @@ public class ObjectExist {
 
   /**
    * Initializes a new instance of the ObjectExist
-   * @param exists Indicates that the file or folder exists.
-   * @param isFolder True if it is a folder, false if it is a file.
+   * @param exists 
+   * @param isFolder 
    */
   public ObjectExist(
     Boolean exists,

@@ -41,9 +41,9 @@ public class DownloadFileRequest
 
     /**
      * Initializes a new instance of the DownloadFileRequest class.   
-     * @param path File path e.g. &#39;/folder/file.ext&#39;
-     * @param storageName Storage name
-     * @param versionId File version ID to download
+     * @param path 
+     * @param storageName 
+     * @param versionId 
      **/
     public DownloadFileRequest(String path, String storageName, String versionId)             
     {
@@ -55,21 +55,21 @@ public class DownloadFileRequest
     private String path;
 
     /**
-     * Getter for: File path e.g. '/folder/file.ext'
+     * Gets path
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Setter for: File path e.g. '/folder/file.ext'
+     * Sets path
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Setter for: File path e.g. '/folder/file.ext'
+     * Sets path
      **/
     public DownloadFileRequest path(String value) {
         this.path = value;
@@ -79,21 +79,21 @@ public class DownloadFileRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public DownloadFileRequest storageName(String value) {
         this.storageName = value;
@@ -103,21 +103,21 @@ public class DownloadFileRequest
     private String versionId;
 
     /**
-     * Getter for: File version ID to download
+     * Gets versionId
      **/
     public String getVersionId() {
         return versionId;
     }
 
     /**
-     * Setter for: File version ID to download
+     * Sets versionId
      **/
     public void setVersionId(String value) {
         this.versionId = value;
     }
 
     /**
-     * Setter for: File version ID to download
+     * Sets versionId
      **/
     public DownloadFileRequest versionId(String value) {
         this.versionId = value;

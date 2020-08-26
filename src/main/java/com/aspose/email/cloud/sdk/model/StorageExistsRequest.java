@@ -41,7 +41,7 @@ public class StorageExistsRequest
 
     /**
      * Initializes a new instance of the StorageExistsRequest class.   
-     * @param storageName Storage name
+     * @param storageName 
      **/
     public StorageExistsRequest(String storageName)             
     {
@@ -51,21 +51,21 @@ public class StorageExistsRequest
     private String storageName;
 
     /**
-     * Getter for: Storage name
+     * Gets storageName
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Setter for: Storage name
+     * Sets storageName
      **/
     public StorageExistsRequest storageName(String value) {
         this.storageName = value;

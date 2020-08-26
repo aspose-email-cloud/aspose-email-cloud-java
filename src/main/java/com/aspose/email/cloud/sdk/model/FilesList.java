@@ -40,7 +40,7 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Files list
+ * FilesList
  */
 public class FilesList {
   @JsonProperty("value")
@@ -48,7 +48,7 @@ public class FilesList {
 
   /**
    * Set value and return this.
-   * @param value Files and folders contained by folder StorageFile.
+   * @param value 
    * @return this
   **/
   public FilesList value(List<StorageFile> value) {
@@ -57,7 +57,7 @@ public class FilesList {
   }
   /**
    * Add an item to value and return this.
-   * @param valueItem An item of: Files and folders contained by folder StorageFile.
+   * @param valueItem An item of: 
    * @return this
   **/
   public FilesList addValueItem(StorageFile valueItem) {
@@ -69,7 +69,7 @@ public class FilesList {
   }
 
   /**
-   * Files and folders contained by folder StorageFile.
+   * Get value
    * @return value
   **/
   public List<StorageFile> getValue() {
@@ -78,7 +78,7 @@ public class FilesList {
 
   /**
    * Set value.
-   * @param value Files and folders contained by folder StorageFile.
+   * @param value 
   **/
   public void setValue(List<StorageFile> value) {
     this.value = value;
@@ -130,7 +130,7 @@ public class FilesList {
 
   /**
    * Initializes a new instance of the FilesList
-   * @param value Files and folders contained by folder StorageFile.
+   * @param value 
    */
   public FilesList(
     List<StorageFile> value
