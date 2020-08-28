@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**requestId** | **String** |  |  [optional]
-**date** | [**Date**](Date.md) |  | 
+**requestId** | **String** | The request id |  [optional]
+**date** | [**Date**](Date.md) | Date | 
 
 
 

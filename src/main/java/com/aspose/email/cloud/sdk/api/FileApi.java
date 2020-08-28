@@ -55,7 +55,7 @@ public class FileApi
 
             
     /**
-     * 
+     * Copy file
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -99,7 +99,7 @@ public class FileApi
 
             
     /**
-     * 
+     * Delete file
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -137,7 +137,7 @@ public class FileApi
 
             
     /**
-     * 
+     * Download file
      * 
      * @param request Holds parameters for this request invocation.
      * @return byte[]
@@ -178,7 +178,7 @@ public class FileApi
 
             
     /**
-     * 
+     * Move file
      * 
      * @param request Holds parameters for this request invocation.
      * @throws ApiException API error.
@@ -222,7 +222,7 @@ public class FileApi
 
             
     /**
-     * 
+     * Upload file
      * 
      * @param request Holds parameters for this request invocation.
      * @return FilesUploadResult

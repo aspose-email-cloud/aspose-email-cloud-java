@@ -55,7 +55,7 @@ public class StorageApi
 
             
     /**
-     * 
+     * Get disc usage
      * 
      * @param request Holds parameters for this request invocation.
      * @return DiscUsage
@@ -95,7 +95,7 @@ public class StorageApi
 
             
     /**
-     * 
+     * Get file versions
      * 
      * @param request Holds parameters for this request invocation.
      * @return FileVersions
@@ -140,7 +140,7 @@ public class StorageApi
 
             
     /**
-     * 
+     * Check if file or folder exists
      * 
      * @param request Holds parameters for this request invocation.
      * @return ObjectExist
@@ -186,7 +186,7 @@ public class StorageApi
 
             
     /**
-     * 
+     * Check if storage exists
      * 
      * @param request Holds parameters for this request invocation.
      * @return StorageExist

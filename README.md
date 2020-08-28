@@ -1,4 +1,4 @@
-﻿# Aspose.Email Cloud SDK for Java
+# Aspose.Email Cloud SDK for Java
 [![Maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepository.aspose.cloud%2Frepo%2Fcom%2Faspose%2Faspose-email-cloud%2Fmaven-metadata.xml)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-java)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-java/workflows/tests/badge.svg)
 
 This repository contains Aspose.Email Cloud SDK for Java source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Java applications quickly and easily, with zero initial cost.
@@ -20,14 +20,17 @@ Aspose.Email Cloud is a REST API for creating email applications that work with 
 - Email configuration discovery
 - Disposable email address detection
 
-## New features in version 20.7
-- New MAPI message files API with models:
-    - `MapiMessageDto` - represents the Microsoft Outlook message.
-    - `MapiCalendarDto` - represents the Microsoft Outlook calendar object.
-    - `MapiContactDto` - represents the Microsoft Outlook contact information. 
-- Improved Recurrence pattern support for CalendarDto.
+## New features in version 20.9
 
-See [Release notes](https://docs.aspose.cloud/display/emailcloud/Aspose.Email+Cloud+20.7+Release+Notes)
+Aspose.Email Cloud SDK 20.9.0 is based on a new v4.0 REST API.
+
+- All SDK functions are divided into groups (Email, Calendar, Contact, Client, Ai, Mapi, etc.).
+- Unified file API provided for supported file types (Save, Get, Convert, AsFile, FromFile, AsMapi/AsDto).
+- HierarchicalObject based API is removed.
+- All models are stored in one folder/namespace.
+- The request models are simplified.
+
+See [Release notes](https://docs.aspose.cloud/display/emailcloud/Aspose.Email+Cloud+20.9+Release+Notes).
 
 ## How to use the SDK?
 The complete source code is available in the GIT repository.

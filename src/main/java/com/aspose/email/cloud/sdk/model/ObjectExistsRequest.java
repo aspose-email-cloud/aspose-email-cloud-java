@@ -41,9 +41,9 @@ public class ObjectExistsRequest
 
     /**
      * Initializes a new instance of the ObjectExistsRequest class.   
-     * @param path 
-     * @param storageName 
-     * @param versionId 
+     * @param path File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;
+     * @param storageName Storage name
+     * @param versionId File version ID
      **/
     public ObjectExistsRequest(String path, String storageName, String versionId)             
     {
@@ -55,21 +55,21 @@ public class ObjectExistsRequest
     private String path;
 
     /**
-     * Gets path
+     * Getter for: File or folder path e.g. '/file.ext' or '/folder'
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Sets path
+     * Setter for: File or folder path e.g. '/file.ext' or '/folder'
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Sets path
+     * Setter for: File or folder path e.g. '/file.ext' or '/folder'
      **/
     public ObjectExistsRequest path(String value) {
         this.path = value;
@@ -79,21 +79,21 @@ public class ObjectExistsRequest
     private String storageName;
 
     /**
-     * Gets storageName
+     * Getter for: Storage name
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Sets storageName
+     * Setter for: Storage name
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Sets storageName
+     * Setter for: Storage name
      **/
     public ObjectExistsRequest storageName(String value) {
         this.storageName = value;
@@ -103,21 +103,21 @@ public class ObjectExistsRequest
     private String versionId;
 
     /**
-     * Gets versionId
+     * Getter for: File version ID
      **/
     public String getVersionId() {
         return versionId;
     }
 
     /**
-     * Sets versionId
+     * Setter for: File version ID
      **/
     public void setVersionId(String value) {
         this.versionId = value;
     }
 
     /**
-     * Sets versionId
+     * Setter for: File version ID
      **/
     public ObjectExistsRequest versionId(String value) {
         this.versionId = value;

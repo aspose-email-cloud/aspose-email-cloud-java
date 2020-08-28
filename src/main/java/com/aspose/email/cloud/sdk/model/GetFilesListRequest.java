@@ -41,8 +41,8 @@ public class GetFilesListRequest
 
     /**
      * Initializes a new instance of the GetFilesListRequest class.   
-     * @param path 
-     * @param storageName 
+     * @param path Folder path e.g. &#39;/folder&#39;
+     * @param storageName Storage name
      **/
     public GetFilesListRequest(String path, String storageName)             
     {
@@ -53,21 +53,21 @@ public class GetFilesListRequest
     private String path;
 
     /**
-     * Gets path
+     * Getter for: Folder path e.g. '/folder'
      **/
     public String getPath() {
         return path;
     }
 
     /**
-     * Sets path
+     * Setter for: Folder path e.g. '/folder'
      **/
     public void setPath(String value) {
         this.path = value;
     }
 
     /**
-     * Sets path
+     * Setter for: Folder path e.g. '/folder'
      **/
     public GetFilesListRequest path(String value) {
         this.path = value;
@@ -77,21 +77,21 @@ public class GetFilesListRequest
     private String storageName;
 
     /**
-     * Gets storageName
+     * Getter for: Storage name
      **/
     public String getStorageName() {
         return storageName;
     }
 
     /**
-     * Sets storageName
+     * Setter for: Storage name
      **/
     public void setStorageName(String value) {
         this.storageName = value;
     }
 
     /**
-     * Sets storageName
+     * Setter for: Storage name
      **/
     public GetFilesListRequest storageName(String value) {
         this.storageName = value;

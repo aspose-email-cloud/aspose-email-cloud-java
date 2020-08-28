@@ -54,7 +54,7 @@ public class Error {
 
   /**
    * Set code and return this.
-   * @param code 
+   * @param code Code             
    * @return this
   **/
   public Error code(String code) {
@@ -63,7 +63,7 @@ public class Error {
   }
 
   /**
-   * Get code
+   * Code             
    * @return code
   **/
   public String getCode() {
@@ -72,7 +72,7 @@ public class Error {
 
   /**
    * Set code.
-   * @param code 
+   * @param code Code             
   **/
   public void setCode(String code) {
     this.code = code;
@@ -81,7 +81,7 @@ public class Error {
 
   /**
    * Set message and return this.
-   * @param message 
+   * @param message Message             
    * @return this
   **/
   public Error message(String message) {
@@ -90,7 +90,7 @@ public class Error {
   }
 
   /**
-   * Get message
+   * Message             
    * @return message
   **/
   public String getMessage() {
@@ -99,7 +99,7 @@ public class Error {
 
   /**
    * Set message.
-   * @param message 
+   * @param message Message             
   **/
   public void setMessage(String message) {
     this.message = message;
@@ -108,7 +108,7 @@ public class Error {
 
   /**
    * Set description and return this.
-   * @param description 
+   * @param description Description             
    * @return this
   **/
   public Error description(String description) {
@@ -117,7 +117,7 @@ public class Error {
   }
 
   /**
-   * Get description
+   * Description             
    * @return description
   **/
   public String getDescription() {
@@ -126,7 +126,7 @@ public class Error {
 
   /**
    * Set description.
-   * @param description 
+   * @param description Description             
   **/
   public void setDescription(String description) {
     this.description = description;
@@ -135,7 +135,7 @@ public class Error {
 
   /**
    * Set innerError and return this.
-   * @param innerError 
+   * @param innerError Inner Error             
    * @return this
   **/
   public Error innerError(ErrorDetails innerError) {
@@ -144,7 +144,7 @@ public class Error {
   }
 
   /**
-   * Get innerError
+   * Inner Error             
    * @return innerError
   **/
   public ErrorDetails getInnerError() {
@@ -153,7 +153,7 @@ public class Error {
 
   /**
    * Set innerError.
-   * @param innerError 
+   * @param innerError Inner Error             
   **/
   public void setInnerError(ErrorDetails innerError) {
     this.innerError = innerError;
@@ -211,10 +211,10 @@ public class Error {
 
   /**
    * Initializes a new instance of the Error
-   * @param code 
-   * @param message 
-   * @param description 
-   * @param innerError 
+   * @param code Code             
+   * @param message Message             
+   * @param description Description             
+   * @param innerError Inner Error             
    */
   public Error(
     String code,

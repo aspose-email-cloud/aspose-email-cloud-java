@@ -49,21 +49,21 @@ public class CloudStorageGroup {
 
     
     /**
-     *  
+     *  File operations controller
      */
     public FileApi file() {
         return file;
     }
     
     /**
-     *  
+     *  Folder operations controller
      */
     public FolderApi folder() {
         return folder;
     }
     
     /**
-     *  
+     *  Storage operations controller
      */
     public StorageApi storage() {
         return storage;
