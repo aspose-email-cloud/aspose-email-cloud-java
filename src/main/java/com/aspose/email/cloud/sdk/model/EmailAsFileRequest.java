@@ -50,7 +50,7 @@ public class EmailAsFileRequest {
 
   /**
    * Set format and return this.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return this
   **/
   public EmailAsFileRequest format(String format) {
@@ -59,7 +59,7 @@ public class EmailAsFileRequest {
   }
 
   /**
-   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return format
   **/
   public String getFormat() {
@@ -68,7 +68,7 @@ public class EmailAsFileRequest {
 
   /**
    * Set format.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -149,7 +149,7 @@ public class EmailAsFileRequest {
 
   /**
    * Initializes a new instance of the EmailAsFileRequest
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @param value Email model.             
    */
   public EmailAsFileRequest(

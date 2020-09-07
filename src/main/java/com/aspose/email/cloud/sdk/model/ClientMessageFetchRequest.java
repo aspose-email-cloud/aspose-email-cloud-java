@@ -47,7 +47,7 @@ public class ClientMessageFetchRequest
      * @param storage Storage name where account file located.
      * @param accountStorageFolder Folder in storage where account file located.
      * @param type MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-     * @param format Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param format Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchRequest(String messageId, String account, String folder, String storage, String accountStorageFolder, String type, String format)             
     {
@@ -207,21 +207,21 @@ public class ClientMessageFetchRequest
     private String format;
 
     /**
-     * Getter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Getter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchRequest format(String value) {
         this.format = value;
