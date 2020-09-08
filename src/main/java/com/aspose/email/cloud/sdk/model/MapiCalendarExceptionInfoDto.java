@@ -45,43 +45,30 @@ import java.io.*;
 public class MapiCalendarExceptionInfoDto {
   @JsonProperty("attachments")
   private List<MapiAttachmentDto> attachments = null;
-
   @JsonProperty("body")
   private String body = null;
-
   @JsonProperty("busyStatus")
   private String busyStatus = null;
-
   @JsonProperty("endDateTime")
   private Date endDateTime = null;
-
   @JsonProperty("hasAttachment")
   private Boolean hasAttachment = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("meetingType")
   private String meetingType = null;
-
   @JsonProperty("originalStartDate")
   private Date originalStartDate = null;
-
   @JsonProperty("overrideFlags")
   private List<String> overrideFlags = null;
-
   @JsonProperty("reminderDelta")
   private Integer reminderDelta = null;
-
   @JsonProperty("reminderSet")
   private Boolean reminderSet = null;
-
   @JsonProperty("startDateTime")
   private Date startDateTime = null;
-
   @JsonProperty("subject")
   private String subject = null;
-
   @JsonProperty("subType")
   private Integer subType = null;
 
@@ -123,6 +110,7 @@ public class MapiCalendarExceptionInfoDto {
     this.attachments = attachments;
   }
 
+
   /**
    * Set body and return this.
    * @param body Body.             
@@ -148,6 +136,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setBody(String body) {
     this.body = body;
   }
+
 
   /**
    * Set busyStatus and return this.
@@ -175,6 +164,7 @@ public class MapiCalendarExceptionInfoDto {
     this.busyStatus = busyStatus;
   }
 
+
   /**
    * Set endDateTime and return this.
    * @param endDateTime End date.             
@@ -200,6 +190,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setEndDateTime(Date endDateTime) {
     this.endDateTime = endDateTime;
   }
+
 
   /**
    * Set hasAttachment and return this.
@@ -227,6 +218,7 @@ public class MapiCalendarExceptionInfoDto {
     this.hasAttachment = hasAttachment;
   }
 
+
   /**
    * Set location and return this.
    * @param location Location.             
@@ -252,6 +244,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setLocation(String location) {
     this.location = location;
   }
+
 
   /**
    * Set meetingType and return this.
@@ -279,6 +272,7 @@ public class MapiCalendarExceptionInfoDto {
     this.meetingType = meetingType;
   }
 
+
   /**
    * Set originalStartDate and return this.
    * @param originalStartDate Original start date.             
@@ -304,6 +298,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setOriginalStartDate(Date originalStartDate) {
     this.originalStartDate = originalStartDate;
   }
+
 
   /**
    * Set overrideFlags and return this.
@@ -343,6 +338,7 @@ public class MapiCalendarExceptionInfoDto {
     this.overrideFlags = overrideFlags;
   }
 
+
   /**
    * Set reminderDelta and return this.
    * @param reminderDelta Reminder delta.             
@@ -368,6 +364,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setReminderDelta(Integer reminderDelta) {
     this.reminderDelta = reminderDelta;
   }
+
 
   /**
    * Set reminderSet and return this.
@@ -395,6 +392,7 @@ public class MapiCalendarExceptionInfoDto {
     this.reminderSet = reminderSet;
   }
 
+
   /**
    * Set startDateTime and return this.
    * @param startDateTime Start date.             
@@ -421,6 +419,7 @@ public class MapiCalendarExceptionInfoDto {
     this.startDateTime = startDateTime;
   }
 
+
   /**
    * Set subject and return this.
    * @param subject Subject.             
@@ -446,6 +445,7 @@ public class MapiCalendarExceptionInfoDto {
   public void setSubject(String subject) {
     this.subject = subject;
   }
+
 
   /**
    * Set subType and return this.
@@ -560,7 +560,22 @@ public class MapiCalendarExceptionInfoDto {
    * @param subject Subject.             
    * @param subType SubType.             
    */
-  public MapiCalendarExceptionInfoDto(List<MapiAttachmentDto> attachments, String body, String busyStatus, Date endDateTime, Boolean hasAttachment, String location, String meetingType, Date originalStartDate, List<String> overrideFlags, Integer reminderDelta, Boolean reminderSet, Date startDateTime, String subject, Integer subType) {
+  public MapiCalendarExceptionInfoDto(
+    List<MapiAttachmentDto> attachments,
+    String body,
+    String busyStatus,
+    Date endDateTime,
+    Boolean hasAttachment,
+    String location,
+    String meetingType,
+    Date originalStartDate,
+    List<String> overrideFlags,
+    Integer reminderDelta,
+    Boolean reminderSet,
+    Date startDateTime,
+    String subject,
+    Integer subType
+  ) {
     super();
     setAttachments(attachments);
     setBody(body);

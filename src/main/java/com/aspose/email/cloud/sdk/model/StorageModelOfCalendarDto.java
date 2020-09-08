@@ -45,7 +45,6 @@ import java.io.*;
 public class StorageModelOfCalendarDto {
   @JsonProperty("storageFile")
   private StorageFileLocation storageFile = null;
-
   @JsonProperty("value")
   private CalendarDto value = null;
 
@@ -74,6 +73,7 @@ public class StorageModelOfCalendarDto {
   public void setStorageFile(StorageFileLocation storageFile) {
     this.storageFile = storageFile;
   }
+
 
   /**
    * Set value and return this.
@@ -152,7 +152,10 @@ public class StorageModelOfCalendarDto {
    * @param storageFile 
    * @param value 
    */
-  public StorageModelOfCalendarDto(StorageFileLocation storageFile, CalendarDto value) {
+  public StorageModelOfCalendarDto(
+    StorageFileLocation storageFile,
+    CalendarDto value
+  ) {
     super();
     setStorageFile(storageFile);
     setValue(value);

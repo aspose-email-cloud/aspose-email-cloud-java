@@ -132,7 +132,9 @@ public class ListResponseOfContactDto {
    * Initializes a new instance of the ListResponseOfContactDto
    * @param value 
    */
-  public ListResponseOfContactDto(List<ContactDto> value) {
+  public ListResponseOfContactDto(
+    List<ContactDto> value
+  ) {
     super();
     setValue(value);
   }

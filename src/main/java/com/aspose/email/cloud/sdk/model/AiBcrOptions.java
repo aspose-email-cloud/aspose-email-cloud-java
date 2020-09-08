@@ -40,18 +40,17 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * Recognition options             
+ * Recognition options.             
  */
 public class AiBcrOptions {
   @JsonProperty("languages")
   private String languages = null;
-
   @JsonProperty("countries")
   private String countries = null;
 
   /**
    * Set languages and return this.
-   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
    * @return this
   **/
   public AiBcrOptions languages(String languages) {
@@ -60,7 +59,7 @@ public class AiBcrOptions {
   }
 
   /**
-   * Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+   * Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
    * @return languages
   **/
   public String getLanguages() {
@@ -69,15 +68,16 @@ public class AiBcrOptions {
 
   /**
    * Set languages.
-   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
   **/
   public void setLanguages(String languages) {
     this.languages = languages;
   }
 
+
   /**
    * Set countries and return this.
-   * @param countries Comma-separated codes of countries             
+   * @param countries Comma-separated codes of countries.             
    * @return this
   **/
   public AiBcrOptions countries(String countries) {
@@ -86,7 +86,7 @@ public class AiBcrOptions {
   }
 
   /**
-   * Comma-separated codes of countries             
+   * Comma-separated codes of countries.             
    * @return countries
   **/
   public String getCountries() {
@@ -95,7 +95,7 @@ public class AiBcrOptions {
 
   /**
    * Set countries.
-   * @param countries Comma-separated codes of countries             
+   * @param countries Comma-separated codes of countries.             
   **/
   public void setCountries(String countries) {
     this.countries = countries;
@@ -149,10 +149,13 @@ public class AiBcrOptions {
 
   /**
    * Initializes a new instance of the AiBcrOptions
-   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default             
-   * @param countries Comma-separated codes of countries             
+   * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
+   * @param countries Comma-separated codes of countries.             
    */
-  public AiBcrOptions(String languages, String countries) {
+  public AiBcrOptions(
+    String languages,
+    String countries
+  ) {
     super();
     setLanguages(languages);
     setCountries(countries);

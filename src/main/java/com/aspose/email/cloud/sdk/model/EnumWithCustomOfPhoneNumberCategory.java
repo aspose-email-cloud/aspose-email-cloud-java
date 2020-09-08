@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfPhoneNumberCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfPhoneNumberCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.
@@ -152,7 +152,10 @@ public class EnumWithCustomOfPhoneNumberCategory {
    * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
    * @param description 
    */
-  public EnumWithCustomOfPhoneNumberCategory(String value, String description) {
+  public EnumWithCustomOfPhoneNumberCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

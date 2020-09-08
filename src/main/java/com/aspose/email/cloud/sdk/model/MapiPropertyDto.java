@@ -45,7 +45,6 @@ import java.io.*;
 public class MapiPropertyDto {
   @JsonProperty("descriptor")
   private MapiPropertyDescriptor descriptor = null;
-
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
@@ -75,11 +74,6 @@ public class MapiPropertyDto {
     this.descriptor = descriptor;
   }
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
 
 
   /**
@@ -94,7 +88,9 @@ public class MapiPropertyDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override
@@ -145,12 +141,13 @@ public class MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    */
-  public MapiPropertyDto(MapiPropertyDescriptor descriptor, String discriminator) {
+  public MapiPropertyDto(
+    MapiPropertyDescriptor descriptor
+    
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
   }
 
 }

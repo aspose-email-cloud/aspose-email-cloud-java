@@ -122,13 +122,15 @@ public class MapiDateTimePropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiDateTimePropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Property value             
    */
-  public MapiDateTimePropertyDto(MapiPropertyDescriptor descriptor, String discriminator, Date value) {
+  public MapiDateTimePropertyDto(
+    MapiPropertyDescriptor descriptor
+    ,
+    Date value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

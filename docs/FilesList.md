@@ -1,11 +1,12 @@
 
-# com.aspose.email.cloud.sdk.model.FilesList
-
+# FilesList
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | [**List&lt;StorageFile&gt;**](StorageFile.md) |  |  [optional]
+**value** | [**List&lt;StorageFile&gt;**](StorageFile.md) | Files and folders contained by folder StorageFile. |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

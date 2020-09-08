@@ -132,7 +132,9 @@ public class ListResponseOfEmailAccountConfig {
    * Initializes a new instance of the ListResponseOfEmailAccountConfig
    * @param value 
    */
-  public ListResponseOfEmailAccountConfig(List<EmailAccountConfig> value) {
+  public ListResponseOfEmailAccountConfig(
+    List<EmailAccountConfig> value
+  ) {
     super();
     setValue(value);
   }

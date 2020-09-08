@@ -46,12 +46,6 @@ public class MapiPropertyDescriptor {
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
-
 
   /**
    * Get discriminator
@@ -65,7 +59,9 @@ public class MapiPropertyDescriptor {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override
@@ -106,18 +102,18 @@ public class MapiPropertyDescriptor {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
+/*
   public MapiPropertyDescriptor() {
     super();
-  }
+  }/*
 
   /**
    * Initializes a new instance of the MapiPropertyDescriptor
-   * @param discriminator 
    */
-  public MapiPropertyDescriptor(String discriminator) {
+  public MapiPropertyDescriptor(
+    
+  ) {
     super();
-    setDiscriminator(discriminator);
   }
 
 }

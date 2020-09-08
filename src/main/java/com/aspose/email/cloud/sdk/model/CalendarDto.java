@@ -45,67 +45,46 @@ import java.io.*;
 public class CalendarDto {
   @JsonProperty("attachments")
   private List<Attachment> attachments = null;
-
   @JsonProperty("attendees")
   private List<MailAddress> attendees = new ArrayList<MailAddress>();
-
   @JsonProperty("description")
   private String description = null;
-
   @JsonProperty("endDate")
   private Date endDate = null;
-
   @JsonProperty("endTimeZone")
   private String endTimeZone = null;
-
   @JsonProperty("flags")
   private List<String> flags = null;
-
   @JsonProperty("isDescriptionHtml")
   private Boolean isDescriptionHtml = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("method")
   private String method = null;
-
   @JsonProperty("microsoftBusyStatus")
   private String microsoftBusyStatus = null;
-
   @JsonProperty("microsoftIntendedStatus")
   private String microsoftIntendedStatus = null;
-
   @JsonProperty("optionalAttendees")
   private List<MailAddress> optionalAttendees = null;
-
   @JsonProperty("organizer")
   private MailAddress organizer = null;
-
   @JsonProperty("recurrenceString")
   private String recurrenceString = null;
-
   @JsonProperty("recurrence")
   private RecurrencePatternDto recurrence = null;
-
   @JsonProperty("reminders")
   private List<CalendarReminder> reminders = null;
-
   @JsonProperty("sequenceId")
   private String sequenceId = null;
-
   @JsonProperty("startDate")
   private Date startDate = null;
-
   @JsonProperty("startTimeZone")
   private String startTimeZone = null;
-
   @JsonProperty("status")
   private String status = null;
-
   @JsonProperty("summary")
   private String summary = null;
-
   @JsonProperty("transparency")
   private String transparency = null;
 
@@ -147,6 +126,7 @@ public class CalendarDto {
     this.attachments = attachments;
   }
 
+
   /**
    * Set attendees and return this.
    * @param attendees Event attendees.
@@ -182,6 +162,7 @@ public class CalendarDto {
     this.attendees = attendees;
   }
 
+
   /**
    * Set description and return this.
    * @param description Description.
@@ -207,6 +188,7 @@ public class CalendarDto {
   public void setDescription(String description) {
     this.description = description;
   }
+
 
   /**
    * Set endDate and return this.
@@ -234,6 +216,7 @@ public class CalendarDto {
     this.endDate = endDate;
   }
 
+
   /**
    * Set endTimeZone and return this.
    * @param endTimeZone End time zone.
@@ -259,6 +242,7 @@ public class CalendarDto {
   public void setEndTimeZone(String endTimeZone) {
     this.endTimeZone = endTimeZone;
   }
+
 
   /**
    * Set flags and return this.
@@ -298,6 +282,7 @@ public class CalendarDto {
     this.flags = flags;
   }
 
+
   /**
    * Set isDescriptionHtml and return this.
    * @param isDescriptionHtml Indicates if description is in HTML format.
@@ -323,6 +308,7 @@ public class CalendarDto {
   public void setIsDescriptionHtml(Boolean isDescriptionHtml) {
     this.isDescriptionHtml = isDescriptionHtml;
   }
+
 
   /**
    * Set location and return this.
@@ -350,6 +336,7 @@ public class CalendarDto {
     this.location = location;
   }
 
+
   /**
    * Set method and return this.
    * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
@@ -375,6 +362,7 @@ public class CalendarDto {
   public void setMethod(String method) {
     this.method = method;
   }
+
 
   /**
    * Set microsoftBusyStatus and return this.
@@ -402,6 +390,7 @@ public class CalendarDto {
     this.microsoftBusyStatus = microsoftBusyStatus;
   }
 
+
   /**
    * Set microsoftIntendedStatus and return this.
    * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
@@ -427,6 +416,7 @@ public class CalendarDto {
   public void setMicrosoftIntendedStatus(String microsoftIntendedStatus) {
     this.microsoftIntendedStatus = microsoftIntendedStatus;
   }
+
 
   /**
    * Set optionalAttendees and return this.
@@ -466,6 +456,7 @@ public class CalendarDto {
     this.optionalAttendees = optionalAttendees;
   }
 
+
   /**
    * Set organizer and return this.
    * @param organizer Event organizer.             
@@ -491,6 +482,7 @@ public class CalendarDto {
   public void setOrganizer(MailAddress organizer) {
     this.organizer = organizer;
   }
+
 
   /**
    * Set recurrenceString and return this.
@@ -518,6 +510,7 @@ public class CalendarDto {
     this.recurrenceString = recurrenceString;
   }
 
+
   /**
    * Set recurrence and return this.
    * @param recurrence Recurrence pattern             
@@ -543,6 +536,7 @@ public class CalendarDto {
   public void setRecurrence(RecurrencePatternDto recurrence) {
     this.recurrence = recurrence;
   }
+
 
   /**
    * Set reminders and return this.
@@ -582,6 +576,7 @@ public class CalendarDto {
     this.reminders = reminders;
   }
 
+
   /**
    * Set sequenceId and return this.
    * @param sequenceId The sequence id. Read only.
@@ -607,6 +602,7 @@ public class CalendarDto {
   public void setSequenceId(String sequenceId) {
     this.sequenceId = sequenceId;
   }
+
 
   /**
    * Set startDate and return this.
@@ -634,6 +630,7 @@ public class CalendarDto {
     this.startDate = startDate;
   }
 
+
   /**
    * Set startTimeZone and return this.
    * @param startTimeZone Start time zone.
@@ -659,6 +656,7 @@ public class CalendarDto {
   public void setStartTimeZone(String startTimeZone) {
     this.startTimeZone = startTimeZone;
   }
+
 
   /**
    * Set status and return this.
@@ -686,6 +684,7 @@ public class CalendarDto {
     this.status = status;
   }
 
+
   /**
    * Set summary and return this.
    * @param summary Summary.
@@ -711,6 +710,7 @@ public class CalendarDto {
   public void setSummary(String summary) {
     this.summary = summary;
   }
+
 
   /**
    * Set transparency and return this.
@@ -849,7 +849,30 @@ public class CalendarDto {
    * @param summary Summary.
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
    */
-  public CalendarDto(List<Attachment> attachments, List<MailAddress> attendees, String description, Date endDate, String endTimeZone, List<String> flags, Boolean isDescriptionHtml, String location, String method, String microsoftBusyStatus, String microsoftIntendedStatus, List<MailAddress> optionalAttendees, MailAddress organizer, String recurrenceString, RecurrencePatternDto recurrence, List<CalendarReminder> reminders, String sequenceId, Date startDate, String startTimeZone, String status, String summary, String transparency) {
+  public CalendarDto(
+    List<Attachment> attachments,
+    List<MailAddress> attendees,
+    String description,
+    Date endDate,
+    String endTimeZone,
+    List<String> flags,
+    Boolean isDescriptionHtml,
+    String location,
+    String method,
+    String microsoftBusyStatus,
+    String microsoftIntendedStatus,
+    List<MailAddress> optionalAttendees,
+    MailAddress organizer,
+    String recurrenceString,
+    RecurrencePatternDto recurrence,
+    List<CalendarReminder> reminders,
+    String sequenceId,
+    Date startDate,
+    String startTimeZone,
+    String status,
+    String summary,
+    String transparency
+  ) {
     super();
     setAttachments(attachments);
     setAttendees(attendees);

@@ -1,11 +1,12 @@
 
-# com.aspose.email.cloud.sdk.model.ListResponseOfAiNameExtracted
-
+# ListResponseOfAiNameExtracted
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | [**List&lt;AiNameExtracted&gt;**](AiNameExtracted.md) |  |  [optional]
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

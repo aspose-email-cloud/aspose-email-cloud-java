@@ -45,19 +45,14 @@ import java.io.*;
 public class MapiCalendarEventRecurrenceDto {
   @JsonProperty("appointmentTimeZoneDefinitionRecur")
   private MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur = null;
-
   @JsonProperty("clipEnd")
   private Date clipEnd = null;
-
   @JsonProperty("clipStart")
   private Date clipStart = null;
-
   @JsonProperty("isException")
   private Boolean isException = null;
-
   @JsonProperty("recurrencePattern")
   private MapiCalendarRecurrencePatternDto recurrencePattern = null;
-
   @JsonProperty("timeZoneStruct")
   private MapiCalendarTimeZoneDto timeZoneStruct = null;
 
@@ -87,6 +82,7 @@ public class MapiCalendarEventRecurrenceDto {
     this.appointmentTimeZoneDefinitionRecur = appointmentTimeZoneDefinitionRecur;
   }
 
+
   /**
    * Set clipEnd and return this.
    * @param clipEnd Date of the last instance.             
@@ -112,6 +108,7 @@ public class MapiCalendarEventRecurrenceDto {
   public void setClipEnd(Date clipEnd) {
     this.clipEnd = clipEnd;
   }
+
 
   /**
    * Set clipStart and return this.
@@ -139,6 +136,7 @@ public class MapiCalendarEventRecurrenceDto {
     this.clipStart = clipStart;
   }
 
+
   /**
    * Set isException and return this.
    * @param isException Value indicating whether the object represents an exception.             
@@ -165,6 +163,7 @@ public class MapiCalendarEventRecurrenceDto {
     this.isException = isException;
   }
 
+
   /**
    * Set recurrencePattern and return this.
    * @param recurrencePattern Recurrence pattern.             
@@ -190,6 +189,7 @@ public class MapiCalendarEventRecurrenceDto {
   public void setRecurrencePattern(MapiCalendarRecurrencePatternDto recurrencePattern) {
     this.recurrencePattern = recurrencePattern;
   }
+
 
   /**
    * Set timeZoneStruct and return this.
@@ -280,7 +280,14 @@ public class MapiCalendarEventRecurrenceDto {
    * @param recurrencePattern Recurrence pattern.             
    * @param timeZoneStruct Time zone information for a recurring meeting.             
    */
-  public MapiCalendarEventRecurrenceDto(MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur, Date clipEnd, Date clipStart, Boolean isException, MapiCalendarRecurrencePatternDto recurrencePattern, MapiCalendarTimeZoneDto timeZoneStruct) {
+  public MapiCalendarEventRecurrenceDto(
+    MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur,
+    Date clipEnd,
+    Date clipStart,
+    Boolean isException,
+    MapiCalendarRecurrencePatternDto recurrencePattern,
+    MapiCalendarTimeZoneDto timeZoneStruct
+  ) {
     super();
     setAppointmentTimeZoneDefinitionRecur(appointmentTimeZoneDefinitionRecur);
     setClipEnd(clipEnd);

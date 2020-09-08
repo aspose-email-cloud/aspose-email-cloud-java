@@ -92,13 +92,15 @@ public class MapiContactPhotoDto extends ContactPhoto {
    * Initializes a new instance of the MapiContactPhotoDto
    * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
-   * @param discriminator 
    */
-  public MapiContactPhotoDto(String photoImageFormat, String base64Data, String discriminator) {
+  public MapiContactPhotoDto(
+    String photoImageFormat,
+    String base64Data
+    
+  ) {
     super();
     setPhotoImageFormat(photoImageFormat);
     setBase64Data(base64Data);
-    setDiscriminator(discriminator);
   }
 
 }

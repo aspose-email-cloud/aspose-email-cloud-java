@@ -40,18 +40,17 @@ import com.google.gson.stream.*;
 import java.io.*;
 
 /**
- * ErrorDetails
+ * The error details
  */
 public class ErrorDetails {
   @JsonProperty("requestId")
   private String requestId = null;
-
   @JsonProperty("date")
   private Date date = null;
 
   /**
    * Set requestId and return this.
-   * @param requestId 
+   * @param requestId The request id
    * @return this
   **/
   public ErrorDetails requestId(String requestId) {
@@ -60,7 +59,7 @@ public class ErrorDetails {
   }
 
   /**
-   * Get requestId
+   * The request id
    * @return requestId
   **/
   public String getRequestId() {
@@ -69,15 +68,16 @@ public class ErrorDetails {
 
   /**
    * Set requestId.
-   * @param requestId 
+   * @param requestId The request id
   **/
   public void setRequestId(String requestId) {
     this.requestId = requestId;
   }
 
+
   /**
    * Set date and return this.
-   * @param date 
+   * @param date Date
    * @return this
   **/
   public ErrorDetails date(Date date) {
@@ -86,7 +86,7 @@ public class ErrorDetails {
   }
 
   /**
-   * Get date
+   * Date
    * @return date
   **/
   public Date getDate() {
@@ -95,7 +95,7 @@ public class ErrorDetails {
 
   /**
    * Set date.
-   * @param date 
+   * @param date Date
   **/
   public void setDate(Date date) {
     this.date = date;
@@ -149,10 +149,13 @@ public class ErrorDetails {
 
   /**
    * Initializes a new instance of the ErrorDetails
-   * @param requestId 
-   * @param date 
+   * @param requestId The request id
+   * @param date Date
    */
-  public ErrorDetails(String requestId, Date date) {
+  public ErrorDetails(
+    String requestId,
+    Date date
+  ) {
     super();
     setRequestId(requestId);
     setDate(date);

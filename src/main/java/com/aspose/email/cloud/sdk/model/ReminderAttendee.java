@@ -120,7 +120,9 @@ public class ReminderAttendee {
    * Initializes a new instance of the ReminderAttendee
    * @param address Contains the email address.
    */
-  public ReminderAttendee(String address) {
+  public ReminderAttendee(
+    String address
+  ) {
     super();
     setAddress(address);
   }

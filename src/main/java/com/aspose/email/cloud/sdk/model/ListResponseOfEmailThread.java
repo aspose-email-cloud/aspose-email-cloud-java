@@ -132,7 +132,9 @@ public class ListResponseOfEmailThread {
    * Initializes a new instance of the ListResponseOfEmailThread
    * @param value 
    */
-  public ListResponseOfEmailThread(List<EmailThread> value) {
+  public ListResponseOfEmailThread(
+    List<EmailThread> value
+  ) {
     super();
     setValue(value);
   }

@@ -45,7 +45,6 @@ import java.io.*;
 public class AiNameExtractedComponent {
   @JsonProperty("category")
   private String category = null;
-
   @JsonProperty("value")
   private String value = null;
 
@@ -74,6 +73,7 @@ public class AiNameExtractedComponent {
   public void setCategory(String category) {
     this.category = category;
   }
+
 
   /**
    * Set value and return this.
@@ -152,7 +152,10 @@ public class AiNameExtractedComponent {
    * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
    * @param value Extracted value             
    */
-  public AiNameExtractedComponent(String category, String value) {
+  public AiNameExtractedComponent(
+    String category,
+    String value
+  ) {
     super();
     setCategory(category);
     setValue(value);

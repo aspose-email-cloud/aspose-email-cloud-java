@@ -45,19 +45,14 @@ import java.io.*;
 public class EmailClientAccount {
   @JsonProperty("host")
   private String host = null;
-
   @JsonProperty("port")
   private Integer port = null;
-
   @JsonProperty("securityOptions")
   private String securityOptions = null;
-
   @JsonProperty("protocolType")
   private String protocolType = null;
-
   @JsonProperty("credentials")
   private EmailClientAccountCredentials credentials = null;
-
   @JsonProperty("cacheFile")
   private StorageFileLocation cacheFile = null;
 
@@ -87,6 +82,7 @@ public class EmailClientAccount {
     this.host = host;
   }
 
+
   /**
    * Set port and return this.
    * @param port Mail server port             
@@ -115,6 +111,7 @@ public class EmailClientAccount {
     this.port = port;
   }
 
+
   /**
    * Set securityOptions and return this.
    * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
@@ -140,6 +137,7 @@ public class EmailClientAccount {
   public void setSecurityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
   }
+
 
   /**
    * Set protocolType and return this.
@@ -167,6 +165,7 @@ public class EmailClientAccount {
     this.protocolType = protocolType;
   }
 
+
   /**
    * Set credentials and return this.
    * @param credentials Email client account credentials             
@@ -192,6 +191,7 @@ public class EmailClientAccount {
   public void setCredentials(EmailClientAccountCredentials credentials) {
     this.credentials = credentials;
   }
+
 
   /**
    * Set cacheFile and return this.
@@ -282,7 +282,14 @@ public class EmailClientAccount {
    * @param credentials Email client account credentials             
    * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
    */
-  public EmailClientAccount(String host, Integer port, String securityOptions, String protocolType, EmailClientAccountCredentials credentials, StorageFileLocation cacheFile) {
+  public EmailClientAccount(
+    String host,
+    Integer port,
+    String securityOptions,
+    String protocolType,
+    EmailClientAccountCredentials credentials,
+    StorageFileLocation cacheFile
+  ) {
     super();
     setHost(host);
     setPort(port);

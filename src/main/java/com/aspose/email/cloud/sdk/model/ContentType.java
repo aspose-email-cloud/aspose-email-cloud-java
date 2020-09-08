@@ -45,16 +45,12 @@ import java.io.*;
 public class ContentType {
   @JsonProperty("boundary")
   private String boundary = null;
-
   @JsonProperty("charSet")
   private String charSet = null;
-
   @JsonProperty("mediaType")
   private String mediaType = null;
-
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("parameters")
   private List<ContentTypeParameter> parameters = null;
 
@@ -84,6 +80,7 @@ public class ContentType {
     this.boundary = boundary;
   }
 
+
   /**
    * Set charSet and return this.
    * @param charSet CharSet parameter.             
@@ -109,6 +106,7 @@ public class ContentType {
   public void setCharSet(String charSet) {
     this.charSet = charSet;
   }
+
 
   /**
    * Set mediaType and return this.
@@ -136,6 +134,7 @@ public class ContentType {
     this.mediaType = mediaType;
   }
 
+
   /**
    * Set name and return this.
    * @param name Name parameter.             
@@ -161,6 +160,7 @@ public class ContentType {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set parameters and return this.
@@ -260,7 +260,13 @@ public class ContentType {
    * @param name Name parameter.             
    * @param parameters Full list of parameters             
    */
-  public ContentType(String boundary, String charSet, String mediaType, String name, List<ContentTypeParameter> parameters) {
+  public ContentType(
+    String boundary,
+    String charSet,
+    String mediaType,
+    String name,
+    List<ContentTypeParameter> parameters
+  ) {
     super();
     setBoundary(boundary);
     setCharSet(charSet);

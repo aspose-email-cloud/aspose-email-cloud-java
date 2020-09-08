@@ -132,7 +132,9 @@ public class ListResponseOfAiNameExtracted {
    * Initializes a new instance of the ListResponseOfAiNameExtracted
    * @param value 
    */
-  public ListResponseOfAiNameExtracted(List<AiNameExtracted> value) {
+  public ListResponseOfAiNameExtracted(
+    List<AiNameExtracted> value
+  ) {
     super();
     setValue(value);
   }

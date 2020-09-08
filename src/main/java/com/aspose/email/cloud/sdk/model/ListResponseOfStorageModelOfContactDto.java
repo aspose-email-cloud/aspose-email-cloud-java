@@ -132,7 +132,9 @@ public class ListResponseOfStorageModelOfContactDto {
    * Initializes a new instance of the ListResponseOfStorageModelOfContactDto
    * @param value 
    */
-  public ListResponseOfStorageModelOfContactDto(List<StorageModelOfContactDto> value) {
+  public ListResponseOfStorageModelOfContactDto(
+    List<StorageModelOfContactDto> value
+  ) {
     super();
     setValue(value);
   }

@@ -45,16 +45,12 @@ import java.io.*;
 public class AiNameCulturalContext {
   @JsonProperty("language")
   private String language = null;
-
   @JsonProperty("location")
   private String location = null;
-
   @JsonProperty("script")
   private String script = null;
-
   @JsonProperty("encoding")
   private String encoding = null;
-
   @JsonProperty("style")
   private String style = null;
 
@@ -84,6 +80,7 @@ public class AiNameCulturalContext {
     this.language = language;
   }
 
+
   /**
    * Set location and return this.
    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
@@ -109,6 +106,7 @@ public class AiNameCulturalContext {
   public void setLocation(String location) {
     this.location = location;
   }
+
 
   /**
    * Set script and return this.
@@ -136,6 +134,7 @@ public class AiNameCulturalContext {
     this.script = script;
   }
 
+
   /**
    * Set encoding and return this.
    * @param encoding A character encoding name             
@@ -161,6 +160,7 @@ public class AiNameCulturalContext {
   public void setEncoding(String encoding) {
     this.encoding = encoding;
   }
+
 
   /**
    * Set style and return this.
@@ -248,7 +248,13 @@ public class AiNameCulturalContext {
    * @param encoding A character encoding name             
    * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    */
-  public AiNameCulturalContext(String language, String location, String script, String encoding, String style) {
+  public AiNameCulturalContext(
+    String language,
+    String location,
+    String script,
+    String encoding,
+    String style
+  ) {
     super();
     setLanguage(language);
     setLocation(location);

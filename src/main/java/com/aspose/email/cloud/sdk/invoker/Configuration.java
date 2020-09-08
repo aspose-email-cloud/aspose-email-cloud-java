@@ -40,7 +40,7 @@ public class Configuration
         /**
          * The default API version
          */
-        public final String DefaultApiVersion = "v3.0";
+        public final String DefaultApiVersion = "v4.0";
 
         /**
          * The API base URL

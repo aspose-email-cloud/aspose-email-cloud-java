@@ -122,13 +122,15 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiResponseTypePropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
    */
-  public MapiResponseTypePropertyDto(MapiPropertyDescriptor descriptor, String discriminator, String value) {
+  public MapiResponseTypePropertyDto(
+    MapiPropertyDescriptor descriptor
+    ,
+    String value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

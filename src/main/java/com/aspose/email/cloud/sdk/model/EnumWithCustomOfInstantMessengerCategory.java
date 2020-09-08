@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfInstantMessengerCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfInstantMessengerCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.
@@ -152,7 +152,10 @@ public class EnumWithCustomOfInstantMessengerCategory {
    * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @param description 
    */
-  public EnumWithCustomOfInstantMessengerCategory(String value, String description) {
+  public EnumWithCustomOfInstantMessengerCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

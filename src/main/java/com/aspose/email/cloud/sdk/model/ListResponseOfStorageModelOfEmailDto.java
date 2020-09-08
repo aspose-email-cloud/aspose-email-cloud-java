@@ -132,7 +132,9 @@ public class ListResponseOfStorageModelOfEmailDto {
    * Initializes a new instance of the ListResponseOfStorageModelOfEmailDto
    * @param value 
    */
-  public ListResponseOfStorageModelOfEmailDto(List<StorageModelOfEmailDto> value) {
+  public ListResponseOfStorageModelOfEmailDto(
+    List<StorageModelOfEmailDto> value
+  ) {
     super();
     setValue(value);
   }

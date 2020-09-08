@@ -132,7 +132,9 @@ public class ListResponseOfAiNameComponent {
    * Initializes a new instance of the ListResponseOfAiNameComponent
    * @param value 
    */
-  public ListResponseOfAiNameComponent(List<AiNameComponent> value) {
+  public ListResponseOfAiNameComponent(
+    List<AiNameComponent> value
+  ) {
     super();
     setValue(value);
   }

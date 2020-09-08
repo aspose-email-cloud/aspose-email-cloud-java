@@ -45,10 +45,8 @@ import java.io.*;
 public class ReminderTrigger {
   @JsonProperty("dateTime")
   private Date dateTime = null;
-
   @JsonProperty("duration")
   private Long duration = null;
-
   @JsonProperty("related")
   private String related = null;
 
@@ -78,6 +76,7 @@ public class ReminderTrigger {
     this.dateTime = dateTime;
   }
 
+
   /**
    * Set duration and return this.
    * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
@@ -103,6 +102,7 @@ public class ReminderTrigger {
   public void setDuration(Long duration) {
     this.duration = duration;
   }
+
 
   /**
    * Set related and return this.
@@ -184,7 +184,11 @@ public class ReminderTrigger {
    * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
    * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
    */
-  public ReminderTrigger(Date dateTime, Long duration, String related) {
+  public ReminderTrigger(
+    Date dateTime,
+    Long duration,
+    String related
+  ) {
     super();
     setDateTime(dateTime);
     setDuration(duration);

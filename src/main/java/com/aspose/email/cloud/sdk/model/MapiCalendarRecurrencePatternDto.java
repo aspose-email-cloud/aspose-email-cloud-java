@@ -45,43 +45,30 @@ import java.io.*;
 public class MapiCalendarRecurrencePatternDto {
   @JsonProperty("calendarType")
   private String calendarType = null;
-
   @JsonProperty("deletedInstanceDates")
   private List<Date> deletedInstanceDates = null;
-
   @JsonProperty("endDate")
   private Date endDate = null;
-
   @JsonProperty("endType")
   private String endType = null;
-
   @JsonProperty("exceptions")
   private List<MapiCalendarExceptionInfoDto> exceptions = null;
-
   @JsonProperty("frequency")
   private String frequency = null;
-
   @JsonProperty("modifiedInstanceDates")
   private List<Date> modifiedInstanceDates = null;
-
   @JsonProperty("occurrenceCount")
   private Long occurrenceCount = null;
-
   @JsonProperty("patternType")
   private String patternType = null;
-
   @JsonProperty("period")
   private Long period = null;
-
   @JsonProperty("slidingFlag")
   private Boolean slidingFlag = null;
-
   @JsonProperty("startDate")
   private Date startDate = null;
-
   @JsonProperty("weekStartDay")
   private String weekStartDay = null;
-
   @JsonProperty("discriminator")
   private String discriminator = this.getClass().getSimpleName();
 
@@ -110,6 +97,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setCalendarType(String calendarType) {
     this.calendarType = calendarType;
   }
+
 
   /**
    * Set deletedInstanceDates and return this.
@@ -149,6 +137,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.deletedInstanceDates = deletedInstanceDates;
   }
 
+
   /**
    * Set endDate and return this.
    * @param endDate End date of an item recurrence pattern.             
@@ -175,6 +164,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.endDate = endDate;
   }
 
+
   /**
    * Set endType and return this.
    * @param endType Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
@@ -200,6 +190,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setEndType(String endType) {
     this.endType = endType;
   }
+
 
   /**
    * Set exceptions and return this.
@@ -239,6 +230,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.exceptions = exceptions;
   }
 
+
   /**
    * Set frequency and return this.
    * @param frequency Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
@@ -264,6 +256,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setFrequency(String frequency) {
     this.frequency = frequency;
   }
+
 
   /**
    * Set modifiedInstanceDates and return this.
@@ -303,6 +296,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.modifiedInstanceDates = modifiedInstanceDates;
   }
 
+
   /**
    * Set occurrenceCount and return this.
    * @param occurrenceCount Number of occurrences in a recurrence.             
@@ -328,6 +322,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setOccurrenceCount(Long occurrenceCount) {
     this.occurrenceCount = occurrenceCount;
   }
+
 
   /**
    * Set patternType and return this.
@@ -355,6 +350,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.patternType = patternType;
   }
 
+
   /**
    * Set period and return this.
    * @param period Interval at which the meeting pattern repeats.             
@@ -380,6 +376,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setPeriod(Long period) {
     this.period = period;
   }
+
 
   /**
    * Set slidingFlag and return this.
@@ -407,6 +404,7 @@ public class MapiCalendarRecurrencePatternDto {
     this.slidingFlag = slidingFlag;
   }
 
+
   /**
    * Set startDate and return this.
    * @param startDate Start date of an item recurrence pattern.             
@@ -432,6 +430,7 @@ public class MapiCalendarRecurrencePatternDto {
   public void setStartDate(Date startDate) {
     this.startDate = startDate;
   }
+
 
   /**
    * Set weekStartDay and return this.
@@ -459,11 +458,6 @@ public class MapiCalendarRecurrencePatternDto {
     this.weekStartDay = weekStartDay;
   }
 
-  /**
-   * Set discriminator and return this.
-   * @param discriminator 
-   * @return this
-  **/
 
 
   /**
@@ -478,7 +472,9 @@ public class MapiCalendarRecurrencePatternDto {
    * Set discriminator.
    * @param discriminator 
   **/
-  public void setDiscriminator(String type) {/* do nothing */}
+  public void setDiscriminator(String discriminator) {
+    //do nothing
+  }
 
 
   @Override
@@ -565,9 +561,23 @@ public class MapiCalendarRecurrencePatternDto {
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
    * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-   * @param discriminator 
    */
-  public MapiCalendarRecurrencePatternDto(String calendarType, List<Date> deletedInstanceDates, Date endDate, String endType, List<MapiCalendarExceptionInfoDto> exceptions, String frequency, List<Date> modifiedInstanceDates, Long occurrenceCount, String patternType, Long period, Boolean slidingFlag, Date startDate, String weekStartDay, String discriminator) {
+  public MapiCalendarRecurrencePatternDto(
+    String calendarType,
+    List<Date> deletedInstanceDates,
+    Date endDate,
+    String endType,
+    List<MapiCalendarExceptionInfoDto> exceptions,
+    String frequency,
+    List<Date> modifiedInstanceDates,
+    Long occurrenceCount,
+    String patternType,
+    Long period,
+    Boolean slidingFlag,
+    Date startDate,
+    String weekStartDay
+    
+  ) {
     super();
     setCalendarType(calendarType);
     setDeletedInstanceDates(deletedInstanceDates);
@@ -582,7 +592,6 @@ public class MapiCalendarRecurrencePatternDto {
     setSlidingFlag(slidingFlag);
     setStartDate(startDate);
     setWeekStartDay(weekStartDay);
-    setDiscriminator(discriminator);
   }
 
 }

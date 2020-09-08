@@ -120,7 +120,9 @@ public class ValueTOfBoolean {
    * Initializes a new instance of the ValueTOfBoolean
    * @param value 
    */
-  public ValueTOfBoolean(Boolean value) {
+  public ValueTOfBoolean(
+    Boolean value
+  ) {
     super();
     setValue(value);
   }

@@ -45,10 +45,8 @@ import java.io.*;
 public class Url {
   @JsonProperty("category")
   private EnumWithCustomOfUrlCategory category = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
-
   @JsonProperty("href")
   private String href = null;
 
@@ -78,6 +76,7 @@ public class Url {
     this.category = category;
   }
 
+
   /**
    * Set preferred and return this.
    * @param preferred Defines whether url is preferred.             
@@ -103,6 +102,7 @@ public class Url {
   public void setPreferred(Boolean preferred) {
     this.preferred = preferred;
   }
+
 
   /**
    * Set href and return this.
@@ -184,7 +184,11 @@ public class Url {
    * @param preferred Defines whether url is preferred.             
    * @param href URL.             
    */
-  public Url(EnumWithCustomOfUrlCategory category, Boolean preferred, String href) {
+  public Url(
+    EnumWithCustomOfUrlCategory category,
+    Boolean preferred,
+    String href
+  ) {
     super();
     setCategory(category);
     setPreferred(preferred);

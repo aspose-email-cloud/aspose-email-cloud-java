@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.MapiPidTagPropertyDescriptor
-
+# MapiPidTagPropertyDescriptor
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,5 +7,9 @@ Name | Type | Description | Notes
 **tag** | **Long** | A property tag is a 32-bit number that contains a unique property identifier in bits 16 through 31 and a property type in bits 0 through 15.              | 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+## Parent class
+
+See: [MapiPidPropertyDescriptor](MapiPidPropertyDescriptor.md)
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

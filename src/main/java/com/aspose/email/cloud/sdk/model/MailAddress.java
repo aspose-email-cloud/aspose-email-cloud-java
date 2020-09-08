@@ -45,13 +45,10 @@ import java.io.*;
 public class MailAddress {
   @JsonProperty("displayName")
   private String displayName = null;
-
   @JsonProperty("address")
   private String address = null;
-
   @JsonProperty("participationStatus")
   private String participationStatus = null;
-
   @JsonProperty("originalAddressString")
   private String originalAddressString = null;
 
@@ -81,6 +78,7 @@ public class MailAddress {
     this.displayName = displayName;
   }
 
+
   /**
    * Set address and return this.
    * @param address Address             
@@ -107,6 +105,7 @@ public class MailAddress {
     this.address = address;
   }
 
+
   /**
    * Set participationStatus and return this.
    * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
@@ -132,6 +131,7 @@ public class MailAddress {
   public void setParticipationStatus(String participationStatus) {
     this.participationStatus = participationStatus;
   }
+
 
   /**
    * Set originalAddressString and return this.
@@ -216,7 +216,12 @@ public class MailAddress {
    * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
    * @param originalAddressString The original e-mail address string             
    */
-  public MailAddress(String displayName, String address, String participationStatus, String originalAddressString) {
+  public MailAddress(
+    String displayName,
+    String address,
+    String participationStatus,
+    String originalAddressString
+  ) {
     super();
     setDisplayName(displayName);
     setAddress(address);

@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfEmailAddressCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfEmailAddressCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.
@@ -152,7 +152,10 @@ public class EnumWithCustomOfEmailAddressCategory {
    * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @param description 
    */
-  public EnumWithCustomOfEmailAddressCategory(String value, String description) {
+  public EnumWithCustomOfEmailAddressCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

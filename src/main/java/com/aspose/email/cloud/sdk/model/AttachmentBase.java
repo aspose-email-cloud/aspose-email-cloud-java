@@ -45,13 +45,10 @@ import java.io.*;
 public class AttachmentBase {
   @JsonProperty("base64Data")
   private String base64Data = null;
-
   @JsonProperty("contentId")
   private String contentId = null;
-
   @JsonProperty("contentType")
   private ContentType contentType = null;
-
   @JsonProperty("headers")
   private Map<String, String> headers = null;
 
@@ -81,6 +78,7 @@ public class AttachmentBase {
     this.base64Data = base64Data;
   }
 
+
   /**
    * Set contentId and return this.
    * @param contentId Attachment content id             
@@ -107,6 +105,7 @@ public class AttachmentBase {
     this.contentId = contentId;
   }
 
+
   /**
    * Set contentType and return this.
    * @param contentType Content type             
@@ -132,6 +131,7 @@ public class AttachmentBase {
   public void setContentType(ContentType contentType) {
     this.contentType = contentType;
   }
+
 
   /**
    * Set headers and return this.
@@ -231,7 +231,12 @@ public class AttachmentBase {
    * @param contentType Content type             
    * @param headers Attachment headers.             
    */
-  public AttachmentBase(String base64Data, String contentId, ContentType contentType, Map<String, String> headers) {
+  public AttachmentBase(
+    String base64Data,
+    String contentId,
+    ContentType contentType,
+    Map<String, String> headers
+  ) {
     super();
     setBase64Data(base64Data);
     setContentId(contentId);

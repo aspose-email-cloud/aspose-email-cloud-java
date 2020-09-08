@@ -45,10 +45,8 @@ import java.io.*;
 public class AssociatedPerson {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("category")
   private EnumWithCustomOfAssociatedPersonCategory category = null;
-
   @JsonProperty("preferred")
   private Boolean preferred = null;
 
@@ -78,6 +76,7 @@ public class AssociatedPerson {
     this.name = name;
   }
 
+
   /**
    * Set category and return this.
    * @param category Associated person&#39;s category.             
@@ -103,6 +102,7 @@ public class AssociatedPerson {
   public void setCategory(EnumWithCustomOfAssociatedPersonCategory category) {
     this.category = category;
   }
+
 
   /**
    * Set preferred and return this.
@@ -184,7 +184,11 @@ public class AssociatedPerson {
    * @param category Associated person&#39;s category.             
    * @param preferred Defines whether associated person is preferred.             
    */
-  public AssociatedPerson(String name, EnumWithCustomOfAssociatedPersonCategory category, Boolean preferred) {
+  public AssociatedPerson(
+    String name,
+    EnumWithCustomOfAssociatedPersonCategory category,
+    Boolean preferred
+  ) {
     super();
     setName(name);
     setCategory(category);

@@ -45,7 +45,6 @@ import java.io.*;
 public class EnumWithCustomOfEventCategory {
   @JsonProperty("value")
   private String value = null;
-
   @JsonProperty("description")
   private String description = null;
 
@@ -74,6 +73,7 @@ public class EnumWithCustomOfEventCategory {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Set description and return this.
@@ -152,7 +152,10 @@ public class EnumWithCustomOfEventCategory {
    * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
    * @param description 
    */
-  public EnumWithCustomOfEventCategory(String value, String description) {
+  public EnumWithCustomOfEventCategory(
+    String value,
+    String description
+  ) {
     super();
     setValue(value);
     setDescription(description);

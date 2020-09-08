@@ -1,6 +1,5 @@
 
-# com.aspose.email.cloud.sdk.model.ReminderTrigger
-
+# ReminderTrigger
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,5 +8,7 @@ Name | Type | Description | Notes
 **related** | **String** | Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End | 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API README]](README.md)
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

@@ -132,7 +132,9 @@ public class ListResponseOfStorageModelOfCalendarDto {
    * Initializes a new instance of the ListResponseOfStorageModelOfCalendarDto
    * @param value 
    */
-  public ListResponseOfStorageModelOfCalendarDto(List<StorageModelOfCalendarDto> value) {
+  public ListResponseOfStorageModelOfCalendarDto(
+    List<StorageModelOfCalendarDto> value
+  ) {
     super();
     setValue(value);
   }

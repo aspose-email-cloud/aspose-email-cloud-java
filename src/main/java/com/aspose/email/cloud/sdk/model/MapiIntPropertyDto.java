@@ -122,13 +122,15 @@ public class MapiIntPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiIntPropertyDto
    * @param descriptor Property descriptor             
-   * @param discriminator 
    * @param value Property value             
    */
-  public MapiIntPropertyDto(MapiPropertyDescriptor descriptor, String discriminator, Integer value) {
+  public MapiIntPropertyDto(
+    MapiPropertyDescriptor descriptor
+    ,
+    Integer value
+  ) {
     super();
     setDescriptor(descriptor);
-    setDiscriminator(discriminator);
     setValue(value);
   }
 

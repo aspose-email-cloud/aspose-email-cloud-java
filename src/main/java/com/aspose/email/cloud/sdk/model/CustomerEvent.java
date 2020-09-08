@@ -45,7 +45,6 @@ import java.io.*;
 public class CustomerEvent {
   @JsonProperty("category")
   private EnumWithCustomOfEventCategory category = null;
-
   @JsonProperty("date")
   private Date date = null;
 
@@ -74,6 +73,7 @@ public class CustomerEvent {
   public void setCategory(EnumWithCustomOfEventCategory category) {
     this.category = category;
   }
+
 
   /**
    * Set date and return this.
@@ -152,7 +152,10 @@ public class CustomerEvent {
    * @param category Event category.             
    * @param date Event date.             
    */
-  public CustomerEvent(EnumWithCustomOfEventCategory category, Date date) {
+  public CustomerEvent(
+    EnumWithCustomOfEventCategory category,
+    Date date
+  ) {
     super();
     setCategory(category);
     setDate(date);

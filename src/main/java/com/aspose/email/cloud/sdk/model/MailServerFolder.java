@@ -45,7 +45,6 @@ import java.io.*;
 public class MailServerFolder {
   @JsonProperty("name")
   private String name = null;
-
   @JsonProperty("id")
   private String id = null;
 
@@ -74,6 +73,7 @@ public class MailServerFolder {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Set id and return this.
@@ -152,7 +152,10 @@ public class MailServerFolder {
    * @param name Gets or sets mail folder name             
    * @param id Gets or sets mail folder id             
    */
-  public MailServerFolder(String name, String id) {
+  public MailServerFolder(
+    String name,
+    String id
+  ) {
     super();
     setName(name);
     setId(id);
