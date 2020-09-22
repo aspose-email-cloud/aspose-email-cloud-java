@@ -1,0 +1,68 @@
+/*
+* --------------------------------------------------------------------------------------------------------------------
+* <copyright company="Aspose" file="EmailAddressBuilder.java">
+*   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
+* </copyright>
+* <summary>
+*   Permission is hereby granted, free of charge, to any person obtaining a copy
+*  of this software and associated documentation files (the "Software"), to deal
+*  in the Software without restriction, including without limitation the rights
+*  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*  copies of the Software, and to permit persons to whom the Software is
+*  furnished to do so, subject to the following conditions:
+* 
+*  The above copyright notice and this permission notice shall be included in all
+*  copies or substantial portions of the Software.
+* 
+*  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*  SOFTWARE.
+* </summary>
+* --------------------------------------------------------------------------------------------------------------------
+*/
+
+package com.aspose.email.cloud.sdk.model;
+
+import java.util.List;
+
+/**
+ *  EmailAddress builder.
+ */
+public class EmailAddressBuilder {
+    private final EmailAddress model;
+    public EmailAddressBuilder(EmailAddress model) {
+        this.model = model;
+    }
+
+    public EmailAddress build() {
+        return model;
+    }
+    public EmailAddressBuilder category(EnumWithCustomOfEmailAddressCategory category) {
+        this.model.category(category);
+        return this;
+    }
+    public EmailAddressBuilder displayName(String displayName) {
+        this.model.displayName(displayName);
+        return this;
+    }
+    public EmailAddressBuilder preferred(Boolean preferred) {
+        this.model.preferred(preferred);
+        return this;
+    }
+    public EmailAddressBuilder routingType(String routingType) {
+        this.model.routingType(routingType);
+        return this;
+    }
+    public EmailAddressBuilder address(String address) {
+        this.model.address(address);
+        return this;
+    }
+    public EmailAddressBuilder originalAddressString(String originalAddressString) {
+        this.model.originalAddressString(originalAddressString);
+        return this;
+    }
+}
