@@ -43,7 +43,11 @@ public class MapiContactTests extends TestBase {
         String vcardString = new String(vcardBytes, "UTF-8");
         assert vcardString.contains(mapiContact.getNameInfo().getGivenName());
         MapiContactDto mapiContactConverted =
-            api.mapi().contact().fromFile(new MapiContactFromFileRequest("VCard", vcardBytes));
+            api.mapi().contact().fromFile(
+                Models.mapiContactFromFileRequest()
+                    .format("VCard")
+                    .file(vcardBytes)
+                    .build());
         assert mapiContact.getNameInfo().getSurname()
             .equals(mapiContactConverted.getNameInfo().getSurname());
     }

@@ -1162,4 +1162,340 @@ public class Models {
     public static MapiPidTagPropertyDescriptorBuilder mapiPidTagPropertyDescriptor() {
         return new MapiPidTagPropertyDescriptorBuilder(new MapiPidTagPropertyDescriptor());
     }
+    /**
+     * Request builder for AiBcrApi.parse method.
+     **/
+    public static AiBcrParseRequestBuilder aiBcrParseRequest() {
+        return new AiBcrParseRequestBuilder(new AiBcrParseRequest());
+    }
+    /**
+     * Request builder for AiNameApi.complete method.
+     **/
+    public static AiNameCompleteRequestBuilder aiNameCompleteRequest() {
+        return new AiNameCompleteRequestBuilder(new AiNameCompleteRequest());
+    }
+    /**
+     * Request builder for AiNameApi.expand method.
+     **/
+    public static AiNameExpandRequestBuilder aiNameExpandRequest() {
+        return new AiNameExpandRequestBuilder(new AiNameExpandRequest());
+    }
+    /**
+     * Request builder for AiNameApi.format method.
+     **/
+    public static AiNameFormatRequestBuilder aiNameFormatRequest() {
+        return new AiNameFormatRequestBuilder(new AiNameFormatRequest());
+    }
+    /**
+     * Request builder for AiNameApi.genderize method.
+     **/
+    public static AiNameGenderizeRequestBuilder aiNameGenderizeRequest() {
+        return new AiNameGenderizeRequestBuilder(new AiNameGenderizeRequest());
+    }
+    /**
+     * Request builder for AiNameApi.match method.
+     **/
+    public static AiNameMatchRequestBuilder aiNameMatchRequest() {
+        return new AiNameMatchRequestBuilder(new AiNameMatchRequest());
+    }
+    /**
+     * Request builder for AiNameApi.parse method.
+     **/
+    public static AiNameParseRequestBuilder aiNameParseRequest() {
+        return new AiNameParseRequestBuilder(new AiNameParseRequest());
+    }
+    /**
+     * Request builder for AiNameApi.parseEmailAddress method.
+     **/
+    public static AiNameParseEmailAddressRequestBuilder aiNameParseEmailAddressRequest() {
+        return new AiNameParseEmailAddressRequestBuilder(new AiNameParseEmailAddressRequest());
+    }
+    /**
+     * Request builder for CalendarApi.convert method.
+     **/
+    public static CalendarConvertRequestBuilder calendarConvertRequest() {
+        return new CalendarConvertRequestBuilder(new CalendarConvertRequest());
+    }
+    /**
+     * Request builder for CalendarApi.fromFile method.
+     **/
+    public static CalendarFromFileRequestBuilder calendarFromFileRequest() {
+        return new CalendarFromFileRequestBuilder(new CalendarFromFileRequest());
+    }
+    /**
+     * Request builder for CalendarApi.get method.
+     **/
+    public static CalendarGetRequestBuilder calendarGetRequest() {
+        return new CalendarGetRequestBuilder(new CalendarGetRequest());
+    }
+    /**
+     * Request builder for CalendarApi.getAsAlternate method.
+     **/
+    public static CalendarGetAsAlternateRequestBuilder calendarGetAsAlternateRequest() {
+        return new CalendarGetAsAlternateRequestBuilder(new CalendarGetAsAlternateRequest());
+    }
+    /**
+     * Request builder for CalendarApi.getAsFile method.
+     **/
+    public static CalendarGetAsFileRequestBuilder calendarGetAsFileRequest() {
+        return new CalendarGetAsFileRequestBuilder(new CalendarGetAsFileRequest());
+    }
+    /**
+     * Request builder for CalendarApi.getList method.
+     **/
+    public static CalendarGetListRequestBuilder calendarGetListRequest() {
+        return new CalendarGetListRequestBuilder(new CalendarGetListRequest());
+    }
+    /**
+     * Request builder for ClientAccountApi.get method.
+     **/
+    public static ClientAccountGetRequestBuilder clientAccountGetRequest() {
+        return new ClientAccountGetRequestBuilder(new ClientAccountGetRequest());
+    }
+    /**
+     * Request builder for ClientAccountApi.getMulti method.
+     **/
+    public static ClientAccountGetMultiRequestBuilder clientAccountGetMultiRequest() {
+        return new ClientAccountGetMultiRequestBuilder(new ClientAccountGetMultiRequest());
+    }
+    /**
+     * Request builder for ClientFolderApi.getList method.
+     **/
+    public static ClientFolderGetListRequestBuilder clientFolderGetListRequest() {
+        return new ClientFolderGetListRequestBuilder(new ClientFolderGetListRequest());
+    }
+    /**
+     * Request builder for ClientMessageApi.appendFile method.
+     **/
+    public static ClientMessageAppendFileRequestBuilder clientMessageAppendFileRequest() {
+        return new ClientMessageAppendFileRequestBuilder(new ClientMessageAppendFileRequest());
+    }
+    /**
+     * Request builder for ClientMessageApi.fetch method.
+     **/
+    public static ClientMessageFetchRequestBuilder clientMessageFetchRequest() {
+        return new ClientMessageFetchRequestBuilder(new ClientMessageFetchRequest());
+    }
+    /**
+     * Request builder for ClientMessageApi.fetchFile method.
+     **/
+    public static ClientMessageFetchFileRequestBuilder clientMessageFetchFileRequest() {
+        return new ClientMessageFetchFileRequestBuilder(new ClientMessageFetchFileRequest());
+    }
+    /**
+     * Request builder for ClientMessageApi.list method.
+     **/
+    public static ClientMessageListRequestBuilder clientMessageListRequest() {
+        return new ClientMessageListRequestBuilder(new ClientMessageListRequest());
+    }
+    /**
+     * Request builder for ClientMessageApi.sendFile method.
+     **/
+    public static ClientMessageSendFileRequestBuilder clientMessageSendFileRequest() {
+        return new ClientMessageSendFileRequestBuilder(new ClientMessageSendFileRequest());
+    }
+    /**
+     * Request builder for ClientThreadApi.getList method.
+     **/
+    public static ClientThreadGetListRequestBuilder clientThreadGetListRequest() {
+        return new ClientThreadGetListRequestBuilder(new ClientThreadGetListRequest());
+    }
+    /**
+     * Request builder for ClientThreadApi.getMessages method.
+     **/
+    public static ClientThreadGetMessagesRequestBuilder clientThreadGetMessagesRequest() {
+        return new ClientThreadGetMessagesRequestBuilder(new ClientThreadGetMessagesRequest());
+    }
+    /**
+     * Request builder for ContactApi.convert method.
+     **/
+    public static ContactConvertRequestBuilder contactConvertRequest() {
+        return new ContactConvertRequestBuilder(new ContactConvertRequest());
+    }
+    /**
+     * Request builder for ContactApi.fromFile method.
+     **/
+    public static ContactFromFileRequestBuilder contactFromFileRequest() {
+        return new ContactFromFileRequestBuilder(new ContactFromFileRequest());
+    }
+    /**
+     * Request builder for ContactApi.get method.
+     **/
+    public static ContactGetRequestBuilder contactGetRequest() {
+        return new ContactGetRequestBuilder(new ContactGetRequest());
+    }
+    /**
+     * Request builder for ContactApi.getAsFile method.
+     **/
+    public static ContactGetAsFileRequestBuilder contactGetAsFileRequest() {
+        return new ContactGetAsFileRequestBuilder(new ContactGetAsFileRequest());
+    }
+    /**
+     * Request builder for ContactApi.getList method.
+     **/
+    public static ContactGetListRequestBuilder contactGetListRequest() {
+        return new ContactGetListRequestBuilder(new ContactGetListRequest());
+    }
+    /**
+     * Request builder for DisposableEmailApi.isDisposable method.
+     **/
+    public static DisposableEmailIsDisposableRequestBuilder disposableEmailIsDisposableRequest() {
+        return new DisposableEmailIsDisposableRequestBuilder(new DisposableEmailIsDisposableRequest());
+    }
+    /**
+     * Request builder for EmailApi.convert method.
+     **/
+    public static EmailConvertRequestBuilder emailConvertRequest() {
+        return new EmailConvertRequestBuilder(new EmailConvertRequest());
+    }
+    /**
+     * Request builder for EmailApi.fromFile method.
+     **/
+    public static EmailFromFileRequestBuilder emailFromFileRequest() {
+        return new EmailFromFileRequestBuilder(new EmailFromFileRequest());
+    }
+    /**
+     * Request builder for EmailApi.get method.
+     **/
+    public static EmailGetRequestBuilder emailGetRequest() {
+        return new EmailGetRequestBuilder(new EmailGetRequest());
+    }
+    /**
+     * Request builder for EmailApi.getAsFile method.
+     **/
+    public static EmailGetAsFileRequestBuilder emailGetAsFileRequest() {
+        return new EmailGetAsFileRequestBuilder(new EmailGetAsFileRequest());
+    }
+    /**
+     * Request builder for EmailApi.getList method.
+     **/
+    public static EmailGetListRequestBuilder emailGetListRequest() {
+        return new EmailGetListRequestBuilder(new EmailGetListRequest());
+    }
+    /**
+     * Request builder for EmailConfigApi.discover method.
+     **/
+    public static EmailConfigDiscoverRequestBuilder emailConfigDiscoverRequest() {
+        return new EmailConfigDiscoverRequestBuilder(new EmailConfigDiscoverRequest());
+    }
+    /**
+     * Request builder for FileApi.copyFile method.
+     **/
+    public static CopyFileRequestBuilder copyFileRequest() {
+        return new CopyFileRequestBuilder(new CopyFileRequest());
+    }
+    /**
+     * Request builder for FileApi.deleteFile method.
+     **/
+    public static DeleteFileRequestBuilder deleteFileRequest() {
+        return new DeleteFileRequestBuilder(new DeleteFileRequest());
+    }
+    /**
+     * Request builder for FileApi.downloadFile method.
+     **/
+    public static DownloadFileRequestBuilder downloadFileRequest() {
+        return new DownloadFileRequestBuilder(new DownloadFileRequest());
+    }
+    /**
+     * Request builder for FileApi.moveFile method.
+     **/
+    public static MoveFileRequestBuilder moveFileRequest() {
+        return new MoveFileRequestBuilder(new MoveFileRequest());
+    }
+    /**
+     * Request builder for FileApi.uploadFile method.
+     **/
+    public static UploadFileRequestBuilder uploadFileRequest() {
+        return new UploadFileRequestBuilder(new UploadFileRequest());
+    }
+    /**
+     * Request builder for FolderApi.copyFolder method.
+     **/
+    public static CopyFolderRequestBuilder copyFolderRequest() {
+        return new CopyFolderRequestBuilder(new CopyFolderRequest());
+    }
+    /**
+     * Request builder for FolderApi.createFolder method.
+     **/
+    public static CreateFolderRequestBuilder createFolderRequest() {
+        return new CreateFolderRequestBuilder(new CreateFolderRequest());
+    }
+    /**
+     * Request builder for FolderApi.deleteFolder method.
+     **/
+    public static DeleteFolderRequestBuilder deleteFolderRequest() {
+        return new DeleteFolderRequestBuilder(new DeleteFolderRequest());
+    }
+    /**
+     * Request builder for FolderApi.getFilesList method.
+     **/
+    public static GetFilesListRequestBuilder getFilesListRequest() {
+        return new GetFilesListRequestBuilder(new GetFilesListRequest());
+    }
+    /**
+     * Request builder for FolderApi.moveFolder method.
+     **/
+    public static MoveFolderRequestBuilder moveFolderRequest() {
+        return new MoveFolderRequestBuilder(new MoveFolderRequest());
+    }
+    /**
+     * Request builder for MapiCalendarApi.fromFile method.
+     **/
+    public static MapiCalendarFromFileRequestBuilder mapiCalendarFromFileRequest() {
+        return new MapiCalendarFromFileRequestBuilder(new MapiCalendarFromFileRequest());
+    }
+    /**
+     * Request builder for MapiCalendarApi.get method.
+     **/
+    public static MapiCalendarGetRequestBuilder mapiCalendarGetRequest() {
+        return new MapiCalendarGetRequestBuilder(new MapiCalendarGetRequest());
+    }
+    /**
+     * Request builder for MapiContactApi.fromFile method.
+     **/
+    public static MapiContactFromFileRequestBuilder mapiContactFromFileRequest() {
+        return new MapiContactFromFileRequestBuilder(new MapiContactFromFileRequest());
+    }
+    /**
+     * Request builder for MapiContactApi.get method.
+     **/
+    public static MapiContactGetRequestBuilder mapiContactGetRequest() {
+        return new MapiContactGetRequestBuilder(new MapiContactGetRequest());
+    }
+    /**
+     * Request builder for MapiMessageApi.fromFile method.
+     **/
+    public static MapiMessageFromFileRequestBuilder mapiMessageFromFileRequest() {
+        return new MapiMessageFromFileRequestBuilder(new MapiMessageFromFileRequest());
+    }
+    /**
+     * Request builder for MapiMessageApi.get method.
+     **/
+    public static MapiMessageGetRequestBuilder mapiMessageGetRequest() {
+        return new MapiMessageGetRequestBuilder(new MapiMessageGetRequest());
+    }
+    /**
+     * Request builder for StorageApi.getDiscUsage method.
+     **/
+    public static GetDiscUsageRequestBuilder getDiscUsageRequest() {
+        return new GetDiscUsageRequestBuilder(new GetDiscUsageRequest());
+    }
+    /**
+     * Request builder for StorageApi.getFileVersions method.
+     **/
+    public static GetFileVersionsRequestBuilder getFileVersionsRequest() {
+        return new GetFileVersionsRequestBuilder(new GetFileVersionsRequest());
+    }
+    /**
+     * Request builder for StorageApi.objectExists method.
+     **/
+    public static ObjectExistsRequestBuilder objectExistsRequest() {
+        return new ObjectExistsRequestBuilder(new ObjectExistsRequest());
+    }
+    /**
+     * Request builder for StorageApi.exists method.
+     **/
+    public static StorageExistsRequestBuilder storageExistsRequest() {
+        return new StorageExistsRequestBuilder(new StorageExistsRequest());
+    }
 }
