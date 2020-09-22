@@ -41,7 +41,7 @@ public class EmailFromFileRequest
 
     /**
      * Initializes a new instance of the EmailFromFileRequest class.   
-     * @param format  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * @param format  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      * @param file File to convert
      **/
     public EmailFromFileRequest(String format, byte[] file)             
@@ -53,21 +53,21 @@ public class EmailFromFileRequest
     private String format;
 
     /**
-     * Getter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Getter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+     * Setter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailFromFileRequest format(String value) {
         this.format = value;

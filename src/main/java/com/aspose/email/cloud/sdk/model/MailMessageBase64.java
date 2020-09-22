@@ -77,7 +77,7 @@ public class MailMessageBase64 extends MailMessageBase {
 
   /**
    * Set format and return this.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return this
   **/
   public MailMessageBase64 format(String format) {
@@ -86,7 +86,7 @@ public class MailMessageBase64 extends MailMessageBase {
   }
 
   /**
-   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return format
   **/
   public String getFormat() {
@@ -95,7 +95,7 @@ public class MailMessageBase64 extends MailMessageBase {
 
   /**
    * Set format.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -152,7 +152,7 @@ public class MailMessageBase64 extends MailMessageBase {
   /**
    * Initializes a new instance of the MailMessageBase64
    * @param valueBase64 Email message file data encoded to Base64 string.             
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    */
   public MailMessageBase64(
     //,

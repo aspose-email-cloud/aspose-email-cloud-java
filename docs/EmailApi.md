@@ -49,8 +49,8 @@ public EmailConvertRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **fromFormat** | **String**| File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
- **toFormat** | **String**| File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **fromFormat** | **String**| File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
+ **toFormat** | **String**| File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
  **file** | **byte[]**| File to convert |
 
 ### Return type
@@ -75,7 +75,7 @@ public EmailFromFileRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **format** | **String**|  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **format** | **String**|  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
  **file** | **byte[]**| File to convert |
 
 ### Return type
@@ -102,7 +102,7 @@ public EmailGetRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
  **fileName** | **String**| Email document file name. |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
@@ -132,7 +132,7 @@ public EmailGetAsFileRequest(
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
  **fileName** | **String**| Email document file name |
- **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
  **storage** | **String**| Storage name | [optional]
  **folder** | **String**| Path to folder in storage | [optional]
 
@@ -161,7 +161,7 @@ public EmailGetListRequest(
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
- **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef |
+ **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
  **folder** | **String**| Path to folder in storage. | [optional]
  **storage** | **String**| Storage name. | [optional]
  **itemsPerPage** | **Integer**| Count of items on page. | [optional] [default to 10]

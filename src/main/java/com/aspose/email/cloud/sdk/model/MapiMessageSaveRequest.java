@@ -48,7 +48,7 @@ public class MapiMessageSaveRequest extends StorageModelOfMapiMessageDto {
 
   /**
    * Set format and return this.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return this
   **/
   public MapiMessageSaveRequest format(String format) {
@@ -57,7 +57,7 @@ public class MapiMessageSaveRequest extends StorageModelOfMapiMessageDto {
   }
 
   /**
-   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return format
   **/
   public String getFormat() {
@@ -66,7 +66,7 @@ public class MapiMessageSaveRequest extends StorageModelOfMapiMessageDto {
 
   /**
    * Set format.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -123,7 +123,7 @@ public class MapiMessageSaveRequest extends StorageModelOfMapiMessageDto {
    * Initializes a new instance of the MapiMessageSaveRequest
    * @param storageFile 
    * @param value 
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    */
   public MapiMessageSaveRequest(
     StorageFileLocation storageFile,
