@@ -48,13 +48,26 @@ public class AiNameFormattedBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameFormatted instance.
+     */
     public AiNameFormatted build() {
         return model;
     }
+    /**
+     * Set AiNameFormatted.name and return builder.
+     * @param name Formatted name value             
+     * @return builder
+    **/
     public AiNameFormattedBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set AiNameFormatted.comments and return builder.
+     * @param comments Usually empty; can contain extra message describing some issue occurred during the formatting             
+     * @return builder
+    **/
     public AiNameFormattedBuilder comments(String comments) {
         this.model.comments(comments);
         return this;

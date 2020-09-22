@@ -48,13 +48,26 @@ public class ClientAccountSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientAccountSaveRequest instance.
+     */
     public ClientAccountSaveRequest build() {
         return model;
     }
+    /**
+     * Set ClientAccountSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public ClientAccountSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set ClientAccountSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ClientAccountSaveRequestBuilder value(EmailClientAccount value) {
         this.model.value(value);
         return this;

@@ -48,13 +48,26 @@ public class EnumWithCustomOfUrlCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfUrlCategory instance.
+     */
     public EnumWithCustomOfUrlCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfUrlCategory.value and return builder.
+     * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+     * @return builder
+    **/
     public EnumWithCustomOfUrlCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfUrlCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfUrlCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

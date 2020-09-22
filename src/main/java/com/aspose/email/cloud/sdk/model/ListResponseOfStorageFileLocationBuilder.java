@@ -48,9 +48,17 @@ public class ListResponseOfStorageFileLocationBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfStorageFileLocation instance.
+     */
     public ListResponseOfStorageFileLocation build() {
         return model;
     }
+    /**
+     * Set ListResponseOfStorageFileLocation.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfStorageFileLocationBuilder value(List<StorageFileLocation> value) {
         this.model.value(value);
         return this;

@@ -48,13 +48,26 @@ public class MapiCalendarAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarAsFileRequest instance.
+     */
     public MapiCalendarAsFileRequest build() {
         return model;
     }
+    /**
+     * Set MapiCalendarAsFileRequest.format and return builder.
+     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @return builder
+    **/
     public MapiCalendarAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set MapiCalendarAsFileRequest.value and return builder.
+     * @param value MAPI calendar model.             
+     * @return builder
+    **/
     public MapiCalendarAsFileRequestBuilder value(MapiCalendarDto value) {
         this.model.value(value);
         return this;

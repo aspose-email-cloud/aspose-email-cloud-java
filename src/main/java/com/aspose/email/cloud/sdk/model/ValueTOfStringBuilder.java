@@ -48,9 +48,17 @@ public class ValueTOfStringBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ValueTOfString instance.
+     */
     public ValueTOfString build() {
         return model;
     }
+    /**
+     * Set ValueTOfString.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ValueTOfStringBuilder value(String value) {
         this.model.value(value);
         return this;

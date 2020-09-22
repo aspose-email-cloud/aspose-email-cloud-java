@@ -48,13 +48,26 @@ public class MapiContactPhotoDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactPhotoDto instance.
+     */
     public MapiContactPhotoDto build() {
         return model;
     }
+    /**
+     * Set MapiContactPhotoDto.photoImageFormat and return builder.
+     * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+     * @return builder
+    **/
     public MapiContactPhotoDtoBuilder photoImageFormat(String photoImageFormat) {
         this.model.photoImageFormat(photoImageFormat);
         return this;
     }
+    /**
+     * Set MapiContactPhotoDto.base64Data and return builder.
+     * @param base64Data Photo serialized as base64 string.             
+     * @return builder
+    **/
     public MapiContactPhotoDtoBuilder base64Data(String base64Data) {
         this.model.base64Data(base64Data);
         return this;

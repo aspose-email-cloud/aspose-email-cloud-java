@@ -48,13 +48,26 @@ public class MapiContactEventPropertySetDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactEventPropertySetDto instance.
+     */
     public MapiContactEventPropertySetDto build() {
         return model;
     }
+    /**
+     * Set MapiContactEventPropertySetDto.birthday and return builder.
+     * @param birthday Specifies the birthday of the contact.
+     * @return builder
+    **/
     public MapiContactEventPropertySetDtoBuilder birthday(Date birthday) {
         this.model.birthday(birthday);
         return this;
     }
+    /**
+     * Set MapiContactEventPropertySetDto.weddingAnniversary and return builder.
+     * @param weddingAnniversary Specifies the wedding anniversary of the contact.             
+     * @return builder
+    **/
     public MapiContactEventPropertySetDtoBuilder weddingAnniversary(Date weddingAnniversary) {
         this.model.weddingAnniversary(weddingAnniversary);
         return this;

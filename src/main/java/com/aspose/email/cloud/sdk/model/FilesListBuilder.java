@@ -48,9 +48,17 @@ public class FilesListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build FilesList instance.
+     */
     public FilesList build() {
         return model;
     }
+    /**
+     * Set FilesList.value and return builder.
+     * @param value Files and folders contained by folder StorageFile.
+     * @return builder
+    **/
     public FilesListBuilder value(List<StorageFile> value) {
         this.model.value(value);
         return this;

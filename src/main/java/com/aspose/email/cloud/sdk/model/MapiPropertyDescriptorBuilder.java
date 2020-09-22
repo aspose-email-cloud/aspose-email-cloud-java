@@ -48,6 +48,9 @@ public class MapiPropertyDescriptorBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiPropertyDescriptor instance.
+     */
     public MapiPropertyDescriptor build() {
         return model;
     }

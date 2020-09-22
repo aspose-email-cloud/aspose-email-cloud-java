@@ -48,41 +48,89 @@ public class MapiCalendarTimeZoneRuleDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarTimeZoneRuleDto instance.
+     */
     public MapiCalendarTimeZoneRuleDto build() {
         return model;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.date and return builder.
+     * @param date Date and time that indicate when to begin using the Standard/Daylight time.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder date(Date date) {
         this.model.date(date);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.dayOfWeek and return builder.
+     * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder dayOfWeek(String dayOfWeek) {
         this.model.dayOfWeek(dayOfWeek);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.hour and return builder.
+     * @param hour Hour.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder hour(Integer hour) {
         this.model.hour(hour);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.milliseconds and return builder.
+     * @param milliseconds Milliseconds.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder milliseconds(Integer milliseconds) {
         this.model.milliseconds(milliseconds);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.minute and return builder.
+     * @param minute Minute.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder minute(Integer minute) {
         this.model.minute(minute);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.month and return builder.
+     * @param month Month.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder month(Integer month) {
         this.model.month(month);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.position and return builder.
+     * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder position(String position) {
         this.model.position(position);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.seconds and return builder.
+     * @param seconds Seconds.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder seconds(Integer seconds) {
         this.model.seconds(seconds);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneRuleDto.year and return builder.
+     * @param year Year.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneRuleDtoBuilder year(Integer year) {
         this.model.year(year);
         return this;

@@ -48,13 +48,26 @@ public class StorageModelOfMapiMessageDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfMapiMessageDto instance.
+     */
     public StorageModelOfMapiMessageDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfMapiMessageDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfMapiMessageDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfMapiMessageDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfMapiMessageDtoBuilder value(MapiMessageDto value) {
         this.model.value(value);
         return this;

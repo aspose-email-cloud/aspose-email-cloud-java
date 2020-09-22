@@ -48,37 +48,80 @@ public class EmailAccountConfigBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailAccountConfig instance.
+     */
     public EmailAccountConfig build() {
         return model;
     }
+    /**
+     * Set EmailAccountConfig.displayName and return builder.
+     * @param displayName Email account display name             
+     * @return builder
+    **/
     public EmailAccountConfigBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.protocolType and return builder.
+     * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+     * @return builder
+    **/
     public EmailAccountConfigBuilder protocolType(String protocolType) {
         this.model.protocolType(protocolType);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.host and return builder.
+     * @param host Email account host.             
+     * @return builder
+    **/
     public EmailAccountConfigBuilder host(String host) {
         this.model.host(host);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.port and return builder.
+     * @param port Port.             
+     * @return builder
+    **/
     public EmailAccountConfigBuilder port(Integer port) {
         this.model.port(port);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.socketType and return builder.
+     * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @return builder
+    **/
     public EmailAccountConfigBuilder socketType(String socketType) {
         this.model.socketType(socketType);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.authenticationTypes and return builder.
+     * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+     * @return builder
+    **/
     public EmailAccountConfigBuilder authenticationTypes(List<String> authenticationTypes) {
         this.model.authenticationTypes(authenticationTypes);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.extraInfo and return builder.
+     * @param extraInfo Extra account information.             
+     * @return builder
+    **/
     public EmailAccountConfigBuilder extraInfo(List<NameValuePair> extraInfo) {
         this.model.extraInfo(extraInfo);
         return this;
     }
+    /**
+     * Set EmailAccountConfig.isValidated and return builder.
+     * @param isValidated Determines that configuration validated. Set to false if validation skipped.             
+     * @return builder
+    **/
     public EmailAccountConfigBuilder isValidated(Boolean isValidated) {
         this.model.isValidated(isValidated);
         return this;

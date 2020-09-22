@@ -48,13 +48,26 @@ public class ClientThreadBaseRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientThreadBaseRequest instance.
+     */
     public ClientThreadBaseRequest build() {
         return model;
     }
+    /**
+     * Set ClientThreadBaseRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientThreadBaseRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientThreadBaseRequest.threadId and return builder.
+     * @param threadId Thread identifier.             
+     * @return builder
+    **/
     public ClientThreadBaseRequestBuilder threadId(String threadId) {
         this.model.threadId(threadId);
         return this;

@@ -48,13 +48,26 @@ public class EmailClientAccountPasswordCredentialsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailClientAccountPasswordCredentials instance.
+     */
     public EmailClientAccountPasswordCredentials build() {
         return model;
     }
+    /**
+     * Set EmailClientAccountPasswordCredentials.login and return builder.
+     * @param login Email client account login             
+     * @return builder
+    **/
     public EmailClientAccountPasswordCredentialsBuilder login(String login) {
         this.model.login(login);
         return this;
     }
+    /**
+     * Set EmailClientAccountPasswordCredentials.password and return builder.
+     * @param password Email client account password             
+     * @return builder
+    **/
     public EmailClientAccountPasswordCredentialsBuilder password(String password) {
         this.model.password(password);
         return this;

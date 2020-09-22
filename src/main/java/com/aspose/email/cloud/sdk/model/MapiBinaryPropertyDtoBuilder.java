@@ -48,13 +48,26 @@ public class MapiBinaryPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiBinaryPropertyDto instance.
+     */
     public MapiBinaryPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiBinaryPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiBinaryPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiBinaryPropertyDto.valueBase64 and return builder.
+     * @param valueBase64 Property value converted to Base64             
+     * @return builder
+    **/
     public MapiBinaryPropertyDtoBuilder valueBase64(String valueBase64) {
         this.model.valueBase64(valueBase64);
         return this;

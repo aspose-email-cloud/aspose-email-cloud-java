@@ -48,13 +48,26 @@ public class ObjectExistBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ObjectExist instance.
+     */
     public ObjectExist build() {
         return model;
     }
+    /**
+     * Set ObjectExist.exists and return builder.
+     * @param exists Indicates that the file or folder exists.
+     * @return builder
+    **/
     public ObjectExistBuilder exists(Boolean exists) {
         this.model.exists(exists);
         return this;
     }
+    /**
+     * Set ObjectExist.isFolder and return builder.
+     * @param isFolder True if it is a folder, false if it is a file.
+     * @return builder
+    **/
     public ObjectExistBuilder isFolder(Boolean isFolder) {
         this.model.isFolder(isFolder);
         return this;

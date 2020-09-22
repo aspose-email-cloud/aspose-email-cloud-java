@@ -48,9 +48,17 @@ public class ContactListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContactList instance.
+     */
     public ContactList build() {
         return model;
     }
+    /**
+     * Set ContactList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ContactListBuilder value(List<ContactDto> value) {
         this.model.value(value);
         return this;

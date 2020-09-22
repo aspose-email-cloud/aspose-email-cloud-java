@@ -48,13 +48,26 @@ public class MapiCalendarTimeZoneDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarTimeZoneDto instance.
+     */
     public MapiCalendarTimeZoneDto build() {
         return model;
     }
+    /**
+     * Set MapiCalendarTimeZoneDto.keyName and return builder.
+     * @param keyName Human-readable description of the time zone.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneDtoBuilder keyName(String keyName) {
         this.model.keyName(keyName);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneDto.timeZoneRules and return builder.
+     * @param timeZoneRules Time zone rules             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneDtoBuilder timeZoneRules(List<MapiCalendarTimeZoneInfoDto> timeZoneRules) {
         this.model.timeZoneRules(timeZoneRules);
         return this;

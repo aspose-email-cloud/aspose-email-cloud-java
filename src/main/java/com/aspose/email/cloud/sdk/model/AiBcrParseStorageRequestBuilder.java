@@ -48,17 +48,35 @@ public class AiBcrParseStorageRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiBcrParseStorageRequest instance.
+     */
     public AiBcrParseStorageRequest build() {
         return model;
     }
+    /**
+     * Set AiBcrParseStorageRequest.outFolder and return builder.
+     * @param outFolder Parse output folder location on storage             
+     * @return builder
+    **/
     public AiBcrParseStorageRequestBuilder outFolder(StorageFolderLocation outFolder) {
         this.model.outFolder(outFolder);
         return this;
     }
+    /**
+     * Set AiBcrParseStorageRequest.images and return builder.
+     * @param images Images to parse.             
+     * @return builder
+    **/
     public AiBcrParseStorageRequestBuilder images(List<AiBcrImageStorageFile> images) {
         this.model.images(images);
         return this;
     }
+    /**
+     * Set AiBcrParseStorageRequest.options and return builder.
+     * @param options Recognition options.             
+     * @return builder
+    **/
     public AiBcrParseStorageRequestBuilder options(AiBcrOptions options) {
         this.model.options(options);
         return this;

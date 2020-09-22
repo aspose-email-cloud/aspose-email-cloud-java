@@ -48,17 +48,35 @@ public class ReminderTriggerBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ReminderTrigger instance.
+     */
     public ReminderTrigger build() {
         return model;
     }
+    /**
+     * Set ReminderTrigger.dateTime and return builder.
+     * @param dateTime A trigger set to an absolute date/time.
+     * @return builder
+    **/
     public ReminderTriggerBuilder dateTime(Date dateTime) {
         this.model.dateTime(dateTime);
         return this;
     }
+    /**
+     * Set ReminderTrigger.duration and return builder.
+     * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
+     * @return builder
+    **/
     public ReminderTriggerBuilder duration(Long duration) {
         this.model.duration(duration);
         return this;
     }
+    /**
+     * Set ReminderTrigger.related and return builder.
+     * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+     * @return builder
+    **/
     public ReminderTriggerBuilder related(String related) {
         this.model.related(related);
         return this;

@@ -48,13 +48,26 @@ public class AiNameGenderHypothesisBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameGenderHypothesis instance.
+     */
     public AiNameGenderHypothesis build() {
         return model;
     }
+    /**
+     * Set AiNameGenderHypothesis.gender and return builder.
+     * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
+     * @return builder
+    **/
     public AiNameGenderHypothesisBuilder gender(String gender) {
         this.model.gender(gender);
         return this;
     }
+    /**
+     * Set AiNameGenderHypothesis.score and return builder.
+     * @param score Hypothesis score             
+     * @return builder
+    **/
     public AiNameGenderHypothesisBuilder score(Double score) {
         this.model.score(score);
         return this;

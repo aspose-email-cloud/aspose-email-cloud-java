@@ -48,9 +48,17 @@ public class ReminderAttendeeBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ReminderAttendee instance.
+     */
     public ReminderAttendee build() {
         return model;
     }
+    /**
+     * Set ReminderAttendee.address and return builder.
+     * @param address Contains the email address.
+     * @return builder
+    **/
     public ReminderAttendeeBuilder address(String address) {
         this.model.address(address);
         return this;

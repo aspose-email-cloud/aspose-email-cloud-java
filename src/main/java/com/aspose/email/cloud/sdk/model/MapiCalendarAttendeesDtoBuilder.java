@@ -48,21 +48,44 @@ public class MapiCalendarAttendeesDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarAttendeesDto instance.
+     */
     public MapiCalendarAttendeesDto build() {
         return model;
     }
+    /**
+     * Set MapiCalendarAttendeesDto.appointmentRecipients and return builder.
+     * @param appointmentRecipients List of attendees.             
+     * @return builder
+    **/
     public MapiCalendarAttendeesDtoBuilder appointmentRecipients(List<MapiRecipientDto> appointmentRecipients) {
         this.model.appointmentRecipients(appointmentRecipients);
         return this;
     }
+    /**
+     * Set MapiCalendarAttendeesDto.appointmentUnsendableRecipients and return builder.
+     * @param appointmentUnsendableRecipients List of unsendable attendees.             
+     * @return builder
+    **/
     public MapiCalendarAttendeesDtoBuilder appointmentUnsendableRecipients(List<MapiRecipientDto> appointmentUnsendableRecipients) {
         this.model.appointmentUnsendableRecipients(appointmentUnsendableRecipients);
         return this;
     }
+    /**
+     * Set MapiCalendarAttendeesDto.notAllowPropose and return builder.
+     * @param notAllowPropose Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
+     * @return builder
+    **/
     public MapiCalendarAttendeesDtoBuilder notAllowPropose(Boolean notAllowPropose) {
         this.model.notAllowPropose(notAllowPropose);
         return this;
     }
+    /**
+     * Set MapiCalendarAttendeesDto.responseRequested and return builder.
+     * @param responseRequested Value indicating whether a response is requested to a Message object.             
+     * @return builder
+    **/
     public MapiCalendarAttendeesDtoBuilder responseRequested(Boolean responseRequested) {
         this.model.responseRequested(responseRequested);
         return this;

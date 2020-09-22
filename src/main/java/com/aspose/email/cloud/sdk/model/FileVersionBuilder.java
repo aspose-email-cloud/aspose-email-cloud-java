@@ -48,33 +48,71 @@ public class FileVersionBuilder {
         this.model = model;
     }
 
+    /**
+     * Build FileVersion instance.
+     */
     public FileVersion build() {
         return model;
     }
+    /**
+     * Set FileVersion.name and return builder.
+     * @param name File or folder name.
+     * @return builder
+    **/
     public FileVersionBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set FileVersion.isFolder and return builder.
+     * @param isFolder True if it is a folder.
+     * @return builder
+    **/
     public FileVersionBuilder isFolder(Boolean isFolder) {
         this.model.isFolder(isFolder);
         return this;
     }
+    /**
+     * Set FileVersion.modifiedDate and return builder.
+     * @param modifiedDate File or folder last modified DateTime.
+     * @return builder
+    **/
     public FileVersionBuilder modifiedDate(Date modifiedDate) {
         this.model.modifiedDate(modifiedDate);
         return this;
     }
+    /**
+     * Set FileVersion.size and return builder.
+     * @param size File or folder size.
+     * @return builder
+    **/
     public FileVersionBuilder size(Long size) {
         this.model.size(size);
         return this;
     }
+    /**
+     * Set FileVersion.path and return builder.
+     * @param path File or folder path.
+     * @return builder
+    **/
     public FileVersionBuilder path(String path) {
         this.model.path(path);
         return this;
     }
+    /**
+     * Set FileVersion.versionId and return builder.
+     * @param versionId File Version ID.
+     * @return builder
+    **/
     public FileVersionBuilder versionId(String versionId) {
         this.model.versionId(versionId);
         return this;
     }
+    /**
+     * Set FileVersion.isLatest and return builder.
+     * @param isLatest Specifies whether the file is (true) or is not (false) the latest version of an file.
+     * @return builder
+    **/
     public FileVersionBuilder isLatest(Boolean isLatest) {
         this.model.isLatest(isLatest);
         return this;

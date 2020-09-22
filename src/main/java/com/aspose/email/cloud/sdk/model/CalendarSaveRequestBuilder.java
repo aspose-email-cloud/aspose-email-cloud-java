@@ -48,17 +48,35 @@ public class CalendarSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build CalendarSaveRequest instance.
+     */
     public CalendarSaveRequest build() {
         return model;
     }
+    /**
+     * Set CalendarSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public CalendarSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set CalendarSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public CalendarSaveRequestBuilder value(CalendarDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set CalendarSaveRequest.format and return builder.
+     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @return builder
+    **/
     public CalendarSaveRequestBuilder format(String format) {
         this.model.format(format);
         return this;

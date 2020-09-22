@@ -48,9 +48,17 @@ public class AiNameComponentListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameComponentList instance.
+     */
     public AiNameComponentList build() {
         return model;
     }
+    /**
+     * Set AiNameComponentList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public AiNameComponentListBuilder value(List<AiNameComponent> value) {
         this.model.value(value);
         return this;

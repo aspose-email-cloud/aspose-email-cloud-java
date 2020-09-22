@@ -48,17 +48,35 @@ public class ClientMessageDeleteRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientMessageDeleteRequest instance.
+     */
     public ClientMessageDeleteRequest build() {
         return model;
     }
+    /**
+     * Set ClientMessageDeleteRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientMessageDeleteRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientMessageDeleteRequest.messageId and return builder.
+     * @param messageId Message identifier.             
+     * @return builder
+    **/
     public ClientMessageDeleteRequestBuilder messageId(String messageId) {
         this.model.messageId(messageId);
         return this;
     }
+    /**
+     * Set ClientMessageDeleteRequest.folder and return builder.
+     * @param folder Folder to delete message from.             
+     * @return builder
+    **/
     public ClientMessageDeleteRequestBuilder folder(String folder) {
         this.model.folder(folder);
         return this;

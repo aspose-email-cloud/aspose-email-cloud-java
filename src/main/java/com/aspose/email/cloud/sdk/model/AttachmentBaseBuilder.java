@@ -48,21 +48,44 @@ public class AttachmentBaseBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AttachmentBase instance.
+     */
     public AttachmentBase build() {
         return model;
     }
+    /**
+     * Set AttachmentBase.base64Data and return builder.
+     * @param base64Data Attachment file content as Base64 string.             
+     * @return builder
+    **/
     public AttachmentBaseBuilder base64Data(String base64Data) {
         this.model.base64Data(base64Data);
         return this;
     }
+    /**
+     * Set AttachmentBase.contentId and return builder.
+     * @param contentId Attachment content id             
+     * @return builder
+    **/
     public AttachmentBaseBuilder contentId(String contentId) {
         this.model.contentId(contentId);
         return this;
     }
+    /**
+     * Set AttachmentBase.contentType and return builder.
+     * @param contentType Content type             
+     * @return builder
+    **/
     public AttachmentBaseBuilder contentType(ContentType contentType) {
         this.model.contentType(contentType);
         return this;
     }
+    /**
+     * Set AttachmentBase.headers and return builder.
+     * @param headers Attachment headers.             
+     * @return builder
+    **/
     public AttachmentBaseBuilder headers(Map<String, String> headers) {
         this.model.headers(headers);
         return this;

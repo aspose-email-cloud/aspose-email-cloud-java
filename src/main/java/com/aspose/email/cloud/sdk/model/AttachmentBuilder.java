@@ -48,41 +48,89 @@ public class AttachmentBuilder {
         this.model = model;
     }
 
+    /**
+     * Build Attachment instance.
+     */
     public Attachment build() {
         return model;
     }
+    /**
+     * Set Attachment.base64Data and return builder.
+     * @param base64Data Attachment file content as Base64 string.             
+     * @return builder
+    **/
     public AttachmentBuilder base64Data(String base64Data) {
         this.model.base64Data(base64Data);
         return this;
     }
+    /**
+     * Set Attachment.contentId and return builder.
+     * @param contentId Attachment content id             
+     * @return builder
+    **/
     public AttachmentBuilder contentId(String contentId) {
         this.model.contentId(contentId);
         return this;
     }
+    /**
+     * Set Attachment.contentType and return builder.
+     * @param contentType Content type             
+     * @return builder
+    **/
     public AttachmentBuilder contentType(ContentType contentType) {
         this.model.contentType(contentType);
         return this;
     }
+    /**
+     * Set Attachment.headers and return builder.
+     * @param headers Attachment headers.             
+     * @return builder
+    **/
     public AttachmentBuilder headers(Map<String, String> headers) {
         this.model.headers(headers);
         return this;
     }
+    /**
+     * Set Attachment.contentDisposition and return builder.
+     * @param contentDisposition Content-Disposition header. Read only.             
+     * @return builder
+    **/
     public AttachmentBuilder contentDisposition(String contentDisposition) {
         this.model.contentDisposition(contentDisposition);
         return this;
     }
+    /**
+     * Set Attachment.isEmbeddedMessage and return builder.
+     * @param isEmbeddedMessage Determines if attachment is an embedded message. Read only.             
+     * @return builder
+    **/
     public AttachmentBuilder isEmbeddedMessage(Boolean isEmbeddedMessage) {
         this.model.isEmbeddedMessage(isEmbeddedMessage);
         return this;
     }
+    /**
+     * Set Attachment.name and return builder.
+     * @param name Attachment name.             
+     * @return builder
+    **/
     public AttachmentBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set Attachment.nameEncoding and return builder.
+     * @param nameEncoding Encoding of attachment name.             
+     * @return builder
+    **/
     public AttachmentBuilder nameEncoding(String nameEncoding) {
         this.model.nameEncoding(nameEncoding);
         return this;
     }
+    /**
+     * Set Attachment.preferredTextEncoding and return builder.
+     * @param preferredTextEncoding Preferred text encoding.             
+     * @return builder
+    **/
     public AttachmentBuilder preferredTextEncoding(String preferredTextEncoding) {
         this.model.preferredTextEncoding(preferredTextEncoding);
         return this;

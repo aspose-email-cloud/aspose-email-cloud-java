@@ -48,13 +48,26 @@ public class AiNameExtractedComponentBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameExtractedComponent instance.
+     */
     public AiNameExtractedComponent build() {
         return model;
     }
+    /**
+     * Set AiNameExtractedComponent.category and return builder.
+     * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+     * @return builder
+    **/
     public AiNameExtractedComponentBuilder category(String category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set AiNameExtractedComponent.value and return builder.
+     * @param value Extracted value             
+     * @return builder
+    **/
     public AiNameExtractedComponentBuilder value(String value) {
         this.model.value(value);
         return this;

@@ -48,25 +48,53 @@ public class TaskRegeneratingPatternDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build TaskRegeneratingPatternDto instance.
+     */
     public TaskRegeneratingPatternDto build() {
         return model;
     }
+    /**
+     * Set TaskRegeneratingPatternDto.interval and return builder.
+     * @param interval Number of recurrence units.             
+     * @return builder
+    **/
     public TaskRegeneratingPatternDtoBuilder interval(Integer interval) {
         this.model.interval(interval);
         return this;
     }
+    /**
+     * Set TaskRegeneratingPatternDto.occurs and return builder.
+     * @param occurs Number of occurrences of the recurrence pattern.             
+     * @return builder
+    **/
     public TaskRegeneratingPatternDtoBuilder occurs(Integer occurs) {
         this.model.occurs(occurs);
         return this;
     }
+    /**
+     * Set TaskRegeneratingPatternDto.endDate and return builder.
+     * @param endDate End date.             
+     * @return builder
+    **/
     public TaskRegeneratingPatternDtoBuilder endDate(Date endDate) {
         this.model.endDate(endDate);
         return this;
     }
+    /**
+     * Set TaskRegeneratingPatternDto.weekStart and return builder.
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public TaskRegeneratingPatternDtoBuilder weekStart(String weekStart) {
         this.model.weekStart(weekStart);
         return this;
     }
+    /**
+     * Set TaskRegeneratingPatternDto.regeneratingType and return builder.
+     * @param regeneratingType Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
+     * @return builder
+    **/
     public TaskRegeneratingPatternDtoBuilder regeneratingType(String regeneratingType) {
         this.model.regeneratingType(regeneratingType);
         return this;

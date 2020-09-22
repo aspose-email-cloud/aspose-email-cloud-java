@@ -48,17 +48,35 @@ public class AssociatedPersonBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AssociatedPerson instance.
+     */
     public AssociatedPerson build() {
         return model;
     }
+    /**
+     * Set AssociatedPerson.name and return builder.
+     * @param name Associated person&#39;s name.             
+     * @return builder
+    **/
     public AssociatedPersonBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set AssociatedPerson.category and return builder.
+     * @param category Associated person&#39;s category.             
+     * @return builder
+    **/
     public AssociatedPersonBuilder category(EnumWithCustomOfAssociatedPersonCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set AssociatedPerson.preferred and return builder.
+     * @param preferred Defines whether associated person is preferred.             
+     * @return builder
+    **/
     public AssociatedPersonBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;

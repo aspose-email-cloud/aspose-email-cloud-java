@@ -48,25 +48,53 @@ public class WeeklyRecurrencePatternDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build WeeklyRecurrencePatternDto instance.
+     */
     public WeeklyRecurrencePatternDto build() {
         return model;
     }
+    /**
+     * Set WeeklyRecurrencePatternDto.interval and return builder.
+     * @param interval Number of recurrence units.             
+     * @return builder
+    **/
     public WeeklyRecurrencePatternDtoBuilder interval(Integer interval) {
         this.model.interval(interval);
         return this;
     }
+    /**
+     * Set WeeklyRecurrencePatternDto.occurs and return builder.
+     * @param occurs Number of occurrences of the recurrence pattern.             
+     * @return builder
+    **/
     public WeeklyRecurrencePatternDtoBuilder occurs(Integer occurs) {
         this.model.occurs(occurs);
         return this;
     }
+    /**
+     * Set WeeklyRecurrencePatternDto.endDate and return builder.
+     * @param endDate End date.             
+     * @return builder
+    **/
     public WeeklyRecurrencePatternDtoBuilder endDate(Date endDate) {
         this.model.endDate(endDate);
         return this;
     }
+    /**
+     * Set WeeklyRecurrencePatternDto.weekStart and return builder.
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public WeeklyRecurrencePatternDtoBuilder weekStart(String weekStart) {
         this.model.weekStart(weekStart);
         return this;
     }
+    /**
+     * Set WeeklyRecurrencePatternDto.startDays and return builder.
+     * @param startDays Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public WeeklyRecurrencePatternDtoBuilder startDays(List<String> startDays) {
         this.model.startDays(startDays);
         return this;

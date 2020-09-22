@@ -48,13 +48,26 @@ public class StorageModelOfMapiContactDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfMapiContactDto instance.
+     */
     public StorageModelOfMapiContactDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfMapiContactDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfMapiContactDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfMapiContactDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfMapiContactDtoBuilder value(MapiContactDto value) {
         this.model.value(value);
         return this;

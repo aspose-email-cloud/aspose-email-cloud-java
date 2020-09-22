@@ -48,13 +48,26 @@ public class NameValuePairBuilder {
         this.model = model;
     }
 
+    /**
+     * Build NameValuePair instance.
+     */
     public NameValuePair build() {
         return model;
     }
+    /**
+     * Set NameValuePair.name and return builder.
+     * @param name Property name             
+     * @return builder
+    **/
     public NameValuePairBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set NameValuePair.value and return builder.
+     * @param value Property value             
+     * @return builder
+    **/
     public NameValuePairBuilder value(String value) {
         this.model.value(value);
         return this;

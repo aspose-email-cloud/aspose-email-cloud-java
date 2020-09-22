@@ -48,9 +48,17 @@ public class ListResponseOfMailMessageBaseBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfMailMessageBase instance.
+     */
     public ListResponseOfMailMessageBase build() {
         return model;
     }
+    /**
+     * Set ListResponseOfMailMessageBase.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfMailMessageBaseBuilder value(List<MailMessageBase> value) {
         this.model.value(value);
         return this;

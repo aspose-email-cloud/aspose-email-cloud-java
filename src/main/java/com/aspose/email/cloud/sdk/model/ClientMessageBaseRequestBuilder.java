@@ -48,13 +48,26 @@ public class ClientMessageBaseRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientMessageBaseRequest instance.
+     */
     public ClientMessageBaseRequest build() {
         return model;
     }
+    /**
+     * Set ClientMessageBaseRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientMessageBaseRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientMessageBaseRequest.messageId and return builder.
+     * @param messageId Message identifier.             
+     * @return builder
+    **/
     public ClientMessageBaseRequestBuilder messageId(String messageId) {
         this.model.messageId(messageId);
         return this;

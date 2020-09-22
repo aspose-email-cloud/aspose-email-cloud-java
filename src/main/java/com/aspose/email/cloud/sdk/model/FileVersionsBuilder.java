@@ -48,9 +48,17 @@ public class FileVersionsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build FileVersions instance.
+     */
     public FileVersions build() {
         return model;
     }
+    /**
+     * Set FileVersions.value and return builder.
+     * @param value File versions FileVersion.
+     * @return builder
+    **/
     public FileVersionsBuilder value(List<FileVersion> value) {
         this.model.value(value);
         return this;

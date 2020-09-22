@@ -48,25 +48,53 @@ public class EmailClientAccountOauthCredentialsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailClientAccountOauthCredentials instance.
+     */
     public EmailClientAccountOauthCredentials build() {
         return model;
     }
+    /**
+     * Set EmailClientAccountOauthCredentials.login and return builder.
+     * @param login Email client account login             
+     * @return builder
+    **/
     public EmailClientAccountOauthCredentialsBuilder login(String login) {
         this.model.login(login);
         return this;
     }
+    /**
+     * Set EmailClientAccountOauthCredentials.clientId and return builder.
+     * @param clientId The client ID obtained from the Google Cloud Console during application registration.             
+     * @return builder
+    **/
     public EmailClientAccountOauthCredentialsBuilder clientId(String clientId) {
         this.model.clientId(clientId);
         return this;
     }
+    /**
+     * Set EmailClientAccountOauthCredentials.clientSecret and return builder.
+     * @param clientSecret The client secret obtained during application registration.             
+     * @return builder
+    **/
     public EmailClientAccountOauthCredentialsBuilder clientSecret(String clientSecret) {
         this.model.clientSecret(clientSecret);
         return this;
     }
+    /**
+     * Set EmailClientAccountOauthCredentials.refreshToken and return builder.
+     * @param refreshToken OAuth 2.0 refresh token             
+     * @return builder
+    **/
     public EmailClientAccountOauthCredentialsBuilder refreshToken(String refreshToken) {
         this.model.refreshToken(refreshToken);
         return this;
     }
+    /**
+     * Set EmailClientAccountOauthCredentials.requestUrl and return builder.
+     * @param requestUrl The url to obtain access token. If not specified, will try to discover from email client account host.             
+     * @return builder
+    **/
     public EmailClientAccountOauthCredentialsBuilder requestUrl(String requestUrl) {
         this.model.requestUrl(requestUrl);
         return this;

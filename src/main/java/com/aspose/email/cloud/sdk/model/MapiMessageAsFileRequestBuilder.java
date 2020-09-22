@@ -48,13 +48,26 @@ public class MapiMessageAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiMessageAsFileRequest instance.
+     */
     public MapiMessageAsFileRequest build() {
         return model;
     }
+    /**
+     * Set MapiMessageAsFileRequest.format and return builder.
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @return builder
+    **/
     public MapiMessageAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set MapiMessageAsFileRequest.value and return builder.
+     * @param value MAPI message model.             
+     * @return builder
+    **/
     public MapiMessageAsFileRequestBuilder value(MapiMessageDto value) {
         this.model.value(value);
         return this;

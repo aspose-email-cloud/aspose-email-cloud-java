@@ -48,9 +48,17 @@ public class EmailListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailList instance.
+     */
     public EmailList build() {
         return model;
     }
+    /**
+     * Set EmailList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public EmailListBuilder value(List<EmailDto> value) {
         this.model.value(value);
         return this;

@@ -48,13 +48,26 @@ public class StorageModelOfEmailClientMultiAccountBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfEmailClientMultiAccount instance.
+     */
     public StorageModelOfEmailClientMultiAccount build() {
         return model;
     }
+    /**
+     * Set StorageModelOfEmailClientMultiAccount.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfEmailClientMultiAccountBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfEmailClientMultiAccount.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfEmailClientMultiAccountBuilder value(EmailClientMultiAccount value) {
         this.model.value(value);
         return this;

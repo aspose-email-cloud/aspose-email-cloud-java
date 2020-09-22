@@ -48,13 +48,26 @@ public class CalendarAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build CalendarAsFileRequest instance.
+     */
     public CalendarAsFileRequest build() {
         return model;
     }
+    /**
+     * Set CalendarAsFileRequest.format and return builder.
+     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @return builder
+    **/
     public CalendarAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set CalendarAsFileRequest.value and return builder.
+     * @param value iCalendar model             
+     * @return builder
+    **/
     public CalendarAsFileRequestBuilder value(CalendarDto value) {
         this.model.value(value);
         return this;

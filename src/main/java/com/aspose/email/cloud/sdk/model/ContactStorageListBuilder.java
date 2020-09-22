@@ -48,9 +48,17 @@ public class ContactStorageListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContactStorageList instance.
+     */
     public ContactStorageList build() {
         return model;
     }
+    /**
+     * Set ContactStorageList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ContactStorageListBuilder value(List<StorageModelOfContactDto> value) {
         this.model.value(value);
         return this;

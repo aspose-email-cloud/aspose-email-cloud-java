@@ -48,13 +48,26 @@ public class ClientAccountSaveMultiRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientAccountSaveMultiRequest instance.
+     */
     public ClientAccountSaveMultiRequest build() {
         return model;
     }
+    /**
+     * Set ClientAccountSaveMultiRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public ClientAccountSaveMultiRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set ClientAccountSaveMultiRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ClientAccountSaveMultiRequestBuilder value(EmailClientMultiAccount value) {
         this.model.value(value);
         return this;

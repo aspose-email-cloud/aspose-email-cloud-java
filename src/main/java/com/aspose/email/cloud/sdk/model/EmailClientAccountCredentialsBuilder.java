@@ -48,9 +48,17 @@ public class EmailClientAccountCredentialsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailClientAccountCredentials instance.
+     */
     public EmailClientAccountCredentials build() {
         return model;
     }
+    /**
+     * Set EmailClientAccountCredentials.login and return builder.
+     * @param login Email client account login             
+     * @return builder
+    **/
     public EmailClientAccountCredentialsBuilder login(String login) {
         this.model.login(login);
         return this;

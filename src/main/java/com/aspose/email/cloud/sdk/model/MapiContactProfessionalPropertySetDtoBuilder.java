@@ -48,33 +48,71 @@ public class MapiContactProfessionalPropertySetDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactProfessionalPropertySetDto instance.
+     */
     public MapiContactProfessionalPropertySetDto build() {
         return model;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.title and return builder.
+     * @param title Gets or sets the job title of the contact             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder title(String title) {
         this.model.title(title);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.companyName and return builder.
+     * @param companyName Gets or sets the company that employs the contact             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder companyName(String companyName) {
         this.model.companyName(companyName);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.departmentName and return builder.
+     * @param departmentName Gets or sets the name of the department to which the contact belongs             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder departmentName(String departmentName) {
         this.model.departmentName(departmentName);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.officeLocation and return builder.
+     * @param officeLocation Gets or sets the location of the office that the contact works in             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder officeLocation(String officeLocation) {
         this.model.officeLocation(officeLocation);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.managerName and return builder.
+     * @param managerName Gets or sets the name of the contact&#39;s manager             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder managerName(String managerName) {
         this.model.managerName(managerName);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.assistant and return builder.
+     * @param assistant Gets or sets the name of the contact&#39;s assistant             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder assistant(String assistant) {
         this.model.assistant(assistant);
         return this;
     }
+    /**
+     * Set MapiContactProfessionalPropertySetDto.profession and return builder.
+     * @param profession Gets or sets the profession of the contact             
+     * @return builder
+    **/
     public MapiContactProfessionalPropertySetDtoBuilder profession(String profession) {
         this.model.profession(profession);
         return this;

@@ -48,13 +48,26 @@ public class AiNameWeightedBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameWeighted instance.
+     */
     public AiNameWeighted build() {
         return model;
     }
+    /**
+     * Set AiNameWeighted.name and return builder.
+     * @param name Name             
+     * @return builder
+    **/
     public AiNameWeightedBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set AiNameWeighted.score and return builder.
+     * @param score Score of name             
+     * @return builder
+    **/
     public AiNameWeightedBuilder score(Double score) {
         this.model.score(score);
         return this;

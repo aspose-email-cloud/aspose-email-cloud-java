@@ -48,9 +48,17 @@ public class CalendarStorageListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build CalendarStorageList instance.
+     */
     public CalendarStorageList build() {
         return model;
     }
+    /**
+     * Set CalendarStorageList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public CalendarStorageListBuilder value(List<StorageModelOfCalendarDto> value) {
         this.model.value(value);
         return this;

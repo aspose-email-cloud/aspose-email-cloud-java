@@ -48,9 +48,17 @@ public class AiBcrImageBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiBcrImage instance.
+     */
     public AiBcrImage build() {
         return model;
     }
+    /**
+     * Set AiBcrImage.isSingle and return builder.
+     * @param isSingle Determines that image contains single VCard or more.             
+     * @return builder
+    **/
     public AiBcrImageBuilder isSingle(Boolean isSingle) {
         this.model.isSingle(isSingle);
         return this;

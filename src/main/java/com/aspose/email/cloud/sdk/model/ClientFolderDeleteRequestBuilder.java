@@ -48,13 +48,26 @@ public class ClientFolderDeleteRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientFolderDeleteRequest instance.
+     */
     public ClientFolderDeleteRequest build() {
         return model;
     }
+    /**
+     * Set ClientFolderDeleteRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientFolderDeleteRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientFolderDeleteRequest.folder and return builder.
+     * @param folder Path to folder to delete.             
+     * @return builder
+    **/
     public ClientFolderDeleteRequestBuilder folder(String folder) {
         this.model.folder(folder);
         return this;

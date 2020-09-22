@@ -48,13 +48,26 @@ public class ContactAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContactAsFileRequest instance.
+     */
     public ContactAsFileRequest build() {
         return model;
     }
+    /**
+     * Set ContactAsFileRequest.format and return builder.
+     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+     * @return builder
+    **/
     public ContactAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set ContactAsFileRequest.value and return builder.
+     * @param value Contact model.             
+     * @return builder
+    **/
     public ContactAsFileRequestBuilder value(ContactDto value) {
         this.model.value(value);
         return this;

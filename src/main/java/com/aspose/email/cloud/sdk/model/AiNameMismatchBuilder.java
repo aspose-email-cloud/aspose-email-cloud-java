@@ -48,17 +48,35 @@ public class AiNameMismatchBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameMismatch instance.
+     */
     public AiNameMismatch build() {
         return model;
     }
+    /**
+     * Set AiNameMismatch.category and return builder.
+     * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+     * @return builder
+    **/
     public AiNameMismatchBuilder category(String category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set AiNameMismatch.similarity and return builder.
+     * @param similarity Similarity score             
+     * @return builder
+    **/
     public AiNameMismatchBuilder similarity(Double similarity) {
         this.model.similarity(similarity);
         return this;
     }
+    /**
+     * Set AiNameMismatch.explanation and return builder.
+     * @param explanation Explanation or mismatch subtype             
+     * @return builder
+    **/
     public AiNameMismatchBuilder explanation(String explanation) {
         this.model.explanation(explanation);
         return this;

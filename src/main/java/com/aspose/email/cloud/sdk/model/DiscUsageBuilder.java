@@ -48,13 +48,26 @@ public class DiscUsageBuilder {
         this.model = model;
     }
 
+    /**
+     * Build DiscUsage instance.
+     */
     public DiscUsage build() {
         return model;
     }
+    /**
+     * Set DiscUsage.usedSize and return builder.
+     * @param usedSize Application used disc space.
+     * @return builder
+    **/
     public DiscUsageBuilder usedSize(Long usedSize) {
         this.model.usedSize(usedSize);
         return this;
     }
+    /**
+     * Set DiscUsage.totalSize and return builder.
+     * @param totalSize Total disc space.
+     * @return builder
+    **/
     public DiscUsageBuilder totalSize(Long totalSize) {
         this.model.totalSize(totalSize);
         return this;

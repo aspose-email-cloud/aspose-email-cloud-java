@@ -48,21 +48,44 @@ public class EmailConfigDiscoverPasswordRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailConfigDiscoverPasswordRequest instance.
+     */
     public EmailConfigDiscoverPasswordRequest build() {
         return model;
     }
+    /**
+     * Set EmailConfigDiscoverPasswordRequest.address and return builder.
+     * @param address Email address to discover.             
+     * @return builder
+    **/
     public EmailConfigDiscoverPasswordRequestBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverPasswordRequest.fastProcessing and return builder.
+     * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     * @return builder
+    **/
     public EmailConfigDiscoverPasswordRequestBuilder fastProcessing(Boolean fastProcessing) {
         this.model.fastProcessing(fastProcessing);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverPasswordRequest.login and return builder.
+     * @param login Email account login. If not specified, address used as a login.             
+     * @return builder
+    **/
     public EmailConfigDiscoverPasswordRequestBuilder login(String login) {
         this.model.login(login);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverPasswordRequest.password and return builder.
+     * @param password Email account password.             
+     * @return builder
+    **/
     public EmailConfigDiscoverPasswordRequestBuilder password(String password) {
         this.model.password(password);
         return this;

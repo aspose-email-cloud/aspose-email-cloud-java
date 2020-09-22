@@ -48,21 +48,44 @@ public class ClientMessageAppendRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientMessageAppendRequest instance.
+     */
     public ClientMessageAppendRequest build() {
         return model;
     }
+    /**
+     * Set ClientMessageAppendRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientMessageAppendRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientMessageAppendRequest.folder and return builder.
+     * @param folder Path to folder on email server to append message to.             
+     * @return builder
+    **/
     public ClientMessageAppendRequestBuilder folder(String folder) {
         this.model.folder(folder);
         return this;
     }
+    /**
+     * Set ClientMessageAppendRequest.message and return builder.
+     * @param message Message to append.             
+     * @return builder
+    **/
     public ClientMessageAppendRequestBuilder message(MailMessageBase message) {
         this.model.message(message);
         return this;
     }
+    /**
+     * Set ClientMessageAppendRequest.markAsSent and return builder.
+     * @param markAsSent Determines that appended message should be market as sent or not.             
+     * @return builder
+    **/
     public ClientMessageAppendRequestBuilder markAsSent(Boolean markAsSent) {
         this.model.markAsSent(markAsSent);
         return this;

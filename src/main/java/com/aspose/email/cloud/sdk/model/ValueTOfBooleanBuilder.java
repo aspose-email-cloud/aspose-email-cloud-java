@@ -48,9 +48,17 @@ public class ValueTOfBooleanBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ValueTOfBoolean instance.
+     */
     public ValueTOfBoolean build() {
         return model;
     }
+    /**
+     * Set ValueTOfBoolean.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ValueTOfBooleanBuilder value(Boolean value) {
         this.model.value(value);
         return this;

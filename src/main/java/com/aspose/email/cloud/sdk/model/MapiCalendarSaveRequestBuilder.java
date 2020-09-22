@@ -48,17 +48,35 @@ public class MapiCalendarSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarSaveRequest instance.
+     */
     public MapiCalendarSaveRequest build() {
         return model;
     }
+    /**
+     * Set MapiCalendarSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public MapiCalendarSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set MapiCalendarSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public MapiCalendarSaveRequestBuilder value(MapiCalendarDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set MapiCalendarSaveRequest.format and return builder.
+     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @return builder
+    **/
     public MapiCalendarSaveRequestBuilder format(String format) {
         this.model.format(format);
         return this;

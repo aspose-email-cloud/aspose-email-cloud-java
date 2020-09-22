@@ -48,13 +48,26 @@ public class MapiLegacyFreeBusyPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiLegacyFreeBusyPropertyDto instance.
+     */
     public MapiLegacyFreeBusyPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiLegacyFreeBusyPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiLegacyFreeBusyPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiLegacyFreeBusyPropertyDto.value and return builder.
+     * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+     * @return builder
+    **/
     public MapiLegacyFreeBusyPropertyDtoBuilder value(String value) {
         this.model.value(value);
         return this;

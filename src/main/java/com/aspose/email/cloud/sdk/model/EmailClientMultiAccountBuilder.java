@@ -48,13 +48,26 @@ public class EmailClientMultiAccountBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailClientMultiAccount instance.
+     */
     public EmailClientMultiAccount build() {
         return model;
     }
+    /**
+     * Set EmailClientMultiAccount.receiveAccounts and return builder.
+     * @param receiveAccounts Email client receive accounts             
+     * @return builder
+    **/
     public EmailClientMultiAccountBuilder receiveAccounts(List<EmailClientAccount> receiveAccounts) {
         this.model.receiveAccounts(receiveAccounts);
         return this;
     }
+    /**
+     * Set EmailClientMultiAccount.sendAccount and return builder.
+     * @param sendAccount Email client send account             
+     * @return builder
+    **/
     public EmailClientMultiAccountBuilder sendAccount(EmailClientAccount sendAccount) {
         this.model.sendAccount(sendAccount);
         return this;

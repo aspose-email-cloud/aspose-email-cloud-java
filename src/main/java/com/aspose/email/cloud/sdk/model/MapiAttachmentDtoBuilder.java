@@ -48,13 +48,26 @@ public class MapiAttachmentDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiAttachmentDto instance.
+     */
     public MapiAttachmentDto build() {
         return model;
     }
+    /**
+     * Set MapiAttachmentDto.name and return builder.
+     * @param name Attachment&#39;s name             
+     * @return builder
+    **/
     public MapiAttachmentDtoBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set MapiAttachmentDto.dataBase64 and return builder.
+     * @param dataBase64 Attachment data represented as Base64 string.             
+     * @return builder
+    **/
     public MapiAttachmentDtoBuilder dataBase64(String dataBase64) {
         this.model.dataBase64(dataBase64);
         return this;

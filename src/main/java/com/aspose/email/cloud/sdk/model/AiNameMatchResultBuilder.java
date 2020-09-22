@@ -48,13 +48,26 @@ public class AiNameMatchResultBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameMatchResult instance.
+     */
     public AiNameMatchResult build() {
         return model;
     }
+    /**
+     * Set AiNameMatchResult.similarity and return builder.
+     * @param similarity Similarity score             
+     * @return builder
+    **/
     public AiNameMatchResultBuilder similarity(Double similarity) {
         this.model.similarity(similarity);
         return this;
     }
+    /**
+     * Set AiNameMatchResult.mismatches and return builder.
+     * @param mismatches Detailed description of mismatches             
+     * @return builder
+    **/
     public AiNameMatchResultBuilder mismatches(List<AiNameMismatch> mismatches) {
         this.model.mismatches(mismatches);
         return this;

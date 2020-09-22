@@ -48,9 +48,17 @@ public class ClientAccountBaseRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientAccountBaseRequest instance.
+     */
     public ClientAccountBaseRequest build() {
         return model;
     }
+    /**
+     * Set ClientAccountBaseRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientAccountBaseRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;

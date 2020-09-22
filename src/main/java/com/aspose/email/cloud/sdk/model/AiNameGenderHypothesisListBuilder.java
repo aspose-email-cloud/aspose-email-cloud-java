@@ -48,9 +48,17 @@ public class AiNameGenderHypothesisListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameGenderHypothesisList instance.
+     */
     public AiNameGenderHypothesisList build() {
         return model;
     }
+    /**
+     * Set AiNameGenderHypothesisList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public AiNameGenderHypothesisListBuilder value(List<AiNameGenderHypothesis> value) {
         this.model.value(value);
         return this;

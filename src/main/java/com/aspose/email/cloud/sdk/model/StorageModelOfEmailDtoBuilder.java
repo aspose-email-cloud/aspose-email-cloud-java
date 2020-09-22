@@ -48,13 +48,26 @@ public class StorageModelOfEmailDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfEmailDto instance.
+     */
     public StorageModelOfEmailDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfEmailDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfEmailDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfEmailDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfEmailDtoBuilder value(EmailDto value) {
         this.model.value(value);
         return this;

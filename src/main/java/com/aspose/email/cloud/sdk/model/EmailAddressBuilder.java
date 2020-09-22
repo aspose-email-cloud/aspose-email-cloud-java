@@ -48,29 +48,62 @@ public class EmailAddressBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailAddress instance.
+     */
     public EmailAddress build() {
         return model;
     }
+    /**
+     * Set EmailAddress.category and return builder.
+     * @param category Address category.             
+     * @return builder
+    **/
     public EmailAddressBuilder category(EnumWithCustomOfEmailAddressCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set EmailAddress.displayName and return builder.
+     * @param displayName Display name.             
+     * @return builder
+    **/
     public EmailAddressBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set EmailAddress.preferred and return builder.
+     * @param preferred Defines whether email address is preferred.             
+     * @return builder
+    **/
     public EmailAddressBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;
     }
+    /**
+     * Set EmailAddress.routingType and return builder.
+     * @param routingType A routing type for an email.             
+     * @return builder
+    **/
     public EmailAddressBuilder routingType(String routingType) {
         this.model.routingType(routingType);
         return this;
     }
+    /**
+     * Set EmailAddress.address and return builder.
+     * @param address Email address.             
+     * @return builder
+    **/
     public EmailAddressBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set EmailAddress.originalAddressString and return builder.
+     * @param originalAddressString The original e-mail address string             
+     * @return builder
+    **/
     public EmailAddressBuilder originalAddressString(String originalAddressString) {
         this.model.originalAddressString(originalAddressString);
         return this;

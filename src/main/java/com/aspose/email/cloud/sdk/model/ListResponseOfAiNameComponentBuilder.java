@@ -48,9 +48,17 @@ public class ListResponseOfAiNameComponentBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfAiNameComponent instance.
+     */
     public ListResponseOfAiNameComponent build() {
         return model;
     }
+    /**
+     * Set ListResponseOfAiNameComponent.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfAiNameComponentBuilder value(List<AiNameComponent> value) {
         this.model.value(value);
         return this;

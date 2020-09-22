@@ -48,21 +48,44 @@ public class ErrorBuilder {
         this.model = model;
     }
 
+    /**
+     * Build Error instance.
+     */
     public Error build() {
         return model;
     }
+    /**
+     * Set Error.code and return builder.
+     * @param code Code             
+     * @return builder
+    **/
     public ErrorBuilder code(String code) {
         this.model.code(code);
         return this;
     }
+    /**
+     * Set Error.message and return builder.
+     * @param message Message             
+     * @return builder
+    **/
     public ErrorBuilder message(String message) {
         this.model.message(message);
         return this;
     }
+    /**
+     * Set Error.description and return builder.
+     * @param description Description             
+     * @return builder
+    **/
     public ErrorBuilder description(String description) {
         this.model.description(description);
         return this;
     }
+    /**
+     * Set Error.innerError and return builder.
+     * @param innerError Inner Error             
+     * @return builder
+    **/
     public ErrorBuilder innerError(ErrorDetails innerError) {
         this.model.innerError(innerError);
         return this;

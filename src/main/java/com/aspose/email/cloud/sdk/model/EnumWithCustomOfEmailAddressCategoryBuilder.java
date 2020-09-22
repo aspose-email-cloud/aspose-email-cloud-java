@@ -48,13 +48,26 @@ public class EnumWithCustomOfEmailAddressCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfEmailAddressCategory instance.
+     */
     public EnumWithCustomOfEmailAddressCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfEmailAddressCategory.value and return builder.
+     * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+     * @return builder
+    **/
     public EnumWithCustomOfEmailAddressCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfEmailAddressCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfEmailAddressCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

@@ -48,21 +48,44 @@ public class EmailThreadBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailThread instance.
+     */
     public EmailThread build() {
         return model;
     }
+    /**
+     * Set EmailThread.id and return builder.
+     * @param id Thread identifier             
+     * @return builder
+    **/
     public EmailThreadBuilder id(String id) {
         this.model.id(id);
         return this;
     }
+    /**
+     * Set EmailThread.subject and return builder.
+     * @param subject Thread subject             
+     * @return builder
+    **/
     public EmailThreadBuilder subject(String subject) {
         this.model.subject(subject);
         return this;
     }
+    /**
+     * Set EmailThread.messages and return builder.
+     * @param messages List of messages in thread             
+     * @return builder
+    **/
     public EmailThreadBuilder messages(List<EmailDto> messages) {
         this.model.messages(messages);
         return this;
     }
+    /**
+     * Set EmailThread.folder and return builder.
+     * @param folder Thread folder location             
+     * @return builder
+    **/
     public EmailThreadBuilder folder(String folder) {
         this.model.folder(folder);
         return this;

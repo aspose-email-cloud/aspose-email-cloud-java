@@ -48,17 +48,35 @@ public class MapiContactPhysicalAddressPropertySetDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactPhysicalAddressPropertySetDto instance.
+     */
     public MapiContactPhysicalAddressPropertySetDto build() {
         return model;
     }
+    /**
+     * Set MapiContactPhysicalAddressPropertySetDto.workAddress and return builder.
+     * @param workAddress Specifies the address of the contact&#39;s work             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressPropertySetDtoBuilder workAddress(MapiContactPhysicalAddressDto workAddress) {
         this.model.workAddress(workAddress);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressPropertySetDto.homeAddress and return builder.
+     * @param homeAddress Specifies the address of the contact&#39;s home             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressPropertySetDtoBuilder homeAddress(MapiContactPhysicalAddressDto homeAddress) {
         this.model.homeAddress(homeAddress);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressPropertySetDto.otherAddress and return builder.
+     * @param otherAddress Specifies the other contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressPropertySetDtoBuilder otherAddress(MapiContactPhysicalAddressDto otherAddress) {
         this.model.otherAddress(otherAddress);
         return this;

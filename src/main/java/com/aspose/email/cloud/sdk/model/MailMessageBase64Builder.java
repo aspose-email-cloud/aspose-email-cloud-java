@@ -48,13 +48,26 @@ public class MailMessageBase64Builder {
         this.model = model;
     }
 
+    /**
+     * Build MailMessageBase64 instance.
+     */
     public MailMessageBase64 build() {
         return model;
     }
+    /**
+     * Set MailMessageBase64.valueBase64 and return builder.
+     * @param valueBase64 Email message file data encoded to Base64 string.             
+     * @return builder
+    **/
     public MailMessageBase64Builder valueBase64(String valueBase64) {
         this.model.valueBase64(valueBase64);
         return this;
     }
+    /**
+     * Set MailMessageBase64.format and return builder.
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @return builder
+    **/
     public MailMessageBase64Builder format(String format) {
         this.model.format(format);
         return this;

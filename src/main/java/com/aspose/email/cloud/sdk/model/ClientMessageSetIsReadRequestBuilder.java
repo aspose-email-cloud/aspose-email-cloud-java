@@ -48,17 +48,35 @@ public class ClientMessageSetIsReadRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientMessageSetIsReadRequest instance.
+     */
     public ClientMessageSetIsReadRequest build() {
         return model;
     }
+    /**
+     * Set ClientMessageSetIsReadRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientMessageSetIsReadRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientMessageSetIsReadRequest.messageId and return builder.
+     * @param messageId Message identifier.             
+     * @return builder
+    **/
     public ClientMessageSetIsReadRequestBuilder messageId(String messageId) {
         this.model.messageId(messageId);
         return this;
     }
+    /**
+     * Set ClientMessageSetIsReadRequest.isRead and return builder.
+     * @param isRead Message is read flag.             
+     * @return builder
+    **/
     public ClientMessageSetIsReadRequestBuilder isRead(Boolean isRead) {
         this.model.isRead(isRead);
         return this;

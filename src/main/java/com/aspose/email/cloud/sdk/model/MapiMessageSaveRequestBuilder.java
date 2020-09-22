@@ -48,17 +48,35 @@ public class MapiMessageSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiMessageSaveRequest instance.
+     */
     public MapiMessageSaveRequest build() {
         return model;
     }
+    /**
+     * Set MapiMessageSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public MapiMessageSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set MapiMessageSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public MapiMessageSaveRequestBuilder value(MapiMessageDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set MapiMessageSaveRequest.format and return builder.
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @return builder
+    **/
     public MapiMessageSaveRequestBuilder format(String format) {
         this.model.format(format);
         return this;

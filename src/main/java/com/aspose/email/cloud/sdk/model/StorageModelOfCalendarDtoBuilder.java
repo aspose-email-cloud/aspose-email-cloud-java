@@ -48,13 +48,26 @@ public class StorageModelOfCalendarDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfCalendarDto instance.
+     */
     public StorageModelOfCalendarDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfCalendarDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfCalendarDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfCalendarDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfCalendarDtoBuilder value(CalendarDto value) {
         this.model.value(value);
         return this;

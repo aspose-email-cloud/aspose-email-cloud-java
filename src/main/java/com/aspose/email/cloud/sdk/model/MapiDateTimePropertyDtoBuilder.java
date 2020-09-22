@@ -48,13 +48,26 @@ public class MapiDateTimePropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiDateTimePropertyDto instance.
+     */
     public MapiDateTimePropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiDateTimePropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiDateTimePropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiDateTimePropertyDto.value and return builder.
+     * @param value Property value             
+     * @return builder
+    **/
     public MapiDateTimePropertyDtoBuilder value(Date value) {
         this.model.value(value);
         return this;

@@ -48,13 +48,26 @@ public class AiBcrOptionsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiBcrOptions instance.
+     */
     public AiBcrOptions build() {
         return model;
     }
+    /**
+     * Set AiBcrOptions.languages and return builder.
+     * @param languages Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.             
+     * @return builder
+    **/
     public AiBcrOptionsBuilder languages(String languages) {
         this.model.languages(languages);
         return this;
     }
+    /**
+     * Set AiBcrOptions.countries and return builder.
+     * @param countries Comma-separated codes of countries.             
+     * @return builder
+    **/
     public AiBcrOptionsBuilder countries(String countries) {
         this.model.countries(countries);
         return this;

@@ -48,9 +48,17 @@ public class ListResponseOfEmailThreadBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfEmailThread instance.
+     */
     public ListResponseOfEmailThread build() {
         return model;
     }
+    /**
+     * Set ListResponseOfEmailThread.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfEmailThreadBuilder value(List<EmailThread> value) {
         this.model.value(value);
         return this;

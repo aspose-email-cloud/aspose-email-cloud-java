@@ -48,13 +48,26 @@ public class MapiFileAsPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiFileAsPropertyDto instance.
+     */
     public MapiFileAsPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiFileAsPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiFileAsPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiFileAsPropertyDto.value and return builder.
+     * @param value Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
+     * @return builder
+    **/
     public MapiFileAsPropertyDtoBuilder value(String value) {
         this.model.value(value);
         return this;

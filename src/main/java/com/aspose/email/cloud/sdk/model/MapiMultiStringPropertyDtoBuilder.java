@@ -48,13 +48,26 @@ public class MapiMultiStringPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiMultiStringPropertyDto instance.
+     */
     public MapiMultiStringPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiMultiStringPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiMultiStringPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiMultiStringPropertyDto.values and return builder.
+     * @param values Property values             
+     * @return builder
+    **/
     public MapiMultiStringPropertyDtoBuilder values(List<String> values) {
         this.model.values(values);
         return this;

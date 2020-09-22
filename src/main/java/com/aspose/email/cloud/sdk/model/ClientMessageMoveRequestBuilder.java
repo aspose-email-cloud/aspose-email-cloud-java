@@ -48,21 +48,44 @@ public class ClientMessageMoveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientMessageMoveRequest instance.
+     */
     public ClientMessageMoveRequest build() {
         return model;
     }
+    /**
+     * Set ClientMessageMoveRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientMessageMoveRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientMessageMoveRequest.messageId and return builder.
+     * @param messageId Message identifier.             
+     * @return builder
+    **/
     public ClientMessageMoveRequestBuilder messageId(String messageId) {
         this.model.messageId(messageId);
         return this;
     }
+    /**
+     * Set ClientMessageMoveRequest.sourceFolder and return builder.
+     * @param sourceFolder Folder to move message from.             
+     * @return builder
+    **/
     public ClientMessageMoveRequestBuilder sourceFolder(String sourceFolder) {
         this.model.sourceFolder(sourceFolder);
         return this;
     }
+    /**
+     * Set ClientMessageMoveRequest.destinationFolder and return builder.
+     * @param destinationFolder Folder to move message to.             
+     * @return builder
+    **/
     public ClientMessageMoveRequestBuilder destinationFolder(String destinationFolder) {
         this.model.destinationFolder(destinationFolder);
         return this;

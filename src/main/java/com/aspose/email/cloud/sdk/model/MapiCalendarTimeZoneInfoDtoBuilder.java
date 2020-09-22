@@ -48,33 +48,71 @@ public class MapiCalendarTimeZoneInfoDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarTimeZoneInfoDto instance.
+     */
     public MapiCalendarTimeZoneInfoDto build() {
         return model;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.bias and return builder.
+     * @param bias Time zone&#39;s offset in minutes from UTC.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder bias(Integer bias) {
         this.model.bias(bias);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.daylightBias and return builder.
+     * @param daylightBias Offset in minutes from lBias during daylight saving time.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder daylightBias(Integer daylightBias) {
         this.model.daylightBias(daylightBias);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.daylightDate and return builder.
+     * @param daylightDate Date and local time that indicate when to begin using the DaylightBias.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder daylightDate(MapiCalendarTimeZoneRuleDto daylightDate) {
         this.model.daylightDate(daylightDate);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.standardBias and return builder.
+     * @param standardBias Offset in minutes from lBias during standard time.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder standardBias(Integer standardBias) {
         this.model.standardBias(standardBias);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.standardDate and return builder.
+     * @param standardDate Date and local time that indicate when to begin using the StandardBias.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder standardDate(MapiCalendarTimeZoneRuleDto standardDate) {
         this.model.standardDate(standardDate);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.timeZoneFlags and return builder.
+     * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder timeZoneFlags(List<String> timeZoneFlags) {
         this.model.timeZoneFlags(timeZoneFlags);
         return this;
     }
+    /**
+     * Set MapiCalendarTimeZoneInfoDto.year and return builder.
+     * @param year Year in which this rule is scheduled to take effect.             
+     * @return builder
+    **/
     public MapiCalendarTimeZoneInfoDtoBuilder year(Integer year) {
         this.model.year(year);
         return this;

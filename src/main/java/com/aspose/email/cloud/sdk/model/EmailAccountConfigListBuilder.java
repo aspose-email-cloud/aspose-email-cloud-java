@@ -48,9 +48,17 @@ public class EmailAccountConfigListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailAccountConfigList instance.
+     */
     public EmailAccountConfigList build() {
         return model;
     }
+    /**
+     * Set EmailAccountConfigList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public EmailAccountConfigListBuilder value(List<EmailAccountConfig> value) {
         this.model.value(value);
         return this;

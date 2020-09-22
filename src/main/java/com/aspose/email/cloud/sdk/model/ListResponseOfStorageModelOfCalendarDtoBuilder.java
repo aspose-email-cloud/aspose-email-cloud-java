@@ -48,9 +48,17 @@ public class ListResponseOfStorageModelOfCalendarDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfStorageModelOfCalendarDto instance.
+     */
     public ListResponseOfStorageModelOfCalendarDto build() {
         return model;
     }
+    /**
+     * Set ListResponseOfStorageModelOfCalendarDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfStorageModelOfCalendarDtoBuilder value(List<StorageModelOfCalendarDto> value) {
         this.model.value(value);
         return this;

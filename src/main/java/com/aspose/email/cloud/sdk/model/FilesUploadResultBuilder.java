@@ -48,13 +48,26 @@ public class FilesUploadResultBuilder {
         this.model = model;
     }
 
+    /**
+     * Build FilesUploadResult instance.
+     */
     public FilesUploadResult build() {
         return model;
     }
+    /**
+     * Set FilesUploadResult.uploaded and return builder.
+     * @param uploaded List of uploaded file names
+     * @return builder
+    **/
     public FilesUploadResultBuilder uploaded(List<String> uploaded) {
         this.model.uploaded(uploaded);
         return this;
     }
+    /**
+     * Set FilesUploadResult.errors and return builder.
+     * @param errors List of errors.
+     * @return builder
+    **/
     public FilesUploadResultBuilder errors(List<Error> errors) {
         this.model.errors(errors);
         return this;

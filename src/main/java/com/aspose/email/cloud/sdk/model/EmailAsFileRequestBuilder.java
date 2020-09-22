@@ -48,13 +48,26 @@ public class EmailAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailAsFileRequest instance.
+     */
     public EmailAsFileRequest build() {
         return model;
     }
+    /**
+     * Set EmailAsFileRequest.format and return builder.
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @return builder
+    **/
     public EmailAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set EmailAsFileRequest.value and return builder.
+     * @param value Email model.             
+     * @return builder
+    **/
     public EmailAsFileRequestBuilder value(EmailDto value) {
         this.model.value(value);
         return this;

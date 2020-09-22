@@ -48,21 +48,44 @@ public class AiNameComponentBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameComponent instance.
+     */
     public AiNameComponent build() {
         return model;
     }
+    /**
+     * Set AiNameComponent.value and return builder.
+     * @param value Component value             
+     * @return builder
+    **/
     public AiNameComponentBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set AiNameComponent.category and return builder.
+     * @param category Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+     * @return builder
+    **/
     public AiNameComponentBuilder category(String category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set AiNameComponent.score and return builder.
+     * @param score Score from 0.0 to 1.0             
+     * @return builder
+    **/
     public AiNameComponentBuilder score(Double score) {
         this.model.score(score);
         return this;
     }
+    /**
+     * Set AiNameComponent.position and return builder.
+     * @param position Component position from 0             
+     * @return builder
+    **/
     public AiNameComponentBuilder position(Integer position) {
         this.model.position(position);
         return this;

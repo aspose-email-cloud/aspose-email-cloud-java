@@ -48,21 +48,44 @@ public class MapiRecipientDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiRecipientDto instance.
+     */
     public MapiRecipientDto build() {
         return model;
     }
+    /**
+     * Set MapiRecipientDto.emailAddress and return builder.
+     * @param emailAddress Email address of the message recipient or sender.             
+     * @return builder
+    **/
     public MapiRecipientDtoBuilder emailAddress(String emailAddress) {
         this.model.emailAddress(emailAddress);
         return this;
     }
+    /**
+     * Set MapiRecipientDto.addressType and return builder.
+     * @param addressType Type of the address of the message recipient or sender.             
+     * @return builder
+    **/
     public MapiRecipientDtoBuilder addressType(String addressType) {
         this.model.addressType(addressType);
         return this;
     }
+    /**
+     * Set MapiRecipientDto.displayName and return builder.
+     * @param displayName Display name of the message recipient or sender.             
+     * @return builder
+    **/
     public MapiRecipientDtoBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set MapiRecipientDto.recipientType and return builder.
+     * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+     * @return builder
+    **/
     public MapiRecipientDtoBuilder recipientType(String recipientType) {
         this.model.recipientType(recipientType);
         return this;

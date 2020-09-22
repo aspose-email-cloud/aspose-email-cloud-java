@@ -48,13 +48,26 @@ public class ErrorDetailsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ErrorDetails instance.
+     */
     public ErrorDetails build() {
         return model;
     }
+    /**
+     * Set ErrorDetails.requestId and return builder.
+     * @param requestId The request id
+     * @return builder
+    **/
     public ErrorDetailsBuilder requestId(String requestId) {
         this.model.requestId(requestId);
         return this;
     }
+    /**
+     * Set ErrorDetails.date and return builder.
+     * @param date Date
+     * @return builder
+    **/
     public ErrorDetailsBuilder date(Date date) {
         this.model.date(date);
         return this;

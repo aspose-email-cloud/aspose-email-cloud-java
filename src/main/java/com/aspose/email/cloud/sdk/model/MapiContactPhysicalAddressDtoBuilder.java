@@ -48,41 +48,89 @@ public class MapiContactPhysicalAddressDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactPhysicalAddressDto instance.
+     */
     public MapiContactPhysicalAddressDto build() {
         return model;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.isMailingAddress and return builder.
+     * @param isMailingAddress Gets or sets a value indicating whether this address is mailing address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder isMailingAddress(Boolean isMailingAddress) {
         this.model.isMailingAddress(isMailingAddress);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.street and return builder.
+     * @param street Specifies the street portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder street(String street) {
         this.model.street(street);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.city and return builder.
+     * @param city Specifies the city or locality portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder city(String city) {
         this.model.city(city);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.stateOrProvince and return builder.
+     * @param stateOrProvince Specifies the state or province portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder stateOrProvince(String stateOrProvince) {
         this.model.stateOrProvince(stateOrProvince);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.postalCode and return builder.
+     * @param postalCode Specifies the postal code (ZIP code) portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder postalCode(String postalCode) {
         this.model.postalCode(postalCode);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.country and return builder.
+     * @param country Specifies the country or region portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder country(String country) {
         this.model.country(country);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.countryCode and return builder.
+     * @param countryCode Specifies the country code portion of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder countryCode(String countryCode) {
         this.model.countryCode(countryCode);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.address and return builder.
+     * @param address Specifies the complete address of the contact&#39;s address             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set MapiContactPhysicalAddressDto.postOfficeBox and return builder.
+     * @param postOfficeBox Gets or sets the post office box             
+     * @return builder
+    **/
     public MapiContactPhysicalAddressDtoBuilder postOfficeBox(String postOfficeBox) {
         this.model.postOfficeBox(postOfficeBox);
         return this;

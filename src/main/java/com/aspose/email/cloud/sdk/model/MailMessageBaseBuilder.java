@@ -48,6 +48,9 @@ public class MailMessageBaseBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MailMessageBase instance.
+     */
     public MailMessageBase build() {
         return model;
     }

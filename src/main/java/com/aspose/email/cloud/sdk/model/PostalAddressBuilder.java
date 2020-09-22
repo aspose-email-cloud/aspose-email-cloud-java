@@ -48,49 +48,107 @@ public class PostalAddressBuilder {
         this.model = model;
     }
 
+    /**
+     * Build PostalAddress instance.
+     */
     public PostalAddress build() {
         return model;
     }
+    /**
+     * Set PostalAddress.address and return builder.
+     * @param address Address.             
+     * @return builder
+    **/
     public PostalAddressBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set PostalAddress.category and return builder.
+     * @param category Address category.             
+     * @return builder
+    **/
     public PostalAddressBuilder category(EnumWithCustomOfPostalAddressCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set PostalAddress.city and return builder.
+     * @param city Address&#39;s city.             
+     * @return builder
+    **/
     public PostalAddressBuilder city(String city) {
         this.model.city(city);
         return this;
     }
+    /**
+     * Set PostalAddress.country and return builder.
+     * @param country Address&#39;s country.             
+     * @return builder
+    **/
     public PostalAddressBuilder country(String country) {
         this.model.country(country);
         return this;
     }
+    /**
+     * Set PostalAddress.countryCode and return builder.
+     * @param countryCode Country code.             
+     * @return builder
+    **/
     public PostalAddressBuilder countryCode(String countryCode) {
         this.model.countryCode(countryCode);
         return this;
     }
+    /**
+     * Set PostalAddress.isMailingAddress and return builder.
+     * @param isMailingAddress Defines whether address may be used for mailing.             
+     * @return builder
+    **/
     public PostalAddressBuilder isMailingAddress(Boolean isMailingAddress) {
         this.model.isMailingAddress(isMailingAddress);
         return this;
     }
+    /**
+     * Set PostalAddress.postalCode and return builder.
+     * @param postalCode Postal code.             
+     * @return builder
+    **/
     public PostalAddressBuilder postalCode(String postalCode) {
         this.model.postalCode(postalCode);
         return this;
     }
+    /**
+     * Set PostalAddress.postOfficeBox and return builder.
+     * @param postOfficeBox Post Office box.             
+     * @return builder
+    **/
     public PostalAddressBuilder postOfficeBox(String postOfficeBox) {
         this.model.postOfficeBox(postOfficeBox);
         return this;
     }
+    /**
+     * Set PostalAddress.preferred and return builder.
+     * @param preferred Defines whether postal address is preferred.             
+     * @return builder
+    **/
     public PostalAddressBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;
     }
+    /**
+     * Set PostalAddress.stateOrProvince and return builder.
+     * @param stateOrProvince Address&#39;s region.             
+     * @return builder
+    **/
     public PostalAddressBuilder stateOrProvince(String stateOrProvince) {
         this.model.stateOrProvince(stateOrProvince);
         return this;
     }
+    /**
+     * Set PostalAddress.street and return builder.
+     * @param street Address&#39;s street.             
+     * @return builder
+    **/
     public PostalAddressBuilder street(String street) {
         this.model.street(street);
         return this;

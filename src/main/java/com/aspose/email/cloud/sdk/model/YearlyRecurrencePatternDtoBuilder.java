@@ -48,37 +48,80 @@ public class YearlyRecurrencePatternDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build YearlyRecurrencePatternDto instance.
+     */
     public YearlyRecurrencePatternDto build() {
         return model;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.interval and return builder.
+     * @param interval Number of recurrence units.             
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder interval(Integer interval) {
         this.model.interval(interval);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.occurs and return builder.
+     * @param occurs Number of occurrences of the recurrence pattern.             
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder occurs(Integer occurs) {
         this.model.occurs(occurs);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.endDate and return builder.
+     * @param endDate End date.             
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder endDate(Date endDate) {
         this.model.endDate(endDate);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.weekStart and return builder.
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder weekStart(String weekStart) {
         this.model.weekStart(weekStart);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.startDay and return builder.
+     * @param startDay Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder startDay(String startDay) {
         this.model.startDay(startDay);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.startMonth and return builder.
+     * @param startMonth Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder startMonth(String startMonth) {
         this.model.startMonth(startMonth);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.startOffset and return builder.
+     * @param startOffset Start offset.             
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder startOffset(Integer startOffset) {
         this.model.startOffset(startOffset);
         return this;
     }
+    /**
+     * Set YearlyRecurrencePatternDto.startPosition and return builder.
+     * @param startPosition Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+     * @return builder
+    **/
     public YearlyRecurrencePatternDtoBuilder startPosition(String startPosition) {
         this.model.startPosition(startPosition);
         return this;

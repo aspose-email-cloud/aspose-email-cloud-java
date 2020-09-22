@@ -48,13 +48,26 @@ public class EnumWithCustomOfAssociatedPersonCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfAssociatedPersonCategory instance.
+     */
     public EnumWithCustomOfAssociatedPersonCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfAssociatedPersonCategory.value and return builder.
+     * @param value Associated person&#39;s category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+     * @return builder
+    **/
     public EnumWithCustomOfAssociatedPersonCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfAssociatedPersonCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfAssociatedPersonCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

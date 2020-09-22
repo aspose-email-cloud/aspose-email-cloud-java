@@ -48,9 +48,17 @@ public class ListResponseOfStorageModelOfEmailDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfStorageModelOfEmailDto instance.
+     */
     public ListResponseOfStorageModelOfEmailDto build() {
         return model;
     }
+    /**
+     * Set ListResponseOfStorageModelOfEmailDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfStorageModelOfEmailDtoBuilder value(List<StorageModelOfEmailDto> value) {
         this.model.value(value);
         return this;

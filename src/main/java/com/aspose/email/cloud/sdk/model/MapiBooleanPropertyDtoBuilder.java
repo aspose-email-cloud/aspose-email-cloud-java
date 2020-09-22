@@ -48,13 +48,26 @@ public class MapiBooleanPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiBooleanPropertyDto instance.
+     */
     public MapiBooleanPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiBooleanPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiBooleanPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiBooleanPropertyDto.value and return builder.
+     * @param value Property value             
+     * @return builder
+    **/
     public MapiBooleanPropertyDtoBuilder value(Boolean value) {
         this.model.value(value);
         return this;

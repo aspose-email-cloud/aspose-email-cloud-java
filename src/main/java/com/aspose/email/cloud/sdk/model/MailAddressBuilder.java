@@ -48,21 +48,44 @@ public class MailAddressBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MailAddress instance.
+     */
     public MailAddress build() {
         return model;
     }
+    /**
+     * Set MailAddress.displayName and return builder.
+     * @param displayName Display name             
+     * @return builder
+    **/
     public MailAddressBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set MailAddress.address and return builder.
+     * @param address Address             
+     * @return builder
+    **/
     public MailAddressBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set MailAddress.participationStatus and return builder.
+     * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+     * @return builder
+    **/
     public MailAddressBuilder participationStatus(String participationStatus) {
         this.model.participationStatus(participationStatus);
         return this;
     }
+    /**
+     * Set MailAddress.originalAddressString and return builder.
+     * @param originalAddressString The original e-mail address string             
+     * @return builder
+    **/
     public MailAddressBuilder originalAddressString(String originalAddressString) {
         this.model.originalAddressString(originalAddressString);
         return this;

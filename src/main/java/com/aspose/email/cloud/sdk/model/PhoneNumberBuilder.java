@@ -48,17 +48,35 @@ public class PhoneNumberBuilder {
         this.model = model;
     }
 
+    /**
+     * Build PhoneNumber instance.
+     */
     public PhoneNumber build() {
         return model;
     }
+    /**
+     * Set PhoneNumber.category and return builder.
+     * @param category Phone number category.             
+     * @return builder
+    **/
     public PhoneNumberBuilder category(EnumWithCustomOfPhoneNumberCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set PhoneNumber.number and return builder.
+     * @param number Phone number.             
+     * @return builder
+    **/
     public PhoneNumberBuilder number(String number) {
         this.model.number(number);
         return this;
     }
+    /**
+     * Set PhoneNumber.preferred and return builder.
+     * @param preferred Defines whether phone number is preferred.             
+     * @return builder
+    **/
     public PhoneNumberBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;

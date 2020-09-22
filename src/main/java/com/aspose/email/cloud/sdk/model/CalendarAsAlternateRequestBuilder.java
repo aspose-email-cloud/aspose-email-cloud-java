@@ -48,17 +48,35 @@ public class CalendarAsAlternateRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build CalendarAsAlternateRequest instance.
+     */
     public CalendarAsAlternateRequest build() {
         return model;
     }
+    /**
+     * Set CalendarAsAlternateRequest.value and return builder.
+     * @param value iCalendar document model             
+     * @return builder
+    **/
     public CalendarAsAlternateRequestBuilder value(CalendarDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set CalendarAsAlternateRequest.action and return builder.
+     * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
+     * @return builder
+    **/
     public CalendarAsAlternateRequestBuilder action(String action) {
         this.model.action(action);
         return this;
     }
+    /**
+     * Set CalendarAsAlternateRequest.sequenceId and return builder.
+     * @param sequenceId iCalendar sequence id             
+     * @return builder
+    **/
     public CalendarAsAlternateRequestBuilder sequenceId(String sequenceId) {
         this.model.sequenceId(sequenceId);
         return this;

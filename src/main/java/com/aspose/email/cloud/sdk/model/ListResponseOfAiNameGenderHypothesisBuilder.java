@@ -48,9 +48,17 @@ public class ListResponseOfAiNameGenderHypothesisBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfAiNameGenderHypothesis instance.
+     */
     public ListResponseOfAiNameGenderHypothesis build() {
         return model;
     }
+    /**
+     * Set ListResponseOfAiNameGenderHypothesis.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfAiNameGenderHypothesisBuilder value(List<AiNameGenderHypothesis> value) {
         this.model.value(value);
         return this;

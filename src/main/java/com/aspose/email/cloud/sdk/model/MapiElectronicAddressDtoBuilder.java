@@ -48,25 +48,53 @@ public class MapiElectronicAddressDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiElectronicAddressDto instance.
+     */
     public MapiElectronicAddressDto build() {
         return model;
     }
+    /**
+     * Set MapiElectronicAddressDto.addressType and return builder.
+     * @param addressType Address type.             
+     * @return builder
+    **/
     public MapiElectronicAddressDtoBuilder addressType(String addressType) {
         this.model.addressType(addressType);
         return this;
     }
+    /**
+     * Set MapiElectronicAddressDto.emailAddress and return builder.
+     * @param emailAddress Email address.             
+     * @return builder
+    **/
     public MapiElectronicAddressDtoBuilder emailAddress(String emailAddress) {
         this.model.emailAddress(emailAddress);
         return this;
     }
+    /**
+     * Set MapiElectronicAddressDto.displayName and return builder.
+     * @param displayName User-readable display name for the e-mail address.             
+     * @return builder
+    **/
     public MapiElectronicAddressDtoBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set MapiElectronicAddressDto.faxNumber and return builder.
+     * @param faxNumber Telephone number of the mail user&#39;s primary fax machine.             
+     * @return builder
+    **/
     public MapiElectronicAddressDtoBuilder faxNumber(String faxNumber) {
         this.model.faxNumber(faxNumber);
         return this;
     }
+    /**
+     * Set MapiElectronicAddressDto.originalDisplayName and return builder.
+     * @param originalDisplayName SMTP e-mail address that  corresponds to the e-mail address.             
+     * @return builder
+    **/
     public MapiElectronicAddressDtoBuilder originalDisplayName(String originalDisplayName) {
         this.model.originalDisplayName(originalDisplayName);
         return this;

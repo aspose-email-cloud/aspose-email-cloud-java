@@ -48,25 +48,53 @@ public class StorageFileBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageFile instance.
+     */
     public StorageFile build() {
         return model;
     }
+    /**
+     * Set StorageFile.name and return builder.
+     * @param name File or folder name.
+     * @return builder
+    **/
     public StorageFileBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set StorageFile.isFolder and return builder.
+     * @param isFolder True if it is a folder.
+     * @return builder
+    **/
     public StorageFileBuilder isFolder(Boolean isFolder) {
         this.model.isFolder(isFolder);
         return this;
     }
+    /**
+     * Set StorageFile.modifiedDate and return builder.
+     * @param modifiedDate File or folder last modified DateTime.
+     * @return builder
+    **/
     public StorageFileBuilder modifiedDate(Date modifiedDate) {
         this.model.modifiedDate(modifiedDate);
         return this;
     }
+    /**
+     * Set StorageFile.size and return builder.
+     * @param size File or folder size.
+     * @return builder
+    **/
     public StorageFileBuilder size(Long size) {
         this.model.size(size);
         return this;
     }
+    /**
+     * Set StorageFile.path and return builder.
+     * @param path File or folder path.
+     * @return builder
+    **/
     public StorageFileBuilder path(String path) {
         this.model.path(path);
         return this;

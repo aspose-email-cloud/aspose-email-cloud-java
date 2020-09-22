@@ -48,9 +48,17 @@ public class StorageExistBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageExist instance.
+     */
     public StorageExist build() {
         return model;
     }
+    /**
+     * Set StorageExist.exists and return builder.
+     * @param exists Shows that the storage exists.             
+     * @return builder
+    **/
     public StorageExistBuilder exists(Boolean exists) {
         this.model.exists(exists);
         return this;

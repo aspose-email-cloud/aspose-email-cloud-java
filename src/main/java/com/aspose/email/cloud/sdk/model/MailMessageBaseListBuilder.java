@@ -48,9 +48,17 @@ public class MailMessageBaseListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MailMessageBaseList instance.
+     */
     public MailMessageBaseList build() {
         return model;
     }
+    /**
+     * Set MailMessageBaseList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public MailMessageBaseListBuilder value(List<MailMessageBase> value) {
         this.model.value(value);
         return this;

@@ -48,29 +48,62 @@ public class AlternateViewBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AlternateView instance.
+     */
     public AlternateView build() {
         return model;
     }
+    /**
+     * Set AlternateView.base64Data and return builder.
+     * @param base64Data Attachment file content as Base64 string.             
+     * @return builder
+    **/
     public AlternateViewBuilder base64Data(String base64Data) {
         this.model.base64Data(base64Data);
         return this;
     }
+    /**
+     * Set AlternateView.contentId and return builder.
+     * @param contentId Attachment content id             
+     * @return builder
+    **/
     public AlternateViewBuilder contentId(String contentId) {
         this.model.contentId(contentId);
         return this;
     }
+    /**
+     * Set AlternateView.contentType and return builder.
+     * @param contentType Content type             
+     * @return builder
+    **/
     public AlternateViewBuilder contentType(ContentType contentType) {
         this.model.contentType(contentType);
         return this;
     }
+    /**
+     * Set AlternateView.headers and return builder.
+     * @param headers Attachment headers.             
+     * @return builder
+    **/
     public AlternateViewBuilder headers(Map<String, String> headers) {
         this.model.headers(headers);
         return this;
     }
+    /**
+     * Set AlternateView.baseUri and return builder.
+     * @param baseUri Base URI.             
+     * @return builder
+    **/
     public AlternateViewBuilder baseUri(String baseUri) {
         this.model.baseUri(baseUri);
         return this;
     }
+    /**
+     * Set AlternateView.linkedResources and return builder.
+     * @param linkedResources Embedded resources referred to by this alternate view.             
+     * @return builder
+    **/
     public AlternateViewBuilder linkedResources(List<LinkedResource> linkedResources) {
         this.model.linkedResources(linkedResources);
         return this;

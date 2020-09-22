@@ -48,29 +48,62 @@ public class EmailClientAccountBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailClientAccount instance.
+     */
     public EmailClientAccount build() {
         return model;
     }
+    /**
+     * Set EmailClientAccount.host and return builder.
+     * @param host Mail server host name or IP address             
+     * @return builder
+    **/
     public EmailClientAccountBuilder host(String host) {
         this.model.host(host);
         return this;
     }
+    /**
+     * Set EmailClientAccount.port and return builder.
+     * @param port Mail server port             
+     * @return builder
+    **/
     public EmailClientAccountBuilder port(Integer port) {
         this.model.port(port);
         return this;
     }
+    /**
+     * Set EmailClientAccount.securityOptions and return builder.
+     * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @return builder
+    **/
     public EmailClientAccountBuilder securityOptions(String securityOptions) {
         this.model.securityOptions(securityOptions);
         return this;
     }
+    /**
+     * Set EmailClientAccount.protocolType and return builder.
+     * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+     * @return builder
+    **/
     public EmailClientAccountBuilder protocolType(String protocolType) {
         this.model.protocolType(protocolType);
         return this;
     }
+    /**
+     * Set EmailClientAccount.credentials and return builder.
+     * @param credentials Email client account credentials             
+     * @return builder
+    **/
     public EmailClientAccountBuilder credentials(EmailClientAccountCredentials credentials) {
         this.model.credentials(credentials);
         return this;
     }
+    /**
+     * Set EmailClientAccount.cacheFile and return builder.
+     * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             
+     * @return builder
+    **/
     public EmailClientAccountBuilder cacheFile(StorageFileLocation cacheFile) {
         this.model.cacheFile(cacheFile);
         return this;

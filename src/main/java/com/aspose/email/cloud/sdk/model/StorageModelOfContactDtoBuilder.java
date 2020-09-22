@@ -48,13 +48,26 @@ public class StorageModelOfContactDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfContactDto instance.
+     */
     public StorageModelOfContactDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfContactDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfContactDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfContactDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfContactDtoBuilder value(ContactDto value) {
         this.model.value(value);
         return this;

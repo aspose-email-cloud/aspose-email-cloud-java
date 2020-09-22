@@ -48,17 +48,35 @@ public class StorageFileLocationBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageFileLocation instance.
+     */
     public StorageFileLocation build() {
         return model;
     }
+    /**
+     * Set StorageFileLocation.storage and return builder.
+     * @param storage A storage name             
+     * @return builder
+    **/
     public StorageFileLocationBuilder storage(String storage) {
         this.model.storage(storage);
         return this;
     }
+    /**
+     * Set StorageFileLocation.folderPath and return builder.
+     * @param folderPath A path to a folder in specified storage             
+     * @return builder
+    **/
     public StorageFileLocationBuilder folderPath(String folderPath) {
         this.model.folderPath(folderPath);
         return this;
     }
+    /**
+     * Set StorageFileLocation.fileName and return builder.
+     * @param fileName A file name in storage             
+     * @return builder
+    **/
     public StorageFileLocationBuilder fileName(String fileName) {
         this.model.fileName(fileName);
         return this;

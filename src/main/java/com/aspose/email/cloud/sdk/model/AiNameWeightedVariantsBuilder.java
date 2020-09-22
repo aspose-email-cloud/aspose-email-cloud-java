@@ -48,13 +48,26 @@ public class AiNameWeightedVariantsBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameWeightedVariants instance.
+     */
     public AiNameWeightedVariants build() {
         return model;
     }
+    /**
+     * Set AiNameWeightedVariants.names and return builder.
+     * @param names List of name variations             
+     * @return builder
+    **/
     public AiNameWeightedVariantsBuilder names(List<AiNameWeighted> names) {
         this.model.names(names);
         return this;
     }
+    /**
+     * Set AiNameWeightedVariants.comments and return builder.
+     * @param comments Usually empty; can contain extra message describing some issue occurred during processing             
+     * @return builder
+    **/
     public AiNameWeightedVariantsBuilder comments(String comments) {
         this.model.comments(comments);
         return this;

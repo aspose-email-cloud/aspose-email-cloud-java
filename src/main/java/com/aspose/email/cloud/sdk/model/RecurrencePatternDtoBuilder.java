@@ -48,21 +48,44 @@ public class RecurrencePatternDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build RecurrencePatternDto instance.
+     */
     public RecurrencePatternDto build() {
         return model;
     }
+    /**
+     * Set RecurrencePatternDto.interval and return builder.
+     * @param interval Number of recurrence units.             
+     * @return builder
+    **/
     public RecurrencePatternDtoBuilder interval(Integer interval) {
         this.model.interval(interval);
         return this;
     }
+    /**
+     * Set RecurrencePatternDto.occurs and return builder.
+     * @param occurs Number of occurrences of the recurrence pattern.             
+     * @return builder
+    **/
     public RecurrencePatternDtoBuilder occurs(Integer occurs) {
         this.model.occurs(occurs);
         return this;
     }
+    /**
+     * Set RecurrencePatternDto.endDate and return builder.
+     * @param endDate End date.             
+     * @return builder
+    **/
     public RecurrencePatternDtoBuilder endDate(Date endDate) {
         this.model.endDate(endDate);
         return this;
     }
+    /**
+     * Set RecurrencePatternDto.weekStart and return builder.
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @return builder
+    **/
     public RecurrencePatternDtoBuilder weekStart(String weekStart) {
         this.model.weekStart(weekStart);
         return this;

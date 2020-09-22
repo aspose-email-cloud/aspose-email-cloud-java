@@ -48,25 +48,53 @@ public class ContentTypeBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContentType instance.
+     */
     public ContentType build() {
         return model;
     }
+    /**
+     * Set ContentType.boundary and return builder.
+     * @param boundary The boundary parameter included in the Content-Type header.             
+     * @return builder
+    **/
     public ContentTypeBuilder boundary(String boundary) {
         this.model.boundary(boundary);
         return this;
     }
+    /**
+     * Set ContentType.charSet and return builder.
+     * @param charSet CharSet parameter.             
+     * @return builder
+    **/
     public ContentTypeBuilder charSet(String charSet) {
         this.model.charSet(charSet);
         return this;
     }
+    /**
+     * Set ContentType.mediaType and return builder.
+     * @param mediaType The internet media type.             
+     * @return builder
+    **/
     public ContentTypeBuilder mediaType(String mediaType) {
         this.model.mediaType(mediaType);
         return this;
     }
+    /**
+     * Set ContentType.name and return builder.
+     * @param name Name parameter.             
+     * @return builder
+    **/
     public ContentTypeBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set ContentType.parameters and return builder.
+     * @param parameters Full list of parameters             
+     * @return builder
+    **/
     public ContentTypeBuilder parameters(List<ContentTypeParameter> parameters) {
         this.model.parameters(parameters);
         return this;

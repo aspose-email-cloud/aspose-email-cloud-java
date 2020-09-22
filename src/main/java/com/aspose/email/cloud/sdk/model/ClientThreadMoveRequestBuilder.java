@@ -48,17 +48,35 @@ public class ClientThreadMoveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientThreadMoveRequest instance.
+     */
     public ClientThreadMoveRequest build() {
         return model;
     }
+    /**
+     * Set ClientThreadMoveRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientThreadMoveRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientThreadMoveRequest.threadId and return builder.
+     * @param threadId Thread identifier.             
+     * @return builder
+    **/
     public ClientThreadMoveRequestBuilder threadId(String threadId) {
         this.model.threadId(threadId);
         return this;
     }
+    /**
+     * Set ClientThreadMoveRequest.destinationFolder and return builder.
+     * @param destinationFolder Email account folder to move thread to.             
+     * @return builder
+    **/
     public ClientThreadMoveRequestBuilder destinationFolder(String destinationFolder) {
         this.model.destinationFolder(destinationFolder);
         return this;

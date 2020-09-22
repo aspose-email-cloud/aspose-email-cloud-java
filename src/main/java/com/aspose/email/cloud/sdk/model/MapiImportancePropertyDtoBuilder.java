@@ -48,13 +48,26 @@ public class MapiImportancePropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiImportancePropertyDto instance.
+     */
     public MapiImportancePropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiImportancePropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiImportancePropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiImportancePropertyDto.value and return builder.
+     * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
+     * @return builder
+    **/
     public MapiImportancePropertyDtoBuilder value(String value) {
         this.model.value(value);
         return this;

@@ -48,33 +48,71 @@ public class EmailConfigDiscoverOauthRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailConfigDiscoverOauthRequest instance.
+     */
     public EmailConfigDiscoverOauthRequest build() {
         return model;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.address and return builder.
+     * @param address Email address to discover.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.fastProcessing and return builder.
+     * @param fastProcessing Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder fastProcessing(Boolean fastProcessing) {
         this.model.fastProcessing(fastProcessing);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.login and return builder.
+     * @param login Email account login. If not specified, address used as a login.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder login(String login) {
         this.model.login(login);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.clientId and return builder.
+     * @param clientId OAuth client id.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder clientId(String clientId) {
         this.model.clientId(clientId);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.clientSecret and return builder.
+     * @param clientSecret OAuth client secret.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder clientSecret(String clientSecret) {
         this.model.clientSecret(clientSecret);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.refreshToken and return builder.
+     * @param refreshToken OAuth refresh token.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder refreshToken(String refreshToken) {
         this.model.refreshToken(refreshToken);
         return this;
     }
+    /**
+     * Set EmailConfigDiscoverOauthRequest.requestUrl and return builder.
+     * @param requestUrl The url to obtain access token. If not specified, will be discovered from email configuration.             
+     * @return builder
+    **/
     public EmailConfigDiscoverOauthRequestBuilder requestUrl(String requestUrl) {
         this.model.requestUrl(requestUrl);
         return this;

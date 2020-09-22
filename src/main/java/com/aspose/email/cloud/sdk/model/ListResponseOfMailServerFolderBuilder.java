@@ -48,9 +48,17 @@ public class ListResponseOfMailServerFolderBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfMailServerFolder instance.
+     */
     public ListResponseOfMailServerFolder build() {
         return model;
     }
+    /**
+     * Set ListResponseOfMailServerFolder.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfMailServerFolderBuilder value(List<MailServerFolder> value) {
         this.model.value(value);
         return this;

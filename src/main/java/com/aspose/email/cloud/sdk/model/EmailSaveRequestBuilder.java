@@ -48,17 +48,35 @@ public class EmailSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EmailSaveRequest instance.
+     */
     public EmailSaveRequest build() {
         return model;
     }
+    /**
+     * Set EmailSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public EmailSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set EmailSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public EmailSaveRequestBuilder value(EmailDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EmailSaveRequest.format and return builder.
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @return builder
+    **/
     public EmailSaveRequestBuilder format(String format) {
         this.model.format(format);
         return this;

@@ -48,9 +48,17 @@ public class AiNameExtractedListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameExtractedList instance.
+     */
     public AiNameExtractedList build() {
         return model;
     }
+    /**
+     * Set AiNameExtractedList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public AiNameExtractedListBuilder value(List<AiNameExtracted> value) {
         this.model.value(value);
         return this;

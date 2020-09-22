@@ -48,13 +48,26 @@ public class AiBcrImageStorageFileBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiBcrImageStorageFile instance.
+     */
     public AiBcrImageStorageFile build() {
         return model;
     }
+    /**
+     * Set AiBcrImageStorageFile.isSingle and return builder.
+     * @param isSingle Determines that image contains single VCard or more.             
+     * @return builder
+    **/
     public AiBcrImageStorageFileBuilder isSingle(Boolean isSingle) {
         this.model.isSingle(isSingle);
         return this;
     }
+    /**
+     * Set AiBcrImageStorageFile.file and return builder.
+     * @param file Image location             
+     * @return builder
+    **/
     public AiBcrImageStorageFileBuilder file(StorageFileLocation file) {
         this.model.file(file);
         return this;

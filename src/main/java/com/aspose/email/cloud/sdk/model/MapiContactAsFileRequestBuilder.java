@@ -48,13 +48,26 @@ public class MapiContactAsFileRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactAsFileRequest instance.
+     */
     public MapiContactAsFileRequest build() {
         return model;
     }
+    /**
+     * Set MapiContactAsFileRequest.format and return builder.
+     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+     * @return builder
+    **/
     public MapiContactAsFileRequestBuilder format(String format) {
         this.model.format(format);
         return this;
     }
+    /**
+     * Set MapiContactAsFileRequest.value and return builder.
+     * @param value MAPI contact model.             
+     * @return builder
+    **/
     public MapiContactAsFileRequestBuilder value(MapiContactDto value) {
         this.model.value(value);
         return this;

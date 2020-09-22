@@ -48,25 +48,53 @@ public class LinkedResourceBuilder {
         this.model = model;
     }
 
+    /**
+     * Build LinkedResource instance.
+     */
     public LinkedResource build() {
         return model;
     }
+    /**
+     * Set LinkedResource.base64Data and return builder.
+     * @param base64Data Attachment file content as Base64 string.             
+     * @return builder
+    **/
     public LinkedResourceBuilder base64Data(String base64Data) {
         this.model.base64Data(base64Data);
         return this;
     }
+    /**
+     * Set LinkedResource.contentId and return builder.
+     * @param contentId Attachment content id             
+     * @return builder
+    **/
     public LinkedResourceBuilder contentId(String contentId) {
         this.model.contentId(contentId);
         return this;
     }
+    /**
+     * Set LinkedResource.contentType and return builder.
+     * @param contentType Content type             
+     * @return builder
+    **/
     public LinkedResourceBuilder contentType(ContentType contentType) {
         this.model.contentType(contentType);
         return this;
     }
+    /**
+     * Set LinkedResource.headers and return builder.
+     * @param headers Attachment headers.             
+     * @return builder
+    **/
     public LinkedResourceBuilder headers(Map<String, String> headers) {
         this.model.headers(headers);
         return this;
     }
+    /**
+     * Set LinkedResource.contentLink and return builder.
+     * @param contentLink URI that the resource must match.             
+     * @return builder
+    **/
     public LinkedResourceBuilder contentLink(String contentLink) {
         this.model.contentLink(contentLink);
         return this;

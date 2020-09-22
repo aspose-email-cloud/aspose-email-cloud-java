@@ -48,13 +48,26 @@ public class MapiPhysicalAddressIndexPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiPhysicalAddressIndexPropertyDto instance.
+     */
     public MapiPhysicalAddressIndexPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiPhysicalAddressIndexPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiPhysicalAddressIndexPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiPhysicalAddressIndexPropertyDto.value and return builder.
+     * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+     * @return builder
+    **/
     public MapiPhysicalAddressIndexPropertyDtoBuilder value(String value) {
         this.model.value(value);
         return this;

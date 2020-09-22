@@ -48,13 +48,26 @@ public class StorageModelOfMapiCalendarDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageModelOfMapiCalendarDto instance.
+     */
     public StorageModelOfMapiCalendarDto build() {
         return model;
     }
+    /**
+     * Set StorageModelOfMapiCalendarDto.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public StorageModelOfMapiCalendarDtoBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set StorageModelOfMapiCalendarDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageModelOfMapiCalendarDtoBuilder value(MapiCalendarDto value) {
         this.model.value(value);
         return this;

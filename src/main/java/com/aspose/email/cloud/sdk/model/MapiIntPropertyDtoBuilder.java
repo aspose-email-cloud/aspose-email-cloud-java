@@ -48,13 +48,26 @@ public class MapiIntPropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiIntPropertyDto instance.
+     */
     public MapiIntPropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiIntPropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiIntPropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiIntPropertyDto.value and return builder.
+     * @param value Property value             
+     * @return builder
+    **/
     public MapiIntPropertyDtoBuilder value(Integer value) {
         this.model.value(value);
         return this;

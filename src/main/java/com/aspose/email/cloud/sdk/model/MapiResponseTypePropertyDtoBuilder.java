@@ -48,13 +48,26 @@ public class MapiResponseTypePropertyDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiResponseTypePropertyDto instance.
+     */
     public MapiResponseTypePropertyDto build() {
         return model;
     }
+    /**
+     * Set MapiResponseTypePropertyDto.descriptor and return builder.
+     * @param descriptor Property descriptor             
+     * @return builder
+    **/
     public MapiResponseTypePropertyDtoBuilder descriptor(MapiPropertyDescriptor descriptor) {
         this.model.descriptor(descriptor);
         return this;
     }
+    /**
+     * Set MapiResponseTypePropertyDto.value and return builder.
+     * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+     * @return builder
+    **/
     public MapiResponseTypePropertyDtoBuilder value(String value) {
         this.model.value(value);
         return this;

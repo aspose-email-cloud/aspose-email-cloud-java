@@ -48,13 +48,26 @@ public class EnumWithCustomOfPhoneNumberCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfPhoneNumberCategory instance.
+     */
     public EnumWithCustomOfPhoneNumberCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfPhoneNumberCategory.value and return builder.
+     * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+     * @return builder
+    **/
     public EnumWithCustomOfPhoneNumberCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfPhoneNumberCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfPhoneNumberCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

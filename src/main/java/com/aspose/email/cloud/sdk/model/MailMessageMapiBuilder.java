@@ -48,9 +48,17 @@ public class MailMessageMapiBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MailMessageMapi instance.
+     */
     public MailMessageMapi build() {
         return model;
     }
+    /**
+     * Set MailMessageMapi.value and return builder.
+     * @param value Email message object.             
+     * @return builder
+    **/
     public MailMessageMapiBuilder value(MapiMessageDto value) {
         this.model.value(value);
         return this;

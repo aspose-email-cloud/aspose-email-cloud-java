@@ -48,13 +48,26 @@ public class EnumWithCustomOfEventCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfEventCategory instance.
+     */
     public EnumWithCustomOfEventCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfEventCategory.value and return builder.
+     * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
+     * @return builder
+    **/
     public EnumWithCustomOfEventCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfEventCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfEventCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

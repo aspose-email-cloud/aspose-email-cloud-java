@@ -48,29 +48,62 @@ public class MapiContactElectronicAddressDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactElectronicAddressDto instance.
+     */
     public MapiContactElectronicAddressDto build() {
         return model;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.addressType and return builder.
+     * @param addressType Address type of an electronic address
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder addressType(String addressType) {
         this.model.addressType(addressType);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.displayName and return builder.
+     * @param displayName User-readable display name for the e-mail address
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.emailAddress and return builder.
+     * @param emailAddress E-mail address of the contact
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder emailAddress(String emailAddress) {
         this.model.emailAddress(emailAddress);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.faxNumber and return builder.
+     * @param faxNumber Telephone number of the mail user&#39;s primary fax machine
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder faxNumber(String faxNumber) {
         this.model.faxNumber(faxNumber);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.isEmpty and return builder.
+     * @param isEmpty Shows if MapiContactElectronicAddress is empty
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder isEmpty(Boolean isEmpty) {
         this.model.isEmpty(isEmpty);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressDto.originalDisplayName and return builder.
+     * @param originalDisplayName SMTP e-mail address that corresponds to the e-mail address for the Contact object.
+     * @return builder
+    **/
     public MapiContactElectronicAddressDtoBuilder originalDisplayName(String originalDisplayName) {
         this.model.originalDisplayName(originalDisplayName);
         return this;

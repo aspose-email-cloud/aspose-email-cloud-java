@@ -48,25 +48,53 @@ public class AiNameCulturalContextBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameCulturalContext instance.
+     */
     public AiNameCulturalContext build() {
         return model;
     }
+    /**
+     * Set AiNameCulturalContext.language and return builder.
+     * @param language An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)             
+     * @return builder
+    **/
     public AiNameCulturalContextBuilder language(String language) {
         this.model.language(language);
         return this;
     }
+    /**
+     * Set AiNameCulturalContext.location and return builder.
+     * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
+     * @return builder
+    **/
     public AiNameCulturalContextBuilder location(String location) {
         this.model.location(location);
         return this;
     }
+    /**
+     * Set AiNameCulturalContext.script and return builder.
+     * @param script A writing system code; starts with the ISO-15924 script name             
+     * @return builder
+    **/
     public AiNameCulturalContextBuilder script(String script) {
         this.model.script(script);
         return this;
     }
+    /**
+     * Set AiNameCulturalContext.encoding and return builder.
+     * @param encoding A character encoding name             
+     * @return builder
+    **/
     public AiNameCulturalContextBuilder encoding(String encoding) {
         this.model.encoding(encoding);
         return this;
     }
+    /**
+     * Set AiNameCulturalContext.style and return builder.
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     * @return builder
+    **/
     public AiNameCulturalContextBuilder style(String style) {
         this.model.style(style);
         return this;

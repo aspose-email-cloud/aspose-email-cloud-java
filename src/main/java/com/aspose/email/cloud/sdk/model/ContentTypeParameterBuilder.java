@@ -48,13 +48,26 @@ public class ContentTypeParameterBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContentTypeParameter instance.
+     */
     public ContentTypeParameter build() {
         return model;
     }
+    /**
+     * Set ContentTypeParameter.name and return builder.
+     * @param name Parameter name             
+     * @return builder
+    **/
     public ContentTypeParameterBuilder name(String name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set ContentTypeParameter.value and return builder.
+     * @param value Parameter value             
+     * @return builder
+    **/
     public ContentTypeParameterBuilder value(String value) {
         this.model.value(value);
         return this;

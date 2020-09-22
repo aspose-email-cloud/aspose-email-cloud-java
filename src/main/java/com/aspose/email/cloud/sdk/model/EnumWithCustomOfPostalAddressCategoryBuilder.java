@@ -48,13 +48,26 @@ public class EnumWithCustomOfPostalAddressCategoryBuilder {
         this.model = model;
     }
 
+    /**
+     * Build EnumWithCustomOfPostalAddressCategory instance.
+     */
     public EnumWithCustomOfPostalAddressCategory build() {
         return model;
     }
+    /**
+     * Set EnumWithCustomOfPostalAddressCategory.value and return builder.
+     * @param value Address category. Enum, available values: Home, Work, Custom
+     * @return builder
+    **/
     public EnumWithCustomOfPostalAddressCategoryBuilder value(String value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set EnumWithCustomOfPostalAddressCategory.description and return builder.
+     * @param description 
+     * @return builder
+    **/
     public EnumWithCustomOfPostalAddressCategoryBuilder description(String description) {
         this.model.description(description);
         return this;

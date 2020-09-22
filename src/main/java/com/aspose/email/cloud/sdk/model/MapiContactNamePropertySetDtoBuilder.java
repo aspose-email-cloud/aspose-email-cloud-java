@@ -48,45 +48,98 @@ public class MapiContactNamePropertySetDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactNamePropertySetDto instance.
+     */
     public MapiContactNamePropertySetDto build() {
         return model;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.displayName and return builder.
+     * @param displayName Full name of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder displayName(String displayName) {
         this.model.displayName(displayName);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.displayNamePrefix and return builder.
+     * @param displayNamePrefix Title of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder displayNamePrefix(String displayNamePrefix) {
         this.model.displayNamePrefix(displayNamePrefix);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.fileUnder and return builder.
+     * @param fileUnder Name under which to file this contact when displaying a list of contacts             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder fileUnder(String fileUnder) {
         this.model.fileUnder(fileUnder);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.fileUnderId and return builder.
+     * @param fileUnderId Value specifying how to generate and recompute the property when other properties are changed             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder fileUnderId(Long fileUnderId) {
         this.model.fileUnderId(fileUnderId);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.generation and return builder.
+     * @param generation Generation suffix of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder generation(String generation) {
         this.model.generation(generation);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.givenName and return builder.
+     * @param givenName Given name (first name) of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder givenName(String givenName) {
         this.model.givenName(givenName);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.initials and return builder.
+     * @param initials Initials of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder initials(String initials) {
         this.model.initials(initials);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.middleName and return builder.
+     * @param middleName Middle name of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder middleName(String middleName) {
         this.model.middleName(middleName);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.nickname and return builder.
+     * @param nickname Nickname of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder nickname(String nickname) {
         this.model.nickname(nickname);
         return this;
     }
+    /**
+     * Set MapiContactNamePropertySetDto.surname and return builder.
+     * @param surname Surname (family name) of the contact             
+     * @return builder
+    **/
     public MapiContactNamePropertySetDtoBuilder surname(String surname) {
         this.model.surname(surname);
         return this;

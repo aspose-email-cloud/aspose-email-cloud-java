@@ -48,9 +48,17 @@ public class ListResponseOfStorageModelOfContactDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfStorageModelOfContactDto instance.
+     */
     public ListResponseOfStorageModelOfContactDto build() {
         return model;
     }
+    /**
+     * Set ListResponseOfStorageModelOfContactDto.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfStorageModelOfContactDtoBuilder value(List<StorageModelOfContactDto> value) {
         this.model.value(value);
         return this;

@@ -48,9 +48,17 @@ public class ListResponseOfAiNameExtractedBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ListResponseOfAiNameExtracted instance.
+     */
     public ListResponseOfAiNameExtracted build() {
         return model;
     }
+    /**
+     * Set ListResponseOfAiNameExtracted.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ListResponseOfAiNameExtractedBuilder value(List<AiNameExtracted> value) {
         this.model.value(value);
         return this;

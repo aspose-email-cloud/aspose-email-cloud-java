@@ -48,13 +48,26 @@ public class CustomerEventBuilder {
         this.model = model;
     }
 
+    /**
+     * Build CustomerEvent instance.
+     */
     public CustomerEvent build() {
         return model;
     }
+    /**
+     * Set CustomerEvent.category and return builder.
+     * @param category Event category.             
+     * @return builder
+    **/
     public CustomerEventBuilder category(EnumWithCustomOfEventCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set CustomerEvent.date and return builder.
+     * @param date Event date.             
+     * @return builder
+    **/
     public CustomerEventBuilder date(Date date) {
         this.model.date(date);
         return this;

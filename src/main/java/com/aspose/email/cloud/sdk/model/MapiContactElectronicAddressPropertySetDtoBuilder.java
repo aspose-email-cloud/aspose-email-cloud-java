@@ -48,41 +48,89 @@ public class MapiContactElectronicAddressPropertySetDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiContactElectronicAddressPropertySetDto instance.
+     */
     public MapiContactElectronicAddressPropertySetDto build() {
         return model;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.businessFax and return builder.
+     * @param businessFax Refers to the group of properties that define the business fax address for a contact.
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder businessFax(MapiContactElectronicAddressDto businessFax) {
         this.model.businessFax(businessFax);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.defaultEmailAddress and return builder.
+     * @param defaultEmailAddress Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set &#39;true&#39;             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder defaultEmailAddress(MapiContactElectronicAddressDto defaultEmailAddress) {
         this.model.defaultEmailAddress(defaultEmailAddress);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.email1 and return builder.
+     * @param email1 Refers to the group of properties that define the first e-mail address for a contact.             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder email1(MapiContactElectronicAddressDto email1) {
         this.model.email1(email1);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.email2 and return builder.
+     * @param email2 Refers to the group of properties that define the second e-mail address for a contact.             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder email2(MapiContactElectronicAddressDto email2) {
         this.model.email2(email2);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.email3 and return builder.
+     * @param email3 Refers to the group of properties that define the third e-mail address for a contact.             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder email3(MapiContactElectronicAddressDto email3) {
         this.model.email3(email3);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.homeFax and return builder.
+     * @param homeFax Refers to the group of properties that define the home fax address for a contact.             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder homeFax(MapiContactElectronicAddressDto homeFax) {
         this.model.homeFax(homeFax);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.isEmpty and return builder.
+     * @param isEmpty Shows if MapiContactElectronicAddressPropertySetDto is empty
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder isEmpty(Boolean isEmpty) {
         this.model.isEmpty(isEmpty);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.primaryFax and return builder.
+     * @param primaryFax Refers to the group of properties that define the primary fax address for a contact.             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder primaryFax(MapiContactElectronicAddressDto primaryFax) {
         this.model.primaryFax(primaryFax);
         return this;
     }
+    /**
+     * Set MapiContactElectronicAddressPropertySetDto.useAutocomplete and return builder.
+     * @param useAutocomplete Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
+     * @return builder
+    **/
     public MapiContactElectronicAddressPropertySetDtoBuilder useAutocomplete(Boolean useAutocomplete) {
         this.model.useAutocomplete(useAutocomplete);
         return this;

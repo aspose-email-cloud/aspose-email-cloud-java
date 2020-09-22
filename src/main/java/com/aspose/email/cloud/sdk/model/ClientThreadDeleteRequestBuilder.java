@@ -48,17 +48,35 @@ public class ClientThreadDeleteRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientThreadDeleteRequest instance.
+     */
     public ClientThreadDeleteRequest build() {
         return model;
     }
+    /**
+     * Set ClientThreadDeleteRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientThreadDeleteRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientThreadDeleteRequest.threadId and return builder.
+     * @param threadId Thread identifier.             
+     * @return builder
+    **/
     public ClientThreadDeleteRequestBuilder threadId(String threadId) {
         this.model.threadId(threadId);
         return this;
     }
+    /**
+     * Set ClientThreadDeleteRequest.folder and return builder.
+     * @param folder Folder on email server, where thread is stored.             
+     * @return builder
+    **/
     public ClientThreadDeleteRequestBuilder folder(String folder) {
         this.model.folder(folder);
         return this;

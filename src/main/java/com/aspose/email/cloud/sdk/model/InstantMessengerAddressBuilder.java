@@ -48,17 +48,35 @@ public class InstantMessengerAddressBuilder {
         this.model = model;
     }
 
+    /**
+     * Build InstantMessengerAddress instance.
+     */
     public InstantMessengerAddress build() {
         return model;
     }
+    /**
+     * Set InstantMessengerAddress.category and return builder.
+     * @param category Address category.             
+     * @return builder
+    **/
     public InstantMessengerAddressBuilder category(EnumWithCustomOfInstantMessengerCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set InstantMessengerAddress.address and return builder.
+     * @param address Address.             
+     * @return builder
+    **/
     public InstantMessengerAddressBuilder address(String address) {
         this.model.address(address);
         return this;
     }
+    /**
+     * Set InstantMessengerAddress.preferred and return builder.
+     * @param preferred Determines whether this address is preferred.             
+     * @return builder
+    **/
     public InstantMessengerAddressBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;

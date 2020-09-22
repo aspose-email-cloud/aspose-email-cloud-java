@@ -48,17 +48,35 @@ public class UrlBuilder {
         this.model = model;
     }
 
+    /**
+     * Build Url instance.
+     */
     public Url build() {
         return model;
     }
+    /**
+     * Set Url.category and return builder.
+     * @param category Url category.             
+     * @return builder
+    **/
     public UrlBuilder category(EnumWithCustomOfUrlCategory category) {
         this.model.category(category);
         return this;
     }
+    /**
+     * Set Url.preferred and return builder.
+     * @param preferred Defines whether url is preferred.             
+     * @return builder
+    **/
     public UrlBuilder preferred(Boolean preferred) {
         this.model.preferred(preferred);
         return this;
     }
+    /**
+     * Set Url.href and return builder.
+     * @param href URL.             
+     * @return builder
+    **/
     public UrlBuilder href(String href) {
         this.model.href(href);
         return this;

@@ -48,13 +48,26 @@ public class AiNameExtractedBuilder {
         this.model = model;
     }
 
+    /**
+     * Build AiNameExtracted instance.
+     */
     public AiNameExtracted build() {
         return model;
     }
+    /**
+     * Set AiNameExtracted.name and return builder.
+     * @param name Extracted name components             
+     * @return builder
+    **/
     public AiNameExtractedBuilder name(List<AiNameExtractedComponent> name) {
         this.model.name(name);
         return this;
     }
+    /**
+     * Set AiNameExtracted.score and return builder.
+     * @param score Extracted name score             
+     * @return builder
+    **/
     public AiNameExtractedBuilder score(Double score) {
         this.model.score(score);
         return this;

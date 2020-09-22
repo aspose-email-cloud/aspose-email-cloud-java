@@ -48,17 +48,35 @@ public class ContactSaveRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ContactSaveRequest instance.
+     */
     public ContactSaveRequest build() {
         return model;
     }
+    /**
+     * Set ContactSaveRequest.storageFile and return builder.
+     * @param storageFile 
+     * @return builder
+    **/
     public ContactSaveRequestBuilder storageFile(StorageFileLocation storageFile) {
         this.model.storageFile(storageFile);
         return this;
     }
+    /**
+     * Set ContactSaveRequest.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public ContactSaveRequestBuilder value(ContactDto value) {
         this.model.value(value);
         return this;
     }
+    /**
+     * Set ContactSaveRequest.format and return builder.
+     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+     * @return builder
+    **/
     public ContactSaveRequestBuilder format(String format) {
         this.model.format(format);
         return this;

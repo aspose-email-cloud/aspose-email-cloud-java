@@ -48,17 +48,35 @@ public class ClientFolderCreateRequestBuilder {
         this.model = model;
     }
 
+    /**
+     * Build ClientFolderCreateRequest instance.
+     */
     public ClientFolderCreateRequest build() {
         return model;
     }
+    /**
+     * Set ClientFolderCreateRequest.accountLocation and return builder.
+     * @param accountLocation Email client account configuration location on storage.             
+     * @return builder
+    **/
     public ClientFolderCreateRequestBuilder accountLocation(StorageFileLocation accountLocation) {
         this.model.accountLocation(accountLocation);
         return this;
     }
+    /**
+     * Set ClientFolderCreateRequest.parentFolder and return builder.
+     * @param parentFolder Path to parent folder.             
+     * @return builder
+    **/
     public ClientFolderCreateRequestBuilder parentFolder(String parentFolder) {
         this.model.parentFolder(parentFolder);
         return this;
     }
+    /**
+     * Set ClientFolderCreateRequest.folderName and return builder.
+     * @param folderName Folder name.             
+     * @return builder
+    **/
     public ClientFolderCreateRequestBuilder folderName(String folderName) {
         this.model.folderName(folderName);
         return this;

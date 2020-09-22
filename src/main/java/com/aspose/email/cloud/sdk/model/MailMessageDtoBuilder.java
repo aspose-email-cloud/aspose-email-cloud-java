@@ -48,9 +48,17 @@ public class MailMessageDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MailMessageDto instance.
+     */
     public MailMessageDto build() {
         return model;
     }
+    /**
+     * Set MailMessageDto.value and return builder.
+     * @param value Message document object.             
+     * @return builder
+    **/
     public MailMessageDtoBuilder value(EmailDto value) {
         this.model.value(value);
         return this;

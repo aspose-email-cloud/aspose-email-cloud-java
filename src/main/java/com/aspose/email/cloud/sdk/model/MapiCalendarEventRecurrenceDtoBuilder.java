@@ -48,29 +48,62 @@ public class MapiCalendarEventRecurrenceDtoBuilder {
         this.model = model;
     }
 
+    /**
+     * Build MapiCalendarEventRecurrenceDto instance.
+     */
     public MapiCalendarEventRecurrenceDto build() {
         return model;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.appointmentTimeZoneDefinitionRecur and return builder.
+     * @param appointmentTimeZoneDefinitionRecur Time zone information that describes how to convert the meeting date and time on a recurring series to and from UTC.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder appointmentTimeZoneDefinitionRecur(MapiCalendarTimeZoneDto appointmentTimeZoneDefinitionRecur) {
         this.model.appointmentTimeZoneDefinitionRecur(appointmentTimeZoneDefinitionRecur);
         return this;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.clipEnd and return builder.
+     * @param clipEnd Date of the last instance.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder clipEnd(Date clipEnd) {
         this.model.clipEnd(clipEnd);
         return this;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.clipStart and return builder.
+     * @param clipStart Date of the first instance.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder clipStart(Date clipStart) {
         this.model.clipStart(clipStart);
         return this;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.isException and return builder.
+     * @param isException Value indicating whether the object represents an exception.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder isException(Boolean isException) {
         this.model.isException(isException);
         return this;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.recurrencePattern and return builder.
+     * @param recurrencePattern Recurrence pattern.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder recurrencePattern(MapiCalendarRecurrencePatternDto recurrencePattern) {
         this.model.recurrencePattern(recurrencePattern);
         return this;
     }
+    /**
+     * Set MapiCalendarEventRecurrenceDto.timeZoneStruct and return builder.
+     * @param timeZoneStruct Time zone information for a recurring meeting.             
+     * @return builder
+    **/
     public MapiCalendarEventRecurrenceDtoBuilder timeZoneStruct(MapiCalendarTimeZoneDto timeZoneStruct) {
         this.model.timeZoneStruct(timeZoneStruct);
         return this;

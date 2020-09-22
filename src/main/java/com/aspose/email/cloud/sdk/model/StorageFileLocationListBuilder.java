@@ -48,9 +48,17 @@ public class StorageFileLocationListBuilder {
         this.model = model;
     }
 
+    /**
+     * Build StorageFileLocationList instance.
+     */
     public StorageFileLocationList build() {
         return model;
     }
+    /**
+     * Set StorageFileLocationList.value and return builder.
+     * @param value 
+     * @return builder
+    **/
     public StorageFileLocationListBuilder value(List<StorageFileLocation> value) {
         this.model.value(value);
         return this;
