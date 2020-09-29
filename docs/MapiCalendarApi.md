@@ -246,7 +246,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -583,7 +582,6 @@ result = Models.mapiCalendarDto()
 
 Description: Save MAPI Calendar to storage.             
 
-Returns: Returns 200 if update is successful.
 
 Method call example:
 ```java
@@ -650,10 +648,7 @@ MapiCalendarSaveRequest request = Models.mapiCalendarSaveRequest()
 
 ### Result
 
-Description: Returns 200 if update is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

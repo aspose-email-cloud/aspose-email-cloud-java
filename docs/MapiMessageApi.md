@@ -240,7 +240,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -561,7 +560,6 @@ result = Models.mapiMessageDto()
 
 Description: Save MAPI message to storage.             
 
-Returns: Returns 200 if update is successful.
 
 Method call example:
 ```java
@@ -624,10 +622,7 @@ MapiMessageSaveRequest request = Models.mapiMessageSaveRequest()
 
 ### Result
 
-Description: Returns 200 if update is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

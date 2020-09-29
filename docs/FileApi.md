@@ -7,7 +7,6 @@ File operations controller
 
 Description: Copy file
 
-Returns: Returns 200 if the copy is successful.
 
 Method call example:
 ```java
@@ -37,10 +36,7 @@ CopyFileRequest request = Models.copyFileRequest()
 
 ### Result
 
-Description: Returns 200 if the copy is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -71,7 +67,6 @@ api.cloudStorage().file().copyFile(request);
 
 Description: Delete file
 
-Returns: Returns 200 if the delete is successful.
 
 Method call example:
 ```java
@@ -99,10 +94,7 @@ DeleteFileRequest request = Models.deleteFileRequest()
 
 ### Result
 
-Description: Returns 200 if the delete is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -163,7 +155,6 @@ Description: The raw data of the file.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -191,7 +182,6 @@ byte[] result = api.cloudStorage().file().downloadFile(request);
 
 Description: Move file
 
-Returns: Returns 200 if the move is successful.
 
 Method call example:
 ```java
@@ -221,10 +211,7 @@ MoveFileRequest request = Models.moveFileRequest()
 
 ### Result
 
-Description: Returns 200 if the move is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

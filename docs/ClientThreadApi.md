@@ -7,7 +7,6 @@ Email client thread operations.
 
 Description: Delete thread by id. All messages from thread will also be deleted.             
 
-Returns: Returns 200 if delete is successful.
 
 Method call example:
 ```java
@@ -40,10 +39,7 @@ ClientThreadDeleteRequest request = Models.clientThreadDeleteRequest()
 
 ### Result
 
-Description: Returns 200 if delete is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -288,7 +284,6 @@ result = ;
 
 Description: Move thread to another folder.             
 
-Returns: Returns 200 if move is successful.
 
 Method call example:
 ```java
@@ -321,10 +316,7 @@ ClientThreadMoveRequest request = Models.clientThreadMoveRequest()
 
 ### Result
 
-Description: Returns 200 if move is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -357,7 +349,6 @@ api.client().thread().move(request);
 
 Description: Mark all messages in thread as read or unread.             
 
-Returns: Returns 200 if flag set is successful.
 
 Method call example:
 ```java
@@ -391,10 +382,7 @@ ClientThreadSetIsReadRequest request = Models.clientThreadSetIsReadRequest()
 
 ### Result
 
-Description: Returns 200 if flag set is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

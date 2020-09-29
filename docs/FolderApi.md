@@ -7,7 +7,6 @@ Folder operations controller
 
 Description: Copy folder
 
-Returns: Returns 200 if the copy is successful.
 
 Method call example:
 ```java
@@ -37,10 +36,7 @@ CopyFolderRequest request = Models.copyFolderRequest()
 
 ### Result
 
-Description: Returns 200 if the copy is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -71,7 +67,6 @@ api.cloudStorage().folder().copyFolder(request);
 
 Description: Create the folder
 
-Returns: Returns 200 if the create is successful.
 
 Method call example:
 ```java
@@ -99,10 +94,7 @@ CreateFolderRequest request = Models.createFolderRequest()
 
 ### Result
 
-Description: Returns 200 if the create is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -131,7 +123,6 @@ api.cloudStorage().folder().createFolder(request);
 
 Description: Delete folder
 
-Returns: Returns 200 if the delete is successful.
 
 Method call example:
 ```java
@@ -160,10 +151,7 @@ DeleteFolderRequest request = Models.deleteFolderRequest()
 
 ### Result
 
-Description: Returns 200 if the delete is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -279,7 +267,6 @@ result = Models.filesList()
 
 Description: Move folder
 
-Returns: Returns 200 if the move is successful.
 
 Method call example:
 ```java
@@ -309,10 +296,7 @@ MoveFolderRequest request = Models.moveFolderRequest()
 
 ### Result
 
-Description: Returns 200 if the move is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

@@ -7,7 +7,6 @@ Email client folder operations.
 
 Description: Create new folder in email account             
 
-Returns: Returns 200 if create is successful.
 
 Method call example:
 ```java
@@ -40,10 +39,7 @@ ClientFolderCreateRequest request = Models.clientFolderCreateRequest()
 
 ### Result
 
-Description: Returns 200 if create is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -76,7 +72,6 @@ api.client().folder().create(request);
 
 Description: Delete a folder in email account             
 
-Returns: Returns 200 if delete is successful.
 
 Method call example:
 ```java
@@ -108,10 +103,7 @@ ClientFolderDeleteRequest request = Models.clientFolderDeleteRequest()
 
 ### Result
 
-Description: Returns 200 if delete is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

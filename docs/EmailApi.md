@@ -62,7 +62,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -315,7 +314,6 @@ EmailConvertRequest request = Models.emailConvertRequest()
 Description: File stream in specified format
 
 Return type: **byte[]**
-
 
 ### Complete example
 
@@ -619,7 +617,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -793,7 +790,6 @@ result = Models.emailStorageList()
 
 Description: Save email document to storage.             
 
-Returns: Returns 200 if update is successful.
 
 Method call example:
 ```java
@@ -850,10 +846,7 @@ EmailSaveRequest request = Models.emailSaveRequest()
 
 ### Result
 
-Description: Returns 200 if update is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

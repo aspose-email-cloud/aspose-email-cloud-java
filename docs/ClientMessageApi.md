@@ -218,7 +218,6 @@ result = ;
 
 Description: Delete message.             
 
-Returns: Returns 200 if send is successful.
 
 Method call example:
 ```java
@@ -251,10 +250,7 @@ ClientMessageDeleteRequest request = Models.clientMessageDeleteRequest()
 
 ### Result
 
-Description: Returns 200 if send is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -407,7 +403,6 @@ Description: Email message file in requested format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -523,7 +518,6 @@ result = ;
 
 Description: Move message to another folder.             
 
-Returns: Returns 200 if send is successful.
 
 Method call example:
 ```java
@@ -557,10 +551,7 @@ ClientMessageMoveRequest request = Models.clientMessageMoveRequest()
 
 ### Result
 
-Description: Returns 200 if send is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -594,7 +585,6 @@ api.client().message().move(request);
 
 Description: Send an email specified by model in request.             
 
-Returns: Returns 200 if send is successful.
 
 Method call example:
 ```java
@@ -652,10 +642,7 @@ ClientMessageSendRequest request = Models.clientMessageSendRequest()
 
 ### Result
 
-Description: Returns 200 if send is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -713,7 +700,6 @@ api.client().message().send(request);
 
 Description: Send an email file.             
 
-Returns: Returns 200 if send is successful.
 
 Method call example:
 ```java
@@ -744,10 +730,7 @@ ClientMessageSendFileRequest request = Models.clientMessageSendFileRequest()
 
 ### Result
 
-Description: Returns 200 if send is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -779,7 +762,6 @@ api.client().message().sendFile(request);
 
 Description: Mark message as read or unread.             
 
-Returns: Returns 200 if send is successful.
 
 Method call example:
 ```java
@@ -812,10 +794,7 @@ ClientMessageSetIsReadRequest request = Models.clientMessageSetIsReadRequest()
 
 ### Result
 
-Description: Returns 200 if send is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

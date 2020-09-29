@@ -237,7 +237,6 @@ result = Models.emailClientMultiAccount()
 
 Description: Create/update email client account file (*.account) with credentials             
 
-Returns: Returns 200 if save is successful.
 
 Method call example:
 ```java
@@ -280,10 +279,7 @@ ClientAccountSaveRequest request = Models.clientAccountSaveRequest()
 
 ### Result
 
-Description: Returns 200 if save is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
@@ -326,7 +322,6 @@ api.client().account().save(request);
 
 Description: Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-Returns: Returns 200 if save is successful.
 
 Method call example:
 ```java
@@ -390,10 +385,7 @@ ClientAccountSaveMultiRequest request = Models.clientAccountSaveMultiRequest()
 
 ### Result
 
-Description: Returns 200 if save is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

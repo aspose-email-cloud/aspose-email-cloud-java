@@ -75,7 +75,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -345,7 +344,6 @@ ContactConvertRequest request = Models.contactConvertRequest()
 Description: File stream in specified destination format
 
 Return type: **byte[]**
-
 
 ### Complete example
 
@@ -702,7 +700,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -903,7 +900,6 @@ result = Models.contactStorageList()
 
 Description: Save contact to storage.             
 
-Returns: Returns 200 if create is successful.
 
 Method call example:
 ```java
@@ -972,10 +968,7 @@ ContactSaveRequest request = Models.contactSaveRequest()
 
 ### Result
 
-Description: Returns 200 if create is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

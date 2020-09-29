@@ -233,7 +233,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -499,7 +498,6 @@ result = Models.mapiContactDto()
 
 Description: Save MAPI Contact to storage.             
 
-Returns: Returns 200 if create is successful.
 
 Method call example:
 ```java
@@ -551,10 +549,7 @@ MapiContactSaveRequest request = Models.mapiContactSaveRequest()
 
 ### Result
 
-Description: Returns 200 if create is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 

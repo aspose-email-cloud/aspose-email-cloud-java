@@ -212,7 +212,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -463,7 +462,6 @@ CalendarConvertRequest request = Models.calendarConvertRequest()
 Description: File stream in specified format.
 
 Return type: **byte[]**
-
 
 ### Complete example
 
@@ -866,7 +864,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-
 ### Complete example
 
 <details>
@@ -1032,7 +1029,6 @@ result = Models.calendarStorageList()
 
 Description: Save iCalendar             
 
-Returns: Returns 200 if update is successful.
 
 Method call example:
 ```java
@@ -1085,10 +1081,7 @@ CalendarSaveRequest request = Models.calendarSaveRequest()
 
 ### Result
 
-Description: Returns 200 if update is successful.
-
 Return type: void (empty response body)
-
 
 ### Complete example
 
