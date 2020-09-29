@@ -255,13 +255,6 @@ Description: Returns 200 if send is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -414,13 +407,6 @@ Description: Email message file in requested format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -442,9 +428,6 @@ ClientMessageFetchFileRequest request = Models.clientMessageFetchFileRequest()
 
 // Call method:
 byte[] result = api.client().message().fetchFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -578,13 +561,6 @@ Description: Returns 200 if send is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -680,13 +656,6 @@ Description: Returns 200 if send is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -779,13 +748,6 @@ Description: Returns 200 if send is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -854,13 +816,6 @@ Description: Returns 200 if send is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

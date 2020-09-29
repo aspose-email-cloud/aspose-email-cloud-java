@@ -284,13 +284,6 @@ Description: Returns 200 if save is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -401,13 +394,6 @@ Description: Returns 200 if save is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

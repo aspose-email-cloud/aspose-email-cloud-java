@@ -41,13 +41,6 @@ Description: Returns 200 if the copy is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -110,13 +103,6 @@ Description: Returns 200 if the delete is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -177,13 +163,6 @@ Description: The raw data of the file.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -201,9 +180,6 @@ DownloadFileRequest request = Models.downloadFileRequest()
 
 // Call method:
 byte[] result = api.cloudStorage().file().downloadFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -249,13 +225,6 @@ Description: Returns 200 if the move is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

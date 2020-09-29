@@ -41,13 +41,6 @@ Description: Returns 200 if the copy is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -110,13 +103,6 @@ Description: Returns 200 if the create is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -178,13 +164,6 @@ Description: Returns 200 if the delete is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -334,13 +313,6 @@ Description: Returns 200 if the move is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

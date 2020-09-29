@@ -233,13 +233,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -276,9 +269,6 @@ MapiContactAsFileRequest request = Models.mapiContactAsFileRequest()
 
 // Call method:
 byte[] result = api.mapi().contact().asFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -565,13 +555,6 @@ Description: Returns 200 if create is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

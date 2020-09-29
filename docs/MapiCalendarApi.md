@@ -246,13 +246,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -304,9 +297,6 @@ MapiCalendarAsFileRequest request = Models.mapiCalendarAsFileRequest()
 
 // Call method:
 byte[] result = api.mapi().calendar().asFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -664,13 +654,6 @@ Description: Returns 200 if update is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

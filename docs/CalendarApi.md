@@ -212,13 +212,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -256,9 +249,6 @@ CalendarAsFileRequest request = Models.calendarAsFileRequest()
 
 // Call method:
 byte[] result = api.calendar().asFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -474,13 +464,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -498,9 +481,6 @@ CalendarConvertRequest request = Models.calendarConvertRequest()
 
 // Call method:
 byte[] result = api.calendar().convert(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -886,13 +866,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -912,9 +885,6 @@ CalendarGetAsFileRequest request = Models.calendarGetAsFileRequest()
 
 // Call method:
 byte[] result = api.calendar().getAsFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -1119,13 +1089,6 @@ Description: Returns 200 if update is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

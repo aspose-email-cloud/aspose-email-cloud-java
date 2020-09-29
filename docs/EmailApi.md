@@ -62,13 +62,6 @@ Description: File stream in specified format.
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -109,9 +102,6 @@ EmailAsFileRequest request = Models.emailAsFileRequest()
 
 // Call method:
 byte[] result = api.email().asFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -326,13 +316,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -351,9 +334,6 @@ EmailConvertRequest request = Models.emailConvertRequest()
 
 // Call method:
 byte[] result = api.email().convert(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -639,13 +619,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -665,9 +638,6 @@ EmailGetAsFileRequest request = Models.emailGetAsFileRequest()
 
 // Call method:
 byte[] result = api.email().getAsFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -884,13 +854,6 @@ Description: Returns 200 if update is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 

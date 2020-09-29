@@ -75,13 +75,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -135,9 +128,6 @@ ContactAsFileRequest request = Models.contactAsFileRequest()
 
 // Call method:
 byte[] result = api.contact().asFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -356,13 +346,6 @@ Description: File stream in specified destination format
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -381,9 +364,6 @@ ContactConvertRequest request = Models.contactConvertRequest()
 
 // Call method:
 byte[] result = api.contact().convert(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -722,13 +702,6 @@ Description: File stream in specified format
 
 Return type: **byte[]**
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
@@ -749,9 +722,6 @@ ContactGetAsFileRequest request = Models.contactGetAsFileRequest()
 
 // Call method:
 byte[] result = api.contact().getAsFile(request);
-
-// Result example:
-result = ;
 ```
 
 </details>
@@ -1006,13 +976,6 @@ Description: Returns 200 if create is successful.
 
 Return type: void (empty response body)
 
-<details>
-    <summary>Result example</summary>
-
-```java
-result = ;
-```
-</details>
 
 ### Complete example
 
