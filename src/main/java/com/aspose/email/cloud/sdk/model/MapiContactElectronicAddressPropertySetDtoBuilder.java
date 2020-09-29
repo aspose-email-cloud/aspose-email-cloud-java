@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiContactElectronicAddressPropertySetDto builder.
  */
 public class MapiContactElectronicAddressPropertySetDtoBuilder {
-    private final MapiContactElectronicAddressPropertySetDto model;
+    private MapiContactElectronicAddressPropertySetDto model;
     public MapiContactElectronicAddressPropertySetDtoBuilder(MapiContactElectronicAddressPropertySetDto model) {
         this.model = model;
     }

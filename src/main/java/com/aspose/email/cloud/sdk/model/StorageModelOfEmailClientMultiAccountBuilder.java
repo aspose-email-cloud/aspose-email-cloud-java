@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfEmailClientMultiAccount builder.
  */
 public class StorageModelOfEmailClientMultiAccountBuilder {
-    private final StorageModelOfEmailClientMultiAccount model;
+    private StorageModelOfEmailClientMultiAccount model;
     public StorageModelOfEmailClientMultiAccountBuilder(StorageModelOfEmailClientMultiAccount model) {
         this.model = model;
     }

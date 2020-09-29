@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiDateTimePropertyDto builder.
  */
 public class MapiDateTimePropertyDtoBuilder {
-    private final MapiDateTimePropertyDto model;
+    private MapiDateTimePropertyDto model;
     public MapiDateTimePropertyDtoBuilder(MapiDateTimePropertyDto model) {
         this.model = model;
     }

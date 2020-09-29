@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameExtractedComponent builder.
  */
 public class AiNameExtractedComponentBuilder {
-    private final AiNameExtractedComponent model;
+    private AiNameExtractedComponent model;
     public AiNameExtractedComponentBuilder(AiNameExtractedComponent model) {
         this.model = model;
     }

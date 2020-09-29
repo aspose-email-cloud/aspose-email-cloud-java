@@ -1,5 +1,8 @@
 
 # MapiContactTelephonePropertySetDto
+
+Specify optional telephone numbers for the contact.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientMessageListRequest builder.
  */
 public class ClientMessageListRequestBuilder {
-    private final ClientMessageListRequest model;
+    private ClientMessageListRequest model;
     public ClientMessageListRequestBuilder(ClientMessageListRequest model) {
         this.model = model;
     }

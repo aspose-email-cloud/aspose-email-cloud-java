@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiLegacyFreeBusyPropertyDto builder.
  */
 public class MapiLegacyFreeBusyPropertyDtoBuilder {
-    private final MapiLegacyFreeBusyPropertyDto model;
+    private MapiLegacyFreeBusyPropertyDto model;
     public MapiLegacyFreeBusyPropertyDtoBuilder(MapiLegacyFreeBusyPropertyDto model) {
         this.model = model;
     }

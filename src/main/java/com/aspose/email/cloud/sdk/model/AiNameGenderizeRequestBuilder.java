@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameGenderizeRequest builder.
  */
 public class AiNameGenderizeRequestBuilder {
-    private final AiNameGenderizeRequest model;
+    private AiNameGenderizeRequest model;
     public AiNameGenderizeRequestBuilder(AiNameGenderizeRequest model) {
         this.model = model;
     }

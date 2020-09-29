@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiAttachmentDto builder.
  */
 public class MapiAttachmentDtoBuilder {
-    private final MapiAttachmentDto model;
+    private MapiAttachmentDto model;
     public MapiAttachmentDtoBuilder(MapiAttachmentDto model) {
         this.model = model;
     }

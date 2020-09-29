@@ -43,7 +43,7 @@ import java.io.*;
  *  AiBcrParseStorageRequest builder.
  */
 public class AiBcrParseStorageRequestBuilder {
-    private final AiBcrParseStorageRequest model;
+    private AiBcrParseStorageRequest model;
     public AiBcrParseStorageRequestBuilder(AiBcrParseStorageRequest model) {
         this.model = model;
     }

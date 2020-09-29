@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientMessageSendFileRequest builder.
  */
 public class ClientMessageSendFileRequestBuilder {
-    private final ClientMessageSendFileRequest model;
+    private ClientMessageSendFileRequest model;
     public ClientMessageSendFileRequestBuilder(ClientMessageSendFileRequest model) {
         this.model = model;
     }

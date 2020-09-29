@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameComponentList builder.
  */
 public class AiNameComponentListBuilder {
-    private final AiNameComponentList model;
+    private AiNameComponentList model;
     public AiNameComponentListBuilder(AiNameComponentList model) {
         this.model = model;
     }

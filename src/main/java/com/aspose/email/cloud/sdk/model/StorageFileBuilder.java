@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageFile builder.
  */
 public class StorageFileBuilder {
-    private final StorageFile model;
+    private StorageFile model;
     public StorageFileBuilder(StorageFile model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailThreadList builder.
  */
 public class EmailThreadListBuilder {
-    private final EmailThreadList model;
+    private EmailThreadList model;
     public EmailThreadListBuilder(EmailThreadList model) {
         this.model = model;
     }

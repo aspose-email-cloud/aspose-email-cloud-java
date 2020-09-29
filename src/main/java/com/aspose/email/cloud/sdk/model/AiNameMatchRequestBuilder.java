@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameMatchRequest builder.
  */
 public class AiNameMatchRequestBuilder {
-    private final AiNameMatchRequest model;
+    private AiNameMatchRequest model;
     public AiNameMatchRequestBuilder(AiNameMatchRequest model) {
         this.model = model;
     }

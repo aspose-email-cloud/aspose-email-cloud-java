@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiRecipientDto builder.
  */
 public class MapiRecipientDtoBuilder {
-    private final MapiRecipientDto model;
+    private MapiRecipientDto model;
     public MapiRecipientDtoBuilder(MapiRecipientDto model) {
         this.model = model;
     }

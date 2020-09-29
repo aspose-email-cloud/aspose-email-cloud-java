@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ObjectExistsRequest builder.
  */
 public class ObjectExistsRequestBuilder {
-    private final ObjectExistsRequest model;
+    private ObjectExistsRequest model;
     public ObjectExistsRequestBuilder(ObjectExistsRequest model) {
         this.model = model;
     }

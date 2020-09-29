@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarStorageList builder.
  */
 public class CalendarStorageListBuilder {
-    private final CalendarStorageList model;
+    private CalendarStorageList model;
     public CalendarStorageListBuilder(CalendarStorageList model) {
         this.model = model;
     }

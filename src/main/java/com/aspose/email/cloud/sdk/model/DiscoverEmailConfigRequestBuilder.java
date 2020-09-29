@@ -43,7 +43,7 @@ import java.io.*;
  *  DiscoverEmailConfigRequest builder.
  */
 public class DiscoverEmailConfigRequestBuilder {
-    private final DiscoverEmailConfigRequest model;
+    private DiscoverEmailConfigRequest model;
     public DiscoverEmailConfigRequestBuilder(DiscoverEmailConfigRequest model) {
         this.model = model;
     }

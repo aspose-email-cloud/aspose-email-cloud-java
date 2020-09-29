@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarAsAlternateRequest builder.
  */
 public class CalendarAsAlternateRequestBuilder {
-    private final CalendarAsAlternateRequest model;
+    private CalendarAsAlternateRequest model;
     public CalendarAsAlternateRequestBuilder(CalendarAsAlternateRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarDailyRecurrencePatternDto builder.
  */
 public class MapiCalendarDailyRecurrencePatternDtoBuilder {
-    private final MapiCalendarDailyRecurrencePatternDto model;
+    private MapiCalendarDailyRecurrencePatternDto model;
     public MapiCalendarDailyRecurrencePatternDtoBuilder(MapiCalendarDailyRecurrencePatternDto model) {
         this.model = model;
     }

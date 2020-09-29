@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameExpandRequest builder.
  */
 public class AiNameExpandRequestBuilder {
-    private final AiNameExpandRequest model;
+    private AiNameExpandRequest model;
     public AiNameExpandRequestBuilder(AiNameExpandRequest model) {
         this.model = model;
     }

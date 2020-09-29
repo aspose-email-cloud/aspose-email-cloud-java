@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiMessageSaveRequest builder.
  */
 public class MapiMessageSaveRequestBuilder {
-    private final MapiMessageSaveRequest model;
+    private MapiMessageSaveRequest model;
     public MapiMessageSaveRequestBuilder(MapiMessageSaveRequest model) {
         this.model = model;
     }

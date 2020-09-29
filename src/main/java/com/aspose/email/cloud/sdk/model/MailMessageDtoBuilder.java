@@ -43,7 +43,7 @@ import java.io.*;
  *  MailMessageDto builder.
  */
 public class MailMessageDtoBuilder {
-    private final MailMessageDto model;
+    private MailMessageDto model;
     public MailMessageDtoBuilder(MailMessageDto model) {
         this.model = model;
     }

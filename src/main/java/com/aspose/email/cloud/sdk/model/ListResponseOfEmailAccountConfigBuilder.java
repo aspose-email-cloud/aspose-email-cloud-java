@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfEmailAccountConfig builder.
  */
 public class ListResponseOfEmailAccountConfigBuilder {
-    private final ListResponseOfEmailAccountConfig model;
+    private ListResponseOfEmailAccountConfig model;
     public ListResponseOfEmailAccountConfigBuilder(ListResponseOfEmailAccountConfig model) {
         this.model = model;
     }

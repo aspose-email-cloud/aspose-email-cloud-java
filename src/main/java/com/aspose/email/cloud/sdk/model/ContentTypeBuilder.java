@@ -43,7 +43,7 @@ import java.io.*;
  *  ContentType builder.
  */
 public class ContentTypeBuilder {
-    private final ContentType model;
+    private ContentType model;
     public ContentTypeBuilder(ContentType model) {
         this.model = model;
     }

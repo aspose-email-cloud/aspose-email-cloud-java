@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfAiNameComponent builder.
  */
 public class ListResponseOfAiNameComponentBuilder {
-    private final ListResponseOfAiNameComponent model;
+    private ListResponseOfAiNameComponent model;
     public ListResponseOfAiNameComponentBuilder(ListResponseOfAiNameComponent model) {
         this.model = model;
     }

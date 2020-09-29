@@ -43,7 +43,7 @@ import java.io.*;
  *  ContactAsFileRequest builder.
  */
 public class ContactAsFileRequestBuilder {
-    private final ContactAsFileRequest model;
+    private ContactAsFileRequest model;
     public ContactAsFileRequestBuilder(ContactAsFileRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiResponseTypePropertyDto builder.
  */
 public class MapiResponseTypePropertyDtoBuilder {
-    private final MapiResponseTypePropertyDto model;
+    private MapiResponseTypePropertyDto model;
     public MapiResponseTypePropertyDtoBuilder(MapiResponseTypePropertyDto model) {
         this.model = model;
     }

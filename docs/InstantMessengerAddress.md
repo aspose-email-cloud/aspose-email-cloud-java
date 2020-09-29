@@ -1,5 +1,8 @@
 
 # InstantMessengerAddress
+
+Instant messenger address.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

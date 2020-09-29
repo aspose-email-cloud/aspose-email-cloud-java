@@ -43,7 +43,7 @@ import java.io.*;
  *  CustomerEvent builder.
  */
 public class CustomerEventBuilder {
-    private final CustomerEvent model;
+    private CustomerEvent model;
     public CustomerEventBuilder(CustomerEvent model) {
         this.model = model;
     }

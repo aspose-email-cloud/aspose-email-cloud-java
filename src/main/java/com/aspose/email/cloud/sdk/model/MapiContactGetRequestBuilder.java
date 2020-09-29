@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  MapiContactGetRequest builder.
  */
 public class MapiContactGetRequestBuilder {
-    private final MapiContactGetRequest model;
+    private MapiContactGetRequest model;
     public MapiContactGetRequestBuilder(MapiContactGetRequest model) {
         this.model = model;
     }

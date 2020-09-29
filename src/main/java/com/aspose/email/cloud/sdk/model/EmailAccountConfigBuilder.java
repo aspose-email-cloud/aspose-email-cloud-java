@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailAccountConfig builder.
  */
 public class EmailAccountConfigBuilder {
-    private final EmailAccountConfig model;
+    private EmailAccountConfig model;
     public EmailAccountConfigBuilder(EmailAccountConfig model) {
         this.model = model;
     }

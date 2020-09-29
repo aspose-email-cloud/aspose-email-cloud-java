@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameParseEmailAddressRequest builder.
  */
 public class AiNameParseEmailAddressRequestBuilder {
-    private final AiNameParseEmailAddressRequest model;
+    private AiNameParseEmailAddressRequest model;
     public AiNameParseEmailAddressRequestBuilder(AiNameParseEmailAddressRequest model) {
         this.model = model;
     }

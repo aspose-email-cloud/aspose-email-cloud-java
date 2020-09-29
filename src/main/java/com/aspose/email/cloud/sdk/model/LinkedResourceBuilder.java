@@ -43,7 +43,7 @@ import java.io.*;
  *  LinkedResource builder.
  */
 public class LinkedResourceBuilder {
-    private final LinkedResource model;
+    private LinkedResource model;
     public LinkedResourceBuilder(LinkedResource model) {
         this.model = model;
     }

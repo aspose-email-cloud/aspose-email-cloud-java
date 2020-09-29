@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfEmailDto builder.
  */
 public class StorageModelOfEmailDtoBuilder {
-    private final StorageModelOfEmailDto model;
+    private StorageModelOfEmailDto model;
     public StorageModelOfEmailDtoBuilder(StorageModelOfEmailDto model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfMailServerFolder builder.
  */
 public class ListResponseOfMailServerFolderBuilder {
-    private final ListResponseOfMailServerFolder model;
+    private ListResponseOfMailServerFolder model;
     public ListResponseOfMailServerFolderBuilder(ListResponseOfMailServerFolder model) {
         this.model = model;
     }

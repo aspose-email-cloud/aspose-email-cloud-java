@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientAccountSaveMultiRequest builder.
  */
 public class ClientAccountSaveMultiRequestBuilder {
-    private final ClientAccountSaveMultiRequest model;
+    private ClientAccountSaveMultiRequest model;
     public ClientAccountSaveMultiRequestBuilder(ClientAccountSaveMultiRequest model) {
         this.model = model;
     }

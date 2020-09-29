@@ -1,5 +1,8 @@
 
 # ClientAccountBaseRequest
+
+Base request for Email client. Stores information about email account location.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

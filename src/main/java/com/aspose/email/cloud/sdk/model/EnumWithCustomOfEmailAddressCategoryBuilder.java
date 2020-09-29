@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfEmailAddressCategory builder.
  */
 public class EnumWithCustomOfEmailAddressCategoryBuilder {
-    private final EnumWithCustomOfEmailAddressCategory model;
+    private EnumWithCustomOfEmailAddressCategory model;
     public EnumWithCustomOfEmailAddressCategoryBuilder(EnumWithCustomOfEmailAddressCategory model) {
         this.model = model;
     }

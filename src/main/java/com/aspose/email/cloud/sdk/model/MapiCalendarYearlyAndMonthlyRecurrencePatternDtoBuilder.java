@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarYearlyAndMonthlyRecurrencePatternDto builder.
  */
 public class MapiCalendarYearlyAndMonthlyRecurrencePatternDtoBuilder {
-    private final MapiCalendarYearlyAndMonthlyRecurrencePatternDto model;
+    private MapiCalendarYearlyAndMonthlyRecurrencePatternDto model;
     public MapiCalendarYearlyAndMonthlyRecurrencePatternDtoBuilder(MapiCalendarYearlyAndMonthlyRecurrencePatternDto model) {
         this.model = model;
     }

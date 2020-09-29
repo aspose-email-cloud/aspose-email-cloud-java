@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  CalendarGetRequest builder.
  */
 public class CalendarGetRequestBuilder {
-    private final CalendarGetRequest model;
+    private CalendarGetRequest model;
     public CalendarGetRequestBuilder(CalendarGetRequest model) {
         this.model = model;
     }

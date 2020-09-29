@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarDto builder.
  */
 public class MapiCalendarDtoBuilder {
-    private final MapiCalendarDto model;
+    private MapiCalendarDto model;
     public MapiCalendarDtoBuilder(MapiCalendarDto model) {
         this.model = model;
     }

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ContactGetListRequest builder.
  */
 public class ContactGetListRequestBuilder {
-    private final ContactGetListRequest model;
+    private ContactGetListRequest model;
     public ContactGetListRequestBuilder(ContactGetListRequest model) {
         this.model = model;
     }

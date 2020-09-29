@@ -43,7 +43,7 @@ import java.io.*;
  *  RecurrencePatternDto builder.
  */
 public class RecurrencePatternDtoBuilder {
-    private final RecurrencePatternDto model;
+    private RecurrencePatternDto model;
     public RecurrencePatternDtoBuilder(RecurrencePatternDto model) {
         this.model = model;
     }

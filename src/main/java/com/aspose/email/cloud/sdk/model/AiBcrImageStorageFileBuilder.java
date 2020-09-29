@@ -43,7 +43,7 @@ import java.io.*;
  *  AiBcrImageStorageFile builder.
  */
 public class AiBcrImageStorageFileBuilder {
-    private final AiBcrImageStorageFile model;
+    private AiBcrImageStorageFile model;
     public AiBcrImageStorageFileBuilder(AiBcrImageStorageFile model) {
         this.model = model;
     }

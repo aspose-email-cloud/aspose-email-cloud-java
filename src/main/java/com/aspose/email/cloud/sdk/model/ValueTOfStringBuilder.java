@@ -43,7 +43,7 @@ import java.io.*;
  *  ValueTOfString builder.
  */
 public class ValueTOfStringBuilder {
-    private final ValueTOfString model;
+    private ValueTOfString model;
     public ValueTOfStringBuilder(ValueTOfString model) {
         this.model = model;
     }

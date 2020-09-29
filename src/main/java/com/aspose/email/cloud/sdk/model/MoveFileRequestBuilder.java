@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  MoveFileRequest builder.
  */
 public class MoveFileRequestBuilder {
-    private final MoveFileRequest model;
+    private MoveFileRequest model;
     public MoveFileRequestBuilder(MoveFileRequest model) {
         this.model = model;
     }

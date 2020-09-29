@@ -43,7 +43,7 @@ import java.io.*;
  *  MonthlyRecurrencePatternDto builder.
  */
 public class MonthlyRecurrencePatternDtoBuilder {
-    private final MonthlyRecurrencePatternDto model;
+    private MonthlyRecurrencePatternDto model;
     public MonthlyRecurrencePatternDtoBuilder(MonthlyRecurrencePatternDto model) {
         this.model = model;
     }

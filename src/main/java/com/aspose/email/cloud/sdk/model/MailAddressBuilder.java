@@ -43,7 +43,7 @@ import java.io.*;
  *  MailAddress builder.
  */
 public class MailAddressBuilder {
-    private final MailAddress model;
+    private MailAddress model;
     public MailAddressBuilder(MailAddress model) {
         this.model = model;
     }

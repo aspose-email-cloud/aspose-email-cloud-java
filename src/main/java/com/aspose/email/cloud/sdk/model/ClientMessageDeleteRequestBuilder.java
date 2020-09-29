@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientMessageDeleteRequest builder.
  */
 public class ClientMessageDeleteRequestBuilder {
-    private final ClientMessageDeleteRequest model;
+    private ClientMessageDeleteRequest model;
     public ClientMessageDeleteRequestBuilder(ClientMessageDeleteRequest model) {
         this.model = model;
     }

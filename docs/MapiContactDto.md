@@ -1,5 +1,8 @@
 
 # MapiContactDto
+
+Represents outlook contact information.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -13,10 +16,35 @@ Name | Type | Description | Notes
 **professionalInfo** | [**MapiContactProfessionalPropertySetDto**](MapiContactProfessionalPropertySetDto.md) | Properties are used to store professional details for the person represented by the contact.              |  [optional]
 **telephones** | [**MapiContactTelephonePropertySetDto**](MapiContactTelephonePropertySetDto.md) | Specify telephone numbers for the contact.              |  [optional]
 
-
 ## Parent class
 
 See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
+
+
+## Example
+```java
+MapiContactDto mapiContactDto = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

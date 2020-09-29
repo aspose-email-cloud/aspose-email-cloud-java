@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageFileLocation builder.
  */
 public class StorageFileLocationBuilder {
-    private final StorageFileLocation model;
+    private StorageFileLocation model;
     public StorageFileLocationBuilder(StorageFileLocation model) {
         this.model = model;
     }

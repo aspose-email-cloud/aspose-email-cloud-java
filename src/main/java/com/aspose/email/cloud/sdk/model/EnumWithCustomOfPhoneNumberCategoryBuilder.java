@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfPhoneNumberCategory builder.
  */
 public class EnumWithCustomOfPhoneNumberCategoryBuilder {
-    private final EnumWithCustomOfPhoneNumberCategory model;
+    private EnumWithCustomOfPhoneNumberCategory model;
     public EnumWithCustomOfPhoneNumberCategoryBuilder(EnumWithCustomOfPhoneNumberCategory model) {
         this.model = model;
     }

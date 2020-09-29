@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  CopyFileRequest builder.
  */
 public class CopyFileRequestBuilder {
-    private final CopyFileRequest model;
+    private CopyFileRequest model;
     public CopyFileRequestBuilder(CopyFileRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfEventCategory builder.
  */
 public class EnumWithCustomOfEventCategoryBuilder {
-    private final EnumWithCustomOfEventCategory model;
+    private EnumWithCustomOfEventCategory model;
     public EnumWithCustomOfEventCategoryBuilder(EnumWithCustomOfEventCategory model) {
         this.model = model;
     }

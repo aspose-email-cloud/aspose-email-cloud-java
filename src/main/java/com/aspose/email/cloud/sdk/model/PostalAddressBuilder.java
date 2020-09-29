@@ -43,7 +43,7 @@ import java.io.*;
  *  PostalAddress builder.
  */
 public class PostalAddressBuilder {
-    private final PostalAddress model;
+    private PostalAddress model;
     public PostalAddressBuilder(PostalAddress model) {
         this.model = model;
     }

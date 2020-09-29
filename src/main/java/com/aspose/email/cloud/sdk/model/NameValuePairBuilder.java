@@ -43,7 +43,7 @@ import java.io.*;
  *  NameValuePair builder.
  */
 public class NameValuePairBuilder {
-    private final NameValuePair model;
+    private NameValuePair model;
     public NameValuePairBuilder(NameValuePair model) {
         this.model = model;
     }

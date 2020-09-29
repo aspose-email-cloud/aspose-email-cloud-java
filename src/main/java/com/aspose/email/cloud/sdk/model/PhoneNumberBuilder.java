@@ -43,7 +43,7 @@ import java.io.*;
  *  PhoneNumber builder.
  */
 public class PhoneNumberBuilder {
-    private final PhoneNumber model;
+    private PhoneNumber model;
     public PhoneNumberBuilder(PhoneNumber model) {
         this.model = model;
     }

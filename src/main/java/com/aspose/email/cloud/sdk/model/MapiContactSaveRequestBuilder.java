@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiContactSaveRequest builder.
  */
 public class MapiContactSaveRequestBuilder {
-    private final MapiContactSaveRequest model;
+    private MapiContactSaveRequest model;
     public MapiContactSaveRequestBuilder(MapiContactSaveRequest model) {
         this.model = model;
     }

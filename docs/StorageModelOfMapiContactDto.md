@@ -1,5 +1,7 @@
 
 # StorageModelOfMapiContactDto
+
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

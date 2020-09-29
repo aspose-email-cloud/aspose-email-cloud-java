@@ -1,5 +1,8 @@
 
 # ContentTypeParameter
+
+Content-Type header parameter             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

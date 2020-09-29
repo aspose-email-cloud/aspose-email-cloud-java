@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  CopyFolderRequest builder.
  */
 public class CopyFolderRequestBuilder {
-    private final CopyFolderRequest model;
+    private CopyFolderRequest model;
     public CopyFolderRequestBuilder(CopyFolderRequest model) {
         this.model = model;
     }

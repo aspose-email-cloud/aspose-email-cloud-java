@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailClientAccountCredentials builder.
  */
 public class EmailClientAccountCredentialsBuilder {
-    private final EmailClientAccountCredentials model;
+    private EmailClientAccountCredentials model;
     public EmailClientAccountCredentialsBuilder(EmailClientAccountCredentials model) {
         this.model = model;
     }

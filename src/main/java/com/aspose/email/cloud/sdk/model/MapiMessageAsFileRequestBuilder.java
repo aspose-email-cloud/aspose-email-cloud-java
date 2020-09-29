@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiMessageAsFileRequest builder.
  */
 public class MapiMessageAsFileRequestBuilder {
-    private final MapiMessageAsFileRequest model;
+    private MapiMessageAsFileRequest model;
     public MapiMessageAsFileRequestBuilder(MapiMessageAsFileRequest model) {
         this.model = model;
     }

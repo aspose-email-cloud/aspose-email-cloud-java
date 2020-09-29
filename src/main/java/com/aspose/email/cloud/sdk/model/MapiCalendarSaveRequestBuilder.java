@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarSaveRequest builder.
  */
 public class MapiCalendarSaveRequestBuilder {
-    private final MapiCalendarSaveRequest model;
+    private MapiCalendarSaveRequest model;
     public MapiCalendarSaveRequestBuilder(MapiCalendarSaveRequest model) {
         this.model = model;
     }

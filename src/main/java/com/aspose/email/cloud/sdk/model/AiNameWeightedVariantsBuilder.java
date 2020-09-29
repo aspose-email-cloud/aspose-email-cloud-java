@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameWeightedVariants builder.
  */
 public class AiNameWeightedVariantsBuilder {
-    private final AiNameWeightedVariants model;
+    private AiNameWeightedVariants model;
     public AiNameWeightedVariantsBuilder(AiNameWeightedVariants model) {
         this.model = model;
     }

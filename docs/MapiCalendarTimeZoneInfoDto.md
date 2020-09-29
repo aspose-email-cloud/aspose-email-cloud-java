@@ -1,5 +1,8 @@
 
 # MapiCalendarTimeZoneInfoDto
+
+Represents the mapi calendar time zone rule.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

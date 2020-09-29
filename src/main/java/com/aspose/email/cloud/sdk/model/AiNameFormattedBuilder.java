@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameFormatted builder.
  */
 public class AiNameFormattedBuilder {
-    private final AiNameFormatted model;
+    private AiNameFormatted model;
     public AiNameFormattedBuilder(AiNameFormatted model) {
         this.model = model;
     }

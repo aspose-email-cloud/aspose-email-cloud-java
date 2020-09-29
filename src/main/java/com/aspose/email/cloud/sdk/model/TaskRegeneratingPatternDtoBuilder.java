@@ -43,7 +43,7 @@ import java.io.*;
  *  TaskRegeneratingPatternDto builder.
  */
 public class TaskRegeneratingPatternDtoBuilder {
-    private final TaskRegeneratingPatternDto model;
+    private TaskRegeneratingPatternDto model;
     public TaskRegeneratingPatternDtoBuilder(TaskRegeneratingPatternDto model) {
         this.model = model;
     }

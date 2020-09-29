@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientMessageBaseRequest builder.
  */
 public class ClientMessageBaseRequestBuilder {
-    private final ClientMessageBaseRequest model;
+    private ClientMessageBaseRequest model;
     public ClientMessageBaseRequestBuilder(ClientMessageBaseRequest model) {
         this.model = model;
     }

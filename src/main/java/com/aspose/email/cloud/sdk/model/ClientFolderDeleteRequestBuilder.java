@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientFolderDeleteRequest builder.
  */
 public class ClientFolderDeleteRequestBuilder {
-    private final ClientFolderDeleteRequest model;
+    private ClientFolderDeleteRequest model;
     public ClientFolderDeleteRequestBuilder(ClientFolderDeleteRequest model) {
         this.model = model;
     }

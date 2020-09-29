@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiMessageItemBaseDto builder.
  */
 public class MapiMessageItemBaseDtoBuilder {
-    private final MapiMessageItemBaseDto model;
+    private MapiMessageItemBaseDto model;
     public MapiMessageItemBaseDtoBuilder(MapiMessageItemBaseDto model) {
         this.model = model;
     }

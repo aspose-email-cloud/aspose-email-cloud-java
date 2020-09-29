@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfMailMessageBase builder.
  */
 public class ListResponseOfMailMessageBaseBuilder {
-    private final ListResponseOfMailMessageBase model;
+    private ListResponseOfMailMessageBase model;
     public ListResponseOfMailMessageBaseBuilder(ListResponseOfMailMessageBase model) {
         this.model = model;
     }

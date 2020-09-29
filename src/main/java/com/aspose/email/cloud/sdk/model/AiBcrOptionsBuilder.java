@@ -43,7 +43,7 @@ import java.io.*;
  *  AiBcrOptions builder.
  */
 public class AiBcrOptionsBuilder {
-    private final AiBcrOptions model;
+    private AiBcrOptions model;
     public AiBcrOptionsBuilder(AiBcrOptions model) {
         this.model = model;
     }

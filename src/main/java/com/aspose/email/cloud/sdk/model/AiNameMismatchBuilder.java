@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameMismatch builder.
  */
 public class AiNameMismatchBuilder {
-    private final AiNameMismatch model;
+    private AiNameMismatch model;
     public AiNameMismatchBuilder(AiNameMismatch model) {
         this.model = model;
     }

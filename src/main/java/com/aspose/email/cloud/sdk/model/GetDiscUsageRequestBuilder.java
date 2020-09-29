@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  GetDiscUsageRequest builder.
  */
 public class GetDiscUsageRequestBuilder {
-    private final GetDiscUsageRequest model;
+    private GetDiscUsageRequest model;
     public GetDiscUsageRequestBuilder(GetDiscUsageRequest model) {
         this.model = model;
     }

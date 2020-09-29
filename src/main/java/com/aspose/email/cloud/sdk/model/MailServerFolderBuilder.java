@@ -43,7 +43,7 @@ import java.io.*;
  *  MailServerFolder builder.
  */
 public class MailServerFolderBuilder {
-    private final MailServerFolder model;
+    private MailServerFolder model;
     public MailServerFolderBuilder(MailServerFolder model) {
         this.model = model;
     }

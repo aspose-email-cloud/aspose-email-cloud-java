@@ -43,7 +43,7 @@ import java.io.*;
  *  DiscUsage builder.
  */
 public class DiscUsageBuilder {
-    private final DiscUsage model;
+    private DiscUsage model;
     public DiscUsageBuilder(DiscUsage model) {
         this.model = model;
     }

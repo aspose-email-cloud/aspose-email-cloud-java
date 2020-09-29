@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  MapiCalendarFromFileRequest builder.
  */
 public class MapiCalendarFromFileRequestBuilder {
-    private final MapiCalendarFromFileRequest model;
+    private MapiCalendarFromFileRequest model;
     public MapiCalendarFromFileRequestBuilder(MapiCalendarFromFileRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  ContactSaveRequest builder.
  */
 public class ContactSaveRequestBuilder {
-    private final ContactSaveRequest model;
+    private ContactSaveRequest model;
     public ContactSaveRequestBuilder(ContactSaveRequest model) {
         this.model = model;
     }

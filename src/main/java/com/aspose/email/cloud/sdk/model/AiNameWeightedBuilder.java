@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameWeighted builder.
  */
 public class AiNameWeightedBuilder {
-    private final AiNameWeighted model;
+    private AiNameWeighted model;
     public AiNameWeightedBuilder(AiNameWeighted model) {
         this.model = model;
     }

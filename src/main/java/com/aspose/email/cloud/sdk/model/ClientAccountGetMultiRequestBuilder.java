@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientAccountGetMultiRequest builder.
  */
 public class ClientAccountGetMultiRequestBuilder {
-    private final ClientAccountGetMultiRequest model;
+    private ClientAccountGetMultiRequest model;
     public ClientAccountGetMultiRequestBuilder(ClientAccountGetMultiRequest model) {
         this.model = model;
     }

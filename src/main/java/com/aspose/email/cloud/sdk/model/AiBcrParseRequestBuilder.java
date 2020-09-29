@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiBcrParseRequest builder.
  */
 public class AiBcrParseRequestBuilder {
-    private final AiBcrParseRequest model;
+    private AiBcrParseRequest model;
     public AiBcrParseRequestBuilder(AiBcrParseRequest model) {
         this.model = model;
     }

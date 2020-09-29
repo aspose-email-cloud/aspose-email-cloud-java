@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientMessageFetchFileRequest builder.
  */
 public class ClientMessageFetchFileRequestBuilder {
-    private final ClientMessageFetchFileRequest model;
+    private ClientMessageFetchFileRequest model;
     public ClientMessageFetchFileRequestBuilder(ClientMessageFetchFileRequest model) {
         this.model = model;
     }

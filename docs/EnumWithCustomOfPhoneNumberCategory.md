@@ -1,5 +1,7 @@
 
 # EnumWithCustomOfPhoneNumberCategory
+
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientFolderGetListRequest builder.
  */
 public class ClientFolderGetListRequestBuilder {
-    private final ClientFolderGetListRequest model;
+    private ClientFolderGetListRequest model;
     public ClientFolderGetListRequestBuilder(ClientFolderGetListRequest model) {
         this.model = model;
     }

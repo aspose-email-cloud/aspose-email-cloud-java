@@ -1,5 +1,8 @@
 
 # MapiContactPhysicalAddressPropertySetDto
+
+Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

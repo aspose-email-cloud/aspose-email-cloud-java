@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameMatchResult builder.
  */
 public class AiNameMatchResultBuilder {
-    private final AiNameMatchResult model;
+    private AiNameMatchResult model;
     public AiNameMatchResultBuilder(AiNameMatchResult model) {
         this.model = model;
     }

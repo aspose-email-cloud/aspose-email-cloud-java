@@ -43,7 +43,7 @@ import java.io.*;
  *  ContactPhoto builder.
  */
 public class ContactPhotoBuilder {
-    private final ContactPhoto model;
+    private ContactPhoto model;
     public ContactPhotoBuilder(ContactPhoto model) {
         this.model = model;
     }

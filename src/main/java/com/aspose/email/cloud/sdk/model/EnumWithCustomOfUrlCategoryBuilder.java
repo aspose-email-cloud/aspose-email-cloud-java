@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfUrlCategory builder.
  */
 public class EnumWithCustomOfUrlCategoryBuilder {
-    private final EnumWithCustomOfUrlCategory model;
+    private EnumWithCustomOfUrlCategory model;
     public EnumWithCustomOfUrlCategoryBuilder(EnumWithCustomOfUrlCategory model) {
         this.model = model;
     }

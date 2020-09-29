@@ -43,7 +43,7 @@ import java.io.*;
  *  AttachmentBase builder.
  */
 public class AttachmentBaseBuilder {
-    private final AttachmentBase model;
+    private AttachmentBase model;
     public AttachmentBaseBuilder(AttachmentBase model) {
         this.model = model;
     }

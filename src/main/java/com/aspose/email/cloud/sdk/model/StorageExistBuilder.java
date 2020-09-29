@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageExist builder.
  */
 public class StorageExistBuilder {
-    private final StorageExist model;
+    private StorageExist model;
     public StorageExistBuilder(StorageExist model) {
         this.model = model;
     }

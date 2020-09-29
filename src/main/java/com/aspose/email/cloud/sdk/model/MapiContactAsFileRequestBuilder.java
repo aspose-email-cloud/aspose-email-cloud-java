@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiContactAsFileRequest builder.
  */
 public class MapiContactAsFileRequestBuilder {
-    private final MapiContactAsFileRequest model;
+    private MapiContactAsFileRequest model;
     public MapiContactAsFileRequestBuilder(MapiContactAsFileRequest model) {
         this.model = model;
     }

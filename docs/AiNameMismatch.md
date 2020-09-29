@@ -1,5 +1,8 @@
 
 # AiNameMismatch
+
+Names mismatch detailed description             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +11,14 @@ Name | Type | Description | Notes
 **explanation** | **String** | Explanation or mismatch subtype              |  [optional]
 
 
+
+## Example
+```java
+AiNameMismatch aiNameMismatch = Models.aiNameMismatch()
+    .category("Gender")
+    .explanation("no_match")
+    .build();
+```
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)

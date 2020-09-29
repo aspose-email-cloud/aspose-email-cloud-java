@@ -43,7 +43,7 @@ import java.io.*;
  *  WeeklyRecurrencePatternDto builder.
  */
 public class WeeklyRecurrencePatternDtoBuilder {
-    private final WeeklyRecurrencePatternDto model;
+    private WeeklyRecurrencePatternDto model;
     public WeeklyRecurrencePatternDtoBuilder(WeeklyRecurrencePatternDto model) {
         this.model = model;
     }

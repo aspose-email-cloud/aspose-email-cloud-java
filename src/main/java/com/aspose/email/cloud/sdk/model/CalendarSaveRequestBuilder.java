@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarSaveRequest builder.
  */
 public class CalendarSaveRequestBuilder {
-    private final CalendarSaveRequest model;
+    private CalendarSaveRequest model;
     public CalendarSaveRequestBuilder(CalendarSaveRequest model) {
         this.model = model;
     }

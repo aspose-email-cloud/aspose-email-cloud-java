@@ -43,7 +43,7 @@ import java.io.*;
  *  ReminderTrigger builder.
  */
 public class ReminderTriggerBuilder {
-    private final ReminderTrigger model;
+    private ReminderTrigger model;
     public ReminderTriggerBuilder(ReminderTrigger model) {
         this.model = model;
     }

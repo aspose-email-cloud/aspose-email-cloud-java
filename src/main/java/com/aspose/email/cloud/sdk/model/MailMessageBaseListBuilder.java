@@ -43,7 +43,7 @@ import java.io.*;
  *  MailMessageBaseList builder.
  */
 public class MailMessageBaseListBuilder {
-    private final MailMessageBaseList model;
+    private MailMessageBaseList model;
     public MailMessageBaseListBuilder(MailMessageBaseList model) {
         this.model = model;
     }

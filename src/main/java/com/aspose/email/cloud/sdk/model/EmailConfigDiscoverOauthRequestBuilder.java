@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailConfigDiscoverOauthRequest builder.
  */
 public class EmailConfigDiscoverOauthRequestBuilder {
-    private final EmailConfigDiscoverOauthRequest model;
+    private EmailConfigDiscoverOauthRequest model;
     public EmailConfigDiscoverOauthRequestBuilder(EmailConfigDiscoverOauthRequest model) {
         this.model = model;
     }

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  DeleteFolderRequest builder.
  */
 public class DeleteFolderRequestBuilder {
-    private final DeleteFolderRequest model;
+    private DeleteFolderRequest model;
     public DeleteFolderRequestBuilder(DeleteFolderRequest model) {
         this.model = model;
     }

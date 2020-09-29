@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfStorageFileLocation builder.
  */
 public class ListResponseOfStorageFileLocationBuilder {
-    private final ListResponseOfStorageFileLocation model;
+    private ListResponseOfStorageFileLocation model;
     public ListResponseOfStorageFileLocationBuilder(ListResponseOfStorageFileLocation model) {
         this.model = model;
     }

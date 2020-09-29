@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  EmailConvertRequest builder.
  */
 public class EmailConvertRequestBuilder {
-    private final EmailConvertRequest model;
+    private EmailConvertRequest model;
     public EmailConvertRequestBuilder(EmailConvertRequest model) {
         this.model = model;
     }

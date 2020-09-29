@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfEmailClientAccount builder.
  */
 public class StorageModelOfEmailClientAccountBuilder {
-    private final StorageModelOfEmailClientAccount model;
+    private StorageModelOfEmailClientAccount model;
     public StorageModelOfEmailClientAccountBuilder(StorageModelOfEmailClientAccount model) {
         this.model = model;
     }

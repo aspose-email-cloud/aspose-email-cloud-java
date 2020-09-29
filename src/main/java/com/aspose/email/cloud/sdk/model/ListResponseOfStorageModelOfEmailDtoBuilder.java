@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfStorageModelOfEmailDto builder.
  */
 public class ListResponseOfStorageModelOfEmailDtoBuilder {
-    private final ListResponseOfStorageModelOfEmailDto model;
+    private ListResponseOfStorageModelOfEmailDto model;
     public ListResponseOfStorageModelOfEmailDtoBuilder(ListResponseOfStorageModelOfEmailDto model) {
         this.model = model;
     }

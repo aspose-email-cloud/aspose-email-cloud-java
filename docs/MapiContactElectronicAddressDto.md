@@ -1,5 +1,8 @@
 
 # MapiContactElectronicAddressDto
+
+Refers to the group of properties that define the e-mail address or fax address for a contact.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

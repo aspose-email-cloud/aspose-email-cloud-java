@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfMapiContactDto builder.
  */
 public class StorageModelOfMapiContactDtoBuilder {
-    private final StorageModelOfMapiContactDto model;
+    private StorageModelOfMapiContactDto model;
     public StorageModelOfMapiContactDtoBuilder(StorageModelOfMapiContactDto model) {
         this.model = model;
     }

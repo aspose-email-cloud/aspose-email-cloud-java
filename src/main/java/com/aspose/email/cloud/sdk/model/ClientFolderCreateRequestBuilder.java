@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientFolderCreateRequest builder.
  */
 public class ClientFolderCreateRequestBuilder {
-    private final ClientFolderCreateRequest model;
+    private ClientFolderCreateRequest model;
     public ClientFolderCreateRequestBuilder(ClientFolderCreateRequest model) {
         this.model = model;
     }

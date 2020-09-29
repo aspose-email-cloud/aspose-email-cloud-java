@@ -43,7 +43,7 @@ import java.io.*;
  *  MailMessageMapi builder.
  */
 public class MailMessageMapiBuilder {
-    private final MailMessageMapi model;
+    private MailMessageMapi model;
     public MailMessageMapiBuilder(MailMessageMapi model) {
         this.model = model;
     }

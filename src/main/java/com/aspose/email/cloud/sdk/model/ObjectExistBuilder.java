@@ -43,7 +43,7 @@ import java.io.*;
  *  ObjectExist builder.
  */
 public class ObjectExistBuilder {
-    private final ObjectExist model;
+    private ObjectExist model;
     public ObjectExistBuilder(ObjectExist model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  ValueTOfBoolean builder.
  */
 public class ValueTOfBooleanBuilder {
-    private final ValueTOfBoolean model;
+    private ValueTOfBoolean model;
     public ValueTOfBooleanBuilder(ValueTOfBoolean model) {
         this.model = model;
     }

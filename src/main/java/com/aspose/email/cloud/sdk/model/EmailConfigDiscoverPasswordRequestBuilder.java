@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailConfigDiscoverPasswordRequest builder.
  */
 public class EmailConfigDiscoverPasswordRequestBuilder {
-    private final EmailConfigDiscoverPasswordRequest model;
+    private EmailConfigDiscoverPasswordRequest model;
     public EmailConfigDiscoverPasswordRequestBuilder(EmailConfigDiscoverPasswordRequest model) {
         this.model = model;
     }

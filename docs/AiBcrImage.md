@@ -1,5 +1,8 @@
 
 # AiBcrImage
+
+Image for recognition             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

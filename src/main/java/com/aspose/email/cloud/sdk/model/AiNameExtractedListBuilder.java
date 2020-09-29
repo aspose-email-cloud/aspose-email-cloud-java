@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameExtractedList builder.
  */
 public class AiNameExtractedListBuilder {
-    private final AiNameExtractedList model;
+    private AiNameExtractedList model;
     public AiNameExtractedListBuilder(AiNameExtractedList model) {
         this.model = model;
     }

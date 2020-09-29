@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfCalendarDto builder.
  */
 public class StorageModelOfCalendarDtoBuilder {
-    private final StorageModelOfCalendarDto model;
+    private StorageModelOfCalendarDto model;
     public StorageModelOfCalendarDtoBuilder(StorageModelOfCalendarDto model) {
         this.model = model;
     }

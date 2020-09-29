@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientMessageMoveRequest builder.
  */
 public class ClientMessageMoveRequestBuilder {
-    private final ClientMessageMoveRequest model;
+    private ClientMessageMoveRequest model;
     public ClientMessageMoveRequestBuilder(ClientMessageMoveRequest model) {
         this.model = model;
     }

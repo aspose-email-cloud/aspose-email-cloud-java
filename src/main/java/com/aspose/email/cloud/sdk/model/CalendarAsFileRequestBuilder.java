@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarAsFileRequest builder.
  */
 public class CalendarAsFileRequestBuilder {
-    private final CalendarAsFileRequest model;
+    private CalendarAsFileRequest model;
     public CalendarAsFileRequestBuilder(CalendarAsFileRequest model) {
         this.model = model;
     }

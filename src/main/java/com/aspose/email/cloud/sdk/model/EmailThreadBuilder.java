@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailThread builder.
  */
 public class EmailThreadBuilder {
-    private final EmailThread model;
+    private EmailThread model;
     public EmailThreadBuilder(EmailThread model) {
         this.model = model;
     }

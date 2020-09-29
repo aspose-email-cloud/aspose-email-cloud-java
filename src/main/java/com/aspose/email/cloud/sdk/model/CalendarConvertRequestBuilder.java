@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  CalendarConvertRequest builder.
  */
 public class CalendarConvertRequestBuilder {
-    private final CalendarConvertRequest model;
+    private CalendarConvertRequest model;
     public CalendarConvertRequestBuilder(CalendarConvertRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailStorageList builder.
  */
 public class EmailStorageListBuilder {
-    private final EmailStorageList model;
+    private EmailStorageList model;
     public EmailStorageListBuilder(EmailStorageList model) {
         this.model = model;
     }

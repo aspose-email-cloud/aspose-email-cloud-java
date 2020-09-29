@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfInstantMessengerCategory builder.
  */
 public class EnumWithCustomOfInstantMessengerCategoryBuilder {
-    private final EnumWithCustomOfInstantMessengerCategory model;
+    private EnumWithCustomOfInstantMessengerCategory model;
     public EnumWithCustomOfInstantMessengerCategoryBuilder(EnumWithCustomOfInstantMessengerCategory model) {
         this.model = model;
     }

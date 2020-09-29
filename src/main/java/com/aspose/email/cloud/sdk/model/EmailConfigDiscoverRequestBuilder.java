@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  EmailConfigDiscoverRequest builder.
  */
 public class EmailConfigDiscoverRequestBuilder {
-    private final EmailConfigDiscoverRequest model;
+    private EmailConfigDiscoverRequest model;
     public EmailConfigDiscoverRequestBuilder(EmailConfigDiscoverRequest model) {
         this.model = model;
     }

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientAccountGetRequest builder.
  */
 public class ClientAccountGetRequestBuilder {
-    private final ClientAccountGetRequest model;
+    private ClientAccountGetRequest model;
     public ClientAccountGetRequestBuilder(ClientAccountGetRequest model) {
         this.model = model;
     }

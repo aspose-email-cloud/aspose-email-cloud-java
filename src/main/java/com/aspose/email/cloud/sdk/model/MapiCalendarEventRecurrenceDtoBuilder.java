@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarEventRecurrenceDto builder.
  */
 public class MapiCalendarEventRecurrenceDtoBuilder {
-    private final MapiCalendarEventRecurrenceDto model;
+    private MapiCalendarEventRecurrenceDto model;
     public MapiCalendarEventRecurrenceDtoBuilder(MapiCalendarEventRecurrenceDto model) {
         this.model = model;
     }

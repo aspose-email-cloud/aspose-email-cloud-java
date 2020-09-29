@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiPidTagPropertyDescriptor builder.
  */
 public class MapiPidTagPropertyDescriptorBuilder {
-    private final MapiPidTagPropertyDescriptor model;
+    private MapiPidTagPropertyDescriptor model;
     public MapiPidTagPropertyDescriptorBuilder(MapiPidTagPropertyDescriptor model) {
         this.model = model;
     }

@@ -1,145 +1,355 @@
-# FileApi
+# FileApi (EmailCloud.cloudStorage().file())
 
-            
+File operations controller
+
 <a name="copyFile"></a>
-# **copyFile**
-> void copyFile(CopyFileRequest request)
+## copyFile
 
-Copy file
+Description: Copy file
 
-### **CopyFileRequest** Parameters
+Returns: Returns 200 if the copy is successful.
+
+Method call example:
 ```java
-public CopyFileRequest(
-    String srcPath, 
-    String destPath, 
-    String srcStorageName, 
-    String destStorageName, 
-    String versionId)
+api.cloudStorage().file().copyFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **srcPath** | **String**| Source file path e.g. &#39;/folder/file.ext&#39; |
- **destPath** | **String**| Destination file path |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to copy | [optional]
 
-### Return type
+### Parameter: request
 
-void (empty response body)
+Description: copyFile method request.
+
+See parameter model documentation at [CopyFileRequest](CopyFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+CopyFileRequest request = Models.copyFileRequest()
+    .srcPath("/storage/path/to/source/file.ext")
+    .destPath("/storage/path/to/destination/file.ext")
+    .srcStorageName("First Storage")
+    .destStorageName("Other Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Returns 200 if the copy is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+CopyFileRequest request = Models.copyFileRequest()
+    .srcPath("/storage/path/to/source/file.ext")
+    .destPath("/storage/path/to/destination/file.ext")
+    .srcStorageName("First Storage")
+    .destStorageName("Other Storage")
+    .build();
+
+// Call method:
+api.cloudStorage().file().copyFile(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="deleteFile"></a>
-# **deleteFile**
-> void deleteFile(DeleteFileRequest request)
+## deleteFile
 
-Delete file
+Description: Delete file
 
-### **DeleteFileRequest** Parameters
+Returns: Returns 200 if the delete is successful.
+
+Method call example:
 ```java
-public DeleteFileRequest(
-    String path, 
-    String storageName, 
-    String versionId)
+api.cloudStorage().file().deleteFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to delete | [optional]
 
-### Return type
+### Parameter: request
 
-void (empty response body)
+Description: deleteFile method request.
+
+See parameter model documentation at [DeleteFileRequest](DeleteFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+DeleteFileRequest request = Models.deleteFileRequest()
+    .path("/storage/path/to/file.ext")
+    .storageName("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Returns 200 if the delete is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+DeleteFileRequest request = Models.deleteFileRequest()
+    .path("/storage/path/to/file.ext")
+    .storageName("First Storage")
+    .build();
+
+// Call method:
+api.cloudStorage().file().deleteFile(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="downloadFile"></a>
-# **downloadFile**
-> byte[] downloadFile(DownloadFileRequest request)
+## downloadFile
 
-Download file
+Description: Download file
 
-### **DownloadFileRequest** Parameters
+Returns: The raw data of the file.
+
+Method call example:
 ```java
-public DownloadFileRequest(
-    String path, 
-    String storageName, 
-    String versionId)
+byte[] result = api.cloudStorage().file().downloadFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
- **storageName** | **String**| Storage name | [optional]
- **versionId** | **String**| File version ID to download | [optional]
 
-### Return type
+### Parameter: request
 
-**byte[]**
+Description: downloadFile method request.
+
+See parameter model documentation at [DownloadFileRequest](DownloadFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+DownloadFileRequest request = Models.downloadFileRequest()
+    .path("/storage/path/to/file.ext")
+    .storageName("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: The raw data of the file.
+
+Return type: **byte[]**
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+DownloadFileRequest request = Models.downloadFileRequest()
+    .path("/storage/path/to/file.ext")
+    .storageName("First Storage")
+    .build();
+
+// Call method:
+byte[] result = api.cloudStorage().file().downloadFile(request);
+
+// Result example:
+result = ;
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="moveFile"></a>
-# **moveFile**
-> void moveFile(MoveFileRequest request)
+## moveFile
 
-Move file
+Description: Move file
 
-### **MoveFileRequest** Parameters
+Returns: Returns 200 if the move is successful.
+
+Method call example:
 ```java
-public MoveFileRequest(
-    String srcPath, 
-    String destPath, 
-    String srcStorageName, 
-    String destStorageName, 
-    String versionId)
+api.cloudStorage().file().moveFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **srcPath** | **String**| Source file path e.g. &#39;/src.ext&#39; |
- **destPath** | **String**| Destination file path e.g. &#39;/dest.ext&#39; |
- **srcStorageName** | **String**| Source storage name | [optional]
- **destStorageName** | **String**| Destination storage name | [optional]
- **versionId** | **String**| File version ID to move | [optional]
 
-### Return type
+### Parameter: request
 
-void (empty response body)
+Description: moveFile method request.
+
+See parameter model documentation at [MoveFileRequest](MoveFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+MoveFileRequest request = Models.moveFileRequest()
+    .srcPath("/storage/path/to/source/file.ext")
+    .destPath("/storage/path/to/destination/file.ext")
+    .srcStorageName("First Storage")
+    .destStorageName("Other Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Returns 200 if the move is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MoveFileRequest request = Models.moveFileRequest()
+    .srcPath("/storage/path/to/source/file.ext")
+    .destPath("/storage/path/to/destination/file.ext")
+    .srcStorageName("First Storage")
+    .destStorageName("Other Storage")
+    .build();
+
+// Call method:
+api.cloudStorage().file().moveFile(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="uploadFile"></a>
-# **uploadFile**
-> [FilesUploadResult](FilesUploadResult.md) uploadFile(UploadFileRequest request)
+## uploadFile
 
-Upload file
+Description: Upload file
 
-### **UploadFileRequest** Parameters
+Returns: Empty error list if the upload is successful.
+
+Method call example:
 ```java
-public UploadFileRequest(
-    String path, 
-    byte[] file, 
-    String storageName)
+FilesUploadResult result = api.cloudStorage().file().uploadFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **path** | **String**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              |
- **file** | **byte[]**| File to upload |
- **storageName** | **String**| Storage name | [optional]
 
-### Return type
+### Parameter: request
 
-[**FilesUploadResult**](FilesUploadResult.md)
+Description: uploadFile method request.
+
+See parameter model documentation at [UploadFileRequest](UploadFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+UploadFileRequest request = Models.uploadFileRequest()
+    .path("/storage/path/to/file.ext")
+    .file(IOUtils.toByteArray(new FileInputStream("/local/file/system/path/to/file.ext")))
+    .storageName("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Empty error list if the upload is successful.
+
+Return type: [**FilesUploadResult**](FilesUploadResult.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+UploadFileRequest request = Models.uploadFileRequest()
+    .path("/storage/path/to/file.ext")
+    .file(IOUtils.toByteArray(new FileInputStream("/local/file/system/path/to/file.ext")))
+    .storageName("First Storage")
+    .build();
+
+// Call method:
+FilesUploadResult result = api.cloudStorage().file().uploadFile(request);
+
+// Result example:
+result = ;
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

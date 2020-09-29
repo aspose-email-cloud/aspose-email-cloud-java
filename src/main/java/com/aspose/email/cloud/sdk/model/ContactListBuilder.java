@@ -43,7 +43,7 @@ import java.io.*;
  *  ContactList builder.
  */
 public class ContactListBuilder {
-    private final ContactList model;
+    private ContactList model;
     public ContactListBuilder(ContactList model) {
         this.model = model;
     }

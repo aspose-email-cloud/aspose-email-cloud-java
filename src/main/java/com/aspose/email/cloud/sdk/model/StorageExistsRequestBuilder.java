@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  StorageExistsRequest builder.
  */
 public class StorageExistsRequestBuilder {
-    private final StorageExistsRequest model;
+    private StorageExistsRequest model;
     public StorageExistsRequestBuilder(StorageExistsRequest model) {
         this.model = model;
     }

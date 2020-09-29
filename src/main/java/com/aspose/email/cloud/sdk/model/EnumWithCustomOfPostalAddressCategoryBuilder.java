@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfPostalAddressCategory builder.
  */
 public class EnumWithCustomOfPostalAddressCategoryBuilder {
-    private final EnumWithCustomOfPostalAddressCategory model;
+    private EnumWithCustomOfPostalAddressCategory model;
     public EnumWithCustomOfPostalAddressCategoryBuilder(EnumWithCustomOfPostalAddressCategory model) {
         this.model = model;
     }

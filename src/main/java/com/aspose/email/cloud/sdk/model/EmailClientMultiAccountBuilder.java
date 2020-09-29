@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailClientMultiAccount builder.
  */
 public class EmailClientMultiAccountBuilder {
-    private final EmailClientMultiAccount model;
+    private EmailClientMultiAccount model;
     public EmailClientMultiAccountBuilder(EmailClientMultiAccount model) {
         this.model = model;
     }

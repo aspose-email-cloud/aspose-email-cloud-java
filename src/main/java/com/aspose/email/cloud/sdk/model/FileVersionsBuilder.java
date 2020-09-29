@@ -43,7 +43,7 @@ import java.io.*;
  *  FileVersions builder.
  */
 public class FileVersionsBuilder {
-    private final FileVersions model;
+    private FileVersions model;
     public FileVersionsBuilder(FileVersions model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  YearlyRecurrencePatternDto builder.
  */
 public class YearlyRecurrencePatternDtoBuilder {
-    private final YearlyRecurrencePatternDto model;
+    private YearlyRecurrencePatternDto model;
     public YearlyRecurrencePatternDtoBuilder(YearlyRecurrencePatternDto model) {
         this.model = model;
     }

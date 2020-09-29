@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientMessageAppendRequest builder.
  */
 public class ClientMessageAppendRequestBuilder {
-    private final ClientMessageAppendRequest model;
+    private ClientMessageAppendRequest model;
     public ClientMessageAppendRequestBuilder(ClientMessageAppendRequest model) {
         this.model = model;
     }

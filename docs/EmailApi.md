@@ -1,191 +1,944 @@
-# EmailApi
+# EmailApi (EmailCloud.email())
 
-            
+Email document (*.eml) operations.
+
 <a name="asFile"></a>
-# asFile
-> byte[] asFile([EmailAsFileRequest](EmailAsFileRequest.md) request)
+## asFile
 
-Converts Email model to specified format and returns as file.             
+Description: Converts Email model to specified format and returns as file.             
 
-### request Parameter
+Returns: File stream in specified format.
+
+Method call example:
+```java
+byte[] result = api.email().asFile(request);
+```
+
+### Parameter: request
+
+Description: Email model and format to convert.
 
 See parameter model documentation at [EmailAsFileRequest](EmailAsFileRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+EmailAsFileRequest request = Models.emailAsFileRequest()
+    .value(Models.emailDto()
+        .attachments(Arrays.<Attachment>asList(
+            Models.attachment()
+                .name("some-file.txt")
+                .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                .build()))
+        .body("Some body")
+        .bodyType("Html")
+        .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+            "OnSuccess",
+            "Delay"))
+        .from(Models.mailAddress()
+            .displayName("From Address")
+            .address("from@aspose.com")
+            .build())
+        .htmlBody("<b>Some body</b>")
+        .isBodyHtml(true)
+        .isDraft(true)
+        .subject("Re: Some subject")
+        .to(Arrays.<MailAddress>asList(
+            Models.mailAddress()
+                .displayName("To Address")
+                .address("to@aspose.com")
+                .build()))
+        .build())
+    .build();
+```
 
-**byte[]**
+</details>
+
+
+### Result
+
+Description: File stream in specified format.
+
+Return type: **byte[]**
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailAsFileRequest request = Models.emailAsFileRequest()
+    .value(Models.emailDto()
+        .attachments(Arrays.<Attachment>asList(
+            Models.attachment()
+                .name("some-file.txt")
+                .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                .build()))
+        .body("Some body")
+        .bodyType("Html")
+        .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+            "OnSuccess",
+            "Delay"))
+        .from(Models.mailAddress()
+            .displayName("From Address")
+            .address("from@aspose.com")
+            .build())
+        .htmlBody("<b>Some body</b>")
+        .isBodyHtml(true)
+        .isDraft(true)
+        .subject("Re: Some subject")
+        .to(Arrays.<MailAddress>asList(
+            Models.mailAddress()
+                .displayName("To Address")
+                .address("to@aspose.com")
+                .build()))
+        .build())
+    .build();
+
+// Call method:
+byte[] result = api.email().asFile(request);
+
+// Result example:
+result = ;
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="asMapi"></a>
-# asMapi
-> [MapiMessageDto](MapiMessageDto.md) asMapi([EmailDto](EmailDto.md) emailDto)
+## asMapi
 
-Converts EmailDto to MapiMessageDto.             
+Description: Converts EmailDto to MapiMessageDto.             
 
-### emailDto Parameter
+Returns: MAPI model message representation
+
+Method call example:
+```java
+MapiMessageDto result = api.email().asMapi(emailDto);
+```
+
+### Parameter: emailDto
+
+Description: Email model to convert
 
 See parameter model documentation at [EmailDto](EmailDto.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+EmailDto emailDto = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+```
 
-[**MapiMessageDto**](MapiMessageDto.md)
+</details>
+
+
+### Result
+
+Description: MAPI model message representation
+
+Return type: [**MapiMessageDto**](MapiMessageDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.mapiMessageDto()
+    .messageBody("Some body")
+    .clientSubmitTime(Calendar.getInstance().getTime())
+    .deliveryTime(Calendar.getInstance().getTime())
+    .displayTo("To Address")
+    .flags(Arrays.<MapiMessageFlag>asList(
+        "MsgFlagRead",
+        "MsgFlagUnsent",
+        "MsgFlagHasAttach"))
+    .normalizedSubject("Some subject")
+    .senderAddressType("SMTP")
+    .senderEmailAddress("from@aspose.com")
+    .senderName("From Address")
+    .senderSmtpAddress("from@aspose.com")
+    .attachments(Arrays.<MapiAttachmentDto>asList(
+        Models.mapiAttachmentDto()
+            .name("some-file.txt")
+            .dataBase64("U29tZSBmaWxlIHRleHQ=")
+            .build()))
+    .body("Some body")
+    .messageClass("IPM.Note")
+    .recipients(Arrays.<MapiRecipientDto>asList(
+        Models.mapiRecipientDto()
+            .emailAddress("to@aspose.com")
+            .addressType("SMTP")
+            .displayName("To Address")
+            .recipientType("MapiTo")
+            .build()))
+    .subject("Re: Some subject")
+    .subjectPrefix("Re: ")
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailDto emailDto = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+
+// Call method:
+MapiMessageDto result = api.email().asMapi(emailDto);
+
+// Result example:
+result = Models.mapiMessageDto()
+    .messageBody("Some body")
+    .clientSubmitTime(Calendar.getInstance().getTime())
+    .deliveryTime(Calendar.getInstance().getTime())
+    .displayTo("To Address")
+    .flags(Arrays.<MapiMessageFlag>asList(
+        "MsgFlagRead",
+        "MsgFlagUnsent",
+        "MsgFlagHasAttach"))
+    .normalizedSubject("Some subject")
+    .senderAddressType("SMTP")
+    .senderEmailAddress("from@aspose.com")
+    .senderName("From Address")
+    .senderSmtpAddress("from@aspose.com")
+    .attachments(Arrays.<MapiAttachmentDto>asList(
+        Models.mapiAttachmentDto()
+            .name("some-file.txt")
+            .dataBase64("U29tZSBmaWxlIHRleHQ=")
+            .build()))
+    .body("Some body")
+    .messageClass("IPM.Note")
+    .recipients(Arrays.<MapiRecipientDto>asList(
+        Models.mapiRecipientDto()
+            .emailAddress("to@aspose.com")
+            .addressType("SMTP")
+            .displayName("To Address")
+            .recipientType("MapiTo")
+            .build()))
+    .subject("Re: Some subject")
+    .subjectPrefix("Re: ")
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="convert"></a>
-# **convert**
-> byte[] convert(EmailConvertRequest request)
+## convert
 
-Converts email document to specified format and returns as file             
+Description: Converts email document to specified format and returns as file             
 
-### **EmailConvertRequest** Parameters
+Returns: File stream in specified format
+
+Method call example:
 ```java
-public EmailConvertRequest(
-    String fromFormat, 
-    String toFormat, 
-    byte[] file)
+byte[] result = api.email().convert(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **fromFormat** | **String**| File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **toFormat** | **String**| File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **file** | **byte[]**| File to convert |
 
-### Return type
+### Parameter: request
 
-**byte[]**
+Description: convert method request.
+
+See parameter model documentation at [EmailConvertRequest](EmailConvertRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailConvertRequest request = Models.emailConvertRequest()
+    .fromFormat("Msg")
+    .toFormat("Mhtml")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/message.msg")))
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: File stream in specified format
+
+Return type: **byte[]**
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailConvertRequest request = Models.emailConvertRequest()
+    .fromFormat("Msg")
+    .toFormat("Mhtml")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/message.msg")))
+    .build();
+
+// Call method:
+byte[] result = api.email().convert(request);
+
+// Result example:
+result = ;
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="fromFile"></a>
-# **fromFile**
-> [EmailDto](EmailDto.md) fromFile(EmailFromFileRequest request)
+## fromFile
 
-Converts email document to a model representation             
+Description: Converts email document to a model representation             
 
-### **EmailFromFileRequest** Parameters
+Returns: Email document model
+
+Method call example:
 ```java
-public EmailFromFileRequest(
-    String format, 
-    byte[] file)
+EmailDto result = api.email().fromFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **format** | **String**|  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **file** | **byte[]**| File to convert |
 
-### Return type
+### Parameter: request
 
-[**EmailDto**](EmailDto.md)
+Description: fromFile method request.
+
+See parameter model documentation at [EmailFromFileRequest](EmailFromFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailFromFileRequest request = Models.emailFromFileRequest()
+    .format("Eml")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/message.eml")))
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Email document model
+
+Return type: [**EmailDto**](EmailDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailFromFileRequest request = Models.emailFromFileRequest()
+    .format("Eml")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/message.eml")))
+    .build();
+
+// Call method:
+EmailDto result = api.email().fromFile(request);
+
+// Result example:
+result = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="get"></a>
-# **get**
-> [EmailDto](EmailDto.md) get(EmailGetRequest request)
+## get
 
-Get email document from storage.             
+Description: Get email document from storage.             
 
-### **EmailGetRequest** Parameters
+Returns: Email document.
+
+Method call example:
 ```java
-public EmailGetRequest(
-    String format, 
-    String fileName, 
-    String folder, 
-    String storage)
+EmailDto result = api.email().get(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **fileName** | **String**| Email document file name. |
- **folder** | **String**| Path to folder in storage. | [optional]
- **storage** | **String**| Storage name. | [optional]
 
-### Return type
+### Parameter: request
 
-[**EmailDto**](EmailDto.md)
+Description: get method request.
+
+See parameter model documentation at [EmailGetRequest](EmailGetRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailGetRequest request = Models.emailGetRequest()
+    .format("Eml")
+    .fileName("email.eml")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Email document.
+
+Return type: [**EmailDto**](EmailDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailGetRequest request = Models.emailGetRequest()
+    .format("Eml")
+    .fileName("email.eml")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .build();
+
+// Call method:
+EmailDto result = api.email().get(request);
+
+// Result example:
+result = Models.emailDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("some-file.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .body("Some body")
+    .bodyType("Html")
+    .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+        "OnSuccess",
+        "Delay"))
+    .from(Models.mailAddress()
+        .displayName("From Address")
+        .address("from@aspose.com")
+        .build())
+    .htmlBody("<b>Some body</b>")
+    .isBodyHtml(true)
+    .isDraft(true)
+    .subject("Re: Some subject")
+    .to(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("To Address")
+            .address("to@aspose.com")
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="getAsFile"></a>
-# **getAsFile**
-> byte[] getAsFile(EmailGetAsFileRequest request)
+## getAsFile
 
-Converts email document from storage to specified format and returns as file             
+Description: Converts email document from storage to specified format and returns as file             
 
-### **EmailGetAsFileRequest** Parameters
+Returns: File stream in specified format
+
+Method call example:
 ```java
-public EmailGetAsFileRequest(
-    String fileName, 
-    String format, 
-    String storage, 
-    String folder)
+byte[] result = api.email().getAsFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **fileName** | **String**| Email document file name |
- **format** | **String**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **storage** | **String**| Storage name | [optional]
- **folder** | **String**| Path to folder in storage | [optional]
 
-### Return type
+### Parameter: request
 
-**byte[]**
+Description: getAsFile method request.
+
+See parameter model documentation at [EmailGetAsFileRequest](EmailGetAsFileRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailGetAsFileRequest request = Models.emailGetAsFileRequest()
+    .fileName("email.eml")
+    .format("Mhtml")
+    .storage("First Storage")
+    .folder("folder/on/storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: File stream in specified format
+
+Return type: **byte[]**
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailGetAsFileRequest request = Models.emailGetAsFileRequest()
+    .fileName("email.eml")
+    .format("Mhtml")
+    .storage("First Storage")
+    .folder("folder/on/storage")
+    .build();
+
+// Call method:
+byte[] result = api.email().getAsFile(request);
+
+// Result example:
+result = ;
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="getList"></a>
-# **getList**
-> [EmailStorageList](EmailStorageList.md) getList(EmailGetListRequest request)
+## getList
 
-Get email list from storage folder.             
+Description: Get email list from storage folder.             
 
-### **EmailGetListRequest** Parameters
+Returns: Email document list.
+
+Method call example:
 ```java
-public EmailGetListRequest(
-    String format, 
-    String folder, 
-    String storage, 
-    Integer itemsPerPage, 
-    Integer pageNumber)
+EmailStorageList result = api.email().getList(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **format** | **String**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft |
- **folder** | **String**| Path to folder in storage. | [optional]
- **storage** | **String**| Storage name. | [optional]
- **itemsPerPage** | **Integer**| Count of items on page. | [optional] [default to 10]
- **pageNumber** | **Integer**| Page number. | [optional] [default to 0]
 
-### Return type
+### Parameter: request
 
-[**EmailStorageList**](EmailStorageList.md)
+Description: getList method request.
+
+See parameter model documentation at [EmailGetListRequest](EmailGetListRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailGetListRequest request = Models.emailGetListRequest()
+    .format("Eml")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .itemsPerPage(10)
+    .pageNumber(0)
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Email document list.
+
+Return type: [**EmailStorageList**](EmailStorageList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailStorageList()
+    .value(Arrays.<StorageModel<EmailDto>>asList(
+        Models.emailSaveRequest()
+            .storageFile(Models.storageFileLocation()
+                .fileName("message.eml")
+                .storage("First Storage")
+                .folderPath("file/location/folder/on/storage")
+                .build())
+            .value(Models.emailDto()
+                .attachments(Arrays.<Attachment>asList(
+                    Models.attachment()
+                        .name("some-file.txt")
+                        .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                        .build()))
+                .body("Some body")
+                .bodyType("Html")
+                .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+                    "OnSuccess",
+                    "Delay"))
+                .from(Models.mailAddress()
+                    .displayName("From Address")
+                    .address("from@aspose.com")
+                    .build())
+                .htmlBody("<b>Some body</b>")
+                .isBodyHtml(true)
+                .isDraft(true)
+                .subject("Re: Some subject")
+                .to(Arrays.<MailAddress>asList(
+                    Models.mailAddress()
+                        .displayName("To Address")
+                        .address("to@aspose.com")
+                        .build()))
+                .build())
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailGetListRequest request = Models.emailGetListRequest()
+    .format("Eml")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .itemsPerPage(10)
+    .pageNumber(0)
+    .build();
+
+// Call method:
+EmailStorageList result = api.email().getList(request);
+
+// Result example:
+result = Models.emailStorageList()
+    .value(Arrays.<StorageModel<EmailDto>>asList(
+        Models.emailSaveRequest()
+            .storageFile(Models.storageFileLocation()
+                .fileName("message.eml")
+                .storage("First Storage")
+                .folderPath("file/location/folder/on/storage")
+                .build())
+            .value(Models.emailDto()
+                .attachments(Arrays.<Attachment>asList(
+                    Models.attachment()
+                        .name("some-file.txt")
+                        .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                        .build()))
+                .body("Some body")
+                .bodyType("Html")
+                .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+                    "OnSuccess",
+                    "Delay"))
+                .from(Models.mailAddress()
+                    .displayName("From Address")
+                    .address("from@aspose.com")
+                    .build())
+                .htmlBody("<b>Some body</b>")
+                .isBodyHtml(true)
+                .isDraft(true)
+                .subject("Re: Some subject")
+                .to(Arrays.<MailAddress>asList(
+                    Models.mailAddress()
+                        .displayName("To Address")
+                        .address("to@aspose.com")
+                        .build()))
+                .build())
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="save"></a>
-# save
-> void save([EmailSaveRequest](EmailSaveRequest.md) request)
+## save
 
-Save email document to storage.             
+Description: Save email document to storage.             
 
-### request Parameter
+Returns: Returns 200 if update is successful.
+
+Method call example:
+```java
+api.email().save(request);
+```
+
+### Parameter: request
+
+Description: Email document create/update request.
 
 See parameter model documentation at [EmailSaveRequest](EmailSaveRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+EmailSaveRequest request = Models.emailSaveRequest()
+    .format("Msg")
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.eml")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailDto()
+        .attachments(Arrays.<Attachment>asList(
+            Models.attachment()
+                .name("some-file.txt")
+                .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                .build()))
+        .body("Some body")
+        .bodyType("Html")
+        .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+            "OnSuccess",
+            "Delay"))
+        .from(Models.mailAddress()
+            .displayName("From Address")
+            .address("from@aspose.com")
+            .build())
+        .htmlBody("<b>Some body</b>")
+        .isBodyHtml(true)
+        .isDraft(true)
+        .subject("Re: Some subject")
+        .to(Arrays.<MailAddress>asList(
+            Models.mailAddress()
+                .displayName("To Address")
+                .address("to@aspose.com")
+                .build()))
+        .build())
+    .build();
+```
 
-void (empty response body)
+</details>
+
+
+### Result
+
+Description: Returns 200 if update is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailSaveRequest request = Models.emailSaveRequest()
+    .format("Msg")
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.eml")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailDto()
+        .attachments(Arrays.<Attachment>asList(
+            Models.attachment()
+                .name("some-file.txt")
+                .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+                .build()))
+        .body("Some body")
+        .bodyType("Html")
+        .deliveryNotificationOptions(Arrays.<EmailDeliveryNotificationOptions>asList(
+            "OnSuccess",
+            "Delay"))
+        .from(Models.mailAddress()
+            .displayName("From Address")
+            .address("from@aspose.com")
+            .build())
+        .htmlBody("<b>Some body</b>")
+        .isBodyHtml(true)
+        .isDraft(true)
+        .subject("Re: Some subject")
+        .to(Arrays.<MailAddress>asList(
+            Models.mailAddress()
+                .displayName("To Address")
+                .address("to@aspose.com")
+                .build()))
+        .build())
+    .build();
+
+// Call method:
+api.email().save(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

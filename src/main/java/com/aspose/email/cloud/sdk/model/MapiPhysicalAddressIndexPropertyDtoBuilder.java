@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiPhysicalAddressIndexPropertyDto builder.
  */
 public class MapiPhysicalAddressIndexPropertyDtoBuilder {
-    private final MapiPhysicalAddressIndexPropertyDto model;
+    private MapiPhysicalAddressIndexPropertyDto model;
     public MapiPhysicalAddressIndexPropertyDtoBuilder(MapiPhysicalAddressIndexPropertyDto model) {
         this.model = model;
     }

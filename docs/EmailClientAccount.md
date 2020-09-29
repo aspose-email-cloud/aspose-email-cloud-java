@@ -1,5 +1,8 @@
 
 # EmailClientAccount
+
+A universal email client account             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,6 +14,22 @@ Name | Type | Description | Notes
 **cacheFile** | [**StorageFileLocation**](StorageFileLocation.md) | File with messages cache. Used to provide extra functions, which are not supported by account              |  [optional]
 
 
+
+## Example
+```java
+EmailClientAccount emailClientAccount = Models.emailClientAccount()
+    .host("smtp.example.com")
+    .port(465)
+    .securityOptions("SSLAuto")
+    .protocolType("SMTP")
+    .credentials(Models.emailClientAccountOauthCredentials()
+        .clientId("clientId")
+        .clientSecret("clientSecret")
+        .refreshToken("refreshToken")
+        .login("example@example.com")
+        .build())
+    .build();
+```
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)

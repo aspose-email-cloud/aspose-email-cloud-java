@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ClientThreadGetMessagesRequest builder.
  */
 public class ClientThreadGetMessagesRequestBuilder {
-    private final ClientThreadGetMessagesRequest model;
+    private ClientThreadGetMessagesRequest model;
     public ClientThreadGetMessagesRequestBuilder(ClientThreadGetMessagesRequest model) {
         this.model = model;
     }

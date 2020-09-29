@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ContactGetAsFileRequest builder.
  */
 public class ContactGetAsFileRequestBuilder {
-    private final ContactGetAsFileRequest model;
+    private ContactGetAsFileRequest model;
     public ContactGetAsFileRequestBuilder(ContactGetAsFileRequest model) {
         this.model = model;
     }

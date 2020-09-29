@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  ContactConvertRequest builder.
  */
 public class ContactConvertRequestBuilder {
-    private final ContactConvertRequest model;
+    private ContactConvertRequest model;
     public ContactConvertRequestBuilder(ContactConvertRequest model) {
         this.model = model;
     }

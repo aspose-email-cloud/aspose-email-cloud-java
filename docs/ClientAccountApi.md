@@ -1,88 +1,468 @@
-# ClientAccountApi
+# ClientAccountApi (EmailCloud.client().account())
 
-            
+Email server account for built-in client operations.
+
 <a name="get"></a>
-# **get**
-> [EmailClientAccount](EmailClientAccount.md) get(ClientAccountGetRequest request)
+## get
 
-Get email client account from storage.             
+Description: Get email client account from storage.             
 
-### **ClientAccountGetRequest** Parameters
+Returns: Email client account from storage.
+
+Method call example:
 ```java
-public ClientAccountGetRequest(
-    String fileName, 
-    String folder, 
-    String storage)
+EmailClientAccount result = api.client().account().get(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **fileName** | **String**| File name on storage. |
- **folder** | **String**| Folder on storage. | [optional]
- **storage** | **String**| Storage name. | [optional]
 
-### Return type
+### Parameter: request
 
-[**EmailClientAccount**](EmailClientAccount.md)
+Description: get method request.
+
+See parameter model documentation at [ClientAccountGetRequest](ClientAccountGetRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+ClientAccountGetRequest request = Models.clientAccountGetRequest()
+    .fileName("email.account")
+    .folder("email/account/location/on/storage")
+    .storage("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Email client account from storage.
+
+Return type: [**EmailClientAccount**](EmailClientAccount.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailClientAccount()
+    .host("smtp.example.com")
+    .port(465)
+    .securityOptions("SSLAuto")
+    .protocolType("SMTP")
+    .credentials(Models.emailClientAccountOauthCredentials()
+        .clientId("clientId")
+        .clientSecret("clientSecret")
+        .refreshToken("refreshToken")
+        .login("example@example.com")
+        .build())
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientAccountGetRequest request = Models.clientAccountGetRequest()
+    .fileName("email.account")
+    .folder("email/account/location/on/storage")
+    .storage("First Storage")
+    .build();
+
+// Call method:
+EmailClientAccount result = api.client().account().get(request);
+
+// Result example:
+result = Models.emailClientAccount()
+    .host("smtp.example.com")
+    .port(465)
+    .securityOptions("SSLAuto")
+    .protocolType("SMTP")
+    .credentials(Models.emailClientAccountOauthCredentials()
+        .clientId("clientId")
+        .clientSecret("clientSecret")
+        .refreshToken("refreshToken")
+        .login("example@example.com")
+        .build())
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="getMulti"></a>
-# **getMulti**
-> [EmailClientMultiAccount](EmailClientMultiAccount.md) getMulti(ClientAccountGetMultiRequest request)
+## getMulti
 
-Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+Description: Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-### **ClientAccountGetMultiRequest** Parameters
+Returns: Email client multi account from storage
+
+Method call example:
 ```java
-public ClientAccountGetMultiRequest(
-    String fileName, 
-    String folder, 
-    String storage)
+EmailClientMultiAccount result = api.client().account().getMulti(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **fileName** | **String**| File name on storage |
- **folder** | **String**| Folder on storage | [optional]
- **storage** | **String**| Storage name | [optional]
 
-### Return type
+### Parameter: request
 
-[**EmailClientMultiAccount**](EmailClientMultiAccount.md)
+Description: getMulti method request.
+
+See parameter model documentation at [ClientAccountGetMultiRequest](ClientAccountGetMultiRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+ClientAccountGetMultiRequest request = Models.clientAccountGetMultiRequest()
+    .fileName("email.multi.account")
+    .folder("email/account/location/on/storage")
+    .storage("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Email client multi account from storage
+
+Return type: [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailClientMultiAccount()
+    .receiveAccounts(Arrays.<EmailClientAccount>asList(
+        Models.emailClientAccount()
+            .host("imap.gmail.com")
+            .port(993)
+            .securityOptions("SSLAuto")
+            .credentials(Models.emailClientAccountPasswordCredentials()
+                .password("password")
+                .login("example@gmail.com")
+                .build())
+            .build(),
+        Models.emailClientAccount()
+            .host("exchange@outlook.com")
+            .port(443)
+            .protocolType("EWS")
+            .credentials(Models.emailClientAccountOauthCredentials()
+                .clientId("clientId")
+                .clientSecret("clientSecret")
+                .refreshToken("refreshToken")
+                .login("example@outlook.com")
+                .build())
+            .build()))
+    .sendAccount(Models.emailClientAccount()
+        .host("smtp.gmail.com")
+        .port(465)
+        .securityOptions("SSLAuto")
+        .protocolType("SMTP")
+        .credentials(Models.emailClientAccountPasswordCredentials()
+            .password("password")
+            .login("example@gmail.com")
+            .build())
+        .build())
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientAccountGetMultiRequest request = Models.clientAccountGetMultiRequest()
+    .fileName("email.multi.account")
+    .folder("email/account/location/on/storage")
+    .storage("First Storage")
+    .build();
+
+// Call method:
+EmailClientMultiAccount result = api.client().account().getMulti(request);
+
+// Result example:
+result = Models.emailClientMultiAccount()
+    .receiveAccounts(Arrays.<EmailClientAccount>asList(
+        Models.emailClientAccount()
+            .host("imap.gmail.com")
+            .port(993)
+            .securityOptions("SSLAuto")
+            .credentials(Models.emailClientAccountPasswordCredentials()
+                .password("password")
+                .login("example@gmail.com")
+                .build())
+            .build(),
+        Models.emailClientAccount()
+            .host("exchange@outlook.com")
+            .port(443)
+            .protocolType("EWS")
+            .credentials(Models.emailClientAccountOauthCredentials()
+                .clientId("clientId")
+                .clientSecret("clientSecret")
+                .refreshToken("refreshToken")
+                .login("example@outlook.com")
+                .build())
+            .build()))
+    .sendAccount(Models.emailClientAccount()
+        .host("smtp.gmail.com")
+        .port(465)
+        .securityOptions("SSLAuto")
+        .protocolType("SMTP")
+        .credentials(Models.emailClientAccountPasswordCredentials()
+            .password("password")
+            .login("example@gmail.com")
+            .build())
+        .build())
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="save"></a>
-# save
-> void save([ClientAccountSaveRequest](ClientAccountSaveRequest.md) request)
+## save
 
-Create/update email client account file (*.account) with credentials             
+Description: Create/update email client account file (*.account) with credentials             
 
-### request Parameter
+Returns: Returns 200 if save is successful.
+
+Method call example:
+```java
+api.client().account().save(request);
+```
+
+### Parameter: request
+
+Description: Email account information
 
 See parameter model documentation at [ClientAccountSaveRequest](ClientAccountSaveRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+ClientAccountSaveRequest request = Models.clientAccountSaveRequest()
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailClientAccount()
+        .host("smtp.example.com")
+        .port(465)
+        .securityOptions("SSLAuto")
+        .protocolType("SMTP")
+        .credentials(Models.emailClientAccountOauthCredentials()
+            .clientId("clientId")
+            .clientSecret("clientSecret")
+            .refreshToken("refreshToken")
+            .login("example@example.com")
+            .build())
+        .build())
+    .build();
+```
 
-void (empty response body)
+</details>
+
+
+### Result
+
+Description: Returns 200 if save is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientAccountSaveRequest request = Models.clientAccountSaveRequest()
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailClientAccount()
+        .host("smtp.example.com")
+        .port(465)
+        .securityOptions("SSLAuto")
+        .protocolType("SMTP")
+        .credentials(Models.emailClientAccountOauthCredentials()
+            .clientId("clientId")
+            .clientSecret("clientSecret")
+            .refreshToken("refreshToken")
+            .login("example@example.com")
+            .build())
+        .build())
+    .build();
+
+// Call method:
+api.client().account().save(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="saveMulti"></a>
-# saveMulti
-> void saveMulti([ClientAccountSaveMultiRequest](ClientAccountSaveMultiRequest.md) request)
+## saveMulti
 
-Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+Description: Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-### request Parameter
+Returns: Returns 200 if save is successful.
+
+Method call example:
+```java
+api.client().account().saveMulti(request);
+```
+
+### Parameter: request
+
+Description: Email accounts information.
 
 See parameter model documentation at [ClientAccountSaveMultiRequest](ClientAccountSaveMultiRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+ClientAccountSaveMultiRequest request = Models.clientAccountSaveMultiRequest()
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.multi.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailClientMultiAccount()
+        .receiveAccounts(Arrays.<EmailClientAccount>asList(
+            Models.emailClientAccount()
+                .host("imap.gmail.com")
+                .port(993)
+                .securityOptions("SSLAuto")
+                .credentials(Models.emailClientAccountPasswordCredentials()
+                    .password("password")
+                    .login("example@gmail.com")
+                    .build())
+                .build(),
+            Models.emailClientAccount()
+                .host("exchange@outlook.com")
+                .port(443)
+                .protocolType("EWS")
+                .credentials(Models.emailClientAccountOauthCredentials()
+                    .clientId("clientId")
+                    .clientSecret("clientSecret")
+                    .refreshToken("refreshToken")
+                    .login("example@outlook.com")
+                    .build())
+                .build()))
+        .sendAccount(Models.emailClientAccount()
+            .host("smtp.gmail.com")
+            .port(465)
+            .securityOptions("SSLAuto")
+            .protocolType("SMTP")
+            .credentials(Models.emailClientAccountPasswordCredentials()
+                .password("password")
+                .login("example@gmail.com")
+                .build())
+            .build())
+        .build())
+    .build();
+```
 
-void (empty response body)
+</details>
+
+
+### Result
+
+Description: Returns 200 if save is successful.
+
+Return type: void (empty response body)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientAccountSaveMultiRequest request = Models.clientAccountSaveMultiRequest()
+    .storageFile(Models.storageFileLocation()
+        .fileName("email.multi.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.emailClientMultiAccount()
+        .receiveAccounts(Arrays.<EmailClientAccount>asList(
+            Models.emailClientAccount()
+                .host("imap.gmail.com")
+                .port(993)
+                .securityOptions("SSLAuto")
+                .credentials(Models.emailClientAccountPasswordCredentials()
+                    .password("password")
+                    .login("example@gmail.com")
+                    .build())
+                .build(),
+            Models.emailClientAccount()
+                .host("exchange@outlook.com")
+                .port(443)
+                .protocolType("EWS")
+                .credentials(Models.emailClientAccountOauthCredentials()
+                    .clientId("clientId")
+                    .clientSecret("clientSecret")
+                    .refreshToken("refreshToken")
+                    .login("example@outlook.com")
+                    .build())
+                .build()))
+        .sendAccount(Models.emailClientAccount()
+            .host("smtp.gmail.com")
+            .port(465)
+            .securityOptions("SSLAuto")
+            .protocolType("SMTP")
+            .credentials(Models.emailClientAccountPasswordCredentials()
+                .password("password")
+                .login("example@gmail.com")
+                .build())
+            .build())
+        .build())
+    .build();
+
+// Call method:
+api.client().account().saveMulti(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

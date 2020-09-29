@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarAsFileRequest builder.
  */
 public class MapiCalendarAsFileRequestBuilder {
-    private final MapiCalendarAsFileRequest model;
+    private MapiCalendarAsFileRequest model;
     public MapiCalendarAsFileRequestBuilder(MapiCalendarAsFileRequest model) {
         this.model = model;
     }

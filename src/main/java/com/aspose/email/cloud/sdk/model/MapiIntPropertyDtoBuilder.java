@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiIntPropertyDto builder.
  */
 public class MapiIntPropertyDtoBuilder {
-    private final MapiIntPropertyDto model;
+    private MapiIntPropertyDto model;
     public MapiIntPropertyDtoBuilder(MapiIntPropertyDto model) {
         this.model = model;
     }

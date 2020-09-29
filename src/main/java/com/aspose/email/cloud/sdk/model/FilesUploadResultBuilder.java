@@ -43,7 +43,7 @@ import java.io.*;
  *  FilesUploadResult builder.
  */
 public class FilesUploadResultBuilder {
-    private final FilesUploadResult model;
+    private FilesUploadResult model;
     public FilesUploadResultBuilder(FilesUploadResult model) {
         this.model = model;
     }

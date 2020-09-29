@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameGenderHypothesis builder.
  */
 public class AiNameGenderHypothesisBuilder {
-    private final AiNameGenderHypothesis model;
+    private AiNameGenderHypothesis model;
     public AiNameGenderHypothesisBuilder(AiNameGenderHypothesis model) {
         this.model = model;
     }

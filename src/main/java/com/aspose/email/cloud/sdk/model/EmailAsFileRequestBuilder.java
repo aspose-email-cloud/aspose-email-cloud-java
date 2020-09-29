@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailAsFileRequest builder.
  */
 public class EmailAsFileRequestBuilder {
-    private final EmailAsFileRequest model;
+    private EmailAsFileRequest model;
     public EmailAsFileRequestBuilder(EmailAsFileRequest model) {
         this.model = model;
     }

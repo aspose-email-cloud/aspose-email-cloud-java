@@ -43,7 +43,7 @@ import java.io.*;
  *  ListResponseOfEmailThread builder.
  */
 public class ListResponseOfEmailThreadBuilder {
-    private final ListResponseOfEmailThread model;
+    private ListResponseOfEmailThread model;
     public ListResponseOfEmailThreadBuilder(ListResponseOfEmailThread model) {
         this.model = model;
     }

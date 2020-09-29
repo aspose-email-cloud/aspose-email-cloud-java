@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiBooleanPropertyDto builder.
  */
 public class MapiBooleanPropertyDtoBuilder {
-    private final MapiBooleanPropertyDto model;
+    private MapiBooleanPropertyDto model;
     public MapiBooleanPropertyDtoBuilder(MapiBooleanPropertyDto model) {
         this.model = model;
     }

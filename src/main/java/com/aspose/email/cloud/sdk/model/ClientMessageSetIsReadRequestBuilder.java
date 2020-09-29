@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientMessageSetIsReadRequest builder.
  */
 public class ClientMessageSetIsReadRequestBuilder {
-    private final ClientMessageSetIsReadRequest model;
+    private ClientMessageSetIsReadRequest model;
     public ClientMessageSetIsReadRequestBuilder(ClientMessageSetIsReadRequest model) {
         this.model = model;
     }

@@ -1,5 +1,8 @@
 
 # AssociatedPerson
+
+Describes associated person.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

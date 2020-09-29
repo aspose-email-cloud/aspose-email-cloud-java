@@ -1,5 +1,8 @@
 
 # MapiCalendarEventRecurrenceDto
+
+Recurrence properties of calendar object.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

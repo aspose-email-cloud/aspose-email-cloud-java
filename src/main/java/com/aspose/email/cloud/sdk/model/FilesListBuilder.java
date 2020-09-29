@@ -43,7 +43,7 @@ import java.io.*;
  *  FilesList builder.
  */
 public class FilesListBuilder {
-    private final FilesList model;
+    private FilesList model;
     public FilesListBuilder(FilesList model) {
         this.model = model;
     }

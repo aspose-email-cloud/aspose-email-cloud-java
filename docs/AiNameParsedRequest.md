@@ -1,5 +1,8 @@
 
 # AiNameParsedRequest
+
+Parsed name request model             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -43,7 +43,7 @@ import java.io.*;
  *  EnumWithCustomOfAssociatedPersonCategory builder.
  */
 public class EnumWithCustomOfAssociatedPersonCategoryBuilder {
-    private final EnumWithCustomOfAssociatedPersonCategory model;
+    private EnumWithCustomOfAssociatedPersonCategory model;
     public EnumWithCustomOfAssociatedPersonCategoryBuilder(EnumWithCustomOfAssociatedPersonCategory model) {
         this.model = model;
     }

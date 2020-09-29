@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientAccountSaveRequest builder.
  */
 public class ClientAccountSaveRequestBuilder {
-    private final ClientAccountSaveRequest model;
+    private ClientAccountSaveRequest model;
     public ClientAccountSaveRequestBuilder(ClientAccountSaveRequest model) {
         this.model = model;
     }

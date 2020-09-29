@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarExceptionInfoDto builder.
  */
 public class MapiCalendarExceptionInfoDtoBuilder {
-    private final MapiCalendarExceptionInfoDto model;
+    private MapiCalendarExceptionInfoDto model;
     public MapiCalendarExceptionInfoDtoBuilder(MapiCalendarExceptionInfoDto model) {
         this.model = model;
     }

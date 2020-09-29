@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientThreadDeleteRequest builder.
  */
 public class ClientThreadDeleteRequestBuilder {
-    private final ClientThreadDeleteRequest model;
+    private ClientThreadDeleteRequest model;
     public ClientThreadDeleteRequestBuilder(ClientThreadDeleteRequest model) {
         this.model = model;
     }

@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameFormatRequest builder.
  */
 public class AiNameFormatRequestBuilder {
-    private final AiNameFormatRequest model;
+    private AiNameFormatRequest model;
     public AiNameFormatRequestBuilder(AiNameFormatRequest model) {
         this.model = model;
     }

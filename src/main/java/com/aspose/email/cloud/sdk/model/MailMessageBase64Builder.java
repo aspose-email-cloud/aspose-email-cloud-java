@@ -43,7 +43,7 @@ import java.io.*;
  *  MailMessageBase64 builder.
  */
 public class MailMessageBase64Builder {
-    private final MailMessageBase64 model;
+    private MailMessageBase64 model;
     public MailMessageBase64Builder(MailMessageBase64 model) {
         this.model = model;
     }

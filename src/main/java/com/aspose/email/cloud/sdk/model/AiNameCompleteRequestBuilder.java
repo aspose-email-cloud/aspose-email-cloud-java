@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  AiNameCompleteRequest builder.
  */
 public class AiNameCompleteRequestBuilder {
-    private final AiNameCompleteRequest model;
+    private AiNameCompleteRequest model;
     public AiNameCompleteRequestBuilder(AiNameCompleteRequest model) {
         this.model = model;
     }

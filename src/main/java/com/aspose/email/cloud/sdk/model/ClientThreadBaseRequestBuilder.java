@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientThreadBaseRequest builder.
  */
 public class ClientThreadBaseRequestBuilder {
-    private final ClientThreadBaseRequest model;
+    private ClientThreadBaseRequest model;
     public ClientThreadBaseRequestBuilder(ClientThreadBaseRequest model) {
         this.model = model;
     }

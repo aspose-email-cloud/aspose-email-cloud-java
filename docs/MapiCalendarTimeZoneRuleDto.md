@@ -1,5 +1,8 @@
 
 # MapiCalendarTimeZoneRuleDto
+
+Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

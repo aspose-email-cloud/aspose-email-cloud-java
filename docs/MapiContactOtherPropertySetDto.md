@@ -1,5 +1,8 @@
 
 # MapiContactOtherPropertySetDto
+
+The properties are used to specify additional properties of contact.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

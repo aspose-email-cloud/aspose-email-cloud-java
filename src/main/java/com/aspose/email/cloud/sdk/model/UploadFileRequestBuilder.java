@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  UploadFileRequest builder.
  */
 public class UploadFileRequestBuilder {
-    private final UploadFileRequest model;
+    private UploadFileRequest model;
     public UploadFileRequestBuilder(UploadFileRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientAccountBaseRequest builder.
  */
 public class ClientAccountBaseRequestBuilder {
-    private final ClientAccountBaseRequest model;
+    private ClientAccountBaseRequest model;
     public ClientAccountBaseRequestBuilder(ClientAccountBaseRequest model) {
         this.model = model;
     }

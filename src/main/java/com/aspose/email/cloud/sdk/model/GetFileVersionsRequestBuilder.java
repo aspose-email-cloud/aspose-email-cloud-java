@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  GetFileVersionsRequest builder.
  */
 public class GetFileVersionsRequestBuilder {
-    private final GetFileVersionsRequest model;
+    private GetFileVersionsRequest model;
     public GetFileVersionsRequestBuilder(GetFileVersionsRequest model) {
         this.model = model;
     }

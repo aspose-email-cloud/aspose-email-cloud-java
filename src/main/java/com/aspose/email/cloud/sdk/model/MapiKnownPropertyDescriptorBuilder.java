@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiKnownPropertyDescriptor builder.
  */
 public class MapiKnownPropertyDescriptorBuilder {
-    private final MapiKnownPropertyDescriptor model;
+    private MapiKnownPropertyDescriptor model;
     public MapiKnownPropertyDescriptorBuilder(MapiKnownPropertyDescriptor model) {
         this.model = model;
     }

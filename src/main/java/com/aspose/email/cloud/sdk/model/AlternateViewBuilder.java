@@ -43,7 +43,7 @@ import java.io.*;
  *  AlternateView builder.
  */
 public class AlternateViewBuilder {
-    private final AlternateView model;
+    private AlternateView model;
     public AlternateViewBuilder(AlternateView model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  ReminderAttendee builder.
  */
 public class ReminderAttendeeBuilder {
-    private final ReminderAttendee model;
+    private ReminderAttendee model;
     public ReminderAttendeeBuilder(ReminderAttendee model) {
         this.model = model;
     }

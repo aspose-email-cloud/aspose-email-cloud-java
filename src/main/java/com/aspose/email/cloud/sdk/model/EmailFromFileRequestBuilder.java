@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  EmailFromFileRequest builder.
  */
 public class EmailFromFileRequestBuilder {
-    private final EmailFromFileRequest model;
+    private EmailFromFileRequest model;
     public EmailFromFileRequestBuilder(EmailFromFileRequest model) {
         this.model = model;
     }

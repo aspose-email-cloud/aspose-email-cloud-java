@@ -1,59 +1,492 @@
-# EmailConfigApi
+# EmailConfigApi (EmailCloud.emailConfig())
 
-            
+Email server configuration discovery.
+
 <a name="discover"></a>
-# **discover**
-> [EmailAccountConfigList](EmailAccountConfigList.md) discover(EmailConfigDiscoverRequest request)
+## discover
 
-Discover email accounts by email address. Does not validate discovered accounts.             
+Description: Discover email accounts by email address. Does not validate discovered accounts.             
 
-### **EmailConfigDiscoverRequest** Parameters
+Returns: Discovered account configurations.
+
+Method call example:
 ```java
-public EmailConfigDiscoverRequest(
-    String address, 
-    Boolean fastProcessing)
+EmailAccountConfigList result = api.emailConfig().discover(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **address** | **String**| Email address. |
- **fastProcessing** | **Boolean**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.              | [optional] [default to false]
 
-### Return type
+### Parameter: request
 
-[**EmailAccountConfigList**](EmailAccountConfigList.md)
+Description: discover method request.
+
+See parameter model documentation at [EmailConfigDiscoverRequest](EmailConfigDiscoverRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+EmailConfigDiscoverRequest request = Models.emailConfigDiscoverRequest()
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Discovered account configurations.
+
+Return type: [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailConfigDiscoverRequest request = Models.emailConfigDiscoverRequest()
+    .build();
+
+// Call method:
+EmailAccountConfigList result = api.emailConfig().discover(request);
+
+// Result example:
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="discoverOauth"></a>
-# discoverOauth
-> [EmailAccountConfigList](EmailAccountConfigList.md) discoverOauth([EmailConfigDiscoverOauthRequest](EmailConfigDiscoverOauthRequest.md) request)
+## discoverOauth
 
-Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+Description: Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
-### request Parameter
+Returns: Discovered account configurations.
+
+Method call example:
+```java
+EmailAccountConfigList result = api.emailConfig().discoverOauth(request);
+```
+
+### Parameter: request
+
+Description: Discover email configuration request.
 
 See parameter model documentation at [EmailConfigDiscoverOauthRequest](EmailConfigDiscoverOauthRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+EmailConfigDiscoverOauthRequest request = Models.emailConfigDiscoverOauthRequest()
+    .clientId("ClientId")
+    .clientSecret("ClientSecret")
+    .refreshToken("RefreshToken")
+    .address("example@aspose.com")
+    .fastProcessing(true)
+    .build();
+```
 
-[**EmailAccountConfigList**](EmailAccountConfigList.md)
+</details>
+
+
+### Result
+
+Description: Discovered account configurations.
+
+Return type: [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailConfigDiscoverOauthRequest request = Models.emailConfigDiscoverOauthRequest()
+    .clientId("ClientId")
+    .clientSecret("ClientSecret")
+    .refreshToken("RefreshToken")
+    .address("example@aspose.com")
+    .fastProcessing(true)
+    .build();
+
+// Call method:
+EmailAccountConfigList result = api.emailConfig().discoverOauth(request);
+
+// Result example:
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="discoverPassword"></a>
-# discoverPassword
-> [EmailAccountConfigList](EmailAccountConfigList.md) discoverPassword([EmailConfigDiscoverPasswordRequest](EmailConfigDiscoverPasswordRequest.md) request)
+## discoverPassword
 
-Discover email accounts by email address. Validates discovered accounts using login and password.             
+Description: Discover email accounts by email address. Validates discovered accounts using login and password.             
 
-### request Parameter
+Returns: Discovered account configurations.
+
+Method call example:
+```java
+EmailAccountConfigList result = api.emailConfig().discoverPassword(request);
+```
+
+### Parameter: request
+
+Description: Discover email configuration request.
 
 See parameter model documentation at [EmailConfigDiscoverPasswordRequest](EmailConfigDiscoverPasswordRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+EmailConfigDiscoverPasswordRequest request = Models.emailConfigDiscoverPasswordRequest()
+    .password("password")
+    .address("example@aspose.com")
+    .fastProcessing(true)
+    .build();
+```
 
-[**EmailAccountConfigList**](EmailAccountConfigList.md)
+</details>
+
+
+### Result
+
+Description: Discovered account configurations.
+
+Return type: [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+EmailConfigDiscoverPasswordRequest request = Models.emailConfigDiscoverPasswordRequest()
+    .password("password")
+    .address("example@aspose.com")
+    .fastProcessing(true)
+    .build();
+
+// Call method:
+EmailAccountConfigList result = api.emailConfig().discoverPassword(request);
+
+// Result example:
+result = Models.emailAccountConfigList()
+    .value(Arrays.<EmailAccountConfig>asList(
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .host("imap.gmail.com")
+            .port(993)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("SMTP")
+            .host("smtp.gmail.com")
+            .port(465)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build(),
+        Models.emailAccountConfig()
+            .displayName("Google Mail")
+            .protocolType("POP3")
+            .host("pop.gmail.com")
+            .port(995)
+            .socketType("SSLAuto")
+            .authenticationTypes(Arrays.<AuthenticationType>asList(
+                "PasswordCleartext",
+                "OAuth2"))
+            .extraInfo(Arrays.<NameValuePair>asList(
+                Models.nameValuePair()
+                    .name("Enable: You need to enable IMAP access")
+                    .value("https://mail.google.com/mail/?ui=2&shva=1#settings/fwdandpop")
+                    .build()))
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

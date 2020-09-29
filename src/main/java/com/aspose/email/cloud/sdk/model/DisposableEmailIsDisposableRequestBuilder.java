@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  DisposableEmailIsDisposableRequest builder.
  */
 public class DisposableEmailIsDisposableRequestBuilder {
-    private final DisposableEmailIsDisposableRequest model;
+    private DisposableEmailIsDisposableRequest model;
     public DisposableEmailIsDisposableRequestBuilder(DisposableEmailIsDisposableRequest model) {
         this.model = model;
     }

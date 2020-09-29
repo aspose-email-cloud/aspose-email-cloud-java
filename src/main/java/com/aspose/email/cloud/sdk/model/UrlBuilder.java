@@ -43,7 +43,7 @@ import java.io.*;
  *  Url builder.
  */
 public class UrlBuilder {
-    private final Url model;
+    private Url model;
     public UrlBuilder(Url model) {
         this.model = model;
     }

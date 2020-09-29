@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailList builder.
  */
 public class EmailListBuilder {
-    private final EmailList model;
+    private EmailList model;
     public EmailListBuilder(EmailList model) {
         this.model = model;
     }

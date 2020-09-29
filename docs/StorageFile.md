@@ -1,5 +1,8 @@
 
 # StorageFile
+
+File or folder information
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,6 +13,16 @@ Name | Type | Description | Notes
 **path** | **String** | File or folder path. |  [optional]
 
 
+
+## Example
+```java
+StorageFile storageFile = Models.storageFile()
+    .name("file.ext")
+    .modifiedDate(Calendar.getInstance().getTime())
+    .size(4096)
+    .path("/storage/path/to")
+    .build();
+```
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)

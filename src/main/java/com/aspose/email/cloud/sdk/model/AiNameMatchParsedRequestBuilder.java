@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameMatchParsedRequest builder.
  */
 public class AiNameMatchParsedRequestBuilder {
-    private final AiNameMatchParsedRequest model;
+    private AiNameMatchParsedRequest model;
     public AiNameMatchParsedRequestBuilder(AiNameMatchParsedRequest model) {
         this.model = model;
     }

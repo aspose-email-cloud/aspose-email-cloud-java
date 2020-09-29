@@ -1,5 +1,8 @@
 
 # CalendarReminder
+
+Provides a grouping of component properties that define an alarm.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

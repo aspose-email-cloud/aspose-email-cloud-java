@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiCalendarTimeZoneDto builder.
  */
 public class MapiCalendarTimeZoneDtoBuilder {
-    private final MapiCalendarTimeZoneDto model;
+    private MapiCalendarTimeZoneDto model;
     public MapiCalendarTimeZoneDtoBuilder(MapiCalendarTimeZoneDto model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  AssociatedPerson builder.
  */
 public class AssociatedPersonBuilder {
-    private final AssociatedPerson model;
+    private AssociatedPerson model;
     public AssociatedPersonBuilder(AssociatedPerson model) {
         this.model = model;
     }

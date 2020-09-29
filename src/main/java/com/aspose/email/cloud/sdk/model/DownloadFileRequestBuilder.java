@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  DownloadFileRequest builder.
  */
 public class DownloadFileRequestBuilder {
-    private final DownloadFileRequest model;
+    private DownloadFileRequest model;
     public DownloadFileRequestBuilder(DownloadFileRequest model) {
         this.model = model;
     }

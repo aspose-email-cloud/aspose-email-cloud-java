@@ -43,7 +43,7 @@ import java.io.*;
  *  MapiBinaryPropertyDto builder.
  */
 public class MapiBinaryPropertyDtoBuilder {
-    private final MapiBinaryPropertyDto model;
+    private MapiBinaryPropertyDto model;
     public MapiBinaryPropertyDtoBuilder(MapiBinaryPropertyDto model) {
         this.model = model;
     }

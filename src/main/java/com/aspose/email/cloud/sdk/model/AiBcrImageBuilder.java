@@ -43,7 +43,7 @@ import java.io.*;
  *  AiBcrImage builder.
  */
 public class AiBcrImageBuilder {
-    private final AiBcrImage model;
+    private AiBcrImage model;
     public AiBcrImageBuilder(AiBcrImage model) {
         this.model = model;
     }

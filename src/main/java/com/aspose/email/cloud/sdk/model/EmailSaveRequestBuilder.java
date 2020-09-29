@@ -43,7 +43,7 @@ import java.io.*;
  *  EmailSaveRequest builder.
  */
 public class EmailSaveRequestBuilder {
-    private final EmailSaveRequest model;
+    private EmailSaveRequest model;
     public EmailSaveRequestBuilder(EmailSaveRequest model) {
         this.model = model;
     }

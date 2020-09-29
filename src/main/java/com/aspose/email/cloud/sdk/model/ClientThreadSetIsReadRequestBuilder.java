@@ -43,7 +43,7 @@ import java.io.*;
  *  ClientThreadSetIsReadRequest builder.
  */
 public class ClientThreadSetIsReadRequestBuilder {
-    private final ClientThreadSetIsReadRequest model;
+    private ClientThreadSetIsReadRequest model;
     public ClientThreadSetIsReadRequestBuilder(ClientThreadSetIsReadRequest model) {
         this.model = model;
     }

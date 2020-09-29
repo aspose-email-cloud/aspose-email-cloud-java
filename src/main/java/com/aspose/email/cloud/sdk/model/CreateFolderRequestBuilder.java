@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  CreateFolderRequest builder.
  */
 public class CreateFolderRequestBuilder {
-    private final CreateFolderRequest model;
+    private CreateFolderRequest model;
     public CreateFolderRequestBuilder(CreateFolderRequest model) {
         this.model = model;
     }

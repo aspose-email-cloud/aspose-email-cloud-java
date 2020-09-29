@@ -43,7 +43,7 @@ import java.io.*;
  *  InstantMessengerAddress builder.
  */
 public class InstantMessengerAddressBuilder {
-    private final InstantMessengerAddress model;
+    private InstantMessengerAddress model;
     public InstantMessengerAddressBuilder(InstantMessengerAddress model) {
         this.model = model;
     }

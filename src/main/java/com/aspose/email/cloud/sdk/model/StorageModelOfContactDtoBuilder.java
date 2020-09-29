@@ -43,7 +43,7 @@ import java.io.*;
  *  StorageModelOfContactDto builder.
  */
 public class StorageModelOfContactDtoBuilder {
-    private final StorageModelOfContactDto model;
+    private StorageModelOfContactDto model;
     public StorageModelOfContactDtoBuilder(StorageModelOfContactDto model) {
         this.model = model;
     }

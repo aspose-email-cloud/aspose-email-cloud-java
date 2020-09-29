@@ -31,7 +31,7 @@ package com.aspose.email.cloud.sdk.model;
  *  MapiMessageFromFileRequest builder.
  */
 public class MapiMessageFromFileRequestBuilder {
-    private final MapiMessageFromFileRequest model;
+    private MapiMessageFromFileRequest model;
     public MapiMessageFromFileRequestBuilder(MapiMessageFromFileRequest model) {
         this.model = model;
     }

@@ -43,7 +43,7 @@ import java.io.*;
  *  AiNameCulturalContext builder.
  */
 public class AiNameCulturalContextBuilder {
-    private final AiNameCulturalContext model;
+    private AiNameCulturalContext model;
     public AiNameCulturalContextBuilder(AiNameCulturalContext model) {
         this.model = model;
     }

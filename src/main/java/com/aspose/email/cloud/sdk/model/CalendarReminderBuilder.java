@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarReminder builder.
  */
 public class CalendarReminderBuilder {
-    private final CalendarReminder model;
+    private CalendarReminder model;
     public CalendarReminderBuilder(CalendarReminder model) {
         this.model = model;
     }

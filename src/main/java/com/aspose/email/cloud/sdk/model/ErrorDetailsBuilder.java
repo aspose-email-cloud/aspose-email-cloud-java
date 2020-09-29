@@ -43,7 +43,7 @@ import java.io.*;
  *  ErrorDetails builder.
  */
 public class ErrorDetailsBuilder {
-    private final ErrorDetails model;
+    private ErrorDetails model;
     public ErrorDetailsBuilder(ErrorDetails model) {
         this.model = model;
     }

@@ -1,5 +1,8 @@
 
 # CalendarDto
+
+iCalendar document representation.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -27,6 +30,32 @@ Name | Type | Description | Notes
 **transparency** | **String** | Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque | 
 
 
+
+## Example
+```java
+CalendarDto calendarDto = Models.calendarDto()
+    .attendees(Arrays.<MailAddress>asList(
+        Models.mailAddress()
+            .displayName("Attendee Name")
+            .address("attendee@aspose.com")
+            .participationStatus("Accepted")
+            .build()))
+    .description("Some description")
+    .endDate(Calendar.getInstance().getTime())
+    .location("Some location")
+    .organizer(Models.mailAddress()
+        .displayName("Organizer Name")
+        .address("organizer@aspose.com")
+        .build())
+    .recurrence(Models.dailyRecurrencePatternDto()
+        .interval(-1)
+        .occurs(10)
+        .weekStart("Monday")
+        .build())
+    .startDate(Calendar.getInstance().getTime())
+    .summary("Some summary")
+    .build();
+```
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)

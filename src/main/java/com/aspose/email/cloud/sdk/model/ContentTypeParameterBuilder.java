@@ -43,7 +43,7 @@ import java.io.*;
  *  ContentTypeParameter builder.
  */
 public class ContentTypeParameterBuilder {
-    private final ContentTypeParameter model;
+    private ContentTypeParameter model;
     public ContentTypeParameterBuilder(ContentTypeParameter model) {
         this.model = model;
     }

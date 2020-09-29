@@ -43,7 +43,7 @@ import java.io.*;
  *  CalendarDto builder.
  */
 public class CalendarDtoBuilder {
-    private final CalendarDto model;
+    private CalendarDto model;
     public CalendarDtoBuilder(CalendarDto model) {
         this.model = model;
     }
