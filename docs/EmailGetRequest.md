@@ -1,4 +1,4 @@
-# emailGetRequest
+# EmailGetRequest
 
 Request model for EmailApi.get
 

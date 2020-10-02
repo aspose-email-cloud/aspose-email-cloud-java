@@ -1,4 +1,4 @@
-# contactGetRequest
+# ContactGetRequest
 
 Request model for ContactApi.get
 

@@ -318,7 +318,7 @@ MapiCalendarDto result = api.mapi().calendar().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [MapiCalendarFromFileRequest](MapiCalendarFromFileRequest.md)
+See parameter model documentation at [MapiCalendarFromFileRequest](MapiCalendarFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -454,7 +454,7 @@ MapiCalendarDto result = api.mapi().calendar().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [MapiCalendarGetRequest](MapiCalendarGetRequest.md)
+See parameter model documentation at [MapiCalendarGetRequest](MapiCalendarGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

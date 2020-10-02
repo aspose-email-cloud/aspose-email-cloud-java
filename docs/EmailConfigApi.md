@@ -19,7 +19,7 @@ EmailAccountConfigList result = api.emailConfig().discover(request);
 
 Description: discover method request.
 
-See parameter model documentation at [EmailConfigDiscoverRequest](EmailConfigDiscoverRequest.md)
+See parameter model documentation at [EmailConfigDiscoverRequest](EmailConfigDiscoverRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

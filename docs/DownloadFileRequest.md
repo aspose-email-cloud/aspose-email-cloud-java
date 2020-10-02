@@ -1,4 +1,4 @@
-# downloadFileRequest
+# DownloadFileRequest
 
 Request model for FileApi.downloadFile
 
@@ -6,7 +6,7 @@ Request model for FileApi.downloadFile
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
+**path** | **String**| File path e.g. '/folder/file.ext' |
 **storageName** | **String**| Storage name | [optional]
 **versionId** | **String**| File version ID to download | [optional]
 

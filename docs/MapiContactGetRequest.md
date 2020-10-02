@@ -1,4 +1,4 @@
-# mapiContactGetRequest
+# MapiContactGetRequest
 
 Request model for MapiContactApi.get
 

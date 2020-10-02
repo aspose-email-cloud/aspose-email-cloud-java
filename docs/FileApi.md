@@ -18,7 +18,7 @@ api.cloudStorage().file().copyFile(request);
 
 Description: copyFile method request.
 
-See parameter model documentation at [CopyFileRequest](CopyFileRequest.md)
+See parameter model documentation at [CopyFileRequest](CopyFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -78,7 +78,7 @@ api.cloudStorage().file().deleteFile(request);
 
 Description: deleteFile method request.
 
-See parameter model documentation at [DeleteFileRequest](DeleteFileRequest.md)
+See parameter model documentation at [DeleteFileRequest](DeleteFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -135,7 +135,7 @@ byte[] result = api.cloudStorage().file().downloadFile(request);
 
 Description: downloadFile method request.
 
-See parameter model documentation at [DownloadFileRequest](DownloadFileRequest.md)
+See parameter model documentation at [DownloadFileRequest](DownloadFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -193,7 +193,7 @@ api.cloudStorage().file().moveFile(request);
 
 Description: moveFile method request.
 
-See parameter model documentation at [MoveFileRequest](MoveFileRequest.md)
+See parameter model documentation at [MoveFileRequest](MoveFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -254,7 +254,7 @@ FilesUploadResult result = api.cloudStorage().file().uploadFile(request);
 
 Description: uploadFile method request.
 
-See parameter model documentation at [UploadFileRequest](UploadFileRequest.md)
+See parameter model documentation at [UploadFileRequest](UploadFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

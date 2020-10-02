@@ -1,4 +1,4 @@
-# clientFolderGetListRequest
+# ClientFolderGetListRequest
 
 Request model for ClientFolderApi.getList
 

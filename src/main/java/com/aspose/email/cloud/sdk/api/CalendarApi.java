@@ -492,4 +492,3 @@ public class CalendarApi
     }
 
 }
-

@@ -1,4 +1,4 @@
-# clientAccountGetRequest
+# ClientAccountGetRequest
 
 Request model for ClientAccountApi.get
 

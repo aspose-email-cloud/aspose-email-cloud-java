@@ -1,4 +1,4 @@
-# mapiMessageFromFileRequest
+# MapiMessageFromFileRequest
 
 Request model for MapiMessageApi.fromFile
 

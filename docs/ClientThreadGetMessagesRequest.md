@@ -1,4 +1,4 @@
-# clientThreadGetMessagesRequest
+# ClientThreadGetMessagesRequest
 
 Request model for ClientThreadApi.getMessages
 

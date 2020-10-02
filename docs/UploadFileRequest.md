@@ -1,4 +1,4 @@
-# uploadFileRequest
+# UploadFileRequest
 
 Request model for FileApi.uploadFile
 

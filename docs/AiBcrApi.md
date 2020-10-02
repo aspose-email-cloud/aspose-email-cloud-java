@@ -19,7 +19,7 @@ ContactList result = api.ai().bcr().parse(request);
 
 Description: parse method request.
 
-See parameter model documentation at [AiBcrParseRequest](AiBcrParseRequest.md)
+See parameter model documentation at [AiBcrParseRequest](AiBcrParseRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

@@ -1,4 +1,4 @@
-# mapiMessageGetRequest
+# MapiMessageGetRequest
 
 Request model for MapiMessageApi.get
 

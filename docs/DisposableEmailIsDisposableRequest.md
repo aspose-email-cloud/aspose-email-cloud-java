@@ -1,4 +1,4 @@
-# disposableEmailIsDisposableRequest
+# DisposableEmailIsDisposableRequest
 
 Request model for DisposableEmailApi.isDisposable
 

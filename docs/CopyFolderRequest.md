@@ -1,4 +1,4 @@
-# copyFolderRequest
+# CopyFolderRequest
 
 Request model for FolderApi.copyFolder
 
@@ -6,8 +6,8 @@ Request model for FolderApi.copyFolder
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**srcPath** | **String**| Source folder path e.g. &#39;/src&#39; |
-**destPath** | **String**| Destination folder path e.g. &#39;/dst&#39; |
+**srcPath** | **String**| Source folder path e.g. '/src' |
+**destPath** | **String**| Destination folder path e.g. '/dst' |
 **srcStorageName** | **String**| Source storage name | [optional]
 **destStorageName** | **String**| Destination storage name | [optional]
 

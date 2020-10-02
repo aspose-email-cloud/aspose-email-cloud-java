@@ -1,4 +1,4 @@
-# clientAccountGetMultiRequest
+# ClientAccountGetMultiRequest
 
 Request model for ClientAccountApi.getMulti
 

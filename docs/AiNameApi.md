@@ -19,7 +19,7 @@ AiNameWeightedVariants result = api.ai().name().complete(request);
 
 Description: complete method request.
 
-See parameter model documentation at [AiNameCompleteRequest](AiNameCompleteRequest.md)
+See parameter model documentation at [AiNameCompleteRequest](AiNameCompleteRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -93,7 +93,7 @@ result = Models.aiNameWeightedVariants()
 <a name="expand"></a>
 ## expand
 
-Description: Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions.             
+Description: Expands a person's name into a list of possible alternatives using options for expanding instructions.             
 
 Returns: List of name variations.
 
@@ -107,7 +107,7 @@ AiNameWeightedVariants result = api.ai().name().expand(request);
 
 Description: expand method request.
 
-See parameter model documentation at [AiNameExpandRequest](AiNameExpandRequest.md)
+See parameter model documentation at [AiNameExpandRequest](AiNameExpandRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -181,7 +181,7 @@ result = Models.aiNameWeightedVariants()
 <a name="expandParsed"></a>
 ## expandParsed
 
-Description: Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions.             
+Description: Expands a person's parsed name into a list of possible alternatives using options for expanding instructions.             
 
 Returns: List of name variations.
 
@@ -264,7 +264,7 @@ result = Models.aiNameWeightedVariants()
 <a name="format"></a>
 ## format
 
-Description: Formats a person&#39;s name in correct case and name order using options for formatting instructions.             
+Description: Formats a person's name in correct case and name order using options for formatting instructions.             
 
 Returns: Formatted name.
 
@@ -278,7 +278,7 @@ AiNameFormatted result = api.ai().name().format(request);
 
 Description: format method request.
 
-See parameter model documentation at [AiNameFormatRequest](AiNameFormatRequest.md)
+See parameter model documentation at [AiNameFormatRequest](AiNameFormatRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -340,7 +340,7 @@ result = Models.aiNameFormatted()
 <a name="formatParsed"></a>
 ## formatParsed
 
-Description: Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions.             
+Description: Formats a person's parsed name in correct case and name order using options for formatting instructions.             
 
 Returns: Formatted name.
 
@@ -409,9 +409,9 @@ result = Models.aiNameFormatted()
 <a name="genderize"></a>
 ## genderize
 
-Description: Detect person&#39;s gender from name string.             
+Description: Detect person's gender from name string.             
 
-Returns: Hypotheses about person&#39;s gender.
+Returns: Hypotheses about person's gender.
 
 Method call example:
 ```java
@@ -423,7 +423,7 @@ AiNameGenderHypothesisList result = api.ai().name().genderize(request);
 
 Description: genderize method request.
 
-See parameter model documentation at [AiNameGenderizeRequest](AiNameGenderizeRequest.md)
+See parameter model documentation at [AiNameGenderizeRequest](AiNameGenderizeRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -438,7 +438,7 @@ AiNameGenderizeRequest request = Models.aiNameGenderizeRequest()
 
 ### Result
 
-Description: Hypotheses about person&#39;s gender.
+Description: Hypotheses about person's gender.
 
 Return type: [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
@@ -477,9 +477,9 @@ result = ;
 <a name="genderizeParsed"></a>
 ## genderizeParsed
 
-Description: Detect person&#39;s gender from parsed name.             
+Description: Detect person's gender from parsed name.             
 
-Returns: Hypotheses about person&#39;s gender.
+Returns: Hypotheses about person's gender.
 
 Method call example:
 ```java
@@ -504,7 +504,7 @@ AiNameParsedRequest request = ;
 
 ### Result
 
-Description: Hypotheses about person&#39;s gender.
+Description: Hypotheses about person's gender.
 
 Return type: [**AiNameGenderHypothesisList**](AiNameGenderHypothesisList.md)
 
@@ -540,7 +540,7 @@ result = ;
 <a name="match"></a>
 ## match
 
-Description: Compare people&#39;s names. Uses options for comparing instructions.             
+Description: Compare people's names. Uses options for comparing instructions.             
 
 Returns: Match result.
 
@@ -554,7 +554,7 @@ AiNameMatchResult result = api.ai().name().match(request);
 
 Description: match method request.
 
-See parameter model documentation at [AiNameMatchRequest](AiNameMatchRequest.md)
+See parameter model documentation at [AiNameMatchRequest](AiNameMatchRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -624,7 +624,7 @@ result = Models.aiNameMatchResult()
 <a name="matchParsed"></a>
 ## matchParsed
 
-Description: Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
+Description: Compare people's parsed names and attributes. Uses options for comparing instructions.             
 
 Returns: Match result.
 
@@ -715,7 +715,7 @@ AiNameComponentList result = api.ai().name().parse(request);
 
 Description: parse method request.
 
-See parameter model documentation at [AiNameParseRequest](AiNameParseRequest.md)
+See parameter model documentation at [AiNameParseRequest](AiNameParseRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -773,7 +773,7 @@ result = ;
 <a name="parseEmailAddress"></a>
 ## parseEmailAddress
 
-Description: Parse person&#39;s name out of an email address.             
+Description: Parse person's name out of an email address.             
 
 Returns: Match result.
 
@@ -787,7 +787,7 @@ AiNameExtractedList result = api.ai().name().parseEmailAddress(request);
 
 Description: parseEmailAddress method request.
 
-See parameter model documentation at [AiNameParseEmailAddressRequest](AiNameParseEmailAddressRequest.md)
+See parameter model documentation at [AiNameParseEmailAddressRequest](AiNameParseEmailAddressRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

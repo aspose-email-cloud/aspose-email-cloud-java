@@ -1,4 +1,4 @@
-# clientMessageListRequest
+# ClientMessageListRequest
 
 Request model for ClientMessageApi.list
 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ClientMessageListRequest request = Models.clientMessageListRequest()
     .folder("INBOX")
     .account("email.multi.account")
-    .queryString("(&#39;From&#39; Contains &#39;.com&#39;)")
+    .queryString("('From' Contains '.com')")
     .storage("First Storage")
     .accountStorageFolder("email/account/location/on/storage")
     .recursive(true)

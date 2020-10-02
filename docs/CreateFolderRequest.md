@@ -1,4 +1,4 @@
-# createFolderRequest
+# CreateFolderRequest
 
 Request model for FolderApi.createFolder
 
@@ -6,7 +6,7 @@ Request model for FolderApi.createFolder
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; |
+**path** | **String**| Folder path to create e.g. 'folder_1/folder_2/' |
 **storageName** | **String**| Storage name | [optional]
 
 ## Example

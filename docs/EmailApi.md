@@ -294,7 +294,7 @@ byte[] result = api.email().convert(request);
 
 Description: convert method request.
 
-See parameter model documentation at [EmailConvertRequest](EmailConvertRequest.md)
+See parameter model documentation at [EmailConvertRequest](EmailConvertRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -355,7 +355,7 @@ EmailDto result = api.email().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [EmailFromFileRequest](EmailFromFileRequest.md)
+See parameter model documentation at [EmailFromFileRequest](EmailFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -473,7 +473,7 @@ EmailDto result = api.email().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [EmailGetRequest](EmailGetRequest.md)
+See parameter model documentation at [EmailGetRequest](EmailGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -595,7 +595,7 @@ byte[] result = api.email().getAsFile(request);
 
 Description: getAsFile method request.
 
-See parameter model documentation at [EmailGetAsFileRequest](EmailGetAsFileRequest.md)
+See parameter model documentation at [EmailGetAsFileRequest](EmailGetAsFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -658,7 +658,7 @@ EmailStorageList result = api.email().getList(request);
 
 Description: getList method request.
 
-See parameter model documentation at [EmailGetListRequest](EmailGetListRequest.md)
+See parameter model documentation at [EmailGetListRequest](EmailGetListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

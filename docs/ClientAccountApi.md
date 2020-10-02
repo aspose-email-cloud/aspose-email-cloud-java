@@ -19,7 +19,7 @@ EmailClientAccount result = api.client().account().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [ClientAccountGetRequest](ClientAccountGetRequest.md)
+See parameter model documentation at [ClientAccountGetRequest](ClientAccountGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -99,7 +99,7 @@ result = Models.emailClientAccount()
 <a name="getMulti"></a>
 ## getMulti
 
-Description: Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+Description: Get email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
 
 Returns: Email client multi account from storage
 
@@ -113,7 +113,7 @@ EmailClientMultiAccount result = api.client().account().getMulti(request);
 
 Description: getMulti method request.
 
-See parameter model documentation at [ClientAccountGetMultiRequest](ClientAccountGetMultiRequest.md)
+See parameter model documentation at [ClientAccountGetMultiRequest](ClientAccountGetMultiRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -320,7 +320,7 @@ api.client().account().save(request);
 <a name="saveMulti"></a>
 ## saveMulti
 
-Description: Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+Description: Create email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
 
 
 Method call example:

@@ -1,4 +1,4 @@
-# calendarFromFileRequest
+# CalendarFromFileRequest
 
 Request model for CalendarApi.fromFile
 

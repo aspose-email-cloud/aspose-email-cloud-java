@@ -1,4 +1,4 @@
-# mapiCalendarFromFileRequest
+# MapiCalendarFromFileRequest
 
 Request model for MapiCalendarApi.fromFile
 

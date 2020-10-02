@@ -1,4 +1,4 @@
-# emailGetAsFileRequest
+# EmailGetAsFileRequest
 
 Request model for EmailApi.getAsFile
 

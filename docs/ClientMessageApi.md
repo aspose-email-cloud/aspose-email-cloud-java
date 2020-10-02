@@ -152,7 +152,7 @@ ValueTOfString result = api.client().message().appendFile(request);
 
 Description: appendFile method request.
 
-See parameter model documentation at [ClientMessageAppendFileRequest](ClientMessageAppendFileRequest.md)
+See parameter model documentation at [ClientMessageAppendFileRequest](ClientMessageAppendFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -295,14 +295,14 @@ MailMessageBase result = api.client().message().fetch(request);
 
 Description: fetch method request.
 
-See parameter model documentation at [ClientMessageFetchRequest](ClientMessageFetchRequest.md)
+See parameter model documentation at [ClientMessageFetchRequest](ClientMessageFetchRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
 
 ```java
 ClientMessageFetchRequest request = Models.clientMessageFetchRequest()
-    .messageId("&lt;put your message identifier here&gt;")
+    .messageId("<put your message identifier here>")
     .account("email.multi.account")
     .folder("INBOX")
     .storage("First Storage")
@@ -340,7 +340,7 @@ EmailCloud api = new EmailCloud(appKey, appSid);
 
 // Prepare parameters:
 ClientMessageFetchRequest request = Models.clientMessageFetchRequest()
-    .messageId("&lt;put your message identifier here&gt;")
+    .messageId("<put your message identifier here>")
     .account("email.multi.account")
     .folder("INBOX")
     .storage("First Storage")
@@ -379,14 +379,14 @@ byte[] result = api.client().message().fetchFile(request);
 
 Description: fetchFile method request.
 
-See parameter model documentation at [ClientMessageFetchFileRequest](ClientMessageFetchFileRequest.md)
+See parameter model documentation at [ClientMessageFetchFileRequest](ClientMessageFetchFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
 
 ```java
 ClientMessageFetchFileRequest request = Models.clientMessageFetchFileRequest()
-    .messageId("&lt;put your message identifier here&gt;")
+    .messageId("<put your message identifier here>")
     .account("email.multi.account")
     .folder("INBOX")
     .storage("First Storage")
@@ -413,7 +413,7 @@ EmailCloud api = new EmailCloud(appKey, appSid);
 
 // Prepare parameters:
 ClientMessageFetchFileRequest request = Models.clientMessageFetchFileRequest()
-    .messageId("&lt;put your message identifier here&gt;")
+    .messageId("<put your message identifier here>")
     .account("email.multi.account")
     .folder("INBOX")
     .storage("First Storage")
@@ -448,7 +448,7 @@ MailMessageBaseList result = api.client().message().list(request);
 
 Description: list method request.
 
-See parameter model documentation at [ClientMessageListRequest](ClientMessageListRequest.md)
+See parameter model documentation at [ClientMessageListRequest](ClientMessageListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -457,7 +457,7 @@ See parameter model documentation at [ClientMessageListRequest](ClientMessageLis
 ClientMessageListRequest request = Models.clientMessageListRequest()
     .folder("INBOX")
     .account("email.multi.account")
-    .queryString("(&#39;From&#39; Contains &#39;.com&#39;)")
+    .queryString("('From' Contains '.com')")
     .storage("First Storage")
     .accountStorageFolder("email/account/location/on/storage")
     .recursive(true)
@@ -494,7 +494,7 @@ EmailCloud api = new EmailCloud(appKey, appSid);
 ClientMessageListRequest request = Models.clientMessageListRequest()
     .folder("INBOX")
     .account("email.multi.account")
-    .queryString("(&#39;From&#39; Contains &#39;.com&#39;)")
+    .queryString("('From' Contains '.com')")
     .storage("First Storage")
     .accountStorageFolder("email/account/location/on/storage")
     .recursive(true)
@@ -711,7 +711,7 @@ api.client().message().sendFile(request);
 
 Description: sendFile method request.
 
-See parameter model documentation at [ClientMessageSendFileRequest](ClientMessageSendFileRequest.md)
+See parameter model documentation at [ClientMessageSendFileRequest](ClientMessageSendFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

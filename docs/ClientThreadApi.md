@@ -84,7 +84,7 @@ EmailThreadList result = api.client().thread().getList(request);
 
 Description: getList method request.
 
-See parameter model documentation at [ClientThreadGetListRequest](ClientThreadGetListRequest.md)
+See parameter model documentation at [ClientThreadGetListRequest](ClientThreadGetListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -220,7 +220,7 @@ EmailList result = api.client().thread().getMessages(request);
 
 Description: getMessages method request.
 
-See parameter model documentation at [ClientThreadGetMessagesRequest](ClientThreadGetMessagesRequest.md)
+See parameter model documentation at [ClientThreadGetMessagesRequest](ClientThreadGetMessagesRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

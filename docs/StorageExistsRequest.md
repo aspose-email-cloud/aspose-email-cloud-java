@@ -1,4 +1,4 @@
-# storageExistsRequest
+# StorageExistsRequest
 
 Request model for StorageApi.exists
 

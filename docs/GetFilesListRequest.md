@@ -1,4 +1,4 @@
-# getFilesListRequest
+# GetFilesListRequest
 
 Request model for FolderApi.getFilesList
 
@@ -6,7 +6,7 @@ Request model for FolderApi.getFilesList
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| Folder path e.g. &#39;/folder&#39; |
+**path** | **String**| Folder path e.g. '/folder' |
 **storageName** | **String**| Storage name | [optional]
 
 ## Example

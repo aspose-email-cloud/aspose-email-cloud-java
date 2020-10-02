@@ -1,4 +1,4 @@
-# clientThreadGetListRequest
+# ClientThreadGetListRequest
 
 Request model for ClientThreadApi.getList
 

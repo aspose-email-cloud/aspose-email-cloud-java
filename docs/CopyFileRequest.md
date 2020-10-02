@@ -1,4 +1,4 @@
-# copyFileRequest
+# CopyFileRequest
 
 Request model for FileApi.copyFile
 
@@ -6,7 +6,7 @@ Request model for FileApi.copyFile
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**srcPath** | **String**| Source file path e.g. &#39;/folder/file.ext&#39; |
+**srcPath** | **String**| Source file path e.g. '/folder/file.ext' |
 **destPath** | **String**| Destination file path |
 **srcStorageName** | **String**| Source storage name | [optional]
 **destStorageName** | **String**| Destination storage name | [optional]

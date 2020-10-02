@@ -1,4 +1,4 @@
-# emailGetListRequest
+# EmailGetListRequest
 
 Request model for EmailApi.getList
 

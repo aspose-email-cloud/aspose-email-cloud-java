@@ -1,4 +1,4 @@
-# mapiContactFromFileRequest
+# MapiContactFromFileRequest
 
 Request model for MapiContactApi.fromFile
 

@@ -443,7 +443,7 @@ byte[] result = api.calendar().convert(request);
 
 Description: convert method request.
 
-See parameter model documentation at [CalendarConvertRequest](CalendarConvertRequest.md)
+See parameter model documentation at [CalendarConvertRequest](CalendarConvertRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -502,7 +502,7 @@ CalendarDto result = api.calendar().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [CalendarFromFileRequest](CalendarFromFileRequest.md)
+See parameter model documentation at [CalendarFromFileRequest](CalendarFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -612,7 +612,7 @@ CalendarDto result = api.calendar().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [CalendarGetRequest](CalendarGetRequest.md)
+See parameter model documentation at [CalendarGetRequest](CalendarGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -726,7 +726,7 @@ AlternateView result = api.calendar().getAsAlternate(request);
 
 Description: getAsAlternate method request.
 
-See parameter model documentation at [CalendarGetAsAlternateRequest](CalendarGetAsAlternateRequest.md)
+See parameter model documentation at [CalendarGetAsAlternateRequest](CalendarGetAsAlternateRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -842,7 +842,7 @@ byte[] result = api.calendar().getAsFile(request);
 
 Description: getAsFile method request.
 
-See parameter model documentation at [CalendarGetAsFileRequest](CalendarGetAsFileRequest.md)
+See parameter model documentation at [CalendarGetAsFileRequest](CalendarGetAsFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -905,7 +905,7 @@ CalendarStorageList result = api.calendar().getList(request);
 
 Description: getList method request.
 
-See parameter model documentation at [CalendarGetListRequest](CalendarGetListRequest.md)
+See parameter model documentation at [CalendarGetListRequest](CalendarGetListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

@@ -1,4 +1,4 @@
-# mapiCalendarGetRequest
+# MapiCalendarGetRequest
 
 Request model for MapiCalendarApi.get
 

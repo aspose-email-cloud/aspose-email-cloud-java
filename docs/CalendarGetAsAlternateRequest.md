@@ -1,4 +1,4 @@
-# calendarGetAsAlternateRequest
+# CalendarGetAsAlternateRequest
 
 Request model for CalendarApi.getAsAlternate
 

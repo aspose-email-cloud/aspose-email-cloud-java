@@ -19,7 +19,7 @@ ValueTOfBoolean result = api.disposableEmail().isDisposable(request);
 
 Description: isDisposable method request.
 
-See parameter model documentation at [DisposableEmailIsDisposableRequest](DisposableEmailIsDisposableRequest.md)
+See parameter model documentation at [DisposableEmailIsDisposableRequest](DisposableEmailIsDisposableRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

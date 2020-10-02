@@ -1,4 +1,4 @@
-# deleteFileRequest
+# DeleteFileRequest
 
 Request model for FileApi.deleteFile
 
@@ -6,7 +6,7 @@ Request model for FileApi.deleteFile
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| File path e.g. &#39;/folder/file.ext&#39; |
+**path** | **String**| File path e.g. '/folder/file.ext' |
 **storageName** | **String**| Storage name | [optional]
 **versionId** | **String**| File version ID to delete | [optional]
 

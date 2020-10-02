@@ -1,4 +1,4 @@
-# emailFromFileRequest
+# EmailFromFileRequest
 
 Request model for EmailApi.fromFile
 

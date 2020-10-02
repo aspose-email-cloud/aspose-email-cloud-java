@@ -308,7 +308,7 @@ MapiMessageDto result = api.mapi().message().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [MapiMessageFromFileRequest](MapiMessageFromFileRequest.md)
+See parameter model documentation at [MapiMessageFromFileRequest](MapiMessageFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -438,7 +438,7 @@ MapiMessageDto result = api.mapi().message().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [MapiMessageGetRequest](MapiMessageGetRequest.md)
+See parameter model documentation at [MapiMessageGetRequest](MapiMessageGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

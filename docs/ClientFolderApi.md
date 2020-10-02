@@ -147,7 +147,7 @@ MailServerFolderList result = api.client().folder().getList(request);
 
 Description: getList method request.
 
-See parameter model documentation at [ClientFolderGetListRequest](ClientFolderGetListRequest.md)
+See parameter model documentation at [ClientFolderGetListRequest](ClientFolderGetListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

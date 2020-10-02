@@ -1,4 +1,4 @@
-# contactGetAsFileRequest
+# ContactGetAsFileRequest
 
 Request model for ContactApi.getAsFile
 

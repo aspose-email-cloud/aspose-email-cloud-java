@@ -1,4 +1,4 @@
-# calendarGetAsFileRequest
+# CalendarGetAsFileRequest
 
 Request model for CalendarApi.getAsFile
 

@@ -19,7 +19,7 @@ DiscUsage result = api.cloudStorage().storage().getDiscUsage(request);
 
 Description: getDiscUsage method request.
 
-See parameter model documentation at [GetDiscUsageRequest](GetDiscUsageRequest.md)
+See parameter model documentation at [GetDiscUsageRequest](GetDiscUsageRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -93,7 +93,7 @@ FileVersions result = api.cloudStorage().storage().getFileVersions(request);
 
 Description: getFileVersions method request.
 
-See parameter model documentation at [GetFileVersionsRequest](GetFileVersionsRequest.md)
+See parameter model documentation at [GetFileVersionsRequest](GetFileVersionsRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -183,7 +183,7 @@ ObjectExist result = api.cloudStorage().storage().objectExists(request);
 
 Description: objectExists method request.
 
-See parameter model documentation at [ObjectExistsRequest](ObjectExistsRequest.md)
+See parameter model documentation at [ObjectExistsRequest](ObjectExistsRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -257,7 +257,7 @@ StorageExist result = api.cloudStorage().storage().exists(request);
 
 Description: exists method request.
 
-See parameter model documentation at [StorageExistsRequest](StorageExistsRequest.md)
+See parameter model documentation at [StorageExistsRequest](StorageExistsRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

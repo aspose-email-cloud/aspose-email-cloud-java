@@ -1,4 +1,4 @@
-# contactFromFileRequest
+# ContactFromFileRequest
 
 Request model for ContactApi.fromFile
 

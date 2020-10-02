@@ -1,4 +1,4 @@
-# clientMessageFetchRequest
+# ClientMessageFetchRequest
 
 Request model for ClientMessageApi.fetch
 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 ```java
 ClientMessageFetchRequest request = Models.clientMessageFetchRequest()
-    .messageId("&lt;put your message identifier here&gt;")
+    .messageId("<put your message identifier here>")
     .account("email.multi.account")
     .folder("INBOX")
     .storage("First Storage")

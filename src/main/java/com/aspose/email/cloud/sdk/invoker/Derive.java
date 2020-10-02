@@ -67,9 +67,6 @@ public class Derive {
         builder.registerTypeAdapter(StorageModelOfMapiCalendarDto.class, new TypeDeriveAdapter<StorageModelOfMapiCalendarDto>());
         builder.registerTypeAdapter(StorageModelOfMapiContactDto.class, new TypeDeriveAdapter<StorageModelOfMapiContactDto>());
         builder.registerTypeAdapter(StorageModelOfMapiMessageDto.class, new TypeDeriveAdapter<StorageModelOfMapiMessageDto>());
-
     }
 }
 
-
-    

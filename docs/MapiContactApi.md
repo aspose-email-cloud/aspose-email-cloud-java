@@ -290,7 +290,7 @@ MapiContactDto result = api.mapi().contact().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [MapiContactFromFileRequest](MapiContactFromFileRequest.md)
+See parameter model documentation at [MapiContactFromFileRequest](MapiContactFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -398,7 +398,7 @@ MapiContactDto result = api.mapi().contact().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [MapiContactGetRequest](MapiContactGetRequest.md)
+See parameter model documentation at [MapiContactGetRequest](MapiContactGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

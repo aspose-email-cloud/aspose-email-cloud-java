@@ -324,7 +324,7 @@ byte[] result = api.contact().convert(request);
 
 Description: convert method request.
 
-See parameter model documentation at [ContactConvertRequest](ContactConvertRequest.md)
+See parameter model documentation at [ContactConvertRequest](ContactConvertRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -385,7 +385,7 @@ ContactDto result = api.contact().fromFile(request);
 
 Description: fromFile method request.
 
-See parameter model documentation at [ContactFromFileRequest](ContactFromFileRequest.md)
+See parameter model documentation at [ContactFromFileRequest](ContactFromFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -529,7 +529,7 @@ ContactDto result = api.contact().get(request);
 
 Description: get method request.
 
-See parameter model documentation at [ContactGetRequest](ContactGetRequest.md)
+See parameter model documentation at [ContactGetRequest](ContactGetRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -677,7 +677,7 @@ byte[] result = api.contact().getAsFile(request);
 
 Description: getAsFile method request.
 
-See parameter model documentation at [ContactGetAsFileRequest](ContactGetAsFileRequest.md)
+See parameter model documentation at [ContactGetAsFileRequest](ContactGetAsFileRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -742,7 +742,7 @@ ContactStorageList result = api.contact().getList(request);
 
 Description: getList method request.
 
-See parameter model documentation at [ContactGetListRequest](ContactGetListRequest.md)
+See parameter model documentation at [ContactGetListRequest](ContactGetListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

@@ -1,4 +1,4 @@
-# contactConvertRequest
+# ContactConvertRequest
 
 Request model for ContactApi.convert
 

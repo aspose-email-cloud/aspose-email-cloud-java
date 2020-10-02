@@ -1,7 +1,7 @@
 
 # MapiContactPhotoDto
 
-Contains data and type of contact&#39;s photo.             
+Contains data and type of contact's photo.             
 
 ## Properties
 Class has no properties

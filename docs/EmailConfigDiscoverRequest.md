@@ -1,4 +1,4 @@
-# emailConfigDiscoverRequest
+# EmailConfigDiscoverRequest
 
 Request model for EmailConfigApi.discover
 

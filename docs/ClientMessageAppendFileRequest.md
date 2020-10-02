@@ -1,4 +1,4 @@
-# clientMessageAppendFileRequest
+# ClientMessageAppendFileRequest
 
 Request model for ClientMessageApi.appendFile
 

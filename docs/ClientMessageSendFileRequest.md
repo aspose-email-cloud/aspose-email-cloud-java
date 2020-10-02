@@ -1,4 +1,4 @@
-# clientMessageSendFileRequest
+# ClientMessageSendFileRequest
 
 Request model for ClientMessageApi.sendFile
 

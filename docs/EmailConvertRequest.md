@@ -1,4 +1,4 @@
-# emailConvertRequest
+# EmailConvertRequest
 
 Request model for EmailApi.convert
 

@@ -1,4 +1,4 @@
-# objectExistsRequest
+# ObjectExistsRequest
 
 Request model for StorageApi.objectExists
 
@@ -6,7 +6,7 @@ Request model for StorageApi.objectExists
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
+**path** | **String**| File or folder path e.g. '/file.ext' or '/folder' |
 **storageName** | **String**| Storage name | [optional]
 **versionId** | **String**| File version ID | [optional]
 

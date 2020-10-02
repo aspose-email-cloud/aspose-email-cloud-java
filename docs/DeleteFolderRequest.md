@@ -1,4 +1,4 @@
-# deleteFolderRequest
+# DeleteFolderRequest
 
 Request model for FolderApi.deleteFolder
 
@@ -6,7 +6,7 @@ Request model for FolderApi.deleteFolder
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| Folder path e.g. &#39;/folder&#39; |
+**path** | **String**| Folder path e.g. '/folder' |
 **storageName** | **String**| Storage name | [optional]
 **recursive** | **Boolean**| Enable to delete folders, subfolders and files | [optional] [default to false]
 

@@ -18,7 +18,7 @@ api.cloudStorage().folder().copyFolder(request);
 
 Description: copyFolder method request.
 
-See parameter model documentation at [CopyFolderRequest](CopyFolderRequest.md)
+See parameter model documentation at [CopyFolderRequest](CopyFolderRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -78,7 +78,7 @@ api.cloudStorage().folder().createFolder(request);
 
 Description: createFolder method request.
 
-See parameter model documentation at [CreateFolderRequest](CreateFolderRequest.md)
+See parameter model documentation at [CreateFolderRequest](CreateFolderRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -134,7 +134,7 @@ api.cloudStorage().folder().deleteFolder(request);
 
 Description: deleteFolder method request.
 
-See parameter model documentation at [DeleteFolderRequest](DeleteFolderRequest.md)
+See parameter model documentation at [DeleteFolderRequest](DeleteFolderRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -193,7 +193,7 @@ FilesList result = api.cloudStorage().folder().getFilesList(request);
 
 Description: getFilesList method request.
 
-See parameter model documentation at [GetFilesListRequest](GetFilesListRequest.md)
+See parameter model documentation at [GetFilesListRequest](GetFilesListRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>
@@ -278,7 +278,7 @@ api.cloudStorage().folder().moveFolder(request);
 
 Description: moveFolder method request.
 
-See parameter model documentation at [MoveFolderRequest](MoveFolderRequest.md)
+See parameter model documentation at [MoveFolderRequest](MoveFolderRequest.md).
 
 <details>
     <summary>Parameter initialization example:</summary>

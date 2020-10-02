@@ -1,4 +1,4 @@
-# getFileVersionsRequest
+# GetFileVersionsRequest
 
 Request model for StorageApi.getFileVersions
 
@@ -6,7 +6,7 @@ Request model for StorageApi.getFileVersions
 
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**path** | **String**| File path e.g. &#39;/file.ext&#39; |
+**path** | **String**| File path e.g. '/file.ext' |
 **storageName** | **String**| Storage name | [optional]
 
 ## Example

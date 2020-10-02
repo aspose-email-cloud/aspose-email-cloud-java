@@ -1,4 +1,4 @@
-# getDiscUsageRequest
+# GetDiscUsageRequest
 
 Request model for StorageApi.getDiscUsage
 

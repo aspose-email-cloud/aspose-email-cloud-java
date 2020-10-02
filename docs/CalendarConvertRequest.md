@@ -1,4 +1,4 @@
-# calendarConvertRequest
+# CalendarConvertRequest
 
 Request model for CalendarApi.convert
 

@@ -1,4 +1,4 @@
-# aiBcrParseRequest
+# AiBcrParseRequest
 
 Request model for AiBcrApi.parse
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
 **file** | **byte[]**| File to parse |
 **countries** | **String**| Comma-separated codes of countries. | [optional] [default to ]
-**languages** | **String**| Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.              | [optional] [default to ]
+**languages** | **String**| Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.              | [optional] [default to ]
 **isSingle** | **Boolean**| Determines that image contains single VCard or more. | [optional] [default to true]
 
 ## Example

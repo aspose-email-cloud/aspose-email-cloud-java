@@ -1,4 +1,4 @@
-# calendarGetRequest
+# CalendarGetRequest
 
 Request model for CalendarApi.get
 
