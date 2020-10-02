@@ -1,4 +1,3 @@
-
 # ClientMessageSetIsReadRequest
 
 Email client mark message is read/unread request.             
@@ -28,4 +27,3 @@ ClientMessageSetIsReadRequest clientMessageSetIsReadRequest = Models.clientMessa
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

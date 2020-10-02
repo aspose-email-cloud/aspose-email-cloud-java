@@ -1,4 +1,3 @@
-
 # DailyRecurrencePatternDto
 
 Daily recurrence.             
@@ -13,4 +12,3 @@ See: [RecurrencePatternDto](RecurrencePatternDto.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

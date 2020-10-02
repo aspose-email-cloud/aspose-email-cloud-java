@@ -1,4 +1,3 @@
-
 # MonthlyRecurrencePatternDto
 
 Monthly recurrence pattern.             
@@ -27,4 +26,3 @@ MonthlyRecurrencePatternDto monthlyRecurrencePatternDto = Models.monthlyRecurren
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

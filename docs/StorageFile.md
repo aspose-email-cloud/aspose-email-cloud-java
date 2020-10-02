@@ -1,4 +1,3 @@
-
 # StorageFile
 
 File or folder information
@@ -26,4 +25,3 @@ StorageFile storageFile = Models.storageFile()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

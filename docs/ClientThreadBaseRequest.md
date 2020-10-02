@@ -1,4 +1,3 @@
-
 # ClientThreadBaseRequest
 
 Email client thread request.             
@@ -15,4 +14,3 @@ See: [ClientAccountBaseRequest](ClientAccountBaseRequest.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

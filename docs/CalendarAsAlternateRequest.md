@@ -1,4 +1,3 @@
-
 # CalendarAsAlternateRequest
 
 Convert iCalendar to AlternateView request             
@@ -43,4 +42,3 @@ CalendarAsAlternateRequest calendarAsAlternateRequest = Models.calendarAsAlterna
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

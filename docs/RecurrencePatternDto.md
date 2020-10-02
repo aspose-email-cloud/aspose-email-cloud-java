@@ -1,4 +1,3 @@
-
 # RecurrencePatternDto
 
 iCalendar recurrence pattern.             
@@ -24,4 +23,3 @@ RecurrencePatternDto recurrencePatternDto = Models.recurrencePatternDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

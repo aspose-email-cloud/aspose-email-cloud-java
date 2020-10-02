@@ -53,7 +53,6 @@ public class ClientFolderApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Create new folder in email account             
      * 
@@ -87,7 +86,6 @@ public class ClientFolderApi
       }
     }
 
-            
     /**
      * Delete a folder in email account             
      * 
@@ -121,7 +119,6 @@ public class ClientFolderApi
       }
     }
 
-            
     /**
      * Get folders list in email account             
      * 
@@ -167,5 +164,4 @@ public class ClientFolderApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

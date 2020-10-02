@@ -1,4 +1,3 @@
-
 # CalendarSaveRequest
 
 Save iCalendar to storage request.             
@@ -48,4 +47,3 @@ CalendarSaveRequest calendarSaveRequest = Models.calendarSaveRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

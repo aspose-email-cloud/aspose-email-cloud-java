@@ -1,4 +1,3 @@
-
 # EmailClientAccountOauthCredentials
 
 Represents email client account OAuth 2.0 credentials             
@@ -18,4 +17,3 @@ See: [EmailClientAccountCredentials](EmailClientAccountCredentials.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

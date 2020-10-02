@@ -1,4 +1,3 @@
-
 # AiNameExtractedList
 
 Extracted name list.             
@@ -13,4 +12,3 @@ See: [ListResponseOfAiNameExtracted](ListResponseOfAiNameExtracted.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

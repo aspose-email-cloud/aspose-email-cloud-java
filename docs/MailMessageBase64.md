@@ -1,4 +1,3 @@
-
 # MailMessageBase64
 
 Email message represented as file, encoded to Base64 format.             
@@ -23,4 +22,3 @@ MailMessageBase64 mailMessageBase64 = Models.mailMessageBase64()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # PostalAddress
 
 A postal address             
@@ -38,4 +37,3 @@ PostalAddress postalAddress = Models.postalAddress()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

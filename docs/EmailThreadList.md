@@ -1,4 +1,3 @@
-
 # EmailThreadList
 
 List of email threads             
@@ -49,4 +48,3 @@ EmailThreadList emailThreadList = Models.emailThreadList()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

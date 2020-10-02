@@ -1,4 +1,3 @@
-
 # CalendarDto
 
 iCalendar document representation.             
@@ -59,4 +58,3 @@ CalendarDto calendarDto = Models.calendarDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

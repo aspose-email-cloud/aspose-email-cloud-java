@@ -1,4 +1,3 @@
-
 # MapiContactPhysicalAddressPropertySetDto
 
 Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address             
@@ -14,4 +13,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

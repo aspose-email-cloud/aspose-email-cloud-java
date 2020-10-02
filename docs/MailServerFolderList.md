@@ -1,4 +1,3 @@
-
 # MailServerFolderList
 
 List of email client folders.             
@@ -13,4 +12,3 @@ See: [ListResponseOfMailServerFolder](ListResponseOfMailServerFolder.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

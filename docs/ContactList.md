@@ -1,4 +1,3 @@
-
 # ContactList
 
 List of VCard documents             
@@ -58,4 +57,3 @@ ContactList contactList = Models.contactList()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

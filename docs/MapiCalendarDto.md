@@ -1,4 +1,3 @@
-
 # MapiCalendarDto
 
 Represents the mapi calendar object             
@@ -71,4 +70,3 @@ MapiCalendarDto mapiCalendarDto = Models.mapiCalendarDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

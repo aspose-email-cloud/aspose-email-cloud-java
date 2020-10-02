@@ -1,4 +1,3 @@
-
 # MapiCalendarSaveRequest
 
 Save MapiCalendar to storage request.             
@@ -62,4 +61,3 @@ MapiCalendarSaveRequest mapiCalendarSaveRequest = Models.mapiCalendarSaveRequest
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

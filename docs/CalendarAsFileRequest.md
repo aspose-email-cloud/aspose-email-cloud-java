@@ -1,4 +1,3 @@
-
 # CalendarAsFileRequest
 
 iCalendar model to file request.             
@@ -41,4 +40,3 @@ CalendarAsFileRequest calendarAsFileRequest = Models.calendarAsFileRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

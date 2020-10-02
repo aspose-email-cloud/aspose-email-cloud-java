@@ -1,4 +1,3 @@
-
 # ReminderAttendee
 
 Defines an \"Attendee\" within a alarm.
@@ -19,4 +18,3 @@ ReminderAttendee reminderAttendee = Models.reminderAttendee()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

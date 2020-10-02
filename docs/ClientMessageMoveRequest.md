@@ -1,4 +1,3 @@
-
 # ClientMessageMoveRequest
 
 Email client move message request.             
@@ -30,4 +29,3 @@ ClientMessageMoveRequest clientMessageMoveRequest = Models.clientMessageMoveRequ
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

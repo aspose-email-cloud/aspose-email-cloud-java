@@ -1,4 +1,3 @@
-
 # Attachment
 
 Document attachment.             
@@ -19,4 +18,3 @@ See: [AttachmentBase](AttachmentBase.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

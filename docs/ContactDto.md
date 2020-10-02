@@ -1,4 +1,3 @@
-
 # ContactDto
 
 VCard document representation.             
@@ -89,4 +88,3 @@ ContactDto contactDto = Models.contactDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

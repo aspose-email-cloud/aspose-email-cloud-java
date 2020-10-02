@@ -1,4 +1,3 @@
-
 # MapiContactDto
 
 Represents outlook contact information.             
@@ -47,4 +46,3 @@ MapiContactDto mapiContactDto = Models.mapiContactDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

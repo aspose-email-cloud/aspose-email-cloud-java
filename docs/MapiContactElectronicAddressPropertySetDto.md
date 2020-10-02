@@ -1,4 +1,3 @@
-
 # MapiContactElectronicAddressPropertySetDto
 
 Specify properties for up to three different e-mail addresses (Email1, Email2, and Email3) and three different fax addresses (Primary Fax, Business Fax, and Home Fax)             
@@ -20,4 +19,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # DiscUsage
 
 Class for disc space information.
@@ -21,4 +20,3 @@ DiscUsage discUsage = Models.discUsage()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

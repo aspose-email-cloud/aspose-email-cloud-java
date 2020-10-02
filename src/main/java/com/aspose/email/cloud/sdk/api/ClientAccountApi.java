@@ -53,7 +53,6 @@ public class ClientAccountApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Get email client account from storage.             
      * 
@@ -99,7 +98,6 @@ public class ClientAccountApi
       }
     }
 
-            
     /**
      * Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
      * 
@@ -145,7 +143,6 @@ public class ClientAccountApi
       }
     }
 
-            
     /**
      * Create/update email client account file (*.account) with credentials             
      * 
@@ -179,7 +176,6 @@ public class ClientAccountApi
       }
     }
 
-            
     /**
      * Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
      * 
@@ -212,5 +208,4 @@ public class ClientAccountApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

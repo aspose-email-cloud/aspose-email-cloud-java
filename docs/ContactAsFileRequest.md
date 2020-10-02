@@ -1,4 +1,3 @@
-
 # ContactAsFileRequest
 
 Convert contact model to file request.             
@@ -57,4 +56,3 @@ ContactAsFileRequest contactAsFileRequest = Models.contactAsFileRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # AiNameFormatted
 
 Formatted name             
@@ -21,4 +20,3 @@ AiNameFormatted aiNameFormatted = Models.aiNameFormatted()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

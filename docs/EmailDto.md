@@ -1,4 +1,3 @@
-
 # EmailDto
 
 Email message representation.             
@@ -72,4 +71,3 @@ EmailDto emailDto = Models.emailDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # AiBcrImageStorageFile
 
 Image from storage for recognition             
@@ -27,4 +26,3 @@ AiBcrImageStorageFile aiBcrImageStorageFile = Models.aiBcrImageStorageFile()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

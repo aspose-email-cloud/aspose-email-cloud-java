@@ -1,4 +1,3 @@
-
 # MapiCalendarYearlyAndMonthlyRecurrencePatternDto
 
 Represents the yearly and monthly recurrence pattern of the mapi calendar             
@@ -17,4 +16,3 @@ See: [MapiCalendarRecurrencePatternDto](MapiCalendarRecurrencePatternDto.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

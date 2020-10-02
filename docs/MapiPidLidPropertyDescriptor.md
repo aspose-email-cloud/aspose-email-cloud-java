@@ -1,4 +1,3 @@
-
 # MapiPidLidPropertyDescriptor
 
 Property identified by an unsigned 32-bit quantity along with a property set             
@@ -16,4 +15,3 @@ See: [MapiPidPropertyDescriptor](MapiPidPropertyDescriptor.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

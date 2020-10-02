@@ -53,7 +53,6 @@ public class FileApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Copy file
      * 
@@ -97,7 +96,6 @@ public class FileApi
       }
     }
 
-            
     /**
      * Delete file
      * 
@@ -135,7 +133,6 @@ public class FileApi
       }
     }
 
-            
     /**
      * Download file
      * 
@@ -176,7 +173,6 @@ public class FileApi
       }
     }
 
-            
     /**
      * Move file
      * 
@@ -220,7 +216,6 @@ public class FileApi
       }
     }
 
-            
     /**
      * Upload file
      * 
@@ -271,5 +266,4 @@ public class FileApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

@@ -53,7 +53,6 @@ public class MapiContactApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Converts MAPI contact model to ContactDto model.             
      * 
@@ -95,7 +94,6 @@ public class MapiContactApi
       }
     }
 
-            
     /**
      * Converts MAPI contact model to specified format and returns as file.             
      * 
@@ -132,7 +130,6 @@ public class MapiContactApi
       }
     }
 
-            
     /**
      * Converts contact file to a MAPI model representation.             
      * 
@@ -183,7 +180,6 @@ public class MapiContactApi
       }
     }
 
-            
     /**
      * Get MAPI contact document.             
      * 
@@ -234,7 +230,6 @@ public class MapiContactApi
       }
     }
 
-            
     /**
      * Save MAPI Contact to storage.             
      * 
@@ -267,5 +262,4 @@ public class MapiContactApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

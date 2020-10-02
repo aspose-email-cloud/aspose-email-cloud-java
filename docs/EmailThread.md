@@ -1,4 +1,3 @@
-
 # EmailThread
 
 Email messages thread             
@@ -76,4 +75,3 @@ EmailThread emailThread = Models.emailThread()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # MapiMessageDto
 
 Represents an Outlook Message format document.             
@@ -74,4 +73,3 @@ MapiMessageDto mapiMessageDto = Models.mapiMessageDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

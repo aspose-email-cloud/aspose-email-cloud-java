@@ -1,4 +1,3 @@
-
 # MapiContactAsFileRequest
 
 Convert MapiContact to file request.             
@@ -40,4 +39,3 @@ MapiContactAsFileRequest mapiContactAsFileRequest = Models.mapiContactAsFileRequ
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

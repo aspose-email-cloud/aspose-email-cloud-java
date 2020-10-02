@@ -1,4 +1,3 @@
-
 # ClientThreadMoveRequest
 
 Email client move thread request.             
@@ -28,4 +27,3 @@ ClientThreadMoveRequest clientThreadMoveRequest = Models.clientThreadMoveRequest
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # AiNameMismatch
 
 Names mismatch detailed description             
@@ -22,4 +21,3 @@ AiNameMismatch aiNameMismatch = Models.aiNameMismatch()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

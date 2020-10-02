@@ -1,4 +1,3 @@
-
 # MailMessageMapi
 
 Email message represented as MAPI object.             
@@ -52,4 +51,3 @@ MailMessageMapi mailMessageMapi = Models.mailMessageMapi()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

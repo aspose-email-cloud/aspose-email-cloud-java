@@ -1,4 +1,3 @@
-
 # LinkedResource
 
 Represents an embedded resource in a message.             
@@ -15,4 +14,3 @@ See: [AttachmentBase](AttachmentBase.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

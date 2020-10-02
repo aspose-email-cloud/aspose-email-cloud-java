@@ -1,4 +1,3 @@
-
 # AiNameMatchParsedRequest
 
 Two parsed names to match request             
@@ -15,4 +14,3 @@ See: [AiNameParsedRequest](AiNameParsedRequest.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

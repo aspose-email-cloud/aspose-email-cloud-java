@@ -1,4 +1,3 @@
-
 # MailMessageBase
 
 Universal object that stores email messages in different formats.             
@@ -19,4 +18,3 @@ MailMessageBase mailMessageBase = Models.mailMessageBase()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

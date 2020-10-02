@@ -1,4 +1,3 @@
-
 # ClientFolderCreateRequest
 
 Email Client create folder request.             
@@ -29,4 +28,3 @@ ClientFolderCreateRequest clientFolderCreateRequest = Models.clientFolderCreateR
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

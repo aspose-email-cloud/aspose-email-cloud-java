@@ -1,4 +1,3 @@
-
 # MailMessageDto
 
 Represents email message, stored as an EmailDto object.             
@@ -46,4 +45,3 @@ MailMessageDto mailMessageDto = Models.mailMessageDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # ReminderTrigger
 
 Specifies when an alarm will trigger.
@@ -22,4 +21,3 @@ ReminderTrigger reminderTrigger = Models.reminderTrigger()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

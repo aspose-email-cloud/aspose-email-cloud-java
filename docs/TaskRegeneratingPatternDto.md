@@ -1,4 +1,3 @@
-
 # TaskRegeneratingPatternDto
 
 Represents the regenerating recurrence pattern that specifies how many days, weeks, months or years after the completion of the current task the next occurrence will be due.             
@@ -25,4 +24,3 @@ TaskRegeneratingPatternDto taskRegeneratingPatternDto = Models.taskRegeneratingP
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

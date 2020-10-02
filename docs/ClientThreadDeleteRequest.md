@@ -1,4 +1,3 @@
-
 # ClientThreadDeleteRequest
 
 Delete email client thread request.             
@@ -28,4 +27,3 @@ ClientThreadDeleteRequest clientThreadDeleteRequest = Models.clientThreadDeleteR
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

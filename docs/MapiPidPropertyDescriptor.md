@@ -1,4 +1,3 @@
-
 # MapiPidPropertyDescriptor
 
 Mapi pid property descriptor base class             
@@ -18,4 +17,3 @@ See: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

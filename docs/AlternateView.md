@@ -1,4 +1,3 @@
-
 # AlternateView
 
 Represents the format to view a message.             
@@ -42,4 +41,3 @@ AlternateView alternateView = Models.alternateView()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

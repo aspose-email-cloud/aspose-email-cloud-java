@@ -1,4 +1,3 @@
-
 # PhoneNumber
 
 A phone number.             
@@ -25,4 +24,3 @@ PhoneNumber phoneNumber = Models.phoneNumber()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

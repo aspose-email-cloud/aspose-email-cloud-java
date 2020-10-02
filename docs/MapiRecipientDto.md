@@ -1,4 +1,3 @@
-
 # MapiRecipientDto
 
 Represents the recipient information in the Microsoft Outlook Message.             
@@ -25,4 +24,3 @@ MapiRecipientDto mapiRecipientDto = Models.mapiRecipientDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

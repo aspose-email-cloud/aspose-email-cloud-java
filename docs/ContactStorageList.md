@@ -1,4 +1,3 @@
-
 # ContactStorageList
 
 Contact models list with corresponding storage locations.             
@@ -65,4 +64,3 @@ ContactStorageList contactStorageList = Models.contactStorageList()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

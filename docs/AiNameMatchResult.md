@@ -1,4 +1,3 @@
-
 # AiNameMatchResult
 
 Two names match result             
@@ -25,4 +24,3 @@ AiNameMatchResult aiNameMatchResult = Models.aiNameMatchResult()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

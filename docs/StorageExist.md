@@ -1,4 +1,3 @@
-
 # StorageExist
 
 Storage exists
@@ -19,4 +18,3 @@ StorageExist storageExist = Models.storageExist()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

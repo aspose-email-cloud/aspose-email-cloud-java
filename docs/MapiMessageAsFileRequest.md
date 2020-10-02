@@ -1,4 +1,3 @@
-
 # MapiMessageAsFileRequest
 
 Convert MapiMessage to file request.             
@@ -51,4 +50,3 @@ MapiMessageAsFileRequest mapiMessageAsFileRequest = Models.mapiMessageAsFileRequ
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # MapiDateTimePropertyDto
 
 Mapi property with DateTime value             
@@ -15,4 +14,3 @@ See: [MapiPropertyDto](MapiPropertyDto.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # StorageFolderLocation
 
 A storage folder location information             
@@ -21,4 +20,3 @@ StorageFolderLocation storageFolderLocation = Models.storageFolderLocation()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

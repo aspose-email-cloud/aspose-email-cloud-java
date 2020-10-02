@@ -1,4 +1,3 @@
-
 # MailMessageBaseList
 
 List of messages.             
@@ -13,4 +12,3 @@ See: [ListResponseOfMailMessageBase](ListResponseOfMailMessageBase.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # ClientMessageSendRequest
 
 Email client send message request.             
@@ -53,4 +52,3 @@ ClientMessageSendRequest clientMessageSendRequest = Models.clientMessageSendRequ
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

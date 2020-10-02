@@ -1,4 +1,3 @@
-
 # EmailClientAccount
 
 A universal email client account             
@@ -33,4 +32,3 @@ EmailClientAccount emailClientAccount = Models.emailClientAccount()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # AiNameGenderHypothesis
 
 Name gender hypothesis             
@@ -20,4 +19,3 @@ AiNameGenderHypothesis aiNameGenderHypothesis = Models.aiNameGenderHypothesis()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

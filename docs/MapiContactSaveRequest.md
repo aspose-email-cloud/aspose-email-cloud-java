@@ -1,4 +1,3 @@
-
 # MapiContactSaveRequest
 
 MapiContact save to storage request.             
@@ -47,4 +46,3 @@ MapiContactSaveRequest mapiContactSaveRequest = Models.mapiContactSaveRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

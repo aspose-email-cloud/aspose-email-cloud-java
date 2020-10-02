@@ -1,4 +1,3 @@
-
 # EmailAsFileRequest
 
 Convert email model to file request.             
@@ -44,4 +43,3 @@ EmailAsFileRequest emailAsFileRequest = Models.emailAsFileRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

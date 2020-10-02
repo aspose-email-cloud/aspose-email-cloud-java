@@ -1,4 +1,3 @@
-
 # ClientAccountBaseRequest
 
 Base request for Email client. Stores information about email account location.             
@@ -12,4 +11,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

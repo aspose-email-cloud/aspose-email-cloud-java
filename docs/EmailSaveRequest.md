@@ -1,4 +1,3 @@
-
 # EmailSaveRequest
 
 Email save to storage request             
@@ -52,4 +51,3 @@ EmailSaveRequest emailSaveRequest = Models.emailSaveRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

@@ -1,4 +1,3 @@
-
 # ObjectExist
 
 Object exists
@@ -20,4 +19,3 @@ ObjectExist objectExist = Models.objectExist()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

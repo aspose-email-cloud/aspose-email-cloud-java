@@ -1,4 +1,3 @@
-
 # MapiCalendarTimeZoneRuleDto
 
 Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
@@ -20,4 +19,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

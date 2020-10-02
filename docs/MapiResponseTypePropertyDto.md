@@ -1,4 +1,3 @@
-
 # MapiResponseTypePropertyDto
 
 Mapi property with response type value             
@@ -25,4 +24,3 @@ MapiResponseTypePropertyDto mapiResponseTypePropertyDto = Models.mapiResponseTyp
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

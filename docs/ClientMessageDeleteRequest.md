@@ -1,4 +1,3 @@
-
 # ClientMessageDeleteRequest
 
 Email client delete message request.             
@@ -28,4 +27,3 @@ ClientMessageDeleteRequest clientMessageDeleteRequest = Models.clientMessageDele
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

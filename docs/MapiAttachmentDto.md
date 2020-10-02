@@ -1,4 +1,3 @@
-
 # MapiAttachmentDto
 
 Mapi attachment             
@@ -21,4 +20,3 @@ MapiAttachmentDto mapiAttachmentDto = Models.mapiAttachmentDto()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

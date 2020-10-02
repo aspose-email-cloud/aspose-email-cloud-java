@@ -1,4 +1,3 @@
-
 # MapiContactOtherPropertySetDto
 
 The properties are used to specify additional properties of contact.             
@@ -19,4 +18,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

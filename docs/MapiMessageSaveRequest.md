@@ -1,4 +1,3 @@
-
 # MapiMessageSaveRequest
 
 MapiMessage save to storage request.             
@@ -58,4 +57,3 @@ MapiMessageSaveRequest mapiMessageSaveRequest = Models.mapiMessageSaveRequest()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

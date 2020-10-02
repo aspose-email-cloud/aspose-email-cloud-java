@@ -53,7 +53,6 @@ public class AiBcrApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Parse images to vCard document models             
      * 
@@ -102,7 +101,6 @@ public class AiBcrApi
       }
     }
 
-            
     /**
      * Parse images from storage to vCard files             
      * 
@@ -143,5 +141,4 @@ public class AiBcrApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

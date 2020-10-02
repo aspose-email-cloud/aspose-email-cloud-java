@@ -1,4 +1,3 @@
-
 # EmailClientMultiAccount
 
 Email client virtual account, which contains several accounts             
@@ -50,4 +49,3 @@ EmailClientMultiAccount emailClientMultiAccount = Models.emailClientMultiAccount
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

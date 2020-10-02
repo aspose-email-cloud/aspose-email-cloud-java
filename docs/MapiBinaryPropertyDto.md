@@ -1,4 +1,3 @@
-
 # MapiBinaryPropertyDto
 
 Mapi property with Binary value represented as a Base64 string             
@@ -15,4 +14,3 @@ See: [MapiPropertyDto](MapiPropertyDto.md)
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

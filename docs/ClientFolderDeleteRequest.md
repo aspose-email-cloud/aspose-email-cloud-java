@@ -1,4 +1,3 @@
-
 # ClientFolderDeleteRequest
 
 Email client delete folder request.             
@@ -27,4 +26,3 @@ ClientFolderDeleteRequest clientFolderDeleteRequest = Models.clientFolderDeleteR
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

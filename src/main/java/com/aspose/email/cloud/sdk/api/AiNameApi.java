@@ -53,7 +53,6 @@ public class AiNameApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * The call proposes k most probable names for given starting characters.             
      * 
@@ -102,7 +101,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions.             
      * 
@@ -151,7 +149,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions.             
      * 
@@ -193,7 +190,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Formats a person&#39;s name in correct case and name order using options for formatting instructions.             
      * 
@@ -243,7 +239,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions.             
      * 
@@ -285,7 +280,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Detect person&#39;s gender from name string.             
      * 
@@ -334,7 +328,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Detect person&#39;s gender from parsed name.             
      * 
@@ -376,7 +369,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Compare people&#39;s names. Uses options for comparing instructions.             
      * 
@@ -430,7 +422,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
      * 
@@ -472,7 +463,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Parse name to components.             
      * 
@@ -521,7 +511,6 @@ public class AiNameApi
       }
     }
 
-            
     /**
      * Parse person&#39;s name out of an email address.             
      * 
@@ -569,5 +558,4 @@ public class AiNameApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }

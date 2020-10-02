@@ -1,4 +1,3 @@
-
 # ClientMessageAppendRequest
 
 Email client append message request.             
@@ -57,4 +56,3 @@ ClientMessageAppendRequest clientMessageAppendRequest = Models.clientMessageAppe
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

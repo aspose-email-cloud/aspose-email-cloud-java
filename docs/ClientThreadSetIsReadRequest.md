@@ -1,4 +1,3 @@
-
 # ClientThreadSetIsReadRequest
 
 Mark thread messages as read or unread request.             
@@ -30,4 +29,3 @@ ClientThreadSetIsReadRequest clientThreadSetIsReadRequest = Models.clientThreadS
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

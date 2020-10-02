@@ -1,4 +1,3 @@
-
 # MapiPropertyDescriptor
 
 Mapi property descriptor             
@@ -19,4 +18,3 @@ MapiPropertyDescriptor mapiPropertyDescriptor = Models.mapiPropertyDescriptor()
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

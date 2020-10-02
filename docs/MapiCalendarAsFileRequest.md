@@ -1,4 +1,3 @@
-
 # MapiCalendarAsFileRequest
 
 Convert MapiCalendar to file request.             
@@ -55,4 +54,3 @@ MapiCalendarAsFileRequest mapiCalendarAsFileRequest = Models.mapiCalendarAsFileR
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-
