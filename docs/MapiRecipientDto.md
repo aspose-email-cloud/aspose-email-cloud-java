@@ -1,7 +1,5 @@
+
 # MapiRecipientDto
-
-Represents the recipient information in the Microsoft Outlook Message.             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,15 +10,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-MapiRecipientDto mapiRecipientDto = Models.mapiRecipientDto()
-    .emailAddress("to@aspose.com")
-    .addressType("SMTP")
-    .displayName("To Address")
-    .recipientType("MapiTo")
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

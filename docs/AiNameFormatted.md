@@ -1,7 +1,5 @@
+
 # AiNameFormatted
-
-Formatted name             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,13 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-AiNameFormatted aiNameFormatted = Models.aiNameFormatted()
-    .name("Mr. Cane J. M.")
-    .comments("format: %t%L%f%m; source: parsed format")
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

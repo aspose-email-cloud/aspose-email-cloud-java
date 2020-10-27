@@ -53,6 +53,7 @@ public class ContactApi
         this.apiInvoker = apiInvoker;
     }
 
+            
     /**
      * Converts contact model to specified format and returns as file             
      * 
@@ -89,6 +90,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Converts ContactDto to MapiContactDto.             
      * 
@@ -130,6 +132,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Converts contact document to specified format and returns as file             
      * 
@@ -180,6 +183,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Converts contact document to a model representation             
      * 
@@ -230,6 +234,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Get contact document from storage.             
      * 
@@ -280,6 +285,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Converts contact document from storage to specified format and returns as file             
      * 
@@ -330,6 +336,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Get contact list from storage folder.             
      * 
@@ -377,6 +384,7 @@ public class ContactApi
       }
     }
 
+            
     /**
      * Save contact to storage.             
      * 
@@ -409,4 +417,6 @@ public class ContactApi
         throw new ApiException(400, exception.getMessage());
       }
     }
+
 }
+

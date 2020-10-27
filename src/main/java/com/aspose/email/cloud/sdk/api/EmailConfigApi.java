@@ -53,6 +53,7 @@ public class EmailConfigApi
         this.apiInvoker = apiInvoker;
     }
 
+            
     /**
      * Discover email accounts by email address. Does not validate discovered accounts.             
      * 
@@ -97,6 +98,7 @@ public class EmailConfigApi
       }
     }
 
+            
     /**
      * Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
      * 
@@ -138,6 +140,7 @@ public class EmailConfigApi
       }
     }
 
+            
     /**
      * Discover email accounts by email address. Validates discovered accounts using login and password.             
      * 
@@ -178,4 +181,6 @@ public class EmailConfigApi
         throw new ApiException(400, exception.getMessage());
       }
     }
+
 }
+

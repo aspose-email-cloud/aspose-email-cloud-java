@@ -1,7 +1,5 @@
+
 # MapiPidPropertyDescriptor
-
-Mapi pid property descriptor base class             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,10 +8,10 @@ Name | Type | Description | Notes
 **multipleValuesDataType** | **Boolean** | Indicates if data type contains of multiple values              | 
 **name** | **String** | A string that identifies the property              |  [optional]
 
+
 ## Parent class
 
 See: [MapiPropertyDescriptor](MapiPropertyDescriptor.md)
 
-
-
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

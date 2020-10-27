@@ -1,7 +1,5 @@
+
 # AiNameMatchResult
-
-Two names match result             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,17 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-AiNameMatchResult aiNameMatchResult = Models.aiNameMatchResult()
-    .similarity(0.6)
-    .mismatches(Arrays.<AiNameMismatch>asList(
-        Models.aiNameMismatch()
-            .category("Gender")
-            .explanation("no_match")
-            .build()))
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

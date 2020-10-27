@@ -1,7 +1,5 @@
+
 # MapiMessageDto
-
-Represents an Outlook Message format document.             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -31,45 +29,10 @@ Name | Type | Description | Notes
 **sentRepresentingSmtpAddress** | **String** | E-mail address for the messaging user represented by the sender. |  [optional]
 **transportMessageHeaders** | **String** | Transport-specific message envelope information. |  [optional]
 
+
 ## Parent class
 
 See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
 
-
-## Example
-```java
-MapiMessageDto mapiMessageDto = Models.mapiMessageDto()
-    .messageBody("Some body")
-    .clientSubmitTime(Calendar.getInstance().getTime())
-    .deliveryTime(Calendar.getInstance().getTime())
-    .displayTo("To Address")
-    .flags(Arrays.<MapiMessageFlag>asList(
-        "MsgFlagRead",
-        "MsgFlagUnsent",
-        "MsgFlagHasAttach"))
-    .normalizedSubject("Some subject")
-    .senderAddressType("SMTP")
-    .senderEmailAddress("from@aspose.com")
-    .senderName("From Address")
-    .senderSmtpAddress("from@aspose.com")
-    .attachments(Arrays.<MapiAttachmentDto>asList(
-        Models.mapiAttachmentDto()
-            .name("some-file.txt")
-            .dataBase64("U29tZSBmaWxlIHRleHQ=")
-            .build()))
-    .body("Some body")
-    .messageClass("IPM.Note")
-    .recipients(Arrays.<MapiRecipientDto>asList(
-        Models.mapiRecipientDto()
-            .emailAddress("to@aspose.com")
-            .addressType("SMTP")
-            .displayName("To Address")
-            .recipientType("MapiTo")
-            .build()))
-    .subject("Re: Some subject")
-    .subjectPrefix("Re: ")
-    .build();
-```
-
-
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

@@ -53,6 +53,7 @@ public class MapiMessageApi
         this.apiInvoker = apiInvoker;
     }
 
+            
     /**
      * Converts MAPI message model to EmailDto model             
      * 
@@ -94,6 +95,7 @@ public class MapiMessageApi
       }
     }
 
+            
     /**
      * Converts MAPI message model to specified format and returns as file.             
      * 
@@ -130,6 +132,7 @@ public class MapiMessageApi
       }
     }
 
+            
     /**
      * Converts email file to a MAPI model representation             
      * 
@@ -180,6 +183,7 @@ public class MapiMessageApi
       }
     }
 
+            
     /**
      * Get MAPI message document.             
      * 
@@ -230,6 +234,7 @@ public class MapiMessageApi
       }
     }
 
+            
     /**
      * Save MAPI message to storage.             
      * 
@@ -262,4 +267,6 @@ public class MapiMessageApi
         throw new ApiException(400, exception.getMessage());
       }
     }
+
 }
+

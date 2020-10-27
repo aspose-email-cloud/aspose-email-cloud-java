@@ -1,7 +1,5 @@
+
 # AiNameGenderHypothesis
-
-Name gender hypothesis             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,12 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-AiNameGenderHypothesis aiNameGenderHypothesis = Models.aiNameGenderHypothesis()
-    .score(0.8)
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

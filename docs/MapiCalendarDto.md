@@ -1,7 +1,5 @@
+
 # MapiCalendarDto
-
-Represents the mapi calendar object             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -24,49 +22,10 @@ Name | Type | Description | Notes
 **uid** | **String** | Unique identifier.              |  [optional]
 **organizer** | [**MapiElectronicAddressDto**](MapiElectronicAddressDto.md) | Organizer              |  [optional]
 
+
 ## Parent class
 
 See: [MapiMessageItemBaseDto](MapiMessageItemBaseDto.md)
 
-
-## Example
-```java
-MapiCalendarDto mapiCalendarDto = Models.mapiCalendarDto()
-    .attendees(Models.mapiCalendarAttendeesDto()
-        .appointmentRecipients(Arrays.<MapiRecipientDto>asList(
-            Models.mapiRecipientDto()
-                .emailAddress("organizer@aspose.com")
-                .addressType("SMTP")
-                .displayName("Organizer Name")
-                .recipientType("MapiTo")
-                .build(),
-            Models.mapiRecipientDto()
-                .emailAddress("attendee@aspose.com")
-                .addressType("SMTP")
-                .displayName("Attendee Name")
-                .recipientType("MapiTo")
-                .build()))
-        .build())
-    .busyStatus("Tentative")
-    .clientIntent(Arrays.<MapiCalendarClientIntent>asList(
-        "Manager"))
-    .endDate(Calendar.getInstance().getTime())
-    .location("Some location")
-    .recurrence(Models.mapiCalendarEventRecurrenceDto()
-        .recurrencePattern(Models.mapiCalendarDailyRecurrencePatternDto()
-            .frequency("Daily")
-            .occurrenceCount(10)
-            .weekStartDay("Monday")
-            .build())
-        .build())
-    .startDate(Calendar.getInstance().getTime())
-    .organizer(Models.mapiElectronicAddressDto()
-        .emailAddress("organizer@aspose.com")
-        .build())
-    .body("Some description")
-    .subject("Some summary")
-    .build();
-```
-
-
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

@@ -1,314 +1,100 @@
-# StorageApi (EmailCloud.cloudStorage().storage())
+# StorageApi
 
-Storage operations controller
-
+            
 <a name="getDiscUsage"></a>
-## getDiscUsage
+# **getDiscUsage**
+> [DiscUsage](DiscUsage.md) getDiscUsage(GetDiscUsageRequest request)
 
-Description: Get disc usage
+Get disc usage
 
-Returns: Disc usage.
-
-Method call example:
+### **GetDiscUsageRequest** Parameters
 ```java
-DiscUsage result = api.cloudStorage().storage().getDiscUsage(request);
+public GetDiscUsageRequest(
+    String storageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **storageName** | **String**| Storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: getDiscUsage method request.
-
-See parameter model documentation at [GetDiscUsageRequest](GetDiscUsageRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-GetDiscUsageRequest request = Models.getDiscUsageRequest()
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Description: Disc usage.
-
-Return type: [**DiscUsage**](DiscUsage.md)
-
-<details>
-    <summary>Result example</summary>
-
-```java
-result = Models.discUsage()
-    .usedSize(1048576)
-    .totalSize(3145728)
-    .build();
-```
-</details>
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-GetDiscUsageRequest request = Models.getDiscUsageRequest()
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-DiscUsage result = api.cloudStorage().storage().getDiscUsage(request);
-
-// Result example:
-result = Models.discUsage()
-    .usedSize(1048576)
-    .totalSize(3145728)
-    .build();
-```
-
-</details>
+[**DiscUsage**](DiscUsage.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="getFileVersions"></a>
-## getFileVersions
+# **getFileVersions**
+> [FileVersions](FileVersions.md) getFileVersions(GetFileVersionsRequest request)
 
-Description: Get file versions
+Get file versions
 
-Returns: File versions.
-
-Method call example:
+### **GetFileVersionsRequest** Parameters
 ```java
-FileVersions result = api.cloudStorage().storage().getFileVersions(request);
+public GetFileVersionsRequest(
+    String path, 
+    String storageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **path** | **String**| File path e.g. &#39;/file.ext&#39; |
+ **storageName** | **String**| Storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: getFileVersions method request.
-
-See parameter model documentation at [GetFileVersionsRequest](GetFileVersionsRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-GetFileVersionsRequest request = Models.getFileVersionsRequest()
-    .path("/storage/path/to/file.ext")
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Description: File versions.
-
-Return type: [**FileVersions**](FileVersions.md)
-
-<details>
-    <summary>Result example</summary>
-
-```java
-result = Models.fileVersions()
-    .value(Arrays.<FileVersion>asList(
-        Models.fileVersion()
-            .versionId("d5afd857-8797-4ca0-b806-a03fdfc3831f")
-            .isLatest(true)
-            .name("file.ext")
-            .modifiedDate(Calendar.getInstance().getTime())
-            .size(4096)
-            .path("/storage/path/to")
-            .build()))
-    .build();
-```
-</details>
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-GetFileVersionsRequest request = Models.getFileVersionsRequest()
-    .path("/storage/path/to/file.ext")
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-FileVersions result = api.cloudStorage().storage().getFileVersions(request);
-
-// Result example:
-result = Models.fileVersions()
-    .value(Arrays.<FileVersion>asList(
-        Models.fileVersion()
-            .versionId("d5afd857-8797-4ca0-b806-a03fdfc3831f")
-            .isLatest(true)
-            .name("file.ext")
-            .modifiedDate(Calendar.getInstance().getTime())
-            .size(4096)
-            .path("/storage/path/to")
-            .build()))
-    .build();
-```
-
-</details>
+[**FileVersions**](FileVersions.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="objectExists"></a>
-## objectExists
+# **objectExists**
+> [ObjectExist](ObjectExist.md) objectExists(ObjectExistsRequest request)
 
-Description: Check if file or folder exists
+Check if file or folder exists
 
-Returns: Object exist result.
-
-Method call example:
+### **ObjectExistsRequest** Parameters
 ```java
-ObjectExist result = api.cloudStorage().storage().objectExists(request);
+public ObjectExistsRequest(
+    String path, 
+    String storageName, 
+    String versionId)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **path** | **String**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; |
+ **storageName** | **String**| Storage name | [optional]
+ **versionId** | **String**| File version ID | [optional]
 
-### Parameter: request
+### Return type
 
-Description: objectExists method request.
-
-See parameter model documentation at [ObjectExistsRequest](ObjectExistsRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-ObjectExistsRequest request = Models.objectExistsRequest()
-    .path("/storage/path/to/folder/or/file.ext")
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Description: Object exist result.
-
-Return type: [**ObjectExist**](ObjectExist.md)
-
-<details>
-    <summary>Result example</summary>
-
-```java
-result = Models.objectExist()
-    .exists(true)
-    .build();
-```
-</details>
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-ObjectExistsRequest request = Models.objectExistsRequest()
-    .path("/storage/path/to/folder/or/file.ext")
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-ObjectExist result = api.cloudStorage().storage().objectExists(request);
-
-// Result example:
-result = Models.objectExist()
-    .exists(true)
-    .build();
-```
-
-</details>
+[**ObjectExist**](ObjectExist.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="exists"></a>
-## exists
+# **exists**
+> [StorageExist](StorageExist.md) exists(StorageExistsRequest request)
 
-Description: Check if storage exists
+Check if storage exists
 
-Returns: Storage exist result.
-
-Method call example:
+### **StorageExistsRequest** Parameters
 ```java
-StorageExist result = api.cloudStorage().storage().exists(request);
+public StorageExistsRequest(
+    String storageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **storageName** | **String**| Storage name |
 
-### Parameter: request
+### Return type
 
-Description: exists method request.
-
-See parameter model documentation at [StorageExistsRequest](StorageExistsRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-StorageExistsRequest request = Models.storageExistsRequest()
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Description: Storage exist result.
-
-Return type: [**StorageExist**](StorageExist.md)
-
-<details>
-    <summary>Result example</summary>
-
-```java
-result = Models.storageExist()
-    .exists(true)
-    .build();
-```
-</details>
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-StorageExistsRequest request = Models.storageExistsRequest()
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-StorageExist result = api.cloudStorage().storage().exists(request);
-
-// Result example:
-result = Models.storageExist()
-    .exists(true)
-    .build();
-```
-
-</details>
+[**StorageExist**](StorageExist.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

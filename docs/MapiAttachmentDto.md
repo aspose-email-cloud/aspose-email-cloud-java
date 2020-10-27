@@ -1,7 +1,5 @@
+
 # MapiAttachmentDto
-
-Mapi attachment             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,13 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-MapiAttachmentDto mapiAttachmentDto = Models.mapiAttachmentDto()
-    .name("some-file.txt")
-    .dataBase64("U29tZSBmaWxlIHRleHQ=")
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

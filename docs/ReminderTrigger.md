@@ -1,7 +1,5 @@
+
 # ReminderTrigger
-
-Specifies when an alarm will trigger.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,13 +9,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-ReminderTrigger reminderTrigger = Models.reminderTrigger()
-    .dateTime(Calendar.getInstance().getTime())
-    .duration(600000000)
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

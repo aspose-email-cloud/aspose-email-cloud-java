@@ -1,324 +1,137 @@
-# FolderApi (EmailCloud.cloudStorage().folder())
+# FolderApi
 
-Folder operations controller
-
+            
 <a name="copyFolder"></a>
-## copyFolder
+# **copyFolder**
+> void copyFolder(CopyFolderRequest request)
 
-Description: Copy folder
+Copy folder
 
-
-Method call example:
+### **CopyFolderRequest** Parameters
 ```java
-api.cloudStorage().folder().copyFolder(request);
+public CopyFolderRequest(
+    String srcPath, 
+    String destPath, 
+    String srcStorageName, 
+    String destStorageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **srcPath** | **String**| Source folder path e.g. &#39;/src&#39; |
+ **destPath** | **String**| Destination folder path e.g. &#39;/dst&#39; |
+ **srcStorageName** | **String**| Source storage name | [optional]
+ **destStorageName** | **String**| Destination storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: copyFolder method request.
-
-See parameter model documentation at [CopyFolderRequest](CopyFolderRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-CopyFolderRequest request = Models.copyFolderRequest()
-    .srcPath("/storage/path/to/source/folder")
-    .destPath("/storage/path/to/destination/folder")
-    .srcStorageName("First Storage")
-    .destStorageName("Other Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-CopyFolderRequest request = Models.copyFolderRequest()
-    .srcPath("/storage/path/to/source/folder")
-    .destPath("/storage/path/to/destination/folder")
-    .srcStorageName("First Storage")
-    .destStorageName("Other Storage")
-    .build();
-
-// Call method:
-api.cloudStorage().folder().copyFolder(request);
-```
-
-</details>
+void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="createFolder"></a>
-## createFolder
+# **createFolder**
+> void createFolder(CreateFolderRequest request)
 
-Description: Create the folder
+Create the folder
 
-
-Method call example:
+### **CreateFolderRequest** Parameters
 ```java
-api.cloudStorage().folder().createFolder(request);
+public CreateFolderRequest(
+    String path, 
+    String storageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **path** | **String**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; |
+ **storageName** | **String**| Storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: createFolder method request.
-
-See parameter model documentation at [CreateFolderRequest](CreateFolderRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-CreateFolderRequest request = Models.createFolderRequest()
-    .path("/storage/path/to/new/folder")
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-CreateFolderRequest request = Models.createFolderRequest()
-    .path("/storage/path/to/new/folder")
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-api.cloudStorage().folder().createFolder(request);
-```
-
-</details>
+void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="deleteFolder"></a>
-## deleteFolder
+# **deleteFolder**
+> void deleteFolder(DeleteFolderRequest request)
 
-Description: Delete folder
+Delete folder
 
-
-Method call example:
+### **DeleteFolderRequest** Parameters
 ```java
-api.cloudStorage().folder().deleteFolder(request);
+public DeleteFolderRequest(
+    String path, 
+    String storageName, 
+    Boolean recursive)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **path** | **String**| Folder path e.g. &#39;/folder&#39; |
+ **storageName** | **String**| Storage name | [optional]
+ **recursive** | **Boolean**| Enable to delete folders, subfolders and files | [optional] [default to false]
 
-### Parameter: request
+### Return type
 
-Description: deleteFolder method request.
-
-See parameter model documentation at [DeleteFolderRequest](DeleteFolderRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-DeleteFolderRequest request = Models.deleteFolderRequest()
-    .path("/storage/path/to/folder")
-    .storageName("First Storage")
-    .recursive(true)
-    .build();
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-DeleteFolderRequest request = Models.deleteFolderRequest()
-    .path("/storage/path/to/folder")
-    .storageName("First Storage")
-    .recursive(true)
-    .build();
-
-// Call method:
-api.cloudStorage().folder().deleteFolder(request);
-```
-
-</details>
+void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="getFilesList"></a>
-## getFilesList
+# **getFilesList**
+> [FilesList](FilesList.md) getFilesList(GetFilesListRequest request)
 
-Description: Get all files and folders within a folder
+Get all files and folders within a folder
 
-Returns: Returns all files and folders contained by the folder.
-
-Method call example:
+### **GetFilesListRequest** Parameters
 ```java
-FilesList result = api.cloudStorage().folder().getFilesList(request);
+public GetFilesListRequest(
+    String path, 
+    String storageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **path** | **String**| Folder path e.g. &#39;/folder&#39; |
+ **storageName** | **String**| Storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: getFilesList method request.
-
-See parameter model documentation at [GetFilesListRequest](GetFilesListRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-GetFilesListRequest request = Models.getFilesListRequest()
-    .path("/storage/path/to/folder")
-    .storageName("First Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Description: Returns all files and folders contained by the folder.
-
-Return type: [**FilesList**](FilesList.md)
-
-<details>
-    <summary>Result example</summary>
-
-```java
-result = Models.filesList()
-    .value(Arrays.<StorageFile>asList(
-        Models.storageFile()
-            .name("file.ext")
-            .modifiedDate(Calendar.getInstance().getTime())
-            .size(1024)
-            .path("/path/to/file/on/storage")
-            .build()))
-    .build();
-```
-</details>
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-GetFilesListRequest request = Models.getFilesListRequest()
-    .path("/storage/path/to/folder")
-    .storageName("First Storage")
-    .build();
-
-// Call method:
-FilesList result = api.cloudStorage().folder().getFilesList(request);
-
-// Result example:
-result = Models.filesList()
-    .value(Arrays.<StorageFile>asList(
-        Models.storageFile()
-            .name("file.ext")
-            .modifiedDate(Calendar.getInstance().getTime())
-            .size(1024)
-            .path("/path/to/file/on/storage")
-            .build()))
-    .build();
-```
-
-</details>
+[**FilesList**](FilesList.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+            
 <a name="moveFolder"></a>
-## moveFolder
+# **moveFolder**
+> void moveFolder(MoveFolderRequest request)
 
-Description: Move folder
+Move folder
 
-
-Method call example:
+### **MoveFolderRequest** Parameters
 ```java
-api.cloudStorage().folder().moveFolder(request);
+public MoveFolderRequest(
+    String srcPath, 
+    String destPath, 
+    String srcStorageName, 
+    String destStorageName)
 ```
 
+Name | Type | Description | Notes
+---- | ---- | ----------- | -----
+ **srcPath** | **String**| Folder path to move e.g. &#39;/folder&#39; |
+ **destPath** | **String**| Destination folder path to move to e.g &#39;/dst&#39; |
+ **srcStorageName** | **String**| Source storage name | [optional]
+ **destStorageName** | **String**| Destination storage name | [optional]
 
-### Parameter: request
+### Return type
 
-Description: moveFolder method request.
-
-See parameter model documentation at [MoveFolderRequest](MoveFolderRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-
-```java
-MoveFolderRequest request = Models.moveFolderRequest()
-    .srcPath("/storage/path/to/source/folder")
-    .destPath("/storage/path/to/destination/folder")
-    .srcStorageName("First Storage")
-    .destStorageName("Other Storage")
-    .build();
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```java
-EmailCloud api = new EmailCloud(appKey, appSid);
-
-// Prepare parameters:
-MoveFolderRequest request = Models.moveFolderRequest()
-    .srcPath("/storage/path/to/source/folder")
-    .destPath("/storage/path/to/destination/folder")
-    .srcStorageName("First Storage")
-    .destStorageName("Other Storage")
-    .build();
-
-// Call method:
-api.cloudStorage().folder().moveFolder(request);
-```
-
-</details>
+void (empty response body)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

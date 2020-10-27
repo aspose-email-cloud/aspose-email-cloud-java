@@ -53,6 +53,7 @@ public class MapiCalendarApi
         this.apiInvoker = apiInvoker;
     }
 
+            
     /**
      * Converts MAPI calendar model to CalendarDto model.             
      * 
@@ -94,6 +95,7 @@ public class MapiCalendarApi
       }
     }
 
+            
     /**
      * Converts MAPI calendar model to specified format and returns as file.             
      * 
@@ -130,6 +132,7 @@ public class MapiCalendarApi
       }
     }
 
+            
     /**
      * Converts calendar file to a MAPI model representation.             
      * 
@@ -175,6 +178,7 @@ public class MapiCalendarApi
       }
     }
 
+            
     /**
      * Get MAPI calendar document.             
      * 
@@ -220,6 +224,7 @@ public class MapiCalendarApi
       }
     }
 
+            
     /**
      * Save MAPI Calendar to storage.             
      * 
@@ -252,4 +257,6 @@ public class MapiCalendarApi
         throw new ApiException(400, exception.getMessage());
       }
     }
+
 }
+

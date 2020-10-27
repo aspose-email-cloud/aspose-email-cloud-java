@@ -53,6 +53,7 @@ public class StorageApi
         this.apiInvoker = apiInvoker;
     }
 
+            
     /**
      * Get disc usage
      * 
@@ -92,6 +93,7 @@ public class StorageApi
       }
     }
 
+            
     /**
      * Get file versions
      * 
@@ -136,6 +138,7 @@ public class StorageApi
       }
     }
 
+            
     /**
      * Check if file or folder exists
      * 
@@ -181,6 +184,7 @@ public class StorageApi
       }
     }
 
+            
     /**
      * Check if storage exists
      * 
@@ -223,4 +227,6 @@ public class StorageApi
         throw new ApiException(400, exception.getMessage());
       }
     }
+
 }
+

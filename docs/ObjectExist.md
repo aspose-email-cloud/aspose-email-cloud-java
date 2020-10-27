@@ -1,7 +1,5 @@
+
 # ObjectExist
-
-Object exists
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,12 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-ObjectExist objectExist = Models.objectExist()
-    .exists(true)
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

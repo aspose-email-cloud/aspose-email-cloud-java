@@ -1,7 +1,5 @@
+
 # PostalAddress
-
-A postal address             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -19,21 +17,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-PostalAddress postalAddress = Models.postalAddress()
-    .address("221b")
-    .category(Models.enumWithCustom<PostalAddressCategory>()
-        
-        .build())
-    .city("London")
-    .country("United Kingdom")
-    .isMailingAddress(true)
-    .postalCode("NW1 6XE")
-    .preferred(true)
-    .street("Baker St")
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+

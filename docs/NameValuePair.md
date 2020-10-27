@@ -1,7 +1,5 @@
+
 # NameValuePair
-
-Name-Value property             
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,13 +8,6 @@ Name | Type | Description | Notes
 
 
 
-## Example
-```java
-NameValuePair nameValuePair = Models.nameValuePair()
-    .name("name")
-    .value("value")
-    .build();
-```
-
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+
