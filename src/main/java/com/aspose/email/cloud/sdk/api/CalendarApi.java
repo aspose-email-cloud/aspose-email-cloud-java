@@ -53,7 +53,6 @@ public class CalendarApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Convert iCalendar to AlternateView             
      * 
@@ -95,7 +94,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Converts calendar model to specified format and returns as file.             
      * 
@@ -132,7 +130,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Converts CalendarDto to MapiCalendarDto.             
      * 
@@ -174,7 +171,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Converts calendar document to specified format and returns as file.             
      * 
@@ -220,7 +216,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Converts calendar document to a model representation.             
      * 
@@ -266,7 +261,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Get calendar file from storage.             
      * 
@@ -312,7 +306,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Get iCalendar from storage as AlternateView             
      * 
@@ -364,7 +357,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Converts calendar document from storage to specified format and returns as file.             
      * 
@@ -410,7 +402,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Get iCalendar list from storage folder.             
      * 
@@ -457,7 +448,6 @@ public class CalendarApi
       }
     }
 
-            
     /**
      * Save iCalendar             
      * 
@@ -490,6 +480,4 @@ public class CalendarApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }
-

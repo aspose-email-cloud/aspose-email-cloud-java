@@ -3,7 +3,6 @@ package com.aspose.email.cloud.sdk.api;
 import com.aspose.email.cloud.sdk.api.utils.TestBase;
 import com.aspose.email.cloud.sdk.invoker.ApiException;
 import com.aspose.email.cloud.sdk.model.*;
-import com.migcomponents.migbase64.Base64;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.Test;
 

@@ -53,7 +53,6 @@ public class FolderApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Copy folder
      * 
@@ -96,7 +95,6 @@ public class FolderApi
       }
     }
 
-            
     /**
      * Create the folder
      * 
@@ -133,7 +131,6 @@ public class FolderApi
       }
     }
 
-            
     /**
      * Delete folder
      * 
@@ -171,7 +168,6 @@ public class FolderApi
       }
     }
 
-            
     /**
      * Get all files and folders within a folder
      * 
@@ -216,7 +212,6 @@ public class FolderApi
       }
     }
 
-            
     /**
      * Move folder
      * 
@@ -258,6 +253,4 @@ public class FolderApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }
-

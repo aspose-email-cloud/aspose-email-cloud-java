@@ -1,5 +1,7 @@
-
 # RecurrencePatternDto
+
+iCalendar recurrence pattern.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -11,6 +13,13 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+RecurrencePatternDto recurrencePatternDto = Models.recurrencePatternDto()
+    .interval(-1)
+    .weekStart("Monday")
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

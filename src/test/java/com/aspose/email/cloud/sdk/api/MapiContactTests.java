@@ -8,19 +8,26 @@ import java.io.UnsupportedEncodingException;
 import java.util.UUID;
 
 public class MapiContactTests extends TestBase {
-    private static final MapiContactDto mapiContact = new MapiContactDto()
-        .electronicAddresses(new MapiContactElectronicAddressPropertySetDto()
-            .defaultEmailAddress(new MapiContactElectronicAddressDto()
-                .emailAddress("email@aspose.com")))
-        .nameInfo(new MapiContactNamePropertySetDto()
+    private static final MapiContactDto mapiContact = Models.mapiContactDto()
+        .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+            .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+                .emailAddress("email@aspose.com")
+                .build())
+            .build())
+        .nameInfo(Models.mapiContactNamePropertySetDto()
             .givenName("Alex")
-            .surname("Thomas"))
-        .personalInfo(new MapiContactPersonalInfoPropertySetDto()
-            .businessHomePage("www.aspose.com"))
-        .professionalInfo(new MapiContactProfessionalPropertySetDto()
-            .profession("GENERAL DIRECTOR"))
-        .telephones(new MapiContactTelephonePropertySetDto()
-            .primaryTelephoneNumber("+49 211 4247 21"));
+            .surname("Thomas")
+            .build())
+        .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+            .businessHomePage("www.aspose.com")
+            .build())
+        .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+            .profession("GENERAL DIRECTOR")
+            .build())
+        .telephones(Models.mapiContactTelephonePropertySetDto()
+            .primaryTelephoneNumber("+49 211 4247 21")
+            .build())
+        .build();
 
     @Test(groups = {"pipeline"})
     public void ModelToContactDtoTest() {
@@ -36,7 +43,11 @@ public class MapiContactTests extends TestBase {
         String vcardString = new String(vcardBytes, "UTF-8");
         assert vcardString.contains(mapiContact.getNameInfo().getGivenName());
         MapiContactDto mapiContactConverted =
-            api.mapi().contact().fromFile(new MapiContactFromFileRequest("VCard", vcardBytes));
+            api.mapi().contact().fromFile(
+                Models.mapiContactFromFileRequest()
+                    .format("VCard")
+                    .file(vcardBytes)
+                    .build());
         assert mapiContact.getNameInfo().getSurname()
             .equals(mapiContactConverted.getNameInfo().getSurname());
     }

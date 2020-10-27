@@ -48,7 +48,11 @@ public class MapiCalendarTests extends TestBase {
     @Test(groups = {"pipeline"})
     public void ModelToFileTest() throws UnsupportedEncodingException {
         byte[] ics =
-            api.mapi().calendar().asFile(new MapiCalendarAsFileRequest("Ics", mapiCalendar));
+            api.mapi().calendar().asFile(
+                Models.mapiCalendarAsFileRequest()
+                    .format("Ics")
+                    .value(mapiCalendar)
+                    .build());
         String calendarContent = new String(ics, "UTF-8");
         assert calendarContent.contains(mapiCalendar.getLocation());
 

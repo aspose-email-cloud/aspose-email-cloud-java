@@ -1,63 +1,207 @@
-# ClientFolderApi
+# ClientFolderApi (EmailCloud.client().folder())
 
-            
+Email client folder operations.
+
 <a name="create"></a>
-# create
-> void create([ClientFolderCreateRequest](ClientFolderCreateRequest.md) request)
+## create
 
-Create new folder in email account             
+Description: Create new folder in email account             
 
-### request Parameter
+
+Method call example:
+```java
+api.client().folder().create(request);
+```
+
+### Parameter: request
+
+Description: Create folder request
 
 See parameter model documentation at [ClientFolderCreateRequest](ClientFolderCreateRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+ClientFolderCreateRequest request = Models.clientFolderCreateRequest()
+    .parentFolder("INBOX/SubFolder/ParentFolder")
+    .folderName("NewFolder")
+    .accountLocation(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .build();
+```
 
-void (empty response body)
+</details>
+
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientFolderCreateRequest request = Models.clientFolderCreateRequest()
+    .parentFolder("INBOX/SubFolder/ParentFolder")
+    .folderName("NewFolder")
+    .accountLocation(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .build();
+
+// Call method:
+api.client().folder().create(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="delete"></a>
-# delete
-> void delete([ClientFolderDeleteRequest](ClientFolderDeleteRequest.md) request)
+## delete
 
-Delete a folder in email account             
+Description: Delete a folder in email account             
 
-### request Parameter
+
+Method call example:
+```java
+api.client().folder().delete(request);
+```
+
+### Parameter: request
+
+Description: Delete folder request
 
 See parameter model documentation at [ClientFolderDeleteRequest](ClientFolderDeleteRequest.md)
 
-### Return type
-
-void (empty response body)
-
-[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
-<a name="getList"></a>
-# **getList**
-> [MailServerFolderList](MailServerFolderList.md) getList(ClientFolderGetListRequest request)
-
-Get folders list in email account             
-
-### **ClientFolderGetListRequest** Parameters
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```java
-public ClientFolderGetListRequest(
-    String account, 
-    String storage, 
-    String accountStorageFolder, 
-    String parentFolder)
+ClientFolderDeleteRequest request = Models.clientFolderDeleteRequest()
+    .folder("INBOX/SubFolder/FolderToDelete")
+    .accountLocation(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .build();
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **account** | **String**| Email account |
- **storage** | **String**| Storage name where account file located | [optional]
- **accountStorageFolder** | **String**| Folder in storage where account file located | [optional]
- **parentFolder** | **String**| Folder in which subfolders should be listed | [optional]
+</details>
 
-### Return type
 
-[**MailServerFolderList**](MailServerFolderList.md)
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientFolderDeleteRequest request = Models.clientFolderDeleteRequest()
+    .folder("INBOX/SubFolder/FolderToDelete")
+    .accountLocation(Models.storageFileLocation()
+        .fileName("email.account")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .build();
+
+// Call method:
+api.client().folder().delete(request);
+```
+
+</details>
+
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
+<a name="getList"></a>
+## getList
+
+Description: Get folders list in email account             
+
+Returns: Folders list
+
+Method call example:
+```java
+MailServerFolderList result = api.client().folder().getList(request);
+```
+
+
+### Parameter: request
+
+Description: getList method request.
+
+See parameter model documentation at [ClientFolderGetListRequest](ClientFolderGetListRequest.md).
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+ClientFolderGetListRequest request = Models.clientFolderGetListRequest()
+    .account("email.multi.account")
+    .storage("First Storage")
+    .accountStorageFolder("email/account/location/on/storage")
+    .parentFolder("INBOX")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Folders list
+
+Return type: [**MailServerFolderList**](MailServerFolderList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = ;
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+ClientFolderGetListRequest request = Models.clientFolderGetListRequest()
+    .account("email.multi.account")
+    .storage("First Storage")
+    .accountStorageFolder("email/account/location/on/storage")
+    .parentFolder("INBOX")
+    .build();
+
+// Call method:
+MailServerFolderList result = api.client().folder().getList(request);
+
+// Result example:
+result = ;
+
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 

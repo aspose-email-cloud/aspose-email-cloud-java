@@ -1,104 +1,600 @@
-# MapiContactApi
+# MapiContactApi (EmailCloud.mapi().contact())
 
-            
+MAPI contact operations
+
 <a name="asContactDto"></a>
-# asContactDto
-> [ContactDto](ContactDto.md) asContactDto([MapiContactDto](MapiContactDto.md) mapiContactDto)
+## asContactDto
 
-Converts MAPI contact model to ContactDto model.             
+Description: Converts MAPI contact model to ContactDto model.             
 
-### mapiContactDto Parameter
+Returns: Contact model.
+
+Method call example:
+```java
+ContactDto result = api.mapi().contact().asContactDto(mapiContactDto);
+```
+
+### Parameter: mapiContactDto
+
+Description: MAPI contact model to convert.
 
 See parameter model documentation at [MapiContactDto](MapiContactDto.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+MapiContactDto mapiContactDto = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+```
 
-[**ContactDto**](ContactDto.md)
+</details>
+
+
+### Result
+
+Description: Contact model.
+
+Return type: [**ContactDto**](ContactDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.contactDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("attachment.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .displayName("Alex Thomas")
+    .emailAddresses(Arrays.<EmailAddress>asList(
+        Models.emailAddress()
+            .category(Models.enumWithCustomOfEmailAddressCategory()
+                .value("Custom")
+                .description("Partners")
+                .build())
+            .displayName("Alex Thomas Partners")
+            .preferred(true)
+            .address("email@aspose.com")
+            .build()))
+    .gender("Male")
+    .givenName("Alex")
+    .phoneNumbers(Arrays.<PhoneNumber>asList(
+        Models.phoneNumber()
+            .category(Models.enumWithCustomOfPhoneNumberCategory()
+                .value("Office")
+                .build())
+            .number("+49 211 4247 21")
+            .preferred(true)
+            .build()))
+    .profession("GENERAL DIRECTOR")
+    .surname("Thomas")
+    .urls(Arrays.<Url>asList(
+        Models.url()
+            .category(Models.enumWithCustomOfUrlCategory()
+                .value("Work")
+                .build())
+            .preferred(true)
+            .href("www.aspose.com")
+            .build()))
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MapiContactDto mapiContactDto = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+
+// Call method:
+ContactDto result = api.mapi().contact().asContactDto(mapiContactDto);
+
+// Result example:
+result = Models.contactDto()
+    .attachments(Arrays.<Attachment>asList(
+        Models.attachment()
+            .name("attachment.txt")
+            .base64Data("U29tZSBmaWxlIGNvbnRlbnQ=")
+            .build()))
+    .displayName("Alex Thomas")
+    .emailAddresses(Arrays.<EmailAddress>asList(
+        Models.emailAddress()
+            .category(Models.enumWithCustomOfEmailAddressCategory()
+                .value("Custom")
+                .description("Partners")
+                .build())
+            .displayName("Alex Thomas Partners")
+            .preferred(true)
+            .address("email@aspose.com")
+            .build()))
+    .gender("Male")
+    .givenName("Alex")
+    .phoneNumbers(Arrays.<PhoneNumber>asList(
+        Models.phoneNumber()
+            .category(Models.enumWithCustomOfPhoneNumberCategory()
+                .value("Office")
+                .build())
+            .number("+49 211 4247 21")
+            .preferred(true)
+            .build()))
+    .profession("GENERAL DIRECTOR")
+    .surname("Thomas")
+    .urls(Arrays.<Url>asList(
+        Models.url()
+            .category(Models.enumWithCustomOfUrlCategory()
+                .value("Work")
+                .build())
+            .preferred(true)
+            .href("www.aspose.com")
+            .build()))
+    .build();
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="asFile"></a>
-# asFile
-> byte[] asFile([MapiContactAsFileRequest](MapiContactAsFileRequest.md) request)
+## asFile
 
-Converts MAPI contact model to specified format and returns as file.             
+Description: Converts MAPI contact model to specified format and returns as file.             
 
-### request Parameter
+Returns: File stream in specified format.
+
+Method call example:
+```java
+byte[] result = api.mapi().contact().asFile(request);
+```
+
+### Parameter: request
+
+Description: MAPI contact model to convert.
 
 See parameter model documentation at [MapiContactAsFileRequest](MapiContactAsFileRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+MapiContactAsFileRequest request = Models.mapiContactAsFileRequest()
+    .format("Msg")
+    .value(Models.mapiContactDto()
+        .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+            .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+                .emailAddress("email@aspose.com")
+                .build())
+            .build())
+        .nameInfo(Models.mapiContactNamePropertySetDto()
+            .givenName("Alex")
+            .surname("Thomas")
+            .build())
+        .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+            .businessHomePage("www.aspose.com")
+            .build())
+        .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+            .profession("GENERAL DIRECTOR")
+            .build())
+        .telephones(Models.mapiContactTelephonePropertySetDto()
+            .primaryTelephoneNumber("+49 211 4247 21")
+            .build())
+        .build())
+    .build();
+```
 
-**byte[]**
+</details>
+
+
+### Result
+
+Description: File stream in specified format.
+
+Return type: **byte[]**
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MapiContactAsFileRequest request = Models.mapiContactAsFileRequest()
+    .format("Msg")
+    .value(Models.mapiContactDto()
+        .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+            .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+                .emailAddress("email@aspose.com")
+                .build())
+            .build())
+        .nameInfo(Models.mapiContactNamePropertySetDto()
+            .givenName("Alex")
+            .surname("Thomas")
+            .build())
+        .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+            .businessHomePage("www.aspose.com")
+            .build())
+        .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+            .profession("GENERAL DIRECTOR")
+            .build())
+        .telephones(Models.mapiContactTelephonePropertySetDto()
+            .primaryTelephoneNumber("+49 211 4247 21")
+            .build())
+        .build())
+    .build();
+
+// Call method:
+byte[] result = api.mapi().contact().asFile(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-            
 <a name="fromFile"></a>
-# **fromFile**
-> [MapiContactDto](MapiContactDto.md) fromFile(MapiContactFromFileRequest request)
+## fromFile
 
-Converts contact file to a MAPI model representation.             
+Description: Converts contact file to a MAPI model representation.             
 
-### **MapiContactFromFileRequest** Parameters
+Returns: MAPI model
+
+Method call example:
 ```java
-public MapiContactFromFileRequest(
-    String format, 
-    byte[] file)
+MapiContactDto result = api.mapi().contact().fromFile(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **format** | **String**| File format Enum, available values: VCard, WebDav, Msg |
- **file** | **byte[]**| File to convert |
 
-### Return type
+### Parameter: request
 
-[**MapiContactDto**](MapiContactDto.md)
+Description: fromFile method request.
+
+See parameter model documentation at [MapiContactFromFileRequest](MapiContactFromFileRequest.md).
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+MapiContactFromFileRequest request = Models.mapiContactFromFileRequest()
+    .format("Msg")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/contact.msg")))
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: MAPI model
+
+Return type: [**MapiContactDto**](MapiContactDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MapiContactFromFileRequest request = Models.mapiContactFromFileRequest()
+    .format("Msg")
+    .file(IOUtils.toByteArray(new FileInputStream("/path/to/contact.msg")))
+    .build();
+
+// Call method:
+MapiContactDto result = api.mapi().contact().fromFile(request);
+
+// Result example:
+result = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="get"></a>
-# **get**
-> [MapiContactDto](MapiContactDto.md) get(MapiContactGetRequest request)
+## get
 
-Get MAPI contact document.             
+Description: Get MAPI contact document.             
 
-### **MapiContactGetRequest** Parameters
+Returns: Contact model.
+
+Method call example:
 ```java
-public MapiContactGetRequest(
-    String format, 
-    String fileName, 
-    String folder, 
-    String storage)
+MapiContactDto result = api.mapi().contact().get(request);
 ```
 
-Name | Type | Description | Notes
----- | ---- | ----------- | -----
- **format** | **String**| Contact document format. Enum, available values: VCard, WebDav, Msg |
- **fileName** | **String**| Contact document file name. |
- **folder** | **String**| Path to folder in storage. | [optional]
- **storage** | **String**| Storage name. | [optional]
 
-### Return type
+### Parameter: request
 
-[**MapiContactDto**](MapiContactDto.md)
+Description: get method request.
+
+See parameter model documentation at [MapiContactGetRequest](MapiContactGetRequest.md).
+
+<details>
+    <summary>Parameter initialization example:</summary>
+
+```java
+MapiContactGetRequest request = Models.mapiContactGetRequest()
+    .format("VCard")
+    .fileName("contact.vcf")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .build();
+```
+
+</details>
+
+### Result
+
+Description: Contact model.
+
+Return type: [**MapiContactDto**](MapiContactDto.md)
+
+<details>
+    <summary>Result example</summary>
+
+```java
+result = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MapiContactGetRequest request = Models.mapiContactGetRequest()
+    .format("VCard")
+    .fileName("contact.vcf")
+    .folder("folder/on/storage")
+    .storage("First Storage")
+    .build();
+
+// Call method:
+MapiContactDto result = api.mapi().contact().get(request);
+
+// Result example:
+result = Models.mapiContactDto()
+    .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+        .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+            .emailAddress("email@aspose.com")
+            .build())
+        .build())
+    .nameInfo(Models.mapiContactNamePropertySetDto()
+        .givenName("Alex")
+        .surname("Thomas")
+        .build())
+    .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+        .businessHomePage("www.aspose.com")
+        .build())
+    .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+        .profession("GENERAL DIRECTOR")
+        .build())
+    .telephones(Models.mapiContactTelephonePropertySetDto()
+        .primaryTelephoneNumber("+49 211 4247 21")
+        .build())
+    .build();
+
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
-            
 <a name="save"></a>
-# save
-> void save([MapiContactSaveRequest](MapiContactSaveRequest.md) request)
+## save
 
-Save MAPI Contact to storage.             
+Description: Save MAPI Contact to storage.             
 
-### request Parameter
+
+Method call example:
+```java
+api.mapi().contact().save(request);
+```
+
+### Parameter: request
+
+Description: Create/Update contact request.
 
 See parameter model documentation at [MapiContactSaveRequest](MapiContactSaveRequest.md)
 
-### Return type
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```java
+MapiContactSaveRequest request = Models.mapiContactSaveRequest()
+    .format("Msg")
+    .storageFile(Models.storageFileLocation()
+        .fileName("contact.msg")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.mapiContactDto()
+        .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+            .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+                .emailAddress("email@aspose.com")
+                .build())
+            .build())
+        .nameInfo(Models.mapiContactNamePropertySetDto()
+            .givenName("Alex")
+            .surname("Thomas")
+            .build())
+        .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+            .businessHomePage("www.aspose.com")
+            .build())
+        .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+            .profession("GENERAL DIRECTOR")
+            .build())
+        .telephones(Models.mapiContactTelephonePropertySetDto()
+            .primaryTelephoneNumber("+49 211 4247 21")
+            .build())
+        .build())
+    .build();
+```
 
-void (empty response body)
+</details>
+
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```java
+EmailCloud api = new EmailCloud(appKey, appSid);
+
+// Prepare parameters:
+MapiContactSaveRequest request = Models.mapiContactSaveRequest()
+    .format("Msg")
+    .storageFile(Models.storageFileLocation()
+        .fileName("contact.msg")
+        .storage("First Storage")
+        .folderPath("file/location/folder/on/storage")
+        .build())
+    .value(Models.mapiContactDto()
+        .electronicAddresses(Models.mapiContactElectronicAddressPropertySetDto()
+            .defaultEmailAddress(Models.mapiContactElectronicAddressDto()
+                .emailAddress("email@aspose.com")
+                .build())
+            .build())
+        .nameInfo(Models.mapiContactNamePropertySetDto()
+            .givenName("Alex")
+            .surname("Thomas")
+            .build())
+        .personalInfo(Models.mapiContactPersonalInfoPropertySetDto()
+            .businessHomePage("www.aspose.com")
+            .build())
+        .professionalInfo(Models.mapiContactProfessionalPropertySetDto()
+            .profession("GENERAL DIRECTOR")
+            .build())
+        .telephones(Models.mapiContactTelephonePropertySetDto()
+            .primaryTelephoneNumber("+49 211 4247 21")
+            .build())
+        .build())
+    .build();
+
+// Call method:
+api.mapi().contact().save(request);
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to API README]](README.md)

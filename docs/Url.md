@@ -1,5 +1,7 @@
-
 # Url
+
+Url and its category.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,6 +11,16 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+Url url = Models.url()
+    .category(Models.enumWithCustomOfUrlCategory()
+        .value("Work")
+        .build())
+    .preferred(true)
+    .href("https://products.aspose.cloud/email")
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

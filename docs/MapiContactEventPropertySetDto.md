@@ -1,5 +1,7 @@
-
 # MapiContactEventPropertySetDto
+
+Specify events associated with a contact.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,4 +12,3 @@ Name | Type | Description | Notes
 
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-
