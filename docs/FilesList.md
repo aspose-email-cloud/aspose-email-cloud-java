@@ -1,5 +1,7 @@
-
 # FilesList
+
+Files list
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,6 +9,18 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+FilesList filesList = Models.filesList()
+    .value(Arrays.<StorageFile>asList(
+        Models.storageFile()
+            .name("file.ext")
+            .modifiedDate(Calendar.getInstance().getTime())
+            .size(1024)
+            .path("/path/to/file/on/storage")
+            .build()))
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

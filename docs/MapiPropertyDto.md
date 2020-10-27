@@ -1,5 +1,7 @@
-
 # MapiPropertyDto
+
+Mapi property             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +10,14 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+MapiPropertyDto mapiPropertyDto = Models.mapiPropertyDto()
+    .descriptor(Models.mapiKnownPropertyDescriptor()
+        .name("DisplayName")
+        .build())
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

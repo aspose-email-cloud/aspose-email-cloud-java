@@ -1,5 +1,7 @@
-
 # AiNameWeightedVariants
+
+Name variants             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +10,20 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+AiNameWeightedVariants aiNameWeightedVariants = Models.aiNameWeightedVariants()
+    .names(Arrays.<AiNameWeighted>asList(
+        Models.aiNameWeighted()
+            .name("J. Cane")
+            .score(1)
+            .build(),
+        Models.aiNameWeighted()
+            .name("Mr. Cane")
+            .score(0.75)
+            .build()))
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-

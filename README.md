@@ -35,7 +35,7 @@ See [Release notes](https://docs.aspose.cloud/email/aspose-email-cloud-20-10-rel
 ## How to use the SDK?
 The complete source code is available in the [GIT repository](https://github.com/aspose-email-cloud/aspose-email-cloud-java/tree/master/src/main/java/com/aspose/email/cloud/sdk).
 
-Use [SDK tutorials](https://docs.aspose.cloud/display/emailcloud/SDK+Tutorials).
+Use [SDK tutorials](https://docs.aspose.cloud/email/sdk-tutorials/).
 
 SDK reference documentation is available in [this README](https://github.com/aspose-email-cloud/aspose-email-cloud-java/blob/master/docs/README.md).
 
@@ -61,7 +61,7 @@ Then, add a dependency:
 </dependency>
 ```
 
-See more details about SDK installation in this tutorial: [SDK setup](https://docs.aspose.cloud/display/emailcloud/SDK+setup).
+See more details about SDK installation in this tutorial: [SDK setup](https://docs.aspose.cloud/email/sdk-setup/).
 
 ### Usage examples
 To use the API, you should create an EmailCloud object:
@@ -80,4 +80,4 @@ ContactDto contact = result.getValue().get(0);
 assert contact.getDisplayName().contains("Parsed Display Name");
 ```
 
-[Product Page](https://products.aspose.cloud/email/java) | [Documentation](https://docs.aspose.cloud/display/Emailcloud/Home) | [Demo](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.cloud/email/) | [Blog](https://blog.aspose.cloud/category/email/) | [Free support](https://forum.aspose.cloud/c/email) | [Free trial](https://dashboard.aspose.cloud/#/apps)
+[Product Page](https://products.aspose.cloud/email/java) | [Documentation](https://docs.aspose.cloud/email/) | [Demo](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.cloud/email/) | [Blog](https://blog.aspose.cloud/category/email/) | [Free support](https://forum.aspose.cloud/c/email) | [Free trial](https://dashboard.aspose.cloud/#/apps)

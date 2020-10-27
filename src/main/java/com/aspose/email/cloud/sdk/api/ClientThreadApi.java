@@ -53,7 +53,6 @@ public class ClientThreadApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Delete thread by id. All messages from thread will also be deleted.             
      * 
@@ -87,7 +86,6 @@ public class ClientThreadApi
       }
     }
 
-            
     /**
      * Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
      * 
@@ -140,7 +138,6 @@ public class ClientThreadApi
       }
     }
 
-            
     /**
      * Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
      * 
@@ -192,7 +189,6 @@ public class ClientThreadApi
       }
     }
 
-            
     /**
      * Move thread to another folder.             
      * 
@@ -226,7 +222,6 @@ public class ClientThreadApi
       }
     }
 
-            
     /**
      * Mark all messages in thread as read or unread.             
      * 
@@ -259,6 +254,4 @@ public class ClientThreadApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }
-

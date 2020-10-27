@@ -53,7 +53,6 @@ public class DisposableEmailApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Check email address is disposable             
      * 
@@ -96,6 +95,4 @@ public class DisposableEmailApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }
-

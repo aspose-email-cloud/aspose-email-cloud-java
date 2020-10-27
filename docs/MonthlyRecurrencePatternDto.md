@@ -1,5 +1,7 @@
-
 # MonthlyRecurrencePatternDto
+
+Monthly recurrence pattern.             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -7,10 +9,20 @@ Name | Type | Description | Notes
 **startOffset** | **Integer** | Start offset.              | 
 **startPosition** | **String** | Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last | 
 
-
 ## Parent class
 
 See: [RecurrencePatternDto](RecurrencePatternDto.md)
 
-[[Back to Model list]](Models.md) [[Back to API README]](README.md)
 
+## Example
+```java
+MonthlyRecurrencePatternDto monthlyRecurrencePatternDto = Models.monthlyRecurrencePatternDto()
+    .startDay("Monday")
+    .startPosition("First")
+    .interval(-1)
+    .weekStart("Monday")
+    .build();
+```
+
+
+[[Back to Model list]](Models.md) [[Back to API README]](README.md)

@@ -53,7 +53,6 @@ public class EmailApi
         this.apiInvoker = apiInvoker;
     }
 
-            
     /**
      * Converts Email model to specified format and returns as file.             
      * 
@@ -90,7 +89,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Converts EmailDto to MapiMessageDto.             
      * 
@@ -132,7 +130,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Converts email document to specified format and returns as file             
      * 
@@ -183,7 +180,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Converts email document to a model representation             
      * 
@@ -234,7 +230,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Get email document from storage.             
      * 
@@ -285,7 +280,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Converts email document from storage to specified format and returns as file             
      * 
@@ -331,7 +325,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Get email list from storage folder.             
      * 
@@ -379,7 +372,6 @@ public class EmailApi
       }
     }
 
-            
     /**
      * Save email document to storage.             
      * 
@@ -412,6 +404,4 @@ public class EmailApi
         throw new ApiException(400, exception.getMessage());
       }
     }
-
 }
-

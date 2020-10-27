@@ -1,5 +1,7 @@
-
 # AiNameExtracted
+
+Extracted name             
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -8,6 +10,21 @@ Name | Type | Description | Notes
 
 
 
+## Example
+```java
+AiNameExtracted aiNameExtracted = Models.aiNameExtracted()
+    .name(Arrays.<AiNameExtractedComponent>asList(
+        Models.aiNameExtractedComponent()
+            .category("Surname")
+            .value("Cane")
+            .build(),
+        Models.aiNameExtractedComponent()
+            .category("SomeName")
+            .value("John")
+            .build()))
+    .score(0.5)
+    .build();
+```
+
 
 [[Back to Model list]](Models.md) [[Back to API README]](README.md)
-
