@@ -40,8 +40,8 @@ public class TestBase {
     @BeforeClass(alwaysRun = true)
     public void oneTimeSetUp() throws Exception {
         Configuration configuration = new Configuration();
-        configuration.AppKey = System.getenv("appKey");
-        configuration.AppSid = System.getenv("appSid");
+        configuration.ClientSecret = System.getenv("clientSecret");
+        configuration.ClientId = System.getenv("clientId");
         configuration.setApiBaseUrl(System.getenv("apiBaseUrl"));
         configuration.setApiVersion("v4.0");
         configuration.setAuthUrl(System.getenv("authUrl"));

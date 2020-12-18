@@ -18,8 +18,8 @@ jobs:
     - name: Run tests
       run: mvn test -Dgroups=pipeline --batch-mode
       env:
-        appSid: ${{secrets.appSidProd}}
-        appKey: ${{secrets.appKeyProd}}
+        clientId: ${{secrets.appSidProd}}
+        clientSecret: ${{secrets.appKeyProd}}
         apiBaseUrl: "https://api.aspose.cloud"
     - name: Pack
       run: |
