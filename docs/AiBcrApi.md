@@ -95,7 +95,7 @@ result = Models.contactList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiBcrParseRequest request = Models.aiBcrParseRequest()
@@ -226,7 +226,7 @@ result = Models.storageFileLocationList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiBcrParseStorageRequest request = Models.aiBcrParseStorageRequest()

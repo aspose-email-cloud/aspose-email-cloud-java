@@ -27,9 +27,13 @@
 
 package com.aspose.email.cloud.sdk.api;
 
+import com.aspose.email.cloud.sdk.model.*;
 import com.aspose.email.cloud.sdk.invoker.*;
 import com.aspose.email.cloud.sdk.invoker.internal.*;
 import com.aspose.email.cloud.sdk.invoker.internal.requesthandlers.*;
+import java.io.*;
+
+import java.util.HashMap;
 
 /**
  * Aspose.Email Cloud API
@@ -129,8 +133,8 @@ public class EmailCloud {
 
     /**
      * Initializes a new instance of the EmailCloud class.
-     * @param clientSecret The app key.
-     * @param clientId The app SID.
+     * @param clientSecret The client secret.
+     * @param clientId The client id.
      */
     public EmailCloud(String clientSecret, String clientId)
     {

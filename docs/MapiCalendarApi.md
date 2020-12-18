@@ -105,7 +105,7 @@ result = Models.calendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiCalendarDto mapiCalendarDto = Models.mapiCalendarDto()
@@ -252,7 +252,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiCalendarAsFileRequest request = Models.mapiCalendarAsFileRequest()
@@ -385,7 +385,7 @@ result = Models.mapiCalendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiCalendarFromFileRequest request = Models.mapiCalendarFromFileRequest()
@@ -524,7 +524,7 @@ result = Models.mapiCalendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiCalendarGetRequest request = Models.mapiCalendarGetRequest()
@@ -658,7 +658,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiCalendarSaveRequest request = Models.mapiCalendarSaveRequest()

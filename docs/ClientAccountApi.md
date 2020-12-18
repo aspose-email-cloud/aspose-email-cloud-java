@@ -65,7 +65,7 @@ result = Models.emailClientAccount()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientAccountGetRequest request = Models.clientAccountGetRequest()
@@ -181,7 +181,7 @@ result = Models.emailClientMultiAccount()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientAccountGetMultiRequest request = Models.clientAccountGetMultiRequest()
@@ -289,7 +289,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientAccountSaveRequest request = Models.clientAccountSaveRequest()
@@ -395,7 +395,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientAccountSaveMultiRequest request = Models.clientAccountSaveMultiRequest()

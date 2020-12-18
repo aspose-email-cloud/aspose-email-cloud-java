@@ -26,6 +26,7 @@ See parameter model documentation at [EmailConfigDiscoverRequest](EmailConfigDis
 
 ```java
 EmailConfigDiscoverRequest request = Models.emailConfigDiscoverRequest()
+    .address("address@gmail.com")
     .build();
 ```
 
@@ -97,10 +98,11 @@ result = Models.emailAccountConfigList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailConfigDiscoverRequest request = Models.emailConfigDiscoverRequest()
+    .address("address@gmail.com")
     .build();
 
 // Call method:
@@ -261,7 +263,7 @@ result = Models.emailAccountConfigList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailConfigDiscoverOauthRequest request = Models.emailConfigDiscoverOauthRequest()
@@ -426,7 +428,7 @@ result = Models.emailAccountConfigList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailConfigDiscoverPasswordRequest request = Models.emailConfigDiscoverPasswordRequest()

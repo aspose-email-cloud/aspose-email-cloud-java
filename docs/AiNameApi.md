@@ -62,7 +62,7 @@ result = Models.aiNameWeightedVariants()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameCompleteRequest request = Models.aiNameCompleteRequest()
@@ -151,7 +151,7 @@ result = Models.aiNameWeightedVariants()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameExpandRequest request = Models.aiNameExpandRequest()
@@ -260,7 +260,7 @@ result = Models.aiNameWeightedVariants()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameParsedRequest request = Models.aiNameParsedRequest()
@@ -361,7 +361,7 @@ result = Models.aiNameFormatted()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameFormatRequest request = Models.aiNameFormatRequest()
@@ -457,7 +457,7 @@ result = Models.aiNameFormatted()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameParsedRequest request = Models.aiNameParsedRequest()
@@ -547,7 +547,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameGenderizeRequest request = Models.aiNameGenderizeRequest()
@@ -636,7 +636,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameParsedRequest request = Models.aiNameParsedRequest()
@@ -731,7 +731,7 @@ result = Models.aiNameMatchResult()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameMatchRequest request = Models.aiNameMatchRequest()
@@ -856,7 +856,7 @@ result = Models.aiNameMatchResult()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameMatchParsedRequest request = Models.aiNameMatchParsedRequest()
@@ -995,7 +995,7 @@ result = Models.aiNameComponentList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameParseRequest request = Models.aiNameParseRequest()
@@ -1088,7 +1088,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 AiNameParseEmailAddressRequest request = Models.aiNameParseEmailAddressRequest()

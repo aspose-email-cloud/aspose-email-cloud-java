@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 ## Example
 ```java
 EmailConfigDiscoverRequest request = Models.emailConfigDiscoverRequest()
+    .address("address@gmail.com")
     .build();
 ```
 
