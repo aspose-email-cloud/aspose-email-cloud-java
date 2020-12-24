@@ -86,7 +86,7 @@ public class EmailCloud {
     }
     
     /**
-     *  Check email address is disposable operations
+     *  Checks if an email is a disposable one
      */
     public DisposableEmailApi disposableEmail() {
         return disposableEmail;
