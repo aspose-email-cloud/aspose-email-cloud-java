@@ -47,7 +47,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientFolderCreateRequest request = Models.clientFolderCreateRequest()
@@ -111,7 +111,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientFolderDeleteRequest request = Models.clientFolderDeleteRequest()
@@ -183,7 +183,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientFolderGetListRequest request = Models.clientFolderGetListRequest()

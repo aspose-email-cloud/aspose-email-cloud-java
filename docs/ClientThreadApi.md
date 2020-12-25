@@ -47,7 +47,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientThreadDeleteRequest request = Models.clientThreadDeleteRequest()
@@ -151,7 +151,7 @@ result = Models.emailThreadList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientThreadGetListRequest request = Models.clientThreadGetListRequest()
@@ -258,7 +258,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientThreadGetMessagesRequest request = Models.clientThreadGetMessagesRequest()
@@ -326,7 +326,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientThreadMoveRequest request = Models.clientThreadMoveRequest()
@@ -392,7 +392,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientThreadSetIsReadRequest request = Models.clientThreadSetIsReadRequest()

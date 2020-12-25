@@ -95,7 +95,7 @@ result = Models.alternateView()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarAsAlternateRequest request = Models.calendarAsAlternateRequest()
@@ -218,7 +218,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarAsFileRequest request = Models.calendarAsFileRequest()
@@ -356,7 +356,7 @@ result = Models.mapiCalendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarDto calendarDto = Models.calendarDto()
@@ -469,7 +469,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarConvertRequest request = Models.calendarConvertRequest()
@@ -556,7 +556,7 @@ result = Models.calendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarFromFileRequest request = Models.calendarFromFileRequest()
@@ -669,7 +669,7 @@ result = Models.calendarDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarGetRequest request = Models.calendarGetRequest()
@@ -785,7 +785,7 @@ result = Models.alternateView()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarGetAsAlternateRequest request = Models.calendarGetAsAlternateRequest()
@@ -873,7 +873,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarGetAsFileRequest request = Models.calendarGetAsFileRequest()
@@ -975,7 +975,7 @@ result = Models.calendarStorageList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarGetListRequest request = Models.calendarGetListRequest()
@@ -1093,7 +1093,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CalendarSaveRequest request = Models.calendarSaveRequest()

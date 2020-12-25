@@ -44,7 +44,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CopyFolderRequest request = Models.copyFolderRequest()
@@ -102,7 +102,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 CreateFolderRequest request = Models.createFolderRequest()
@@ -159,7 +159,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 DeleteFolderRequest request = Models.deleteFolderRequest()
@@ -235,7 +235,7 @@ result = Models.filesList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 GetFilesListRequest request = Models.getFilesListRequest()
@@ -305,7 +305,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MoveFolderRequest request = Models.moveFolderRequest()

@@ -5,7 +5,7 @@ Email document (*.eml) operations.
 <a name="asFile"></a>
 ## asFile
 
-Description: Converts Email model to specified format and returns as file.             
+Description: Converts Email model to a specified format and returns as a file.             
 
 Returns: File stream in specified format.
 
@@ -68,7 +68,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailAsFileRequest request = Models.emailAsFileRequest()
@@ -208,7 +208,7 @@ result = Models.mapiMessageDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailDto emailDto = Models.emailDto()
@@ -321,7 +321,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailConvertRequest request = Models.emailConvertRequest()
@@ -413,7 +413,7 @@ result = Models.emailDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailFromFileRequest request = Models.emailFromFileRequest()
@@ -534,7 +534,7 @@ result = Models.emailDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailGetRequest request = Models.emailGetRequest()
@@ -625,7 +625,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailGetAsFileRequest request = Models.emailGetAsFileRequest()
@@ -731,7 +731,7 @@ result = Models.emailStorageList()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailGetListRequest request = Models.emailGetListRequest()
@@ -857,7 +857,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 EmailSaveRequest request = Models.emailSaveRequest()

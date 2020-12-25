@@ -55,7 +55,7 @@ result = Models.discUsage()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 GetDiscUsageRequest request = Models.getDiscUsageRequest()
@@ -138,7 +138,7 @@ result = Models.fileVersions()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 GetFileVersionsRequest request = Models.getFileVersionsRequest()
@@ -221,7 +221,7 @@ result = Models.objectExist()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ObjectExistsRequest request = Models.objectExistsRequest()
@@ -295,7 +295,7 @@ result = Models.storageExist()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 StorageExistsRequest request = Models.storageExistsRequest()

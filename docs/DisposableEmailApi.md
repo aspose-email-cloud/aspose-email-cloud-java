@@ -1,6 +1,6 @@
 # DisposableEmailApi (EmailCloud.disposableEmail())
 
-Check email address is disposable operations
+Checks if an email is a disposable one
 
 <a name="isDisposable"></a>
 ## isDisposable
@@ -52,7 +52,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 DisposableEmailIsDisposableRequest request = Models.disposableEmailIsDisposableRequest()

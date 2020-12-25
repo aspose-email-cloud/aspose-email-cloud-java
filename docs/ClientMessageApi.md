@@ -85,7 +85,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageAppendRequest request = Models.clientMessageAppendRequest()
@@ -190,7 +190,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageAppendFileRequest request = Models.clientMessageAppendFileRequest()
@@ -259,7 +259,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageDeleteRequest request = Models.clientMessageDeleteRequest()
@@ -337,7 +337,7 @@ result = Models.mailMessageBase()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageFetchRequest request = Models.clientMessageFetchRequest()
@@ -411,7 +411,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageFetchFileRequest request = Models.clientMessageFetchFileRequest()
@@ -490,7 +490,7 @@ result = ;
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageListRequest request = Models.clientMessageListRequest()
@@ -562,7 +562,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageMoveRequest request = Models.clientMessageMoveRequest()
@@ -653,7 +653,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageSendRequest request = Models.clientMessageSendRequest()
@@ -741,7 +741,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageSendFileRequest request = Models.clientMessageSendFileRequest()
@@ -805,7 +805,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 ClientMessageSetIsReadRequest request = Models.clientMessageSetIsReadRequest()

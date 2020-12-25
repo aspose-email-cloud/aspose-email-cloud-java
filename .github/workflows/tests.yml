@@ -16,6 +16,6 @@ jobs:
     - name: Run tests
       run: mvn test -Dgroups=pipeline --batch-mode -q
       env:
-        appSid: ${{secrets.appSid}}
-        appKey: ${{secrets.appKey}}
+        clientId: ${{secrets.appSid}}
+        clientSecret: ${{secrets.appKey}}
         apiBaseUrl: "https://api-qa.aspose.cloud"

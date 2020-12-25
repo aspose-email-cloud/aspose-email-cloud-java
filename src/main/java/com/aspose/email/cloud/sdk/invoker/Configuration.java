@@ -65,12 +65,12 @@ public class Configuration
         /**
          * Gets or sets the app key.
          */
-        public String AppKey;
+        public String ClientSecret;
 
         /**
          * Gets or sets the app SID.
          */
-        public String AppSid;
+        public String ClientId;
         
         /**
          * If API service uses on-premise deployment with metered license

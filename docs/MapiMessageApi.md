@@ -104,7 +104,7 @@ result = Models.emailDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiMessageDto mapiMessage = Models.mapiMessageDto()
@@ -246,7 +246,7 @@ Return type: **byte[]**
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiMessageAsFileRequest request = Models.mapiMessageAsFileRequest()
@@ -372,7 +372,7 @@ result = Models.mapiMessageDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiMessageFromFileRequest request = Models.mapiMessageFromFileRequest()
@@ -505,7 +505,7 @@ result = Models.mapiMessageDto()
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiMessageGetRequest request = Models.mapiMessageGetRequest()
@@ -632,7 +632,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```java
-EmailCloud api = new EmailCloud(appKey, appSid);
+EmailCloud api = new EmailCloud(clientSecret, clientId);
 
 // Prepare parameters:
 MapiMessageSaveRequest request = Models.mapiMessageSaveRequest()
