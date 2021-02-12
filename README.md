@@ -88,16 +88,15 @@ To use the API, you should create an EmailCloud object:
 ```java
 EmailCloud api = new EmailCloud("Your Client secret", "Your Client id");
 ```
-
-#### Business cards recognition API
-Use `AiBcrApi.parse` method to parse business card image to VCard DTO:
+## Parse Business Card Image to VCard in Java
 
 ```java
-byte[] fileBytes = IOUtils.toByteArray(new FileInputStream("/tmp/alex.png"));
-ContactList result = api.ai().bcr().parse(new AiBcrParseRequest(
-    fileBytes, null, null, true));
-ContactDto contact = result.getValue().get(0);
-assert contact.getDisplayName().contains("Parsed Display Name");
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	EmailCloud emailApi = new EmailCloud("MY_CLIENT_SECRET", "MY_CLIENT_ID");
+
+	byte[] fileBytes = IOUtils.toByteArray(new FileInputStream("D:/alex.png"));
+	ContactList result = emailApi.ai().bcr().parse(new AiBcrParseRequest(fileBytes, null, null, true));
+	ContactDto contact = result.getValue().get(0);
 ```
 
 ## Aspose.Email Cloud SDKs in Popular Languages
