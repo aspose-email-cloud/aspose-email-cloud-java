@@ -83,4 +83,13 @@ public class ClientThreadMoveRequestBuilder {
         this.model.destinationFolder(destinationFolder);
         return this;
     }
+    /**
+     * Set ClientThreadMoveRequest.sourceFolder and return builder.
+     * @param sourceFolder Email account folder to move thread from.             
+     * @return builder
+    **/
+    public ClientThreadMoveRequestBuilder sourceFolder(String sourceFolder) {
+        this.model.sourceFolder(sourceFolder);
+        return this;
+    }
 }

@@ -304,6 +304,7 @@ See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveR
 ```java
 ClientThreadMoveRequest request = Models.clientThreadMoveRequest()
     .destinationFolder("INBOX/SubFolder")
+    .sourceFolder("INBOX")
     .threadId("5")
     .accountLocation(Models.storageFileLocation()
         .fileName("email.account")
@@ -331,6 +332,7 @@ EmailCloud api = new EmailCloud(clientSecret, clientId);
 // Prepare parameters:
 ClientThreadMoveRequest request = Models.clientThreadMoveRequest()
     .destinationFolder("INBOX/SubFolder")
+    .sourceFolder("INBOX")
     .threadId("5")
     .accountLocation(Models.storageFileLocation()
         .fileName("email.account")
