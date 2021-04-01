@@ -6,6 +6,7 @@ Email client move thread request.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **destinationFolder** | **String** | Email account folder to move thread to.              | 
+**sourceFolder** | **String** | Email account folder to move thread from.              |  [optional]
 
 ## Parent class
 
@@ -16,6 +17,7 @@ See: [ClientThreadBaseRequest](ClientThreadBaseRequest.md)
 ```java
 ClientThreadMoveRequest clientThreadMoveRequest = Models.clientThreadMoveRequest()
     .destinationFolder("INBOX/SubFolder")
+    .sourceFolder("INBOX")
     .threadId("5")
     .accountLocation(Models.storageFileLocation()
         .fileName("email.account")

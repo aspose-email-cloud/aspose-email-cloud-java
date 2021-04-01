@@ -4,7 +4,7 @@
   <artifactId>aspose-email-cloud</artifactId>
   <packaging>jar</packaging>
   <name>aspose-email-cloud</name>
-  <version>20.12.0</version>
+  <version>21.3.0.132</version>
   <url>https://github.com/aspose-email-cloud/aspose-email-cloud-java</url>
   <description>Aspose.Email Cloud SDK</description>
   <licenses>
@@ -43,7 +43,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
+      <plugin>  
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>

@@ -45,6 +45,8 @@ import java.io.*;
 public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
   @JsonProperty("destinationFolder")
   private String destinationFolder = null;
+  @JsonProperty("sourceFolder")
+  private String sourceFolder = null;
 
   /**
    * Set destinationFolder and return this.
@@ -73,6 +75,33 @@ public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
   }
 
 
+  /**
+   * Set sourceFolder and return this.
+   * @param sourceFolder Email account folder to move thread from.             
+   * @return this
+  **/
+  public ClientThreadMoveRequest sourceFolder(String sourceFolder) {
+    this.sourceFolder = sourceFolder;
+    return this;
+  }
+
+  /**
+   * Email account folder to move thread from.             
+   * @return sourceFolder
+  **/
+  public String getSourceFolder() {
+    return sourceFolder;
+  }  
+
+  /**
+   * Set sourceFolder.
+   * @param sourceFolder Email account folder to move thread from.             
+  **/
+  public void setSourceFolder(String sourceFolder) {
+    this.sourceFolder = sourceFolder;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
   if (this == o) {
@@ -83,12 +112,13 @@ public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
   }
     ClientThreadMoveRequest clientThreadMoveRequest = (ClientThreadMoveRequest) o;
     return ObjectUtils.equals(this.destinationFolder, clientThreadMoveRequest.destinationFolder) &&
+    ObjectUtils.equals(this.sourceFolder, clientThreadMoveRequest.sourceFolder) &&
     super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(destinationFolder, super.hashCode());
+    return ObjectUtils.hashCodeMulti(destinationFolder, sourceFolder, super.hashCode());
   }
 
 
@@ -100,6 +130,7 @@ public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
     sb.append("    accountLocation: ").append(toIndentedString(getAccountLocation())).append("\n");
     sb.append("    threadId: ").append(toIndentedString(getThreadId())).append("\n");
     sb.append("    destinationFolder: ").append(toIndentedString(getDestinationFolder())).append("\n");
+    sb.append("    sourceFolder: ").append(toIndentedString(getSourceFolder())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -124,16 +155,19 @@ public class ClientThreadMoveRequest extends ClientThreadBaseRequest {
    * @param accountLocation Email client account configuration location on storage.             
    * @param threadId Thread identifier.             
    * @param destinationFolder Email account folder to move thread to.             
+   * @param sourceFolder Email account folder to move thread from.             
    */
   public ClientThreadMoveRequest(
     StorageFileLocation accountLocation,
     String threadId,
-    String destinationFolder
+    String destinationFolder,
+    String sourceFolder
   ) {
     super();
     setAccountLocation(accountLocation);
     setThreadId(threadId);
     setDestinationFolder(destinationFolder);
+    setSourceFolder(sourceFolder);
   }
 
 }
