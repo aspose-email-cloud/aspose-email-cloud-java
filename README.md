@@ -1,5 +1,6 @@
-# Manage Emails in Cloud via Java REST SDK
 [![Maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepository.aspose.cloud%2Frepo%2Fcom%2Faspose%2Faspose-email-cloud%2Fmaven-metadata.xml)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-java)](https://repository.aspose.cloud/repo/com/aspose/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-java/workflows/tests/badge.svg)
+
+# Manage Emails in Cloud via Java REST SDK
 
 [Aspose.Email Cloud SDK for Java](https://products.aspose.cloud/email/java) is a REST API SDK for creating email applications that work with standard email file formats such as Outlook MSG, EML, iCalendar files and VCard.
 
@@ -63,16 +64,22 @@ To use the API, you should create an EmailCloud object:
 ```java
 EmailCloud api = new EmailCloud("Your Client secret", "Your Client id");
 ```
-
-#### Business cards recognition API
-Use `AiBcrApi.parse` method to parse business card image to VCard DTO:
+## Parse Business Card Image to VCard in Java
 
 ```java
-byte[] fileBytes = IOUtils.toByteArray(new FileInputStream("/tmp/alex.png"));
-ContactList result = api.ai().bcr().parse(new AiBcrParseRequest(
-    fileBytes, null, null, true));
-ContactDto contact = result.getValue().get(0);
-assert contact.getDisplayName().contains("Parsed Display Name");
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	EmailCloud emailApi = new EmailCloud("MY_CLIENT_SECRET", "MY_CLIENT_ID");
+
+	byte[] fileBytes = IOUtils.toByteArray(new FileInputStream("D:/alex.png"));
+	ContactList result = emailApi.ai().bcr().parse(new AiBcrParseRequest(fileBytes, null, null, true));
+	ContactDto contact = result.getValue().get(0);
 ```
+
+## Aspose.Email Cloud SDKs in Popular Languages
+
+| .NET | Java | PHP | Python | Ruby | Node.js |
+|---|---|---|---|---|---|
+| [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-dotnet) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-java) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-php) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-python) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-ruby)  | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-node) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-android) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-swift)|[GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-dart) |[GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-go) |
+| [NuGet](https://www.nuget.org/packages/Aspose.Email-Cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-email-cloud) | [Composer](https://packagist.org/packages/aspose/aspose-email-cloud) | [PIP](https://pypi.org/project/aspose.email-cloud/) | [GEM](https://rubygems.org/gems/aspose_email_cloud)  | [NPM](https://www.npmjs.com/package/@asposecloud/aspose-email-cloud) |
 
 [Product Page](https://products.aspose.cloud/email/java) | [Documentation](https://docs.aspose.cloud/email/) | [Demo](https://products.aspose.app/email/family) | [Swagger UI](https://apireference.aspose.cloud/email/) | [Blog](https://blog.aspose.cloud/category/email/) | [Free support](https://forum.aspose.cloud/c/email) | [Free trial](https://dashboard.aspose.cloud/#/apps) | [SDK reference documentation](https://docs.aspose.cloud/email/reference-api)
