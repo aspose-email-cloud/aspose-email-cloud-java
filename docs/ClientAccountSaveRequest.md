@@ -29,6 +29,11 @@ ClientAccountSaveRequest clientAccountSaveRequest = Models.clientAccountSaveRequ
             .refreshToken("refreshToken")
             .login("example@example.com")
             .build())
+        .cacheFile(Models.storageFileLocation()
+            .fileName("account.cache")
+            .storage("First Storage")
+            .folderPath("file/location/folder/on/storage")
+            .build())
         .build())
     .build();
 ```
