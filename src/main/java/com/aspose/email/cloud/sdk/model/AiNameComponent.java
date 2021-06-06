@@ -118,6 +118,8 @@ public class AiNameComponent {
 
   /**
    * Score from 0.0 to 1.0             
+   * minimum: 0.0
+   * maximum: 1.0
    * @return score
   **/
   public Double getScore() {
@@ -145,6 +147,8 @@ public class AiNameComponent {
 
   /**
    * Component position from 0             
+   * minimum: 0
+   * maximum: 2147483647
    * @return position
   **/
   public Integer getPosition() {
