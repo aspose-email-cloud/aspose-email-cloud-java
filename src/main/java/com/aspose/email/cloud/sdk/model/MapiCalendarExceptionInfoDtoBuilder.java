@@ -76,7 +76,7 @@ public class MapiCalendarExceptionInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarExceptionInfoDto.busyStatus and return builder.
-     * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+     * @param busyStatus Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
      * @return builder
     **/
     public MapiCalendarExceptionInfoDtoBuilder busyStatus(String busyStatus) {
@@ -112,7 +112,7 @@ public class MapiCalendarExceptionInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarExceptionInfoDto.meetingType and return builder.
-     * @param meetingType Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+     * @param meetingType Enumerates the appointment state./nEnum, available values: Meeting, Received, Canceled
      * @return builder
     **/
     public MapiCalendarExceptionInfoDtoBuilder meetingType(String meetingType) {
@@ -130,7 +130,7 @@ public class MapiCalendarExceptionInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarExceptionInfoDto.overrideFlags and return builder.
-     * @param overrideFlags Override flags.              Items: Specifies what data in the MapiCalendarOverride structure has a value different from the recurring series. Enum, available values: Subject, MeetingType, ReminderDelta, Reminder, Location, BusyStatus, Attachment, Subtype, AppointmentColor, ExceptionalBody
+     * @param overrideFlags Override flags.              Items: Specifies what data in the MapiCalendarOverride structure has a value different from the recurring series./nEnum, available values: Subject, MeetingType, ReminderDelta, Reminder, Location, BusyStatus, Attachment, Subtype, AppointmentColor, ExceptionalBody
      * @return builder
     **/
     public MapiCalendarExceptionInfoDtoBuilder overrideFlags(List<String> overrideFlags) {

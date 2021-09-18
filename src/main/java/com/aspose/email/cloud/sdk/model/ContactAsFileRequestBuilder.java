@@ -58,7 +58,7 @@ public class ContactAsFileRequestBuilder {
     }
     /**
      * Set ContactAsFileRequest.format and return builder.
-     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+     * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
      * @return builder
     **/
     public ContactAsFileRequestBuilder format(String format) {

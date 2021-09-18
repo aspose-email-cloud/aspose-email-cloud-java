@@ -91,7 +91,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set dayOfWeek and return this.
-   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
   public MapiCalendarTimeZoneRuleDto dayOfWeek(String dayOfWeek) {
@@ -100,7 +100,7 @@ public class MapiCalendarTimeZoneRuleDto {
   }
 
   /**
-   * Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return dayOfWeek
   **/
   public String getDayOfWeek() {
@@ -109,7 +109,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set dayOfWeek.
-   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
   public void setDayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
@@ -228,7 +228,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set position and return this.
-   * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+   * @param position Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
    * @return this
   **/
   public MapiCalendarTimeZoneRuleDto position(String position) {
@@ -237,7 +237,7 @@ public class MapiCalendarTimeZoneRuleDto {
   }
 
   /**
-   * Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+   * Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
    * @return position
   **/
   public String getPosition() {
@@ -246,7 +246,7 @@ public class MapiCalendarTimeZoneRuleDto {
 
   /**
    * Set position.
-   * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+   * @param position Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
   **/
   public void setPosition(String position) {
     this.position = position;
@@ -369,12 +369,12 @@ public class MapiCalendarTimeZoneRuleDto {
   /**
    * Initializes a new instance of the MapiCalendarTimeZoneRuleDto
    * @param date Date and time that indicate when to begin using the Standard/Daylight time.             
-   * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param dayOfWeek Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @param hour Hour.             
    * @param milliseconds Milliseconds.             
    * @param minute Minute.             
    * @param month Month.             
-   * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+   * @param position Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
    * @param seconds Seconds.             
    * @param year Year.             
    */

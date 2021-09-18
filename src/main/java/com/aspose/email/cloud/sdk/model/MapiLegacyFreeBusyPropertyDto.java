@@ -48,7 +48,7 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
 
   /**
    * Set value and return this.
-   * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+   * @param value Represents the free/busy status for a calendar event./nEnum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
    * @return this
   **/
   public MapiLegacyFreeBusyPropertyDto value(String value) {
@@ -57,7 +57,7 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
   }
 
   /**
-   * Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+   * Represents the free/busy status for a calendar event./nEnum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
    * @return value
   **/
   public String getValue() {
@@ -66,7 +66,7 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
 
   /**
    * Set value.
-   * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+   * @param value Represents the free/busy status for a calendar event./nEnum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
   **/
   public void setValue(String value) {
     this.value = value;
@@ -122,7 +122,7 @@ public class MapiLegacyFreeBusyPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiLegacyFreeBusyPropertyDto
    * @param descriptor Property descriptor             
-   * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+   * @param value Represents the free/busy status for a calendar event./nEnum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
    */
   public MapiLegacyFreeBusyPropertyDto(
     MapiPropertyDescriptor descriptor

@@ -85,7 +85,7 @@ public class YearlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set YearlyRecurrencePatternDto.weekStart and return builder.
-     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public YearlyRecurrencePatternDtoBuilder weekStart(String weekStart) {
@@ -94,7 +94,7 @@ public class YearlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set YearlyRecurrencePatternDto.startDay and return builder.
-     * @param startDay Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param startDay Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public YearlyRecurrencePatternDtoBuilder startDay(String startDay) {
@@ -103,7 +103,7 @@ public class YearlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set YearlyRecurrencePatternDto.startMonth and return builder.
-     * @param startMonth Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
+     * @param startMonth Represents a calendar month./nEnum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
      * @return builder
     **/
     public YearlyRecurrencePatternDtoBuilder startMonth(String startMonth) {
@@ -121,7 +121,7 @@ public class YearlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set YearlyRecurrencePatternDto.startPosition and return builder.
-     * @param startPosition Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+     * @param startPosition Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
      * @return builder
     **/
     public YearlyRecurrencePatternDtoBuilder startPosition(String startPosition) {

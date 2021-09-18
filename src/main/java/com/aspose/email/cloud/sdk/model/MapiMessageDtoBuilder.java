@@ -103,7 +103,7 @@ public class MapiMessageDtoBuilder {
     }
     /**
      * Set MapiMessageDto.bodyType and return builder.
-     * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+     * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
      * @return builder
     **/
     public MapiMessageDtoBuilder bodyType(String bodyType) {
@@ -166,7 +166,7 @@ public class MapiMessageDtoBuilder {
     }
     /**
      * Set MapiMessageDto.sensitivity and return builder.
-     * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+     * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
      * @return builder
     **/
     public MapiMessageDtoBuilder sensitivity(String sensitivity) {
@@ -283,7 +283,7 @@ public class MapiMessageDtoBuilder {
     }
     /**
      * Set MapiMessageDto.flags and return builder.
-     * @param flags Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+     * @param flags Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
      * @return builder
     **/
     public MapiMessageDtoBuilder flags(List<String> flags) {
@@ -310,7 +310,7 @@ public class MapiMessageDtoBuilder {
     }
     /**
      * Set MapiMessageDto.messageFormat and return builder.
-     * @param messageFormat Represents outlook message format. Enum, available values: Ascii, Unicode
+     * @param messageFormat Represents outlook message format./nEnum, available values: Ascii, Unicode
      * @return builder
     **/
     public MapiMessageDtoBuilder messageFormat(String messageFormat) {

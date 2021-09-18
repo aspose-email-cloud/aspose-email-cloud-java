@@ -95,7 +95,7 @@ public class DailyRecurrencePatternDto extends RecurrencePatternDto {
    * @param interval Number of recurrence units.             
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
-   * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    */
   public DailyRecurrencePatternDto(
     Integer interval,

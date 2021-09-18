@@ -46,7 +46,7 @@ public class EmailGetListRequestBuilder {
     }
 
     /**
-     * Setter for: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailGetListRequestBuilder format(String format) {
         this.model.format(format);

@@ -41,7 +41,7 @@ public class CalendarConvertRequest
 
     /**
      * Initializes a new instance of the CalendarConvertRequest class.   
-     * @param format File format. Enum, available values: Ics, Msg
+     * @param format File format./nEnum, available values: Ics, Msg
      * @param file File to convert
      **/
     public CalendarConvertRequest(String format, byte[] file)             
@@ -53,21 +53,21 @@ public class CalendarConvertRequest
     private String format;
 
     /**
-     * Getter for: File format. Enum, available values: Ics, Msg
+     * Getter for: File format./nEnum, available values: Ics, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format. Enum, available values: Ics, Msg
+     * Setter for: File format./nEnum, available values: Ics, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format. Enum, available values: Ics, Msg
+     * Setter for: File format./nEnum, available values: Ics, Msg
      **/
     public CalendarConvertRequest format(String value) {
         this.format = value;

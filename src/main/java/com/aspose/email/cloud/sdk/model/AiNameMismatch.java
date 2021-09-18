@@ -52,7 +52,7 @@ public class AiNameMismatch {
 
   /**
    * Set category and return this.
-   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * @param category Mismatch type./nEnum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
    * @return this
   **/
   public AiNameMismatch category(String category) {
@@ -61,7 +61,7 @@ public class AiNameMismatch {
   }
 
   /**
-   * Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * Mismatch type./nEnum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
    * @return category
   **/
   public String getCategory() {
@@ -70,7 +70,7 @@ public class AiNameMismatch {
 
   /**
    * Set category.
-   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * @param category Mismatch type./nEnum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
   **/
   public void setCategory(String category) {
     this.category = category;
@@ -180,7 +180,7 @@ public class AiNameMismatch {
 
   /**
    * Initializes a new instance of the AiNameMismatch
-   * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+   * @param category Mismatch type./nEnum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
    * @param similarity Similarity score             
    * @param explanation Explanation or mismatch subtype             
    */

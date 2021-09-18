@@ -50,7 +50,7 @@ public class EnumWithCustomOfEmailAddressCategory {
 
   /**
    * Set value and return this.
-   * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+   * @param value Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @return this
   **/
   public EnumWithCustomOfEmailAddressCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfEmailAddressCategory {
   }
 
   /**
-   * Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+   * Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfEmailAddressCategory {
 
   /**
    * Set value.
-   * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+   * @param value Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfEmailAddressCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfEmailAddressCategory
-   * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+   * @param value Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
    * @param description 
    */
   public EnumWithCustomOfEmailAddressCategory(

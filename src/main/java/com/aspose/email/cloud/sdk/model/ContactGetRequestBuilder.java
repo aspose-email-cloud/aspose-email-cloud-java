@@ -46,7 +46,7 @@ public class ContactGetRequestBuilder {
     }
 
     /**
-     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
+     * Setter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
      **/
     public ContactGetRequestBuilder format(String format) {
         this.model.format(format);

@@ -42,7 +42,7 @@ public class CalendarGetAsFileRequest
     /**
      * Initializes a new instance of the CalendarGetAsFileRequest class.   
      * @param fileName Calendar document file name.
-     * @param format File format. Enum, available values: Ics, Msg
+     * @param format File format./nEnum, available values: Ics, Msg
      * @param storage Storage name.
      * @param folder Path to folder in storage.
      **/
@@ -81,21 +81,21 @@ public class CalendarGetAsFileRequest
     private String format;
 
     /**
-     * Getter for: File format. Enum, available values: Ics, Msg
+     * Getter for: File format./nEnum, available values: Ics, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format. Enum, available values: Ics, Msg
+     * Setter for: File format./nEnum, available values: Ics, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format. Enum, available values: Ics, Msg
+     * Setter for: File format./nEnum, available values: Ics, Msg
      **/
     public CalendarGetAsFileRequest format(String value) {
         this.format = value;

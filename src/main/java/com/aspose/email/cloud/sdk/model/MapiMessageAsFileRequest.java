@@ -50,7 +50,7 @@ public class MapiMessageAsFileRequest {
 
   /**
    * Set format and return this.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return this
   **/
   public MapiMessageAsFileRequest format(String format) {
@@ -59,7 +59,7 @@ public class MapiMessageAsFileRequest {
   }
 
   /**
-   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return format
   **/
   public String getFormat() {
@@ -68,7 +68,7 @@ public class MapiMessageAsFileRequest {
 
   /**
    * Set format.
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -149,7 +149,7 @@ public class MapiMessageAsFileRequest {
 
   /**
    * Initializes a new instance of the MapiMessageAsFileRequest
-   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @param value MAPI message model.             
    */
   public MapiMessageAsFileRequest(

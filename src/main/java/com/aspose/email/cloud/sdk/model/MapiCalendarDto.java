@@ -136,7 +136,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
 
   /**
    * Set busyStatus and return this.
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param busyStatus Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
    * @return this
   **/
   public MapiCalendarDto busyStatus(String busyStatus) {
@@ -145,7 +145,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   }
 
   /**
-   * Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
    * @return busyStatus
   **/
   public String getBusyStatus() {
@@ -154,7 +154,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
 
   /**
    * Set busyStatus.
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param busyStatus Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
   **/
   public void setBusyStatus(String busyStatus) {
     this.busyStatus = busyStatus;
@@ -163,7 +163,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
 
   /**
    * Set clientIntent and return this.
-   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object./nEnum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
    * @return this
   **/
   public MapiCalendarDto clientIntent(List<String> clientIntent) {
@@ -184,7 +184,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
   }
 
   /**
-   * Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+   * Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object./nEnum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
    * @return clientIntent
   **/
   public List<String> getClientIntent() {
@@ -193,7 +193,7 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
 
   /**
    * Set clientIntent.
-   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object./nEnum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
   **/
   public void setClientIntent(List<String> clientIntent) {
     this.clientIntent = clientIntent;
@@ -680,21 +680,21 @@ public class MapiCalendarDto extends MapiMessageItemBaseDto {
    * @param body Message text.             
    * @param bodyHtml Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
    * @param bodyRtf RTF formatted message text.             
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @param categories Contains keywords or categories for the message object.             
    * @param companies Contains the names of the companies that are associated with an item.             
    * @param itemId The item id, uses with a server.             
    * @param messageClass Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
    * @param mileage Contains the mileage information that is associated with an item.             
    * @param recipients Recipients of the message.             
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
    * @param appointmentCounterProposal Value indicating whether a Meeting Response object is a counter proposal.             
    * @param attendees Attendees             
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
-   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+   * @param busyStatus Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object./nEnum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
    * @param endDate End date and time of the event. If the date is not set, default value for DateTime is returned.             
    * @param endDateTimeZone Time zone information that indicates the time zone of the EndDate property.             
    * @param isAllDay Value indicating whether the event is an all-day event.             

@@ -41,7 +41,7 @@ public class ContactFromFileRequest
 
     /**
      * Initializes a new instance of the ContactFromFileRequest class.   
-     * @param format File format Enum, available values: VCard, WebDav, Msg
+     * @param format File format./nEnum, available values: VCard, WebDav, Msg
      * @param file File to convert
      **/
     public ContactFromFileRequest(String format, byte[] file)             
@@ -53,21 +53,21 @@ public class ContactFromFileRequest
     private String format;
 
     /**
-     * Getter for: File format Enum, available values: VCard, WebDav, Msg
+     * Getter for: File format./nEnum, available values: VCard, WebDav, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format./nEnum, available values: VCard, WebDav, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format./nEnum, available values: VCard, WebDav, Msg
      **/
     public ContactFromFileRequest format(String value) {
         this.format = value;

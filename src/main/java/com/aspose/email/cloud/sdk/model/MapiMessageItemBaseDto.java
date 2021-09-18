@@ -227,7 +227,7 @@ public class MapiMessageItemBaseDto {
 
   /**
    * Set bodyType and return this.
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @return this
   **/
   public MapiMessageItemBaseDto bodyType(String bodyType) {
@@ -236,7 +236,7 @@ public class MapiMessageItemBaseDto {
   }
 
   /**
-   * The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @return bodyType
   **/
   public String getBodyType() {
@@ -245,7 +245,7 @@ public class MapiMessageItemBaseDto {
 
   /**
    * Set bodyType.
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
   **/
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
@@ -452,7 +452,7 @@ public class MapiMessageItemBaseDto {
 
   /**
    * Set sensitivity and return this.
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @return this
   **/
   public MapiMessageItemBaseDto sensitivity(String sensitivity) {
@@ -461,7 +461,7 @@ public class MapiMessageItemBaseDto {
   }
 
   /**
-   * Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @return sensitivity
   **/
   public String getSensitivity() {
@@ -470,7 +470,7 @@ public class MapiMessageItemBaseDto {
 
   /**
    * Set sensitivity.
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
   **/
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
@@ -670,14 +670,14 @@ public class MapiMessageItemBaseDto {
    * @param body Message text.             
    * @param bodyHtml Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
    * @param bodyRtf RTF formatted message text.             
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @param categories Contains keywords or categories for the message object.             
    * @param companies Contains the names of the companies that are associated with an item.             
    * @param itemId The item id, uses with a server.             
    * @param messageClass Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
    * @param mileage Contains the mileage information that is associated with an item.             
    * @param recipients Recipients of the message.             
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             

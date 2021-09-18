@@ -42,7 +42,7 @@ public class EmailGetAsFileRequest
     /**
      * Initializes a new instance of the EmailGetAsFileRequest class.   
      * @param fileName Email document file name
-     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @param format File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      * @param storage Storage name
      * @param folder Path to folder in storage
      **/
@@ -81,21 +81,21 @@ public class EmailGetAsFileRequest
     private String format;
 
     /**
-     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Getter for: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailGetAsFileRequest format(String value) {
         this.format = value;

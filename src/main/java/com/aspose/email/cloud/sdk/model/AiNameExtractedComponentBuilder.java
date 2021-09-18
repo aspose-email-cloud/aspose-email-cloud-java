@@ -58,7 +58,7 @@ public class AiNameExtractedComponentBuilder {
     }
     /**
      * Set AiNameExtractedComponent.category and return builder.
-     * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+     * @param category Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
      * @return builder
     **/
     public AiNameExtractedComponentBuilder category(String category) {

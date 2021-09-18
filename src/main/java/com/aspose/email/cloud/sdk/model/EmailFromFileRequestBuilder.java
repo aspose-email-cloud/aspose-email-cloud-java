@@ -46,7 +46,7 @@ public class EmailFromFileRequestBuilder {
     }
 
     /**
-     * Setter for:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailFromFileRequestBuilder format(String format) {
         this.model.format(format);

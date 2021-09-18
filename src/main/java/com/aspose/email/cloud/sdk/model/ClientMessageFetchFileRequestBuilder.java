@@ -81,7 +81,7 @@ public class ClientMessageFetchFileRequestBuilder {
         return this;
     }
     /**
-     * Setter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Fetched message file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchFileRequestBuilder format(String format) {
         this.model.format(format);

@@ -103,7 +103,7 @@ public class MapiContactDtoBuilder {
     }
     /**
      * Set MapiContactDto.bodyType and return builder.
-     * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+     * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
      * @return builder
     **/
     public MapiContactDtoBuilder bodyType(String bodyType) {
@@ -166,7 +166,7 @@ public class MapiContactDtoBuilder {
     }
     /**
      * Set MapiContactDto.sensitivity and return builder.
-     * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+     * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
      * @return builder
     **/
     public MapiContactDtoBuilder sensitivity(String sensitivity) {

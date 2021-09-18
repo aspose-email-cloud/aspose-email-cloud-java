@@ -74,7 +74,7 @@ public class ClientMessageAppendFileRequestBuilder {
         return this;
     }
     /**
-     * Setter for: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Email file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageAppendFileRequestBuilder format(String format) {
         this.model.format(format);

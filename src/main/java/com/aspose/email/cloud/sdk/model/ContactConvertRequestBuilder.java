@@ -46,14 +46,14 @@ public class ContactConvertRequestBuilder {
     }
 
     /**
-     * Setter for: File format to convert to Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format to convert to./nEnum, available values: VCard, WebDav, Msg
      **/
     public ContactConvertRequestBuilder toFormat(String toFormat) {
         this.model.toFormat(toFormat);
         return this;
     }
     /**
-     * Setter for: File format to convert from Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format to convert from./nEnum, available values: VCard, WebDav, Msg
      **/
     public ContactConvertRequestBuilder fromFormat(String fromFormat) {
         this.model.fromFormat(fromFormat);

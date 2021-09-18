@@ -50,7 +50,7 @@ public class EnumWithCustomOfPhoneNumberCategory {
 
   /**
    * Set value and return this.
-   * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+   * @param value Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
    * @return this
   **/
   public EnumWithCustomOfPhoneNumberCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfPhoneNumberCategory {
   }
 
   /**
-   * Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+   * Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfPhoneNumberCategory {
 
   /**
    * Set value.
-   * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+   * @param value Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfPhoneNumberCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfPhoneNumberCategory
-   * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+   * @param value Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
    * @param description 
    */
   public EnumWithCustomOfPhoneNumberCategory(

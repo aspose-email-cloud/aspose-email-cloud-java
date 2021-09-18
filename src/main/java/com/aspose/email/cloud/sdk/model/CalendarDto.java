@@ -87,6 +87,10 @@ public class CalendarDto {
   private String summary = null;
   @JsonProperty("transparency")
   private String transparency = null;
+  @JsonProperty("propertyClass")
+  private String propertyClass = null;
+  @JsonProperty("microsoftImportance")
+  private String microsoftImportance = null;
 
   /**
    * Set attachments and return this.
@@ -246,7 +250,7 @@ public class CalendarDto {
 
   /**
    * Set flags and return this.
-   * @param flags Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+   * @param flags Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
    * @return this
   **/
   public CalendarDto flags(List<String> flags) {
@@ -267,7 +271,7 @@ public class CalendarDto {
   }
 
   /**
-   * Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+   * Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
    * @return flags
   **/
   public List<String> getFlags() {
@@ -276,7 +280,7 @@ public class CalendarDto {
 
   /**
    * Set flags.
-   * @param flags Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+   * @param flags Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
   **/
   public void setFlags(List<String> flags) {
     this.flags = flags;
@@ -339,7 +343,7 @@ public class CalendarDto {
 
   /**
    * Set method and return this.
-   * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+   * @param method Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
    * @return this
   **/
   public CalendarDto method(String method) {
@@ -348,7 +352,7 @@ public class CalendarDto {
   }
 
   /**
-   * Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+   * Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
    * @return method
   **/
   public String getMethod() {
@@ -357,7 +361,7 @@ public class CalendarDto {
 
   /**
    * Set method.
-   * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+   * @param method Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
   **/
   public void setMethod(String method) {
     this.method = method;
@@ -366,7 +370,7 @@ public class CalendarDto {
 
   /**
    * Set microsoftBusyStatus and return this.
-   * @param microsoftBusyStatus Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param microsoftBusyStatus Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @return this
   **/
   public CalendarDto microsoftBusyStatus(String microsoftBusyStatus) {
@@ -375,7 +379,7 @@ public class CalendarDto {
   }
 
   /**
-   * Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @return microsoftBusyStatus
   **/
   public String getMicrosoftBusyStatus() {
@@ -384,7 +388,7 @@ public class CalendarDto {
 
   /**
    * Set microsoftBusyStatus.
-   * @param microsoftBusyStatus Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param microsoftBusyStatus Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
   **/
   public void setMicrosoftBusyStatus(String microsoftBusyStatus) {
     this.microsoftBusyStatus = microsoftBusyStatus;
@@ -393,7 +397,7 @@ public class CalendarDto {
 
   /**
    * Set microsoftIntendedStatus and return this.
-   * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param microsoftIntendedStatus Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @return this
   **/
   public CalendarDto microsoftIntendedStatus(String microsoftIntendedStatus) {
@@ -402,7 +406,7 @@ public class CalendarDto {
   }
 
   /**
-   * Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @return microsoftIntendedStatus
   **/
   public String getMicrosoftIntendedStatus() {
@@ -411,7 +415,7 @@ public class CalendarDto {
 
   /**
    * Set microsoftIntendedStatus.
-   * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param microsoftIntendedStatus Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
   **/
   public void setMicrosoftIntendedStatus(String microsoftIntendedStatus) {
     this.microsoftIntendedStatus = microsoftIntendedStatus;
@@ -660,7 +664,7 @@ public class CalendarDto {
 
   /**
    * Set status and return this.
-   * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+   * @param status Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
    * @return this
   **/
   public CalendarDto status(String status) {
@@ -669,7 +673,7 @@ public class CalendarDto {
   }
 
   /**
-   * Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+   * Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
    * @return status
   **/
   public String getStatus() {
@@ -678,7 +682,7 @@ public class CalendarDto {
 
   /**
    * Set status.
-   * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+   * @param status Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
   **/
   public void setStatus(String status) {
     this.status = status;
@@ -714,7 +718,7 @@ public class CalendarDto {
 
   /**
    * Set transparency and return this.
-   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
    * @return this
   **/
   public CalendarDto transparency(String transparency) {
@@ -723,7 +727,7 @@ public class CalendarDto {
   }
 
   /**
-   * Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+   * Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
    * @return transparency
   **/
   public String getTransparency() {
@@ -732,10 +736,64 @@ public class CalendarDto {
 
   /**
    * Set transparency.
-   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
   **/
   public void setTransparency(String transparency) {
     this.transparency = transparency;
+  }
+
+
+  /**
+   * Set propertyClass and return this.
+   * @param propertyClass Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+   * @return this
+  **/
+  public CalendarDto propertyClass(String propertyClass) {
+    this.propertyClass = propertyClass;
+    return this;
+  }
+
+  /**
+   * Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+   * @return propertyClass
+  **/
+  public String getPropertyClass() {
+    return propertyClass;
+  }  
+
+  /**
+   * Set propertyClass.
+   * @param propertyClass Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+  **/
+  public void setPropertyClass(String propertyClass) {
+    this.propertyClass = propertyClass;
+  }
+
+
+  /**
+   * Set microsoftImportance and return this.
+   * @param microsoftImportance Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+   * @return this
+  **/
+  public CalendarDto microsoftImportance(String microsoftImportance) {
+    this.microsoftImportance = microsoftImportance;
+    return this;
+  }
+
+  /**
+   * Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+   * @return microsoftImportance
+  **/
+  public String getMicrosoftImportance() {
+    return microsoftImportance;
+  }  
+
+  /**
+   * Set microsoftImportance.
+   * @param microsoftImportance Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+  **/
+  public void setMicrosoftImportance(String microsoftImportance) {
+    this.microsoftImportance = microsoftImportance;
   }
 
 
@@ -769,12 +827,14 @@ public class CalendarDto {
     ObjectUtils.equals(this.startTimeZone, calendarDto.startTimeZone) &&
     ObjectUtils.equals(this.status, calendarDto.status) &&
     ObjectUtils.equals(this.summary, calendarDto.summary) &&
-    ObjectUtils.equals(this.transparency, calendarDto.transparency);
+    ObjectUtils.equals(this.transparency, calendarDto.transparency) &&
+    ObjectUtils.equals(this.propertyClass, calendarDto.propertyClass) &&
+    ObjectUtils.equals(this.microsoftImportance, calendarDto.microsoftImportance);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency);
+    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency, propertyClass, microsoftImportance);
   }
 
 
@@ -805,6 +865,8 @@ public class CalendarDto {
     sb.append("    status: ").append(toIndentedString(getStatus())).append("\n");
     sb.append("    summary: ").append(toIndentedString(getSummary())).append("\n");
     sb.append("    transparency: ").append(toIndentedString(getTransparency())).append("\n");
+    sb.append("    propertyClass: ").append(toIndentedString(getPropertyClass())).append("\n");
+    sb.append("    microsoftImportance: ").append(toIndentedString(getMicrosoftImportance())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -831,12 +893,12 @@ public class CalendarDto {
    * @param description Description.
    * @param endDate End date.
    * @param endTimeZone End time zone.
-   * @param flags Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+   * @param flags Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
    * @param isDescriptionHtml Indicates if description is in HTML format.
    * @param location Location.
-   * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
-   * @param microsoftBusyStatus Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
-   * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param method Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+   * @param microsoftBusyStatus Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
+   * @param microsoftIntendedStatus Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
    * @param optionalAttendees Optional attendees.             
    * @param organizer Event organizer.             
    * @param recurrenceString Deprecated, use &#39;Recurrence&#39; property. String representation of recurrence pattern (See iCalendar RFC, \&quot;Recurrence rule\&quot; section). For example:               For daily recurrence:         \&quot;FREQ&#x3D;DAILY;COUNT&#x3D;10;WKST&#x3D;MO\&quot;                   For monthly recurrence:         \&quot;BYSETPOS&#x3D;1;BYDAY&#x3D;MO,TU,WE,TH,FR;FREQ&#x3D;MONTHLY;INTERVAL&#x3D;10;WKST&#x3D;MO\&quot;                   For yearly recurrence:         \&quot;BYMONTHDAY&#x3D;30;BYMONTH&#x3D;1;FREQ&#x3D;YEARLY;WKST&#x3D;MO\&quot;                   
@@ -845,9 +907,11 @@ public class CalendarDto {
    * @param sequenceId The sequence id. Read only.
    * @param startDate Start date.
    * @param startTimeZone Start time zone.
-   * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+   * @param status Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
    * @param summary Summary.
-   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+   * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
+   * @param propertyClass Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+   * @param microsoftImportance Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
    */
   public CalendarDto(
     List<Attachment> attachments,
@@ -871,7 +935,9 @@ public class CalendarDto {
     String startTimeZone,
     String status,
     String summary,
-    String transparency
+    String transparency,
+    String propertyClass,
+    String microsoftImportance
   ) {
     super();
     setAttachments(attachments);
@@ -896,6 +962,8 @@ public class CalendarDto {
     setStatus(status);
     setSummary(summary);
     setTransparency(transparency);
+    setPropertyClass(propertyClass);
+    setMicrosoftImportance(microsoftImportance);
   }
 
 }

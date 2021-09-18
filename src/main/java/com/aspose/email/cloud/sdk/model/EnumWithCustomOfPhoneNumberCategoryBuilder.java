@@ -58,7 +58,7 @@ public class EnumWithCustomOfPhoneNumberCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfPhoneNumberCategory.value and return builder.
-     * @param value Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+     * @param value Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
      * @return builder
     **/
     public EnumWithCustomOfPhoneNumberCategoryBuilder value(String value) {

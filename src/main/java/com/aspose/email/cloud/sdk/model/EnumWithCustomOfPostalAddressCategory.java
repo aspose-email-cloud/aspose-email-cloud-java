@@ -50,7 +50,7 @@ public class EnumWithCustomOfPostalAddressCategory {
 
   /**
    * Set value and return this.
-   * @param value Address category. Enum, available values: Home, Work, Custom
+   * @param value Address category./nEnum, available values: Home, Work, Custom
    * @return this
   **/
   public EnumWithCustomOfPostalAddressCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfPostalAddressCategory {
   }
 
   /**
-   * Address category. Enum, available values: Home, Work, Custom
+   * Address category./nEnum, available values: Home, Work, Custom
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfPostalAddressCategory {
 
   /**
    * Set value.
-   * @param value Address category. Enum, available values: Home, Work, Custom
+   * @param value Address category./nEnum, available values: Home, Work, Custom
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfPostalAddressCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfPostalAddressCategory
-   * @param value Address category. Enum, available values: Home, Work, Custom
+   * @param value Address category./nEnum, available values: Home, Work, Custom
    * @param description 
    */
   public EnumWithCustomOfPostalAddressCategory(

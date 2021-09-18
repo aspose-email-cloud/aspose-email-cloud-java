@@ -108,7 +108,7 @@ public class MailAddress {
 
   /**
    * Set participationStatus and return this.
-   * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * @param participationStatus Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
    * @return this
   **/
   public MailAddress participationStatus(String participationStatus) {
@@ -117,7 +117,7 @@ public class MailAddress {
   }
 
   /**
-   * Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
    * @return participationStatus
   **/
   public String getParticipationStatus() {
@@ -126,7 +126,7 @@ public class MailAddress {
 
   /**
    * Set participationStatus.
-   * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * @param participationStatus Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
   **/
   public void setParticipationStatus(String participationStatus) {
     this.participationStatus = participationStatus;
@@ -213,7 +213,7 @@ public class MailAddress {
    * Initializes a new instance of the MailAddress
    * @param displayName Display name             
    * @param address Address             
-   * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+   * @param participationStatus Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
    * @param originalAddressString The original e-mail address string             
    */
   public MailAddress(

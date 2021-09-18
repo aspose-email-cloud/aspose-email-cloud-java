@@ -103,7 +103,7 @@ public class MapiCalendarTimeZoneInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarTimeZoneInfoDto.timeZoneFlags and return builder.
-     * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+     * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule./nEnum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
      * @return builder
     **/
     public MapiCalendarTimeZoneInfoDtoBuilder timeZoneFlags(List<String> timeZoneFlags) {

@@ -76,7 +76,7 @@ public class EmailClientAccountBuilder {
     }
     /**
      * Set EmailClientAccount.securityOptions and return builder.
-     * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @param securityOptions Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
      * @return builder
     **/
     public EmailClientAccountBuilder securityOptions(String securityOptions) {
@@ -85,7 +85,7 @@ public class EmailClientAccountBuilder {
     }
     /**
      * Set EmailClientAccount.protocolType and return builder.
-     * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+     * @param protocolType Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
      * @return builder
     **/
     public EmailClientAccountBuilder protocolType(String protocolType) {

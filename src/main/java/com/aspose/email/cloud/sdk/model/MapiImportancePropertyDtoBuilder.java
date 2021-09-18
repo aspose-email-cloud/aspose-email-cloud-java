@@ -67,7 +67,7 @@ public class MapiImportancePropertyDtoBuilder {
     }
     /**
      * Set MapiImportancePropertyDto.value and return builder.
-     * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
+     * @param value Levels of importance for an item./nEnum, available values: Low, Normal, High
      * @return builder
     **/
     public MapiImportancePropertyDtoBuilder value(String value) {

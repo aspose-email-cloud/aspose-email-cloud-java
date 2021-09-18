@@ -76,7 +76,7 @@ public class ContactSaveRequestBuilder {
     }
     /**
      * Set ContactSaveRequest.format and return builder.
-     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+     * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
      * @return builder
     **/
     public ContactSaveRequestBuilder format(String format) {

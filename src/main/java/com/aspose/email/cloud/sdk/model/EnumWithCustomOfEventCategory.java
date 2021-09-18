@@ -50,7 +50,7 @@ public class EnumWithCustomOfEventCategory {
 
   /**
    * Set value and return this.
-   * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
+   * @param value Event category./nEnum, available values: Custom, Birthday, Anniversary
    * @return this
   **/
   public EnumWithCustomOfEventCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfEventCategory {
   }
 
   /**
-   * Event category. Enum, available values: Custom, Birthday, Anniversary
+   * Event category./nEnum, available values: Custom, Birthday, Anniversary
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfEventCategory {
 
   /**
    * Set value.
-   * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
+   * @param value Event category./nEnum, available values: Custom, Birthday, Anniversary
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfEventCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfEventCategory
-   * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
+   * @param value Event category./nEnum, available values: Custom, Birthday, Anniversary
    * @param description 
    */
   public EnumWithCustomOfEventCategory(

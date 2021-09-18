@@ -107,6 +107,10 @@ public class EmailDto {
   private List<MailAddress> to = null;
   @JsonProperty("xMailer")
   private String xMailer = null;
+  @JsonProperty("epilogue")
+  private String epilogue = null;
+  @JsonProperty("preamble")
+  private String preamble = null;
 
   /**
    * Set alternateViews and return this.
@@ -281,7 +285,7 @@ public class EmailDto {
 
   /**
    * Set bodyType and return this.
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @return this
   **/
   public EmailDto bodyType(String bodyType) {
@@ -290,7 +294,7 @@ public class EmailDto {
   }
 
   /**
-   * The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @return bodyType
   **/
   public String getBodyType() {
@@ -299,7 +303,7 @@ public class EmailDto {
 
   /**
    * Set bodyType.
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
   **/
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
@@ -374,7 +378,7 @@ public class EmailDto {
 
   /**
    * Set deliveryNotificationOptions and return this.
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @return this
   **/
   public EmailDto deliveryNotificationOptions(List<String> deliveryNotificationOptions) {
@@ -395,7 +399,7 @@ public class EmailDto {
   }
 
   /**
-   * Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @return deliveryNotificationOptions
   **/
   public List<String> getDeliveryNotificationOptions() {
@@ -404,7 +408,7 @@ public class EmailDto {
 
   /**
    * Set deliveryNotificationOptions.
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
   **/
   public void setDeliveryNotificationOptions(List<String> deliveryNotificationOptions) {
     this.deliveryNotificationOptions = deliveryNotificationOptions;
@@ -764,7 +768,7 @@ public class EmailDto {
 
   /**
    * Set priority and return this.
-   * @param priority Email priority status. Enum, available values: High, Low, Normal
+   * @param priority Email priority status./nEnum, available values: High, Low, Normal
    * @return this
   **/
   public EmailDto priority(String priority) {
@@ -773,7 +777,7 @@ public class EmailDto {
   }
 
   /**
-   * Email priority status. Enum, available values: High, Low, Normal
+   * Email priority status./nEnum, available values: High, Low, Normal
    * @return priority
   **/
   public String getPriority() {
@@ -782,7 +786,7 @@ public class EmailDto {
 
   /**
    * Set priority.
-   * @param priority Email priority status. Enum, available values: High, Low, Normal
+   * @param priority Email priority status./nEnum, available values: High, Low, Normal
   **/
   public void setPriority(String priority) {
     this.priority = priority;
@@ -923,7 +927,7 @@ public class EmailDto {
 
   /**
    * Set sensitivity and return this.
-   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @return this
   **/
   public EmailDto sensitivity(String sensitivity) {
@@ -932,7 +936,7 @@ public class EmailDto {
   }
 
   /**
-   * Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @return sensitivity
   **/
   public String getSensitivity() {
@@ -941,7 +945,7 @@ public class EmailDto {
 
   /**
    * Set sensitivity.
-   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
   **/
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
@@ -1095,6 +1099,60 @@ public class EmailDto {
   }
 
 
+  /**
+   * Set epilogue and return this.
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+   * @return this
+  **/
+  public EmailDto epilogue(String epilogue) {
+    this.epilogue = epilogue;
+    return this;
+  }
+
+  /**
+   * Gets or sets an epilogue text. It is located after the last boundary.
+   * @return epilogue
+  **/
+  public String getEpilogue() {
+    return epilogue;
+  }  
+
+  /**
+   * Set epilogue.
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+  **/
+  public void setEpilogue(String epilogue) {
+    this.epilogue = epilogue;
+  }
+
+
+  /**
+   * Set preamble and return this.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+   * @return this
+  **/
+  public EmailDto preamble(String preamble) {
+    this.preamble = preamble;
+    return this;
+  }
+
+  /**
+   * Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+   * @return preamble
+  **/
+  public String getPreamble() {
+    return preamble;
+  }  
+
+  /**
+   * Set preamble.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+  **/
+  public void setPreamble(String preamble) {
+    this.preamble = preamble;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
   if (this == o) {
@@ -1135,12 +1193,14 @@ public class EmailDto {
     ObjectUtils.equals(this.subjectEncoding, emailDto.subjectEncoding) &&
     ObjectUtils.equals(this.timeZoneOffset, emailDto.timeZoneOffset) &&
     ObjectUtils.equals(this.to, emailDto.to) &&
-    ObjectUtils.equals(this.xMailer, emailDto.xMailer);
+    ObjectUtils.equals(this.xMailer, emailDto.xMailer) &&
+    ObjectUtils.equals(this.epilogue, emailDto.epilogue) &&
+    ObjectUtils.equals(this.preamble, emailDto.preamble);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(alternateViews, attachments, bcc, body, bodyEncoding, bodyType, cc, date, deliveryNotificationOptions, from, headers, htmlBody, htmlBodyText, isBodyHtml, isDraft, isEncrypted, isSigned, linkedResources, messageId, originalIsTnef, preferredTextEncoding, priority, readReceiptTo, replyToList, reversePath, sender, sensitivity, subject, subjectEncoding, timeZoneOffset, to, xMailer);
+    return ObjectUtils.hashCodeMulti(alternateViews, attachments, bcc, body, bodyEncoding, bodyType, cc, date, deliveryNotificationOptions, from, headers, htmlBody, htmlBodyText, isBodyHtml, isDraft, isEncrypted, isSigned, linkedResources, messageId, originalIsTnef, preferredTextEncoding, priority, readReceiptTo, replyToList, reversePath, sender, sensitivity, subject, subjectEncoding, timeZoneOffset, to, xMailer, epilogue, preamble);
   }
 
 
@@ -1181,6 +1241,8 @@ public class EmailDto {
     sb.append("    timeZoneOffset: ").append(toIndentedString(getTimeZoneOffset())).append("\n");
     sb.append("    to: ").append(toIndentedString(getTo())).append("\n");
     sb.append("    xMailer: ").append(toIndentedString(getXMailer())).append("\n");
+    sb.append("    epilogue: ").append(toIndentedString(getEpilogue())).append("\n");
+    sb.append("    preamble: ").append(toIndentedString(getPreamble())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -1207,10 +1269,10 @@ public class EmailDto {
    * @param bcc BCC recipients.             
    * @param body Email message body as plain text.             
    * @param bodyEncoding Body encoding.             
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @param cc CC recipients.             
    * @param date Message date.             
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @param from From address.             
    * @param headers Document headers.             
    * @param htmlBody HTML body.             
@@ -1223,17 +1285,19 @@ public class EmailDto {
    * @param messageId Message id.             
    * @param originalIsTnef Indicates whether original EML message is in TNEF format. Read only.             
    * @param preferredTextEncoding Preferred encoding.             
-   * @param priority Email priority status. Enum, available values: High, Low, Normal
+   * @param priority Email priority status./nEnum, available values: High, Low, Normal
    * @param readReceiptTo Read receipt addresses.             
    * @param replyToList The list of addresses to reply to for the mail message.             
    * @param reversePath ReversePath address.             
    * @param sender Sender address.             
-   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @param subject Message subject.             
    * @param subjectEncoding Subject encoding.             
    * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
    * @param to The address collection that contains the recipients of message.             
    * @param xMailer The X-Mailer the software that created the e-mail message.             
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
    */
   public EmailDto(
     List<AlternateView> alternateViews,
@@ -1267,7 +1331,9 @@ public class EmailDto {
     String subjectEncoding,
     Long timeZoneOffset,
     List<MailAddress> to,
-    String xMailer
+    String xMailer,
+    String epilogue,
+    String preamble
   ) {
     super();
     setAlternateViews(alternateViews);
@@ -1302,6 +1368,8 @@ public class EmailDto {
     setTimeZoneOffset(timeZoneOffset);
     setTo(to);
     setXMailer(xMailer);
+    setEpilogue(epilogue);
+    setPreamble(preamble);
   }
 
 }

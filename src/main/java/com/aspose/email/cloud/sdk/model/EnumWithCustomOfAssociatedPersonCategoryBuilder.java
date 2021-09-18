@@ -58,7 +58,7 @@ public class EnumWithCustomOfAssociatedPersonCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfAssociatedPersonCategory.value and return builder.
-     * @param value Associated person&#39;s category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+     * @param value Associated person&#39;s category./nEnum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
      * @return builder
     **/
     public EnumWithCustomOfAssociatedPersonCategoryBuilder value(String value) {

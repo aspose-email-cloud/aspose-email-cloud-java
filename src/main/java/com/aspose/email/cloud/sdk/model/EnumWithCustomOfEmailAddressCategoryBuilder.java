@@ -58,7 +58,7 @@ public class EnumWithCustomOfEmailAddressCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfEmailAddressCategory.value and return builder.
-     * @param value Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+     * @param value Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
      * @return builder
     **/
     public EnumWithCustomOfEmailAddressCategoryBuilder value(String value) {

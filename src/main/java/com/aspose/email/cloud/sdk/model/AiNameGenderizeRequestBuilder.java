@@ -81,7 +81,7 @@ public class AiNameGenderizeRequestBuilder {
         return this;
     }
     /**
-     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+     * Setter for: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
      **/
     public AiNameGenderizeRequestBuilder style(String style) {
         this.model.style(style);

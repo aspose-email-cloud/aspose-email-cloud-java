@@ -42,7 +42,7 @@ public class CalendarGetAsAlternateRequest
     /**
      * Initializes a new instance of the CalendarGetAsAlternateRequest class.   
      * @param fileName iCalendar file name in storage
-     * @param calendarAction iCalendar method type Enum, available values: Create, Update, Cancel
+     * @param calendarAction iCalendar method type./nEnum, available values: Create, Update, Cancel
      * @param sequenceId The sequence id
      * @param folder Path to folder in storage
      * @param storage Storage name
@@ -83,21 +83,21 @@ public class CalendarGetAsAlternateRequest
     private String calendarAction;
 
     /**
-     * Getter for: iCalendar method type Enum, available values: Create, Update, Cancel
+     * Getter for: iCalendar method type./nEnum, available values: Create, Update, Cancel
      **/
     public String getCalendarAction() {
         return calendarAction;
     }
 
     /**
-     * Setter for: iCalendar method type Enum, available values: Create, Update, Cancel
+     * Setter for: iCalendar method type./nEnum, available values: Create, Update, Cancel
      **/
     public void setCalendarAction(String value) {
         this.calendarAction = value;
     }
 
     /**
-     * Setter for: iCalendar method type Enum, available values: Create, Update, Cancel
+     * Setter for: iCalendar method type./nEnum, available values: Create, Update, Cancel
      **/
     public CalendarGetAsAlternateRequest calendarAction(String value) {
         this.calendarAction = value;

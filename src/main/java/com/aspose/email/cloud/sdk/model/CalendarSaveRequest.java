@@ -48,7 +48,7 @@ public class CalendarSaveRequest extends StorageModelOfCalendarDto {
 
   /**
    * Set format and return this.
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format./nEnum, available values: Ics, Msg
    * @return this
   **/
   public CalendarSaveRequest format(String format) {
@@ -57,7 +57,7 @@ public class CalendarSaveRequest extends StorageModelOfCalendarDto {
   }
 
   /**
-   * Calendar file format Enum, available values: Ics, Msg
+   * Calendar file format./nEnum, available values: Ics, Msg
    * @return format
   **/
   public String getFormat() {
@@ -66,7 +66,7 @@ public class CalendarSaveRequest extends StorageModelOfCalendarDto {
 
   /**
    * Set format.
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format./nEnum, available values: Ics, Msg
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -123,7 +123,7 @@ public class CalendarSaveRequest extends StorageModelOfCalendarDto {
    * Initializes a new instance of the CalendarSaveRequest
    * @param storageFile 
    * @param value 
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format./nEnum, available values: Ics, Msg
    */
   public CalendarSaveRequest(
     StorageFileLocation storageFile,

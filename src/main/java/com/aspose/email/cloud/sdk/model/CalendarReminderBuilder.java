@@ -58,7 +58,7 @@ public class CalendarReminderBuilder {
     }
     /**
      * Set CalendarReminder.action and return builder.
-     * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+     * @param action Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
      * @return builder
     **/
     public CalendarReminderBuilder action(String action) {

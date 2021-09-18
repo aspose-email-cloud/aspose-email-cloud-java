@@ -76,7 +76,7 @@ public class CalendarSaveRequestBuilder {
     }
     /**
      * Set CalendarSaveRequest.format and return builder.
-     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @param format Calendar file format./nEnum, available values: Ics, Msg
      * @return builder
     **/
     public CalendarSaveRequestBuilder format(String format) {

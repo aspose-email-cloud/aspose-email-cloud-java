@@ -389,14 +389,14 @@ public class MapiContactDto extends MapiMessageItemBaseDto {
    * @param body Message text.             
    * @param bodyHtml Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
    * @param bodyRtf RTF formatted message text.             
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @param categories Contains keywords or categories for the message object.             
    * @param companies Contains the names of the companies that are associated with an item.             
    * @param itemId The item id, uses with a server.             
    * @param messageClass Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
    * @param mileage Contains the mileage information that is associated with an item.             
    * @param recipients Recipients of the message.             
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             

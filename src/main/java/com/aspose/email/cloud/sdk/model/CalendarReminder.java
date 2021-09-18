@@ -62,7 +62,7 @@ public class CalendarReminder {
 
   /**
    * Set action and return this.
-   * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+   * @param action Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
    * @return this
   **/
   public CalendarReminder action(String action) {
@@ -71,7 +71,7 @@ public class CalendarReminder {
   }
 
   /**
-   * Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+   * Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
    * @return action
   **/
   public String getAction() {
@@ -80,7 +80,7 @@ public class CalendarReminder {
 
   /**
    * Set action.
-   * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+   * @param action Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
   **/
   public void setAction(String action) {
     this.action = action;
@@ -359,7 +359,7 @@ public class CalendarReminder {
 
   /**
    * Initializes a new instance of the CalendarReminder
-   * @param action Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+   * @param action Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
    * @param attachments Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
    * @param attendees Contains collection of ReminderAttendee objects.             
    * @param description Provides a more complete description of the alarm.

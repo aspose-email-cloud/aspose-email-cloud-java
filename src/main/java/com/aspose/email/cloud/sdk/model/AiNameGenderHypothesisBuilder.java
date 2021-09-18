@@ -58,7 +58,7 @@ public class AiNameGenderHypothesisBuilder {
     }
     /**
      * Set AiNameGenderHypothesis.gender and return builder.
-     * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
+     * @param gender Recognized name gender./nEnum, available values: Male, Female, Unknown
      * @return builder
     **/
     public AiNameGenderHypothesisBuilder gender(String gender) {

@@ -67,7 +67,7 @@ public class MapiPhysicalAddressIndexPropertyDtoBuilder {
     }
     /**
      * Set MapiPhysicalAddressIndexPropertyDto.value and return builder.
-     * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+     * @param value Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
      * @return builder
     **/
     public MapiPhysicalAddressIndexPropertyDtoBuilder value(String value) {

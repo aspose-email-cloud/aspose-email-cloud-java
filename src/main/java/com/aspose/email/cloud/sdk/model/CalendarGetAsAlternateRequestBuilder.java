@@ -53,7 +53,7 @@ public class CalendarGetAsAlternateRequestBuilder {
         return this;
     }
     /**
-     * Setter for: iCalendar method type Enum, available values: Create, Update, Cancel
+     * Setter for: iCalendar method type./nEnum, available values: Create, Update, Cancel
      **/
     public CalendarGetAsAlternateRequestBuilder calendarAction(String calendarAction) {
         this.model.calendarAction(calendarAction);

@@ -67,7 +67,7 @@ public class EmailAccountConfigBuilder {
     }
     /**
      * Set EmailAccountConfig.protocolType and return builder.
-     * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+     * @param protocolType Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
      * @return builder
     **/
     public EmailAccountConfigBuilder protocolType(String protocolType) {
@@ -94,7 +94,7 @@ public class EmailAccountConfigBuilder {
     }
     /**
      * Set EmailAccountConfig.socketType and return builder.
-     * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @param socketType Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
      * @return builder
     **/
     public EmailAccountConfigBuilder socketType(String socketType) {
@@ -103,7 +103,7 @@ public class EmailAccountConfigBuilder {
     }
     /**
      * Set EmailAccountConfig.authenticationTypes and return builder.
-     * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+     * @param authenticationTypes Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
      * @return builder
     **/
     public EmailAccountConfigBuilder authenticationTypes(List<String> authenticationTypes) {

@@ -103,7 +103,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.bodyType and return builder.
-     * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+     * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
      * @return builder
     **/
     public EmailDtoBuilder bodyType(String bodyType) {
@@ -130,7 +130,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.deliveryNotificationOptions and return builder.
-     * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
+     * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
      * @return builder
     **/
     public EmailDtoBuilder deliveryNotificationOptions(List<String> deliveryNotificationOptions) {
@@ -247,7 +247,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.priority and return builder.
-     * @param priority Email priority status. Enum, available values: High, Low, Normal
+     * @param priority Email priority status./nEnum, available values: High, Low, Normal
      * @return builder
     **/
     public EmailDtoBuilder priority(String priority) {
@@ -292,7 +292,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.sensitivity and return builder.
-     * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+     * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
      * @return builder
     **/
     public EmailDtoBuilder sensitivity(String sensitivity) {
@@ -342,6 +342,24 @@ public class EmailDtoBuilder {
     **/
     public EmailDtoBuilder xMailer(String xMailer) {
         this.model.xMailer(xMailer);
+        return this;
+    }
+    /**
+     * Set EmailDto.epilogue and return builder.
+     * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+     * @return builder
+    **/
+    public EmailDtoBuilder epilogue(String epilogue) {
+        this.model.epilogue(epilogue);
+        return this;
+    }
+    /**
+     * Set EmailDto.preamble and return builder.
+     * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+     * @return builder
+    **/
+    public EmailDtoBuilder preamble(String preamble) {
+        this.model.preamble(preamble);
         return this;
     }
 }

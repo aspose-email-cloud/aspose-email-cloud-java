@@ -339,7 +339,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
 
   /**
    * Set flags and return this.
-   * @param flags Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+   * @param flags Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
    * @return this
   **/
   public MapiMessageDto flags(List<String> flags) {
@@ -360,7 +360,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   }
 
   /**
-   * Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+   * Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
    * @return flags
   **/
   public List<String> getFlags() {
@@ -369,7 +369,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
 
   /**
    * Set flags.
-   * @param flags Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+   * @param flags Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
   **/
   public void setFlags(List<String> flags) {
     this.flags = flags;
@@ -447,7 +447,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
 
   /**
    * Set messageFormat and return this.
-   * @param messageFormat Represents outlook message format. Enum, available values: Ascii, Unicode
+   * @param messageFormat Represents outlook message format./nEnum, available values: Ascii, Unicode
    * @return this
   **/
   public MapiMessageDto messageFormat(String messageFormat) {
@@ -456,7 +456,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
   }
 
   /**
-   * Represents outlook message format. Enum, available values: Ascii, Unicode
+   * Represents outlook message format./nEnum, available values: Ascii, Unicode
    * @return messageFormat
   **/
   public String getMessageFormat() {
@@ -465,7 +465,7 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
 
   /**
    * Set messageFormat.
-   * @param messageFormat Represents outlook message format. Enum, available values: Ascii, Unicode
+   * @param messageFormat Represents outlook message format./nEnum, available values: Ascii, Unicode
   **/
   public void setMessageFormat(String messageFormat) {
     this.messageFormat = messageFormat;
@@ -912,14 +912,14 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param body Message text.             
    * @param bodyHtml Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
    * @param bodyRtf RTF formatted message text.             
-   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
    * @param categories Contains keywords or categories for the message object.             
    * @param companies Contains the names of the companies that are associated with an item.             
    * @param itemId The item id, uses with a server.             
    * @param messageClass Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
    * @param mileage Contains the mileage information that is associated with an item.             
    * @param recipients Recipients of the message.             
-   * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+   * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
    * @param subject Subject of the message.             
    * @param subjectPrefix Subject prefix that typically indicates some action on a message, such as \&quot;FW: \&quot; for forwarding.             
    * @param properties List of MAPI properties             
@@ -932,10 +932,10 @@ public class MapiMessageDto extends MapiMessageItemBaseDto {
    * @param displayName Display name for the message.             
    * @param displayNamePrefix Prefix of the display name.             
    * @param displayTo List of the display names of the primary (To) message recipients, separated by semicolons (;).             
-   * @param flags Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+   * @param flags Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
    * @param headers Transport message headers             
    * @param internetMessageId Internet message id of the message.             
-   * @param messageFormat Represents outlook message format. Enum, available values: Ascii, Unicode
+   * @param messageFormat Represents outlook message format./nEnum, available values: Ascii, Unicode
    * @param normalizedSubject Normalized subject of the message.             
    * @param readReceiptRequested Value indicating whether the read receipt is requested.
    * @param replyTo Reply to names.

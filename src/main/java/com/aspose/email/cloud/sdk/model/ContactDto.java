@@ -436,7 +436,7 @@ public class ContactDto {
 
   /**
    * Set fileAsMapping and return this.
-   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
    * @return this
   **/
   public ContactDto fileAsMapping(String fileAsMapping) {
@@ -445,7 +445,7 @@ public class ContactDto {
   }
 
   /**
-   * Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+   * Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
    * @return fileAsMapping
   **/
   public String getFileAsMapping() {
@@ -454,7 +454,7 @@ public class ContactDto {
 
   /**
    * Set fileAsMapping.
-   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
   **/
   public void setFileAsMapping(String fileAsMapping) {
     this.fileAsMapping = fileAsMapping;
@@ -490,7 +490,7 @@ public class ContactDto {
 
   /**
    * Set gender and return this.
-   * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+   * @param gender Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
    * @return this
   **/
   public ContactDto gender(String gender) {
@@ -499,7 +499,7 @@ public class ContactDto {
   }
 
   /**
-   * Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+   * Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
    * @return gender
   **/
   public String getGender() {
@@ -508,7 +508,7 @@ public class ContactDto {
 
   /**
    * Set gender.
-   * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+   * @param gender Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
   **/
   public void setGender(String gender) {
     this.gender = gender;
@@ -826,7 +826,7 @@ public class ContactDto {
 
   /**
    * Set notesFormat and return this.
-   * @param notesFormat Defines format of a text. Enum, available values: Text, Html
+   * @param notesFormat Defines format of a text./nEnum, available values: Text, Html
    * @return this
   **/
   public ContactDto notesFormat(String notesFormat) {
@@ -835,7 +835,7 @@ public class ContactDto {
   }
 
   /**
-   * Defines format of a text. Enum, available values: Text, Html
+   * Defines format of a text./nEnum, available values: Text, Html
    * @return notesFormat
   **/
   public String getNotesFormat() {
@@ -844,7 +844,7 @@ public class ContactDto {
 
   /**
    * Set notesFormat.
-   * @param notesFormat Defines format of a text. Enum, available values: Text, Html
+   * @param notesFormat Defines format of a text./nEnum, available values: Text, Html
   **/
   public void setNotesFormat(String notesFormat) {
     this.notesFormat = notesFormat;
@@ -1309,9 +1309,9 @@ public class ContactDto {
    * @param emailAddresses Person&#39;s email addresses.             
    * @param events Person&#39;s events.             
    * @param fileAs A name used for sorting.             
-   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+   * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
    * @param freeBusyLocation URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
-   * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+   * @param gender Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
    * @param givenName Person&#39;s given name.             
    * @param governmentIdNumber Government id number.             
    * @param hobbies Person&#39;s hobbies.             
@@ -1323,7 +1323,7 @@ public class ContactDto {
    * @param middleName Person&#39;s middle name.             
    * @param nickname Person&#39;s nickname.             
    * @param notes Notes.             
-   * @param notesFormat Defines format of a text. Enum, available values: Text, Html
+   * @param notesFormat Defines format of a text./nEnum, available values: Text, Html
    * @param officeLocation Office location.             
    * @param organizationalIdNumber Contains an identifier for the mail user used within the mail user&#39;s organization.             
    * @param phoneNumbers Person&#39;s phone numbers.             

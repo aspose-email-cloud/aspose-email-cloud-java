@@ -90,7 +90,7 @@ public class MapiContactPhotoDto extends ContactPhoto {
 
   /**
    * Initializes a new instance of the MapiContactPhotoDto
-   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @param photoImageFormat MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
    */
   public MapiContactPhotoDto(

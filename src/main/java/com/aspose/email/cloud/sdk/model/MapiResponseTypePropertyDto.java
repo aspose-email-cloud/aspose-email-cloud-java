@@ -48,7 +48,7 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
 
   /**
    * Set value and return this.
-   * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+   * @param value Represents the types of recipient responses that are received for a meeting./nEnum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
    * @return this
   **/
   public MapiResponseTypePropertyDto value(String value) {
@@ -57,7 +57,7 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
   }
 
   /**
-   * Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+   * Represents the types of recipient responses that are received for a meeting./nEnum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
    * @return value
   **/
   public String getValue() {
@@ -66,7 +66,7 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
 
   /**
    * Set value.
-   * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+   * @param value Represents the types of recipient responses that are received for a meeting./nEnum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
   **/
   public void setValue(String value) {
     this.value = value;
@@ -122,7 +122,7 @@ public class MapiResponseTypePropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiResponseTypePropertyDto
    * @param descriptor Property descriptor             
-   * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+   * @param value Represents the types of recipient responses that are received for a meeting./nEnum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
    */
   public MapiResponseTypePropertyDto(
     MapiPropertyDescriptor descriptor

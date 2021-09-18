@@ -106,7 +106,7 @@ public class ReminderTrigger {
 
   /**
    * Set related and return this.
-   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
    * @return this
   **/
   public ReminderTrigger related(String related) {
@@ -115,7 +115,7 @@ public class ReminderTrigger {
   }
 
   /**
-   * Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
    * @return related
   **/
   public String getRelated() {
@@ -124,7 +124,7 @@ public class ReminderTrigger {
 
   /**
    * Set related.
-   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
   **/
   public void setRelated(String related) {
     this.related = related;
@@ -182,7 +182,7 @@ public class ReminderTrigger {
    * Initializes a new instance of the ReminderTrigger
    * @param dateTime A trigger set to an absolute date/time.
    * @param duration Specifies a relative time in ticks for the trigger of the alarm.             
-   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+   * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
    */
   public ReminderTrigger(
     Date dateTime,

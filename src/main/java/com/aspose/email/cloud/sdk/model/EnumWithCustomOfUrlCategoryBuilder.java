@@ -58,7 +58,7 @@ public class EnumWithCustomOfUrlCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfUrlCategory.value and return builder.
-     * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+     * @param value Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
      * @return builder
     **/
     public EnumWithCustomOfUrlCategoryBuilder value(String value) {

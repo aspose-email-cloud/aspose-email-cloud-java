@@ -50,7 +50,7 @@ public class EnumWithCustomOfInstantMessengerCategory {
 
   /**
    * Set value and return this.
-   * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+   * @param value Instant messenger address category./nEnum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @return this
   **/
   public EnumWithCustomOfInstantMessengerCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfInstantMessengerCategory {
   }
 
   /**
-   * Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+   * Instant messenger address category./nEnum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfInstantMessengerCategory {
 
   /**
    * Set value.
-   * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+   * @param value Instant messenger address category./nEnum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfInstantMessengerCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfInstantMessengerCategory
-   * @param value Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+   * @param value Instant messenger address category./nEnum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
    * @param description 
    */
   public EnumWithCustomOfInstantMessengerCategory(

@@ -46,7 +46,7 @@ public class ClientMessageFetchFileRequest
      * @param folder Account folder to fetch from (should be specified for some protocols such as IMAP)             
      * @param storage Storage name where account file located.
      * @param accountStorageFolder Folder in storage where account file located.
-     * @param format Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @param format Fetched message file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchFileRequest(String messageId, String account, String folder, String storage, String accountStorageFolder, String format)             
     {
@@ -181,21 +181,21 @@ public class ClientMessageFetchFileRequest
     private String format;
 
     /**
-     * Getter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Getter for: Fetched message file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Fetched message file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Fetched message file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchFileRequest format(String value) {
         this.format = value;
