@@ -46,7 +46,7 @@ public class CalendarConvertRequestBuilder {
     }
 
     /**
-     * Setter for: File format./nEnum, available values: Ics, Msg
+     * Setter for: File format. Enum, available values: Ics, Msg
      **/
     public CalendarConvertRequestBuilder format(String format) {
         this.model.format(format);

@@ -58,7 +58,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.calendarType and return builder.
-     * @param calendarType Enumerated the calendar type of the mapi recurrence./nEnum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+     * @param calendarType Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder calendarType(String calendarType) {
@@ -85,7 +85,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.endType and return builder.
-     * @param endType Enumerates the ending type for the recurrence./nEnum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+     * @param endType Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder endType(String endType) {
@@ -103,7 +103,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.frequency and return builder.
-     * @param frequency Enumerates mapi calendar recurrence frequency./nEnum, available values: None, Daily, Weekly, Monthly, Yearly
+     * @param frequency Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder frequency(String frequency) {
@@ -130,7 +130,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.patternType and return builder.
-     * @param patternType Enumerates the mapi calendar recurrence pattern types./nEnum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+     * @param patternType Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder patternType(String patternType) {
@@ -166,7 +166,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.weekStartDay and return builder.
-     * @param weekStartDay Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder weekStartDay(String weekStartDay) {
@@ -175,7 +175,7 @@ public class MapiCalendarDailyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarDailyRecurrencePatternDto.dayOfWeek and return builder.
-     * @param dayOfWeek Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern./nEnum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday
+     * @param dayOfWeek Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern. Enum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday
      * @return builder
     **/
     public MapiCalendarDailyRecurrencePatternDtoBuilder dayOfWeek(List<String> dayOfWeek) {

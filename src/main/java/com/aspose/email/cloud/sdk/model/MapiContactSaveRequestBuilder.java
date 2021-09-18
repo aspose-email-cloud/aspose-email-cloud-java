@@ -76,7 +76,7 @@ public class MapiContactSaveRequestBuilder {
     }
     /**
      * Set MapiContactSaveRequest.format and return builder.
-     * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+     * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
      * @return builder
     **/
     public MapiContactSaveRequestBuilder format(String format) {

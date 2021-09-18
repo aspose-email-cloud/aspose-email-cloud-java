@@ -103,7 +103,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.bodyType and return builder.
-     * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
+     * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
      * @return builder
     **/
     public MapiCalendarDtoBuilder bodyType(String bodyType) {
@@ -166,7 +166,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.sensitivity and return builder.
-     * @param sensitivity Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
+     * @param sensitivity Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
      * @return builder
     **/
     public MapiCalendarDtoBuilder sensitivity(String sensitivity) {
@@ -220,7 +220,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.busyStatus and return builder.
-     * @param busyStatus Enumerates the mapi calendar possible busy status./nEnum, available values: Free, Tentative, Busy, OutOfOffice
+     * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
      * @return builder
     **/
     public MapiCalendarDtoBuilder busyStatus(String busyStatus) {
@@ -229,7 +229,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.clientIntent and return builder.
-     * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object./nEnum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+     * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object. Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
      * @return builder
     **/
     public MapiCalendarDtoBuilder clientIntent(List<String> clientIntent) {

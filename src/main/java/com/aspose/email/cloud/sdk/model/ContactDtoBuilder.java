@@ -148,7 +148,7 @@ public class ContactDtoBuilder {
     }
     /**
      * Set ContactDto.fileAsMapping and return builder.
-     * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+     * @param fileAsMapping Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
      * @return builder
     **/
     public ContactDtoBuilder fileAsMapping(String fileAsMapping) {
@@ -166,7 +166,7 @@ public class ContactDtoBuilder {
     }
     /**
      * Set ContactDto.gender and return builder.
-     * @param gender Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
+     * @param gender Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
      * @return builder
     **/
     public ContactDtoBuilder gender(String gender) {
@@ -274,7 +274,7 @@ public class ContactDtoBuilder {
     }
     /**
      * Set ContactDto.notesFormat and return builder.
-     * @param notesFormat Defines format of a text./nEnum, available values: Text, Html
+     * @param notesFormat Defines format of a text. Enum, available values: Text, Html
      * @return builder
     **/
     public ContactDtoBuilder notesFormat(String notesFormat) {

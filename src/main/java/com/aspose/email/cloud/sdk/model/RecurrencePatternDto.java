@@ -137,7 +137,7 @@ public class RecurrencePatternDto {
 
   /**
    * Set weekStart and return this.
-   * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    * @return this
   **/
   public RecurrencePatternDto weekStart(String weekStart) {
@@ -146,7 +146,7 @@ public class RecurrencePatternDto {
   }
 
   /**
-   * Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    * @return weekStart
   **/
   public String getWeekStart() {
@@ -155,7 +155,7 @@ public class RecurrencePatternDto {
 
   /**
    * Set weekStart.
-   * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
   **/
   public void setWeekStart(String weekStart) {
     this.weekStart = weekStart;
@@ -236,7 +236,7 @@ public class RecurrencePatternDto {
    * @param interval Number of recurrence units.             
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
-   * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
    */
   public RecurrencePatternDto(
     Integer interval,

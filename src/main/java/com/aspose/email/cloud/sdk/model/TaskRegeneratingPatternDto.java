@@ -48,7 +48,7 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
 
   /**
    * Set regeneratingType and return this.
-   * @param regeneratingType Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+   * @param regeneratingType Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
    * @return this
   **/
   public TaskRegeneratingPatternDto regeneratingType(String regeneratingType) {
@@ -57,7 +57,7 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
   }
 
   /**
-   * Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+   * Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
    * @return regeneratingType
   **/
   public String getRegeneratingType() {
@@ -66,7 +66,7 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
 
   /**
    * Set regeneratingType.
-   * @param regeneratingType Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+   * @param regeneratingType Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
   **/
   public void setRegeneratingType(String regeneratingType) {
     this.regeneratingType = regeneratingType;
@@ -127,8 +127,8 @@ public class TaskRegeneratingPatternDto extends RecurrencePatternDto {
    * @param interval Number of recurrence units.             
    * @param occurs Number of occurrences of the recurrence pattern.             
    * @param endDate End date.             
-   * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-   * @param regeneratingType Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+   * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+   * @param regeneratingType Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
    */
   public TaskRegeneratingPatternDto(
     Integer interval,

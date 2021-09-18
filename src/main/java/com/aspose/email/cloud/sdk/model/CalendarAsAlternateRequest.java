@@ -79,7 +79,7 @@ public class CalendarAsAlternateRequest {
 
   /**
    * Set action and return this.
-   * @param action iCalendar actions./nEnum, available values: Create, Update, Cancel
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
    * @return this
   **/
   public CalendarAsAlternateRequest action(String action) {
@@ -88,7 +88,7 @@ public class CalendarAsAlternateRequest {
   }
 
   /**
-   * iCalendar actions./nEnum, available values: Create, Update, Cancel
+   * iCalendar actions. Enum, available values: Create, Update, Cancel
    * @return action
   **/
   public String getAction() {
@@ -97,7 +97,7 @@ public class CalendarAsAlternateRequest {
 
   /**
    * Set action.
-   * @param action iCalendar actions./nEnum, available values: Create, Update, Cancel
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
   **/
   public void setAction(String action) {
     this.action = action;
@@ -181,7 +181,7 @@ public class CalendarAsAlternateRequest {
   /**
    * Initializes a new instance of the CalendarAsAlternateRequest
    * @param value iCalendar document model             
-   * @param action iCalendar actions./nEnum, available values: Create, Update, Cancel
+   * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
    * @param sequenceId iCalendar sequence id             
    */
   public CalendarAsAlternateRequest(

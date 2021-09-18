@@ -85,7 +85,7 @@ public class MapiRecipientDtoBuilder {
     }
     /**
      * Set MapiRecipientDto.recipientType and return builder.
-     * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+     * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
      * @return builder
     **/
     public MapiRecipientDtoBuilder recipientType(String recipientType) {

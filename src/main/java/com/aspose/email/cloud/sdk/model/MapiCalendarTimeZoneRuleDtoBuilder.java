@@ -67,7 +67,7 @@ public class MapiCalendarTimeZoneRuleDtoBuilder {
     }
     /**
      * Set MapiCalendarTimeZoneRuleDto.dayOfWeek and return builder.
-     * @param dayOfWeek Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+     * @param dayOfWeek Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
      * @return builder
     **/
     public MapiCalendarTimeZoneRuleDtoBuilder dayOfWeek(String dayOfWeek) {
@@ -112,7 +112,7 @@ public class MapiCalendarTimeZoneRuleDtoBuilder {
     }
     /**
      * Set MapiCalendarTimeZoneRuleDto.position and return builder.
-     * @param position Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
+     * @param position Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
      * @return builder
     **/
     public MapiCalendarTimeZoneRuleDtoBuilder position(String position) {

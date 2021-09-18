@@ -135,7 +135,7 @@ public class MapiRecipientDto {
 
   /**
    * Set recipientType and return this.
-   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
    * @return this
   **/
   public MapiRecipientDto recipientType(String recipientType) {
@@ -144,7 +144,7 @@ public class MapiRecipientDto {
   }
 
   /**
-   * Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+   * Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
    * @return recipientType
   **/
   public String getRecipientType() {
@@ -153,7 +153,7 @@ public class MapiRecipientDto {
 
   /**
    * Set recipientType.
-   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
   **/
   public void setRecipientType(String recipientType) {
     this.recipientType = recipientType;
@@ -214,7 +214,7 @@ public class MapiRecipientDto {
    * @param emailAddress Email address of the message recipient or sender.             
    * @param addressType Type of the address of the message recipient or sender.             
    * @param displayName Display name of the message recipient or sender.             
-   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+   * @param recipientType Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
    */
   public MapiRecipientDto(
     String emailAddress,

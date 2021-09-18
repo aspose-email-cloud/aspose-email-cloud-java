@@ -48,7 +48,7 @@ public class EmailSaveRequest extends StorageModelOfEmailDto {
 
   /**
    * Set format and return this.
-   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return this
   **/
   public EmailSaveRequest format(String format) {
@@ -57,7 +57,7 @@ public class EmailSaveRequest extends StorageModelOfEmailDto {
   }
 
   /**
-   * Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    * @return format
   **/
   public String getFormat() {
@@ -66,7 +66,7 @@ public class EmailSaveRequest extends StorageModelOfEmailDto {
 
   /**
    * Set format.
-   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -123,7 +123,7 @@ public class EmailSaveRequest extends StorageModelOfEmailDto {
    * Initializes a new instance of the EmailSaveRequest
    * @param storageFile 
    * @param value 
-   * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+   * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
    */
   public EmailSaveRequest(
     StorageFileLocation storageFile,

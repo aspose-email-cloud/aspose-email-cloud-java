@@ -195,7 +195,7 @@ public class MapiCalendarTimeZoneInfoDto {
 
   /**
    * Set timeZoneFlags and return this.
-   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule./nEnum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
    * @return this
   **/
   public MapiCalendarTimeZoneInfoDto timeZoneFlags(List<String> timeZoneFlags) {
@@ -216,7 +216,7 @@ public class MapiCalendarTimeZoneInfoDto {
   }
 
   /**
-   * Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule./nEnum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+   * Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
    * @return timeZoneFlags
   **/
   public List<String> getTimeZoneFlags() {
@@ -225,7 +225,7 @@ public class MapiCalendarTimeZoneInfoDto {
 
   /**
    * Set timeZoneFlags.
-   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule./nEnum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
   **/
   public void setTimeZoneFlags(List<String> timeZoneFlags) {
     this.timeZoneFlags = timeZoneFlags;
@@ -321,7 +321,7 @@ public class MapiCalendarTimeZoneInfoDto {
    * @param daylightDate Date and local time that indicate when to begin using the DaylightBias.             
    * @param standardBias Offset in minutes from lBias during standard time.             
    * @param standardDate Date and local time that indicate when to begin using the StandardBias.             
-   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule./nEnum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+   * @param timeZoneFlags Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
    * @param year Year in which this rule is scheduled to take effect.             
    */
   public MapiCalendarTimeZoneInfoDto(

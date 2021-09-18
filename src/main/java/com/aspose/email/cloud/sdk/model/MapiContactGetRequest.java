@@ -41,7 +41,7 @@ public class MapiContactGetRequest
 
     /**
      * Initializes a new instance of the MapiContactGetRequest class.   
-     * @param format Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
      * @param fileName Contact document file name.
      * @param folder Path to folder in storage.
      * @param storage Storage name.
@@ -57,21 +57,21 @@ public class MapiContactGetRequest
     private String format;
 
     /**
-     * Getter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Getter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public MapiContactGetRequest format(String value) {
         this.format = value;

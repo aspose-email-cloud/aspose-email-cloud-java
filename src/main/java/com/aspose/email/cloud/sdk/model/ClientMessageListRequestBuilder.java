@@ -88,14 +88,14 @@ public class ClientMessageListRequestBuilder {
         return this;
     }
     /**
-     * Setter for: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string)./nEnum, available values: Dto, Mapi, Base64
+     * Setter for: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      **/
     public ClientMessageListRequestBuilder type(String type) {
         this.model.type(type);
         return this;
     }
     /**
-     * Setter for: Base64 data format. Used only if type is set to Base64./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageListRequestBuilder format(String format) {
         this.model.format(format);

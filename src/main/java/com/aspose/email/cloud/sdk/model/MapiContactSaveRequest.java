@@ -48,7 +48,7 @@ public class MapiContactSaveRequest extends StorageModelOfMapiContactDto {
 
   /**
    * Set format and return this.
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @return this
   **/
   public MapiContactSaveRequest format(String format) {
@@ -57,7 +57,7 @@ public class MapiContactSaveRequest extends StorageModelOfMapiContactDto {
   }
 
   /**
-   * Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @return format
   **/
   public String getFormat() {
@@ -66,7 +66,7 @@ public class MapiContactSaveRequest extends StorageModelOfMapiContactDto {
 
   /**
    * Set format.
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -123,7 +123,7 @@ public class MapiContactSaveRequest extends StorageModelOfMapiContactDto {
    * Initializes a new instance of the MapiContactSaveRequest
    * @param storageFile 
    * @param value 
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    */
   public MapiContactSaveRequest(
     StorageFileLocation storageFile,

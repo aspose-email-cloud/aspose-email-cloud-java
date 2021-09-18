@@ -85,7 +85,7 @@ public class MonthlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MonthlyRecurrencePatternDto.weekStart and return builder.
-     * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public MonthlyRecurrencePatternDtoBuilder weekStart(String weekStart) {
@@ -94,7 +94,7 @@ public class MonthlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MonthlyRecurrencePatternDto.startDay and return builder.
-     * @param startDay Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param startDay Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public MonthlyRecurrencePatternDtoBuilder startDay(String startDay) {
@@ -112,7 +112,7 @@ public class MonthlyRecurrencePatternDtoBuilder {
     }
     /**
      * Set MonthlyRecurrencePatternDto.startPosition and return builder.
-     * @param startPosition Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
+     * @param startPosition Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
      * @return builder
     **/
     public MonthlyRecurrencePatternDtoBuilder startPosition(String startPosition) {

@@ -58,7 +58,7 @@ public class MapiContactPhotoDtoBuilder {
     }
     /**
      * Set MapiContactPhotoDto.photoImageFormat and return builder.
-     * @param photoImageFormat MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+     * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
      * @return builder
     **/
     public MapiContactPhotoDtoBuilder photoImageFormat(String photoImageFormat) {

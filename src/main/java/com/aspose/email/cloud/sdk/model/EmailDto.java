@@ -285,7 +285,7 @@ public class EmailDto {
 
   /**
    * Set bodyType and return this.
-   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
    * @return this
   **/
   public EmailDto bodyType(String bodyType) {
@@ -294,7 +294,7 @@ public class EmailDto {
   }
 
   /**
-   * The content type of message body./nEnum, available values: PlainText, Html, Rtf
+   * The content type of message body. Enum, available values: PlainText, Html, Rtf
    * @return bodyType
   **/
   public String getBodyType() {
@@ -303,7 +303,7 @@ public class EmailDto {
 
   /**
    * Set bodyType.
-   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
   **/
   public void setBodyType(String bodyType) {
     this.bodyType = bodyType;
@@ -378,7 +378,7 @@ public class EmailDto {
 
   /**
    * Set deliveryNotificationOptions and return this.
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @return this
   **/
   public EmailDto deliveryNotificationOptions(List<String> deliveryNotificationOptions) {
@@ -399,7 +399,7 @@ public class EmailDto {
   }
 
   /**
-   * Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @return deliveryNotificationOptions
   **/
   public List<String> getDeliveryNotificationOptions() {
@@ -408,7 +408,7 @@ public class EmailDto {
 
   /**
    * Set deliveryNotificationOptions.
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
   **/
   public void setDeliveryNotificationOptions(List<String> deliveryNotificationOptions) {
     this.deliveryNotificationOptions = deliveryNotificationOptions;
@@ -768,7 +768,7 @@ public class EmailDto {
 
   /**
    * Set priority and return this.
-   * @param priority Email priority status./nEnum, available values: High, Low, Normal
+   * @param priority Email priority status. Enum, available values: High, Low, Normal
    * @return this
   **/
   public EmailDto priority(String priority) {
@@ -777,7 +777,7 @@ public class EmailDto {
   }
 
   /**
-   * Email priority status./nEnum, available values: High, Low, Normal
+   * Email priority status. Enum, available values: High, Low, Normal
    * @return priority
   **/
   public String getPriority() {
@@ -786,7 +786,7 @@ public class EmailDto {
 
   /**
    * Set priority.
-   * @param priority Email priority status./nEnum, available values: High, Low, Normal
+   * @param priority Email priority status. Enum, available values: High, Low, Normal
   **/
   public void setPriority(String priority) {
     this.priority = priority;
@@ -927,7 +927,7 @@ public class EmailDto {
 
   /**
    * Set sensitivity and return this.
-   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @return this
   **/
   public EmailDto sensitivity(String sensitivity) {
@@ -936,7 +936,7 @@ public class EmailDto {
   }
 
   /**
-   * Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @return sensitivity
   **/
   public String getSensitivity() {
@@ -945,7 +945,7 @@ public class EmailDto {
 
   /**
    * Set sensitivity.
-   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
   **/
   public void setSensitivity(String sensitivity) {
     this.sensitivity = sensitivity;
@@ -1269,10 +1269,10 @@ public class EmailDto {
    * @param bcc BCC recipients.             
    * @param body Email message body as plain text.             
    * @param bodyEncoding Body encoding.             
-   * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
+   * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
    * @param cc CC recipients.             
    * @param date Message date.             
-   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+   * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
    * @param from From address.             
    * @param headers Document headers.             
    * @param htmlBody HTML body.             
@@ -1285,12 +1285,12 @@ public class EmailDto {
    * @param messageId Message id.             
    * @param originalIsTnef Indicates whether original EML message is in TNEF format. Read only.             
    * @param preferredTextEncoding Preferred encoding.             
-   * @param priority Email priority status./nEnum, available values: High, Low, Normal
+   * @param priority Email priority status. Enum, available values: High, Low, Normal
    * @param readReceiptTo Read receipt addresses.             
    * @param replyToList The list of addresses to reply to for the mail message.             
    * @param reversePath ReversePath address.             
    * @param sender Sender address.             
-   * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+   * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
    * @param subject Message subject.             
    * @param subjectEncoding Subject encoding.             
    * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             

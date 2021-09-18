@@ -50,7 +50,7 @@ public class ContactAsFileRequest {
 
   /**
    * Set format and return this.
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @return this
   **/
   public ContactAsFileRequest format(String format) {
@@ -59,7 +59,7 @@ public class ContactAsFileRequest {
   }
 
   /**
-   * Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @return format
   **/
   public String getFormat() {
@@ -68,7 +68,7 @@ public class ContactAsFileRequest {
 
   /**
    * Set format.
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -149,7 +149,7 @@ public class ContactAsFileRequest {
 
   /**
    * Initializes a new instance of the ContactAsFileRequest
-   * @param format Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
+   * @param format Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
    * @param value Contact model.             
    */
   public ContactAsFileRequest(

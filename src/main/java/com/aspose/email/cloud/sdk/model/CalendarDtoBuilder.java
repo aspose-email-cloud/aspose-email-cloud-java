@@ -103,7 +103,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.flags and return builder.
-     * @param flags Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
+     * @param flags Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
      * @return builder
     **/
     public CalendarDtoBuilder flags(List<String> flags) {
@@ -130,7 +130,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.method and return builder.
-     * @param method Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+     * @param method Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
      * @return builder
     **/
     public CalendarDtoBuilder method(String method) {
@@ -139,7 +139,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.microsoftBusyStatus and return builder.
-     * @param microsoftBusyStatus Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
+     * @param microsoftBusyStatus Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
      * @return builder
     **/
     public CalendarDtoBuilder microsoftBusyStatus(String microsoftBusyStatus) {
@@ -148,7 +148,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.microsoftIntendedStatus and return builder.
-     * @param microsoftIntendedStatus Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
+     * @param microsoftIntendedStatus Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
      * @return builder
     **/
     public CalendarDtoBuilder microsoftIntendedStatus(String microsoftIntendedStatus) {
@@ -229,7 +229,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.status and return builder.
-     * @param status Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
+     * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
      * @return builder
     **/
     public CalendarDtoBuilder status(String status) {
@@ -247,7 +247,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.transparency and return builder.
-     * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
+     * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
      * @return builder
     **/
     public CalendarDtoBuilder transparency(String transparency) {
@@ -256,7 +256,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.propertyClass and return builder.
-     * @param propertyClass Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+     * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
      * @return builder
     **/
     public CalendarDtoBuilder propertyClass(String propertyClass) {
@@ -265,7 +265,7 @@ public class CalendarDtoBuilder {
     }
     /**
      * Set CalendarDto.microsoftImportance and return builder.
-     * @param microsoftImportance Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+     * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
      * @return builder
     **/
     public CalendarDtoBuilder microsoftImportance(String microsoftImportance) {

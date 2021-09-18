@@ -67,7 +67,7 @@ public class MapiLegacyFreeBusyPropertyDtoBuilder {
     }
     /**
      * Set MapiLegacyFreeBusyPropertyDto.value and return builder.
-     * @param value Represents the free/busy status for a calendar event./nEnum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+     * @param value Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
      * @return builder
     **/
     public MapiLegacyFreeBusyPropertyDtoBuilder value(String value) {

@@ -76,7 +76,7 @@ public class ReminderTriggerBuilder {
     }
     /**
      * Set ReminderTrigger.related and return builder.
-     * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
+     * @param related Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
      * @return builder
     **/
     public ReminderTriggerBuilder related(String related) {

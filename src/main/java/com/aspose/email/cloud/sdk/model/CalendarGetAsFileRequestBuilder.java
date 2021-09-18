@@ -53,7 +53,7 @@ public class CalendarGetAsFileRequestBuilder {
         return this;
     }
     /**
-     * Setter for: File format./nEnum, available values: Ics, Msg
+     * Setter for: File format. Enum, available values: Ics, Msg
      **/
     public CalendarGetAsFileRequestBuilder format(String format) {
         this.model.format(format);

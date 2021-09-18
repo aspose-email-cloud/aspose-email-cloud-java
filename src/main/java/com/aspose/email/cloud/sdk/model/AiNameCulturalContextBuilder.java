@@ -94,7 +94,7 @@ public class AiNameCulturalContextBuilder {
     }
     /**
      * Set AiNameCulturalContext.style and return builder.
-     * @param style Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      * @return builder
     **/
     public AiNameCulturalContextBuilder style(String style) {

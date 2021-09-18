@@ -67,7 +67,7 @@ public class CalendarAsAlternateRequestBuilder {
     }
     /**
      * Set CalendarAsAlternateRequest.action and return builder.
-     * @param action iCalendar actions./nEnum, available values: Create, Update, Cancel
+     * @param action iCalendar actions. Enum, available values: Create, Update, Cancel
      * @return builder
     **/
     public CalendarAsAlternateRequestBuilder action(String action) {

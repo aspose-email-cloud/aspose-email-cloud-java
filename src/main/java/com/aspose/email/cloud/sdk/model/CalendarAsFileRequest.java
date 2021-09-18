@@ -50,7 +50,7 @@ public class CalendarAsFileRequest {
 
   /**
    * Set format and return this.
-   * @param format Calendar file format./nEnum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
    * @return this
   **/
   public CalendarAsFileRequest format(String format) {
@@ -59,7 +59,7 @@ public class CalendarAsFileRequest {
   }
 
   /**
-   * Calendar file format./nEnum, available values: Ics, Msg
+   * Calendar file format. Enum, available values: Ics, Msg
    * @return format
   **/
   public String getFormat() {
@@ -68,7 +68,7 @@ public class CalendarAsFileRequest {
 
   /**
    * Set format.
-   * @param format Calendar file format./nEnum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -149,7 +149,7 @@ public class CalendarAsFileRequest {
 
   /**
    * Initializes a new instance of the CalendarAsFileRequest
-   * @param format Calendar file format./nEnum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
    * @param value iCalendar model             
    */
   public CalendarAsFileRequest(

@@ -74,7 +74,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set calendarType and return this.
-   * @param calendarType Enumerated the calendar type of the mapi recurrence./nEnum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+   * @param calendarType Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto calendarType(String calendarType) {
@@ -83,7 +83,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Enumerated the calendar type of the mapi recurrence./nEnum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+   * Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
    * @return calendarType
   **/
   public String getCalendarType() {
@@ -92,7 +92,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set calendarType.
-   * @param calendarType Enumerated the calendar type of the mapi recurrence./nEnum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+   * @param calendarType Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
   **/
   public void setCalendarType(String calendarType) {
     this.calendarType = calendarType;
@@ -167,7 +167,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set endType and return this.
-   * @param endType Enumerates the ending type for the recurrence./nEnum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+   * @param endType Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto endType(String endType) {
@@ -176,7 +176,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Enumerates the ending type for the recurrence./nEnum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+   * Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
    * @return endType
   **/
   public String getEndType() {
@@ -185,7 +185,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set endType.
-   * @param endType Enumerates the ending type for the recurrence./nEnum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+   * @param endType Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
   **/
   public void setEndType(String endType) {
     this.endType = endType;
@@ -233,7 +233,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set frequency and return this.
-   * @param frequency Enumerates mapi calendar recurrence frequency./nEnum, available values: None, Daily, Weekly, Monthly, Yearly
+   * @param frequency Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto frequency(String frequency) {
@@ -242,7 +242,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Enumerates mapi calendar recurrence frequency./nEnum, available values: None, Daily, Weekly, Monthly, Yearly
+   * Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
    * @return frequency
   **/
   public String getFrequency() {
@@ -251,7 +251,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set frequency.
-   * @param frequency Enumerates mapi calendar recurrence frequency./nEnum, available values: None, Daily, Weekly, Monthly, Yearly
+   * @param frequency Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
   **/
   public void setFrequency(String frequency) {
     this.frequency = frequency;
@@ -326,7 +326,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set patternType and return this.
-   * @param patternType Enumerates the mapi calendar recurrence pattern types./nEnum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+   * @param patternType Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto patternType(String patternType) {
@@ -335,7 +335,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Enumerates the mapi calendar recurrence pattern types./nEnum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+   * Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
    * @return patternType
   **/
   public String getPatternType() {
@@ -344,7 +344,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set patternType.
-   * @param patternType Enumerates the mapi calendar recurrence pattern types./nEnum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+   * @param patternType Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
   **/
   public void setPatternType(String patternType) {
     this.patternType = patternType;
@@ -434,7 +434,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set weekStartDay and return this.
-   * @param weekStartDay Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return this
   **/
   public MapiCalendarRecurrencePatternDto weekStartDay(String weekStartDay) {
@@ -443,7 +443,7 @@ public class MapiCalendarRecurrencePatternDto {
   }
 
   /**
-   * Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    * @return weekStartDay
   **/
   public String getWeekStartDay() {
@@ -452,7 +452,7 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Set weekStartDay.
-   * @param weekStartDay Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
   **/
   public void setWeekStartDay(String weekStartDay) {
     this.weekStartDay = weekStartDay;
@@ -548,19 +548,19 @@ public class MapiCalendarRecurrencePatternDto {
 
   /**
    * Initializes a new instance of the MapiCalendarRecurrencePatternDto
-   * @param calendarType Enumerated the calendar type of the mapi recurrence./nEnum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+   * @param calendarType Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
    * @param deletedInstanceDates An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
    * @param endDate End date of an item recurrence pattern.             
-   * @param endType Enumerates the ending type for the recurrence./nEnum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+   * @param endType Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
    * @param exceptions An exception specifies changes to an instance of a recurring series.             
-   * @param frequency Enumerates mapi calendar recurrence frequency./nEnum, available values: None, Daily, Weekly, Monthly, Yearly
+   * @param frequency Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
    * @param modifiedInstanceDates An array of dates, each of which is the date of a modified instance.             
    * @param occurrenceCount Number of occurrences in a recurrence.             
-   * @param patternType Enumerates the mapi calendar recurrence pattern types./nEnum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+   * @param patternType Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
    * @param period Interval at which the meeting pattern repeats.             
    * @param slidingFlag Defines whether pattern is sliding or not.             
    * @param startDate Start date of an item recurrence pattern.             
-   * @param weekStartDay Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+   * @param weekStartDay Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
    */
   public MapiCalendarRecurrencePatternDto(
     String calendarType,

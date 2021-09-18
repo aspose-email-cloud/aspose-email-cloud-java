@@ -52,7 +52,7 @@ public class ContactPhoto {
 
   /**
    * Set photoImageFormat and return this.
-   * @param photoImageFormat MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @return this
   **/
   public ContactPhoto photoImageFormat(String photoImageFormat) {
@@ -61,7 +61,7 @@ public class ContactPhoto {
   }
 
   /**
-   * MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @return photoImageFormat
   **/
   public String getPhotoImageFormat() {
@@ -70,7 +70,7 @@ public class ContactPhoto {
 
   /**
    * Set photoImageFormat.
-   * @param photoImageFormat MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
   **/
   public void setPhotoImageFormat(String photoImageFormat) {
     this.photoImageFormat = photoImageFormat;
@@ -171,7 +171,7 @@ public class ContactPhoto {
 
   /**
    * Initializes a new instance of the ContactPhoto
-   * @param photoImageFormat MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+   * @param photoImageFormat MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
    * @param base64Data Photo serialized as base64 string.             
    */
   public ContactPhoto(

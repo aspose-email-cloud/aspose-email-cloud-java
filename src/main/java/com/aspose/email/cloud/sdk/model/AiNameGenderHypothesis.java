@@ -50,7 +50,7 @@ public class AiNameGenderHypothesis {
 
   /**
    * Set gender and return this.
-   * @param gender Recognized name gender./nEnum, available values: Male, Female, Unknown
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
    * @return this
   **/
   public AiNameGenderHypothesis gender(String gender) {
@@ -59,7 +59,7 @@ public class AiNameGenderHypothesis {
   }
 
   /**
-   * Recognized name gender./nEnum, available values: Male, Female, Unknown
+   * Recognized name gender. Enum, available values: Male, Female, Unknown
    * @return gender
   **/
   public String getGender() {
@@ -68,7 +68,7 @@ public class AiNameGenderHypothesis {
 
   /**
    * Set gender.
-   * @param gender Recognized name gender./nEnum, available values: Male, Female, Unknown
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
   **/
   public void setGender(String gender) {
     this.gender = gender;
@@ -149,7 +149,7 @@ public class AiNameGenderHypothesis {
 
   /**
    * Initializes a new instance of the AiNameGenderHypothesis
-   * @param gender Recognized name gender./nEnum, available values: Male, Female, Unknown
+   * @param gender Recognized name gender. Enum, available values: Male, Female, Unknown
    * @param score Hypothesis score             
    */
   public AiNameGenderHypothesis(

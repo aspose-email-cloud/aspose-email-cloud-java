@@ -103,7 +103,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.bodyType and return builder.
-     * @param bodyType The content type of message body./nEnum, available values: PlainText, Html, Rtf
+     * @param bodyType The content type of message body. Enum, available values: PlainText, Html, Rtf
      * @return builder
     **/
     public EmailDtoBuilder bodyType(String bodyType) {
@@ -130,7 +130,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.deliveryNotificationOptions and return builder.
-     * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+     * @param deliveryNotificationOptions Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
      * @return builder
     **/
     public EmailDtoBuilder deliveryNotificationOptions(List<String> deliveryNotificationOptions) {
@@ -247,7 +247,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.priority and return builder.
-     * @param priority Email priority status./nEnum, available values: High, Low, Normal
+     * @param priority Email priority status. Enum, available values: High, Low, Normal
      * @return builder
     **/
     public EmailDtoBuilder priority(String priority) {
@@ -292,7 +292,7 @@ public class EmailDtoBuilder {
     }
     /**
      * Set EmailDto.sensitivity and return builder.
-     * @param sensitivity Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+     * @param sensitivity Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
      * @return builder
     **/
     public EmailDtoBuilder sensitivity(String sensitivity) {

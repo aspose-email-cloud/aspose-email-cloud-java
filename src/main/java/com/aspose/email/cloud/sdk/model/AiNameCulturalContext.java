@@ -164,7 +164,7 @@ public class AiNameCulturalContext {
 
   /**
    * Set style and return this.
-   * @param style Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    * @return this
   **/
   public AiNameCulturalContext style(String style) {
@@ -173,7 +173,7 @@ public class AiNameCulturalContext {
   }
 
   /**
-   * Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+   * Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    * @return style
   **/
   public String getStyle() {
@@ -182,7 +182,7 @@ public class AiNameCulturalContext {
 
   /**
    * Set style.
-   * @param style Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
   **/
   public void setStyle(String style) {
     this.style = style;
@@ -246,7 +246,7 @@ public class AiNameCulturalContext {
    * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France             
    * @param script A writing system code; starts with the ISO-15924 script name             
    * @param encoding A character encoding name             
-   * @param style Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+   * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
    */
   public AiNameCulturalContext(
     String language,

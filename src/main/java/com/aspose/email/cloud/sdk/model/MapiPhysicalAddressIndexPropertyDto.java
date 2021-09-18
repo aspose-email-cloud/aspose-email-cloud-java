@@ -48,7 +48,7 @@ public class MapiPhysicalAddressIndexPropertyDto extends MapiPropertyDto {
 
   /**
    * Set value and return this.
-   * @param value Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+   * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
    * @return this
   **/
   public MapiPhysicalAddressIndexPropertyDto value(String value) {
@@ -57,7 +57,7 @@ public class MapiPhysicalAddressIndexPropertyDto extends MapiPropertyDto {
   }
 
   /**
-   * Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+   * Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
    * @return value
   **/
   public String getValue() {
@@ -66,7 +66,7 @@ public class MapiPhysicalAddressIndexPropertyDto extends MapiPropertyDto {
 
   /**
    * Set value.
-   * @param value Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+   * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
   **/
   public void setValue(String value) {
     this.value = value;
@@ -122,7 +122,7 @@ public class MapiPhysicalAddressIndexPropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiPhysicalAddressIndexPropertyDto
    * @param descriptor Property descriptor             
-   * @param value Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+   * @param value Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
    */
   public MapiPhysicalAddressIndexPropertyDto(
     MapiPropertyDescriptor descriptor

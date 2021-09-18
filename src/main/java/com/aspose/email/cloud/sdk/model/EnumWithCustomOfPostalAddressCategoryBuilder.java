@@ -58,7 +58,7 @@ public class EnumWithCustomOfPostalAddressCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfPostalAddressCategory.value and return builder.
-     * @param value Address category./nEnum, available values: Home, Work, Custom
+     * @param value Address category. Enum, available values: Home, Work, Custom
      * @return builder
     **/
     public EnumWithCustomOfPostalAddressCategoryBuilder value(String value) {

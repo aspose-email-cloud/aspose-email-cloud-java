@@ -85,7 +85,7 @@ public class WeeklyRecurrencePatternDtoBuilder {
     }
     /**
      * Set WeeklyRecurrencePatternDto.weekStart and return builder.
-     * @param weekStart Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param weekStart Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public WeeklyRecurrencePatternDtoBuilder weekStart(String weekStart) {
@@ -94,7 +94,7 @@ public class WeeklyRecurrencePatternDtoBuilder {
     }
     /**
      * Set WeeklyRecurrencePatternDto.startDays and return builder.
-     * @param startDays Start days              Items: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+     * @param startDays Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
      * @return builder
     **/
     public WeeklyRecurrencePatternDtoBuilder startDays(List<String> startDays) {

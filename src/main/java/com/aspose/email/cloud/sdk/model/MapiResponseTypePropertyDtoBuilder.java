@@ -67,7 +67,7 @@ public class MapiResponseTypePropertyDtoBuilder {
     }
     /**
      * Set MapiResponseTypePropertyDto.value and return builder.
-     * @param value Represents the types of recipient responses that are received for a meeting./nEnum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+     * @param value Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
      * @return builder
     **/
     public MapiResponseTypePropertyDtoBuilder value(String value) {

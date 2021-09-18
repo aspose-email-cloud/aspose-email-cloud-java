@@ -81,7 +81,7 @@ public class AiNameExpandRequestBuilder {
         return this;
     }
     /**
-     * Setter for: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      **/
     public AiNameExpandRequestBuilder style(String style) {
         this.model.style(style);

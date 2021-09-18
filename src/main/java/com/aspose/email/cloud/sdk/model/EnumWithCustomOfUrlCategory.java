@@ -50,7 +50,7 @@ public class EnumWithCustomOfUrlCategory {
 
   /**
    * Set value and return this.
-   * @param value Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+   * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
    * @return this
   **/
   public EnumWithCustomOfUrlCategory value(String value) {
@@ -59,7 +59,7 @@ public class EnumWithCustomOfUrlCategory {
   }
 
   /**
-   * Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+   * Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
    * @return value
   **/
   public String getValue() {
@@ -68,7 +68,7 @@ public class EnumWithCustomOfUrlCategory {
 
   /**
    * Set value.
-   * @param value Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+   * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
   **/
   public void setValue(String value) {
     this.value = value;
@@ -149,7 +149,7 @@ public class EnumWithCustomOfUrlCategory {
 
   /**
    * Initializes a new instance of the EnumWithCustomOfUrlCategory
-   * @param value Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+   * @param value Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
    * @param description 
    */
   public EnumWithCustomOfUrlCategory(

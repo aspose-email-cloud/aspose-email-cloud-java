@@ -41,7 +41,7 @@ public class ContactGetListRequest
 
     /**
      * Initializes a new instance of the ContactGetListRequest class.   
-     * @param format Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * @param format Contact document format. Enum, available values: VCard, WebDav, Msg
      * @param folder Path to folder in storage.
      * @param storage Storage name.
      * @param itemsPerPage Count of items on page.
@@ -59,21 +59,21 @@ public class ContactGetListRequest
     private String format;
 
     /**
-     * Getter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Getter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: Contact document format./nEnum, available values: VCard, WebDav, Msg
+     * Setter for: Contact document format. Enum, available values: VCard, WebDav, Msg
      **/
     public ContactGetListRequest format(String value) {
         this.format = value;

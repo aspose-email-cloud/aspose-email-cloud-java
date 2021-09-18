@@ -58,7 +58,7 @@ public class AiNameMismatchBuilder {
     }
     /**
      * Set AiNameMismatch.category and return builder.
-     * @param category Mismatch type./nEnum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+     * @param category Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
      * @return builder
     **/
     public AiNameMismatchBuilder category(String category) {

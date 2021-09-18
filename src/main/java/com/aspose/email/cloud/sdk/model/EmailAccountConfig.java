@@ -89,7 +89,7 @@ public class EmailAccountConfig {
 
   /**
    * Set protocolType and return this.
-   * @param protocolType Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @return this
   **/
   public EmailAccountConfig protocolType(String protocolType) {
@@ -98,7 +98,7 @@ public class EmailAccountConfig {
   }
 
   /**
-   * Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @return protocolType
   **/
   public String getProtocolType() {
@@ -107,7 +107,7 @@ public class EmailAccountConfig {
 
   /**
    * Set protocolType.
-   * @param protocolType Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
   **/
   public void setProtocolType(String protocolType) {
     this.protocolType = protocolType;
@@ -170,7 +170,7 @@ public class EmailAccountConfig {
 
   /**
    * Set socketType and return this.
-   * @param socketType Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return this
   **/
   public EmailAccountConfig socketType(String socketType) {
@@ -179,7 +179,7 @@ public class EmailAccountConfig {
   }
 
   /**
-   * Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return socketType
   **/
   public String getSocketType() {
@@ -188,7 +188,7 @@ public class EmailAccountConfig {
 
   /**
    * Set socketType.
-   * @param socketType Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param socketType Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
   **/
   public void setSocketType(String socketType) {
     this.socketType = socketType;
@@ -197,7 +197,7 @@ public class EmailAccountConfig {
 
   /**
    * Set authenticationTypes and return this.
-   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
    * @return this
   **/
   public EmailAccountConfig authenticationTypes(List<String> authenticationTypes) {
@@ -218,7 +218,7 @@ public class EmailAccountConfig {
   }
 
   /**
-   * Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+   * Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
    * @return authenticationTypes
   **/
   public List<String> getAuthenticationTypes() {
@@ -227,7 +227,7 @@ public class EmailAccountConfig {
 
   /**
    * Set authenticationTypes.
-   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
   **/
   public void setAuthenticationTypes(List<String> authenticationTypes) {
     this.authenticationTypes = authenticationTypes;
@@ -360,11 +360,11 @@ public class EmailAccountConfig {
   /**
    * Initializes a new instance of the EmailAccountConfig
    * @param displayName Email account display name             
-   * @param protocolType Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+   * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param host Email account host.             
    * @param port Port.             
-   * @param socketType Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
-   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+   * @param socketType Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param authenticationTypes Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
    * @param extraInfo Extra account information.             
    * @param isValidated Determines that configuration validated. Set to false if validation skipped.             
    */

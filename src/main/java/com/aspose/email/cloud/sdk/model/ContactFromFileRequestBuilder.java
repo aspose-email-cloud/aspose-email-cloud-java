@@ -46,7 +46,7 @@ public class ContactFromFileRequestBuilder {
     }
 
     /**
-     * Setter for: File format./nEnum, available values: VCard, WebDav, Msg
+     * Setter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public ContactFromFileRequestBuilder format(String format) {
         this.model.format(format);

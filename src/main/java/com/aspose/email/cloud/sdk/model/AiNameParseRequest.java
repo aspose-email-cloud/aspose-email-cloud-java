@@ -46,7 +46,7 @@ public class AiNameParseRequest
      * @param location A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France.             
      * @param encoding A character encoding name.
      * @param script A writing system code; starts with the ISO-15924 script name.
-     * @param style Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * @param style Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      **/
     public AiNameParseRequest(String name, String language, String location, String encoding, String script, String style)             
     {
@@ -181,21 +181,21 @@ public class AiNameParseRequest
     private String style;
 
     /**
-     * Getter for: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * Getter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      **/
     public String getStyle() {
         return style;
     }
 
     /**
-     * Setter for: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      **/
     public void setStyle(String value) {
         this.style = value;
     }
 
     /**
-     * Setter for: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+     * Setter for: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
      **/
     public AiNameParseRequest style(String value) {
         this.style = value;

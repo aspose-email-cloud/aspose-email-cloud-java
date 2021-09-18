@@ -58,7 +58,7 @@ public class EnumWithCustomOfEventCategoryBuilder {
     }
     /**
      * Set EnumWithCustomOfEventCategory.value and return builder.
-     * @param value Event category./nEnum, available values: Custom, Birthday, Anniversary
+     * @param value Event category. Enum, available values: Custom, Birthday, Anniversary
      * @return builder
     **/
     public EnumWithCustomOfEventCategoryBuilder value(String value) {

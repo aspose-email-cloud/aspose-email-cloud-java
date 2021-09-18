@@ -46,14 +46,14 @@ public class EmailConvertRequestBuilder {
     }
 
     /**
-     * Setter for: File format to convert from./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format to convert from. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailConvertRequestBuilder fromFormat(String fromFormat) {
         this.model.fromFormat(fromFormat);
         return this;
     }
     /**
-     * Setter for: File format to convert to./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format to convert to. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailConvertRequestBuilder toFormat(String toFormat) {
         this.model.toFormat(toFormat);

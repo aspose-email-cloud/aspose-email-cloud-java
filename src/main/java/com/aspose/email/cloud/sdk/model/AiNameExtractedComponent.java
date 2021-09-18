@@ -50,7 +50,7 @@ public class AiNameExtractedComponent {
 
   /**
    * Set category and return this.
-   * @param category Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
    * @return this
   **/
   public AiNameExtractedComponent category(String category) {
@@ -59,7 +59,7 @@ public class AiNameExtractedComponent {
   }
 
   /**
-   * Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
    * @return category
   **/
   public String getCategory() {
@@ -68,7 +68,7 @@ public class AiNameExtractedComponent {
 
   /**
    * Set category.
-   * @param category Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
   **/
   public void setCategory(String category) {
     this.category = category;
@@ -149,7 +149,7 @@ public class AiNameExtractedComponent {
 
   /**
    * Initializes a new instance of the AiNameExtractedComponent
-   * @param category Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+   * @param category Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
    * @param value Extracted value             
    */
   public AiNameExtractedComponent(

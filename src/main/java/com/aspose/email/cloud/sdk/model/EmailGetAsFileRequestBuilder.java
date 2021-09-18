@@ -53,7 +53,7 @@ public class EmailGetAsFileRequestBuilder {
         return this;
     }
     /**
-     * Setter for: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public EmailGetAsFileRequestBuilder format(String format) {
         this.model.format(format);

@@ -67,7 +67,7 @@ public class MailMessageBase64Builder {
     }
     /**
      * Set MailMessageBase64.format and return builder.
-     * @param format Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @param format Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      * @return builder
     **/
     public MailMessageBase64Builder format(String format) {

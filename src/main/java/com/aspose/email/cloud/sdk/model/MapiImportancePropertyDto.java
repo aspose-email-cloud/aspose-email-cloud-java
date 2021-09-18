@@ -48,7 +48,7 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
 
   /**
    * Set value and return this.
-   * @param value Levels of importance for an item./nEnum, available values: Low, Normal, High
+   * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
    * @return this
   **/
   public MapiImportancePropertyDto value(String value) {
@@ -57,7 +57,7 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
   }
 
   /**
-   * Levels of importance for an item./nEnum, available values: Low, Normal, High
+   * Levels of importance for an item. Enum, available values: Low, Normal, High
    * @return value
   **/
   public String getValue() {
@@ -66,7 +66,7 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
 
   /**
    * Set value.
-   * @param value Levels of importance for an item./nEnum, available values: Low, Normal, High
+   * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
   **/
   public void setValue(String value) {
     this.value = value;
@@ -122,7 +122,7 @@ public class MapiImportancePropertyDto extends MapiPropertyDto {
   /**
    * Initializes a new instance of the MapiImportancePropertyDto
    * @param descriptor Property descriptor             
-   * @param value Levels of importance for an item./nEnum, available values: Low, Normal, High
+   * @param value Levels of importance for an item. Enum, available values: Low, Normal, High
    */
   public MapiImportancePropertyDto(
     MapiPropertyDescriptor descriptor

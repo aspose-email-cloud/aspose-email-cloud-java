@@ -76,7 +76,7 @@ public class MailAddressBuilder {
     }
     /**
      * Set MailAddress.participationStatus and return builder.
-     * @param participationStatus Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+     * @param participationStatus Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
      * @return builder
     **/
     public MailAddressBuilder participationStatus(String participationStatus) {
