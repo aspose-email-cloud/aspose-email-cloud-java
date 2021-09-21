@@ -107,6 +107,10 @@ public class EmailDto {
   private List<MailAddress> to = null;
   @JsonProperty("xMailer")
   private String xMailer = null;
+  @JsonProperty("epilogue")
+  private String epilogue = null;
+  @JsonProperty("preamble")
+  private String preamble = null;
 
   /**
    * Set alternateViews and return this.
@@ -1095,6 +1099,60 @@ public class EmailDto {
   }
 
 
+  /**
+   * Set epilogue and return this.
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+   * @return this
+  **/
+  public EmailDto epilogue(String epilogue) {
+    this.epilogue = epilogue;
+    return this;
+  }
+
+  /**
+   * Gets or sets an epilogue text. It is located after the last boundary.
+   * @return epilogue
+  **/
+  public String getEpilogue() {
+    return epilogue;
+  }  
+
+  /**
+   * Set epilogue.
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+  **/
+  public void setEpilogue(String epilogue) {
+    this.epilogue = epilogue;
+  }
+
+
+  /**
+   * Set preamble and return this.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+   * @return this
+  **/
+  public EmailDto preamble(String preamble) {
+    this.preamble = preamble;
+    return this;
+  }
+
+  /**
+   * Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+   * @return preamble
+  **/
+  public String getPreamble() {
+    return preamble;
+  }  
+
+  /**
+   * Set preamble.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+  **/
+  public void setPreamble(String preamble) {
+    this.preamble = preamble;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
   if (this == o) {
@@ -1135,12 +1193,14 @@ public class EmailDto {
     ObjectUtils.equals(this.subjectEncoding, emailDto.subjectEncoding) &&
     ObjectUtils.equals(this.timeZoneOffset, emailDto.timeZoneOffset) &&
     ObjectUtils.equals(this.to, emailDto.to) &&
-    ObjectUtils.equals(this.xMailer, emailDto.xMailer);
+    ObjectUtils.equals(this.xMailer, emailDto.xMailer) &&
+    ObjectUtils.equals(this.epilogue, emailDto.epilogue) &&
+    ObjectUtils.equals(this.preamble, emailDto.preamble);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(alternateViews, attachments, bcc, body, bodyEncoding, bodyType, cc, date, deliveryNotificationOptions, from, headers, htmlBody, htmlBodyText, isBodyHtml, isDraft, isEncrypted, isSigned, linkedResources, messageId, originalIsTnef, preferredTextEncoding, priority, readReceiptTo, replyToList, reversePath, sender, sensitivity, subject, subjectEncoding, timeZoneOffset, to, xMailer);
+    return ObjectUtils.hashCodeMulti(alternateViews, attachments, bcc, body, bodyEncoding, bodyType, cc, date, deliveryNotificationOptions, from, headers, htmlBody, htmlBodyText, isBodyHtml, isDraft, isEncrypted, isSigned, linkedResources, messageId, originalIsTnef, preferredTextEncoding, priority, readReceiptTo, replyToList, reversePath, sender, sensitivity, subject, subjectEncoding, timeZoneOffset, to, xMailer, epilogue, preamble);
   }
 
 
@@ -1181,6 +1241,8 @@ public class EmailDto {
     sb.append("    timeZoneOffset: ").append(toIndentedString(getTimeZoneOffset())).append("\n");
     sb.append("    to: ").append(toIndentedString(getTo())).append("\n");
     sb.append("    xMailer: ").append(toIndentedString(getXMailer())).append("\n");
+    sb.append("    epilogue: ").append(toIndentedString(getEpilogue())).append("\n");
+    sb.append("    preamble: ").append(toIndentedString(getPreamble())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -1234,6 +1296,8 @@ public class EmailDto {
    * @param timeZoneOffset Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
    * @param to The address collection that contains the recipients of message.             
    * @param xMailer The X-Mailer the software that created the e-mail message.             
+   * @param epilogue Gets or sets an epilogue text. It is located after the last boundary.
+   * @param preamble Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
    */
   public EmailDto(
     List<AlternateView> alternateViews,
@@ -1267,7 +1331,9 @@ public class EmailDto {
     String subjectEncoding,
     Long timeZoneOffset,
     List<MailAddress> to,
-    String xMailer
+    String xMailer,
+    String epilogue,
+    String preamble
   ) {
     super();
     setAlternateViews(alternateViews);
@@ -1302,6 +1368,8 @@ public class EmailDto {
     setTimeZoneOffset(timeZoneOffset);
     setTo(to);
     setXMailer(xMailer);
+    setEpilogue(epilogue);
+    setPreamble(preamble);
   }
 
 }

@@ -76,7 +76,7 @@ public class MapiCalendarExceptionInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarExceptionInfoDto.busyStatus and return builder.
-     * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+     * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
      * @return builder
     **/
     public MapiCalendarExceptionInfoDtoBuilder busyStatus(String busyStatus) {
@@ -112,7 +112,7 @@ public class MapiCalendarExceptionInfoDtoBuilder {
     }
     /**
      * Set MapiCalendarExceptionInfoDto.meetingType and return builder.
-     * @param meetingType Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+     * @param meetingType Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
      * @return builder
     **/
     public MapiCalendarExceptionInfoDtoBuilder meetingType(String meetingType) {

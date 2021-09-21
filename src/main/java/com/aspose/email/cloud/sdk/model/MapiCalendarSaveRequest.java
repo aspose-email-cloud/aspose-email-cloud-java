@@ -48,7 +48,7 @@ public class MapiCalendarSaveRequest extends StorageModelOfMapiCalendarDto {
 
   /**
    * Set format and return this.
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
    * @return this
   **/
   public MapiCalendarSaveRequest format(String format) {
@@ -57,7 +57,7 @@ public class MapiCalendarSaveRequest extends StorageModelOfMapiCalendarDto {
   }
 
   /**
-   * Calendar file format Enum, available values: Ics, Msg
+   * Calendar file format. Enum, available values: Ics, Msg
    * @return format
   **/
   public String getFormat() {
@@ -66,7 +66,7 @@ public class MapiCalendarSaveRequest extends StorageModelOfMapiCalendarDto {
 
   /**
    * Set format.
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
   **/
   public void setFormat(String format) {
     this.format = format;
@@ -123,7 +123,7 @@ public class MapiCalendarSaveRequest extends StorageModelOfMapiCalendarDto {
    * Initializes a new instance of the MapiCalendarSaveRequest
    * @param storageFile 
    * @param value 
-   * @param format Calendar file format Enum, available values: Ics, Msg
+   * @param format Calendar file format. Enum, available values: Ics, Msg
    */
   public MapiCalendarSaveRequest(
     StorageFileLocation storageFile,

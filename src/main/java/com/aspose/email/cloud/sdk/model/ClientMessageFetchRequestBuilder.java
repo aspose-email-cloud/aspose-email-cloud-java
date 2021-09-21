@@ -81,7 +81,7 @@ public class ClientMessageFetchRequestBuilder {
         return this;
     }
     /**
-     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      **/
     public ClientMessageFetchRequestBuilder type(String type) {
         this.model.type(type);

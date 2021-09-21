@@ -58,7 +58,7 @@ public class CalendarAsFileRequestBuilder {
     }
     /**
      * Set CalendarAsFileRequest.format and return builder.
-     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @param format Calendar file format. Enum, available values: Ics, Msg
      * @return builder
     **/
     public CalendarAsFileRequestBuilder format(String format) {

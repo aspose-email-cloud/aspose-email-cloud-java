@@ -94,7 +94,7 @@ public class EmailAccountConfigBuilder {
     }
     /**
      * Set EmailAccountConfig.socketType and return builder.
-     * @param socketType Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @param socketType Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
      * @return builder
     **/
     public EmailAccountConfigBuilder socketType(String socketType) {

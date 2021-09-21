@@ -42,8 +42,8 @@ public class ContactGetAsFileRequest
     /**
      * Initializes a new instance of the ContactGetAsFileRequest class.   
      * @param fileName Calendar document file name
-     * @param toFormat File format Enum, available values: VCard, WebDav, Msg
-     * @param fromFormat File format to convert from Enum, available values: VCard, WebDav, Msg
+     * @param toFormat File format. Enum, available values: VCard, WebDav, Msg
+     * @param fromFormat File format to convert from. Enum, available values: VCard, WebDav, Msg
      * @param storage Storage name
      * @param folder Path to folder in storage
      **/
@@ -83,21 +83,21 @@ public class ContactGetAsFileRequest
     private String toFormat;
 
     /**
-     * Getter for: File format Enum, available values: VCard, WebDav, Msg
+     * Getter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public String getToFormat() {
         return toFormat;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public void setToFormat(String value) {
         this.toFormat = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public ContactGetAsFileRequest toFormat(String value) {
         this.toFormat = value;
@@ -107,21 +107,21 @@ public class ContactGetAsFileRequest
     private String fromFormat;
 
     /**
-     * Getter for: File format to convert from Enum, available values: VCard, WebDav, Msg
+     * Getter for: File format to convert from. Enum, available values: VCard, WebDav, Msg
      **/
     public String getFromFormat() {
         return fromFormat;
     }
 
     /**
-     * Setter for: File format to convert from Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format to convert from. Enum, available values: VCard, WebDav, Msg
      **/
     public void setFromFormat(String value) {
         this.fromFormat = value;
     }
 
     /**
-     * Setter for: File format to convert from Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format to convert from. Enum, available values: VCard, WebDav, Msg
      **/
     public ContactGetAsFileRequest fromFormat(String value) {
         this.fromFormat = value;

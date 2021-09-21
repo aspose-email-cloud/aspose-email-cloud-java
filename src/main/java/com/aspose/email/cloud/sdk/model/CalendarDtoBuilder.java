@@ -254,4 +254,22 @@ public class CalendarDtoBuilder {
         this.model.transparency(transparency);
         return this;
     }
+    /**
+     * Set CalendarDto.propertyClass and return builder.
+     * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+     * @return builder
+    **/
+    public CalendarDtoBuilder propertyClass(String propertyClass) {
+        this.model.propertyClass(propertyClass);
+        return this;
+    }
+    /**
+     * Set CalendarDto.microsoftImportance and return builder.
+     * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+     * @return builder
+    **/
+    public CalendarDtoBuilder microsoftImportance(String microsoftImportance) {
+        this.model.microsoftImportance(microsoftImportance);
+        return this;
+    }
 }

@@ -46,7 +46,7 @@ public class ClientMessageFetchRequest
      * @param folder Account folder to fetch from (should be specified for some protocols such as IMAP)             
      * @param storage Storage name where account file located.
      * @param accountStorageFolder Folder in storage where account file located.
-     * @param type MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * @param type MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      * @param format Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public ClientMessageFetchRequest(String messageId, String account, String folder, String storage, String accountStorageFolder, String type, String format)             
@@ -183,21 +183,21 @@ public class ClientMessageFetchRequest
     private String type;
 
     /**
-     * Getter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * Getter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      **/
     public String getType() {
         return type;
     }
 
     /**
-     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      **/
     public void setType(String value) {
         this.type = value;
     }
 
     /**
-     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+     * Setter for: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string). Enum, available values: Dto, Mapi, Base64
      **/
     public ClientMessageFetchRequest type(String value) {
         this.type = value;

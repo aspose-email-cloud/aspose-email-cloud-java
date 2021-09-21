@@ -202,7 +202,7 @@ public class MapiContactPersonalInfoPropertySetDtoBuilder {
     }
     /**
      * Set MapiContactPersonalInfoPropertySetDto.gender and return builder.
-     * @param gender Gender of the contact Enum, available values: Unspecified, Female, Male
+     * @param gender Gender of the contact. Enum, available values: Unspecified, Female, Male
      * @return builder
     **/
     public MapiContactPersonalInfoPropertySetDtoBuilder gender(String gender) {

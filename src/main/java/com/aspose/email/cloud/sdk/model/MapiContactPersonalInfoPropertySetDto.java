@@ -516,7 +516,7 @@ public class MapiContactPersonalInfoPropertySetDto {
 
   /**
    * Set gender and return this.
-   * @param gender Gender of the contact Enum, available values: Unspecified, Female, Male
+   * @param gender Gender of the contact. Enum, available values: Unspecified, Female, Male
    * @return this
   **/
   public MapiContactPersonalInfoPropertySetDto gender(String gender) {
@@ -525,7 +525,7 @@ public class MapiContactPersonalInfoPropertySetDto {
   }
 
   /**
-   * Gender of the contact Enum, available values: Unspecified, Female, Male
+   * Gender of the contact. Enum, available values: Unspecified, Female, Male
    * @return gender
   **/
   public String getGender() {
@@ -534,7 +534,7 @@ public class MapiContactPersonalInfoPropertySetDto {
 
   /**
    * Set gender.
-   * @param gender Gender of the contact Enum, available values: Unspecified, Female, Male
+   * @param gender Gender of the contact. Enum, available values: Unspecified, Female, Male
   **/
   public void setGender(String gender) {
     this.gender = gender;
@@ -704,7 +704,7 @@ public class MapiContactPersonalInfoPropertySetDto {
    * @param businessHomePage Specifies the contact&#39;s business web page URL             
    * @param ftpSite Specifies the contact&#39;s File Transfer Protocol (FTP) URL             
    * @param computerNetworkName Specifies the name of the network to which the contact&#39;s computer is connected             
-   * @param gender Gender of the contact Enum, available values: Unspecified, Female, Male
+   * @param gender Gender of the contact. Enum, available values: Unspecified, Female, Male
    * @param referredByName Specifies the name of the person who referred this contact to the user             
    * @param children Contains a list of names of children.             
    */

@@ -46,7 +46,7 @@ public class MapiMessageFromFileRequestBuilder {
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public MapiMessageFromFileRequestBuilder format(String format) {
         this.model.format(format);

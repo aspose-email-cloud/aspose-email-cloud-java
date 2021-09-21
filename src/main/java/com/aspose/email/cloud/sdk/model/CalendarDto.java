@@ -87,6 +87,10 @@ public class CalendarDto {
   private String summary = null;
   @JsonProperty("transparency")
   private String transparency = null;
+  @JsonProperty("propertyClass")
+  private String propertyClass = null;
+  @JsonProperty("microsoftImportance")
+  private String microsoftImportance = null;
 
   /**
    * Set attachments and return this.
@@ -739,6 +743,60 @@ public class CalendarDto {
   }
 
 
+  /**
+   * Set propertyClass and return this.
+   * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+   * @return this
+  **/
+  public CalendarDto propertyClass(String propertyClass) {
+    this.propertyClass = propertyClass;
+    return this;
+  }
+
+  /**
+   * Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+   * @return propertyClass
+  **/
+  public String getPropertyClass() {
+    return propertyClass;
+  }  
+
+  /**
+   * Set propertyClass.
+   * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+  **/
+  public void setPropertyClass(String propertyClass) {
+    this.propertyClass = propertyClass;
+  }
+
+
+  /**
+   * Set microsoftImportance and return this.
+   * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+   * @return this
+  **/
+  public CalendarDto microsoftImportance(String microsoftImportance) {
+    this.microsoftImportance = microsoftImportance;
+    return this;
+  }
+
+  /**
+   * Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+   * @return microsoftImportance
+  **/
+  public String getMicrosoftImportance() {
+    return microsoftImportance;
+  }  
+
+  /**
+   * Set microsoftImportance.
+   * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+  **/
+  public void setMicrosoftImportance(String microsoftImportance) {
+    this.microsoftImportance = microsoftImportance;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
   if (this == o) {
@@ -769,12 +827,14 @@ public class CalendarDto {
     ObjectUtils.equals(this.startTimeZone, calendarDto.startTimeZone) &&
     ObjectUtils.equals(this.status, calendarDto.status) &&
     ObjectUtils.equals(this.summary, calendarDto.summary) &&
-    ObjectUtils.equals(this.transparency, calendarDto.transparency);
+    ObjectUtils.equals(this.transparency, calendarDto.transparency) &&
+    ObjectUtils.equals(this.propertyClass, calendarDto.propertyClass) &&
+    ObjectUtils.equals(this.microsoftImportance, calendarDto.microsoftImportance);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency);
+    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency, propertyClass, microsoftImportance);
   }
 
 
@@ -805,6 +865,8 @@ public class CalendarDto {
     sb.append("    status: ").append(toIndentedString(getStatus())).append("\n");
     sb.append("    summary: ").append(toIndentedString(getSummary())).append("\n");
     sb.append("    transparency: ").append(toIndentedString(getTransparency())).append("\n");
+    sb.append("    propertyClass: ").append(toIndentedString(getPropertyClass())).append("\n");
+    sb.append("    microsoftImportance: ").append(toIndentedString(getMicrosoftImportance())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -848,6 +910,8 @@ public class CalendarDto {
    * @param status Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
    * @param summary Summary.
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+   * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+   * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
    */
   public CalendarDto(
     List<Attachment> attachments,
@@ -871,7 +935,9 @@ public class CalendarDto {
     String startTimeZone,
     String status,
     String summary,
-    String transparency
+    String transparency,
+    String propertyClass,
+    String microsoftImportance
   ) {
     super();
     setAttachments(attachments);
@@ -896,6 +962,8 @@ public class CalendarDto {
     setStatus(status);
     setSummary(summary);
     setTransparency(transparency);
+    setPropertyClass(propertyClass);
+    setMicrosoftImportance(microsoftImportance);
   }
 
 }

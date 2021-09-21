@@ -76,7 +76,7 @@ public class EmailClientAccountBuilder {
     }
     /**
      * Set EmailClientAccount.securityOptions and return builder.
-     * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+     * @param securityOptions Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
      * @return builder
     **/
     public EmailClientAccountBuilder securityOptions(String securityOptions) {

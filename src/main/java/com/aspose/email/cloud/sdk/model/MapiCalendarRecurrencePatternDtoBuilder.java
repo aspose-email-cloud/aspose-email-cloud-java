@@ -58,7 +58,7 @@ public class MapiCalendarRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarRecurrencePatternDto.calendarType and return builder.
-     * @param calendarType Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+     * @param calendarType Enumerated the calendar type of the mapi recurrence. Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
      * @return builder
     **/
     public MapiCalendarRecurrencePatternDtoBuilder calendarType(String calendarType) {
@@ -103,7 +103,7 @@ public class MapiCalendarRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarRecurrencePatternDto.frequency and return builder.
-     * @param frequency Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
+     * @param frequency Enumerates mapi calendar recurrence frequency. Enum, available values: None, Daily, Weekly, Monthly, Yearly
      * @return builder
     **/
     public MapiCalendarRecurrencePatternDtoBuilder frequency(String frequency) {
@@ -130,7 +130,7 @@ public class MapiCalendarRecurrencePatternDtoBuilder {
     }
     /**
      * Set MapiCalendarRecurrencePatternDto.patternType and return builder.
-     * @param patternType Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+     * @param patternType Enumerates the mapi calendar recurrence pattern types. Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
      * @return builder
     **/
     public MapiCalendarRecurrencePatternDtoBuilder patternType(String patternType) {

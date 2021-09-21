@@ -140,7 +140,7 @@ public class MapiCalendarExceptionInfoDto {
 
   /**
    * Set busyStatus and return this.
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
    * @return this
   **/
   public MapiCalendarExceptionInfoDto busyStatus(String busyStatus) {
@@ -149,7 +149,7 @@ public class MapiCalendarExceptionInfoDto {
   }
 
   /**
-   * Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
    * @return busyStatus
   **/
   public String getBusyStatus() {
@@ -158,7 +158,7 @@ public class MapiCalendarExceptionInfoDto {
 
   /**
    * Set busyStatus.
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
   **/
   public void setBusyStatus(String busyStatus) {
     this.busyStatus = busyStatus;
@@ -248,7 +248,7 @@ public class MapiCalendarExceptionInfoDto {
 
   /**
    * Set meetingType and return this.
-   * @param meetingType Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+   * @param meetingType Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
    * @return this
   **/
   public MapiCalendarExceptionInfoDto meetingType(String meetingType) {
@@ -257,7 +257,7 @@ public class MapiCalendarExceptionInfoDto {
   }
 
   /**
-   * Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+   * Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
    * @return meetingType
   **/
   public String getMeetingType() {
@@ -266,7 +266,7 @@ public class MapiCalendarExceptionInfoDto {
 
   /**
    * Set meetingType.
-   * @param meetingType Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+   * @param meetingType Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
   **/
   public void setMeetingType(String meetingType) {
     this.meetingType = meetingType;
@@ -547,11 +547,11 @@ public class MapiCalendarExceptionInfoDto {
    * Initializes a new instance of the MapiCalendarExceptionInfoDto
    * @param attachments Attachments in the recurrence exception.             
    * @param body Body.             
-   * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+   * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
    * @param endDateTime End date.             
    * @param hasAttachment Value of this field specifies whether the Exception Embedded Message object contains attachments.             
    * @param location Location.             
-   * @param meetingType Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+   * @param meetingType Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
    * @param originalStartDate Original start date.             
    * @param overrideFlags Override flags.              Items: Specifies what data in the MapiCalendarOverride structure has a value different from the recurring series. Enum, available values: Subject, MeetingType, ReminderDelta, Reminder, Location, BusyStatus, Attachment, Subtype, AppointmentColor, ExceptionalBody
    * @param reminderDelta Reminder delta.             

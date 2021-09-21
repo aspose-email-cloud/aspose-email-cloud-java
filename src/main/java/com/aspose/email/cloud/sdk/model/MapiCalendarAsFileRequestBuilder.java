@@ -58,7 +58,7 @@ public class MapiCalendarAsFileRequestBuilder {
     }
     /**
      * Set MapiCalendarAsFileRequest.format and return builder.
-     * @param format Calendar file format Enum, available values: Ics, Msg
+     * @param format Calendar file format. Enum, available values: Ics, Msg
      * @return builder
     **/
     public MapiCalendarAsFileRequestBuilder format(String format) {

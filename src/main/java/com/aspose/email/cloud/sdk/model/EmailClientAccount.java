@@ -114,7 +114,7 @@ public class EmailClientAccount {
 
   /**
    * Set securityOptions and return this.
-   * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param securityOptions Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return this
   **/
   public EmailClientAccount securityOptions(String securityOptions) {
@@ -123,7 +123,7 @@ public class EmailClientAccount {
   }
 
   /**
-   * Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @return securityOptions
   **/
   public String getSecurityOptions() {
@@ -132,7 +132,7 @@ public class EmailClientAccount {
 
   /**
    * Set securityOptions.
-   * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param securityOptions Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
   **/
   public void setSecurityOptions(String securityOptions) {
     this.securityOptions = securityOptions;
@@ -277,7 +277,7 @@ public class EmailClientAccount {
    * Initializes a new instance of the EmailClientAccount
    * @param host Mail server host name or IP address             
    * @param port Mail server port             
-   * @param securityOptions Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+   * @param securityOptions Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
    * @param protocolType Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
    * @param credentials Email client account credentials             
    * @param cacheFile File with messages cache. Used to provide extra functions, which are not supported by account             

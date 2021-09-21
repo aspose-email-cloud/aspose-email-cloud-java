@@ -41,7 +41,7 @@ public class MapiContactFromFileRequest
 
     /**
      * Initializes a new instance of the MapiContactFromFileRequest class.   
-     * @param format File format Enum, available values: VCard, WebDav, Msg
+     * @param format File format. Enum, available values: VCard, WebDav, Msg
      * @param file File to convert
      **/
     public MapiContactFromFileRequest(String format, byte[] file)             
@@ -53,21 +53,21 @@ public class MapiContactFromFileRequest
     private String format;
 
     /**
-     * Getter for: File format Enum, available values: VCard, WebDav, Msg
+     * Getter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: VCard, WebDav, Msg
+     * Setter for: File format. Enum, available values: VCard, WebDav, Msg
      **/
     public MapiContactFromFileRequest format(String value) {
         this.format = value;

@@ -220,7 +220,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.busyStatus and return builder.
-     * @param busyStatus Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+     * @param busyStatus Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
      * @return builder
     **/
     public MapiCalendarDtoBuilder busyStatus(String busyStatus) {
@@ -229,7 +229,7 @@ public class MapiCalendarDtoBuilder {
     }
     /**
      * Set MapiCalendarDto.clientIntent and return builder.
-     * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+     * @param clientIntent Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object. Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
      * @return builder
     **/
     public MapiCalendarDtoBuilder clientIntent(List<String> clientIntent) {

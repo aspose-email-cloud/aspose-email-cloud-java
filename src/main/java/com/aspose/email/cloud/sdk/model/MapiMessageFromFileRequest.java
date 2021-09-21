@@ -41,7 +41,7 @@ public class MapiMessageFromFileRequest
 
     /**
      * Initializes a new instance of the MapiMessageFromFileRequest class.   
-     * @param format File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * @param format File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      * @param file File to convert
      **/
     public MapiMessageFromFileRequest(String format, byte[] file)             
@@ -53,21 +53,21 @@ public class MapiMessageFromFileRequest
     private String format;
 
     /**
-     * Getter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Getter for: File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public String getFormat() {
         return format;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public void setFormat(String value) {
         this.format = value;
     }
 
     /**
-     * Setter for: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+     * Setter for: File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
      **/
     public MapiMessageFromFileRequest format(String value) {
         this.format = value;
