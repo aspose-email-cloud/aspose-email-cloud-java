@@ -233,7 +233,7 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jackson-version>2.12.5</jackson-version>
+    <jackson-version>2.13.4.1</jackson-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
   </properties>
 </project>
