@@ -9,14 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 19
+    - name: Set up JDK 17
       uses: actions/setup-java@v2
       with:
         distribution: 'zulu'
-        java-version: 19
+        java-version: 17
     - name: Run tests
       run: mvn test -Dgroups=pipeline --batch-mode -q
       env:
-        clientId: ${{secrets.appSid}}
-        clientSecret: ${{secrets.appKey}}
-        apiBaseUrl: "https://api-qa.aspose.cloud"
+        clientId: ${{secrets.appSidProd}}
+        clientSecret: ${{secrets.appKeyProd}}
+        apiBaseUrl: "https://api.aspose.cloud"
