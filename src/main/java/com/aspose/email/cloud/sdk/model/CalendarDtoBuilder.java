@@ -272,4 +272,22 @@ public class CalendarDtoBuilder {
         this.model.microsoftImportance(microsoftImportance);
         return this;
     }
+    /**
+     * Set CalendarDto.htmlDescription and return builder.
+     * @param htmlDescription HTML representation of description.             
+     * @return builder
+    **/
+    public CalendarDtoBuilder htmlDescription(String htmlDescription) {
+        this.model.htmlDescription(htmlDescription);
+        return this;
+    }
+    /**
+     * Set CalendarDto.dateTimeStamp and return builder.
+     * @param dateTimeStamp Date/time that the instance of the iCalendar object was created.             
+     * @return builder
+    **/
+    public CalendarDtoBuilder dateTimeStamp(Date dateTimeStamp) {
+        this.model.dateTimeStamp(dateTimeStamp);
+        return this;
+    }
 }

@@ -91,6 +91,10 @@ public class CalendarDto {
   private String propertyClass = null;
   @JsonProperty("microsoftImportance")
   private String microsoftImportance = null;
+  @JsonProperty("htmlDescription")
+  private String htmlDescription = null;
+  @JsonProperty("dateTimeStamp")
+  private Date dateTimeStamp = null;
 
   /**
    * Set attachments and return this.
@@ -797,6 +801,60 @@ public class CalendarDto {
   }
 
 
+  /**
+   * Set htmlDescription and return this.
+   * @param htmlDescription HTML representation of description.             
+   * @return this
+  **/
+  public CalendarDto htmlDescription(String htmlDescription) {
+    this.htmlDescription = htmlDescription;
+    return this;
+  }
+
+  /**
+   * HTML representation of description.             
+   * @return htmlDescription
+  **/
+  public String getHtmlDescription() {
+    return htmlDescription;
+  }  
+
+  /**
+   * Set htmlDescription.
+   * @param htmlDescription HTML representation of description.             
+  **/
+  public void setHtmlDescription(String htmlDescription) {
+    this.htmlDescription = htmlDescription;
+  }
+
+
+  /**
+   * Set dateTimeStamp and return this.
+   * @param dateTimeStamp Date/time that the instance of the iCalendar object was created.             
+   * @return this
+  **/
+  public CalendarDto dateTimeStamp(Date dateTimeStamp) {
+    this.dateTimeStamp = dateTimeStamp;
+    return this;
+  }
+
+  /**
+   * Date/time that the instance of the iCalendar object was created.             
+   * @return dateTimeStamp
+  **/
+  public Date getDateTimeStamp() {
+    return dateTimeStamp;
+  }  
+
+  /**
+   * Set dateTimeStamp.
+   * @param dateTimeStamp Date/time that the instance of the iCalendar object was created.             
+  **/
+  public void setDateTimeStamp(Date dateTimeStamp) {
+    this.dateTimeStamp = dateTimeStamp;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
   if (this == o) {
@@ -829,12 +887,14 @@ public class CalendarDto {
     ObjectUtils.equals(this.summary, calendarDto.summary) &&
     ObjectUtils.equals(this.transparency, calendarDto.transparency) &&
     ObjectUtils.equals(this.propertyClass, calendarDto.propertyClass) &&
-    ObjectUtils.equals(this.microsoftImportance, calendarDto.microsoftImportance);
+    ObjectUtils.equals(this.microsoftImportance, calendarDto.microsoftImportance) &&
+    ObjectUtils.equals(this.htmlDescription, calendarDto.htmlDescription) &&
+    ObjectUtils.equals(this.dateTimeStamp, calendarDto.dateTimeStamp);
   }
 
   @Override
   public int hashCode() {
-    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency, propertyClass, microsoftImportance);
+    return ObjectUtils.hashCodeMulti(attachments, attendees, description, endDate, endTimeZone, flags, isDescriptionHtml, location, method, microsoftBusyStatus, microsoftIntendedStatus, optionalAttendees, organizer, recurrenceString, recurrence, reminders, sequenceId, startDate, startTimeZone, status, summary, transparency, propertyClass, microsoftImportance, htmlDescription, dateTimeStamp);
   }
 
 
@@ -867,6 +927,8 @@ public class CalendarDto {
     sb.append("    transparency: ").append(toIndentedString(getTransparency())).append("\n");
     sb.append("    propertyClass: ").append(toIndentedString(getPropertyClass())).append("\n");
     sb.append("    microsoftImportance: ").append(toIndentedString(getMicrosoftImportance())).append("\n");
+    sb.append("    htmlDescription: ").append(toIndentedString(getHtmlDescription())).append("\n");
+    sb.append("    dateTimeStamp: ").append(toIndentedString(getDateTimeStamp())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -912,6 +974,8 @@ public class CalendarDto {
    * @param transparency Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
    * @param propertyClass Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
    * @param microsoftImportance Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+   * @param htmlDescription HTML representation of description.             
+   * @param dateTimeStamp Date/time that the instance of the iCalendar object was created.             
    */
   public CalendarDto(
     List<Attachment> attachments,
@@ -937,7 +1001,9 @@ public class CalendarDto {
     String summary,
     String transparency,
     String propertyClass,
-    String microsoftImportance
+    String microsoftImportance,
+    String htmlDescription,
+    Date dateTimeStamp
   ) {
     super();
     setAttachments(attachments);
@@ -964,6 +1030,8 @@ public class CalendarDto {
     setTransparency(transparency);
     setPropertyClass(propertyClass);
     setMicrosoftImportance(microsoftImportance);
+    setHtmlDescription(htmlDescription);
+    setDateTimeStamp(dateTimeStamp);
   }
 
 }
